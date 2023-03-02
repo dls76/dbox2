@@ -14,6 +14,7 @@ main {
     max-width: 1260px;
     max-height: 690px;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 #conteinerhome {
