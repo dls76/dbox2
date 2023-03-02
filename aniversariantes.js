@@ -24,14 +24,14 @@ function show() {
         {nome: "Murilo Klimek", dia: 2, mes: 1, ano: 2001, funcao: "TI", foto:""},
 
         // MARÇO
-        {nome: "Wander Rocha de Oliveira", dia: 15, mes: 2, ano: 1963, funcao: "Professor", foto:""},
-        {nome: "Hermes da Silva Jardim", dia: 12, mes: 2, ano: 1965, funcao: "Professor", foto:""},
+        {nome: "Wander Rocha de Oliveira", dia: 15, mes: 2, ano: 1963, funcao: "Professor", foto:"img/anivImg/wander.jpeg"},
+        {nome: "Hermes da Silva Jardim", dia: 12, mes: 2, ano: 1965, funcao: "Professor", foto:"img/anivImg/hermes.jpeg"},
         {nome: "Ana Lucia Santos das Neves", dia: 22, mes: 2, ano: 1976, funcao: "Aux. de Classe", foto:""},
-        {nome: "Sirlei Barbosa da Silva Gomes", dia: 2, mes: 2, ano: 1980, funcao: "Aux. Biblioteca", foto:""},
-        {nome: "Priscila Paula de Oliveira Albanez", dia: 21, mes: 2, ano: 1988, funcao: "Professora", foto:""},
-        {nome: "Douglas Leal dos Santos", dia: 20, mes: 2, ano: 1976, funcao: "Diretor", foto:""},
-        {nome: "Letícia Mitchells Rosa", dia: 21, mes: 2, ano: 1976, funcao: "Tutora", foto:""},
-        {nome: "Ana Clécia Ferreira Santos", dia: 22, mes: 2, ano: 1976, funcao: "Zeladora", foto:""},
+        {nome: "Sirlei Barbosa da Silva Gomes", dia: 2, mes: 2, ano: 1980, funcao: "Aux. Biblioteca", foto:"img/anivImg/sirlei.jpeg"},
+        {nome: "Priscila Paula de Oliveira Albanez", dia: 21, mes: 2, ano: 1988, funcao: "Professora", foto:"img/anivImg/priscila.jpeg"},
+        {nome: "Douglas Leal dos Santos", dia: 20, mes: 2, ano: 1976, funcao: "Diretor", foto:"img/anivImg/dls.png"},
+        {nome: "Letícia Mitchells Rosa", dia: 21, mes: 2, ano: 1976, funcao: "Tutora", foto:"img/anivImg/leticia-michells.jpeg"},
+        {nome: "Ana Clécia Ferreira Santos", dia: 22, mes: 2, ano: 1976, funcao: "Zeladora", foto:"img/anivImg/ana-clecia.jpeg"},
         
         // ABRIL
         {nome: "Denise Padilha Gomes", dia: 19, mes: 3, ano: 1966, funcao: "Orientadora", foto:""},
