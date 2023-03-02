@@ -97,6 +97,7 @@ let comunicados = [
     {num: "010", ass: "", pub: "EM"},
     {num: "011", ass: "", pub: "EM"},
     {num: "012-27/02", ass: "Oficina de reforço", pub: "1ºEF"},
+    {num: "013-02/03", ass: "Bordado no uniforme", pub: "EI-EM"},
 ]
 
 let ult = comunicados.pop()
