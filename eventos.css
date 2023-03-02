@@ -5,7 +5,7 @@
     box-shadow: none;
 }
 .evento {
-    display: none;
+    display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     background-color: rgb(197, 244, 255);
     padding: 5px;
@@ -37,7 +37,7 @@
     border-radius: 3px;
     margin: 2px 1px;
 }
-div.caab {
+div.todos {
     background-color: #253B73;
     color: #ececec;
 
