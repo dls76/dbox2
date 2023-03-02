@@ -1,0 +1,96 @@
+.linksuteis {
+    height: fit-content;
+}
+
+.linksuteisbox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background-color: #fff;
+}
+
+.linksuteis .img:hover {
+    background-color: whitesmoke;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 0px;
+}
+
+.img img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+.legenda-links {
+    font-size: .7rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: gray;
+}
+
+#aniver {
+    background-image: url(img/aniversariantes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: linear-gradient(#f63c4c, #e22e3d, #ac0f1c, #8d0712); */
+    height: 166px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#aniver-img img {
+    width: 50px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.parabens {
+    padding: 1rem 0 .6rem 0;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 0 0 20px black;
+}
+.box-aniver-img {
+    display: flex;
+    justify-content: center;
+}
+.aniversariante {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    padding: 0 5px;
+}
+.aniversariante img {
+    border-radius: 50%; 
+    border: 2px solid #fff;
+}
+.aniver-nome, .aniver-funcao {
+    font-family: 'Roboto Condensed';
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px black;
+    font-size: .7rem;
+    font-weight: 600;
+}
+.aniver-funcao {
+    font-weight: 500;
+    font-size: .5rem;
+}
+#parabens {
+    font-size: .8rem;
+    letter-spacing: .8px;
+    text-shadow: 0 0 10px black;
+
+}

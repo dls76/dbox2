@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBox</title>
+    
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="escalas.css">
+    <link rel="stylesheet" href="linksuteis.css">
+    <link rel="stylesheet" href="eventos.css">
+    <link rel="stylesheet" href="calendario.css">
+    <link rel="stylesheet" href="horarios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <span class="logo logo-D">D</span>
+        <span class="logo logo-Box">Box</span>
+    </div>
+
+    <div class="menu">
+        <a href="">Espiritual</a>
+        <a href="">Administrativo</a>
+        <a href="">Pedagógico</a>
+        <a href="">Matrículas</a>
+    </div>
+
+    <div class="menu-dotted">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+
+</header>
+
+<main>
+
+    <div id="conteinerhome">
+
+        <!-- ESCALAS -->
+        <div class="divhome">
+
+            <div class="conteinertitulosecao">
+                <div class="titulosecao">Escalas</div>
+                <div class="mais">+</div>
+            </div>
+
+            <div class="conteinerescalas">    
+                
+                    <div class="escala">
+                        <div class="icon">
+                            <img src="img/cultos.png" alt="">
+                        </div>
+                        <div>
+                            <div class="subtitulo">Cultos</div>
+                            <div class="link-content" id="cultos"></div>
+                        </div>
+                    </div>
+                
+                <a href="https://docs.google.com/spreadsheets/d/1YEggkMWLcesddzRU66QW_ZPXnxFlaZojluN6J8xclNQ/edit#gid=0" target="_blank">
+                    <div class="escala">
+                        <div class="icon">
+                            <img src="img/clock.png" alt="" id="icon-compensacao">
+                        </div>
+                        <div>
+                            <div class="subtitulo">Compensação</div>
+                            <div class="link-content" id="nomescomp"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="escala">
+                    <div class="icon">
+                        <img src="img/plantao-diario.png"alt="" id="icon-plantao-diario">
+                    </div>
+                    <div>
+                        <div class="subtitulo">Plantão diário</div>
+                        <div class="link-content" id="plantaodiario"></div>
+                    </div>
+                </div>
+
+                
+                <a href="https://docs.google.com/spreadsheets/d/1YEggkMWLcesddzRU66QW_ZPXnxFlaZojluN6J8xclNQ/edit#gid=0" target="_blank">
+                    <div class="escala">
+                        <div class="icon">
+                            <img src="img/plantaosexta.png" alt="relogio">
+                        </div>
+                        <div>
+                            <div class="subtitulo">Plantão sexta</div>
+                            <div class="link-content" id="plantaosexta"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://drive.google.com/drive/u/1/folders/1BMRm81qQJqditysd6Ivu2MPEHKf13aCj" target="_blank">
+                    <div class="escala">
+                        <div class="icon" id="icon-comunic">
+                            <img src="img/comunicados.png"alt="">
+                        </div>
+                        <div>
+                            <div class="subtitulo">Último comunicado</div>
+                            <div class="link-content" id="comunicados">012/ - Oficina de Reforço 1ºEF</div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- LINKS UTEIS -->
+        <div class="divhome">
+
+            <div class="conteinertitulosecao">
+                <div class="titulosecao">Links úteis</div>
+                <div class="mais">+</div>
+            </div>
+
+            <div class="linksuteis">
+
+                <div class="linksuteisbox">
+
+                    <a href="https://acrm.sdasystems.org/" target="_blank">
+                        <div class="img">
+                            <img src="img/acrm.png" alt="">
+                            <div class="legenda-links">ACRM</div>
+                        </div>
+                    </a>
+
+                    <a href="https://app.powerbi.com/home?redirectedFromSignup=1&username=douglas.leal@usb.educadventista.org&AutomaticLogin=true" target="_blank">
+                        <div class="img" id="bi">
+                            <img src="img/bi.png" alt="">
+                            <div class="legenda-links">Power BI</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://drive.google.com/drive/u/1/folders/0AIh4iGkMG6UuUk9PVA" target="_blank">
+                        <div class="img">
+                            <img src="img/drive.png" alt="">
+                            <div class="legenda-links">Escolas 2023</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://login.cpbedu.me/" target="_blank">
+                        <div class="img">
+                            <img src="img/eclass.png" alt="">
+                            <div class="legenda-links">E-Class</div>
+                        </div>
+                    </a>
+
+                    <div class="img">
+                        <img src="img/sad.png" alt="">
+                        <div class="legenda-links">SAD</div>
+                    </div>
+
+                    <div class="img">
+                        <img src="img/sad-apoio.png" alt="">
+                        <div class="legenda-links">SAD APOIO</div>
+                    </div>
+
+                    <a href="https://docs.google.com/document/d/1CfJV6wssFy3WpcO9SuvumMllmJrX4jAgBVHQuaNKYrA/edit" target="_blank">
+                        <div class="img">
+                            <img src="img/ra.png" alt="">
+                            <div class="legenda-links">RA</div>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/spreadsheets/d/1RUg8BovLS-4fv1z33hBazdezNaALmDYBLApICFMxh5A/edit#gid=1080031561" target="_blank">
+                        <div class="img">
+                            <img src="img/vagas.png" alt="">
+                            <div class="legenda-links">Vagas</div>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/spreadsheets/d/1EKpdJ1tdw9oV2q2ggCiyRV3JJCCF6irG/edit#gid=751825274" target="_blank">
+                        <div class="img">
+                            <img src="img/parcerias.png" alt="">
+                            <div class="legenda-links">Parcerias</div>
+                        </div>
+                    </a>
+
+                    <a href="https://dls76.github.io/matriculasDbox/" target="_blank">
+                        <div class="img">
+                            <img src="img/atendimento.png" alt="">
+                            <div class="legenda-links">Atendimento</div>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/u/1/folders/1FzIl6C5ncvUY8LOTllVlO-TNxc4z-hmQ" target="_blank">
+                        <div class="img">
+                            <img src="img/pdf.png" alt="">
+                            <div class="legenda-links">Negociações</div>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/spreadsheets/d/1F5RLQ-8aayTSXhAac5PVBk0ohSbAmTQFTPxpvIzlt8A/edit#gid=0" target="_blank">
+                        <div class="img">
+                            <img src="img/tutores.png" alt="">
+                            <div class="legenda-links">Tutores</div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="aniversariantes" id="aniver">
+
+                <div class="parabens" id="parabens">Hoje não temos aniversariantes :(</div>
+
+                <div class="box-aniver-img" id="aniver-img">
+                    <!-- <div class="aniversariante" id="aniversariante">
+                        <img src="img/anivImg/dls.png">
+                        <div class="aniver-nome">Douglas Leal dos Santos</div>
+                        <div class="aniver-funcao">Diretor</div>
+                    </div> -->
+                </div>
+
+                <div class="legenda-aniver" id="legenda-aniver">
+
+                </div>
+
+                <div class="legenda-nomefuncao" id="legenda-nomefuncao"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRÓXIMOS EVENTOS -->
+        <div class="divhome box-proximoseventos">
+
+            <div class="conteinertitulosecao">
+                <div class="titulosecao">Calendário</div>
+                <div class="mais" id="eventos-mais">+</div>
+                <div class="menos" id="eventos-menos">-</div>
+            </div>
+
+            <div class="filtros" id="filtros">
+                <div class="caab" onclick="filterObjects('caab')">CAAB</div>
+                <div class="asp" onclick="filterObjects('asp')">ASP</div>
+                <div class="pais" onclick="filterObjects('pais')">Pais</div>
+                <div class="todos" onclick="filterObjects('all')">Todos</div>
+            </div>
+
+            <div class="body-proximoseventos" id="body-eventos">
+
+                <!-- <div class="evento">
+                    
+                    <div class="data">
+                        <div class="dias">
+                            <div class="dia">2</div>
+                            <div class="a">a</div>
+                            <div class="dia2">4</div>
+                        </div>
+                        <div class="mes">FEV</div>
+                    </div>
+
+                    <div class="descricao">Reunião de Diretores</div>
+                    <div class="resp">
+                        <img src="img/user.png" alt="">
+                    </div>
+                </div>-->
+
+            </div> 
+
+
+
+
+
+        </div>
+
+        <!-- CALENDARIO NUMERO -->
+        <div class="divhome box-cal-num">
+
+            <div class="headercal">
+                <div class="diasemanacal"></div>
+                <div class="diacal"></div>
+                <!-- <div class="timecal" id="timecal"></div> -->
+            </div>
+
+            <div class="mescalbox">
+                
+                <span class="spancal prev">
+                    <i class="fa-solid fa-chevron-left prev"></i>
+                </span>
+                
+                <div class="mescal"></div>
+                
+                <span class="spancal next">
+                    <i class="fa-solid fa-chevron-right next"></i>
+                </span>
+            </div>
+
+            <div class="bodycal">
+                <div class="weekdays">
+                    <div>D</div>
+                    <div>S</div>
+                    <div>T</div>
+                    <div>Q</div>
+                    <div>Q</div>
+                    <div>S</div>
+                    <div>S</div>
+                </div>
+                <div class="days"></div>
+            </div>
+
+            <div class="btnsCal">
+                <div class="btnHoje" id="btn-hoje">HOJE</div>
+                <div id="btn-obs">OBS</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+    <div class="body">
+
+        <div class="title">HORÁRIOS</div>
+        
+        <div class="conteiner">
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <h2 class="h2">Infantil ao 5º</h2>
+                        <a class="horarios" href="horarios/turmas-manha-peq.pdf" target="_blank">Manhã</a>
+                        <a class="horarios" href="horarios/turmas-tarde-peq.pdf" target="_blank">Tarde</a>
+                        <a class="horarios" href="horarios/parque.pdf" target="_blank">Parque</a>
+                        <a class="horarios" href="horarios/recreio-peq.pdf" target="_blank">Recreio</a>
+                        <a class="horarios" href="horarios/reforco-peq.pdf" target="_blank">Reforço</a>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Infantil ao 5º</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <h2 class="h2">6º ao Médio</h2>
+                        
+                        <a class="horarios" href="horarios/geral-manha-mai.pdf" target="_blank">Manhã (geral)</a>
+                        <a class="horarios" href="horarios/turmas-manha-mai.pdf" target="_blank">Manhã (turmas)</a>
+                        <a class="horarios" href="horarios/geral-tarde-mai.pdf" target="_blank">Tarde (geral)</a>
+                        <a class="horarios" href="horarios/turmas-tarde-mai.pdf" target="_blank">Tarde (turmas)</a>
+                        <a class="horarios" href="horarios/professores-geral-mai.pdf" target="_blank">Professores</a>
+                        <a class="horarios" href="horarios/reforco-mai.pdf" target="_blank">Reforço</a>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>6º ao Médio</h2>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <h2 class="h2">Outros horários</h2>
+                        <a class="horarios" href="horarios/escolinhas.pdf" target="_blank">Escolinhas</a>
+                        <a class="horarios" href="horarios/ingles.pdf" target="_blank">Inglês</a>
+                        <a class="horarios" href="horarios/robótica.pdf" target="_blank">Robótica</a>
+                        <a class="horarios" href="horarios/maker.pdf" target="_blank">Sala Maker</a>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Outros</h2>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="dbox.js"></script>
+    <script src="aniversariantes.js"></script>
+    <script src="eventos.js"></script>
+    <script src="calendario.js"></script>
+    <script src="filtros.js"></script>
+    <!-- <script src="timer.js"></script> -->
+</body>
+</html>

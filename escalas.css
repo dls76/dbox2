@@ -1,0 +1,66 @@
+.conteinerescalas {
+    background-color: #fff;
+}
+
+.escala {
+    background-color: #fff;
+    border-bottom: .5px solid rgb(204, 204, 204);
+    padding: 12px 0;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 0;
+}
+
+
+.escala:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.icon img {
+    width: 35px;
+}
+
+#icon-compensacao {
+    width: 25px;
+}
+
+#icon-plantao-diario {
+    width: 30px;
+}
+
+#icon-comunic img {
+    width: 25px;
+}
+
+.subtitulo {
+    font-size: .7rem;
+    color: #B52532;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.link-content {
+    color: #253B73;
+    font-size: .7rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 5px 0 10px 0;
+}
+
+#legenda-aniver {
+    color: #fff;
+    text-shadow: .7px .7px 8px black;
+}
+
+#legenda-aniver img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+}

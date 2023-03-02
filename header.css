@@ -1,0 +1,81 @@
+header {
+    padding: 10px 10px 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.logo {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.logo-D {
+    border: 2px solid #0b1634;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: #0b1634;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 7px;
+}
+
+.logo-Box {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 0 5px;
+    border: 2px solid #0b1634;
+    background-color: #fff;
+    color: #0b1634;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    margin: 0 10px;
+    padding: 10px 25px;
+    color: #0b1634;
+    border-radius: 10px;
+    transition: all ease-in-out .3s;
+}
+
+.menu a:hover {
+    background-color: rgb(188, 188, 188);
+}
+
+.menu-dotted {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    width: 14px;
+    margin-right: 30px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.menu-dotted div {
+    width: 4px;
+    height: 4px;
+    background-color: #0b1634;
+    border-radius: 3px;
+}
+
+.menu-dotted:hover {
+    cursor: pointer;
+}
+
+.menu-dotted:hover div {
+    background-color: gray;
+}

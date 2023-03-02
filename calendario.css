@@ -1,0 +1,172 @@
+.box-cal-num {
+    max-height: 280px;
+    position: relative;
+    background-color: #fff;
+}
+
+.headercal {
+    background-color: #253B73;
+    color: #e4ebfd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .5rem;
+}
+
+.diasemanacal {
+    text-align: center;
+    font-size: .8rem;
+    letter-spacing: 1.1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diacal {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2rem;
+}
+
+.mescalbox {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.mescal {
+    color: #253B73;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spancal {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.spancal:hover {
+    background-color: #bed0ff;
+}
+
+i.fa-solid {
+    color: rgb(190, 190, 190);
+    color: #253B73;
+    cursor: pointer;
+    font-size: .7rem;
+}
+
+.weekdays {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.weekdays div {
+    width: calc(100%/7);
+    font-size: .7rem;
+    /* padding: .3rem 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #001855;
+    font-weight: 500;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.weekdays div:first-of-type {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.weekdays div:last-of-type {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.days div {
+    width: calc(100%/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem 0;
+    font-size: .7rem;
+    font-weight: 500;
+    transition: ease-in .1s;
+    border-radius: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.prev-date, .next-date {
+    color: #fff;
+}
+
+.days div:hover:not(.today) {
+    background-color: #bed0ff;
+    cursor: pointer;
+}
+
+.btnsCal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: .5rem;
+}
+
+#btn-hoje {margin-left: 5px;} #btn-obs {margin-right: 5px;}
+#btn-hoje, #btn-obs {
+    background-color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    color: #17306f;
+    font-weight: 600;
+    padding: 0;
+    cursor: pointer;
+    font-size: .7rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#btn-hoje:hover, #btn-obs:hover {
+    color: #355ab8;
+}
+
+.today {
+    background-color: #253B73;
+    color: #fff;
+}
