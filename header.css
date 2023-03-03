@@ -61,8 +61,8 @@ header {
     gap: 2px;
     width: 14px;
     margin-right: 30px;
-    padding: 4px;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 50%;
 }
 
 .menu-dotted div {
@@ -74,8 +74,10 @@ header {
 
 .menu-dotted:hover {
     cursor: pointer;
+    background-color: rgb(188, 188, 188);
+
 }
 
 .menu-dotted:hover div {
-    background-color: gray;
+    background-color: rgb(86, 86, 86);
 }

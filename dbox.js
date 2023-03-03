@@ -111,26 +111,31 @@ let plantaodiario = [
     {data: new Date(2023, 1, 28), pessoa: "Thiago"},
     {data: new Date(2023, 2, 1), pessoa: "Dani"},
     {data: new Date(2023, 2, 2), pessoa: "Rudi"},
+    {data: new Date(2023, 2, 3), pessoa: "Ver plantão de sexta"},
 
     {data: new Date(2023, 2, 6), pessoa: "Diretor"},
     {data: new Date(2023, 2, 7), pessoa: "Thiago"},
     {data: new Date(2023, 2, 8), pessoa: "Dani"},
     {data: new Date(2023, 2, 9), pessoa: "Rudi"},
+    {data: new Date(2023, 2, 10), pessoa: "Ver plantão de sexta"},
 
     {data: new Date(2023, 2, 13), pessoa: "Diretor"},
     {data: new Date(2023, 2, 14), pessoa: "Thiago"},
     {data: new Date(2023, 2, 15), pessoa: "Dani"},
     {data: new Date(2023, 2, 16), pessoa: "Rudi"},
+    {data: new Date(2023, 2, 17), pessoa: "Ver plantão de sexta"},
 
     {data: new Date(2023, 2, 20), pessoa: "Diretor"},
     {data: new Date(2023, 2, 21), pessoa: "Thiago"},
     {data: new Date(2023, 2, 22), pessoa: "Dani"},
     {data: new Date(2023, 2, 23), pessoa: "Rudi"},
+    {data: new Date(2023, 2, 23), pessoa: "Ver plantão de sexta"},
 
     {data: new Date(2023, 2, 27), pessoa: "Diretor"},
     {data: new Date(2023, 2, 28), pessoa: "Thiago"},
     {data: new Date(2023, 2, 29), pessoa: "Dani"},
     {data: new Date(2023, 2, 30), pessoa: "Rudi"},
+    {data: new Date(2023, 2, 31), pessoa: "Ver plantão de sexta"},
 
     {data: new Date(2023, 3, 3), pessoa: "Diretor"},
     {data: new Date(2023, 3, 4), pessoa: "Thiago"},
