@@ -106,3 +106,10 @@
     padding: 8px 0;
     color: rgb(77, 77, 77);
 }
+.horarios:hover {
+    color: #E42C8A;
+}
+
+.card:nth-child(2) .horarios:hover {
+    color: #64D488;
+}
