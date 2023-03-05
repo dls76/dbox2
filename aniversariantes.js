@@ -120,7 +120,6 @@ function show() {
         {nome: "Katia Jaqueline Tavares Adriano", dia: 4, mes: 11, ano: 1976, funcao: "Professora", foto:""},
     ]
 
-    //Verifica quem faz aniversário hoje e inclui o objeto no array aniversariantesDoDia
     for ( i=0; i < pessoas.length; i++ ) {
         
         if ( pessoas[i].dia == dia && pessoas[i].mes == mes ) {

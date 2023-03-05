@@ -66,7 +66,6 @@ function mostrarEventos(){
         let d2 = eventos[i].data2
         let desc = eventos[i].descritivo
         let res = eventos[i].foto
-
         let cal = eventos[i].cal
         
 
@@ -74,7 +73,7 @@ function mostrarEventos(){
 
             let eventos = document.querySelector('#body-eventos')
 
-            let ev = document.createElement('div')
+            let ev = document.createElement('div') 
             ev.classList.add('evento')
 
             if ( cal == 'asp' ) { 
@@ -137,6 +136,8 @@ function mostrarEventos(){
                 ev.classList.add('verde')
             } else if ( cal == 'out') { 
                 ev.classList.add('gray')
+            } else if ( cal == 'pais') {
+                ev.classList.add('lilas')
             }
             
             let data = document.createElement('div')
@@ -175,22 +176,22 @@ function mostrarEventos(){
 }
 
 // Expande a área de filtros do calendário e muda o botão
-document.querySelector('#eventos-mais').addEventListener('click', ()=>{
+// document.querySelector('#eventos-mais').addEventListener('click', ()=>{
 
-    let filtros = document.querySelector('#filtros')
-    filtros.classList.add('displayToggle')
-    document.querySelector('#eventos-mais').style.display = "none"
-    document.querySelector('#eventos-menos').style.display = "flex"
+//     let filtros = document.querySelector('#filtros')
+//     filtros.classList.add('displayToggle')
+//     document.querySelector('#eventos-mais').style.display = "none"
+//     document.querySelector('#eventos-menos').style.display = "flex"
     
 
-})
+// })
 
-document.querySelector('#eventos-menos').addEventListener('click', ()=>{
+// document.querySelector('#eventos-menos').addEventListener('click', ()=>{
 
-    let filtros = document.querySelector('#filtros')
-    filtros.classList.remove('displayToggle')
-    document.querySelector('#eventos-mais').style.display = "flex"
-    document.querySelector('#eventos-menos').style.display = "none"
+//     let filtros = document.querySelector('#filtros')
+//     filtros.classList.remove('displayToggle')
+//     document.querySelector('#eventos-mais').style.display = "flex"
+//     document.querySelector('#eventos-menos').style.display = "none"
 
 
-})
+// })
