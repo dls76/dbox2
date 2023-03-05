@@ -11,6 +11,15 @@ let eventos = [
     {data1: new Date(2023, 2, 1), data2: new Date(2023, 2, 31), descritivo: "Reuniões Pedagógicas Individuais - FII-EM", cal: "caab", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 2, 1), data2: new Date(2023, 2, 2), descritivo: "Reunião ECO - SOE e SOP – ASP (presencial)", cal: "asp", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 2, 1), data2: new Date(2023, 2, 1), descritivo: "1º - Celebra FUND II e EM - Lançamento programa Redação Nota 1000 - Prof Marlus", cal: "caab", resp: "", foto: "", detalhes: ""},
+    
+    {data1: new Date(2023, 2, 1), data2: new Date(2023, 2, 1), descritivo: "1º - Celebra FUND II e EM - Lançamento programa Redação Nota 1000 - Prof Marlus", cal: "caab", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 2, 1), data2: new Date(2023, 2, 1), descritivo: "1º - Celebra FUND II e EM - Lançamento programa Redação Nota 1000 - Prof Marlus", cal: "caab", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 2, 1), data2: new Date(2023, 2, 1), descritivo: "1º - Celebra FUND II e EM - Lançamento programa Redação Nota 1000 - Prof Marlus", cal: "caab", resp: "", foto: "", detalhes: ""},
+    
+    {data1: new Date(2023, 2, 5), data2: new Date(2023, 2, 4), descritivo: "Teste", cal: "caab", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 2, 5), data2: new Date(2023, 2, 4), descritivo: "Teste2", cal: "caab", resp: "", foto: "", detalhes: ""},
+    
+    
     {data1: new Date(2023, 2, 6), data2: new Date(2023, 2, 10), descritivo: "Período de aplicação da AV1 FI- colocar nos primeiros dias as provas com mais complicação de correção.", cal: "asp", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 2, 6), data2: new Date(2023, 2, 10), descritivo: "Período de aplicação da AV1 I BIM – corrigir, lançar notas no SAD e devolver aos estudantes até 5 dias úteis após a data da sua avaliação.", cal: "asp", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 2, 6), data2: new Date(2023, 2, 10), descritivo: "Lançamento PMDE", cal: "asp", resp: "", foto: "", detalhes: ""},
@@ -68,7 +77,6 @@ function mostrarEventos(){
         let res = eventos[i].foto
         let cal = eventos[i].cal
         
-
         if ( d1 < d2 ) {
 
             let eventos = document.querySelector('#body-eventos')
@@ -173,6 +181,8 @@ function mostrarEventos(){
         }
 
     }
+
+    load()
 }
 
 // Expande a área de filtros do calendário e muda o botão
@@ -195,3 +205,51 @@ function mostrarEventos(){
 
 
 // })
+
+
+// function scroll() {
+//     const d = new Date()
+//     eventos.find(e => d.getDate() == e.data1.getDate()).scrollIntoView(true)
+// }
+
+    // ("tJan").offsetTop -84;
+    // var fev = document.getElementById("tFev").offsetTop -84;
+    // var mar = document.getElementById("tMar").offsetTop -84;
+    // var abr = document.getElementById("tAbr").offsetTop -84;
+    // var mai = document.getElementById("tMai").offsetTop -84;
+    // var jun = document.getElementById("tJun").offsetTop -84;
+    // var jul = document.getElementById("tJul").offsetTop -84;
+    // var ago = document.getElementById("tAgo").offsetTop -84;
+    // var set = document.getElementById("tSet").offsetTop -84;
+    // var out = document.getElementById("tOut").offsetTop -84;
+    // var nov = document.getElementById("tNov").offsetTop -84;
+    // var dez = document.getElementById("tDez").offsetTop -84;
+
+
+    // if (mes === 0) {window.scrollTo(0, jan)} 
+    // else if (mes === 1) {window.scrollTo(0, fev)} 
+    // else if (mes === 2) {window.scrollTo(0, mar)} 
+    // else if (mes === 3) {window.scrollTo(0, abr)} 
+    // else if (mes === 4) {window.scrollTo(0, mai)} 
+    // else if (mes === 5) {window.scrollTo(0, jun)} 
+    // else if (mes === 6) {window.scrollTo(0, jul)} 
+    // else if (mes === 7) {window.scrollTo(0, ago)} 
+    // else if (mes === 8) {window.scrollTo(0, set)} 
+    // else if (mes === 9) {window.scrollTo(0, out)} 
+    // else if (mes === 10){window.scrollTo(0, nov)} 
+    // else if (mes === 11){window.scrollTo(0, dez)} 
+
+// }
+
+// window.addEventListener('load', scroll())
+
+// window.addEventListener('load', function () {
+    //var altura = window.innerHeight;
+    // var largura = window.innerWidth;
+
+    // if (largura < 700) {  
+    //     scrollMobile()
+    // } else {
+    //     scroll();
+    // }
+// });

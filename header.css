@@ -51,7 +51,7 @@ header {
     transition: all ease-in-out .3s;
 }
 
-.menu a:hover {
+.menu a:hover, a.active {
     background-color: rgb(188, 188, 188);
 }
 
