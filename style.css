@@ -105,11 +105,20 @@ details > summary {
     /* border: 1px solid blue; */
 }
 
-.links-cronogramas-1b, .div-conselheiros, .details-items-box {
+.details-items-box {
     display: flex;
     flex-direction: column;
     gap: .7rem;
     /* border: 1px solid green; */
+}
+
+.details-items-box a {
+    display: flex;
+}
+
+.details-items-box img {
+    width: 20px;
+    margin-right: 1rem
 }
 
 .main-pedagogico {
