@@ -55,7 +55,6 @@ let eventos = [
     {data1: new Date(2023, 2, 30), data2: new Date(2023, 2, 30), descritivo: "Impacto Esperança – data única para entrega do livro da esperança", cal: "asp", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 2, 31), data2: new Date(2023, 2, 31), descritivo: "Data limite para a regularização dos registros dos conteúdos e notas do mês no SAD (prof)", cal: "asp", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 2, 31), data2: new Date(2023, 2, 31), descritivo: "Relatório mensal de notificações para pais - impresso", cal: "caab", resp: "", foto: "", detalhes: ""},
-
 ]
 
 function mostrarEventos(){
