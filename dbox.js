@@ -1,4 +1,4 @@
-let datahoje = new Date()
+let datahoje = new Date(2023,2,11)
 
 let compensacao = [
     {data: new Date(2023, 2, 3), people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
@@ -26,7 +26,7 @@ for(i=0; i<compensacao.length; i++) {
     const diffInMs = datahoje - compensacao[i].data
     const diffDays = diffInMs / (1000 * 60 * 60 * 24)
     
-    if ( diffDays <= 0 && diffDays > -7 ) { 
+    if ( diffDays >= -6  && diffDays < 1 ) { 
         document.querySelector('#nomescomp').innerHTML = compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth()+1) + ' - ' + compensacao[i].people
     }
 }
@@ -62,14 +62,12 @@ for(j=0; j<plantaosexta.length; j++) {
 //         document.querySelector('#plantaosexta').innerHTML = plantaosexta[j].data.getDate() + '/' + (plantaosexta[j].data.getMonth()+1) + ' - ' + plantaosexta[j].person
 //     }
 
-if ( diffDays >= -6  && diffDays < 1) {
+if ( diffDays >= -6  && diffDays < 1 ) {
     document.querySelector('#plantaosexta').innerHTML = plantaosexta[j].data.getDate() + '/' + (plantaosexta[j].data.getMonth()+1) + ' - ' + plantaosexta[j].person
 }
 
 
 }
-
-
 
 let cultos = [
     {data: new Date(2023, 1, 18), pessoaM: "Sábado"},
@@ -120,6 +118,7 @@ let comunicados = [
     {num: "015-07/03", ass: "Atendimento administrativo", pub: "EI-EM"},
     {num: "016-09/03", ass: "2ª chamada 9º-EM", pub: "9º-EM"},
     {num: "017-09/03", ass: "Materiais de uso pessoal", pub: "FII-EM"},
+    {num: "018-10/03", ass: "Segunda chamada AV1", pub: "2º-5º"},
 ]
 
 let ult = comunicados.pop()
