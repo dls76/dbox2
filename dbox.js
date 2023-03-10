@@ -58,8 +58,8 @@ for(j=0; j<plantaosexta.length; j++) {
 
     const diffInMs = datahoje - plantaosexta[j].data
     const diffDays = diffInMs / (1000 * 60 * 60 * 24)
-    
-    if ( diffDays <= 0 && diffDays > -7 ) {
+
+if (diffDays <= 0 && diffDays > -7) {
         document.querySelector('#plantaosexta').innerHTML = plantaosexta[j].data.getDate() + '/' + (plantaosexta[j].data.getMonth()+1) + ' - ' + plantaosexta[j].person
     }
 }
@@ -110,6 +110,9 @@ let comunicados = [
     {num: "012-27/02", ass: "Oficina de reforço", pub: "1ºEF"},
     {num: "013-02/03", ass: "Bordado no uniforme", pub: "EI-EM"},
     {num: "014-03/03", ass: "Recados e lembretes", pub: "EI-EM"},
+    {num: "015-07/03", ass: "Atendimento administrativo", pub: "EI-EM"},
+    {num: "016-09/03", ass: "2ª chamada 9º-EM", pub: "9º-EM"},
+    {num: "017-09/03", ass: "Materiais de uso pessoal", pub: "FII-EM"},
 ]
 
 let ult = comunicados.pop()
@@ -124,6 +127,7 @@ let plantaodiario = [
     {data: new Date(2023, 2, 1), pessoa: "Diretor"},
     {data: new Date(2023, 2, 2), pessoa: "Rudi"},
 
+    // Seg - Dire - ter - Rudi -Qua - rodizio e quinta Thiago
     {data: new Date(2023, 2, 6), pessoa: "Diretor"},
     {data: new Date(2023, 2, 7), pessoa: "Thiago"},
     {data: new Date(2023, 2, 8), pessoa: "Thiago"},
