@@ -287,7 +287,7 @@ function mostrarEventos(){
 
     }
 
-    load()
+    // load()
 }
 
 // Expande a área de filtros do calendário e muda o botão
