@@ -26,6 +26,7 @@ function show() {
         // MARÇO
         {nome: "Wander Rocha de Oliveira", dia: 15, mes: 2, ano: 1963, funcao: "Professor", foto:"img/anivImg/wander.jpeg"},
         {nome: "Hermes da Silva Jardim", dia: 12, mes: 2, ano: 1965, funcao: "Professor", foto:"img/anivImg/hermes.jpeg"},
+        {nome: "Guilherme Lunardon", dia: 12, mes: 2, ano: 1965, funcao: "Professor", foto:"img/anivImg/user.png"},
         {nome: "Ana Lucia Santos das Neves", dia: 22, mes: 2, ano: 1976, funcao: "Aux. de Classe", foto:""},
         {nome: "Sirlei Barbosa da Silva Gomes", dia: 2, mes: 2, ano: 1980, funcao: "Aux. Biblioteca", foto:"img/anivImg/sirlei.jpeg"},
         {nome: "Priscila Paula de Oliveira Albanez", dia: 21, mes: 2, ano: 1988, funcao: "Professora", foto:"img/anivImg/priscila.jpeg"},
