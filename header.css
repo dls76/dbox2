@@ -52,7 +52,7 @@ header {
 }
 
 .menu a:hover, a.active {
-    background-color: rgb(188, 188, 188);
+    background-color: #bcbcbc;
 }
 
 .menu-dotted {

@@ -94,14 +94,14 @@ section {
 }
 
 details {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 details > summary {
     color: #253B73;
     font-weight: 600;
     cursor: pointer;
-    margin-bottom: 1rem;
+    margin-bottom: .6rem;
     list-style: none;
     /* border: 1px solid blue; */
 }

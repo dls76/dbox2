@@ -1,0 +1,33 @@
+.conteiner-conselheiros, .conteiner-representantes {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto;
+}
+.tb-conselheiros, .tb-representantes, .tb-professores6m {
+    border-collapse: collapse;
+    font-size: .8rem;
+    margin-bottom: 3rem;
+    width: 45%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.tb-conselheiros:nth-of-type(2){
+    width: 20%;
+}
+.tb-conselheiros thead tr:first-of-type, .tb-representantes thead, .tb-professores6m thead {
+    background-color: #bcbcbc;
+}
+
+.tb-conselheiros tr td, .tb-conselheiros th, .tb-representantes th, .tb-representantes tr td {
+    padding: .3rem;
+}
+.tb-professores6m tr td, .tb-professores6m th {
+    padding: .7rem;
+}
+.tb-conselheiros tr:nth-child(even), .tb-representantes tr:nth-child(even), .tb-professores6m tr:nth-child(even) {
+    background-color: #e7e7e7;
+}
+.tb-professores6m {
+    width: 60%;
+    margin: auto;
+}
