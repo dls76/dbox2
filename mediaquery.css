@@ -1,0 +1,38 @@
+@media only screen and (max-width: 998px) {
+    #conteinerhome {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: 0px;
+        max-height: 690px;
+    }
+
+    main {
+        padding: 20px;
+        width: 95%;
+        height: 2000px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        border: 2px solid red;
+    }
+
+    .body { 
+        height: fit-content;
+        background: linear-gradient(45deg,#24006b,#f42f8c);
+    }
+
+    .conteiner {
+        width: 95%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        margin: 0 auto;
+    }
+
+    #conteinerhome {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        height: fit-content;
+    }
+}
