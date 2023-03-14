@@ -13,7 +13,7 @@ main {
     padding: 20px;
     width: 95%;
     max-width: 1440px;
-    max-height: 690px;
+    height: 690px;
     box-sizing: border-box;
     margin: 0 auto;
 }
