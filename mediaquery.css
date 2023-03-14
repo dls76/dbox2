@@ -39,9 +39,6 @@
         margin-top: 2rem;
     }
 
-
-
-
     .conteiner {
         width: 100%;
         display: grid;
@@ -50,5 +47,31 @@
         gap: 3rem;
         margin: 0 auto;
     }
+/* 
+    header {
+        width: 100%;
+        padding: 10px 10px 10px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: #fff;
+    } */
 
+    header a:first-of-type, .menu-dotted {
+        display: none;
+    }
+
+    .menu {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        /* left: -100vw; */
+        width: 100%;
+    }
+    .menu a {
+        margin: 1rem;
+    }
 }
