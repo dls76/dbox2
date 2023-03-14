@@ -57,7 +57,7 @@
         background-color: #fff;
     } */
 
-    header a:first-of-type, .menu-dotted {
+    .menu-dotted {
         display: none;
     }
 
@@ -74,4 +74,12 @@
     .menu a {
         margin: 1rem;
     }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    header a:first-of-type {
+        margin: 1rem 0;
+    }
+
 }
