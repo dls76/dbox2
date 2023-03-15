@@ -4,7 +4,6 @@
 .box-proximoseventos {
     border-radius: 5px;
     position: relative;
-    height: 45vh;
     box-shadow: none;
 }
 .evento {
@@ -124,11 +123,8 @@ div.todos {
     border-radius: 50%;
     background-color: #fff;
 }
-.box-proximoseventos {
-    height: 450px;
-}
 .body-proximoseventos {
-    height: 420px;
+    height: 520px;
     overflow-y: scroll;
     padding-right: 4px;
 }
