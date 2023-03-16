@@ -1,4 +1,5 @@
 @media only screen and (max-width: 998px) {
+    
     #conteinerhome {
         display: grid;
         grid-template-columns: 1fr;
@@ -6,20 +7,17 @@
         gap: 0px;
         max-height: 690px;
     }
-
     main {
         padding: 20px;
         width: 95%;
         box-sizing: border-box;
         margin: 0 auto;
-        height: 250vh;
+        height: 260vh;
     }
-
     .body { 
         height: fit-content;
         background: linear-gradient(45deg,#24006b,#f42f8c);
     }
-
     .conteiner {
         width: 95%;
         display: grid;
@@ -27,18 +25,9 @@
         gap: 0px;
         margin: 0 auto;
     }
-
-    #conteinerhome {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0px;
-        height: fit-content;
-    }
-
     .divhome {
         margin-top: 2rem;
     }
-
     .conteiner {
         width: 100%;
         display: grid;
@@ -47,28 +36,15 @@
         gap: 3rem;
         margin: 0 auto;
     }
-/* 
-    header {
-        width: 100%;
-        padding: 10px 10px 10px 25px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        background-color: #fff;
-    } */
-
     .menu-dotted {
         display: none;
     }
-
     .menu {
-        /* border: 1px solid red; */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         position: relative;
-        /* left: -100vw; */
         width: 100%;
     }
     .menu a {
@@ -81,5 +57,9 @@
     header a:first-of-type {
         margin: 1rem 0;
     }
-
+    .box-cal-num {
+        width: 80%;
+        margin: 2rem auto;
+        height: 300px;
+    }
 }

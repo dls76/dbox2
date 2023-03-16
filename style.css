@@ -132,3 +132,15 @@ details > summary {
     overflow-y: scroll;
     background-color: whitesmoke;
 }
+#ingles summary {
+    color: rgb(77, 77, 77);
+    font-weight: normal;
+}
+#ingles summary:hover {
+    color: #E42C8A;
+}
+#ingles a {
+    display: block;
+    padding: 4px 10px;
+    color: gray;
+}

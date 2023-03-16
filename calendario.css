@@ -1,5 +1,5 @@
 .box-cal-num {
-    max-height: 280px;
+    height: 320px;
     position: relative;
     background-color: #fff;
 }
@@ -145,10 +145,11 @@ i.fa-solid {
     position: absolute;
     width: 100%;
     box-sizing: border-box;
-    bottom: .5rem;
+    bottom: .3rem;
 }
 
-#btn-hoje {margin-left: 5px;} #btn-obs {margin-right: 5px;}
+#btn-hoje {margin-left: 5px;} 
+#btn-obs {margin-right: 5px;}
 #btn-hoje, #btn-obs {
     background-color: #fff;
     outline: none;
@@ -161,11 +162,9 @@ i.fa-solid {
     font-size: .7rem;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
 #btn-hoje:hover, #btn-obs:hover {
     color: #355ab8;
 }
-
 .today {
     background-color: #253B73;
     color: #fff;
