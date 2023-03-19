@@ -98,17 +98,7 @@ for( k=0; k<cultos.length; k++ ) {
 }
 
 let comunicados = [
-    {num: "001", ass: "", pub: ""},
-    {num: "002", ass: "", pub: ""},
     {num: "003", ass: " reunião de pais", pub: "FII-EM"},
-    {num: "004", ass: "", pub: "EM"},
-    {num: "005", ass: "", pub: "EM"},
-    {num: "006", ass: "", pub: "EM"},
-    {num: "007", ass: "", pub: "EM"},
-    {num: "008", ass: "", pub: "EM"},
-    {num: "009", ass: "", pub: "EM"},
-    {num: "010", ass: "", pub: "EM"},
-    {num: "011", ass: "", pub: "EM"},
     {num: "012-27/02", ass: "Oficina de reforço", pub: "1ºEF"},
     {num: "013-02/03", ass: "Bordado no uniforme", pub: "EI-EM"},
     {num: "014-03/03", ass: "Recados e lembretes", pub: "EI-EM"},
@@ -117,26 +107,16 @@ let comunicados = [
     {num: "017-09/03", ass: "Materiais de uso pessoal", pub: "FII-EM"},
     {num: "018-10/03", ass: "Segunda chamada AV1", pub: "2º-5º"},
     {num: "019-15/03", ass: "Reunião de Pais, Profs e Alunos", pub: "FII-EM"},
+    {num: "020-16/03", ass: "Visita Pedagógica", pub: "1ªEM"},
+    {num: "021-16/03", ass: "Reunião de Pais", pub: "EI-FI"},
+    {num: "022-16/03", ass: "Convocação Reunião de Pais", pub: "EI-FI"},
+    {num: "023-16/03", ass: "Cantata de Páscoa", pub: "EI-FI"},
 ]
 
 let ult = comunicados.pop()
 document.querySelector('#comunicados').innerHTML = ult.num + " - " + ult.ass + " (" + ult.pub + ")"
 
 let plantaodiario = [
-
-    // {data: new Date(2023, 1, 23), pessoa: "Rudi"},
-
-    // {data: new Date(2023, 1, 27), pessoa: "Diretor"},
-    // {data: new Date(2023, 1, 28), pessoa: "Thiago"},
-    // {data: new Date(2023, 2, 1), pessoa: "Diretor"},
-    // {data: new Date(2023, 2, 2), pessoa: "Rudi"},
-
-    // Seg - Dire - ter - Rudi -Qua - rodizio e quinta Thiago
-
-    // {data: new Date(2023, 2, 6), pessoa: "Diretor"},
-    // {data: new Date(2023, 2, 7), pessoa: "Thiago"},
-    // {data: new Date(2023, 2, 8), pessoa: "Thiago"},
-    // {data: new Date(2023, 2, 9), pessoa: "Rudi"},
 
     {data: new Date(2023, 2, 13), pessoa: "Diretor"},
     {data: new Date(2023, 2, 14), pessoa: "Rudi"},
@@ -230,4 +210,14 @@ for (let m = 0; m < plantaodiario.length; m++ ) {
     } else if (datahoje.getDay() == 5) {
         document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta'
     }
+}
+
+
+let menuDotted = document.querySelector('.menu-dotted')
+menuDotted.addEventListener('click', openDotted)
+
+function openDotted(){
+    let subDotted = document.querySelector('.sub-dotted')
+    subDotted.classList.add('scale-in-tr')
+    subDotted.classList.toggle('showDotted')
 }

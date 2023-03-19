@@ -39,7 +39,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: linear-gradient(#f63c4c, #e22e3d, #ac0f1c, #8d0712); */
     height: 166px;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
@@ -53,7 +52,6 @@
     margin: 0 auto;
     display: block;
 }
-
 
 .parabens {
     padding: 1rem 0 .6rem 0;
