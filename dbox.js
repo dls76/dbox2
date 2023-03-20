@@ -83,11 +83,23 @@ let cultos = [
     // {data: new Date(2023, 2, 8), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
     // {data: new Date(2023, 2, 9), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
     // {data: new Date(2023, 2, 10), pessoaM: "Thiago", pessoaT:"Thiago"},
-    {data: new Date(2023, 2, 13), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 14), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 15), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 16), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 17), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    // {data: new Date(2023, 2, 13), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    // {data: new Date(2023, 2, 14), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    // {data: new Date(2023, 2, 15), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    // {data: new Date(2023, 2, 16), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    // {data: new Date(2023, 2, 17), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+
+    {data: new Date(2023, 2, 20), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 2, 21), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 2, 22), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 2, 23), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 2, 24), pessoaM: "Douglas", pessoaT:"Douglas"},
+
+    {data: new Date(2023, 2, 27), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 2, 28), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 2, 29), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 2, 30), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 2, 31), pessoaM: "Thiago", pessoaT:"Thiago"},
 ]
 
 for( k=0; k<cultos.length; k++ ) {
