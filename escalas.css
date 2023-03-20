@@ -27,6 +27,10 @@
     width: 35px;
 }
 
+#icon-comp-box {
+    align-items: center;
+}
+
 #icon-compensacao {
     width: 25px;
 }
@@ -50,7 +54,7 @@
     color: #253B73;
     font-size: .7rem;
     font-family: 'Roboto Condensed', sans-serif;
-    padding: 5px 0 10px 0;
+    padding: 5px 0 0 0;
 }
 
 #legenda-aniver {

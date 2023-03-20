@@ -1,33 +1,67 @@
 let datahoje = new Date()
 
 let compensacao = [
-    {data: new Date(2023, 2, 3), people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
-    {data: new Date(2023, 2, 10), people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
-    {data: new Date(2023, 2, 17), people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
-    {data: new Date(2023, 2, 24), people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
-    {data: new Date(2023, 2, 31), people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
-    {data: new Date(2023, 3, 7), people: "Feriado sexta-feira santa"},
-    {data: new Date(2023, 3, 14), people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
-    {data: new Date(2023, 3, 21), people: "Feriado Tiradentes"},
-    {data: new Date(2023, 3, 28), people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
-    {data: new Date(2023, 4, 5), people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
-    {data: new Date(2023, 4, 12), people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
-    {data: new Date(2023, 4, 19), people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
-    {data: new Date(2023, 4, 26), people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
-    {data: new Date(2023, 5, 2), people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
-    {data: new Date(2023, 5, 9), people: "Feriado Corpus Christi"},
-    {data: new Date(2023, 5, 16), people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
-    {data: new Date(2023, 5, 23), people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
-    {data: new Date(2023, 5, 30), people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+
+    {data: new Date(2023, 2, 22), diaDaSemana: "Quarta", people: "Reunião Equipe Gestora - ASP"},
+    {data: new Date(2023, 2, 24), diaDaSemana: "Sexta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
+
+    {data: new Date(2023, 2, 29), diaDaSemana: "Quarta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},    
+    {data: new Date(2023, 2, 31), diaDaSemana: "Sexta", people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+
+    {data: new Date(2023, 3, 5), diaDaSemana: "Quarta", people: "Semana com feriado (7/4)"},
+    {data: new Date(2023, 3, 7), diaDaSemana: "Sexta", people: "Feriado sexta-feira santa"},
+
+    {data: new Date(2023, 3, 12), diaDaSemana: "Quarta", people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+    {data: new Date(2023, 3, 14), diaDaSemana: "Sexta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
+    
+    {data: new Date(2023, 3, 19), diaDaSemana: "Quarta", people: "Semana com feriado (21/4)"},
+    {data: new Date(2023, 3, 21), diaDaSemana: "Sexta", people: "Feriado Tiradentes"},
+
+    {data: new Date(2023, 3, 26), diaDaSemana: "Quarta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
+    {data: new Date(2023, 3, 28), diaDaSemana: "Sexta", people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+
+    {data: new Date(2023, 4, 3), diaDaSemana: "Quarta", people: "Semana com feriado (1/5)"},
+    {data: new Date(2023, 4, 5), diaDaSemana: "Sexta", people: "Semana com feriado (1/5)"},
+
+    {data: new Date(2023, 4, 10), diaDaSemana: "Quarta", people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+    {data: new Date(2023, 4, 12), diaDaSemana: "Sexta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
+
+    {data: new Date(2023, 4, 17), diaDaSemana: "Quarta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
+    {data: new Date(2023, 4, 19), diaDaSemana: "Sexta", people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+
+    {data: new Date(2023, 4, 24), diaDaSemana: "Quarta", people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+    {data: new Date(2023, 4, 26), diaDaSemana: "Sexta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
+
+    {data: new Date(2023, 4, 31), diaDaSemana: "Quarta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
+    {data: new Date(2023, 5, 2), diaDaSemana: "Sexta", people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+
+    {data: new Date(2023, 5, 7), diaDaSemana: "Quarta", people: "Semana com feriado (8 e 9/6)"},
+    {data: new Date(2023, 5, 9), diaDaSemana: "Sexta", people: "Semana com feriado (8 e 9/6)"},
+
+    {data: new Date(2023, 5, 14), diaDaSemana: "Quarta", people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+    {data: new Date(2023, 5, 16), diaDaSemana: "Sexta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
+
+    {data: new Date(2023, 5, 21), diaDaSemana: "Quarta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
+    {data: new Date(2023, 5, 23), diaDaSemana: "Sexta", people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+
+    {data: new Date(2023, 5, 28), diaDaSemana: "Quarta", people: "Douglas, Rudi, Raquel, Cida, Denise, Jessica"},
+    {data: new Date(2023, 5, 30), diaDaSemana: "Sexta", people: "Thiago, Dani, Roberta, Sandra, Karol, Guilherme"},
+
+    {data: new Date(2023, 6, 5), diaDaSemana: "Quarta", people: "Última semana do semestre"},
+    {data: new Date(2023, 6, 7), diaDaSemana: "Sexta", people: "Última semana do semestre"},
 ]
 
 for(i=0; i<compensacao.length; i++) {
 
     const diffInMs = datahoje - compensacao[i].data
     const diffDays = diffInMs / (1000 * 60 * 60 * 24)
-    
-    if ( diffDays >= -6  && diffDays < 1 ) { 
-        document.querySelector('#nomescomp').innerHTML = compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth()+1) + ' - ' + compensacao[i].people
+   
+    if ( ( diffDays >= -6  && diffDays < 1 ) && ( compensacao[i].diaDaSemana == "Quarta" ) ) { 
+        document.querySelector('#nomescompquarta').innerHTML = compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth()+1) + ' (quarta) - ' + compensacao[i].people
+    }
+
+    if ( ( diffDays >= -6  && diffDays < 1 ) && ( compensacao[i].diaDaSemana == "Sexta" ) ) { 
+        document.querySelector('#nomescomp').innerHTML = compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth()+1) + ' (sexta) - ' + compensacao[i].people
     }
 }
 
@@ -223,7 +257,6 @@ for (let m = 0; m < plantaodiario.length; m++ ) {
         document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta'
     }
 }
-
 
 let menuDotted = document.querySelector('.menu-dotted')
 menuDotted.addEventListener('click', openDotted)
