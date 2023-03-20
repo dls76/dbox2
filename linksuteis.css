@@ -47,18 +47,13 @@
     justify-content: center;
 }
 
-#aniver-img img {
-    width: 50px;
-    margin: 0 auto;
-    display: block;
-}
 
 .parabens {
-    padding: 1rem 0 .6rem 0;
+    padding: .2rem 0 .2rem 0;
     color: #fff;
     text-align: center;
-    font-weight: 500;
-    text-shadow: 0 0 20px black;
+    font-weight: 700;
+    text-shadow: 2px 2px 126px #016477;
 }
 .box-aniver-img {
     display: flex;
@@ -74,6 +69,13 @@
     border-radius: 50%; 
     border: 2px solid #fff;
 }
+
+#aniver-img img {
+    width: 70px;
+    margin: 0 auto;
+    display: block;
+}
+
 .aniver-nome, .aniver-funcao {
     font-family: 'Roboto Condensed';
     text-align: center;
@@ -84,11 +86,14 @@
 }
 .aniver-funcao {
     font-weight: 500;
-    font-size: .5rem;
+    font-size: .7rem;
 }
 #parabens {
     font-size: .8rem;
-    letter-spacing: .8px;
-    text-shadow: 0 0 10px black;
+    letter-spacing: 1.5px;
+    text-shadow: 10px 10px 25px rgb(0, 0, 0),
+    -10px 10px 25px rgb(0, 0, 0),
+    -10px -10px 25px rgb(0, 0, 0),
+    10px -10px 25px rgb(0, 0, 0);
 
 }
