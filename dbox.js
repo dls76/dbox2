@@ -1,5 +1,6 @@
 let datahoje = new Date()
 
+// Compensação
 let compensacao = [
 
     {data: new Date(2023, 2, 22), diaDaSemana: "Quarta", people: "Reunião Equipe Gestora - ASP"},
@@ -65,6 +66,7 @@ for(i=0; i<compensacao.length; i++) {
     }
 }
 
+// Plantão sexta
 let plantaosexta = [
     {data: new Date(2023, 1, 27), person: "Douglas"},
     {data: new Date(2023, 2, 3), person: "Thiago"},
@@ -98,6 +100,7 @@ if ( diffDays >= -6 && diffDays <= 0 ) {
 
 }
 
+// Cultos
 let cultos = [
     // {data: new Date(2023, 1, 18), pessoaM: "Sábado"},
     // {data: new Date(2023, 1, 19), pessoaM: "Domingo", pessoaT:""},
@@ -124,16 +127,41 @@ let cultos = [
     // {data: new Date(2023, 2, 17), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
 
     {data: new Date(2023, 2, 20), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 21), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 22), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 23), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 24), pessoaM: "Douglas", pessoaT:"Douglas"},
-
+    {data: new Date(2023, 2, 21), pessoaM: "Pr. Guilherme", pessoaT:"Ana Paula"},
+    {data: new Date(2023, 2, 22), pessoaM: "Lia", pessoaT:"Fernanda Nakonieczni"},
+    {data: new Date(2023, 2, 23), pessoaM: "Elaine", pessoaT:"Willian"},
+    {data: new Date(2023, 2, 24), pessoaM: "Diretor", pessoaT:"Diretor"},
+    
     {data: new Date(2023, 2, 27), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 28), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 29), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 30), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 2, 31), pessoaM: "Thiago", pessoaT:"Thiago"},
+    {data: new Date(2023, 2, 28), pessoaM: "Pr. Luiz Felipe", pessoaT:"Priscila"},
+    {data: new Date(2023, 2, 29), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Luiz Felipe"},
+    {data: new Date(2023, 2, 30), pessoaM: "Willian", pessoaT:"Cleide"},
+    {data: new Date(2023, 2, 31), pessoaM: "Vice-diretor", pessoaT:"Vice-diretor"},
+
+    {data: new Date(2023, 3, 3), pessoaM: "Convidado semana santa", pessoaT:"Convidado semana santa"},
+    {data: new Date(2023, 3, 4), pessoaM: "Convidado semana santa", pessoaT:"Convidado semana santa"},
+    {data: new Date(2023, 3, 5), pessoaM: "Convidado semana santa", pessoaT:"Convidado semana santa"},
+    {data: new Date(2023, 3, 6), pessoaM: "Convidado semana santa", pessoaT:"Convidado semana santa"},
+
+    {data: new Date(2023, 3, 10), pessoaM: "Pr. Guilherme", pessoaT:"Ana Paula"},
+    {data: new Date(2023, 3, 11), pessoaM: "Lia", pessoaT:"Willian"},
+    {data: new Date(2023, 3, 12), pessoaM: "Denise Schmidt", pessoaT:"Cleide"},
+    {data: new Date(2023, 3, 13), pessoaM: "Alessandra", pessoaT:"Fernanda Nakonieczni"},
+    {data: new Date(2023, 3, 14), pessoaM: "Diretor", pessoaT:"Diretor"},
+
+    {data: new Date(2023, 3, 17), pessoaM: "Pr. Luiz Felipe", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 3, 18), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 3, 19), pessoaM: "Scheyla", pessoaT:"Pr. Luiz Felipe"},
+    {data: new Date(2023, 3, 20), pessoaM: "Jackelini", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 3, 21), pessoaM: "Vice-diretor", pessoaT:"Vice-diretor"},
+
+    {data: new Date(2023, 3, 24), pessoaM: "Pr. Luiz Felipe", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 3, 25), pessoaM: "Hermes", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 3, 26), pessoaM: "Elisa", pessoaT:"Joelma Castro"},
+    {data: new Date(2023, 3, 27), pessoaM: "Pr. Luiz Felipe", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 3, 28), pessoaM: "Diretor", pessoaT:"Diretor"},
+
+
 ]
 
 for( k=0; k<cultos.length; k++ ) {
@@ -143,6 +171,7 @@ for( k=0; k<cultos.length; k++ ) {
     }
 }
 
+// Comunicados
 let comunicados = [
     {num: "003", ass: " reunião de pais", pub: "FII-EM"},
     {num: "012-27/02", ass: "Oficina de reforço", pub: "1ºEF"},
@@ -157,6 +186,8 @@ let comunicados = [
     {num: "021-16/03", ass: "Reunião de Pais", pub: "EI-FI"},
     {num: "022-16/03", ass: "Convocação Reunião de Pais", pub: "EI-FI"},
     {num: "023-16/03", ass: "Cantata de Páscoa", pub: "EI-FI"},
+    {num: "024-20/03", ass: "Ausência prof. Paula", pub: "T.13"},
+    {num: "025-21/03", ass: "Prorrogação reunião bolsistas", pub: "EF-EM"},
 ]
 
 let ult = comunicados.pop()
