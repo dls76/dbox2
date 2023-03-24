@@ -94,7 +94,7 @@ for(j=0; j<plantaosexta.length; j++) {
     const diffInMs = datahoje - plantaosexta[j].data
     const diffDays = diffInMs / (1000 * 60 * 60 * 24)
 
-if ( diffDays >= -6 && diffDays <= 0 ) {
+if ( diffDays >= -6 && diffDays < 1 ) {
         document.querySelector('#plantaosexta').innerHTML = plantaosexta[j].data.getDate() + '/' + (plantaosexta[j].data.getMonth()+1) + ' - ' + plantaosexta[j].person
     }
 
