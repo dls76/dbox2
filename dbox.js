@@ -187,7 +187,7 @@ let comunicados = [
     {num: "022-16/03", ass: "Convocação Reunião de Pais", pub: "EI-FI"},
     {num: "023-16/03", ass: "Cantata de Páscoa", pub: "EI-FI"},
     {num: "024-20/03", ass: "Ausência prof. Paula", pub: "T.13"},
-    {num: "025-21/03", ass: "Prorrogação reunião bolsistas", pub: "EF-EM"},
+    {num: "025-21/03", ass: "Reunião com alunos-pais bolsistas", pub: "EF-EM"},
 ]
 
 let ult = comunicados.pop()
