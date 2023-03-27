@@ -20,12 +20,23 @@
     align-items: center;
     cursor: pointer;
     padding: 20px 0px;
+    /* border: 1px solid red; */
+
 }
 
 .img img {
-    height: 30px;
+    /* height: 30px; */
     width: 30px;
     object-fit: cover;
+    /* border: 1px solid red; */
+
+}
+.box-ama {
+    padding: 1px;
+}
+#ama {
+    object-fit: fill;
+    /* border: 1px solid red; */
 }
 
 .legenda-links {
