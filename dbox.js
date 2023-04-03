@@ -190,10 +190,12 @@ let comunicados = [
     {num: "025-21/03", ass: "Reunião com alunos-pais bolsistas", pub: "EF-EM"},
     {num: "031-24/03", ass: "Formatura 9º ano", pub: "9ºano"},
     {num: "032-24/03", ass: "Formatura 3º EM", pub: "3ºEM"},
+    {num: "046", data: new Date(2023, 3, 3), ass: "Confraternização", pub: "T.82"},
 ]
 
 let ult = comunicados.pop()
-document.querySelector('#comunicados').innerHTML = ult.num + " - " + ult.ass + " (" + ult.pub + ")"
+document.querySelector('#titulo-comunicados').innerHTML = "Último comunicado: "+ult.num 
+document.querySelector('#comunicados').innerHTML = ult.data.getDate() + "/" + (ult.data.getMonth()+1) + " - " + ult.ass + " (" + ult.pub + ")"
 
 let plantaodiario = [
 
