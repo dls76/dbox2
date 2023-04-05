@@ -192,6 +192,7 @@ let comunicados = [
     {num: "032-24/03", ass: "Formatura 3º EM", pub: "3ºEM"},
     {num: "046", data: new Date(2023, 3, 3), ass: "Confraternização", pub: "T.82"},
     {num: "047", data: new Date(2023, 3, 3), ass: "Cardápio Contraturno", pub: "EI-5º"},
+    {num: "048", data: new Date(2023, 3, 5), ass: "Cronograma Avaliativo", pub: "T.33"},
 ]
 
 let ult = comunicados.pop()
