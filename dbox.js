@@ -51,7 +51,6 @@ let compensacao = [
     {data: new Date(2023, 6, 5), diaDaSemana: "Quarta", people: "Última semana do semestre"},
     {data: new Date(2023, 6, 7), diaDaSemana: "Sexta", people: "Última semana do semestre"},
 ]
-
 for(i=0; i<compensacao.length; i++) {
 
     const diffInMs = datahoje - compensacao[i].data
@@ -88,7 +87,6 @@ let plantaosexta = [
     {data: new Date(2023, 5, 23), person: "Rudi"},
     {data: new Date(2023, 5, 30), person: "Thiago"},
 ]
-
 for(j=0; j<plantaosexta.length; j++) {
 
     const diffInMs = datahoje - plantaosexta[j].data
@@ -163,7 +161,6 @@ let cultos = [
 
 
 ]
-
 for( k=0; k<cultos.length; k++ ) {
 
     if ( (datahoje.getDate() === cultos[k].data.getDate()) && (datahoje.getMonth() === cultos[k].data.getMonth()) && (datahoje.getFullYear() === cultos[k].data.getFullYear()) ){
@@ -194,11 +191,11 @@ let comunicados = [
     {num: "047", data: new Date(2023, 3, 3), ass: "Cardápio Contraturno", pub: "EI-5º"},
     {num: "048", data: new Date(2023, 3, 5), ass: "Cronograma Avaliativo", pub: "T.33"},
 ]
-
 let ult = comunicados.pop()
 document.querySelector('#titulo-comunicados').innerHTML = "Último comunicado: "+ult.num 
 document.querySelector('#comunicados').innerHTML = ult.data.getDate() + "/" + (ult.data.getMonth()+1) + " - " + ult.ass + " (" + ult.pub + ")"
 
+//Plantão Diário
 let plantaodiario = [
 
     {data: new Date(2023, 2, 13), pessoa: "Diretor"},
@@ -218,62 +215,62 @@ let plantaodiario = [
 
     {data: new Date(2023, 3, 3), pessoa: "Diretor"},
     {data: new Date(2023, 3, 4), pessoa: "Rudi"},
-    {data: new Date(2023, 3, 5), pessoa: "Diretor"},
-    {data: new Date(2023, 3, 6), pessoa: "Thiago"},
+    {data: new Date(2023, 3, 5), pessoa: "Thiago"},
+    {data: new Date(2023, 3, 6), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 3, 10), pessoa: "Diretor"},
     {data: new Date(2023, 3, 11), pessoa: "Rudi"},
-    {data: new Date(2023, 3, 12), pessoa: "Rudi"},
-    {data: new Date(2023, 3, 13), pessoa: "Thiago"},
+    {data: new Date(2023, 3, 12), pessoa: "Thiago"},
+    {data: new Date(2023, 3, 13), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 3, 17), pessoa: "Diretor"},
     {data: new Date(2023, 3, 18), pessoa: "Rudi"},
     {data: new Date(2023, 3, 19), pessoa: "Thiago"},
-    {data: new Date(2023, 3, 20), pessoa: "Thiago"},
+    {data: new Date(2023, 3, 20), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 3, 24), pessoa: "Diretor"},
     {data: new Date(2023, 3, 25), pessoa: "Rudi"},
-    {data: new Date(2023, 3, 26), pessoa: "Diretor"},
-    {data: new Date(2023, 3, 27), pessoa: "Thiago"},
+    {data: new Date(2023, 3, 26), pessoa: "Thiago"},
+    {data: new Date(2023, 3, 27), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 4, 2), pessoa: "Rudi"},
-    {data: new Date(2023, 4, 3), pessoa: "Rudi"},
-    {data: new Date(2023, 4, 4), pessoa: "Thiago"},
+    {data: new Date(2023, 4, 3), pessoa: "Thiago"},
+    {data: new Date(2023, 4, 4), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 4, 8), pessoa: "Diretor"},
     {data: new Date(2023, 4, 9), pessoa: "Rudi"},
     {data: new Date(2023, 4, 10), pessoa: "Thiago"},
-    {data: new Date(2023, 4, 11), pessoa: "Thiago"},
+    {data: new Date(2023, 4, 11), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 4, 15), pessoa: "Diretor"},
     {data: new Date(2023, 4, 16), pessoa: "Rudi"},
-    {data: new Date(2023, 4, 17), pessoa: "Diretor"},
-    {data: new Date(2023, 4, 18), pessoa: "Thiago"},
+    {data: new Date(2023, 4, 17), pessoa: "Thiago"},
+    {data: new Date(2023, 4, 18), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 4, 22), pessoa: "Diretor"},
     {data: new Date(2023, 4, 23), pessoa: "Rudi"},
-    {data: new Date(2023, 4, 24), pessoa: "Rudi"},
-    {data: new Date(2023, 4, 25), pessoa: "Thiago"},
+    {data: new Date(2023, 4, 24), pessoa: "Thiago"},
+    {data: new Date(2023, 4, 25), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 4, 29), pessoa: "Diretor"},
     {data: new Date(2023, 4, 30), pessoa: "Rudi"},
     {data: new Date(2023, 4, 31), pessoa: "Thiago"},
-    {data: new Date(2023, 5, 1), pessoa: "Thiago"},
+    {data: new Date(2023, 5, 1), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 5, 5), pessoa: "Diretor"},
     {data: new Date(2023, 5, 6), pessoa: "Rudi"},
-    {data: new Date(2023, 5, 7), pessoa: "Diretor"},
-    {data: new Date(2023, 5, 8), pessoa: "Thiago"},
+    {data: new Date(2023, 5, 7), pessoa: "Thiago"},
+    {data: new Date(2023, 5, 8), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 5, 12), pessoa: "Diretor"},
     {data: new Date(2023, 5, 13), pessoa: "Rudi"},
-    {data: new Date(2023, 5, 14), pessoa: "Rudi"},
-    {data: new Date(2023, 5, 15), pessoa: "Thiago"},
+    {data: new Date(2023, 5, 14), pessoa: "Thiago"},
+    {data: new Date(2023, 5, 15), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 5, 19), pessoa: "Diretor"},
     {data: new Date(2023, 5, 20), pessoa: "Rudi"},
     {data: new Date(2023, 5, 21), pessoa: "Thiago"},
-    {data: new Date(2023, 5, 22), pessoa: "Thiago"},
+    {data: new Date(2023, 5, 22), pessoa: "Pr. Guilherme"},
 
     {data: new Date(2023, 5, 26), pessoa: "Diretor"},
     {data: new Date(2023, 5, 27), pessoa: "Rudi"},
@@ -282,10 +279,9 @@ let plantaodiario = [
 
     {data: new Date(2023, 6, 3), pessoa: "Diretor"},
     {data: new Date(2023, 6, 4), pessoa: "Rudi"},
-    {data: new Date(2023, 6, 5), pessoa: "Rudi"},
-    {data: new Date(2023, 6, 6), pessoa: "Thiago"},
+    {data: new Date(2023, 6, 5), pessoa: "Thiago"},
+    {data: new Date(2023, 6, 6), pessoa: "Pr. Guilherme"},
 ]
-
 for (let m = 0; m < plantaodiario.length; m++ ) {
 
     if ( (datahoje.getDate() === plantaodiario[m].data.getDate() ) && (datahoje.getMonth() === plantaodiario[m].data.getMonth()) && (datahoje.getFullYear() === plantaodiario[m].data.getFullYear()) ) {  
@@ -293,13 +289,4 @@ for (let m = 0; m < plantaodiario.length; m++ ) {
     } else if (datahoje.getDay() == 5) {
         document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta'
     }
-}
-
-let menuDotted = document.querySelector('.menu-dotted')
-menuDotted.addEventListener('click', openDotted)
-
-function openDotted(){
-    let subDotted = document.querySelector('.sub-dotted')
-    subDotted.classList.add('scale-in-tr')
-    subDotted.classList.toggle('showDotted')
 }
