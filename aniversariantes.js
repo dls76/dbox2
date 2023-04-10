@@ -46,7 +46,7 @@ function show() {
         {nome: "Patricia Helen de Oliveira Sebastiao", dia: 27, mes: 3, ano: 1984, funcao: "Aux. de Classe", foto:""},
         {nome: "Talita Salazar dos Santos", dia: 27, mes: 3, ano: 1992, funcao: "Monitora", foto:""},
         {nome: "Lucas de Lima Galo", dia: 20, mes: 3, ano: 1996, funcao: "Monitor", foto:""},
-        {nome: "Dielen Peniche do Nascimento Costa", dia: 10, mes: 3, ano: 1997, funcao: "Zeladora", foto:""},
+        {nome: "Dielen Peniche do Nascimento Costa", dia: 10, mes: 3, ano: 1997, funcao: "Zeladora", foto:"img/anivImg/dielen.jpg"},
         {nome: "Andre Felipe Stachak dos Santos", dia: 28, mes: 3, ano: 2000, funcao: "Aux. de TI", foto:""},
         {nome: "Sonia Arlete Szkudlarek Bueno", dia: 7, mes: 3, ano: 2000, funcao: "Zeladora", foto:""},
         {nome: "Raquel Pollyana do Nascimento Santos", dia: 13, mes: 3, ano: 2000, funcao: "Coordenadora", foto:""},
