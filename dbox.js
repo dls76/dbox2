@@ -169,31 +169,31 @@ for( k=0; k<cultos.length; k++ ) {
 }
 
 // Comunicados
-let comunicados = [
-    {num: "003", ass: " reunião de pais", pub: "FII-EM"},
-    {num: "012-27/02", ass: "Oficina de reforço", pub: "1ºEF"},
-    {num: "013-02/03", ass: "Bordado no uniforme", pub: "EI-EM"},
-    {num: "014-03/03", ass: "Recados e lembretes", pub: "EI-EM"},
-    {num: "015-07/03", ass: "Atendimento administrativo", pub: "EI-EM"},
-    {num: "016-09/03", ass: "2ª chamada 9º-EM", pub: "9º-EM"},
-    {num: "017-09/03", ass: "Materiais de uso pessoal", pub: "FII-EM"},
-    {num: "018-10/03", ass: "Segunda chamada AV1", pub: "2º-5º"},
-    {num: "019-15/03", ass: "Reunião de Pais, Profs e Alunos", pub: "FII-EM"},
-    {num: "020-16/03", ass: "Visita Pedagógica", pub: "1ªEM"},
-    {num: "021-16/03", ass: "Reunião de Pais", pub: "EI-FI"},
-    {num: "022-16/03", ass: "Convocação Reunião de Pais", pub: "EI-FI"},
-    {num: "023-16/03", ass: "Cantata de Páscoa", pub: "EI-FI"},
-    {num: "024-20/03", ass: "Ausência prof. Paula", pub: "T.13"},
-    {num: "025-21/03", ass: "Reunião com alunos-pais bolsistas", pub: "EF-EM"},
-    {num: "031-24/03", ass: "Formatura 9º ano", pub: "9ºano"},
-    {num: "032-24/03", ass: "Formatura 3º EM", pub: "3ºEM"},
-    {num: "046", data: new Date(2023, 3, 3), ass: "Confraternização", pub: "T.82"},
-    {num: "047", data: new Date(2023, 3, 3), ass: "Cardápio Contraturno", pub: "EI-5º"},
-    {num: "048", data: new Date(2023, 3, 5), ass: "Cronograma Avaliativo", pub: "T.33"},
-]
-let ult = comunicados.pop()
-document.querySelector('#titulo-comunicados').innerHTML = "Último comunicado: "+ult.num 
-document.querySelector('#comunicados').innerHTML = ult.data.getDate() + "/" + (ult.data.getMonth()+1) + " - " + ult.ass + " (" + ult.pub + ")"
+// let comunicados = [
+//     {num: "003", ass: " reunião de pais", pub: "FII-EM"},
+//     {num: "012-27/02", ass: "Oficina de reforço", pub: "1ºEF"},
+//     {num: "013-02/03", ass: "Bordado no uniforme", pub: "EI-EM"},
+//     {num: "014-03/03", ass: "Recados e lembretes", pub: "EI-EM"},
+//     {num: "015-07/03", ass: "Atendimento administrativo", pub: "EI-EM"},
+//     {num: "016-09/03", ass: "2ª chamada 9º-EM", pub: "9º-EM"},
+//     {num: "017-09/03", ass: "Materiais de uso pessoal", pub: "FII-EM"},
+//     {num: "018-10/03", ass: "Segunda chamada AV1", pub: "2º-5º"},
+//     {num: "019-15/03", ass: "Reunião de Pais, Profs e Alunos", pub: "FII-EM"},
+//     {num: "020-16/03", ass: "Visita Pedagógica", pub: "1ªEM"},
+//     {num: "021-16/03", ass: "Reunião de Pais", pub: "EI-FI"},
+//     {num: "022-16/03", ass: "Convocação Reunião de Pais", pub: "EI-FI"},
+//     {num: "023-16/03", ass: "Cantata de Páscoa", pub: "EI-FI"},
+//     {num: "024-20/03", ass: "Ausência prof. Paula", pub: "T.13"},
+//     {num: "025-21/03", ass: "Reunião com alunos-pais bolsistas", pub: "EF-EM"},
+//     {num: "031-24/03", ass: "Formatura 9º ano", pub: "9ºano"},
+//     {num: "032-24/03", ass: "Formatura 3º EM", pub: "3ºEM"},
+//     {num: "046", data: new Date(2023, 3, 3), ass: "Confraternização", pub: "T.82"},
+//     {num: "047", data: new Date(2023, 3, 3), ass: "Cardápio Contraturno", pub: "EI-5º"},
+//     {num: "048", data: new Date(2023, 3, 5), ass: "Cronograma Avaliativo", pub: "T.33"},
+// ]
+// let ult = comunicados.pop()
+// document.querySelector('#titulo-comunicados').innerHTML = "Último comunicado: "+ult.num 
+// document.querySelector('#comunicados').innerHTML = ult.data.getDate() + "/" + (ult.data.getMonth()+1) + " - " + ult.ass + " (" + ult.pub + ")"
 
 //Plantão Diário
 let plantaodiario = [
