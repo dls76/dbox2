@@ -49,7 +49,7 @@ function show() {
         {nome: "Dielen Peniche do Nascimento Costa", dia: 10, mes: 3, ano: 1997, funcao: "Zeladora", foto:"img/anivImg/dielen.jpg"},
         {nome: "Andre Felipe Stachak dos Santos", dia: 28, mes: 3, ano: 2000, funcao: "Aux. de TI", foto:""},
         {nome: "Sonia Arlete Szkudlarek Bueno", dia: 7, mes: 3, ano: 2000, funcao: "Zeladora", foto:""},
-        {nome: "Raquel Pollyana do Nascimento Santos", dia: 13, mes: 3, ano: 2000, funcao: "Coordenadora", foto:"img/anivImg/abril/raquelpoly.jpg"},
+        {nome: "Raquel Pollyana do Nascimento Santos", dia: 13, mes: 3, ano: 2000, funcao: "Coordenadora", foto:"img/anivImg/abril/raquelpoly.png"},
 
         // MAIO
         {nome: "Caroline do Nascimento Dauzacker", dia: 28, mes: 4, ano: 2002, funcao: "Recepcionista", foto:""},
