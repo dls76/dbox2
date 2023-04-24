@@ -100,29 +100,6 @@ if ( diffDays >= -6 && diffDays < 1 ) {
 
 // Cultos
 let cultos = [
-    // {data: new Date(2023, 1, 18), pessoaM: "Sábado"},
-    // {data: new Date(2023, 1, 19), pessoaM: "Domingo", pessoaT:""},
-    // {data: new Date(2023, 1, 20), pessoaM: "Recesso", pessoaT:""},
-    // {data: new Date(2023, 1, 21), pessoaM: "Feriado", pessoaT:""},
-    // {data: new Date(2023, 1, 22), pessoaM: "Guilherme", pessoaT:""},
-    // {data: new Date(2023, 1, 23), pessoaM: "Pr. Gerson", pessoaT:"Pr. Gerson"},
-    // {data: new Date(2023, 1, 24), pessoaM: "Pr. Gerson", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 1, 27), pessoaM: "Isabelle (82)", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 1, 28), pessoaM: "Paulo (111)", pessoaT:"Pr. Augusto"},
-    // {data: new Date(2023, 2, 1), pessoaM: "Pr. Luiz Thomaz", pessoaT:"Pr. Augusto"},
-    // {data: new Date(2023, 2, 2), pessoaM: "Pr. Luiz Thomaz", pessoaT:"Pr. Augusto"},
-    // {data: new Date(2023, 2, 3), pessoaM: "Pr. Luiz Thomaz", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 2, 3), pessoaM: "", pessoaT:""},
-    // {data: new Date(2023, 2, 6), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 2, 7), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 2, 8), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 2, 9), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 2, 10), pessoaM: "Thiago", pessoaT:"Thiago"},
-    // {data: new Date(2023, 2, 13), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 2, 14), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 2, 15), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 2, 16), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
-    // {data: new Date(2023, 2, 17), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
 
     {data: new Date(2023, 2, 20), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
     {data: new Date(2023, 2, 21), pessoaM: "Pr. Guilherme", pessoaT:"Ana Paula"},
@@ -157,7 +134,7 @@ let cultos = [
     {data: new Date(2023, 3, 25), pessoaM: "Hermes", pessoaT:"Pr. Guilherme"},
     {data: new Date(2023, 3, 26), pessoaM: "Elisa", pessoaT:"Joelma Castro"},
     {data: new Date(2023, 3, 27), pessoaM: "Pr. Luiz Felipe", pessoaT:"Pr. Guilherme"},
-    {data: new Date(2023, 3, 28), pessoaM: "Diretor", pessoaT:"Diretor"},
+    {data: new Date(2023, 3, 28), pessoaM: "Vice-diretor", pessoaT:"Vice-Diretor"},
 
 
 ]
