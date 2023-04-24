@@ -1,7 +1,6 @@
 .conteinerescalas {
     background-color: #fff;
 }
-
 .escala {
     background-color: #fff;
     border-bottom: .5px solid rgb(204, 204, 204);
@@ -10,61 +9,147 @@
     grid-template-columns: 1fr 5fr;
     gap: 0;
 }
-
-
 .escala:hover {
     background-color: whitesmoke;
     cursor: pointer;
 }
-
 .icon {
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
-
 .icon img {
     width: 35px;
 }
-
 #icon-comp-box {
     align-items: center;
 }
-
 #icon-compensacao {
     width: 25px;
 }
-
 #icon-plantao-diario {
     width: 30px;
 }
-
 #icon-comunic img {
     width: 25px;
 }
-
 .subtitulo {
     font-size: .7rem;
     color: #B52532;
     font-weight: 700;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
 .link-content {
     color: #253B73;
     font-size: .7rem;
     font-family: 'Roboto Condensed', sans-serif;
     padding: 5px 0 0 0;
 }
-
-#legenda-aniver {
-    color: #fff;
-    text-shadow: .7px .7px 8px black;
+#aniver {
+    height: 200px;    
+    box-sizing: border-box;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    background-image: url(img/anivBack.png);
+    background-repeat: no-repeat;
+    background-position:top center;
+    background-size: cover;
 }
-
+#anivBack {
+    width: 100%;
+}
+#bt-aniver {
+    width: 60%;
+    margin: auto;
+    background-color:#EDC7F9;
+    outline: none;
+    border-radius: 10px;
+    color: #632f72;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: .7rem;
+    padding: .8rem 0;
+    text-align: center;
+    transition: ease-in-out .3s;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+#bt-aniver:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.box-aniver-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.aniversariante {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80px;
+    padding: 0 5px;
+    /* border: 1px solid yellow; */
+}
+.aniversariante img {
+    border-radius: 50%; 
+    border: 2px solid rgb(105, 105, 105);
+}
+#aniver-img img {
+    width: 60px;
+    margin: 0 auto;
+    display: block;
+}
+.aniver-nome {
+    font-size: .75rem;
+}
+.aniver-nome, .aniver-funcao {
+    font-family: 'Roboto Condensed';
+    text-align: center;
+    color: #632f72;
+    font-weight: 600;
+}
+.aniver-funcao {
+    font-weight: 500;
+    font-size: .7rem;
+    font-style: italic;
+}
 #legenda-aniver img {
     width: 50px;
     margin: 10px;
     border-radius: 50%;
     border: 2px solid white;
+}
+#aniverTitulo {
+    text-align: center;
+    padding-top: 1.2rem;
+    color: gray;
+    font-weight: 600;
+}
+#aniverMes{
+    width: 90%;
+    margin: auto;
+    height: 90%;
+    overflow-y: scroll;
+}
+#aniverMes::-webkit-scrollbar {
+    width: 8px;
+}
+#aniverMes::-webkit-scrollbar-thumb {
+    background-color: #4561A5;
+    border-radius: 10px;
+}
+#aniverMes::-webkit-scrollbar-thumb:hover {
+    background-color: #6079b6;
+}
+.nomesAniversariantes{
+    font-size: .7rem;
+    color: #fff;
+    margin-bottom: .3rem;
 }

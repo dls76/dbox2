@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+.mainAniver {
+    box-sizing: border-box;
+    margin: 8rem auto;
+    width: 60%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.h1Aniver {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+.linha {
+    width: 90%;
+    margin: 0 auto 20px auto;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.dia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 5px;
+    width: 80px;
+}
+.box-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    border-radius: 50%;
+    width: 80px;
+    /* border: 2px solid #213669; */
+    border: 3px solid #cdcdcd;
+}
+.box-infoPessoa {
+    padding-left: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nome{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.funcao{
+    font-size: 1rem;
+    color: rgb(86, 86, 86);
+    font-family: 'Arial Narrow';
+}
+
+@media (max-width: 700px) {
+    .mainAniver {
+        width: 90%;
+    }
+  }
