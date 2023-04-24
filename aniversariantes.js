@@ -50,34 +50,34 @@ const pessoas = [
     {nome: "Jackelini Muzy", dia: 30, mes: 3, ano: 1978, funcao: "Professora", foto:"img/anivImg/abril/jack.png"},
 
     // MAIO
-    {nome: "Rudimar Roberto Nemitz", dia: 9, mes: 4, ano: 1966, funcao: "Coord. Disciplinar", foto:"img/anivImg/"},
-    {nome: "Wilson José Sebastião", dia: 8, mes: 4, ano: 1972, funcao: "Professor", foto:"img/anivImg/"},
-    {nome: "Lucilene Silvestre Barbosa", dia: 28, mes: 4, ano: 1972, funcao: "Monitora", foto:"img/anivImg/"},
-    {nome: "Fernanda Borges", dia: 14, mes: 4, ano: 1985, funcao: "Professora", foto:"img/anivImg/"},
-    {nome: "Jaqueline Alves de Grandi", dia: 29, mes: 4, ano: 1986, funcao: "Professora", foto:"img/anivImg/"},
-    {nome: "Wesley de Sousa Oliveira", dia: 31, mes: 4, ano: 1986, funcao: "Monitor", foto:"img/anivImg/"},
     {nome: "Fernando da Silva Calsavara", dia: 3, mes: 4, ano: 1989, funcao: "Professor", foto:"img/anivImg/"},
-    {nome: "Patricia Maria Chagas", dia: 31, mes: 4, ano: 1994, funcao: "Professora", foto:"img/anivImg/"},
-    {nome: "Rodrigo Marlon Bueno", dia: 29, mes: 4, ano: 1998, funcao: "Monitor", foto:"img/anivImg/"},
+    {nome: "Wilson José Sebastião", dia: 8, mes: 4, ano: 1972, funcao: "Professor", foto:"img/anivImg/"},
+    {nome: "Rudimar Roberto Nemitz", dia: 9, mes: 4, ano: 1966, funcao: "Coord. Disciplinar", foto:"img/anivImg/"},
+    {nome: "Fernanda Borges", dia: 14, mes: 4, ano: 1985, funcao: "Professora", foto:"img/anivImg/"},
     {nome: "Tatiane da Silva Martins", dia: 25, mes: 4, ano: 1993, funcao: "Tutora", foto:"img/anivImg/"},
     {nome: "Elisa de Freitas Montin", dia: 26, mes: 4, ano: 1993, funcao: "Professora", foto:"img/anivImg/"},
+    {nome: "Lucilene Silvestre Barbosa", dia: 28, mes: 4, ano: 1972, funcao: "Monitora", foto:"img/anivImg/"},
+    {nome: "Jaqueline Alves de Grandi", dia: 29, mes: 4, ano: 1986, funcao: "Professora", foto:"img/anivImg/"},
+    {nome: "Rodrigo Marlon Bueno", dia: 29, mes: 4, ano: 1998, funcao: "Monitor", foto:"img/anivImg/"},
+    {nome: "Wesley de Sousa Oliveira", dia: 31, mes: 4, ano: 1986, funcao: "Monitor", foto:"img/anivImg/"},
+    {nome: "Patricia Maria Chagas", dia: 31, mes: 4, ano: 1994, funcao: "Professora", foto:"img/anivImg/"},
 
     //JUNHO
     {nome: "Josiane Charnei Gonçalves", dia: 10, mes: 5, ano: 1983, funcao: "Reprografista", foto:"img/anivImg/"},
-    {nome: "Tayna Ribeiro dos Santos ", dia: 25, mes: 5, ano: 1997, funcao: "Professora", foto:"img/anivImg/"},
     {nome: "Cristian Angelo Bissule", dia: 17, mes: 5, ano: 1997, funcao: "M. Aprendiz", foto:"img/anivImg/"},
+    {nome: "Tayna Ribeiro dos Santos ", dia: 25, mes: 5, ano: 1997, funcao: "Professora", foto:"img/anivImg/"},
 
     //JULHO
-    {nome: "Cacilda Smaha Mannala", dia: 16, mes: 6, ano: 1972, funcao: "Bibliotecária Rede", foto:""},
     {nome: "Daniela Regina Lamarques Isobe", dia: 4, mes: 6, ano: 1975, funcao: "Coordenadora", foto:""},
     {nome: "Liamara Andrighetto", dia: 8, mes: 6, ano: 1981, funcao: "Professora", foto:""},
-    {nome: "Ronaldo Vieira Silva Modesto", dia: 12, mes: 6, ano: 1982, funcao: "Professor", foto:""},
-    {nome: "Thiago Andrews Carvalho", dia: 24, mes: 6, ano: 1984, funcao: "Vice-diretor", foto:""},
     {nome: "Vanessa Pereira Farias", dia: 10, mes: 6, ano: 1984, funcao: "Professora", foto:""},
+    {nome: "Ronaldo Vieira Silva Modesto", dia: 12, mes: 6, ano: 1982, funcao: "Professor", foto:""},
+    {nome: "Cacilda Smaha Mannala", dia: 16, mes: 6, ano: 1972, funcao: "Bibliotecária Rede", foto:""},
+    {nome: "Thiago Andrews Carvalho", dia: 24, mes: 6, ano: 1984, funcao: "Vice-diretor", foto:""},
     
     //AGOSTO
-    {nome: "Sandra Cristina Labatut Pereira", dia: 19, mes: 7, ano: 1970, funcao: "Professora", foto:""},
     {nome: "Clarice dos Santos da Silva", dia: 15, mes: 7, ano: 1977, funcao: "Professora", foto:""},
+    {nome: "Sandra Cristina Labatut Pereira", dia: 19, mes: 7, ano: 1970, funcao: "Professora", foto:""},
     {nome: "Willian Resende Leite", dia: 25, mes: 7, ano: 1977, funcao: "Professor", foto:""},
     {nome: "Lucas Rocha Santos", dia: 28, mes: 7, ano: 1977, funcao: "Monitor", foto:""},
     {nome: "Jessica Vaz dos Santos Cappellesso", dia: 29, mes: 7, ano: 1977, funcao: "Orientadora", foto:""},
@@ -110,12 +110,13 @@ const pessoas = [
     
     //DEZEMBRO
     {nome: "Danielle Sousa da Silva Ferraz de Matos", dia: 2, mes: 11, ano: 1989, funcao: "Tesoureira", foto:""},
+    {nome: "Jaqueline Tavares", dia: 4, mes: 11, ano: 1976, funcao: "Professora", foto:""},
     {nome: "Raquel das Gracas Rodrigues da Anunciacao", dia: 7, mes: 11, ano: 1968, funcao: "Aux. de Classe", foto:""},
     {nome: "Carin Grime de Melo", dia: 13, mes: 11, ano: 1988, funcao: "Aux. Secretaria", foto:""},
     {nome: "Caroline Ramos Joaquim", dia: 17, mes: 11, ano: 1978, funcao: "Professora", foto:""},
     {nome: "Denis de Noronha Gomes", dia: 19, mes: 11, ano: 1977, funcao: "Professor", foto:""},
     {nome: "Janete Alves Tachechem", dia: 27, mes: 11, ano: 1976, funcao: "Professora", foto:""},
-    {nome: "Jaqueline Tavares", dia: 4, mes: 11, ano: 1976, funcao: "Professora", foto:""},
+    
 ]
 
 function show() {
