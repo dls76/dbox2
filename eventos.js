@@ -92,6 +92,8 @@ let eventos = [
     // {data1: new Date(2023, 3, 20), data2: new Date(2023, 3, 20), descritivo: "Conselho de Classe I BIM - FUND II E EM", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     // {data1: new Date(2023, 3, 21), data2: new Date(2023, 3, 21), descritivo: "Feriado Tiradentes", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     // {data1: new Date(2023, 3, 22), data2: new Date(2023, 3, 22), descritivo: "Início da divulgação dos resultados do Enem Interativo", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    
+    
     {data1: new Date(2023, 3, 24), data2: new Date(2023, 3, 24), descritivo: "Data limite - Entrega do Planejamento e Calendário Avaliativo do II BIM/FUND II e EM", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 3, 24), data2: new Date(2023, 3, 28), descritivo: "Recuperação I bim FI ao EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 3, 25), data2: new Date(2023, 3, 25), descritivo: "Reunião com psicólogos – remoto (8h)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
@@ -100,54 +102,68 @@ let eventos = [
     {data1: new Date(2023, 3, 30), data2: new Date(2023, 4, 15), descritivo: "Intercâmbio – Paris, Londres e Roma (ANP, ASP e ASR)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
 
     // MAIO
-    {data1: new Date(2023, 4, 1), data2: new Date(2023, 4, 1), descritivo: "Feriado - Dia do Trabalho", cal: "out", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 4, 1), data2: new Date(2023, 4, 1), descritivo: "Feriado - Dia do Trabalho", cal: "out", resp: "", foto: "", detalhes: "", pais: true, niv: ""},
     {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 19), descritivo: "Projeto sexualidade com EF II e EM (SOE e Psicólogos)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: "f2m"},
     {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 31), descritivo: "Reuniões Pedagógicas Individuais - FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 2), descritivo: "Comissão de Educação/Diretiva", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 2), descritivo: "Data limite para o envio dos Cronogramas Avaliativos aos alunos (2º Bim)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 2), descritivo: "Início do 2º bimestre", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 2), descritivo: "“Projeto Fair Play” - Módulo Olimpíada do Conhecimento (Matemática/ Bom de Bíblia/Português/Redação) – fase unidade escolar", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 2), descritivo: "Início do 2º bimestre", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: ""},
+    {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 2), descritivo: "“Projeto Fair Play” - Módulo Olimpíada do Conhecimento (Matemática/ Bom de Bíblia/Português/Redação) – fase unidade escolar", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: ""},
     {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 2), descritivo: "Envio do Cronograma Avaliativo II Bim - FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 2), descritivo: "SAD ENCERRADO - 2º ENCERRAMENTO E ASSINATURA - I BIM", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 5), descritivo: "2ª Semana de Hábitos de Estudos - FI ao Médio", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 4, 2), data2: new Date(2023, 4, 5), descritivo: "2ª Semana de Hábitos de Estudos - FI ao Médio", cal: "asp", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
+
     {data1: new Date(2023, 4, 3), data2: new Date(2023, 4, 3), descritivo: "GEPEA Pedagógico – USB (remoto)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 5), data2: new Date(2023, 4, 5), descritivo: "Data limite para entrega das avaliações 2º Bimestre - Para Análise do SOP", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 6), data2: new Date(2023, 4, 6), descritivo: "Sábado de Liberdade Religiosa", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 7), data2: new Date(2023, 4, 7), descritivo: "Projeto Dia das Mães (Dia Letivo – dia permutado com recesso do dia 09/06)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 8), data2: new Date(2023, 4, 12), descritivo: "Período de aplicação da AV1 II BIM - corrigir, lançar notas no SAD e devolver aos estudantes até 5 dias úteis após a data da sua avaliação.", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 8), data2: new Date(2023, 4, 12), descritivo: "Aula de campo - Projeto Água - TMA Acampamentos EI-FI", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: "inf5"},
+    {data1: new Date(2023, 4, 7), data2: new Date(2023, 4, 7), descritivo: "Projeto Dia das Mães (Dia Letivo – dia permutado com recesso do dia 09/06)", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
+
     {data1: new Date(2023, 4, 8), data2: new Date(2023, 4, 8), descritivo: "Dia do profissional de marketing", cal: "out", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 8), data2: new Date(2023, 4, 8), descritivo: "Capacitação profs Mentores Chave do Enem e Aprofundamento itinerários - Presencial - 14 h - no auditório (a definir)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 8), data2: new Date(2023, 4, 12), descritivo: "Liberação para a visualização dos Pareceres e Boletins – 1º Bimestre / Entrega de boletins (Comunicar a disponibilidade no sistema)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 4, 8), data2: new Date(2023, 4, 12), descritivo: "Liberação para a visualização dos Pareceres e Boletins – 1º Bimestre / Entrega de boletins (Comunicar a disponibilidade no sistema)", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: ""},
     {data1: new Date(2023, 4, 8), data2: new Date(2023, 4, 12), descritivo: "Entrevistas UNASP e FADBA (pedagogia/licenciaturas)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 8), data2: new Date(2023, 4, 12), descritivo: "Assinatura virtual dos diários do 1º Bimestre (Conteúdos e Frequência) – SOP e secretaria", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 8), data2: new Date(2023, 4, 19), descritivo: "Pesquisa da equipe administrativa por todos os professores e funcionários", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 9), data2: new Date(2023, 4, 11), descritivo: "Pastori - ASP", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 9), data2: new Date(2023, 4, 12), descritivo: "Feira Educar – SP (diretores e tesoureiros)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 10), data2: new Date(2023, 4, 10), descritivo: "Treinamento diretores (remoto)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 14), data2: new Date(2023, 4, 14), descritivo: "Dia das Mães", cal: "out", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 15), data2: new Date(2023, 4, 19), descritivo: "Período de aplicação da AV1", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 4, 14), data2: new Date(2023, 4, 14), descritivo: "Dia das Mães", cal: "out", resp: "", foto: "", detalhes: "", pais: true, niv: ""},
+
+    {data1: new Date(2023, 4, 15), data2: new Date(2023, 4, 19), descritivo: "Aula de campo - Projeto Água - TMA Acampamentos EI-1ºEF", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
+    {data1: new Date(2023, 4, 15), data2: new Date(2023, 4, 19), descritivo: "Período de aplicação da AV1 - 2º-5º", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
+    {data1: new Date(2023, 4, 15), data2: new Date(2023, 4, 19), descritivo: "Período de aplicação da AV1 - FII-EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
     {data1: new Date(2023, 4, 15), data2: new Date(2023, 4, 19), descritivo: "Pré-conselho SOE EI-FI", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: "inf5"},
-    {data1: new Date(2023, 4, 16), data2: new Date(2023, 4, 16), descritivo: "2ª Chamada AV1 - FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    
+    
     {data1: new Date(2023, 4, 15), data2: new Date(2023, 4, 19), descritivo: "Encontro pedagógico individual - EI ao 1º FI", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: "inf5"},
     {data1: new Date(2023, 4, 15), data2: new Date(2023, 4, 19), descritivo: "Semana do Lenço – aventureiros (alunos e professores)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 15), data2: new Date(2023, 4, 17), descritivo: "Encontro de Secretários, bibliotecários e auxiliares, jurídico e marketing – CATRE", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 18), data2: new Date(2023, 4, 18), descritivo: "Comissão de Matemática USB (tarde)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 18), data2: new Date(2023, 4, 18), descritivo: "Treinamento de diretores (remoto)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 18), data2: new Date(2023, 4, 18), descritivo: "Reunião de Assistentes Financeiros –", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 19), data2: new Date(2023, 4, 21), descritivo: "Congresso de Liberdade Religiosa - Paraná", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 19), data2: new Date(2023, 4, 19), descritivo: "Data limite para o lançamento das notas da AV1 no SAD (prof) e Data limite para a regularização dos registros dos conteúdos do mês, no SAD ", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    
+    
     {data1: new Date(2023, 4, 20), data2: new Date(2023, 4, 20), descritivo: "Sábado da Criança e Dia Mundial dos Aventureiros", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 4, 22), data2: new Date(2023, 4, 22), descritivo: "Dia do abraço - SOE - FUND I", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: "inf5"},
-    {data1: new Date(2023, 4, 23), data2: new Date(2023, 4, 23), descritivo: "Reunião Participativa de Pais e alunos – (após AV1)- EI-FI", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
-    {data1: new Date(2023, 4, 23), data2: new Date(2023, 4, 23), descritivo: "Reunião Participativa de Pais e alunos – FII-EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
-    {data1: new Date(2023, 4, 24), data2: new Date(2023, 4, 24), descritivo: "Segunda chamada", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: ""},
-    {data1: new Date(2023, 4, 25), data2: new Date(2023, 4, 25), descritivo: "Enem TEEN II BIM- 6º A 8º", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
-    {data1: new Date(2023, 4, 26), data2: new Date(2023, 4, 28), descritivo: "Together - ASP", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 4, 26), data2: new Date(2023, 4, 26), descritivo: "Enem TREINEIRO  II BIM - 9º e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
-    {data1: new Date(2023, 4, 26), data2: new Date(2023, 4, 26), descritivo: "Relatório mensal de notificações para pais (impresso)", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
-    {data1: new Date(2023, 4, 28), data2: new Date(2023, 4, 30), descritivo: "Encontro de SOP e SOE - CATRE", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     
+    {data1: new Date(2023, 4, 22), data2: new Date(2023, 4, 22), descritivo: "Aula de campo - Projeto Água - TMA Acampamentos 2ºEF", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
+    
+    {data1: new Date(2023, 4, 23), data2: new Date(2023, 4, 23), descritivo: "Reunião Participativa de Pais e alunos – (após AV1)- EI-FI", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
+
+    {data1: new Date(2023, 4, 23), data2: new Date(2023, 4, 23), descritivo: "Reunião Participativa de Pais e alunos – FII-EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
+    {data1: new Date(2023, 4, 24), data2: new Date(2023, 4, 24), descritivo: "Segunda chamada 2º-5ºEF", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
+    {data1: new Date(2023, 4, 24), data2: new Date(2023, 4, 24), descritivo: "2ª Chamada AV1 - FII-EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
+    {data1: new Date(2023, 4, 25), data2: new Date(2023, 4, 25), descritivo: "Enem TEEN II BIM- 6º A 8º", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
+    {data1: new Date(2023, 4, 26), data2: new Date(2023, 4, 26), descritivo: "Data limite para o lançamento das notas da AV1 no SAD (prof) e Data limite para a regularização dos registros dos conteúdos do mês, no SAD ", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 4, 26), data2: new Date(2023, 4, 28), descritivo: "Together - ASP", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 4, 26), data2: new Date(2023, 4, 26), descritivo: "ENEM TREINEIRO 2º Bimestre - 9º-EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
+    {data1: new Date(2023, 4, 26), data2: new Date(2023, 4, 26), descritivo: "Relatório mensal de notificações para pais (impresso)", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
+    
+    {data1: new Date(2023, 4, 29), data2: new Date(2023, 4, 29), descritivo: "Aula de campo - Projeto Água - TMA Acampamentos 3ºEF", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
+    {data1: new Date(2023, 4, 30), data2: new Date(2023, 4, 30), descritivo: "Aula de campo - Projeto Água - TMA Acampamentos 4ºEF", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
+    
+    {data1: new Date(2023, 4, 28), data2: new Date(2023, 4, 30), descritivo: "Encontro de SOP e SOE - CATRE", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 4, 30), data2: new Date(2023, 5, 1), descritivo: "Encontro de Secretários, bibliotecários e auxiliares, jurídico e marketing – CATRE", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},    
 
     // JUNHO
     {data1: new Date(2023, 5, 1), data2: new Date(2023, 5, 30), descritivo: "Pesquisa de satisfação (Pais e responsáveis)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
@@ -179,7 +195,13 @@ let eventos = [
     {data1: new Date(2023, 5, 28), data2: new Date(2023, 6, 4), descritivo: "Recuperação Bimestral II BIM - Fund II e Médio", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 29), data2: new Date(2023, 5, 29), descritivo: "Data limite - Entrega do Planejamento e Calendário Avaliativo do III BIM/FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 30), data2: new Date(2023, 5, 30), descritivo: "Relatório mensal de notificações para pais (impresso) - Rudi (CAAB)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+
+
+
+
 ]
+
+
 
 function mostrarEventos(){
 
