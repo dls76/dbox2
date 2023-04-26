@@ -20,7 +20,7 @@ main {
 
 #conteinerhome {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.2fr .8fr;
+    grid-template-columns: 1.1fr 1fr 1.1fr .8fr;
     gap: 12px;
     max-height: 690px;
 }
