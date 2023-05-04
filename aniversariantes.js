@@ -51,7 +51,7 @@ const pessoas = [
 
     // MAIO
     {nome: "Fernando da Silva Calsavara", dia: 3, mes: 4, ano: 1989, funcao: "Professor", foto:"img/anivImg/maio/fernando.png"},
-    {nome: "Wilson José Sebastião", dia: 8, mes: 4, ano: 1972, funcao: "Professor", foto:"img/anivImg/maio/wilson.png"},
+    {nome: "Wilson José Sebastião", dia: 8, mes: 4, ano: 1972, funcao: "Professor", foto:"img/anivImg/maio/wilson.jpg"},
     {nome: "Rudimar Roberto Nemitz", dia: 9, mes: 4, ano: 1966, funcao: "Coord. Disciplinar", foto:"img/anivImg/maio/rudi.png"},
     {nome: "Fernanda Borges", dia: 14, mes: 4, ano: 1985, funcao: "Professora", foto:"img/anivImg/maio/fernandaborges.png"},
     {nome: "Tatiane da Silva Martins", dia: 25, mes: 4, ano: 1993, funcao: "Tutora", foto:"img/anivImg/maio/tati.jpg"},
