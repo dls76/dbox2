@@ -50,17 +50,17 @@ const pessoas = [
     {nome: "Jackelini Muzy", dia: 30, mes: 3, ano: 1978, funcao: "Professora", foto:"img/anivImg/abril/jack.png"},
 
     // MAIO
-    {nome: "Fernando da Silva Calsavara", dia: 3, mes: 4, ano: 1989, funcao: "Professor", foto:"img/anivImg/"},
-    {nome: "Wilson José Sebastião", dia: 8, mes: 4, ano: 1972, funcao: "Professor", foto:"img/anivImg/"},
-    {nome: "Rudimar Roberto Nemitz", dia: 9, mes: 4, ano: 1966, funcao: "Coord. Disciplinar", foto:"img/anivImg/"},
-    {nome: "Fernanda Borges", dia: 14, mes: 4, ano: 1985, funcao: "Professora", foto:"img/anivImg/"},
-    {nome: "Tatiane da Silva Martins", dia: 25, mes: 4, ano: 1993, funcao: "Tutora", foto:"img/anivImg/"},
-    {nome: "Elisa de Freitas Montin", dia: 26, mes: 4, ano: 1993, funcao: "Professora", foto:"img/anivImg/"},
-    {nome: "Lucilene Silvestre Barbosa", dia: 28, mes: 4, ano: 1972, funcao: "Monitora", foto:"img/anivImg/"},
-    {nome: "Jaqueline Alves de Grandi", dia: 29, mes: 4, ano: 1986, funcao: "Professora", foto:"img/anivImg/"},
-    {nome: "Rodrigo Marlon Bueno", dia: 29, mes: 4, ano: 1998, funcao: "Monitor", foto:"img/anivImg/"},
-    {nome: "Wesley de Sousa Oliveira", dia: 31, mes: 4, ano: 1986, funcao: "Monitor", foto:"img/anivImg/"},
-    {nome: "Patricia Maria Chagas", dia: 31, mes: 4, ano: 1994, funcao: "Professora", foto:"img/anivImg/"},
+    {nome: "Fernando da Silva Calsavara", dia: 3, mes: 4, ano: 1989, funcao: "Professor", foto:"img/anivImg/maio/fernando.png"},
+    {nome: "Wilson José Sebastião", dia: 8, mes: 4, ano: 1972, funcao: "Professor", foto:"img/anivImg/maio/"},
+    {nome: "Rudimar Roberto Nemitz", dia: 9, mes: 4, ano: 1966, funcao: "Coord. Disciplinar", foto:"img/anivImg/maio/rudi.png"},
+    {nome: "Fernanda Borges", dia: 14, mes: 4, ano: 1985, funcao: "Professora", foto:"img/anivImg/maio/"},
+    {nome: "Tatiane da Silva Martins", dia: 25, mes: 4, ano: 1993, funcao: "Tutora", foto:"img/anivImg/maio/tati.jpg"},
+    {nome: "Elisa de Freitas Montin", dia: 26, mes: 4, ano: 1993, funcao: "Professora", foto:"img/anivImg/maio/"},
+    {nome: "Lucilene Silvestre Barbosa", dia: 28, mes: 4, ano: 1972, funcao: "Monitora", foto:"img/anivImg/maio/"},
+    {nome: "Jaqueline Alves de Grandi", dia: 29, mes: 4, ano: 1986, funcao: "Professora", foto:"img/anivImg/maio/jaque.jpg"},
+    {nome: "Rodrigo Marlon Bueno", dia: 29, mes: 4, ano: 1998, funcao: "Monitor", foto:"img/anivImg/maio/rodrigo.png"},
+    {nome: "Wesley de Sousa Oliveira", dia: 31, mes: 4, ano: 1986, funcao: "Monitor", foto:"img/anivImg/maio/"},
+    {nome: "Patricia Maria Chagas", dia: 31, mes: 4, ano: 1994, funcao: "Professora", foto:"img/anivImg/maio/patriciamaria.png"},
 
     //JUNHO
     {nome: "Josiane Charnei Gonçalves", dia: 10, mes: 5, ano: 1983, funcao: "Reprografista", foto:"img/anivImg/"},
