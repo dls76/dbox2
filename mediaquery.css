@@ -12,7 +12,7 @@
         width: 95%;
         box-sizing: border-box;
         margin: 0 auto;
-        height: 260vh;
+        height: 290vh;
     }
     .body { 
         height: fit-content;
@@ -58,7 +58,7 @@
         margin: 1rem 0;
     }
     .box-cal-num {
-        width: 80%;
+        /* width: 75%; */
         margin: 2rem auto;
         height: 300px;
     }
