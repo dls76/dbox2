@@ -20,7 +20,6 @@
     align-items: center;
     cursor: pointer;
     padding: 14px 0px;
-    /* border: 1px solid red; */
     border-radius: 12px;
     margin: 4px;
     transition: all .3s;
@@ -28,18 +27,14 @@
 }
 
 .img img {
-    /* height: 30px; */
     width: 30px;
     object-fit: cover;
-    /* border: 1px solid red; */
-
 }
 .box-ama {
     padding: 1px;
 }
 #ama {
     object-fit: fill;
-    /* border: 1px solid red; */
 }
 
 .legenda-links {
@@ -47,4 +42,7 @@
     font-family: 'Roboto Condensed', sans-serif;
     color: gray;
     padding-top: .5rem;
+}
+#bi {
+    width: 57px;
 }
