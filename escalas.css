@@ -16,7 +16,7 @@
 .icon {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 .icon img {
     width: 35px;

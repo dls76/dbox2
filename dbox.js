@@ -136,20 +136,34 @@ let cultos = [
     {data: new Date(2023, 3, 27), pessoaM: "Pr. Luiz Felipe", pessoaT:"Pr. Guilherme"},
     {data: new Date(2023, 3, 28), pessoaM: "Vice-diretor", pessoaT:"Vice-Diretor"},
 
+    {data: new Date(2023, 4, 8), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 4, 9), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 4, 10), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 4, 11), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 4, 12), pessoaM: "Vice-diretor", pessoaT:"Vice-diretor"},
+
+    {data: new Date(2023, 4, 15), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 4, 16), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 4, 17), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 4, 18), pessoaM: "Pr. Guilherme", pessoaT:"Pr. Guilherme"},
+    {data: new Date(2023, 4, 19), pessoaM: "Diretor", pessoaT:"Diretor"},
 
 ]
+
 for( k=0; k<cultos.length; k++ ) {
 
     if (datahoje.getDay() == 6) {
         document.querySelector('#cultos').innerHTML = "Feliz sábado!"
     }
 
-    if (datahoje.getDay() == 7) {
+    if (datahoje.getDay() == 0) {
         document.querySelector('#cultos').innerHTML = 'Hoje é domingo.'
     }
 
     if ( (datahoje.getDate() === cultos[k].data.getDate()) && (datahoje.getMonth() === cultos[k].data.getMonth()) && (datahoje.getFullYear() === cultos[k].data.getFullYear()) ){
-        document.querySelector('#cultos').innerHTML = cultos[k].data.getDate() + '/' + (cultos[k].data.getMonth()+1) + ' - ' + 'Manhã: ' + cultos[k].pessoaM + '; Tarde: ' + cultos[k].pessoaT
+        document.querySelector('#cultos').innerHTML = 'Manhã: ' + cultos[k].pessoaM
+        document.querySelector("#cultosTarde").innerHTML = 'Tarde: ' + cultos[k].pessoaT
+        document.querySelector('#titulocultos').innerHTML = "Cultos " + cultos[k].data.getDate() + '/' + (cultos[k].data.getMonth()+1)
     }
 }
 
