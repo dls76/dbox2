@@ -143,3 +143,15 @@ details > summary {
     padding: 4px 10px;
     color: gray;
 }
+#prevAniv, #nextAniv {
+    position: absolute;
+    bottom: 1rem;
+    font-size: .9rem;
+    color: #EDC7F9;
+}
+#nextAniv {
+    right: 2rem;
+}
+#prevAniv {
+    left: 2rem;
+}

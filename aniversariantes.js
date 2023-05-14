@@ -150,6 +150,9 @@ function show() {
             funcaoAniver.classList.add('aniver-funcao')
             div.appendChild(funcaoAniver)
 
+            const proxAniv = document.querySelector('#proxAniv')
+            proxAniv.innerHTML = mss[mesAno]
+
         } else {    
             
             document.querySelector('#bt-aniver').innerHTML = "ANIVERSARIANTES " + mss[new Date().getMonth()].toUpperCase()
