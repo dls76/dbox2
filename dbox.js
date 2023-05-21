@@ -78,13 +78,14 @@ let plantaosexta = [
     {data: new Date(2023, 3, 21), person: "Feriado"},
     {data: new Date(2023, 3, 28), person: "Karol"},
     {data: new Date(2023, 4, 5), person: "Jessica"},
-    {data: new Date(2023, 4, 12), person: "Roberta"},
+    {data: new Date(2023, 4, 12), person: "Eduardo"},
     {data: new Date(2023, 4, 19), person: "Denise"},
-    {data: new Date(2023, 4, 26), person: "Eduardo"},
-    {data: new Date(2023, 5, 2), person: "Eliesio"},
+    {data: new Date(2023, 4, 26), person: "Eliesio"},
+    {data: new Date(2023, 5, 2), person: "Roberta"},
     {data: new Date(2023, 5, 9), person: "Recesso"},
-    {data: new Date(2023, 5, 16), person: "Guilherme"},
-    {data: new Date(2023, 5, 23), person: "Rudi"},
+    {data: new Date(2023, 5, 16), person: "Denise"},
+    {data: new Date(2023, 5, 23), person: "Guilherme"},
+    {data: new Date(2023, 5, 30), person: "Rudi"},
     {data: new Date(2023, 5, 30), person: "Thiago"},
 ]
 for(j=0; j<plantaosexta.length; j++) {
@@ -291,7 +292,23 @@ for (let m = 0; m < plantaodiario.length; m++ ) {
         document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta'
     } else if (datahoje.getDay() == 6) {
         document.querySelector('#plantaodiario').innerHTML = 'Hoje é sábado!'
-    } else if (datahoje.getDay() == 7) {
+    } else if (datahoje.getDay() == 0) {
         document.querySelector('#plantaodiario').innerHTML = 'Hoje é domingo!'
     }
 }
+
+
+let modalurgencias = document.querySelector('#fonesurgencias')
+modalurgencias.addEventListener('click', ()=>{
+    
+    let bgmodal = document.querySelector('#bgmodal')
+    bgmodal.classList.add('modalOn')
+
+})
+
+let fecharmodal = document.querySelector('#fecharmodal')
+fecharmodal.addEventListener('click', ()=>{
+
+    let bgmodal = document.querySelector('#bgmodal')
+    bgmodal.classList.remove('modalOn')
+})
