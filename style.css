@@ -5,10 +5,50 @@
     text-decoration: none;
 }
 
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu a {
+    display: block;
+    margin: 0 10px;
+    padding: 10px 25px;
+    color: #0b1634;
+    border-radius: 10px;
+    transition: all ease-in-out .3s;
+    text-decoration: none;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #253B73;
+}
+
+#btn-mobile {
+    display: none;
+}
+
 body {
     background-color: #F6F6F6;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 main {
     padding: 20px;
     width: 95%;
@@ -24,14 +64,20 @@ main {
     gap: 12px;
     max-height: 690px;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .divhome {
     max-height: 590px;
     background-color: #f3f3f3;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     border-radius: 4px;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .conteinertitulosecao {
     background-color: #e7e7e7;
     padding: 7px 10px;
@@ -45,7 +91,10 @@ main {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .mais, .menos {
     padding: 5px;
     width: 10px;
@@ -57,30 +106,46 @@ main {
     transition: ease-in-out .1s;
     font-size: 1rem;
 }
+<<<<<<< Updated upstream
 
 .menos {
     display: none;
 }
 
+=======
+.menos {
+    display: none;
+}
+>>>>>>> Stashed changes
 .mais:hover, .menos:hover {
     cursor:default;
     background-color: rgb(210, 210, 210);
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 section {
     height: 300px;
     background-color: gray;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .links-pedagogicos {
     display: flex;
     flex-direction: column;
     padding: 3rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 15px;
+<<<<<<< Updated upstream
     /* border: 1px solid red; */
 }
 
+=======
+}
+>>>>>>> Stashed changes
 .links-pedagogicos a {
     list-style-type: none;
     text-decoration: none;
@@ -88,6 +153,7 @@ section {
     color: rgb(55, 55, 55);
     padding-left: 2rem;
 }
+<<<<<<< Updated upstream
 
 .links-pedagogicos a:hover {
     color: #253B73;
@@ -97,19 +163,32 @@ details {
     margin-bottom: 1rem;
 }
 
+=======
+.links-pedagogicos a:hover {
+    color: #253B73;
+}
+details {
+    margin-bottom: 1rem;
+}
+>>>>>>> Stashed changes
 details > summary {
     color: #253B73;
     font-weight: 600;
     cursor: pointer;
     margin-bottom: .6rem;
     list-style: none;
+<<<<<<< Updated upstream
     /* border: 1px solid blue; */
 }
 
+=======
+}
+>>>>>>> Stashed changes
 .details-items-box {
     display: flex;
     flex-direction: column;
     gap: .7rem;
+<<<<<<< Updated upstream
     /* border: 1px solid green; */
 }
 
@@ -117,11 +196,20 @@ details > summary {
     display: flex;
 }
 
+=======
+}
+.details-items-box a {
+    display: flex;
+}
+>>>>>>> Stashed changes
 .details-items-box img {
     width: 20px;
     margin-right: 1rem
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .main-pedagogico {
     box-sizing: border-box;
     padding: 2rem;
@@ -154,4 +242,203 @@ details > summary {
 }
 #prevAniv {
     left: 2rem;
+}
+
+
+<<<<<<< Updated upstream
+
+.body {
+    margin: 0;
+    padding: 0 0 5rem 0;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#24006b,#f42f8c);
+}
+.title {
+    color: white;
+    font-size: 4rem;
+    padding: 3rem 0 3rem 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+.conteiner {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+    margin: 0 auto;
+}
+.conteiner .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 15px 60px rgba(0,0,0, .5);
+}
+.conteiner .card .face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteiner .card .face.face1 {
+    box-sizing: border-box;
+    padding: 20px;
+}
+.conteiner .card .face.face1 h2 {
+    margin: 0;
+    padding: 0;
+}
+.conteiner .card .face.face2 {
+    background: #111;
+    transition: 0.5s;
+}
+.conteiner .card:nth-child(1) .face.face2 {
+    background: linear-gradient(45deg, #3503ad, #f7308c);
+}
+.conteiner .card:nth-child(2) .face.face2 {
+    background: linear-gradient(45deg, #CCFF00, #09AFFF);
+}
+.conteiner .card:nth-child(3) .face.face2 {
+    background: linear-gradient(45deg, #3503ad, #f7308c);
+}
+.conteiner .card:hover .face.face2 {
+    height: 60px;
+    font-size: 2rem;
+}
+.conteiner .card .face.face2:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+}
+.conteiner .card .face.face2 h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    color: #fff;
+    transition: .5s;
+    text-shadow: 0 2PX 5PX rgba(0, 0, 0, .2);
+}
+.conteiner .card:hover .face.face2 h2{
+    font-size: 1rem;
+}
+.horarios {
+    display: block;
+    padding: 8px 0;
+    color: rgb(77, 77, 77);
+}
+.horarios:hover {
+    color: #E42C8A;
+}
+.card:nth-child(2) .horarios:hover {
+    color: #64D488;
+}
+
+=======
+>>>>>>> Stashed changes
+@media (max-width: 990px) {
+
+    #btn-mobile {
+        display: block;
+        padding: .5rem 1rem;
+        border-radius: 7px;
+        outline: none;
+        border: none;
+        background-color: #253B73;
+        color: #fff;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        left: 0px;
+        background: lightgray;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1 rem;
+        border-bottom: 2px solid rgba(0,0,0,0.05);
+    }
+
+    #conteinerhome {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: 0px;
+        max-height: 690px;
+    }
+
+    main {
+        padding: 20px;
+        width: 95%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        height: 290vh;
+    }
+
+    .body { 
+        height: fit-content;
+        background: linear-gradient(45deg,#24006b,#f42f8c);
+    }
+
+<<<<<<< Updated upstream
+    .divhome {
+        margin-top: 2rem;
+    }
+
+    .conteiner {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 3rem;
+        margin: 0 auto;
+    }
+=======
+    .conteiner {
+        width: 95%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        margin: 0 auto;
+    }
+
+    .divhome {
+        margin-top: 2rem;
+    }
+>>>>>>> Stashed changes
+    
+    .box-cal-num {
+        margin: 2rem auto;
+        height: 300px;
+    }
 }
