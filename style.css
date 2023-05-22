@@ -378,7 +378,7 @@ details > summary {
 
 .modal span.fechar {
     padding: .7rem 1.4rem;
-    background-color: #E42C8A;
+    background-color: #BB2532;
     color: white;
     border-radius: 10px;
     position: absolute;
@@ -395,6 +395,10 @@ details > summary {
     display: flex;
 }
 
+.numerosurgencia {
+    color: #BB2532;
+    font-weight: bolder;
+}
 
 @media (max-width: 990px) {
 
@@ -459,21 +463,26 @@ details > summary {
         margin-top: 2rem;
     }
 
-    .conteiner {
+    /* .conteiner {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, auto);
         gap: 3rem;
         margin: 0 auto;
-    }
+    } */
 
     .conteiner {
         width: 95%;
         display: grid;
         grid-template-columns: 1fr;
         gap: 0px;
-        margin: 0 auto;
+        margin: 1.5rem auto;
+
+    }
+
+    .conteiner .card {
+        margin: 1rem auto;
     }
 
     .divhome {
@@ -492,5 +501,19 @@ details > summary {
 
     #logo {
         margin-left: 1.5rem;
+    }
+
+    .important {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 4rem;
+    }
+
+    .important .cardurgentes {
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
     }
 }
