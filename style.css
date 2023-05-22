@@ -369,6 +369,7 @@ details > summary {
 }
 
 .modal h1 {text-align: center; padding: 1.5rem;}
+
 .modal ul li {
     list-style: none;
     font-size: 1.5rem;
@@ -382,8 +383,9 @@ details > summary {
     color: white;
     border-radius: 10px;
     position: absolute;
-    top: -20px;
-    right: -40px;
+    bottom: 1rem;
+    right: 50%;
+    transform: translateX(50%);
     cursor: pointer;
 }
 
@@ -403,12 +405,12 @@ details > summary {
 @media (max-width: 990px) {
 
     .modal {
-        width: 80%;
-        height: 80vh;
+        width: 75%;
+        height: 70vh;
         background-color: #fff;
         opacity: 1;
         border-radius: 20px;
-        padding: 3rem;
+        padding: 2rem;
     }
 
     .modal h1 {padding: .3rem 0 1rem 0; font-size: 1.2rem;}
