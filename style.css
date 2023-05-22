@@ -402,6 +402,23 @@ details > summary {
 
 @media (max-width: 990px) {
 
+    .modal {
+        width: 80%;
+        height: 80vh;
+        background-color: #fff;
+        opacity: 1;
+        border-radius: 20px;
+        padding: 3rem;
+    }
+
+    .modal h1 {padding: .3rem 0 1rem 0; font-size: 1.2rem;}
+    .modal ul li {
+        list-style: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: .5rem;
+    }
+
     #btn-mobile {
         display: block;
         padding: .5rem 1rem;
@@ -438,12 +455,14 @@ details > summary {
         border-bottom: 2px solid rgba(0,0,0,0.05);
     }
 
+    /* CONTEINER HOME (MAIN) */
+    
     #conteinerhome {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
         gap: 0px;
-        max-height: 690px;
+        max-height: 600px;
     }
 
     main {
@@ -451,7 +470,7 @@ details > summary {
         width: 95%;
         box-sizing: border-box;
         margin: 0 auto;
-        height: 290vh;
+        height: 285vh;
     }
 
     .body { 
@@ -462,15 +481,6 @@ details > summary {
     .divhome {
         margin-top: 2rem;
     }
-
-    /* .conteiner {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto);
-        gap: 3rem;
-        margin: 0 auto;
-    } */
 
     .conteiner {
         width: 95%;
@@ -509,6 +519,7 @@ details > summary {
         width: 100%;
         margin: auto;
         margin-bottom: 4rem;
+        /* border: 1px solid red; */
     }
 
     .important .cardurgentes {
@@ -516,4 +527,8 @@ details > summary {
         margin: 1rem 0;
         text-align: center;
     }
+/* 
+    main {
+        border: 2px solid green;
+    } */
 }
