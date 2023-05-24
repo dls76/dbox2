@@ -31,3 +31,15 @@
 .linha-disciplina:hover {
     background-color: rgb(233, 233, 233);
 }
+
+@media (max-width: 990px) {
+    .conteiner-disciplina {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    .conteiner-disciplina div {
+        font-size: .8rem;
+    }
+}
