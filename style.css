@@ -360,7 +360,7 @@ details > summary {
 
 .modal {
     width: 50%;
-    height: 60vh;
+    height: 65vh;
     background-color: #fff;
     opacity: 1;
     border-radius: 20px;
@@ -400,6 +400,15 @@ details > summary {
 .numerosurgencia {
     color: #BB2532;
     font-weight: bolder;
+}
+
+#rh {
+    width: 19px;
+}
+
+.footeradm {
+    height: 200px;
+    /* border: 1px solid red; */
 }
 
 @media (max-width: 990px) {
