@@ -209,6 +209,8 @@ let eventos = [
     {data1: new Date (2023, 6, 29), data2: new Date (2023, 6, 29), descritivo: 'Feriado Municipal Paranaguá)', cal: 'out', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 6, 31), data2: new Date (2023, 6, 31), descritivo: 'Data limite para a regularização dos registros dos conteúdos do mês, no SAD', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 6, 31), data2: new Date (2023, 6, 8), descritivo: 'Orçamento das escolas - 2024', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    
+    //AGOSTO
     {data1: new Date (2023, 7, 1), data2: new Date (2023, 7, 1), descritivo: 'Noite Esportiva- 5º ano', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 7, 1), data2: new Date (2023, 7, 8), descritivo: 'Orçamento das escolas – 2023', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 7, 1), data2: new Date (2023, 7, 11), descritivo: 'Projeto sexualidade com EF I (SOE e Psicólogos)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
@@ -250,6 +252,8 @@ let eventos = [
     {data1: new Date (2023, 7, 30), data2: new Date (2023, 7, 30), descritivo: 'Lançamento de matrículas servidores CAAB (rever esta data)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 7, 30), data2: new Date (2023, 7, 30), descritivo: 'Beto Carrero', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 7, 31), data2: new Date (2023, 7, 31), descritivo: 'Lançamento de matrículas alunos e pais', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    
+    //SETEMBRO
     {data1: new Date (2023, 8, 1), data2: new Date (2023, 8, 29), descritivo: 'Aplicação das Provas Diagnósticas da Alfabetização – 3ª testagem', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 8, 1), data2: new Date (2023, 8, 30), descritivo: 'Pesquisa de Satisfação – pais e responsáveis', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 8, 4), data2: new Date (2023, 8, 4), descritivo: 'Comissão de Redação/PQD (tarde)', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
@@ -291,6 +295,8 @@ let eventos = [
     {data1: new Date (2023, 8, 30), data2: new Date (2023, 8, 30), descritivo: 'Dia da Secretária(o)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 8, 30), data2: new Date (2023, 8, 30), descritivo: 'Data limite para o envio dos Cronogramas Avaliativos aos alunos FI', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 8, 30), data2: new Date (2023, 8, 30), descritivo: 'Data limite para a regularização dos registros dos conteúdos do mês, no SAD', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    
+    //OUTUBRO
     {data1: new Date (2023, 9, 2), data2: new Date (2023, 9, 4), descritivo: 'Visita às faculdades de pedagogia', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 9, 2), data2: new Date (2023, 9, 3), descritivo: 'Enem Interativo – EM', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 9, 2), data2: new Date (2023, 9, 2), descritivo: 'Início do 4º bimestre', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
@@ -336,6 +342,8 @@ let eventos = [
     {data1: new Date (2023, 9, 30), data2: new Date (2023, 9, 30), descritivo: 'Enem TEEN - 6º a 8º ano', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 9, 30), data2: new Date (2023, 9, 31), descritivo: 'Enem TEEN e TREINEIRO - 9º a EM', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 9, 31), data2: new Date (2023, 9, 31), descritivo: 'Data limite para a regularização dos registros dos conteúdos do mês, no SAD', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    
+    //NOVEMBRO
     {data1: new Date (2023, 10, 23), data2: new Date (2023, 10, 3), descritivo: 'Avaliação PAAEB – 5º ano, 9º ano e 2ª EM - - Sugestão ASP (26 a 03/11)', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 10, 1), data2: new Date (2023, 10, 10), descritivo: 'Reunião participativa Pais e Alunos (após a AV1)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 10, 2), data2: new Date (2023, 10, 2), descritivo: 'Feriado Finados', cal: 'out', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
@@ -382,6 +390,8 @@ let eventos = [
     {data1: new Date (2023, 10, 29), data2: new Date (2023, 10, 5), descritivo: 'Recuperação de 4º bimestre FI', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 10, 29), data2: new Date (2023, 10, 5), descritivo: 'Recuperação Bimestral - IV BIM - FUND II e EM', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 10, 30), data2: new Date (2023, 10, 30), descritivo: 'Rumo ao 6º ano', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    
+    //DEZEMBRO
     {data1: new Date (2023, 11, 29), data2: new Date (2023, 11, 5), descritivo: 'Recuperação Bimestral - IV BIM - FUND II e EM', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 11, 3), data2: new Date (2023, 11, 3), descritivo: 'Domingo letivo Cantata de Natal – (Dia Letivo – dia permutado com recesso do dia 21/07)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 11, 4), data2: new Date (2023, 11, 4), descritivo: 'Dia do Orientador Educacional', cal: 'out', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
@@ -419,7 +429,7 @@ function mostrarEventos(){
         let desc = eventos[i].descritivo
         let res = eventos[i].foto
         let cal = eventos[i].cal
-        let pais = eventos[i].pais
+        // let pais = eventos[i].pais
         let niv = eventos[i].niv
         
         if ( d1 < d2 ) {
@@ -430,16 +440,16 @@ function mostrarEventos(){
             ev.classList.add('evento')
 
             if ( cal == 'asp' ) { 
-                ev.classList.add('verde')
+                ev.classList.add('verde', 'asp')
             } else if ( cal == 'out') { 
-                ev.classList.add('gray')
+                ev.classList.add('gray', 'out')
             } else if ( cal == 'caab' ) {
                 if ( niv == 'inf5' ) {
-                    ev.classList.add('lilas')
+                    ev.classList.add('lilas', 'caab')
                 } else if ( niv == 'f2m') {
-                    ev.classList.add('ouro')
+                    ev.classList.add('ouro', 'caab')
                 } else {
-                    ev.classList.add('azul-padrao')
+                    ev.classList.add('azul-padrao', 'caab')
                 }
             }
 
@@ -495,16 +505,16 @@ function mostrarEventos(){
             ev.classList.add('evento')
 
             if ( cal == 'asp' ) { 
-                ev.classList.add('verde')
+                ev.classList.add('verde', 'asp')
             } else if ( cal == 'out') { 
-                ev.classList.add('gray')
+                ev.classList.add('gray', 'out')
             } else if ( cal == 'caab' ) {
                 if ( niv == 'inf5' ) {
-                    ev.classList.add('lilas')
+                    ev.classList.add('lilas', 'caab')
                 } else if ( niv == 'f2m') {
-                    ev.classList.add('ouro')
+                    ev.classList.add('ouro', 'caab')
                 } else {
-                    ev.classList.add('azul-padrao')
+                    ev.classList.add('azul-padrao', 'caab')
                 }
             }
             
@@ -546,22 +556,23 @@ function mostrarEventos(){
 }
 
 // Expande a área de filtros do calendário e muda o botão
-// document.querySelector('#eventos-mais').addEventListener('click', ()=>{
 
-//     let filtros = document.querySelector('#filtros')
-//     filtros.classList.add('displayToggle')
-//     document.querySelector('#eventos-mais').style.display = "none"
-//     document.querySelector('#eventos-menos').style.display = "flex"
+document.querySelector('#eventos-mais').addEventListener('click', ()=>{
+
+    let filtros = document.querySelector('#filtros')
+    filtros.classList.add('displayToggle')
+    document.querySelector('#eventos-mais').style.display = "none"
+    document.querySelector('#eventos-menos').style.display = "flex"
     
 
-// })
+})
 
-// document.querySelector('#eventos-menos').addEventListener('click', ()=>{
+document.querySelector('#eventos-menos').addEventListener('click', ()=>{
 
-//     let filtros = document.querySelector('#filtros')
-//     filtros.classList.remove('displayToggle')
-//     document.querySelector('#eventos-mais').style.display = "flex"
-//     document.querySelector('#eventos-menos').style.display = "none"
+    let filtros = document.querySelector('#filtros')
+    filtros.classList.remove('displayToggle')
+    document.querySelector('#eventos-mais').style.display = "flex"
+    document.querySelector('#eventos-menos').style.display = "none"
 
 
-// })
+})

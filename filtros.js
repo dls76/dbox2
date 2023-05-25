@@ -1,13 +1,14 @@
+// window.onload(filterObjects('all'))
 
 filterObjects("all")
 
-function filterObjects(c){
-    var x, i;
-    x = document.getElementsByClassName("evento");
-    if (c == "all") c = "";
-    for (i=0; i < x.length; i++) {
-        removeClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) addClass(x[i], "show")
+function filterObjects(categoria){
+    var eventos, i;
+    eventos = document.getElementsByClassName("evento");
+    if (categoria == "all") categoria = "";
+    for (i=0; i < eventos.length; i++) {
+        removeClass(eventos[i], "show");
+        if (eventos[i].className.indexOf(categoria) > -1) addClass(eventos[i], "show")
     }
 }
 
@@ -31,16 +32,17 @@ function removeClass(element, name){
             arr1.splice(arr1.indexOf(arr2[i]), 1);
         }
     }
+
     element.className = arr1.join(" ");
 }
 
 
 
 
-// document.querySelector('.bt-caab').addEventListener('click', filterObjects('caab'))
-// document.querySelector('.bt-asp').addEventListener('click', filterObjects('asp'))
-// document.querySelector('.bt-pais').addEventListener('click', filterObjects('pais'))
-// document.querySelector('.bt-all').addEventListener('click', filterObjects('all'))
+// document.querySelector('#bt-caab').addEventListener('click', filterObjects('caab'))
+// document.querySelector('#bt-asp').addEventListener('click', filterObjects('asp'))
+// document.querySelector('#bt-pais').addEventListener('click', filterObjects('pais'))
+// document.querySelector('#bt-all').addEventListener('click', filterObjects('all'))
 
 
 

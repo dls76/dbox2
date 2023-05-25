@@ -539,3 +539,24 @@ details > summary {
         text-align: center;
     }
 }
+
+.linksprincipais {
+    width: 90%;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.linksprincipais a {
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+}
+
+.linksprincipais a:hover {
+    background-color: lightgray;
+}

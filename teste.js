@@ -1,13 +1,13 @@
-// function load(){ 
+function load(){ 
 
-//     let ev = document.querySelectorAll('.evento')
-//     let listaeventos = Array.from(ev)
+    let ev = document.querySelectorAll('.evento')
+    let listaeventos = Array.from(ev)
 
-//     listaeventos.forEach((x)=>{
+    listaeventos.forEach((x)=>{
         
-//         x.addEventListener('click', (y)=>{
-        
-//         })
-//     })
+        x.addEventListener('click', (y)=>{
+         let e = y.target 
+        })
+    })
 
-// }
+}

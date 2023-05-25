@@ -327,16 +327,20 @@
         <div class="divhome box-proximoseventos">
 
             <div class="conteinertitulosecao">
+
                 <div class="titulosecao">Calendário</div>
                 <div class="mais" id="eventos-mais">+</div>
                 <div class="menos" id="eventos-menos">-</div>
+
             </div>
 
             <div class="filtros" id="filtros">
-                <div class="caab" onclick="filterObjects('caab')">CAAB</div>
-                <div class="asp" onclick="filterObjects('asp')">ASP</div>
-                <div class="pais" onclick="filterObjects('pais')">Pais</div>
-                <div class="todos" onclick="filterObjects('all')">Todos</div>
+
+                <div id="bt-caab" class="btFiltro" onclick="filterObjects('caab')">CAAB</div>
+                <div id="bt-asp" class="btFiltro" onclick="filterObjects('asp')">ASP</div>
+                <!-- <div id="bt-pais" class="btFiltro" onclick="filterObjects('pais')">Pais</div> -->
+                <div id="bt-todos" class="btFiltro" onclick="filterObjects('all')">Todos</div>
+            
             </div>
 
             <div class="body-proximoseventos" id="body-eventos">
@@ -542,7 +546,6 @@
     <script src="calendario.js"></script>
     <script src="filtros.js"></script>
     <script src="teste.js"></script>
-    <script src="header.js"></script>
     <script src="script.js"></script>
     <!-- <script src="timer.js"></script> -->
 </body>
