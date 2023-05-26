@@ -1,99 +1,50 @@
-// window.onload(filterObjects('all'))
+filterSelection("all")
 
-filterObjects("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("evento");
+  if (c == "all") c = "";
 
-function filterObjects(categoria){
-    var eventos, i;
-    eventos = document.getElementsByClassName("evento");
-    if (categoria == "all") categoria = "";
-    for (i=0; i < eventos.length; i++) {
-        removeClass(eventos[i], "show");
-        if (eventos[i].className.indexOf(categoria) > -1) addClass(eventos[i], "show")
-    }
+//   Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+  
 }
 
-function addClass(element, name){
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i=0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {
-            element.className += " " + arr2[i];
-        }
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
     }
+  }
 }
 
-function removeClass(element, name){
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i=0; i < arr2.length; i++){
-        while (arr1.indexOf(arr2[i]) > -1){
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
     }
-
-    element.className = arr1.join(" ");
+  }
+  element.className = arr1.join(" ");
 }
-
-
-
-
-// document.querySelector('#bt-caab').addEventListener('click', filterObjects('caab'))
-// document.querySelector('#bt-asp').addEventListener('click', filterObjects('asp'))
-// document.querySelector('#bt-pais').addEventListener('click', filterObjects('pais'))
-// document.querySelector('#bt-all').addEventListener('click', filterObjects('all'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Exibe e oculta detalhes do evento
-// function show(e){
-//     let wrap = e.children
-//     let evento = wrap[0].children
-//     let detalhes = evento[1].children
-//     let titulo = evento[1].style 
-    
-//     if (detalhes[0].style.display == "none") {
-//         detalhes[0].style.display = "block";
-//     } else {
-//     detalhes[0].style.display = "none"
-//     }
-
-    /*if (titulo.whiteSpace == "nowrap" && titulo.overflow == "hidden"*/ /*&& titulo.textOverflow == "ellipsis"*/ /*)  {*/
-        // titulo.whiteSpace = "normal"
-        // titulo.overflow = "visible"
-        // titulo.textOverflow = "inherit"
-
-    // } else {
-    //     titulo.whiteSpace = "nowrap"
-    //     titulo.overflow = "hidden"
-        // titulo.textOverflow = "ellipis"
-    //}
-//}
 
 // Add active class to the current control button (highlight it)
-// var btnContainer = document.getElementById("buttons");
-// var btns = btnContainer.getElementsByClassName("btn");
-// for (var i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function() {
-//     var current = document.getElementsByClassName("active");
-//     current[0].className = current[0].className.replace(" active", "");
-//     this.className += " active";
-//   });
-// }
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}

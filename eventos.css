@@ -7,7 +7,7 @@
     box-shadow: none;
 }
 .evento {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 5fr 1fr;
     padding: 5px;
     margin: 4px auto 4px auto;
@@ -19,9 +19,11 @@
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
 }
+
 .show {
     display: grid;
 }
+
 .filtros {
     display: none;
     grid-template-columns: repeat(4, 1fr);
