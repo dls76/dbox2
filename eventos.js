@@ -552,7 +552,7 @@ function mostrarEventos(){
 
     }
 
-    // load()
+    filterSelection("all")
 }
 
 // Expande a área de filtros do calendário e muda o botão
