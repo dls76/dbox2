@@ -25,15 +25,14 @@
 }
 
 .filtros {
-    display: none;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0;
 }
-.filtros div {
+.btFiltro {
     text-align: center;
     background-color: #fff;
-    /* background-color: #e7e7e7; */
-    padding: 3px;
+    padding: 6px;
     font-size: .7rem;
     font-family: 'Roboto Condensed';
     color: rgb(111, 111, 111);
@@ -41,11 +40,12 @@
     border-radius: 3px;
     margin: 2px 1px;
 }
-div.todos {
+/* 
+.active {
     background-color: #253B73;
-    color: #ececec;
+    color: #fff;
+} */
 
-}
 .azul-padrao {
     background-color: rgb(197, 244, 255);
     color: rgb(3, 78, 183);
@@ -143,8 +143,6 @@ div.todos {
 .displayToggle {
     display:grid;
 }
-
-
 .btFiltro:hover {
     cursor: pointer;
     background-color: lightgray;
