@@ -40,11 +40,15 @@
     border-radius: 3px;
     margin: 2px 1px;
 }
-/* 
-.active {
-    background-color: #253B73;
-    color: #fff;
-} */
+
+.btFiltro:hover {
+    cursor: pointer;
+    background-color: #E7E7E7;
+}
+
+.active-btn {
+    background-color: #E7E7E7;
+}
 
 .azul-padrao {
     background-color: rgb(197, 244, 255);
@@ -142,8 +146,4 @@
 }
 .displayToggle {
     display:grid;
-}
-.btFiltro:hover {
-    cursor: pointer;
-    background-color: lightgray;
 }

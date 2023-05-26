@@ -557,22 +557,22 @@ function mostrarEventos(){
 
 // Expande a área de filtros do calendário e muda o botão
 
-document.querySelector('#eventos-mais').addEventListener('click', ()=>{
+// document.querySelector('#eventos-mais').addEventListener('click', ()=>{
 
-    let filtros = document.querySelector('#filtros')
-    filtros.classList.add('displayToggle')
-    document.querySelector('#eventos-mais').style.display = "none"
-    document.querySelector('#eventos-menos').style.display = "flex"
+//     let filtros = document.querySelector('#filtros')
+//     filtros.classList.add('displayToggle')
+//     document.querySelector('#eventos-mais').style.display = "none"
+//     document.querySelector('#eventos-menos').style.display = "flex"
     
 
-})
+// })
 
-document.querySelector('#eventos-menos').addEventListener('click', ()=>{
+// document.querySelector('#eventos-menos').addEventListener('click', ()=>{
 
-    let filtros = document.querySelector('#filtros')
-    filtros.classList.remove('displayToggle')
-    document.querySelector('#eventos-mais').style.display = "flex"
-    document.querySelector('#eventos-menos').style.display = "none"
+//     let filtros = document.querySelector('#filtros')
+//     filtros.classList.remove('displayToggle')
+//     document.querySelector('#eventos-mais').style.display = "flex"
+//     document.querySelector('#eventos-menos').style.display = "none"
 
 
-})
+// })
