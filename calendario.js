@@ -4,8 +4,6 @@ let dia = data.getDate()
 let mes = data.getMonth()
 let ano = data.getFullYear()
 
-
-
 let renderCalendar = ()=> { 
     
     data.setDate(1)
@@ -64,7 +62,6 @@ document.querySelector('.next').addEventListener('click', ()=>{
     data.setMonth(data.getMonth() + 1)
     renderCalendar()
 })
-
 
 document.querySelector("#btn-hoje").addEventListener("click", () => {
     data.setFullYear(ano)

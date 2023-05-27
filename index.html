@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="escalas.css">
     <link rel="stylesheet" href="linksuteis.css">
-    <link rel="stylesheet" href="eventos.css">
     <link rel="stylesheet" href="calendario.css">
     <link rel="stylesheet" href="horarios.css">
     <link rel="stylesheet" href="pedagogico.css">
@@ -28,31 +27,38 @@
 
 <body>
 
-<header id="header">
-    <a id="logo">DBox</a>
-    <nav id="nav">
-        <button id="btn-mobile">Menu</button>
-        <div class="menu" id="menu">
-            <a href="index.html" class="active">Home</a>
-            <a href="espiritual.html">Espiritual</a>
-            <a href="pedagogico.html">Pedagógico</a>
-            <a href="administrativo.html">Administrativo</a>
-            <a href="matriculas.html">Matrículas</a>
-        </div>
-    </nav>
+<div class="conteinergeral"> 
 
-</header>
+    <header id="header">
 
-<main>
+        <a id="logo">DBox</a>
 
-    <div id="conteinerhome">
+        <nav id="nav">
+
+            <button id="btn-mobile">Menu</button>
+
+            <div class="menu" id="menu">
+
+                <a href="index.html" class="active">Home</a>
+                <a href="espiritual.html">Espiritual</a>
+                <a href="pedagogico.html">Pedagógico</a>
+                <a href="administrativo.html">Administrativo</a>
+                <a href="matriculas.html">Matrículas</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main id="conteinerhome">
 
         <!-- ESCALAS -->
-        <div class="divhome">
+        <div class="divhome" id="escalas">
 
             <div class="conteinertitulosecao">
                 <div class="titulosecao">Escalas</div>
-                <div class="mais">+</div>
+                <!-- <div class="mais">+</div> -->
             </div>
 
             <div class="conteinerescalas">    
@@ -138,11 +144,11 @@
         </div>
 
         <!-- LINKS RÁPIDOS -->
-        <div class="divhome">
+        <div class="divhome" id="linksrapidos">
 
             <div class="conteinertitulosecao">
                 <div class="titulosecao">Links rápidos</div>
-                <div class="mais">+</div>
+                <!-- <div class="mais">+</div> -->
             </div>
 
             <div class="linksuteis">
@@ -183,7 +189,7 @@
                             <div class="legenda-links">Atendimento</div>
                         </div>
                     </a>
-  
+
                     <a href="https://docs.google.com/spreadsheets/d/1RUg8BovLS-4fv1z33hBazdezNaALmDYBLApICFMxh5A/edit#gid=1080031561" target="_blank">
                         <div class="img">
                             <img src="img/vagas.png" alt="">
@@ -324,7 +330,7 @@
         </div>
 
         <!-- PRÓXIMOS EVENTOS -->
-        <div class="divhome box-proximoseventos">
+        <div class="divhome">
 
             <div class="conteinertitulosecao">
 
@@ -412,37 +418,35 @@
 
         </div>
 
-    </div>
+    </main>
+      
+    <section class="important">
 
-</main>
+        <a href="https://docs.google.com/spreadsheets/d/1BJsdME7Y-h7E7Dpcb3FcA0sVnCHO9R72c89bLrt5G9o/edit#gid=0" target="_blank" class="cardurgentes">
+            <div class="restricoes">
+                <img src="img/restricoes.png" alt="">
+                <div>Alunos com restrições</div>
+            </div>
+        </a>
 
-<section class="important">
+        <a href="https://sistemas.usb.org.br/ama/index.php" target="_blank" class="cardurgentes">
+            <div class="restricoes">
+                <img src="img/ama.png" alt="">
+                <div>Emergências de saúde</div>
+            </div>
+        </a>
 
-    <a href="https://docs.google.com/spreadsheets/d/1BJsdME7Y-h7E7Dpcb3FcA0sVnCHO9R72c89bLrt5G9o/edit#gid=0" target="_blank" class="cardurgentes">
-        <div class="restricoes">
-            <img src="img/restricoes.png" alt="">
-            <div>Alunos com restrições</div>
+        
+        <div class="restricoes" id="fonesurgencias" class="cardurgentes">
+            <img src="img/sirene.png" alt="">
+            <div>Contatos de Urgência</div>
         </div>
-    </a>
+        
 
-    <a href="https://sistemas.usb.org.br/ama/index.php" target="_blank" class="cardurgentes">
-        <div class="restricoes">
-            <img src="img/ama.png" alt="">
-            <div>Emergências de saúde</div>
-        </div>
-    </a>
-
-    
-    <div class="restricoes" id="fonesurgencias" class="cardurgentes">
-        <img src="img/sirene.png" alt="">
-        <div>Contatos de Urgência</div>
-    </div>
-    
-
-</section>
+    </section>
 
     <div class="body">
-
+            
         <div class="title">HORÁRIOS</div>
         
         <div class="conteiner">
@@ -462,7 +466,7 @@
                     <h2>Infantil ao 5º</h2>
                 </div>
             </div>
-
+            
             <div class="card">
                 <div class="face face1">
                     <div class="content">
@@ -482,19 +486,19 @@
             </div>
             
             <div class="card">
-
+                
                 <div class="face face1">
-
+                    
                     <div class="content">
-
+                        
                         <h2 class="h2">Outros horários</h2>
-
+                        
                         <a class="horarios" href="horarios/escolinhas.pdf" target="_blank">Escolinhas</a>
-
+                        
                         <a class="horarios" href="horarios/robótica.pdf" target="_blank">Robótica</a>
-
+                        
                         <a class="horarios" href="horarios/maker.pdf" target="_blank">Sala Maker</a>
-
+                        
                         <details id="ingles">
                             <summary>Inglês</summary>
                             <a href="">Horários</a>
@@ -502,26 +506,25 @@
                             <a href="docs/ingles/kids.pdf">Kids</a>
                             <a href="docs/ingles/teens.pdf">Teens</a>
                         </details>
-
-
+                        
+                        
                     </div>
                 </div>
                 <div class="face face2">
                     <h2>Outros</h2>
                 </div>
             </div>
-            
-        </div>
-    
+        
     </div>
+    
 
-
+    
 
 
 <div class="bgmodal" id="bgmodal">
-
+    
     <div class="modal" id="modal">
-
+        
         <h1>Fones de Urgência</h1>
         <ul>
             <li><span class="numerosurgencia">190</span> - Polícia</li>
@@ -535,18 +538,21 @@
         </ul>
         <span class="fechar" id="fecharmodal">Fechar</span>
     </div>
-
+    
+    
+</div>
 
 </div>
 
+<script src="dbox.js"></script>
+<script src="aniversariantes.js"></script>
+<script src="eventos.js"></script>
+<script src="calendario.js"></script>
+<script src="filtros.js"></script>
+<script src="teste.js"></script>
+<script src="script.js"></script>
+<!-- <script src="timer.js"></script> -->
 
-    <script src="dbox.js"></script>
-    <script src="aniversariantes.js"></script>
-    <script src="eventos.js"></script>
-    <script src="calendario.js"></script>
-    <script src="filtros.js"></script>
-    <script src="teste.js"></script>
-    <script src="script.js"></script>
-    <!-- <script src="timer.js"></script> -->
+</div>
 </body>
 </html>

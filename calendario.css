@@ -1,10 +1,9 @@
 .box-cal-num {
     height: 320px;
-    position: relative;
+    /* position: relative; */
     background-color: #fff;
-    width: 100%;
+    /* width: 100%; */
 }
-
 .headercal {
     background-color: #253B73;
     color: #e4ebfd;
@@ -14,7 +13,6 @@
     justify-content: center;
     padding: .5rem;
 }
-
 .diasemanacal {
     text-align: center;
     font-size: .8rem;
@@ -23,7 +21,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .diacal {
     font-size: 2rem;
     font-weight: 700;
@@ -34,7 +31,6 @@
     align-items: center;
     line-height: 2rem;
 }
-
 .mescalbox {
     display: flex;
     justify-content: space-between;
@@ -42,7 +38,6 @@
     background-color: #fff;
     box-sizing: border-box;
 }
-
 .mescal {
     color: #253B73;
     font-family: 'Roboto Condensed', sans-serif;
@@ -52,7 +47,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .spancal {
     width: 20px;
     height: 20px;
@@ -64,18 +58,15 @@
     cursor: pointer;
     transition: all .1s;
 }
-
 .spancal:hover {
     background-color: #bed0ff;
 }
-
 i.fa-solid {
     color: rgb(190, 190, 190);
     color: #253B73;
     cursor: pointer;
     font-size: .7rem;
 }
-
 .weekdays {
     width: 100%;
     display: flex;
@@ -84,7 +75,6 @@ i.fa-solid {
     background-color: #fff;
     box-sizing: border-box;
 }
-
 .weekdays div {
     width: calc(100%/7);
     font-size: .7rem;
@@ -96,17 +86,14 @@ i.fa-solid {
     font-weight: 500;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
 .weekdays div:first-of-type {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-
 .weekdays div:last-of-type {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-
 .days {
     width: 100%;
     display: flex;
@@ -115,7 +102,6 @@ i.fa-solid {
     padding: 5px;
     box-sizing: border-box;
 }
-
 .days div {
     width: calc(100%/7);
     display: flex;
@@ -128,16 +114,13 @@ i.fa-solid {
     border-radius: 5px;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
 .prev-date, .next-date {
     color: #fff;
 }
-
 .days div:hover:not(.today) {
     background-color: #bed0ff;
     cursor: pointer;
 }
-
 .btnsCal {
     display: flex;
     justify-content: space-between;
@@ -148,7 +131,6 @@ i.fa-solid {
     box-sizing: border-box;
     bottom: .3rem;
 }
-
 #btn-hoje {margin-left: 5px;} 
 #btn-obs {margin-right: 5px;}
 #btn-hoje, #btn-obs {
