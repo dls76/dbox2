@@ -12,9 +12,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto auto auto;
     margin: auto;
-    /* background-color: rgb(236, 194, 115); */
     box-sizing: border-box;
-    /* border: 2px solid red; */
 }
 #header {
     height: 60px;
@@ -53,21 +51,25 @@
 }
 main#conteinerhome {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.1fr .9fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
     /* border: 2px solid green;     */
 }
 .divhome {
     /* max-height: 590px; */
     background-color: #f3f3f3;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-    border-radius: 4px;
+    /* box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 12px;
     position: relative;
     height: fit-content;
     /* border: 2px solid red; */
 }
 
 /* XXXXXXXXXXXXX  CALENDARIO DESCRITIVO DE EVENTOS XXXXXXXXXXXXXXXXXX */
+
 .evento {
     display: none;
     grid-template-columns: 1fr 5fr 1fr;
@@ -103,6 +105,7 @@ main#conteinerhome {
 .btFiltro:hover {
     cursor: pointer;
     background-color: #E7E7E7;
+    /* color: #fff; */
 }
 .active-btn {
     background-color: #E7E7E7;
@@ -187,7 +190,7 @@ main#conteinerhome {
     background-color: #fff;
 }
 .body-proximoseventos {
-    height: 520px;
+    height: 280px;
     overflow-y: scroll;
     padding-right: 4px;
 }
@@ -208,12 +211,13 @@ main#conteinerhome {
 /*=============== SEÇÃO IMPORTANT ============= */
 .important {
     width: 100%;
-    background-color: #F6F6F6;
+    background-color: #fff;
     height: fit-content;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin: 2rem auto;
+    padding: 1rem 0 2rem;
     /* border: 1px solid blue; */
 }
 .important a {
@@ -223,6 +227,29 @@ main#conteinerhome {
     width: 35px;
     margin-left: 10px;
 }
+.restricoes {
+    /* background-color: #fff; */
+    padding: .5rem;
+    width: fit-content;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    font-weight: bold;
+    color: #253B73;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.restricoes:hover {
+    background-color: #253B73;
+    cursor: pointer;
+    color: #fff;
+}
+.restricoes div {
+    margin: 1rem;
+}
+
+
 .conteinertitulosecao {
     background-color: #e7e7e7;
     padding: 7px 10px;
@@ -430,27 +457,6 @@ details > summary {
 }
 .card:nth-child(2) .horarios:hover {
     color: #64D488;
-}
-.restricoes {
-    background-color: #fff;
-    padding: .5rem;
-    width: fit-content;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .5s;
-    font-weight: bold;
-    color: #253B73;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-.restricoes:hover {
-    background-color: #253B73;
-    cursor: pointer;
-    color: #fff;
-}
-.restricoes div {
-    margin: 1rem;
 }
 
 /* ============ MODAL =========== */
@@ -666,4 +672,8 @@ details > summary {
 }
 .linksprincipais a:hover {
     background-color: lightgray;
+}
+
+.conteinerhorarios ul li {
+    list-style: none;
 }

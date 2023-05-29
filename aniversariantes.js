@@ -150,8 +150,8 @@ function show() {
             funcaoAniver.classList.add('aniver-funcao')
             div.appendChild(funcaoAniver)
 
-            const proxAniv = document.querySelector('#proxAniv')
-            proxAniv.innerHTML = mss[mesAno]
+            // const proxAniv = document.querySelector('#proxAniv')
+            // proxAniv.innerHTML = mss[mesAno]
 
         } else {    
             

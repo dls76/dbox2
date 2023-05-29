@@ -19,19 +19,10 @@
     align-items: center;
 }
 .icon img {
-    width: 35px;
+    width: 20px;
 }
 #icon-comp-box {
     align-items: center;
-}
-#icon-compensacao {
-    width: 25px;
-}
-#icon-plantao-diario {
-    width: 30px;
-}
-#icon-comunic img {
-    width: 25px;
 }
 .subtitulo {
     font-size: .7rem;

@@ -1,8 +1,7 @@
 .box-cal-num {
-    height: 320px;
-    /* position: relative; */
+    height: 240px;
     background-color: #fff;
-    /* width: 100%; */
+    /* border: 2px solid red; */
 }
 .headercal {
     background-color: #253B73;
@@ -15,7 +14,7 @@
 }
 .diasemanacal {
     text-align: center;
-    font-size: .8rem;
+    font-size: 1rem;
     letter-spacing: 1.1px;
     display: flex;
     justify-content: center;
@@ -65,7 +64,7 @@ i.fa-solid {
     color: rgb(190, 190, 190);
     color: #253B73;
     cursor: pointer;
-    font-size: .7rem;
+    font-size: 1rem;
 }
 .weekdays {
     width: 100%;
@@ -122,7 +121,7 @@ i.fa-solid {
     cursor: pointer;
 }
 .btnsCal {
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     padding: 5px;

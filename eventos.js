@@ -158,51 +158,52 @@ let eventos = [
     {data1: new Date(2023, 5, 4), data2: new Date(2023, 5, 7), descritivo: "Premiação da Campanha de matrículas 2022 – equipe gestora", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 6), data2: new Date(2023, 5, 6), descritivo: "Comissão de Educação/Diretiva", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 6), data2: new Date(2023, 5, 6), descritivo: "Reunião Pedagógica FUND II e EM - Formação Continuada e Pauta Pedagógica", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: "f2m"},
-    {data1: new Date(2023, 5, 8), data2: new Date(2023, 5, 8), descritivo: "Feriado Corpus Christi", cal: "out", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 5, 9), data2: new Date(2023, 5, 9), descritivo: "Recesso (Dia permutável com 45144 – Domingo letivo Dia dos Pais)", cal: "out", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 8), data2: new Date(2023, 5, 8), descritivo: "Feriado Corpus Christi", cal: "out", resp: "", foto: "", detalhes: "", pais: true, niv: ""},
+    {data1: new Date(2023, 5, 9), data2: new Date(2023, 5, 9), descritivo: "Recesso (Dia permutável com 45144 – Domingo letivo Dia dos Pais)", cal: "out", resp: "", foto: "", detalhes: "", pais: true, niv: ""},
+    {data1: new Date(2023, 5, 12), data2: new Date(2023, 5, 16), descritivo: "Período de aplicação da AV2 II BIM - 6º ao EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
     {data1: new Date(2023, 5, 12), data2: new Date(2023, 5, 16), descritivo: "Período de aplicação da AV2 II BIM - corrigir, lançar notas no SAD e devolver aos estudantes até 5 dias úteis após a data da sua avaliação - FII ao Médio", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 15), data2: new Date(2023, 5, 21), descritivo: "Período de aplicação da AV2 - colocar nos primeiros dias as provas com mais complicação de correção.", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 15), data2: new Date(2023, 5, 21), descritivo: "Período de aplicação da AV2 - 2º ao 5º ano.", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
     {data1: new Date(2023, 5, 13), data2: new Date(2023, 5, 15), descritivo: "Projeto Educador Fiel nas escolas", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 18), data2: new Date(2023, 5, 21), descritivo: "Encontro de Educação – CATRE", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 20), data2: new Date(2023, 5, 20), descritivo: "Conselho de Educação – CATRE", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 20), data2: new Date(2023, 5, 20), descritivo: "Início Campanha de Matrículas de Meio de Ano - digital", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 5, 20), data2: new Date(2023, 5, 20), descritivo: "2ª Chamada AV2 II BIM FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: "f2m"},
-    {data1: new Date(2023, 5, 20), data2: new Date(2023, 5, 30), descritivo: "Aplicação das provas diagnósticas de alfabetização – 2ª testagem", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 20), data2: new Date(2023, 5, 20), descritivo: "2ª Chamada AV2 II BIM FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
+    {data1: new Date(2023, 5, 20), data2: new Date(2023, 5, 30), descritivo: "Aplicação das provas diagnósticas de alfabetização – 2ª testagem", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
     {data1: new Date(2023, 5, 24), data2: new Date(2023, 5, 24), descritivo: "Dia do Ancião", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 5, 23), data2: new Date(2023, 5, 23), descritivo: "2ª Chamada FI", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: "inf5"},
+    {data1: new Date(2023, 5, 23), data2: new Date(2023, 5, 23), descritivo: "2ª Chamada FI", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
     {data1: new Date(2023, 5, 23), data2: new Date(2023, 5, 23), descritivo: "Data limite para o registro de todas as Atividades Avaliativas de Aprendizagem do 2º bimestre no SAD (prof)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 23), data2: new Date(2023, 5, 23), descritivo: "SAD ENCERRADO - 1º ENCERRAMENTO II BIM - FII ao Médio", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 5, 25), data2: new Date(2023, 5, 25), descritivo: "Domingo Letivo – “Projeto Fair Play” - Olimpíada do Conhecimento (Matemática/ Bom de bíblia/Português/Redação) – Fase Final (Dia Letivo – dia permutado com recesso do dia 17/07)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 25), data2: new Date(2023, 5, 25), descritivo: "Domingo Letivo – “Projeto Fair Play” - Olimpíada do Conhecimento (Matemática/ Bom de bíblia/Português/Redação) – Fase Final (Dia Letivo – dia permutado com recesso do dia 17/07)", cal: "asp", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
     {data1: new Date(2023, 5, 26), data2: new Date(2023, 5, 26), descritivo: "Comissão de Educação Física USB (tarde)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 27), data2: new Date(2023, 5, 27), descritivo: "Comissão de Ciências da Natureza USB (tarde)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 27), data2: new Date(2023, 5, 27), descritivo: "Reunião de Bibliotecários USB (remoto)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 26), data2: new Date(2023, 5, 26), descritivo: "Conselho de Classe EI-FI (novo formato de acordo com o regimento)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 26), data2: new Date(2023, 5, 26), descritivo: "Conselho de Classe II BIM - FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 27), data2: new Date(2023, 5, 27), descritivo: "Organização das convocações para a Recuperação Bimestral e Entrega das convocações para a Recuperação Bimestral aos alunos", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 5, 28), data2: new Date(2023, 6, 4), descritivo: "Recuperação Bimestral II BIM - Fund II e Médio", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 28), data2: new Date (2023, 6, 4), descritivo: 'Recuperação Bimestral II BIM - Fund II e Médio', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: true, niv: ' '},
+    {data1: new Date(2023, 6, 29), data2: new Date (2023, 6, 5), descritivo: 'Recuperação Bimestral', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: true, niv: 'inf5'},
     {data1: new Date(2023, 5, 29), data2: new Date(2023, 5, 29), descritivo: "Data limite - Entrega do Planejamento e Calendário Avaliativo do III BIM/FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 5, 30), data2: new Date(2023, 5, 30), descritivo: "Relatório mensal de notificações para pais (impresso) - Rudi (CAAB)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 30), data2: new Date(2023, 5, 30), descritivo: "Relatório mensal de notificações para pais (impresso) - Rudi (CAAB)", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: ""},
     
     //JULHO
-    {data1: new Date (2023, 5, 28), data2: new Date (2023, 6, 4), descritivo: 'Recuperação Bimestral II BIM - Fund II e Médio', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
-    {data1: new Date (2023, 6, 5), data2: new Date (2023, 6, 7), descritivo: 'COPA CAAB', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
-    {data1: new Date (2023, 6, 29), data2: new Date (2023, 6, 5), descritivo: 'Recuperação Bimestral', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    {data1: new Date (2023, 6, 5), data2: new Date (2023, 6, 7), descritivo: 'COPA CAAB', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: true, niv: 'f2m'},
     {data1: new Date (2023, 6, 3), data2: new Date (2023, 6, 3), descritivo: 'Data limite para a entrega ao SOP dos (planejamentos) conteúdos e métodos avaliativos do 3º bimestre', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 6, 3), data2: new Date (2023, 6, 3), descritivo: 'Reunião Pedagógica EI-FI', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 6, 3), data2: new Date (2023, 6, 7), descritivo: 'Semana para cada unidade dar a devolutiva/feedbacks das avaliações de profs e funcionários', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 6, 4), data2: new Date (2023, 6, 4), descritivo: 'Comissão de Educação/Diretiva', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 6, 4), data2: new Date (2023, 6, 4), descritivo: 'Reunião com os psicólogos – presencial Asp (11h as 14h)', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
-    {data1: new Date (2023, 6, 7), data2: new Date (2023, 6, 7), descritivo: 'Final do 2º Bimestre', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    {data1: new Date (2023, 6, 7), data2: new Date (2023, 6, 7), descritivo: 'Final do 2º Bimestre', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: true, niv: ' '},
     {data1: new Date (2023, 6, 6), data2: new Date (2023, 6, 6), descritivo: 'SAD ENCERRADO - 2º ENCERRAMENTO E ASSINATURA - II BIM - FII E MÉDIO', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
-    {data1: new Date (2023, 6, 10), data2: new Date (2023, 6, 10), descritivo: 'Liberação do boletins – 2º bimestre - on line (Não precisa de reunião de pais)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    {data1: new Date (2023, 6, 10), data2: new Date (2023, 6, 10), descritivo: 'Liberação do boletins – 2º bimestre - on line (Não precisa de reunião de pais)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: true, niv: ' '},
     {data1: new Date (2023, 6, 9), data2: new Date (2023, 6, 21), descritivo: 'Recesso Docente (de 17 a 21 recesso para professores – compensação de alguns domingos letivos)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
-    {data1: new Date (2023, 6, 9), data2: new Date (2023, 6, 24), descritivo: 'Recesso Discente', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    {data1: new Date (2023, 6, 9), data2: new Date (2023, 6, 24), descritivo: 'Recesso Discente', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: true, niv: ' '},
     {data1: new Date (2023, 6, 10), data2: new Date (2023, 6, 20), descritivo: 'Colônia de Férias/ Escola Cristã de Férias - Contraturno (quem fizer)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 6, 20), data2: new Date (2023, 6, 21), descritivo: 'Reunião ECO SOP e SOE - Presencial', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 6, 24), data2: new Date (2023, 6, 24), descritivo: 'Planejamento das escolas com profs - Reunião de alinhamento', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
-    {data1: new Date (2023, 6, 25), data2: new Date (2023, 6, 25), descritivo: 'Início do 3º bimestre', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    {data1: new Date (2023, 6, 25), data2: new Date (2023, 6, 25), descritivo: 'Início do 3º bimestre', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: true, niv: ' '},
     {data1: new Date (2023, 6, 24), data2: new Date (2023, 6, 28), descritivo: 'Planejamento Educação – USB', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
-    {data1: new Date (2023, 6, 25), data2: new Date (2023, 6, 31), descritivo: 'Semana Hábitos de Estudo (SOE)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    {data1: new Date (2023, 6, 25), data2: new Date (2023, 6, 31), descritivo: 'Semana Hábitos de Estudo (SOE)', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: true, niv: ' '},
     {data1: new Date (2023, 6, 25), data2: new Date (2023, 6, 25), descritivo: 'Reunião com Assistentes Financeiros - Campos', cal: 'asp', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 6, 28), data2: new Date (2023, 6, 28), descritivo: 'Data limite para a entrega dos critérios avaliativos e conteúdos do 3º bimestre para os alunos', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 6, 28), data2: new Date (2023, 6, 28), descritivo: 'Data limite para entrega das avaliações 3º Bimestre - Para Análise do SOP', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
@@ -429,15 +430,21 @@ function mostrarEventos(){
         let desc = eventos[i].descritivo
         let res = eventos[i].foto
         let cal = eventos[i].cal
-        // let pais = eventos[i].pais
+        let pais = eventos[i].pais
         let niv = eventos[i].niv
         
+        
+
         if ( d1 < d2 ) {
 
             let eventos = document.querySelector('#body-eventos')
 
             let ev = document.createElement('div') 
             ev.classList.add('evento')
+
+            if ( pais ) {
+                ev.classList.add('pais')
+            }
 
             if ( cal == 'asp' ) { 
                 ev.classList.add('verde', 'asp')
@@ -452,7 +459,6 @@ function mostrarEventos(){
                     ev.classList.add('azul-padrao', 'caab')
                 }
             }
-
 
             let data = document.createElement('div')
             data.classList.add('data')
@@ -504,6 +510,10 @@ function mostrarEventos(){
             let ev = document.createElement('div')
             ev.classList.add('evento')
 
+            if ( pais ) {
+                ev.classList.add('pais')
+            }
+
             if ( cal == 'asp' ) { 
                 ev.classList.add('verde', 'asp')
             } else if ( cal == 'out') { 
@@ -550,6 +560,7 @@ function mostrarEventos(){
 
         }
 
+        
     }
 
     filterSelection("all")

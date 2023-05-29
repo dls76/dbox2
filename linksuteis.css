@@ -7,6 +7,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 0;
     background-color: #fff;
+    border-radius: 12px;
 }
 
 .linksuteis .img:hover {
