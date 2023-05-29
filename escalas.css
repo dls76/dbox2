@@ -1,5 +1,6 @@
 .conteinerescalas {
     background-color: #fff;
+    border-radius: 12px;
 }
 .escala {
     background-color: #fff;
@@ -12,6 +13,9 @@
 .escala:hover {
     background-color: whitesmoke;
     cursor: pointer;
+}
+#escalacultos {
+    border-radius: 12px 12px 0 0;
 }
 .icon {
     display: flex;

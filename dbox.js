@@ -51,11 +51,11 @@ let compensacao = [
     {data: new Date(2023, 6, 5), diaDaSemana: "Quarta", people: "Última semana do semestre"},
     {data: new Date(2023, 6, 7), diaDaSemana: "Sexta", people: "Última semana do semestre"},
 ]
-for(i=0; i<compensacao.length; i++) {
+for( i=0; i<compensacao.length; i++ ) {
 
     const diffInMs = datahoje - compensacao[i].data
     const diffDays = diffInMs / (1000 * 60 * 60 * 24)
-   
+
     if ( ( diffDays >= -6  && diffDays < 1 ) && ( compensacao[i].diaDaSemana == "Quarta" ) ) { 
         document.querySelector('#nomescompquarta').innerHTML = compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth()+1) + ' (quarta) - ' + compensacao[i].people
     }
