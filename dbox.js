@@ -53,16 +53,40 @@ let compensacao = [
 ]
 for( i=0; i<compensacao.length; i++ ) {
 
-    const diffInMs = datahoje - compensacao[i].data
-    const diffDays = diffInMs / (1000 * 60 * 60 * 24)
+    
+    // const diffInMs = 
 
-    if ( ( diffDays >= -6  && diffDays < 1 ) && ( compensacao[i].diaDaSemana == "Quarta" ) ) { 
-        document.querySelector('#nomescompquarta').innerHTML = compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth()+1) + ' (quarta) - ' + compensacao[i].people
-    }
+    // const diffDays = diffInMs / (1000 * 60 * 60 * 24)
 
-    if ( ( diffDays >= -6  && diffDays < 1 ) && ( compensacao[i].diaDaSemana == "Sexta" ) ) { 
-        document.querySelector('#nomescomp').innerHTML = compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth()+1) + ' (sexta) - ' + compensacao[i].people
-    }
+    // if ( ( diffDays >= -6  && diffDays < 1 ) && ( compensacao[i].diaDaSemana == "Quarta" ) ) { 
+    //     document.querySelector('#nomescompquarta').innerHTML = compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth()+1) + ' (quarta) - ' + compensacao[i].people
+    // }
+
+    // if ( ( diffDays >= -6  && diffDays < 1 ) && ( compensacao[i].diaDaSemana == "Sexta" ) ) { 
+    //     document.querySelector('#nomescomp').innerHTML = compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth()+1) + ' (sexta) - ' + compensacao[i].people
+    // }
+
+    // if ( datahoje.getTime() >= compensacao[i].data.getTime() ) {
+        
+    //     document.querySelector('#titulocompensacao').innerHTML = 'Compensação ' + compensacao[i].diaDaSemana + ' (' + compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth()+1) + ')'
+
+    //     document.querySelector('#nomescomp').innerHTML = compensacao[i].people
+
+    // }
+// k
+
+let d = compensacao[i].data.getTime()
+let h = new Date().getTime()
+let r = h - d
+
+if ( r < 0 ) {
+    
+    document.querySelector('#titulocompensacao').innerHTML = 'Compensacao ' + compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth() + 1)
+    document.querySelector('#nomescomp').innerHTML = compensacao[i].people
+
+    break
+}
+
 }
 
 // Plantão sexta
@@ -191,8 +215,8 @@ for( k=0; k<cultos.length; k++ ) {
     }
 
     if ( (datahoje.getDate() === cultos[k].data.getDate()) && (datahoje.getMonth() === cultos[k].data.getMonth()) && (datahoje.getFullYear() === cultos[k].data.getFullYear()) ){
-        document.querySelector('#cultos').innerHTML = 'Manhã: ' + cultos[k].pessoaM
-        document.querySelector("#cultosTarde").innerHTML = 'Tarde: ' + cultos[k].pessoaT
+        document.querySelector('#cultos').innerHTML = cultos[k].pessoaM + ' e ' + cultos[k].pessoaT
+        // document.querySelector("#cultosTarde").innerHTML = 'Tarde: ' + cultos[k].pessoaT
         document.querySelector('#titulocultos').innerHTML = "Cultos " + cultos[k].data.getDate() + '/' + (cultos[k].data.getMonth()+1)
     }
 }
