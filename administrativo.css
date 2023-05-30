@@ -1,3 +1,13 @@
+.titulosecao {
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: 2rem auto 0 auto;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif, Arial, Helvetica;
+    font-weight: 600;
+    color: #5d5d5d;
+}
+
 .conteiner-disciplina {
     width: 90%;
     display: grid;

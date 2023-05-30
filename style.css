@@ -247,8 +247,6 @@ main#conteinerhome {
 .restricoes div {
     margin: 1rem;
 }
-
-
 .conteinertitulosecao {
     background-color: #e7e7e7;
     padding: 7px 10px;
@@ -656,23 +654,26 @@ details > summary {
 /* ============== MATRÍCULAS ============ */
 .linksprincipais {
     width: 90%;
-    border: 1px solid lightgray;
+    margin: 2rem auto;
+    padding: 1rem;
+    /* border: 1px solid lightgray; */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 1rem;
     border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .linksprincipais a {
+
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 10px;
+    margin-right: 2rem;
 }
 .linksprincipais a:hover {
     background-color: lightgray;
 }
-
 .conteinerhorarios ul li {
     list-style: none;
 }
