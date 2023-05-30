@@ -1,50 +1,56 @@
 .conteinerescalas {
     background-color: #fff;
     border-radius: 12px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
 }
 .escala {
     background-color: #fff;
-    border-bottom: .5px solid rgb(204, 204, 204);
-    padding: 12px 0;
+    border-bottom: .5px solid #eaeaea;
+    padding: 18px 0;
     display: grid;
     grid-template-columns: 1fr 5fr;
     gap: 0;
+    transition: .3s;
 }
 .escala:hover {
     background-color: whitesmoke;
     cursor: pointer;
 }
-#escalacultos {
-    border-radius: 12px 12px 0 0;
+#escalas {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    border-radius: 12px;
 }
+#escalacultos {
+    border-radius: 12px;
+}
+#escalasexta {border-radius: 0 0 12px 12px;}
 .icon {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 .icon img {
     width: 20px;
 }
-#icon-comp-box {
-    align-items: center;
-}
 .subtitulo {
-    font-size: .7rem;
+    font-size: .8rem;
     color: #B52532;
     font-weight: 700;
     font-family: 'Roboto Condensed', sans-serif;
 }
 .link-content {
     color: #253B73;
-    font-size: .7rem;
+    font-size: .8rem;
     font-family: 'Roboto Condensed', sans-serif;
     padding: 5px 0 0 0;
 }
 #aniver {
     height: 200px;    
     box-sizing: border-box;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

@@ -81,7 +81,7 @@ let r = h - d
 
 if ( r < 0 ) {
     
-    document.querySelector('#titulocompensacao').innerHTML = 'Compensacao ' + compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth() + 1)
+    document.querySelector('#titulocompensacao').innerHTML = 'Compensação ' + compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth() + 1)
     document.querySelector('#nomescomp').innerHTML = compensacao[i].people
 
     break
