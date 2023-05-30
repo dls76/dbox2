@@ -46,6 +46,11 @@
     font-size: .8rem;
     font-family: 'Roboto Condensed', sans-serif;
     padding: 5px 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
 }
 #aniver {
     height: 200px;    
