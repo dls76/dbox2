@@ -343,24 +343,14 @@
         </div>
 
         <!-- CALENDÁRIO -->
-        <div class="divhome">
+        <div class="divhome" id="divhomecalendario">
 
-            <!-- <div class="conteinertitulosecao"> -->
-
-                <!-- <div class="titulosecao">Calendário</div> -->
-                <!-- <div class="mais" id="eventos-mais">+</div>
-                <div class="menos" id="eventos-menos">-</div> -->
-
-            <!-- </div> -->
-
-            <!-- CALENDARIO NUMERO -->
             <div class="box-cal-num">
 
-                <div class="headercal">
+                <!-- <div class="headercal">
                     <div class="diasemanacal"></div>
                     <div class="diacal"></div>
-                    <!-- <div class="timecal" id="timecal"></div> -->
-                </div>
+                </div> -->
 
                 <div class="mescalbox">
                     
@@ -373,57 +363,55 @@
                     <span class="spancal next">
                         <i class="fa-solid fa-chevron-right next"></i>
                     </span>
+                
                 </div>
 
                 <div class="bodycal">
                     <div class="weekdays">
-                        <div>D</div>
-                        <div>S</div>
-                        <div>T</div>
-                        <div>Q</div>
-                        <div>Q</div>
-                        <div>S</div>
-                        <div>S</div>
+                        <div>Dom</div>
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sáb</div>
                     </div>
                     <div class="days"></div>
                 </div>
 
                 <div class="btnsCal">
-                    <div class="btnHoje" id="btn-hoje">HOJE</div>
-                    <div id="btn-obs">OBS</div>
+                    <div class="btnHoje" id="btn-hoje">Hoje</div>
+                    <div id="btn-obs">Observações</div>
                 </div>
-            </div>
-       
-            <div class="filtros" id="filtros">
-
-                <div id="bt-todos" class="btFiltro active-btn" onclick="filterSelection('all')">TUDO</div>
-                <div id="bt-caab" class="btFiltro" onclick="filterSelection('caab')">CAAB</div>
-                <div id="bt-asp" class="btFiltro" onclick="filterSelection('asp')">ASP</div>
-                <div id="bt-asp" class="btFiltro" onclick="filterSelection('pais')">PAIS</div>
             
+                <div class="filtros" id="filtros">
+                    <button id="bt-todos" class="btFiltro active-btn" onclick="filterSelection('all')">TUDO</button>
+                    <button id="bt-caab" class="btFiltro" onclick="filterSelection('caab')">CAAB</button>
+                    <button id="bt-asp" class="btFiltro" onclick="filterSelection('asp')">ASP</button>
+                    <button id="bt-asp" class="btFiltro" onclick="filterSelection('pais')">PAIS</button>
+        
+                </div>
+
+                <div class="body-proximoseventos" id="body-eventos">
+                    <!-- <div class="evento">
+        
+                        <div class="data">
+                            <div class="dias">
+                                <div class="dia">2</div>
+                                <div class="a">a</div>
+                                <div class="dia2">4</div>
+                            </div>
+                            <div class="mes">FEV</div>
+                        </div>
+                        <div class="descricao">Reunião de Diretores</div>
+                        <div class="resp">
+                            <img src="img/user.png" alt="">
+                        </div>
+                    </div>-->
+                </div>
+
             </div>
 
-            <div class="body-proximoseventos" id="body-eventos">
-
-                <!-- <div class="evento">
-                    
-                    <div class="data">
-                        <div class="dias">
-                            <div class="dia">2</div>
-                            <div class="a">a</div>
-                            <div class="dia2">4</div>
-                        </div>
-                        <div class="mes">FEV</div>
-                    </div>
-
-                    <div class="descricao">Reunião de Diretores</div>
-                    <div class="resp">
-                        <img src="img/user.png" alt="">
-                    </div>
-                </div>-->
-
-            </div> 
-        
         </div>
 
         <!-- Horários -->

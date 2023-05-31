@@ -25,9 +25,9 @@ let renderCalendar = ()=> {
     let diasDaSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
     
     
-    document.querySelector('.diasemanacal').innerHTML = diasDaSemana[diaSemana]
+    // document.querySelector('.diasemanacal').innerHTML = diasDaSemana[diaSemana]
     
-    document.querySelector('.diacal').innerHTML = dia
+    // document.querySelector('.diacal').innerHTML = dia
     
     document.querySelector('.mescal').innerHTML = meses[data.getMonth()] + ' ' + data.getFullYear()
 
@@ -69,4 +69,9 @@ document.querySelector("#btn-hoje").addEventListener("click", () => {
     renderCalendar()
 })
 
+document.querySelector("#btn-obs").addEventListener("click", () => {
+    alert('Em breve')
+})
+
 renderCalendar()
+

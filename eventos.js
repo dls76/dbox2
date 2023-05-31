@@ -416,10 +416,9 @@ let eventos = [
     {data1: new Date (2023, 11, 20), data2: new Date (2023, 11, 20), descritivo: 'Início das Férias docentes', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 11, 20), data2: new Date (2023, 11, 15), descritivo: 'Férias Administração das Unidades Escolares – limite máximo para retorno da equipe gestora da escola 15/01', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     {data1: new Date (2023, 11, 25), data2: new Date (2023, 11, 25), descritivo: 'Natal', cal: 'out', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
+    {data1: new Date (2023, 4, 31), data2: new Date (2023, 4, 31), descritivo: 'Natal', cal: 'out', resp: ' ', foto: ' ', detalhes: ' ', pais: false, niv: ' '},
     
 ]
-
-
 
 function mostrarEventos(){
     
@@ -566,24 +565,19 @@ function mostrarEventos(){
     filterSelection("all")
 }
 
-// Expande a área de filtros do calendário e muda o botão
+let calendarioDescritivo = document.querySelector('#body-eventos')
 
-// document.querySelector('#eventos-mais').addEventListener('click', ()=>{
 
-//     let filtros = document.querySelector('#filtros')
-//     filtros.classList.add('displayToggle')
-//     document.querySelector('#eventos-mais').style.display = "none"
-//     document.querySelector('#eventos-menos').style.display = "flex"
+// function scrollarEventos() { 
+
+//     for ( let i=0; i < eventos.length; i++ ) {
+
+//     if ( eventos[i].data1.getDate() == datahoje.getDate() && eventos[i].data1.getMonth() == datahoje.getMonth() && eventos[i].data1.getFullYear() == datahoje.getFullYear() ) {
+
+        
     
+//     }
+// }
+// }
 
-// })
-
-// document.querySelector('#eventos-menos').addEventListener('click', ()=>{
-
-//     let filtros = document.querySelector('#filtros')
-//     filtros.classList.remove('displayToggle')
-//     document.querySelector('#eventos-mais').style.display = "flex"
-//     document.querySelector('#eventos-menos').style.display = "none"
-
-
-// })
+// window.addEventListener('load', scrollarEventos)

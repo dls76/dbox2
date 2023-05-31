@@ -321,7 +321,6 @@ for (let m = 0; m < plantaodiario.length; m++ ) {
     }
 }
 
-
 let modalurgencias = document.querySelector('#fonesurgencias')
 modalurgencias.addEventListener('click', ()=>{
     

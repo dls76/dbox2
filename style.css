@@ -52,7 +52,7 @@
 main#conteinerhome {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 40px;
+    gap: 2rem;
 }
 .divhome {
     background-color: #f3f3f3;
@@ -88,51 +88,54 @@ main#conteinerhome {
 .filtros {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
+    gap: .2rem;
 }
 .btFiltro {
-    text-align: center;
-    background-color: #fff;
-    padding: 6px;
+    background-color: #e6e6e6;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    color: #17306f;
+    font-weight: 600;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
     font-size: .7rem;
-    font-family: 'Roboto Condensed';
-    color: rgb(111, 111, 111);
-    font-weight: 500;
-    border-radius: 3px;
-    margin: 2px 1px;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: .3s;
 }
 .btFiltro:hover {
     cursor: pointer;
-    background-color: #E7E7E7;
-    /* color: #fff; */
+    background-color: #253B73;
+    color: #fff;
 }
 .active-btn {
-    background-color: #E7E7E7;
+    background-color: #253B73;
+    color: #fff;
 }
 .azul-padrao {
-    background-color: rgb(197, 244, 255);
-    color: rgb(3, 78, 183);
-    border-left: 5px solid rgb(80,185,250);
+    background-color: rgb(225, 250, 255);
+    color: rgb(0, 66, 158);
+    border-left: 5px solid rgb(70, 160, 216);
 }
 .lilas {
-    border-left: 6px solid rgb(163, 70, 250);
-    background-color: rgb(238, 221, 255);
-    color: rgb(95, 2, 182);
+    border-left: 6px solid rgb(158, 57, 252);
+    background-color: rgb(241, 226, 255);
+    color: rgb(89, 1, 170);
 }
 .ouro {
-    border-left: 6px solid #FFA100;
-    background-color: #f9e6c5;
-    color: #ac6d00;
+    border-left: 6px solid #df8d00;
+    background-color: #fff2da;
+    color: #976000;
 }
 .verde {
     border-left: 6px solid rgb(84, 224, 156);
-    background-color: rgb(189, 255, 223);
-    color: rgb(2, 155, 81);
+    background-color: rgb(211, 255, 234);
+    color: rgb(1, 133, 69);
 }
 .gray {
-    border-left: 6px solid rgb(143, 143, 143);
-    background-color: rgb(232, 232, 232);
-    color: rgb(62, 62, 62);
+    border-left: 6px solid rgb(141, 141, 141);
+    background-color: rgb(236, 236, 236);
+    color: rgb(53, 53, 53);
 }
 .data {
    display: flex;
@@ -146,13 +149,13 @@ main#conteinerhome {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
 }
 .dia, .dia2 {
     font-size: 1rem;
 }
 .diaU {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .a {
     display: flex;
@@ -189,19 +192,21 @@ main#conteinerhome {
     background-color: #fff;
 }
 .body-proximoseventos {
-    height: 280px;
+    height: 260px;
     overflow-y: scroll;
-    padding-right: 4px;
+    margin-top: 1rem;
 }
 .body-proximoseventos::-webkit-scrollbar {
-    width: 7px;
+    width: 0px;
 }
 .body-proximoseventos::-webkit-scrollbar-thumb {
     background-color: #d0d0d0;
     border-radius: 10px;
+    display: none;
 }
 .body-proximoseventos::-webkit-scrollbar-thumb:hover {
     background-color: #b6b6b6;
+    display: none;
 }
 .displayToggle {
     display:grid;
