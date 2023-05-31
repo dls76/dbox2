@@ -79,7 +79,7 @@ let d = compensacao[i].data.getTime()
 let h = new Date().getTime()
 let r = h - d
 
-if ( r < 0 ) {
+if ( r < 86400000 ) {
     
     document.querySelector('#titulocompensacao').innerHTML = 'Compensação ' + compensacao[i].data.getDate() + '/' + (compensacao[i].data.getMonth() + 1)
     document.querySelector('#nomescomp').innerHTML = compensacao[i].people
@@ -356,7 +356,7 @@ let d = celebras[i].data.getTime()
 let h = new Date().getTime()
 let r = h - d
 
-if ( r < 0 ) {
+if ( r < 86400000 ) {
     
     document.querySelector('#titulocelebra').innerHTML = 'Celebra ' + celebras[i].data.getDate() + '/' + (celebras[i].data.getMonth() + 1)
     document.querySelector('#celebra').innerHTML = celebras[i].tema + ' (' + celebras[i].convidado + ')'
