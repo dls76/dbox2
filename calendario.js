@@ -70,7 +70,7 @@ document.querySelector("#btn-hoje").addEventListener("click", () => {
 })
 
 document.querySelector("#btn-obs").addEventListener("click", () => {
-    alert('Em breve')
+    alert('Em construção')
 })
 
 renderCalendar()

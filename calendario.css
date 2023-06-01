@@ -127,7 +127,7 @@ i.fa-solid {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 5px;
+    /* padding: 5px; */
     margin: 1rem 0;
     width: 100%;
     box-sizing: border-box;
