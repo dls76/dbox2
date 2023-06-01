@@ -63,9 +63,8 @@ const pessoas = [
     {nome: "Patricia Maria Chagas", dia: 31, mes: 4, ano: 1994, funcao: "Professora", foto:"img/anivImg/maio/patriciamaria.png"},
 
     //JUNHO
-    {nome: "Josiane Charnei Gonçalves", dia: 10, mes: 5, ano: 1983, funcao: "Reprografista", foto:"img/anivImg/"},
-    {nome: "Cristian Angelo Bissule", dia: 17, mes: 5, ano: 1997, funcao: "M. Aprendiz", foto:"img/anivImg/"},
-    {nome: "Tayna Ribeiro dos Santos ", dia: 25, mes: 5, ano: 1997, funcao: "Professora", foto:"img/anivImg/"},
+    {nome: "Josiane Charnei Gonçalves", dia: 10, mes: 5, ano: 1983, funcao: "Reprografista", foto:"img/anivImg/junho/josiane.png"},
+    {nome: "Tayna Ribeiro dos Santos ", dia: 25, mes: 5, ano: 1997, funcao: "Professora", foto:"img/anivImg/junho/tayna.png"},
 
     //JULHO
     {nome: "Daniela Regina Lamarques Isobe", dia: 4, mes: 6, ano: 1975, funcao: "Coordenadora", foto:""},

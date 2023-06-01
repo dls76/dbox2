@@ -6,7 +6,7 @@
 }
 .escala {
     background-color: #fff;
-    border-bottom: .5px solid #eaeaea;
+    border-bottom: .5px solid #e2e2e2;
     padding: 18px 0;
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -23,10 +23,9 @@
     gap: 30px;
     border-radius: 12px;
 }
-#escalacultos {
-    border-radius: 12px;
-}
-#escalasexta {border-radius: 0 0 12px 12px;}
+#escalacultos {border-radius: 12px 12px 0 0;}
+#escalacelebra {border-radius: 0 0 12px 12px;}
+
 .icon {
     display: flex;
     justify-content: center;
