@@ -7,7 +7,7 @@
 }
 body {background-color: #f3f3f3;}
 .conteinergeral {
-    width: 96%;
+    width: 98%;
     max-width: 1500px;
     display: grid;
     grid-template-columns: 1fr;
@@ -18,11 +18,13 @@ body {background-color: #f3f3f3;}
 #header {
     height: 60px;
     padding: .5rem;
+    margin: 1rem 0 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid blue; */
+    border-radius: 12px;
     justify-content: space-between;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 #menu {
     display: flex;
@@ -213,14 +215,12 @@ main#conteinerhome {
 /*=============== SEÇÃO IMPORTANT ============= */
 .important {
     width: 100%;
-    background-color: #fff;
+    background-color: #f3f3f3;
     height: fit-content;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 2rem auto;
-    padding: 1rem 0 2rem;
-    /* border: 1px solid blue; */
+    padding: 2rem 0;
 }
 .important a {
     margin-right: 2rem;
@@ -475,13 +475,14 @@ details > summary {
     display: none;
 }
 .modal {
-    width: 50%;
-    height: 65vh;
+    width: 60%;
+    height: fit-content;
     background-color: #fff;
     opacity: 1;
     border-radius: 20px;
-    padding: 3rem;
+    padding: 2rem 2rem 2rem 4rem;
     position: relative;
+    box-sizing: border-box;
 }
 .modal h1 {text-align: center; padding: 1.5rem;}
 .modal ul li {
@@ -490,18 +491,17 @@ details > summary {
     font-weight: 600;
     margin-bottom: 1rem;
 }
-.modal span.fechar {
+.fecharmodalbox {display: flex;justify-content: flex-end;margin: 2rem 0 0 0;}
+#fecharmodal {
     padding: .7rem 1.4rem;
     background-color: #BB2532;
     color: white;
     border-radius: 10px;
-    position: absolute;
-    bottom: 1rem;
-    right: 50%;
-    transform: translateX(50%);
     cursor: pointer;
+    text-align: center;
+    width: 8rem;
 }
-.modal span.fechar:hover {
+.modal div.fechar:hover {
     color: black;
 }
 .modalOn {
@@ -521,6 +521,10 @@ details > summary {
 /* ============ MEDIA QUERIES =============== */
 
 @media (max-width: 1290px) {
+
+    #header {
+        margin: 1rem 0 0rem 0;
+    }
 
     #btn-mobile {
         display: block;
@@ -557,7 +561,6 @@ details > summary {
         margin: 0 1 rem;
         border-bottom: 2px solid rgba(0,0,0,0.05);
     }
-
     .modal {
         width: 75%;
         height: 70vh;
@@ -581,13 +584,13 @@ details > summary {
         grid-template-columns: 1fr 1fr 1.1fr .9fr;
         gap: 30px; */
 
+    #header {width: 92%;margin: auto;padding-left: 0;}
     main#conteinerhome {
         padding: 20px;
         width: 100%;
         margin: 0 auto;
         grid-template-columns: 1fr 1fr;
-        /* display: flex;
-        flex-direction: column; */
+
     }
 
     .body { 
@@ -612,11 +615,10 @@ details > summary {
     }
 
     .divhome {
-        margin-top: 2rem;
+        margin-top: .5rem;
     }
     
     .box-cal-num {
-        margin: 2rem auto;
         height: 300px;
     }
 
@@ -625,16 +627,12 @@ details > summary {
         width: 80%;
     }
 
-    #logo {
-        margin-left: 1.5rem;
-    }
-
     .important {
         flex-direction: column;
         padding: 0;
         width: 100%;
         margin: auto;
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
     }
 
     .important .cardurgentes {
@@ -647,7 +645,6 @@ details > summary {
 @media (max-width: 700px) {
 
     main#conteinerhome {
-        padding: 20px;
         width: 100%;
         margin: 0 auto;
         display: flex;
