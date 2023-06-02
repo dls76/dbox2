@@ -16,15 +16,16 @@ body {background-color: #f3f3f3;}
     box-sizing: border-box;
 }
 #header {
-    height: 60px;
-    padding: .5rem;
-    margin: 1rem 0 2rem 0;
+    /* border: 1px solid red; */
+    height: 50px;
+    /* padding: .5rem; */
+    margin: 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
     justify-content: space-between;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
 }
 #menu {
     display: flex;
@@ -45,7 +46,7 @@ body {background-color: #f3f3f3;}
     color: #fff;
 }
 #logo {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bolder;
     color: #253B73;
 }
