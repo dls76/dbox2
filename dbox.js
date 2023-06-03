@@ -364,3 +364,24 @@ if ( r < 86400000 ) {
     break
 }
 }
+
+
+let celebrasMenores = [
+    {data: new Date(2023, 5, 22), tema: '8 Remédios Naturais', resp: 'Fernanda B., Vanessa, Pauline'},
+    {data: new Date(2023, 5, 29), tema: 'Literatura', resp: 'Janete, Sandra, Joelma'}
+]
+
+for( i=0; i<celebrasMenores.length; i++ ) {
+
+    let d = celebrasMenores[i].data.getTime()
+    let h = new Date().getTime()
+    let r = h - d
+    
+    if ( r < 86400000 ) {
+        
+        document.querySelector('#titulocelebra2').innerHTML = 'Celebra ' + celebrasMenores[i].data.getDate() + '/' + (celebrasMenores[i].data.getMonth() + 1)
+        document.querySelector('#celebra2').innerHTML = celebrasMenores[i].tema + ' (' + celebrasMenores[i].resp + ')'
+    
+        break
+    }
+}
