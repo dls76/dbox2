@@ -94,7 +94,7 @@ let eventos = [
     // {data1: new Date(2023, 3, 22), data2: new Date(2023, 3, 22), descritivo: "Início da divulgação dos resultados do Enem Interativo", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     
     // {data1: new Date (2023, 4, 15), data2: new Date (2023, 1, 19), descritivo: 'Pré-conselho SOE EI-FI', cal: 'asp', resp:, foto:, detalhes:, pais:, niv:
-    {data1: new Date(2023, 3, 24), data2: new Date(2023, 3, 24), descritivo: "Data limite - Entrega do Planejamento e Calendário Avaliativo do II BIM/FUND II e EM", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 4), data2: new Date(2023, 3, 24), descritivo: "Data limite - Entrega do Planejamento e Calendário Avaliativo do II BIM/FUND II e EM", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 3, 24), data2: new Date(2023, 3, 28), descritivo: "Recuperação I bim FI ao EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 3, 25), data2: new Date(2023, 3, 25), descritivo: "Reunião com psicólogos – remoto (8h)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 3, 28), data2: new Date(2023, 3, 28), descritivo: "Final do 1º bimestre", cal: "out", resp: "", foto: "", detalhes: "", pais: false, niv: ""},

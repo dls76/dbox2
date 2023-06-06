@@ -69,9 +69,9 @@ document.querySelector("#btn-hoje").addEventListener("click", () => {
     renderCalendar()
 })
 
-document.querySelector("#btn-obs").addEventListener("click", () => {
-    alert('Em construção')
-})
+// document.querySelector("#btn-obs").addEventListener("click", () => {
+//     alert('Em construção')
+// })
 
 renderCalendar()
 

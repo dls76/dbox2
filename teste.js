@@ -1,13 +1,45 @@
-function load(){ 
+// window.addEventListener('load', scrolling)
+// window.addEventListener('load', getElementPosition)
 
-    let ev = document.querySelectorAll('.evento')
-    let listaeventos = Array.from(ev)
+// function showeventos() { 
+    
+//     let todoseventos = [...document.querySelectorAll('.evento')]
 
-    listaeventos.forEach((x)=>{
-        
-        x.addEventListener('click', (y)=>{
-         let e = y.target 
-        })
-    })
+//     todoseventos.forEach((x)=>{
 
-}
+//         x.addEventListener('click', (y)=>{
+//             let eventoclicado = y.target 
+//             let clicado = eventos.indexOf(eventoclicado)
+            
+//         })
+//     })
+
+// }
+
+// function getCurrentEvent() {
+
+//     for ( let i = 0; i <= eventos.length; i++ ) { 
+
+//     if ( eventos[i].data1.getTime() >= new Date().getTime() || eventos[i].data1.getTime() <= (new Date().getTime() + 86400000) ) {
+//         console.log(eventos[i].data1.getDate() + '/' + eventos[i].data1.getMonth() + ' - ' + eventos[i].descritivo)
+//         break
+//     } else {
+//         console.log('don´t match')
+//     }
+
+//     return eventos[i].getBoundingClientRect()
+
+// }
+// }
+
+// function scrolling() {
+//     const calendariodescritivo = document.querySelector('#body-eventos')
+//     calendariodescritivo.scrollTo(0, 2500)
+// }
+
+
+// const b = document.querySelector('#btn-obs')
+
+// b.addEventListener('click', ()=>{
+//     getCurrentEvent()
+// })

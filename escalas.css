@@ -14,6 +14,8 @@
     transition: .3s;
     padding-right: 1rem;
 }
+
+
 .escala:hover {
     background-color: whitesmoke;
     cursor: pointer;
@@ -25,7 +27,7 @@
     border-radius: 12px;
 }
 #escalacultos {border-radius: 12px 12px 0 0;}
-#escalacelebra {border-radius: 0 0 12px 12px;}
+#escalacelebra2 {border-radius: 0 0 12px 12px;}
 
 .icon {
     display: flex;
