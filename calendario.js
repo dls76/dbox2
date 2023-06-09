@@ -69,9 +69,31 @@ document.querySelector("#btn-hoje").addEventListener("click", () => {
     renderCalendar()
 })
 
-// document.querySelector("#btn-obs").addEventListener("click", () => {
-//     alert('Em construção')
-// })
+document.querySelector("#btn-obs").addEventListener("click", () => {
+    alert('Em construção')
+})
 
 renderCalendar()
 
+const btup = document.querySelector('#bt-up')
+const btdown = document.querySelector('#bt-down')
+const btnsCal = document.querySelector('#btnsCal')
+const filtros = document.querySelector('#filtros')
+const boxeventos = document.querySelector('#body-eventos')
+
+btdown.addEventListener('click', ()=>{
+    btup.style.display="block"
+    btdown.style.display="none"
+    btnsCal.style.display="flex"
+    filtros.style.display="grid"
+    boxeventos.style.height="229px"
+
+})
+
+btup.addEventListener('click', ()=>{
+    btup.style.display="none"
+    btdown.style.display="block"
+    btnsCal.style.display="none"
+    filtros.style.display="none"
+    boxeventos.style.height="322px"
+})

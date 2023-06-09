@@ -186,6 +186,10 @@ let cultos = [
     {data: new Date(2023, 5, 5), pessoaM: "Fernanda Borges", pessoaT: "Pr Guilherme"},
     {data: new Date(2023, 5, 6), pessoaM: "Pr Guilherme", pessoaT: "Denise Padilha"},
     {data: new Date(2023, 5, 7), pessoaM: "Alessandra Wolff", pessoaT: "Pr Luís Felipe"},
+    {data: new Date(2023, 5, 8), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 5, 9), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 5, 10), pessoaM: "", pessoaT: ""},
+    {data: new Date(2023, 5, 11), pessoaM: "", pessoaT: ""},
     {data: new Date(2023, 5, 12), pessoaM: "Pr Guilherme", pessoaT: "Louise Godoi"},
     {data: new Date(2023, 5, 13), pessoaM: "Lia Andrighetto", pessoaT: "Pauline Roefero"},
     {data: new Date(2023, 5, 14), pessoaM: "Ana Paula", pessoaT: "Ana Paula"},
@@ -214,10 +218,13 @@ for( k=0; k<cultos.length; k++ ) {
         document.querySelector('#cultos').innerHTML = 'Hoje é domingo.'
     }
 
+    if ( cultos[k].dletivo == false ) {
+        document.querySelector('#cultos').innerHTML = 'Recesso/Feriado'
+    }
+
     if ( (datahoje.getDate() === cultos[k].data.getDate()) && (datahoje.getMonth() === cultos[k].data.getMonth()) && (datahoje.getFullYear() === cultos[k].data.getFullYear()) ){
-        document.querySelector('#cultos').innerHTML = cultos[k].pessoaM + ' e ' + cultos[k].pessoaT
-        // document.querySelector("#cultosTarde").innerHTML = 'Tarde: ' + cultos[k].pessoaT
         document.querySelector('#titulocultos').innerHTML = "Cultos " + cultos[k].data.getDate() + '/' + (cultos[k].data.getMonth()+1)
+        document.querySelector('#cultos').innerHTML = cultos[k].pessoaM + ' e ' + cultos[k].pessoaT
     }
 }
 
@@ -364,7 +371,6 @@ if ( r < 86400000 ) {
     break
 }
 }
-
 
 let celebrasMenores = [
     {data: new Date(2023, 5, 22), tema: '8 Remédios Naturais', resp: 'Fernanda B., Vanessa, Pauline'},

@@ -1,3 +1,10 @@
+#divhomelinks {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+}
+
 .linksuteis {
     height: fit-content;
 }

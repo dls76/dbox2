@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DBox</title>
     <link rel="shortcut icon" href="img/dbox-favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="escalas.css">
     <link rel="stylesheet" href="linksuteis.css">
     <link rel="stylesheet" href="calendario.css">
-    <!-- <link rel="stylesheet" href="horarios.css"> -->
+    <link rel="stylesheet" href="horarios.css">
     <link rel="stylesheet" href="pedagogico.css">
     <link rel="stylesheet" href="administrativo.css">
     <!-- <link rel="stylesheet" href="mediaquery.css"> -->
@@ -50,6 +51,32 @@
         </nav>
 
     </header>
+
+    <section class="important">
+
+        <a href="https://sistemas.usb.org.br/ama/index.php" target="_blank" class="cardurgentes">
+            <div class="restricoes">
+                <span class="material-icons">medical_services</span>
+                <div>AMA - Emergências</div>
+            </div>
+        </a>
+
+        <a href="https://docs.google.com/spreadsheets/d/1BJsdME7Y-h7E7Dpcb3FcA0sVnCHO9R72c89bLrt5G9o/edit#gid=0" target="_blank" class="cardurgentes">
+            <div class="restricoes">
+                <span class="material-icons">info</span>
+                <div>Alunos com restrições</div>
+            </div>
+        </a>
+
+        <a class="cardurgentes" id="fonesurgencias">
+            <div class="restricoes">
+                <span class="material-icons">phone</span>
+                <div>Contatos de Urgência</div>
+            </div>
+        </a>
+        
+
+    </section>
 
     <main id="conteinerhome">
 
@@ -187,20 +214,12 @@
 
         </div>
 
-
-
-
-
         <!-- LINKS RÁPIDOS -->
-        <div class="divhome">
-
-            <!-- <div class="conteinertitulosecao"> -->
-                <!-- <div class="titulosecao">Links rápidos</div> -->
-                <!-- <div class="mais">+</div> -->
-            <!-- </div> -->
+        <div class="divhome" id="divhomelinks">
 
             <div class="linksuteis">
 
+                <!-- Sistemas -->
                 <div class="linksuteisbox">
 
                     <a href="https://docs.google.com/document/d/1VP4dJArGpPaluoyEfLrj4bFSdoWrdUFO/edit" target="_blank">
@@ -210,101 +229,24 @@
                         </div>
                     </a>
 
-                    <a href="https://docs.google.com/document/d/1HbNc2k19rTphynOYIWA-sQ8qOBkFkvBHxm2SGFtm4PE/edit" target="_blank">
+                    <a href="https://calendar.google.com/calendar/u/1/r" target="_blank">
                         <div class="img">
-                            <img src="img/notebook.png" alt="">
-                            <div class="legenda-links">Pauta RA</div>
+                            <img src="img/googlecal.png" alt="">
+                            <div class="legenda-links">Google Agenda</div>
                         </div>
                     </a>
 
-                    <a href="https://drive.google.com/drive/folders/1pOgt-SDj4SXvQoxS8z6uJFsiRN8sWzME?usp=sharing" target="_blank">
+                    <a href="" target="_blank">
                         <div class="img">
-                            <img src="img/folder.png" alt="">
-                            <div class="legenda-links">Atas RA</div>
+                            <img src="img/new.png" alt="">
+                            <div class="legenda-links">Gmail</div>
                         </div>
                     </a>
 
-                    <a href="https://docs.google.com/spreadsheets/d/1dy6Ai_z_VejTFFZYf87SLAMhHI9yJ1wW5_4UOJqmzj4/edit#gid=0" target="_blank">
+                    <a href="https://caab.escolaemmovimento.com.br/Acesso/Login" target="_blank">
                         <div class="img">
-                            <img src="img/growth.png" alt="">
-                            <div class="legenda-links">Relatórios</div>
-                        </div>
-                    </a>
-
-                    <a href="https://dls76.github.io/matriculasDbox/" target="_blank">
-                        <div class="img">
-                            <img src="img/add.png" alt="">
-                            <div class="legenda-links">Atendimento</div>
-                        </div>
-                    </a>
-
-                    <a href="https://docs.google.com/spreadsheets/d/1RUg8BovLS-4fv1z33hBazdezNaALmDYBLApICFMxh5A/edit#gid=1080031561" target="_blank">
-                        <div class="img">
-                            <img src="img/vagas.png" alt="">
-                            <div class="legenda-links">Vagas</div>
-                        </div>
-                    </a>
-
-                    <a href="https://drive.google.com/drive/folders/1FzIl6C5ncvUY8LOTllVlO-TNxc4z-hmQ?usp=sharing" target="_blank">
-                        <div class="img">
-                            <img src="img/dollar.png" alt="">
-                            <div class="legenda-links">Negociações</div>
-                        </div>
-                    </a>
-
-                    <a href="https://dls76.github.io/escoladeorigem/" target="_blank">
-                        <div class="img">
-                            <img src="img/search.png" alt="">
-                            <div class="legenda-links">Esc. Origem</div>
-                        </div>
-                    </a>
-
-                    <a href="https://docs.google.com/spreadsheets/d/1LC8Ed9w4j4IgZJPh19UufEtoxbWLFaEOROQxDFSiLUo/edit#gid=0" target="_blank">
-                        <div class="img">
-                            <img src="img/gold-medal.png" alt="">
-                            <div class="legenda-links">Jogos</div>
-                        </div>
-                    </a>
-
-                    <a href="https://docs.google.com/spreadsheets/d/1buTOzXafV9mtx028lz7F3l-y3ZSSvMf2WO6D94pf57k/edit?usp=sharing" target="_blank">
-                        <div class="img">
-                            <img src="img/graduation.png" alt="">
-                            <div class="legenda-links">Formaturas</div>
-                        </div>
-                    </a>
-
-                    <a href="https://docs.google.com/spreadsheets/d/1F5RLQ-8aayTSXhAac5PVBk0ohSbAmTQFTPxpvIzlt8A/edit#gid=0" target="_blank">
-                        <div class="img">
-                            <img src="img/autism.png" alt="">
-                            <div class="legenda-links">Tutores</div>
-                        </div>
-                    </a>
-
-                    <!-- <a href="https://sistemas.usb.org.br/ama/pages/home/home.php" target="_blank">
-                        <div class="img">
-                            <div class="box-ama"><img src="img/ama.png" alt="" id="ama"></div>
-                            <div class="legenda-links">AMA</div>
-                        </div>
-                    </a> -->
-
-                    <a href="https://drive.google.com/drive/u/1/folders/1BMRm81qQJqditysd6Ivu2MPEHKf13aCj" target="_blank">
-                        <div class="img">
-                            <img src="img/mail.png" alt="">
-                            <div class="legenda-links">Comunicados</div>
-                        </div>
-                    </a>
-
-                    <a href="https://acrm.sdasystems.org/" target="_blank">
-                        <div class="img">
-                            <img src="img/acrm.png" alt="">
-                            <div class="legenda-links">ACRM</div>
-                        </div>
-                    </a>
-
-                    <a href="https://app.powerbi.com/home?redirectedFromSignup=1&username=douglas.leal@usb.educadventista.org&AutomaticLogin=true" target="_blank">
-                        <div class="img">
-                            <img src="img/bi.png" alt="" id="bi">
-                            <div class="legenda-links">Power BI</div>
+                            <img src="img/eem.png" alt="">
+                            <div class="legenda-links">Agenda</div>
                         </div>
                     </a>
 
@@ -327,14 +269,7 @@
                             <img src="img/sad-apoio.png" alt="">
                             <div class="legenda-links">SAD Apoio</div>
                         </div>
-                    </a>
-
-                    <a href="https://caab.escolaemmovimento.com.br/Acesso/Login" target="_blank">
-                        <div class="img">
-                            <img src="img/eem.png" alt="">
-                            <div class="legenda-links">Agenda</div>
-                        </div>
-                    </a>
+                    </a>         
 
                     <a href="https://drive.google.com/drive/u/1/folders/0AIh4iGkMG6UuUk9PVA" target="_blank">
                         <div class="img">
@@ -343,6 +278,27 @@
                         </div>
                     </a>
 
+                    <a href="https://drive.google.com/drive/u/1/folders/1BMRm81qQJqditysd6Ivu2MPEHKf13aCj" target="_blank">
+                        <div class="img">
+                            <img src="img/mail.png" alt="">
+                            <div class="legenda-links">Comunicados</div>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1pOgt-SDj4SXvQoxS8z6uJFsiRN8sWzME?usp=sharing" target="_blank">
+                        <div class="img">
+                            <img src="img/folder.png" alt="">
+                            <div class="legenda-links">Atas RA</div>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/spreadsheets/d/1dy6Ai_z_VejTFFZYf87SLAMhHI9yJ1wW5_4UOJqmzj4/edit#gid=0" target="_blank">
+                        <div class="img">
+                            <img src="img/growth.png" alt="">
+                            <div class="legenda-links">Relatórios</div>
+                        </div>
+                    </a>
+                   
                     <a href="https://dls76.github.io/espelhosdeclasse/" target="_blank">
                         <div class="img">
                             <img src="img/layers.png" alt="">
@@ -350,24 +306,71 @@
                         </div>
                     </a>
 
-                    <a href="https://docs.google.com/spreadsheets/d/1EKpdJ1tdw9oV2q2ggCiyRV3JJCCF6irG/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true" target="_blank">
-                        <div class="img">
-                            <img src="img/teamwork.png" alt="">
-                            <div class="legenda-links">Parceiros</div>
-                        </div>
-                    </a>
-
-                    <a href="https://docs.google.com/spreadsheets/d/1YKCYKANQN_7MB98zAaMiAyMdGJadsFWdV7Wcg57OI3w/edit?usp=sharing" target="_blank">
-                        <div class="img">
-                            <img src="img/rescue.png" alt="">
-                            <div class="legenda-links">Resgate</div>
-                        </div>
-                    </a>
-
                     <a href="https://login-rh.sdasystems.org/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Did_token%2520token%26client_id%3Drhonlineangular%26state%3DWElQeWhYQkpRT0pVZzNObG5oNkItT0xLMlB6ZWFGLTQyUERFQjFleC1wM2J-;login%26redirect_uri%3Dhttps%253A%252F%252Frh-online.sdasystems.org%252Flogin%26scope%3Dopenid%2520profile%2520email%2520rhonline%253Aall%2520aps%253Aenrollment%26nonce%3DWElQeWhYQkpRT0pVZzNObG5oNkItT0xLMlB6ZWFGLTQyUERFQjFleC1wM2J-" target="_blank">
                         <div class="img">
                             <img src="img/rhlogo.png" alt="" id="rh">
                             <div class="legenda-links">RH</div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Próximos Eventos -->
+                <div class="linksuteisbox" id="linksproxeventos"> 
+
+                    <a href="" target="_blank">
+                        <div class="img">
+                            <img src="img/balloons.png" alt="">
+                            <div class="legenda-links">Visita Escolas</div>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/spreadsheets/d/1LC8Ed9w4j4IgZJPh19UufEtoxbWLFaEOROQxDFSiLUo/edit#gid=0" target="_blank">
+                        <div class="img">
+                            <img src="img/gold-medal.png" alt="">
+                            <div class="legenda-links">Copa CAAB</div>
+                        </div>
+                    </a>
+
+                    <a href="" target="_blank">
+                        <div class="img">
+                            <img src="img/teacher.png" alt="">
+                            <div class="legenda-links">Capacitação</div>
+                        </div>
+                    </a>
+
+                    <a href="" target="_blank">
+                        <div class="img">
+                            <img src="img/back.png" alt="">
+                            <div class="legenda-links">Volta Aulas</div>
+                        </div>
+                    </a>
+
+                    <a href="" target="_blank">
+                        <div class="img">
+                            <img src="img/moustache.png" alt="">
+                            <div class="legenda-links">Dia dos Pais</div>
+                        </div>
+                    </a>
+
+                    <a href="" target="_blank">
+                        <div class="img">
+                            <img src="img/target.png" alt="">
+                            <div class="legenda-links">Lanç. Matrículas</div>
+                        </div>
+                    </a>
+
+                    <a href="" target="_blank">
+                        <div class="img">
+                            <img src="img/handball.png" alt="">
+                            <div class="legenda-links">Fair Play</div>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/spreadsheets/d/1buTOzXafV9mtx028lz7F3l-y3ZSSvMf2WO6D94pf57k/edit?usp=sharing" target="_blank">
+                        <div class="img">
+                            <img src="img/graduation.png" alt="">
+                            <div class="legenda-links">Formaturas</div>
                         </div>
                     </a>
 
@@ -382,19 +385,12 @@
 
             <div class="box-cal-num">
 
-                <!-- <div class="headercal">
-                    <div class="diasemanacal"></div>
-                    <div class="diacal"></div>
-                </div> -->
-
                 <div class="mescalbox">
                     
                     <span class="spancal prev">
                         <i class="fa-solid fa-chevron-left prev"></i>
                     </span>
-                    
                     <div class="mescal"></div>
-                    
                     <span class="spancal next">
                         <i class="fa-solid fa-chevron-right next"></i>
                     </span>
@@ -414,7 +410,12 @@
                     <div class="days"></div>
                 </div>
 
-                <div class="btnsCal">
+                <div class="box-updown">
+                    <i class="fa-solid fa-angle-down block" id="bt-down"></i>
+                    <i class="fa-solid fa-angle-up hidden" id="bt-up"></i>
+                </div>
+                
+                <div class="btnsCal" id="btnsCal">
                     <div class="btnHoje" id="btn-hoje">Hoje</div>
                     <div id="btn-obs">Observações</div>
                 </div>
@@ -424,7 +425,6 @@
                     <button id="bt-caab" class="btFiltro" onclick="filterSelection('caab')">CAAB</button>
                     <button id="bt-asp" class="btFiltro" onclick="filterSelection('asp')">ASP</button>
                     <button id="bt-asp" class="btFiltro" onclick="filterSelection('pais')">PAIS</button>
-        
                 </div>
 
                 <div class="body-proximoseventos" id="body-eventos">
@@ -450,67 +450,417 @@
         </div>
 
         <!-- Horários -->
-        <!-- <div class="divhome"> -->
-            <!-- <div class="conteinertitulosecao"> -->
+         <div class="divhome" id="divhomehorarios">
 
-                <!-- <div class="titulosecao">Horários</div> -->
-                <!-- <div class="mais" id="eventos-mais">+</div>
-                <div class="menos" id="eventos-menos">-</div> -->
+            <div class="cardhorario" id="t61">
+                
+                <div class="turma">61</div>
+                
+                <div class="horariofoto">
+                    <img src="img/acs.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Denise</div>
+                    <div class="horariodisciplina">Matemática</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
 
-            <!-- </div> -->
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
 
-            <!-- <div class="conteinerhorarios">
-                <ul>
-                    <li>61</li>
-                    <li>62</li>
-                    <li>63</li>
-                    <li>71</li>
-                    <li>72</li>
-                    <li>73</li>
-                    <li>81</li>
-                    <li>82</li>
-                    <li>83</li>
-                    <li>91</li>
-                    <li>92</li>
-                    <li>93</li>
-                    <li>111</li>
-                    <li>112</li>
-                    <li>121</li>
-                    <li>131</li>
-                    
-                </ul>
-            </div> -->
-        <!-- </div> -->
+            </div>
+
+            <div class="cardhorario" id="t62">
+                
+                <div class="turma">62</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/abril/dielen.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Alessandra</div>
+                    <div class="horariodisciplina">Ciências</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t63">
+                
+                <div class="turma">63</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/abril/andre.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Luis Felipe</div>
+                    <div class="horariodisciplina">Religião</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t71">
+                
+                <div class="turma">71</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/maio/wilson.jpg" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Wilson</div>
+                    <div class="horariodisciplina">História</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t72">
+                
+                <div class="turma">72</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/maio/jaque.jpg" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Jaqueline</div>
+                    <div class="horariodisciplina">Redação</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t73">
+                
+                <div class="turma">73</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/abril/lucaslima.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Hermes</div>
+                    <div class="horariodisciplina">Matemática</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t81">
+                
+                <div class="turma">81</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/abril/anaclaudia.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Elisa</div>
+                    <div class="horariodisciplina">Química</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t82">
+                
+                <div class="turma">82</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/abril/jack.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Jackelini</div>
+                    <div class="horariodisciplina">Redação</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t83">
+                
+                <div class="turma">83</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/abril/elaine.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Elaine</div>
+                    <div class="horariodisciplina">Portugês</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t91">
+                
+                <div class="turma">91</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/maio/elisa.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Elisa</div>
+                    <div class="horariodisciplina">Química</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t92">
+                
+                <div class="turma">92</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/maio/patriciamaria.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Guilherme/Patrícia</div>
+                    <div class="horariodisciplina">Ed. Física</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t93">
+                
+                <div class="turma">93</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/maio/fernando.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Fernando</div>
+                    <div class="horariodisciplina">Física</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t111">
+                
+                <div class="turma">111</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/abril/sandranascimento.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Scheyla</div>
+                    <div class="horariodisciplina">Inglês</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t112">
+                
+                <div class="turma">112</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/maio/rodrigo.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Guilherme</div>
+                    <div class="horariodisciplina">Religião</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t121">
+                
+                <div class="turma">121</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/abril/andre.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Hermes</div>
+                    <div class="horariodisciplina">Matemática</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+
+            <div class="cardhorario" id="t131">
+                
+                <div class="turma">131</div>
+                
+                <div class="horariofoto">
+                    <img src="img/anivImg/abril/josiele.png" alt="">
+                </div>
+                
+                <div class="horarioinfo">
+                    <div class="nomeprof">Lia</div>
+                    <div class="horariodisciplina">Biologia</div>
+                </div>
+                
+                <div class="horariotime">
+                    <span>16:25</span>
+                </div>
+
+                <div class="proxhorario">
+                    <!-- <i class="fa-solid fa-angle-left"></i> -->
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                
+
+            </div>
+           
+        </div> 
+       
+    </main>  
     
-    </main>
+</div> <!-- fecha .conteinergeral-->
       
-    <section class="important">
+    
 
-        <a href="https://docs.google.com/spreadsheets/d/1BJsdME7Y-h7E7Dpcb3FcA0sVnCHO9R72c89bLrt5G9o/edit#gid=0" target="_blank" class="cardurgentes">
-            <div class="restricoes">
-                <img src="img/caution2.png" alt="">
-                <div>Alunos com restrições</div>
-            </div>
-        </a>
-
-        <a href="https://sistemas.usb.org.br/ama/index.php" target="_blank" class="cardurgentes">
-            <div class="restricoes">
-                <img src="img/ama.png" alt="">
-                <div>Emergências de saúde</div>
-            </div>
-        </a>
-
-        <a class="cardurgentes" id="fonesurgencias">
-            <div class="restricoes">
-                <img src="img/emergency.png" alt="">
-                <div>Contatos de Urgência</div>
-            </div>
-        </a>
-        
-
-    </section>
-
-    <div class="body">
+<div class="body">
             
         <div class="title">HORÁRIOS</div>
         

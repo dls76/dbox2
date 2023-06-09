@@ -6,25 +6,6 @@
     padding: 0rem 1rem 1rem 1rem;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-.diasemanacal {
-    text-align: center;
-    font-size: 1rem;
-    letter-spacing: 1.1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .5rem 0;
-}
-.diacal {
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 2rem;
-}
 .mescalbox {
     display: flex;
     justify-content: space-between;
@@ -111,7 +92,7 @@ i.fa-solid {
     cursor: pointer;
 }
 .btnsCal {
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: center;
     /* padding: 5px; */
@@ -149,6 +130,27 @@ i.fa-solid {
     background-color: #fff;
 }
 #body-eventos {
-    /* border: 1px solid red; */
     position: relative;
+}
+.box-updown {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.box-updown i {
+    color: gray;
+    position: absolute;
+    right: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    /* background-color: #f3f3f3; */
+}
+.box-updown i:hover {
+    background-color: #dadada;
+}
+
+#bt-up {
+    display: none;
 }
