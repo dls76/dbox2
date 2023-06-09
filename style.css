@@ -114,29 +114,29 @@ main#conteinerhome {
     color: #fff;
 }
 .azul-padrao {
-    background-color: rgb(225, 250, 255);
-    color: rgb(0, 66, 158);
-    border-left: 5px solid rgb(70, 160, 216);
+    background-color: #F3F3F3;
+    color: #5a5a5a;
+    border-left: 6px solid #6298f5;
 }
 .lilas {
-    border-left: 6px solid rgb(158, 57, 252);
-    background-color: rgb(241, 226, 255);
-    color: rgb(89, 1, 170);
+    border-left: 6px solid rgb(151, 47, 248);
+    color: #5a5a5a;
+    background-color: #F3F3F3;
 }
 .ouro {
     border-left: 6px solid #df8d00;
-    background-color: #fff2da;
-    color: #976000;
+    background-color: #F3F3F3;
+    color: #5a5a5a;
 }
 .verde {
     border-left: 6px solid rgb(84, 224, 156);
-    background-color: rgb(211, 255, 234);
-    color: rgb(1, 133, 69);
+    background-color: #F3F3F3;
+    color: #5a5a5a;
 }
 .gray {
-    border-left: 6px solid rgb(141, 141, 141);
-    background-color: rgb(236, 236, 236);
-    color: rgb(53, 53, 53);
+    border-left: 6px solid #939393;
+    background-color: #F3F3F3;
+    color: #5a5a5a;
 }
 .data {
    display: flex;
