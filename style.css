@@ -524,23 +524,23 @@ details > summary {
 
     #header {
         margin: 1rem 0 0rem 0;
+        width: 92%;margin: auto;padding-left: 0;
     }
-
     #btn-mobile {
         display: block;
         padding: .5rem 1rem;
         border-radius: 7px;
         outline: none;
         border: none;
-        background-color: #253B73;
-        color: #fff;
     }
-
+    #btn-mobile i {
+        font-size: 1.5rem;
+    }
     #menu {
         display: block;
         position: absolute;
         width: 100%;
-        top: 70px;
+        top: 60px;
         left: 0px;
         background: lightgray;
         height: 0px;
@@ -549,13 +549,11 @@ details > summary {
         visibility: hidden;
         overflow-y: hidden;
     }
-
     #nav.active #menu {
         height: calc(100vh - 70px);
         visibility: visible;
         overflow-y: auto;
     }
-
     #menu a {
         padding: 1rem;
         margin: 0 1 rem;
@@ -569,22 +567,16 @@ details > summary {
         border-radius: 20px;
         padding: 2rem;
     }
-    .modal h1 {padding: .3rem 0 1rem 0; font-size: 1.2rem;}
+    .modal h1 {
+        padding: .3rem 0 1rem 0; 
+        font-size: 1.2rem;
+    }
     .modal ul li {
         list-style: none;
         font-size: 1.2rem;
         font-weight: 600;
         margin-bottom: .5rem;
     }
-
-    /* CONTEINER HOME (MAIN) */
-
-    /* valores normais do main#conteinerhome (sem media queries)
-        display: grid;
-        grid-template-columns: 1fr 1fr 1.1fr .9fr;
-        gap: 30px; */
-
-    #header {width: 92%;margin: auto;padding-left: 0;}
     main#conteinerhome {
         padding: 20px;
         width: 100%;
@@ -592,16 +584,13 @@ details > summary {
         grid-template-columns: 1fr 1fr;
 
     }
-
     .body { 
         height: fit-content;
         background: linear-gradient(45deg,#24006b,#f42f8c);
     }
-
     .divhome {
         margin-top: 2rem;
     }
-
     .conteiner {
         width: 95%;
         display: grid;
@@ -609,23 +598,15 @@ details > summary {
         gap: 0px;
         margin: 1.5rem auto;
     }
-
     .conteiner .card {
         margin: 1rem auto;
     }
-
     .divhome {
         margin-top: .5rem;
     }
-    
     .box-cal-num {
         height: 300px;
     }
-
-    .important {
-        padding-bottom: 1rem;
-    }
-
 }
 
 @media (max-width: 920px) {
@@ -633,16 +614,12 @@ details > summary {
     .important {
         flex-wrap: wrap;
         padding: 0;
-        /* width: 100%; */
-        margin: auto;
-        margin-bottom: 1rem;
+        margin: 1rem auto 0 auto;
     }
-
     .important .cardurgentes {
         margin: 1rem ;
         text-align: center;
     }
-    
     .restricoes {
         margin: auto;
         width: 100%;
@@ -656,6 +633,9 @@ details > summary {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+    }
+    .important {
+        width: 94%;
     }
     .important .cardurgentes {
         width: 100%;
