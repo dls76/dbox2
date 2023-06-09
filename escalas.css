@@ -2,7 +2,7 @@
     background-color: #fff;
     border-radius: 12px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-
+    /* border: 1px solid red; */
 }
 .escala {
     background-color: #fff;
@@ -14,8 +14,6 @@
     transition: .3s;
     padding-right: 1rem;
 }
-
-
 .escala:hover {
     background-color: whitesmoke;
     cursor: pointer;
@@ -23,12 +21,16 @@
 #escalas {
     display: grid;
     grid-template-rows: auto auto;
-    gap: 30px;
+    gap: 1.7rem;
     border-radius: 12px;
+    /* border: 2px solid blue; */
 }
-#escalacultos {border-radius: 12px 12px 0 0;}
-#escalacelebra2 {border-radius: 0 0 12px 12px;}
-
+#escalacultos {
+    border-radius: 12px 12px 0 0;
+}
+#escalacelebra2 {
+    border-radius: 0 0 12px 12px;
+}
 .icon {
     display: flex;
     justify-content: center;

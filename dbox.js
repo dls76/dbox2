@@ -181,13 +181,14 @@ let cultos = [
     {data: new Date(2023, 4, 29), pessoaM: "Pr Luís Felipe", pessoaT: "Ana Claudia"},
     {data: new Date(2023, 4, 30), pessoaM: "Pr. Guilherme", pessoaT: "Sandra Labatut"},
     {data: new Date(2023, 4, 31), pessoaM: "Clarice", pessoaT: "Pr. Guilherme"},
+
     {data: new Date(2023, 5, 1), pessoaM: "Elisa Montin", pessoaT: "Fernanda Nakonieczni"},
     {data: new Date(2023, 5, 2), pessoaM: "Direção/Vice direção", pessoaT: "Direção/Vice direção"},
     {data: new Date(2023, 5, 5), pessoaM: "Fernanda Borges", pessoaT: "Pr Guilherme"},
     {data: new Date(2023, 5, 6), pessoaM: "Pr Guilherme", pessoaT: "Denise Padilha"},
     {data: new Date(2023, 5, 7), pessoaM: "Alessandra Wolff", pessoaT: "Pr Luís Felipe"},
     {data: new Date(2023, 5, 8), pessoaM: "", pessoaT: "", dletivo: false},
-    {data: new Date(2023, 5, 9), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 5, 9), pessoaM: "Feriado", pessoaT: "Recesso", dletivo: false},
     {data: new Date(2023, 5, 10), pessoaM: "", pessoaT: ""},
     {data: new Date(2023, 5, 11), pessoaM: "", pessoaT: ""},
     {data: new Date(2023, 5, 12), pessoaM: "Pr Guilherme", pessoaT: "Louise Godoi"},
@@ -218,7 +219,7 @@ for( k=0; k<cultos.length; k++ ) {
         document.querySelector('#cultos').innerHTML = 'Hoje é domingo.'
     }
 
-    if ( cultos[k].dletivo == false ) {
+    if ( datahoje.getDay() == cultos[k].data.getDay() && cultos[k].dletivo == false ) {
         document.querySelector('#cultos').innerHTML = 'Recesso/Feriado'
     }
 
@@ -389,5 +390,27 @@ for( i=0; i<celebrasMenores.length; i++ ) {
         document.querySelector('#celebra2').innerHTML = celebrasMenores[i].tema + ' (' + celebrasMenores[i].resp + ')'
     
         break
+    }
+}
+
+function getCurrentEvent() {
+
+    let dataAtual = new Date()
+
+    let eventoscal = [...document.querySelectorAll('.evento')]
+
+    for ( let i = 0; i <= eventoscal.length; i++ ) { 
+
+        if ( eventoscal[i].data1.getDate() == dataAtual.getDate() && eventoscal[i].data1.getMonth() == dataAtual.getMonth() && eventoscal[i].data1.getFullYear() == dataAtual.getFullYear() ) {
+            // console.log(eventoscal[i].data1.getDate() + '/' + (eventoscal[i].data1.getMonth() + 1) + ' - ' + eventoscal[i].descritivo)
+            console.log(eventoscal[i].data1)
+           
+            break
+        } else if ( eventoscal[i].data1.getDate() > dataAtual.getDate() && eventoscal[i].data1.getMonth() == dataAtual.getMonth() && eventoscal[i].data1.getFullYear() == dataAtual.getFullYear() ) { 
+            // console.log(eventoscal[i].data1.getDate() + '/' + (eventoscal[i].data1.getMonth() + 1) + ' - ' + eventoscal[i].descritivo)   
+            console.log(eventoscal[i])
+
+            break 
+        }
     }
 }

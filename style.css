@@ -17,7 +17,6 @@ body {background-color: #f3f3f3;}
 }
 #header {
     height: 50px;
-    margin: 1rem 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,18 +54,20 @@ body {background-color: #f3f3f3;}
 main#conteinerhome {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+    gap: 1.7rem;
+    /* border: 10px solid red; */
 }
 .divhome {
     border-radius: 12px;
     position: relative;
     height: fit-content;
+    /* border: 2px solid yellow; */
 }
 .conteineraniversariantes {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 12px;
+    /* border: 2px solid green; */
 }
-
 
 /* XXXXXXXXXXXXX  CALENDARIO DESCRITIVO DE EVENTOS XXXXXXXXXXXXXXXXXX */
 
@@ -153,10 +154,10 @@ main#conteinerhome {
     font-weight: 500;
 }
 .dia, .dia2 {
-    font-size: 1rem;
+    font-size: .8rem;
 }
 .diaU {
-    font-size: 1rem;
+    font-size: .8rem;
 }
 .a {
     display: flex;
@@ -172,8 +173,8 @@ main#conteinerhome {
     justify-content: flex-start;
     align-items: center;
     font-size: .8rem;
-    padding-left: 10px;
     font-weight: 400;
+    padding-left: .8rem;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -216,14 +217,13 @@ main#conteinerhome {
 /*=============== SEÇÃO IMPORTANT ============= */
 .important {
     width: 100%;
-    /* background-color: #f3f3f3; */
     background-color: #253B73;
     height: fit-content;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     border-radius: 10px;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1.5rem 0;
     padding: 0 0 0 1rem;
 }
 .important a {
@@ -673,7 +673,4 @@ details > summary {
 #novoatendimento:hover {
     background-color: #253B73;
     color: #fff;
-}
-#linksproxeventos {
-    margin-top: 2rem;
 }

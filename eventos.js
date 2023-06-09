@@ -162,24 +162,24 @@ let eventos = [
     {data1: new Date(2023, 5, 9), data2: new Date(2023, 5, 9), descritivo: "Recesso (Dia permutável com 45144 – Domingo letivo Dia dos Pais)", cal: "out", resp: "", foto: "", detalhes: "", pais: true, niv: ""},
     {data1: new Date(2023, 5, 12), data2: new Date(2023, 5, 16), descritivo: "Período de aplicação da AV2 II BIM - 6º ao EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
     {data1: new Date(2023, 5, 12), data2: new Date(2023, 5, 16), descritivo: "Período de aplicação da AV2 II BIM - corrigir, lançar notas no SAD e devolver aos estudantes até 5 dias úteis após a data da sua avaliação - FII ao Médio", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 13), data2: new Date(2023, 5, 15), descritivo: "Projeto Educador Fiel nas escolas", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 15), data2: new Date(2023, 5, 21), descritivo: "Período de aplicação da AV2 - colocar nos primeiros dias as provas com mais complicação de correção.", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 15), data2: new Date(2023, 5, 21), descritivo: "Período de aplicação da AV2 - 2º ao 5º ano.", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
-    {data1: new Date(2023, 5, 13), data2: new Date(2023, 5, 15), descritivo: "Projeto Educador Fiel nas escolas", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 18), data2: new Date(2023, 5, 21), descritivo: "Encontro de Educação – CATRE", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 20), data2: new Date(2023, 5, 20), descritivo: "Conselho de Educação – CATRE", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 20), data2: new Date(2023, 5, 20), descritivo: "Início Campanha de Matrículas de Meio de Ano - digital", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 20), data2: new Date(2023, 5, 20), descritivo: "2ª Chamada AV2 II BIM FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
     {data1: new Date(2023, 5, 20), data2: new Date(2023, 5, 30), descritivo: "Aplicação das provas diagnósticas de alfabetização – 2ª testagem", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
-    {data1: new Date(2023, 5, 24), data2: new Date(2023, 5, 24), descritivo: "Dia do Ancião", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 23), data2: new Date(2023, 5, 23), descritivo: "2ª Chamada FI", cal: "caab", resp: "", foto: "", detalhes: "", pais: true, niv: "inf5"},
     {data1: new Date(2023, 5, 23), data2: new Date(2023, 5, 23), descritivo: "Data limite para o registro de todas as Atividades Avaliativas de Aprendizagem do 2º bimestre no SAD (prof)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 23), data2: new Date(2023, 5, 23), descritivo: "SAD ENCERRADO - 1º ENCERRAMENTO II BIM - FII ao Médio", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 24), data2: new Date(2023, 5, 24), descritivo: "Dia do Ancião", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 25), data2: new Date(2023, 5, 25), descritivo: "Domingo Letivo – “Projeto Fair Play” - Olimpíada do Conhecimento (Matemática/ Bom de bíblia/Português/Redação) – Fase Final (Dia Letivo – dia permutado com recesso do dia 17/07)", cal: "asp", resp: "", foto: "", detalhes: "", pais: true, niv: "f2m"},
     {data1: new Date(2023, 5, 26), data2: new Date(2023, 5, 26), descritivo: "Comissão de Educação Física USB (tarde)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 26), data2: new Date(2023, 5, 26), descritivo: "Conselho de Classe II BIM - FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
+    {data1: new Date(2023, 5, 26), data2: new Date(2023, 5, 26), descritivo: "Conselho de Classe EI-FI (novo formato de acordo com o regimento)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 27), data2: new Date(2023, 5, 27), descritivo: "Comissão de Ciências da Natureza USB (tarde)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 27), data2: new Date(2023, 5, 27), descritivo: "Reunião de Bibliotecários USB (remoto)", cal: "asp", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 5, 26), data2: new Date(2023, 5, 26), descritivo: "Conselho de Classe EI-FI (novo formato de acordo com o regimento)", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
-    {data1: new Date(2023, 5, 26), data2: new Date(2023, 5, 26), descritivo: "Conselho de Classe II BIM - FUND II e EM", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 27), data2: new Date(2023, 5, 27), descritivo: "Organização das convocações para a Recuperação Bimestral e Entrega das convocações para a Recuperação Bimestral aos alunos", cal: "caab", resp: "", foto: "", detalhes: "", pais: false, niv: ""},
     {data1: new Date(2023, 5, 28), data2: new Date (2023, 6, 4), descritivo: 'Recuperação Bimestral II BIM - Fund II e Médio', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: true, niv: ' '},
     {data1: new Date(2023, 6, 29), data2: new Date (2023, 6, 5), descritivo: 'Recuperação Bimestral', cal: 'caab', resp: ' ', foto: ' ', detalhes: ' ', pais: true, niv: 'inf5'},
@@ -566,18 +566,3 @@ function mostrarEventos(){
 }
 
 let calendarioDescritivo = document.querySelector('#body-eventos')
-
-
-// function scrollarEventos() { 
-
-//     for ( let i=0; i < eventos.length; i++ ) {
-
-//     if ( eventos[i].data1.getDate() == datahoje.getDate() && eventos[i].data1.getMonth() == datahoje.getMonth() && eventos[i].data1.getFullYear() == datahoje.getFullYear() ) {
-
-        
-    
-//     }
-// }
-// }
-
-// window.addEventListener('load', scrollarEventos)
