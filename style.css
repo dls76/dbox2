@@ -674,3 +674,7 @@ details > summary {
     background-color: #253B73;
     color: #fff;
 }
+#arm img {
+    width: 30px;
+    border-radius: 50%;
+}
