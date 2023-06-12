@@ -667,11 +667,11 @@ details > summary {
     list-style: none;
 }
 #novoatendimento {
-    width: 100%;
-    text-align: center;
+    color: #fff;
+    background-color: #253B73;
 }
 #novoatendimento:hover {
-    background-color: #253B73;
+    background-color: #001340;
     color: #fff;
 }
 #arm img {
