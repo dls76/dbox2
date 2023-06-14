@@ -373,6 +373,27 @@ if ( r < 86400000 ) {
 }
 }
 
+
+// PROFS PARA OS CELEBRAS
+// 61 - Carol
+// 62 - Denise
+// 71 - Wilson
+// 81 - Alessandra
+// 82 - Jaque
+
+// 91 - Elaine
+// 92 - Luis
+// 93 - Alessandra
+// 111 - Carol
+// 112 - Elisa
+// 121 - Lia
+// 131 - Hermes
+
+// 63 - Denise
+// 72 - Wilson
+// 73 - Luís
+// 83 -
+
 let celebrasMenores = [
     {data: new Date(2023, 5, 22), tema: '8 Remédios Naturais', resp: 'Fernanda B., Vanessa, Pauline'},
     {data: new Date(2023, 5, 29), tema: 'Literatura', resp: 'Janete, Sandra, Joelma'}
