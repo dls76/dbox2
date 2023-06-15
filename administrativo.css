@@ -10,7 +10,7 @@
 .conteiner-disciplina {
     width: 90%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
