@@ -22,13 +22,6 @@ let renderCalendar = ()=> {
 
     let meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
     
-    let diasDaSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
-    
-    
-    // document.querySelector('.diasemanacal').innerHTML = diasDaSemana[diaSemana]
-    
-    // document.querySelector('.diacal').innerHTML = dia
-    
     document.querySelector('.mescal').innerHTML = meses[data.getMonth()] + ' ' + data.getFullYear()
 
     let days = ""
@@ -41,9 +34,9 @@ let renderCalendar = ()=> {
 
         /*código sugerido para não marcar o mesmo dia todo ano - no vídeo só especifica dia e mes*/
         if ( i === new Date().getDate() && data.getMonth() === new Date().getMonth() && new Date().getFullYear() === data.getFullYear() ) {
-            days += `<div class="today">${i}</div>`
+            days += `<div class="today dayMonth">${i}</div>`
         } else {
-            days += `<div>${i}</div>`
+            days += `<div class="dayMonth">${i}</div>`
         }
     }
 
@@ -97,3 +90,13 @@ btup.addEventListener('click', ()=>{
     filtros.style.display="none"
     boxeventos.style.height="322px"
 })
+
+// let dayMonth = [...document.querySelectorAll(".dayMonth")]
+
+// dayMonth.forEach((e)=>{
+//     e.addEventListener('click', callDayMonth)
+// })
+
+// function callDayMonth(e) {
+//     alert(e.target.innerHTML)
+// }
