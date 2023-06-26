@@ -109,8 +109,8 @@ let plantaosexta = [
     {data: new Date(2023, 5, 9), person: "Recesso"},
     {data: new Date(2023, 5, 16), person: "Denise"},
     {data: new Date(2023, 5, 23), person: "Guilherme"},
-    {data: new Date(2023, 5, 30), person: "Rudi"},
     {data: new Date(2023, 5, 30), person: "Thiago"},
+    {data: new Date(2023, 5, 30), person: "Rudi"},
 ]
 for(j=0; j<plantaosexta.length; j++) {
 
