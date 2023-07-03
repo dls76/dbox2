@@ -207,6 +207,29 @@ let cultos = [
     {data: new Date(2023, 5, 29), pessoaM: "Willian Rezende", pessoaT: "Willian Rezende"},
     {data: new Date(2023, 5, 30), pessoaM: "Direção/Vice direção", pessoaT: "Direção/Vice direção"},
 
+    {data: new Date(2023, 6, 3), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
+    {data: new Date(2023, 6, 4), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
+    {data: new Date(2023, 6, 5), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
+    {data: new Date(2023, 6, 6), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
+    {data: new Date(2023, 6, 7), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
+
+    {data: new Date(2023, 6, 10), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 6, 11), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 6, 12), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 6, 13), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 6, 14), pessoaM: "", pessoaT: "", dletivo: false},
+
+    {data: new Date(2023, 6, 17), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 6, 18), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 6, 19), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 6, 20), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 6, 21), pessoaM: "", pessoaT: "", dletivo: false},
+
+    {data: new Date(2023, 6, 24), pessoaM: "", pessoaT: "", dletivo: false},
+    {data: new Date(2023, 6, 25), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
+    {data: new Date(2023, 6, 26), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
+    {data: new Date(2023, 6, 27), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
+    {data: new Date(2023, 6, 28), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
 ]
 
 for( k=0; k<cultos.length; k++ ) {
