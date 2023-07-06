@@ -48,6 +48,9 @@
 #titulocelebra, #titulocelebra2 {
     color: #253B73;
 }
+#celebra, #celebra2 {
+    color: gray;
+}
 .link-content {
     color: #253B73;
     font-size: .8rem;
