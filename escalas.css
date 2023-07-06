@@ -45,6 +45,9 @@
     font-weight: 700;
     font-family: 'Roboto Condensed', sans-serif;
 }
+#titulocelebra, #titulocelebra2 {
+    color: #253B73;
+}
 .link-content {
     color: #253B73;
     font-size: .8rem;

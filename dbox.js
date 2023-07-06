@@ -111,7 +111,31 @@ let plantaosexta = [
     {data: new Date(2023, 5, 23), person: "Guilherme"},
     {data: new Date(2023, 5, 30), person: "Thiago"},
     {data: new Date(2023, 5, 30), person: "Rudi"},
+    {data: new Date(2023, 6, 7), person: "Thiago"},
+    {data: new Date(2023, 6, 14), person: "Recesso"},
+    {data: new Date(2023, 6, 21), person: "Recesso"},
+    {data: new Date(2023, 6, 28), person: ""},
+    {data: new Date(2023, 7, 4), person: ""},
+    {data: new Date(2023, 7, 11), person: ""},
+    {data: new Date(2023, 7, 18), person: ""},
+    {data: new Date(2023, 7, 25), person: ""},
+    {data: new Date(2023, 8, 1), person: ""},
+    {data: new Date(2023, 8, 8), person: ""},
+    {data: new Date(2023, 8, 15), person: ""},
+    {data: new Date(2023, 8, 22), person: ""},
+    {data: new Date(2023, 8, 29), person: ""},
+    {data: new Date(2023, 9, 6), person: ""},
+    {data: new Date(2023, 9, 13), person: ""},
+    {data: new Date(2023, 9, 20), person: ""},
+    {data: new Date(2023, 9, 27), person: ""},
+    {data: new Date(2023, 10, 3), person: ""},
+    {data: new Date(2023, 10, 10), person: ""},
+    {data: new Date(2023, 10, 17), person: ""},
+    {data: new Date(2023, 10, 24), person: ""},
+    {data: new Date(2023, 11, 1), person: ""},
+    {data: new Date(2023, 11, 8), person: ""},
 ]
+
 for(j=0; j<plantaosexta.length; j++) {
 
     const diffInMs = datahoje - plantaosexta[j].data
@@ -213,23 +237,6 @@ let cultos = [
     {data: new Date(2023, 6, 6), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
     {data: new Date(2023, 6, 7), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
 
-    {data: new Date(2023, 6, 10), pessoaM: "", pessoaT: "", dletivo: false},
-    {data: new Date(2023, 6, 11), pessoaM: "", pessoaT: "", dletivo: false},
-    {data: new Date(2023, 6, 12), pessoaM: "", pessoaT: "", dletivo: false},
-    {data: new Date(2023, 6, 13), pessoaM: "", pessoaT: "", dletivo: false},
-    {data: new Date(2023, 6, 14), pessoaM: "", pessoaT: "", dletivo: false},
-
-    {data: new Date(2023, 6, 17), pessoaM: "", pessoaT: "", dletivo: false},
-    {data: new Date(2023, 6, 18), pessoaM: "", pessoaT: "", dletivo: false},
-    {data: new Date(2023, 6, 19), pessoaM: "", pessoaT: "", dletivo: false},
-    {data: new Date(2023, 6, 20), pessoaM: "", pessoaT: "", dletivo: false},
-    {data: new Date(2023, 6, 21), pessoaM: "", pessoaT: "", dletivo: false},
-
-    {data: new Date(2023, 6, 24), pessoaM: "", pessoaT: "", dletivo: false},
-    {data: new Date(2023, 6, 25), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
-    {data: new Date(2023, 6, 26), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
-    {data: new Date(2023, 6, 27), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
-    {data: new Date(2023, 6, 28), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
 ]
 
 for( k=0; k<cultos.length; k++ ) {
@@ -248,7 +255,8 @@ for( k=0; k<cultos.length; k++ ) {
 
     if ( (datahoje.getDate() === cultos[k].data.getDate()) && (datahoje.getMonth() === cultos[k].data.getMonth()) && (datahoje.getFullYear() === cultos[k].data.getFullYear()) ){
         document.querySelector('#titulocultos').innerHTML = "Cultos " + cultos[k].data.getDate() + '/' + (cultos[k].data.getMonth()+1)
-        document.querySelector('#cultos').innerHTML = cultos[k].pessoaM + ' e ' + cultos[k].pessoaT
+        document.querySelector('#cultos').innerHTML = cultos[k].pessoaM 
+        /*+ ' e ' + cultos[k].pessoaT*/
     }
 }
 
@@ -338,6 +346,27 @@ let plantaodiario = [
     {data: new Date(2023, 6, 4), pessoa: "Rudi"},
     {data: new Date(2023, 6, 5), pessoa: "Thiago"},
     {data: new Date(2023, 6, 6), pessoa: "Pr. Guilherme"},
+
+    {data: new Date(2023, 6, 10), pessoa: "Recesso"},
+    {data: new Date(2023, 6, 11), pessoa: "Recesso"},
+    {data: new Date(2023, 6, 12), pessoa: "Recesso"},
+    {data: new Date(2023, 6, 13), pessoa: "Recesso"},
+
+    {data: new Date(2023, 6, 17), pessoa: "Recesso"},
+    {data: new Date(2023, 6, 18), pessoa: "Recesso"},
+    {data: new Date(2023, 6, 19), pessoa: "Recesso"},
+    {data: new Date(2023, 6, 20), pessoa: "Recesso"},
+
+    {data: new Date(2023, 6, 24), pessoa: "Recesso"},
+    {data: new Date(2023, 6, 25), pessoa: "Rudi"},
+    {data: new Date(2023, 6, 26), pessoa: "Thiago"},
+    {data: new Date(2023, 6, 27), pessoa: "Pr. Guilherme"},
+
+    {data: new Date(2023, 6, 31), pessoa: "Diretor"},
+    {data: new Date(2023, 6, 1), pessoa: "Rudi"},
+    {data: new Date(2023, 6, 2), pessoa: "Thiago"},
+    {data: new Date(2023, 6, 3), pessoa: "Pr. Guilherme"},
+
 ]
 for (let m = 0; m < plantaodiario.length; m++ ) {
 
