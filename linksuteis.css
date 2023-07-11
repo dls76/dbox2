@@ -37,18 +37,13 @@
     border-radius: 12px;
     margin: 4px;
     transition: all .3s;
-
+    /* border: 1px solid blue; */
 }
 
 .img img {
     width: 30px;
     object-fit: cover;
-}
-.box-ama {
-    padding: 1px;
-}
-#ama {
-    object-fit: fill;
+    /* border: 1px solid red; */
 }
 
 .legenda-links {
@@ -59,4 +54,10 @@
 }
 #bi {
     width: 57px;
+}
+#imgbeto {
+    padding: 9px 0;
+}
+#beto {
+    width: 48px;
 }
