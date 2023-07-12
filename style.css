@@ -5,7 +5,9 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-body {background-color: #f3f3f3;}
+body {
+    background-color: #f3f3f3;
+}
 .conteinergeral {
     width: 98%;
     max-width: 1500px;
@@ -641,6 +643,7 @@ details > summary {
         width: 100%;
     }
 }
+
 /* ============== MATRÍCULAS ============ */
 .linksprincipais {
     width: 90%;

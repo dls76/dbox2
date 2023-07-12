@@ -1,13 +1,9 @@
-main {
-    width: 100%;
-    box-sizing: border-box;
-}
-
 .devocionais {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
+    margin: auto;
     gap: 2rem;
+    box-sizing: border-box;
 }
 
 .devocionais a {
@@ -52,6 +48,7 @@ main {
 @media (max-width: 1100px) {
     .devocionais {
         grid-template-columns: 1fr 1fr;
+        width: 94%;
     }
     .devocionais a {
         width: 100%;
@@ -62,6 +59,7 @@ main {
 @media (max-width: 760px) {
     .devocionais {
         grid-template-columns: 1fr;
+        margin-top: 2rem;
     }
 
 }
