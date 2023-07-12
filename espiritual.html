@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="espiritual.css">
+    <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
-    
+
+<div class="conteinergeral">
     <header id="header">
         <a id="logo">DBox</a>
         <nav id="nav">
@@ -25,13 +29,73 @@
         </nav>
     </header>
 
+    <!-- Barra azul com menus de emergência -->
+    <section class="important">
+
+        <a href="https://sistemas.usb.org.br/ama/index.php" target="_blank" class="cardurgentes">
+            <div class="restricoes">
+                <span class="material-icons">medical_services</span>
+                <div>AMA - Emergências</div>
+            </div>
+        </a>
+
+        <a href="https://docs.google.com/spreadsheets/d/1BJsdME7Y-h7E7Dpcb3FcA0sVnCHO9R72c89bLrt5G9o/edit#gid=0" target="_blank" class="cardurgentes">
+            <div class="restricoes">
+                <span class="material-icons">info</span>
+                <div>Alunos com restrições</div>
+            </div>
+        </a>
+
+        <a class="cardurgentes" id="fonesurgencias">
+            <div class="restricoes">
+                <span class="material-icons">phone</span>
+                <div>Contatos de Urgência</div>
+            </div>
+        </a>
+        
+
+    </section>
+
 <main>
     <div class="devocionais">
-        <a href="https://reavivadosporsuapalavra.org/" target="_blank">Reavivados</a>
-        <a href="https://mais.cpb.com.br/meditacoes-diarias/" target="_blank">Meditação</a>
-        <a href="https://mais.cpb.com.br/licao-adultos/" target="_blank">Lição</a>
-        <a href="https://www.bibliaonline.com.br/naa/index" target="_blank">Bíblia</a>
-    </div>
+        
+        <a href="https://reavivadosporsuapalavra.org/" target="_blank">
+            <span class="iconbox"><i id="reavivadosicon" class="fa-solid fa-face-smile"></i></span>
+            <span>Reavivados</span></a>
+        </a>
+        
+        <a href="https://mais.cpb.com.br/meditacoes-diarias/" target="_blank">
+            <span class="iconbox"><i class="fa-sharp fa-solid fa-book-open-reader"></i></span>
+            <span>Meditação</span></a>
+        </a>
+        
+        <a href="https://mais.cpb.com.br/licao-adultos/" target="_blank">
+            <span class="iconbox"><i id="licaoicon" class="fa-solid fa-book-open"></i></span>
+            <span>Lição</span></a>
+        </a>
+        
+        <a href="https://www.bibliaonline.com.br/naa/index" target="_blank">
+            <span class="iconbox"><i id="bibliaicon" class="fa-solid fa-book-bible"></i></span>
+            <span>Bíblia</span></a>
+        </a>
+        
+        <a href="" id="btAbrirLinks">
+            <span class="iconbox"><i id="todosicon" class="fa-solid fa-bolt-lightning"></i></span>
+            <span>Todos</span>
+        </a>
+
+        <a href="" id="pedidosOracao">
+            <span class="iconbox"><i id="meditacaoicon" class="fa-solid fa-hands-praying"></i></span>
+            <span>Pedidos de oração</span>
+        </a>
+
+    </div> <!-- Fim devocionais div -->
+
 </main>
+
+<footer class="footer"></footer>
+</div>
+
+    <script src="espiritual.js"></script>
 </body>
 </html>
