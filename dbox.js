@@ -1,5 +1,6 @@
 let datahoje = new Date()
 
+
 // Compensação
 let compensacao = [
 
@@ -89,6 +90,7 @@ if ( r < 86400000 ) {
 
 }
 
+
 // Plantão sexta
 let plantaosexta = [
     {data: new Date(2023, 1, 27), person: "Douglas"},
@@ -135,7 +137,6 @@ let plantaosexta = [
     {data: new Date(2023, 11, 1), person: ""},
     {data: new Date(2023, 11, 8), person: ""},
 ]
-
 for(j=0; j<plantaosexta.length; j++) {
 
     const diffInMs = datahoje - plantaosexta[j].data
@@ -146,6 +147,7 @@ if ( diffDays >= -6 && diffDays < 1 ) {
     }
 
 }
+
 
 // Cultos
 let cultos = [
@@ -238,7 +240,6 @@ let cultos = [
     {data: new Date(2023, 6, 7), pessoaM: "Pr. Guilherme", pessoaT: "Pr. Guilherme"},
 
 ]
-
 for( k=0; k<cultos.length; k++ ) {
 
     if (datahoje.getDay() == 6) {
@@ -259,6 +260,7 @@ for( k=0; k<cultos.length; k++ ) {
         /*+ ' e ' + cultos[k].pessoaT*/
     }
 }
+
 
 //Plantão Diário
 let plantaodiario = [
@@ -381,6 +383,8 @@ for (let m = 0; m < plantaodiario.length; m++ ) {
     }
 }
 
+
+// Modal urgências
 let modalurgencias = document.querySelector('#fonesurgencias')
 modalurgencias.addEventListener('click', ()=>{
     
@@ -388,7 +392,6 @@ modalurgencias.addEventListener('click', ()=>{
     bgmodal.classList.add('modalOn')
 
 })
-
 let fecharmodal = document.querySelector('#fecharmodal')
 fecharmodal.addEventListener('click', ()=>{
 
@@ -397,6 +400,7 @@ fecharmodal.addEventListener('click', ()=>{
 })
 
 
+// Celebras
 let celebras = [
 
     {data: new Date(2023, 4, 3), tema: 'Organização Acadêmica', convidado: 'SOE, Direção e Disciplinar', responsavel: 'SOE, Direção e Disciplinar'},
@@ -409,12 +413,11 @@ let celebras = [
     {data: new Date(2023, 5, 14), tema: 'Jornalismo e Produção Audiovisual', convidado: 'Damáris Gonçalves – Produtora USB', responsavel: 'Projeto de Vida e Pastoral'},
     {data: new Date(2023, 5, 21), tema: 'Áreas do Direito', convidado: 'Isabella Franchetto – Formanda Direito FAE', responsavel: 'Projeto de Vida e Pastoral'},
 ]
-
 for( i=0; i<celebras.length; i++ ) {
 
-let d = celebras[i].data.getTime()
-let h = new Date().getTime()
-let r = h - d
+    let d = celebras[i].data.getTime()
+    let h = new Date().getTime()
+    let r = h - d
 
 if ( r < 86400000 ) {
     
@@ -487,3 +490,21 @@ function getCurrentEvent() {
         }
     }
 }
+
+
+// ESCALAS
+
+const divescalas = document.querySelectorAll('.escala')
+
+const escalas = Array.from(divescalas)
+
+const ultimaescala = escalas.length - 1
+
+console.log(ultimaescala)
+
+function arredondarBordasInferiores() {
+    const uesc = escalas[ultimaescala]
+    uesc.style.borderRadius = "0 0 12px 12px"
+}
+
+addEventListener('load', arredondarBordasInferiores)

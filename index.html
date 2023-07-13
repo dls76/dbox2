@@ -11,7 +11,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="escalas.css">
-    <link rel="stylesheet" href="linksuteis.css">
     <link rel="stylesheet" href="calendario.css">
     <link rel="stylesheet" href="horarios.css">
     <link rel="stylesheet" href="pedagogico.css">
@@ -82,98 +81,120 @@
     </section>
 
     <main id="conteinerhome">
-
         <!-- ESCALAS -->
-        <div class="divhome" id="escalas">
-
-            <div class="conteinerescalas">    
+        <div class="divhome" id="escalas">           
+            <!-- cultos -->
+            <a href="https://docs.google.com/spreadsheets/d/14Uunvp6n2TqNqvWRmyKP_AF_GcfFretENUY4if5beTk/edit#gid=0" target="_blank">
                 
-                <a href="https://docs.google.com/spreadsheets/d/14Uunvp6n2TqNqvWRmyKP_AF_GcfFretENUY4if5beTk/edit#gid=0" target="_blank">
-                   
-                    <div class="escala" id="escalacultos">
-                       
-                        <div class="icon">
-                            <img src="img/yes.png" alt="">
-                        </div>
-                        <div class="infocultos">
-                            <!-- <i id="cultosprev" class="fa-solid fa-angle-left"></i>
-                            <i id="cultosnext" class="fa-solid fa-angle-right"></i>
-                            <i class="fa-solid fa-plus"></i> -->
-                            <div class="subtitulo" id="titulocultos">Cultos</div>
-                            <div class="link-content" id="cultos"></div>
-                            <!-- <div class="link-content" id="cultosTarde"></div> -->
-                        </div>
+                <div class="escala" id="escalacultos">
                     
+                    <div class="icon">
+                        <img src="img/yes.png" alt="">
+                    </div>
+                    <div class="infocultos">
+                        <div class="tituloescala" id="titulocultos">Cultos</div>
+                        <div class="contentescala" id="cultos"></div>
                     </div>
                 
-                </a>
-                
-                <a href="https://docs.google.com/spreadsheets/d/1YEggkMWLcesddzRU66QW_ZPXnxFlaZojluN6J8xclNQ/edit#gid=0" target="_blank">
-                   
-                    <div class="escala">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="" id="icon-compensacao">
-                        </div>
-                        <div>
-                            <div class="subtitulo" id="titulocompensacao">Compensação</div>
-                            <!-- <div class="link-content" id="nomescompquarta"></div> -->
-                            <div class="link-content" id="nomescomp"></div>
-                        </div>
-                   
-                    </div>
-                </a>
-
-                <a href="#">
-
-                    <div class="escala">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png"alt="" id="icon-plantao-diario">
-                        </div>
-                        <div>
-                            <div class="subtitulo">Plantão diário</div>
-                            <div class="link-content" id="plantaodiario"></div>
-                        </div>
-                    
-                    </div>
-                
-                </a>
-
-                <a href="https://docs.google.com/spreadsheets/d/1YEggkMWLcesddzRU66QW_ZPXnxFlaZojluN6J8xclNQ/edit#gid=0" target="_blank">
-
-                    <div class="escala" id="escalasexta">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="">
-                        </div>
-                        <div>
-                            <div class="subtitulo">Plantão sexta</div>
-                            <div class="link-content" id="plantaosexta">Recesso/Feriado</div>
-                        </div>
-                    
-                    </div>
-                </a>
-
-            </div>
-
-            <div class="conteineraniversariantes">
-
-                <div class="aniversariantes" id="aniver">
-                    <!-- <i id="prevAniv" class="fa-solid fa-angle-left"></i> -->
-                    <!-- <a href="aniversariantes-list.html" target="_blank"><i id="nextAniv" class="fa-solid fa-angle-right"></i></a> -->
-                    <a href="aniversariantes-list.html" id="bt-aniver" target="_blank"></a>
-                    <div id="aniverTitulo"></div>
-                    <div class="box-aniver-img" id="aniver-img">
-                        <!-- <div class="aniversariante" id="aniversariante">
-                            <img src="img/anivImg/dls.png">
-                            <div class="aniver-nome">Douglas Leal dos Santos</div>
-                            <div class="aniver-funcao">Diretor</div>
-                        </div> -->
-                    </div>
                 </div>
+            
+            </a>           
+            <!-- compensacao -->
+            <a href="https://docs.google.com/spreadsheets/d/1YEggkMWLcesddzRU66QW_ZPXnxFlaZojluN6J8xclNQ/edit#gid=0" target="_blank">
+                
+                <div class="escala">
+                    
+                    <div class="icon">
+                        <img src="img/yes.png" alt="" id="icon-compensacao">
+                    </div>
+                    <div>
+                        <div class="tituloescala" id="titulocompensacao">Compensação</div>
+                        <!-- <div class="contentescala" id="nomescompquarta"></div> -->
+                        <div class="contentescala" id="nomescomp">Aguardando escala</div>
+                    </div>
+                
+                </div>
+            </a>
+            <!-- plantao_diario -->
+            <a href="#">
 
-            </div>
+                <div class="escala">
+                    
+                    <div class="icon">
+                        <img src="img/yes.png"alt="" id="icon-plantao-diario">
+                    </div>
+
+                    <div>
+                        <div class="tituloescala">Plantão diário</div>
+                        <div class="contentescala" id="plantaodiario"></div>
+                    </div>
+                
+                </div>
+            
+            </a>
+            <!-- plantao_sexta -->
+            <a href="https://docs.google.com/spreadsheets/d/1YEggkMWLcesddzRU66QW_ZPXnxFlaZojluN6J8xclNQ/edit#gid=0" target="_blank">
+
+                <div class="escala" id="escalasexta">
+                    
+                    <div class="icon">
+                        <img src="img/yes.png" alt="">
+                    </div>
+                    <div>
+                        <div class="tituloescala">Plantão sexta</div>
+                        <div class="contentescala" id="plantaosexta">Recesso/Feriado</div>
+                    </div>
+                
+                </div>
+            </a>
+            <!-- celebra fII -->
+            <a href="https://docs.google.com/spreadsheets/d/1-020pXSavJ-EBM5eRpbR5FBSZbzU5yHMSNkBo8Rk_HM/edit#gid=0" target="_blank">
+
+                <div class="escala" id="escalacelebra">
+                    
+                    <div class="icon">
+                        <img src="img/checkblue.png" alt="">
+                    </div>
+                    <div>
+                        <div class="tituloescala" id="titulocelebra">Celebra FII-EM</div>
+                        <div class="contentescala" id="celebra">Aguardando escala</div>
+                    </div>
+                
+                </div>
+            
+            </a>
+            <!-- celebra fi -->
+            <a href="#" target="_blank">
+
+                <div class="escala" id="escalacelebra1">
+                    
+                    <div class="icon">
+                        <img src="img/checkblue.png" alt="">
+                    </div>
+                    <div>
+                        <div class="tituloescala" id="titulocelebra1">Celebra EI-FI</div>
+                        <div class="contentescala" id="celebra1">Aguardando escala</div>
+                    </div>
+                
+                </div>
+            
+            </a>
+            <!-- tcc -->
+            <a href="https://docs.google.com/document/d/1dsToDDTqdD9hOLgeVOy64VR0RNPFVxaS8g-A4qvZZXo/edit" target="_blank">
+
+                <div class="escala" id="escalacelebra2">
+                    
+                    <div class="icon">
+                        <img src="img/checkblue.png" alt="">
+                    </div>
+                    <div>
+                        <div class="tituloescala" id="titulocelebra2">Pessoal</div>
+                        <div class="contentescala" id="celebra2">Artigo TCC</div>
+                    </div>
+                
+                </div>
+            
+            </a>
         </div>
 
         <!-- LINKS RÁPIDOS -->
@@ -365,7 +386,6 @@
 
         <!-- CALENDÁRIO -->
         <div class="divhome" id="divhomecalendario">
-
             <div class="box-cal-num">
 
                 <div class="mescalbox">
@@ -429,70 +449,29 @@
                 </div>
 
             </div>
-
         </div>
 
-        <!-- CELEBRAS -->
-        <div class="divhome" id="escalas">
+        <!-- ANIVERSARIANTES -->
+        <div class="divhome" id="aniversariantes">
 
-            <div class="conteinerescalas">    
-                
-                <a href="https://docs.google.com/spreadsheets/d/1-020pXSavJ-EBM5eRpbR5FBSZbzU5yHMSNkBo8Rk_HM/edit#gid=0" target="_blank">
+            <!-- <div class="conteineraniversariantes"> -->
 
-                    <div class="escala" id="escalacelebra">
-                       
-                        <div class="icon">
-                            <img src="img/checkblue.png" alt="">
-                        </div>
-                        <div>
-                            <div class="subtitulo" id="titulocelebra">Celebra FII-EM</div>
-                            <div class="link-content" id="celebra">Aguardando escala</div>
-                        </div>
-                   
+                <div class="aniversariantes" id="aniver">
+                    <a href="aniversariantes-list.html" id="bt-aniver" target="_blank"></a>
+                    <div class="box-aniver-img" id="aniver-img">
+                        <!-- <div class="aniversariante" id="aniversariante">
+                            <img src="img/anivImg/dls.png">
+                            <div class="aniver-nome">Douglas Leal dos Santos</div>
+                            <div class="aniver-funcao">Diretor</div>
+                        </div> -->
                     </div>
-               
-                </a>
+                </div>
 
-                <a href="#" target="_blank">
+            <!-- </div> -->
 
-                    <div class="escala" id="escalacelebra2">
-                       
-                        <div class="icon">
-                            <img src="img/checkblue.png" alt="">
-                        </div>
-                        <div>
-                            <div class="subtitulo" id="titulocelebra2">Celebra EI-FI</div>
-                            <div class="link-content" id="celebra2">Aguardando escala</div>
-                        </div>
-                    
-                    </div>
-              
-                </a>
-
-
-                <a href="https://docs.google.com/document/d/1dsToDDTqdD9hOLgeVOy64VR0RNPFVxaS8g-A4qvZZXo/edit" target="_blank">
-
-                    <div class="escala" id="escalacelebra2">
-                       
-                        <div class="icon">
-                            <img src="img/checkblue.png" alt="">
-                        </div>
-                        <div>
-                            <div class="subtitulo" id="titulocelebra2">Pessoal</div>
-                            <div class="link-content" id="celebra2">Artigo TCC</div>
-                        </div>
-                    
-                    </div>
-              
-                </a>
-
-            </div>
 
             
         </div>
-
-
-
 
         <!-- Horários -->
          <div class="divhome" id="divhomehorarios">
@@ -898,7 +877,6 @@
             </div>
            
         </div> 
-       
     </main>  
     
 </div> <!-- fecha .conteinergeral-->

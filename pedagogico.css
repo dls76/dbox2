@@ -1,3 +1,52 @@
+.links-pedagogicos {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 15px;
+    border: 5px solid red;
+}
+.links-pedagogicos a {
+    list-style-type: none;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    color: rgb(55, 55, 55);
+    padding-left: 2rem;
+}
+.links-pedagogicos a:hover {
+    color: #253B73;
+}
+details {
+    margin-bottom: 1rem;
+}
+details > summary {
+    color: #253B73;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: .6rem;
+    list-style: none;
+}
+.details-items-box {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+.details-items-box a {
+    display: flex;
+}
+.details-items-box img {
+    width: 20px;
+    margin-right: 1rem
+}
+.main-pedagogico {
+    box-sizing: border-box;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    height: 500px;
+    overflow-y: scroll;
+    background-color: whitesmoke;
+}
 .conteiner-conselheiros, .conteiner-representantes {
     display: flex;
     justify-content: space-around;
@@ -10,14 +59,12 @@
     width: 45%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-
 .tb-conselheiros:nth-of-type(2){
     width: 20%;
 }
 .tb-conselheiros thead tr:first-of-type, .tb-representantes thead, .tb-professores6m thead {
     background-color: #bcbcbc;
 }
-
 .tb-conselheiros tr td, .tb-conselheiros th, .tb-representantes th, .tb-representantes tr td {
     padding: .3rem;
 }

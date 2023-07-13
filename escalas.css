@@ -1,35 +1,17 @@
-.conteinerescalas {
-    background-color: #fff;
+.divhome#escalas {
+    display: flex;
+    flex-direction: column;
     border-radius: 12px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    /* border: 1px solid red; */
 }
 .escala {
     background-color: #fff;
     border-bottom: .5px solid #e2e2e2;
-    padding: 18px 0;
+    padding: 1rem 0;
     display: grid;
     grid-template-columns: 1fr 5fr;
     gap: 0;
     transition: .3s;
-    padding-right: 1rem;
-}
-.escala:hover {
-    background-color: whitesmoke;
-    cursor: pointer;
-}
-#escalas {
-    display: grid;
-    grid-template-rows: auto auto;
-    gap: 1.7rem;
-    border-radius: 12px;
-    /* border: 2px solid blue; */
-}
-#escalacultos {
-    border-radius: 12px 12px 0 0;
-}
-#escalacelebra2 {
-    border-radius: 0 0 12px 12px;
 }
 .icon {
     display: flex;
@@ -39,19 +21,13 @@
 .icon img {
     width: 20px;
 }
-.subtitulo {
+.tituloescala {
     font-size: .8rem;
     color: #B52532;
     font-weight: 700;
     font-family: 'Roboto Condensed', sans-serif;
 }
-#titulocelebra, #titulocelebra2 {
-    color: #253B73;
-}
-#celebra, #celebra2 {
-    color: gray;
-}
-.link-content {
+.contentescala {
     color: #253B73;
     font-size: .8rem;
     font-family: 'Roboto Condensed', sans-serif;
@@ -61,6 +37,19 @@
     display: -webkit-box;
     -webkit-line-clamp: 1; /* number of lines to show */
     -webkit-box-orient: vertical;
+}
+.escala:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+#escalacultos {
+    border-radius: 12px 12px 0 0;
+}
+#titulocelebra, #titulocelebra1, #titulocelebra2 {
+    color: #253B73;
+}
+#celebra, #celebra1, #celebra2 {
+    color: gray;
 }
 #aniver {
     height: 200px;    
@@ -141,31 +130,4 @@
     margin: 10px;
     border-radius: 50%;
     border: 2px solid white;
-}
-#aniverTitulo {
-    text-align: center;
-    padding-top: 1.2rem;
-    color: gray;
-    font-weight: 600;
-}
-#aniverMes{
-    width: 90%;
-    margin: auto;
-    height: 90%;
-    overflow-y: scroll;
-}
-#aniverMes::-webkit-scrollbar {
-    width: 8px;
-}
-#aniverMes::-webkit-scrollbar-thumb {
-    background-color: #4561A5;
-    border-radius: 10px;
-}
-#aniverMes::-webkit-scrollbar-thumb:hover {
-    background-color: #6079b6;
-}
-.nomesAniversariantes{
-    font-size: .7rem;
-    color: #fff;
-    margin-bottom: .3rem;
 }
