@@ -51,6 +51,13 @@
 #celebra, #celebra1, #celebra2 {
     color: gray;
 }
+.seta {
+    color: red;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translate(0, -50%)
+}
 #aniver {
     height: 200px;    
     box-sizing: border-box;
