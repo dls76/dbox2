@@ -12,6 +12,7 @@
     grid-template-columns: 1fr 5fr;
     gap: 0;
     transition: .3s;
+    position: relative;
 }
 .icon {
     display: flex;
@@ -45,16 +46,16 @@
 #escalacultos {
     border-radius: 12px 12px 0 0;
 }
-#titulocelebra, #titulocelebra1, #titulocelebra2 {
+/* #titulocelebra, #titulocelebra1, #titulocelebra2 {
     color: #253B73;
-}
+} */
 #celebra, #celebra1, #celebra2 {
     color: gray;
 }
-.seta {
-    color: red;
+i.seta {
+    color: #B52532;
     position: absolute;
-    right: 1rem;
+    right: 1.5rem;
     top: 50%;
     transform: translate(0, -50%)
 }

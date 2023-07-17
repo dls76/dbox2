@@ -38,7 +38,7 @@
 .spancal:hover {
     background-color: #bed0ff;
 }
-i.fa-solid {
+i.fa-chevron-right, i.fa-chevron-left {
     color: #253B73;
     cursor: pointer;
     font-size: 1rem;
