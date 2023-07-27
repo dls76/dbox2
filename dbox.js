@@ -559,3 +559,28 @@ function arredondarBordasInferiores() {
 }
 
 addEventListener('load', arredondarBordasInferiores)
+
+
+
+let route = [
+    {data: new Date(2023, 7, ), tema: ""},
+    {data: new Date(2023, 7, ), tema: ""},
+    {data: new Date(2023, 8, ), tema: ""},
+    {data: new Date(2023, 8, ), tema: ""},
+    {data: new Date(2023, 9, ), tema: ""},
+    {data: new Date(2023, 9, ), tema: ""},
+    {data: new Date(2023, 9, ), tema: ""},
+    {data: new Date(2023, 10, ), tema: ""},
+    {data: new Date(2023, 10, ), tema: ""},
+]
+
+for(j=0; j<plantaosexta.length; j++) {
+
+    const diffInMs = datahoje - plantaosexta[j].data
+    const diffDays = diffInMs / (1000 * 60 * 60 * 24)
+
+if ( diffDays >= -6 && diffDays < 1 ) {
+        document.querySelector('#plantaosexta').innerHTML = plantaosexta[j].data.getDate() + '/' + (plantaosexta[j].data.getMonth()+1) + ' - ' + plantaosexta[j].person
+    }
+
+}
