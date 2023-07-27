@@ -153,165 +153,42 @@ if ( diffDays >= -6 && diffDays < 1 ) {
 
 // Cultos
 let cultos = [
-    {data: new Date(2023, 6, 26), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 6, 27), pessoaM: '', pessoaT: '', dletivo: true},
     {data: new Date(2023, 6, 28), pessoaM: '', pessoaT: '', dletivo: true},
     {data: new Date(2023, 6, 29), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
     {data: new Date(2023, 6, 30), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
     {data: new Date(2023, 6, 31), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 1), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 2), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 3), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 4), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 5), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 7, 6), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 7, 7), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 8), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 9), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 10), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 11), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 12), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 7, 13), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 7, 14), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 15), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 16), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 17), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 18), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 19), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 7, 20), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 7, 21), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 22), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 23), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 24), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 25), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 26), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 7, 27), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 7, 28), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 29), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 30), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 7, 31), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 1), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 2), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 8, 3), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 8, 4), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 5), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 6), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 7), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 8), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 9), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 8, 10), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 8, 11), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 12), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 13), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 14), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 15), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 16), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 8, 17), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 8, 18), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 19), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 20), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 21), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 22), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 23), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 8, 24), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 8, 25), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 26), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 27), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 28), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 29), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 8, 30), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 9, 1), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 9, 2), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 3), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 4), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 5), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 6), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 7), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 9, 8), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 9, 9), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 10), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 11), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 12), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 13), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 14), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 9, 15), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 9, 16), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 17), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 18), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 19), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 20), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 21), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 9, 22), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 9, 23), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 24), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 25), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 26), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 27), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 28), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 9, 29), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 9, 30), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 9, 31), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 1), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 2), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 3), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 4), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 10, 5), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 10, 6), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 7), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 8), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 9), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 10), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 11), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 10, 12), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 10, 13), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 14), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 15), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 16), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 17), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 18), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 10, 19), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 10, 20), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 21), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 22), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 23), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 24), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 25), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 10, 26), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 10, 27), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 28), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 29), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 10, 30), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 11, 1), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 11, 2), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 11, 3), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 11, 4), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 11, 5), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 11, 6), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 11, 7), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 11, 8), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 11, 9), pessoaM: 'Sábado', pessoaT: 'Sábado', dletivo: false},
-    {data: new Date(2023, 11, 10), pessoaM: 'Domingo', pessoaT: 'Domingo', dletivo: false},
-    {data: new Date(2023, 11, 11), pessoaM: '', pessoaT: '', dletivo: true},
-    {data: new Date(2023, 11, 12), pessoaM: '', pessoaT: '', dletivo: true},
 ]
 for( k=0; k<cultos.length; k++ ) {
 
-    if (datahoje.getDay() == 6) {
-        document.querySelector('#cultos').innerHTML = "Feliz sábado!"
+    if (datahoje.getDay() == 0) {
+        document.querySelector('#cultos').innerHTML = "HOje é domingo!"
     }
 
-    if (datahoje.getDay() == 0) {
+    if (datahoje.getDay() == 1) {
         document.querySelector('#cultos').innerHTML = 'Hoje é domingo.'
     }
 
-    if ( datahoje.getDay() == cultos[k].data.getDay() && cultos[k].dletivo == false ) {
-        document.querySelector('#cultos').innerHTML = 'Recesso/Feriado'
+    if (datahoje.getDay() == 2) {
+        document.querySelector('#cultos').innerHTML = 'Hoje é domingo.'
+    }
+    if (datahoje.getDay() == 3) {
+        document.querySelector('#cultos').innerHTML = 'Hoje é domingo.'
+    }
+    if (datahoje.getDay() == 4) {
+        document.querySelector('#cultos').innerHTML = 'Hoje é domingo.'
+    }
+    if (datahoje.getDay() == 1) {
+        document.querySelector('#cultos').innerHTML = 'Hoje é domingo.'
     }
 
-    if ( (datahoje.getDate() === cultos[k].data.getDate()) && (datahoje.getMonth() === cultos[k].data.getMonth()) && (datahoje.getFullYear() === cultos[k].data.getFullYear()) ){
-        document.querySelector('#titulocultos').innerHTML = "Cultos " + cultos[k].data.getDate() + '/' + (cultos[k].data.getMonth()+1)
-        document.querySelector('#cultos').innerHTML = cultos[k].pessoaM + ' e ' + cultos[k].pessoaT
-    }
+    // if ( datahoje.getDay() == cultos[k].data.getDay() && cultos[k].dletivo == false ) {
+    //     document.querySelector('#cultos').innerHTML = 'Recesso/Feriado'
+    // }
+
+    // if ( (datahoje.getDate() === cultos[k].data.getDate()) && (datahoje.getMonth() === cultos[k].data.getMonth()) && (datahoje.getFullYear() === cultos[k].data.getFullYear()) ){
+    //     document.querySelector('#titulocultos').innerHTML = "Cultos " + cultos[k].data.getDate() + '/' + (cultos[k].data.getMonth()+1)
+    //     document.querySelector('#cultos').innerHTML = cultos[k].pessoaM + ' e ' + cultos[k].pessoaT
+    // }
 }
 
 
@@ -560,7 +437,7 @@ function arredondarBordasInferiores() {
     uesc.style.borderRadius = "0 0 12px 12px"
 }
 
-
+// Route77
 let route = [
     {data: new Date(2023, 7, 12), tema: 'Quebrando o Silêncio', convidado: ''},
     {data: new Date(2023, 7, 26), tema: 'Celebração Route', convidado: ''},
