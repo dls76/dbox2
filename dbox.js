@@ -1,3 +1,5 @@
+addEventListener('load', arredondarBordasInferiores)
+
 let datahoje = new Date()
 
 
@@ -551,36 +553,52 @@ const escalas = Array.from(divescalas)
 
 const ultimaescala = escalas.length - 1
 
-console.log(ultimaescala)
+// console.log(ultimaescala)
 
 function arredondarBordasInferiores() {
     const uesc = escalas[ultimaescala]
     uesc.style.borderRadius = "0 0 12px 12px"
 }
 
-addEventListener('load', arredondarBordasInferiores)
-
-
 
 let route = [
-    {data: new Date(2023, 7, ), tema: ""},
-    {data: new Date(2023, 7, ), tema: ""},
-    {data: new Date(2023, 8, ), tema: ""},
-    {data: new Date(2023, 8, ), tema: ""},
-    {data: new Date(2023, 9, ), tema: ""},
-    {data: new Date(2023, 9, ), tema: ""},
-    {data: new Date(2023, 9, ), tema: ""},
-    {data: new Date(2023, 10, ), tema: ""},
-    {data: new Date(2023, 10, ), tema: ""},
+    {data: new Date(2023, 7, 12), tema: 'Quebrando o Silêncio', convidado: ''},
+    {data: new Date(2023, 7, 26), tema: 'Celebração Route', convidado: ''},
+    {data: new Date(2023, 8, 16), tema: 'Setembro Amarelo', convidado: ''},
+    {data: new Date(2023, 8, 30), tema: 'Route Adventure', convidado: ''},
+    {data: new Date(2023, 9, 7), tema: 'Batismo da Primavera', convidado: ''},
+    {data: new Date(2023, 10, 11), tema: 'Celebração Route', convidado: ''},
+    {data: new Date(2023, 10, 25), tema: 'Celebração Route', convidado: ''},
+    {data: new Date(2023, 11, 2), tema: 'Celebração final', convidado: ''},
 ]
 
-for(j=0; j<plantaosexta.length; j++) {
+window.onload(findNearestDate(route))
 
-    const diffInMs = datahoje - plantaosexta[j].data
-    const diffDays = diffInMs / (1000 * 60 * 60 * 24)
-
-if ( diffDays >= -6 && diffDays < 1 ) {
-        document.querySelector('#plantaosexta').innerHTML = plantaosexta[j].data.getDate() + '/' + (plantaosexta[j].data.getMonth()+1) + ' - ' + plantaosexta[j].person
+function findNearestDate(array) {
+    // Obter a data atual
+    const currentDate = new Date();
+  
+    // Filtrar as datas que são iguais ou após a data atual
+    const futureDates = array.filter((item) => item.data >= currentDate);
+  
+    // Ordenar as datas por ordem crescente
+    futureDates.sort((a, b) => a.data - b.data);
+  
+    // Se houver datas após a data atual, retorna a primeira delas
+    if (futureDates.length > 0) {
+        document.querySelector('#routescala').innerHTML = futureDates[0].data.getDate() + '/' + (futureDates[0].data.getMonth()+1) + ' - ' + futureDates[0].tema;
     }
+    // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
+    // return array[array.length - 1];
+  }
+  
+//   const nearestDate = findNearestDate(route);
+  // Output será o objeto cuja data é igual ou a mais próxima data posterior ao dia de hoje
 
-}
+// document.querySelector('#routescala').innerHTML =  nearestDate()
+
+
+
+
+
+        
