@@ -153,7 +153,6 @@ function cultos() {
 
 }
 
-datahoje = new Date(2023, 7, 1)
 //Plantão Diário
 window.addEventListener('load', plantaoDiarioCompensacao)
 function plantaoDiarioCompensacao() {
