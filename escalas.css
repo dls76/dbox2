@@ -8,8 +8,10 @@
     background-color: #fff;
     border-bottom: .5px solid #e2e2e2;
     padding: 1rem 0;
+    /* padding: 1rem; */
     display: grid;
     grid-template-columns: 1fr 5fr;
+    /* grid-template-columns: 1fr; */
     gap: 0;
     transition: .3s;
     position: relative;
@@ -18,6 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    /* display: none; */
 }
 .icon img {
     width: 20px;
@@ -46,9 +49,15 @@
 #escalacultos {
     border-radius: 12px 12px 0 0;
 }
-/* #titulocelebra, #titulocelebra1, #titulocelebra2 {
-    color: #253B73;
-} */
+.horarioculto {
+    /* color: #B52532; */
+    color: #000;
+    font-weight: 700;
+    margin-right: .2rem;
+}
+.responsavelculto {
+    margin-right: .6rem;
+}
 #celebra, #celebra1, #celebra2 {
     color: gray;
 }

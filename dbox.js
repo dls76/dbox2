@@ -111,7 +111,7 @@ if ( diffDays >= -6 && diffDays < 1 ) {
 
 
 // Cultos
-window.addEventListener('load', cultos)
+// window.addEventListener('load', cultos)
 function cultos() {
 
     if (datahoje.getDay() == 0) {
