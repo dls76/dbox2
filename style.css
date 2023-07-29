@@ -55,7 +55,7 @@ body {
 }
 main#conteinerhome {
     display: grid;
-    grid-template-columns: 1.1fr .9fr .9fr .9fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.7rem;
     /* border: 10px solid red; */
 }
