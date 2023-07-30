@@ -72,7 +72,7 @@ const pessoas = [
     {nome: "Vanessa Pereira Farias", dia: 10, mes: 6, ano: 1984, funcao: "Professora", foto:"img/anivImg/julho/vanessa.png", nascimento: new Date(1984, 6, 10)},
     {nome: "Ronaldo Vieira Silva Modesto", dia: 12, mes: 6, ano: 1982, funcao: "Professor", foto:"img/anivImg/julho/ronaldo.png", nascimento: new Date(1982, 6, 12)},
     {nome: "Cacilda Smaha Mannala", dia: 16, mes: 6, ano: 1972, funcao: "Bibliotecária Rede", foto:"img/anivImg/julho/cacilda.jpg", nascimento: new Date(1972, 6, 16)},
-    {nome: "Monica Cristina Martins de Novais", dia: 31, mes: 6, ano: 1979, funcao: "", foto:"", nascimento: new Date()},
+    {nome: "Monica Cristina Martins de Novais", dia: 31, mes: 6, ano: 1979, funcao: "Função", foto:"img/user.png", nascimento: new Date(1979, 6, 31)},
     
     //AGOSTO
     {nome: "Vanessa Moura de Freitas", dia: 2, mes: 7, ano: 1985, funcao: "", foto:"", nascimento: new Date()},
