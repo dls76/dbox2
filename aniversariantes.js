@@ -72,10 +72,10 @@ const pessoas = [
     {nome: "Vanessa Pereira Farias", dia: 10, mes: 6, ano: 1984, funcao: "Professora", foto:"img/anivImg/julho/vanessa.png", nascimento: new Date(1984, 6, 10)},
     {nome: "Ronaldo Vieira Silva Modesto", dia: 12, mes: 6, ano: 1982, funcao: "Professor", foto:"img/anivImg/julho/ronaldo.png", nascimento: new Date(1982, 6, 12)},
     {nome: "Cacilda Smaha Mannala", dia: 16, mes: 6, ano: 1972, funcao: "Bibliotecária Rede", foto:"img/anivImg/julho/cacilda.jpg", nascimento: new Date(1972, 6, 16)},
-    {nome: "Thiago Andrews Carvalho", dia: 24, mes: 6, ano: 1984, funcao: "Vice-diretor", foto:"img/anivImg/julho/thiagoandrews.png", nascimento: new Date(1984, 6, 24)},
+    {nome: "Monica Cristina Martins de Novais", dia: 31, mes: 6, ano: 1979, funcao: "", foto:"", nascimento: new Date()},
     
     //AGOSTO
-    {nome: "Clarice dos Santos da Silva", dia: 15, mes: 7, ano: 1977, funcao: "Professora", foto:"", nascimento: new Date()},
+    {nome: "Vanessa Moura de Freitas", dia: 2, mes: 7, ano: 1985, funcao: "", foto:"", nascimento: new Date()},
     {nome: "Sandra Cristina Labatut Pereira", dia: 19, mes: 7, ano: 1970, funcao: "Professora", foto:"", nascimento: new Date()},
     {nome: "Willian Resende Leite", dia: 25, mes: 7, ano: 1977, funcao: "Professor", foto:"", nascimento: new Date()},
     {nome: "Lucas Rocha Santos", dia: 28, mes: 7, ano: 1977, funcao: "Monitor", foto:"", nascimento: new Date()},
