@@ -10,6 +10,29 @@ body {
     box-sizing: border-box;
     background-color: whitesmoke;
 }
+
+#anivLeft, #anivRight {
+    position: absolute;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem 1.3rem;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+#anivLeft:hover, #anivRight:hover {
+    background-color: #dedede;
+}
+
+#anivLeft {
+    left: 1rem;
+}
+
+#anivRight {
+    right: 1rem;
+}
+
 .mainAniver {
     box-sizing: border-box;
     margin: 8rem auto;
@@ -26,6 +49,7 @@ body {
     background-color: #fff;
     text-align: center;
 }
+
 .linha {
     width: 90%;
     margin: 0 auto 20px auto;
@@ -76,5 +100,8 @@ img {
 @media (max-width: 700px) {
     .mainAniver {
         width: 90%;
+    }
+    #h1-aniversariantes {
+        font-size: 1.3rem;
     }
   }
