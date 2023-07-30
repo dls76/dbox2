@@ -7,7 +7,8 @@ const mss = [
 const pessoas = [
     
     //JULHO
-    {nome: "Thiago Andrews Carvalho", dia: 24, mes: 6, ano: 1984, funcao: "Vice-diretor", foto:"img/anivImg/julho/thiagoandrews.png", nascimento: new Date(1984, 6, 24)},
+    
+    {nome: "Monica Cristina Martins de Novais", dia: 31, mes: 6, ano: 1979, funcao: "Função", foto:"img/user.png", nascimento: new Date(1979, 6, 31)},
     
     //AGOSTO
     {nome: "Vanessa Moura de Freitas", dia: 2, mes: 7, ano: 1985, funcao: "Função", foto:"", nascimento: new Date()},
