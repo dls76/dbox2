@@ -75,8 +75,8 @@ const pessoas = [
     {nome: "Monica Cristina Martins de Novais", dia: 31, mes: 6, ano: 1979, funcao: "Função", foto:"img/user.png", nascimento: new Date(1979, 6, 31)},
     
     //AGOSTO
-    {nome: "Vanessa Moura de Freitas", dia: 2, mes: 7, ano: 1985, funcao: "", foto:"", nascimento: new Date()},
-    {nome: "Sandra Cristina Labatut Pereira", dia: 19, mes: 7, ano: 1970, funcao: "Professora", foto:"", nascimento: new Date()},
+    {nome: "Vanessa Moura de Freitas", dia: 2, mes: 7, ano: 1985, funcao: "Função", foto:"img/user.png", nascimento: new Date(1985, 7, 2)},
+    {nome: "Caroline Cristina de Brito", dia: 4, mes: 7, ano: 1988, funcao: "Coordenadora", foto:"img/user.png", nascimento: new Date(1988, 7,4)},
     {nome: "Willian Resende Leite", dia: 25, mes: 7, ano: 1977, funcao: "Professor", foto:"", nascimento: new Date()},
     {nome: "Lucas Rocha Santos", dia: 28, mes: 7, ano: 1977, funcao: "Monitor", foto:"", nascimento: new Date()},
     {nome: "Jessica Vaz dos Santos Cappellesso", dia: 29, mes: 7, ano: 1977, funcao: "Orientadora", foto:"", nascimento: new Date()},
