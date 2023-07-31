@@ -1,0 +1,38 @@
+Cera Round Pro v1.2
+May 18 2018
+
+Cera Pro, along with the Round and Stencil variants, has been improved and updated.
+
+They all have new Cyrillics with the help of Ilya Ruderman and Yury Ostromentsky from type.today, Greek script support has been improved thanks to Irene Vlachou and, last but not least, Latin accents, kerning and combining marks plus minor curves have been optimized. Plus Alphabet Type helped to get the TrueType hinting better. Cera’s pan-European language support has been taken to the next level.
+
+file changes:
+Cera Round Pro Thin v1.2 - UPDATED from v1.1
+Cera Round Pro Light v1.2 - UPDATED from v1.1
+Cera Round Pro Regular v1.2 - UPDATED from v1.1
+Cera Round Pro Medium v1.1 - UPDATED from v1.0
+Cera Round Pro Bold v1.1 - UPDATED from v1.0
+Cera Round Pro Black v1.1 - UPDATED from v1.0
+
+----
+Cera Round Pro v1.1
+June 30 2017
+
+corrected a bug in the quotation marks
+
+file changes:
+Cera Round Pro Thin v1.1 - UPDATED from v1.0
+Cera Round Pro Light v1.1 - UPDATED from v1.0
+Cera Round Pro Regular v1.1 - UPDATED from v1.0
+
+
+----
+Cera Round Pro v1.0
+March 08 2017
+
+files included:
+Cera Round Pro Thin v1.0
+Cera Round Pro Light v1.0
+Cera Round Pro Regular v1.0
+Cera Round Pro Medium v1.0
+Cera Round Pro Bold v1.0
+Cera Round Pro Black v1.0
