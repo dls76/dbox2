@@ -20,13 +20,13 @@ const pessoas = [
     {nome: "Monica Cristina Martins de Novais", dia: 31, mes: 6, ano: 1979, funcao: "Função", foto:"img/account.png", nascimento: new Date()},
     
     //AGOSTO
-    {nome: "Vanessa Moura de Freitas", dia: 2, mes: 7, ano: 1985, funcao: "Zeladora", foto:"img/user2.png", nascimento: new Date()},
-    {nome: "Caroline Cristina de Brito", dia: 4, mes: 7, ano: 1988, funcao: "Coordenadora Pedagógica", foto:"img/user2.png", nascimento: new Date()},
-    {nome: "Elizabeth Alves Braun Soares", dia: 6, mes: 7, ano: 1971, funcao: "Função", foto:"img/user2.png", nascimento: new Date()},
-    {nome: "Leonardo Ormianin Torres", dia: 12, mes: 7, ano: 1999, funcao: "Professor(a)", foto:"img/user2.png", nascimento: new Date()},
-    {nome: "Jessica Aparecida Dionisio", dia: 12, mes: 7, ano: 1996, funcao: "Função", foto:"img/user2.png", nascimento: new Date()},
-    {nome: "Allan Almeida Lima", dia: 26, mes: 7, ano: 1982, funcao: "Professor(a)", foto:"img/user2.png", nascimento: new Date()},
-    {nome: "Laís Daniele dos Santos", dia: 28, mes: 7, ano: 2001, funcao: "Função", foto:"img/user2.png", nascimento: new Date()},
+    {nome: "Vanessa Moura de Freitas", dia: 2, mes: 7, ano: 1985, funcao: "Zeladora", foto:"img/anivImg/Vanessa.jpg", nascimento: new Date()},
+    {nome: "Caroline Cristina de Brito", dia: 4, mes: 7, ano: 1988, funcao: "Coordenadora Pedagógica", foto:"img/anivImg/Caroline.jpg", nascimento: new Date()},
+    {nome: "Elizabeth Alves Braun Soares", dia: 6, mes: 7, ano: 1971, funcao: "Auxiliar de Contraturno", foto:"img/anivImg/Elizabeth.jpg", nascimento: new Date()},
+    {nome: "Leonardo Ormianin Torres", dia: 12, mes: 7, ano: 1999, funcao: "Professor(a)", foto:"img/anivImg/Leonardo.jpg", nascimento: new Date()},
+    {nome: "Jessica Aparecida Dionisio", dia: 12, mes: 7, ano: 1996, funcao: "Tutora", foto:"img/anivImg/Jessica.jpg", nascimento: new Date()},
+    {nome: "Allan Almeida Lima", dia: 26, mes: 7, ano: 1982, funcao: "Professor(a)", foto:"img/anivImg/Allan.jpg", nascimento: new Date()},
+    {nome: "Laís Daniele dos Santos", dia: 28, mes: 7, ano: 2001, funcao: "Auxiliar Contraturno", foto:"img/anivImg/Lais.jpg", nascimento: new Date()},
     
     //SETEMBRO
     {nome: "Renata Brasil Lima", dia: 1, mes: 8, ano: 1993, funcao: "Função", foto:"", nascimento: new Date()},
