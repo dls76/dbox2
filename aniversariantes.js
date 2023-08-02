@@ -21,11 +21,11 @@ const pessoas = [
     
     //AGOSTO
     {nome: "Vanessa Moura de Freitas", dia: 2, mes: 7, ano: 1985, funcao: "Função", foto:"img/user2.png", nascimento: new Date()},
-    {nome: "Caroline Cristina de Brito", dia: 4, mes: 7, ano: 1988, funcao: "Função", foto:"img/user2.png", nascimento: new Date()},
+    {nome: "Caroline Cristina de Brito", dia: 4, mes: 7, ano: 1988, funcao: "Coordenadora Pedagógica", foto:"img/user2.png", nascimento: new Date()},
     {nome: "Elizabeth Alves Braun Soares", dia: 6, mes: 7, ano: 1971, funcao: "Função", foto:"img/user2.png", nascimento: new Date()},
-    {nome: "Leonardo Ormianin Torres", dia: 12, mes: 7, ano: 1999, funcao: "Função", foto:"img/user2.png", nascimento: new Date()},
+    {nome: "Leonardo Ormianin Torres", dia: 12, mes: 7, ano: 1999, funcao: "Professor(a)", foto:"img/user2.png", nascimento: new Date()},
     {nome: "Jessica Aparecida Dionisio", dia: 12, mes: 7, ano: 1996, funcao: "Função", foto:"img/user2.png", nascimento: new Date()},
-    {nome: "Allan Almeida Lima", dia: 26, mes: 7, ano: 1982, funcao: "Função", foto:"img/user2.png", nascimento: new Date()},
+    {nome: "Allan Almeida Lima", dia: 26, mes: 7, ano: 1982, funcao: "Professor(a)", foto:"img/user2.png", nascimento: new Date()},
     {nome: "Laís Daniele dos Santos", dia: 28, mes: 7, ano: 2001, funcao: "Função", foto:"img/user2.png", nascimento: new Date()},
     
     //SETEMBRO

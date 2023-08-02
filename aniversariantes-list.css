@@ -12,25 +12,15 @@ body {
 }
 
 #anivLeft, #anivRight {
-    position: absolute;
-    top: 1rem;
     font-size: 2rem;
     cursor: pointer;
     padding: 1rem 1.3rem;
-    border-radius: 50%;
     transition: .4s;
+    border-radius: 50%;
 }
 
 #anivLeft:hover, #anivRight:hover {
     background-color: #dedede;
-}
-
-#anivLeft {
-    left: 1rem;
-}
-
-#anivRight {
-    right: 1rem;
 }
 
 .mainAniver {
@@ -42,13 +32,9 @@ body {
     flex-direction: column;
 }
 
-.h1Aniver {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    padding: 2rem;
-    background-color: #fff;
-    text-align: center;
+#headeraniversarianteslist {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .linha {
