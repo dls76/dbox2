@@ -82,19 +82,19 @@ function plantaoDiarioCompensacao() {
         document.querySelector('#nomescomp').innerHTML = 'Hoje é domingão!'
     }    
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Diretor'
+        document.querySelector('#plantaodiario').innerHTML = 'Douglas'
         document.querySelector('#nomescomp').innerHTML = 'Manhã: Pr. Vinícius'
     }
     if (datahoje.getDay() == 2) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Vice-diretor'
+        document.querySelector('#plantaodiario').innerHTML = 'Nailson'
         document.querySelector('#nomescomp').innerHTML = 'Sem escala'
     }
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Tesoureira'
+        document.querySelector('#plantaodiario').innerHTML = 'Josiane'
         document.querySelector('#nomescomp').innerHTML = 'M-Jaqueline/Camila ' + ' &raquo; ' + 'T-Katleen/Nailson'
     }
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Coord. Disciplinar'
+        document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
         document.querySelector('#nomescomp').innerHTML = 'Tarde: Valéria/Eula'
     }
     if (datahoje.getDay() == 5) { 
