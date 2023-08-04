@@ -85,7 +85,7 @@ function plantaoDiarioCompensacao() {
         document.querySelector('#plantaodiario').innerHTML = 'Douglas'
         document.querySelector('#nomescomp').innerHTML = 'Manhã: Pr. Vinícius'
     }
-    if (datahoje.getDay() == 2) { 
+    if (datahoje.getDay() == 2) {
         document.querySelector('#plantaodiario').innerHTML = 'Nailson'
         document.querySelector('#nomescomp').innerHTML = 'Sem escala'
     }
@@ -95,7 +95,7 @@ function plantaoDiarioCompensacao() {
     }
     if (datahoje.getDay() == 4) { 
         document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
-        document.querySelector('#nomescomp').innerHTML = 'Tarde: Valéria/Eula'
+        document.querySelector('#nomescomp').innerHTML = 'Valéria | Eula (tarde)'
     }
     if (datahoje.getDay() == 5) { 
         document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta.'

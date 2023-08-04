@@ -654,3 +654,17 @@ main#conteinerhome {
     width: 30px;
     border-radius: 50%;
 }
+
+.imgculto img {
+    width: 1rem;
+}
+
+.imgcultotarde img {
+    width: 1.4rem;
+}
+
+#escalacompensacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
