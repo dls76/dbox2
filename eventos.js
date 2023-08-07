@@ -34,36 +34,70 @@ let eventos = [
     {data1: new Date(2023, 7, 29), data2: new Date(2023, 7, 16), descritivo: "Processo de rematrícula", cal: "cac", resp: "", foto: "", detalhes: ""},
         
     // setembro
-    {data1: new Date(2023, 8, 1), data2: new Date(2023, 8, 29), descritivo: "Aplicação das Provas Diagnósticas da Alfabetização – 3ª testagem         ", cal: "", resp: "", foto: "", detalhes: "Será enviado pela ASP no início do mês"},
-    {data1: new Date(2023, 8, 2), data2: new Date(2023, 8, 6), descritivo: "Semana de Oração – 6º ao EM", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 1), data2: new Date(2023, 8, 30), descritivo: "Pesquisa de Qualidade – pais e responsáveis           ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 4), data2: new Date(2023, 8, 6), descritivo: "Semana da Pátria", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 4), data2: new Date(2023, 8, 4), descritivo: "Comissão de Redação/PQD (tarde)", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 5), data2: new Date(2023, 8, 5), descritivo: "Comissão de Educação/Diretiva", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 5), data2: new Date(2023, 8, 5), descritivo: "Encontro de Professores de Projeto de Vida (remoto)          ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 7), data2: new Date(2023, 8, 7), descritivo: "Feriado Independência do Brasil", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 8), data2: new Date(2023, 8, 8), descritivo: "Feriado Municipal (Curitiba)", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 11), data2: new Date(2023, 8, 11), descritivo: "Início Campanha de Matrículas 2024 – digital           ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 11), data2: new Date(2023, 8, 11), descritivo: "Reunião de alinhamento SOE e SOP - On Line - 8h30       ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 11), data2: new Date(2023, 8, 15), descritivo: "Período de aplicação da AV2 - colocar nos primeiros dias as provas com mais complicação de correção. ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 13), data2: new Date(2023, 8, 13), descritivo: "Projeto Quebrando o Silêncio nas salas de aula          ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 14), data2: new Date(2023, 8, 14), descritivo: "Reunião Pedagógica EI ao EM             ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 16), data2: new Date(2023, 8, 16), descritivo: "Dia Mundial do Desbravador / Batismo da Primavera          ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 17), data2: new Date(2023, 8, 17), descritivo: "Super Dia D - Plantão de Matrículas – Mostra cultural Ed.Infantil, 1º e contraturno    ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 17), data2: new Date(2023, 8, 19), descritivo: "“Projeto Fair Play” - Módulo Jogos da Amizade          ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 20), data2: new Date(2023, 8, 20), descritivo: "Data limite para a entrega ao SOP dos conteúdos e métodos avaliativos do 4º bimestre   ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 21), data2: new Date(2023, 8, 21), descritivo: "2ª Chamada                 ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 21), data2: new Date(2023, 8, 21), descritivo: "Conselho de Classe (novo formato de acordo com o regimento)        ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 22), data2: new Date(2023, 8, 22), descritivo: "Entrega das convocações para a Recuperação Bimestral aos alunos         ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 21), data2: new Date(2023, 8, 22), descritivo: "Organização das convocações para a Recuperação Bimestral           ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 22), data2: new Date(2023, 8, 22), descritivo: "Dia do Contador e Tesoureiro(a) escolar            ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 25), data2: new Date(2023, 8, 29), descritivo: "Recuperação Bimestral – 3º Bim             ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 25), data2: new Date(2023, 8, 29), descritivo: "Semana de oração e encerramento da classe bíblica- Fund I        ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 26), data2: new Date(2023, 8, 26), descritivo: "Data limite para o registro de todas as Atividades Avaliativas de Aprendizagem do 3º bimestre no SAD (prof)", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 29), data2: new Date(2023, 8, 29), descritivo: "Final do 3º bimestre              ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 30), data2: new Date(2023, 8, 30), descritivo: "Dia da Secretária(o)               ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 30), data2: new Date(2023, 8, 30), descritivo: "Data limite para o envio dos Cronogramas Avaliativos aos alunos        ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 8, 30), data2: new Date(2023, 8, 30), descritivo: "Data limite para a regularização dos registros dos conteúdos do mês, no SAD     ", cal: "", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 1), data2: new Date(2023, 8, 29), descritivo: "Aplicação das Provas Diagnósticas da Alfabetização – 3ª testagem", cal: "cac", resp: "", foto: "", detalhes: "Será enviado pela ASP no início do mês"},
+    {data1: new Date(2023, 8, 2), data2: new Date(2023, 8, 6), descritivo: "Semana de Oração – 6º ao EM", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 1), data2: new Date(2023, 8, 30), descritivo: "Pesquisa de Qualidade – pais e responsáveis", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 4), data2: new Date(2023, 8, 6), descritivo: "Semana da Pátria", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 4), data2: new Date(2023, 8, 4), descritivo: "Comissão de Redação/PQD (tarde)", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 5), data2: new Date(2023, 8, 5), descritivo: "Comissão de Educação/Diretiva", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 5), data2: new Date(2023, 8, 5), descritivo: "Encontro de Professores de Projeto de Vida (remoto)", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 7), data2: new Date(2023, 8, 7), descritivo: "Feriado Independência do Brasil", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 8), data2: new Date(2023, 8, 8), descritivo: "Feriado Municipal (Curitiba)", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 11), data2: new Date(2023, 8, 11), descritivo: "Início Campanha de Matrículas 2024 – digital", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 11), data2: new Date(2023, 8, 11), descritivo: "Reunião de alinhamento SOE e SOP - On Line - 8h30", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 11), data2: new Date(2023, 8, 15), descritivo: "Período de aplicação da AV2 - colocar nos primeiros dias as provas com mais complicação de correção. ", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 13), data2: new Date(2023, 8, 13), descritivo: "Projeto Quebrando o Silêncio nas salas de aula", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 14), data2: new Date(2023, 8, 14), descritivo: "Reunião Pedagógica EI ao EM", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 16), data2: new Date(2023, 8, 16), descritivo: "Dia Mundial do Desbravador / Batismo da Primavera", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 17), data2: new Date(2023, 8, 17), descritivo: "Super Dia D - Plantão de Matrículas – Mostra cultural Ed.Infantil, 1º e contraturno    ", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 17), data2: new Date(2023, 8, 19), descritivo: "“Projeto Fair Play” - Módulo Jogos da Amizade", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 20), data2: new Date(2023, 8, 20), descritivo: "Data limite para a entrega ao SOP dos conteúdos e métodos avaliativos do 4º bimestre   ", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 21), data2: new Date(2023, 8, 21), descritivo: "2ª Chamada", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 21), data2: new Date(2023, 8, 21), descritivo: "Conselho de Classe (novo formato de acordo com o regimento)        ", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 22), data2: new Date(2023, 8, 22), descritivo: "Entrega das convocações para a Recuperação Bimestral aos alunos         ", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 21), data2: new Date(2023, 8, 22), descritivo: "Organização das convocações para a Recuperação Bimestral           ", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 22), data2: new Date(2023, 8, 22), descritivo: "Dia do Contador e Tesoureiro(a) escolar", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 25), data2: new Date(2023, 8, 29), descritivo: "Recuperação Bimestral – 3º Bim", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 25), data2: new Date(2023, 8, 29), descritivo: "Semana de oração e encerramento da classe bíblica- Fund I        ", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 26), data2: new Date(2023, 8, 26), descritivo: "Data limite para o registro de todas as Atividades Avaliativas de Aprendizagem do 3º bimestre no SAD (prof)", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 29), data2: new Date(2023, 8, 29), descritivo: "Final do 3º bimestre", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 30), data2: new Date(2023, 8, 30), descritivo: "Dia da Secretária(o)", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 30), data2: new Date(2023, 8, 30), descritivo: "Data limite para o envio dos Cronogramas Avaliativos aos alunos", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 8, 30), data2: new Date(2023, 8, 30), descritivo: "Data limite para a regularização dos registros dos conteúdos do mês, no SAD", cal: "cac", resp: "", foto: "", detalhes: ""},
+
+    //Outubro
+    {data1: new Date(2023, 9, 2), data2: new Date(2023, 9, 3), descritivo: "Enem Interativo – aplicação", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 2), data2: new Date(2023, 9, 2), descritivo: "Início do 4º bimestre", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 2), data2: new Date(2023, 9, 6), descritivo: "Semana de Oração Fund II-EM", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 3), data2: new Date(2023, 9, 6), descritivo: "Dia do Amigo – Visita Escolas Parceiras", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 4), data2: new Date(2023, 9, 4), descritivo: "Encerramento de aplicação do Enem Interativo", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 4), data2: new Date(2023, 9, 4), descritivo: "Matrículas abertas para alunos novos – vaga garantida para o aluno veterano até esse dia", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 5), data2: new Date(2023, 9, 5), descritivo: "Liberação dos gabaritos e provas – Enem Interativo", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 6), data2: new Date(2023, 9, 6), descritivo: "Início da divulgação dos resultados do Enem Interativo", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 6), data2: new Date(2023, 9, 6), descritivo: "Data limite para entrega das avaliações 4º Bimestre - Para Análise do SOP", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 7), data2: new Date(2023, 9, 7), descritivo: "Sábado de Educação – batismo CAC", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 8), data2: new Date(2023, 9, 8), descritivo: "Domingo Letivo - Dia D – Mostra Cultural - 2º ao 5º", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 9), data2: new Date(2023, 9, 9), descritivo: "Liberação para a visualização dos Pareceres e Boletins – 3º Bimestre / Entrega de boletins", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 9), data2: new Date(2023, 9, 9), descritivo: "Impressão dos diários do 3º Bimestre (Conteúdos e Frequência)", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 9), data2: new Date(2023, 9, 11), descritivo: "Semana da Criança", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 11), data2: new Date(2023, 9, 15), descritivo: "Campori da USB", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 12), data2: new Date(2023, 9, 12), descritivo: "Feriado N. S. Aparecida", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 13), data2: new Date(2023, 9, 13), descritivo: "Recesso – Dia do Professor (Dia permutado com 15/10", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 16), data2: new Date(2023, 9, 20), descritivo: "Semana Criacionista", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 16), data2: new Date(2023, 9, 20), descritivo: "AV1", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 17), data2: new Date(2023, 9, 17), descritivo: "Comemoração do Dia do Professor", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 18), data2: new Date(2023, 9, 19), descritivo: "Concilio Ministerial", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 19), data2: new Date(2023, 9, 19), descritivo: "Dia do Técnico em Informática", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 20), data2: new Date(2023, 9, 20), descritivo: "Dia do Pastor Escolar", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 21), data2: new Date(2023, 9, 21), descritivo: "Dia do Pastor / Sábado da Criação", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 23), data2: new Date(2023, 9, 23), descritivo: "Enem TEEN e TREINEIRO", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 23), data2: new Date(2023, 9, 3), descritivo: "Avaliação PAAEB – 5º ano, 9º ano e 2ª EM - Sugestão ASP (26 a", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 24), data2: new Date(2023, 9, 24), descritivo: "Rumo ao EM - PAIS", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 26), data2: new Date(2023, 9, 26), descritivo: "Aulão Unificado - Terceirão - Depende da data do Enem", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 31), data2: new Date(2023, 9, 31), descritivo: "Rumo ao 6º TMA", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 30), data2: new Date(2023, 9, 31), descritivo: "ECO - Encontro de Coordes e Orients - Presencial", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 31), data2: new Date(2023, 9, 31), descritivo: "Data limite para a regularização dos registros dos conteúdos do mês, no SAD", cal: "cac", resp: "", foto: "", detalhes: ""},
+
 ]
 
 function mostrarEventos(){
@@ -163,7 +197,7 @@ function mostrarEventos(){
                 ev.classList.add('verde', 'asp')
             } else if ( cal == 'out') { 
                 ev.classList.add('gray', 'out')
-            } else if ( cal == 'caab' ) {
+            } else if ( cal == 'cac' ) {
                 if ( niv == 'inf5' ) {
                     ev.classList.add('lilas', 'caab')
                 } else if ( niv == 'f2m') {
@@ -211,4 +245,4 @@ function mostrarEventos(){
     filterSelection("all")
 }
 
-let calendarioDescritivo = document.querySelector('#body-eventos')
+// let calendarioDescritivo = document.querySelector('#body-eventos')

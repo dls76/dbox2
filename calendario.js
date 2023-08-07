@@ -90,13 +90,3 @@ btup.addEventListener('click', ()=>{
     filtros.style.display="none"
     boxeventos.style.height="322px"
 })
-
-// let dayMonth = [...document.querySelectorAll(".dayMonth")]
-
-// dayMonth.forEach((e)=>{
-//     e.addEventListener('click', callDayMonth)
-// })
-
-// function callDayMonth(e) {
-//     alert(e.target.innerHTML)
-// }
