@@ -187,3 +187,55 @@ function findNextRoute(array) {
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
     // return array[array.length - 1];
   }
+
+
+// Classes Bíblicas
+let classesbiblicas = [
+
+
+    {data: new Date(2023, 6, 31), tema: 'Classe Bíblica de Pais'},
+    {data: new Date(2023, 7, 7), tema: 'Classe Bíblica de Pais'},
+    {data: new Date(2023, 7, 8), tema: 'Classe Bíblica Esportiva'},
+    
+    {data: new Date(2023, 7, 14), tema: 'Classe Bíblica de Pais'},
+    {data: new Date(2023, 7, 21), tema: 'Classe Bíblica de Pais'},
+    {data: new Date(2023, 7, 22), tema: 'Classe Bíblica Esportiva'},
+
+    {data: new Date(2023, 7, 28), tema: 'Classe Bíblica de Pais'},
+    {data: new Date(2023, 8, 4), tema: 'Classe Bíblica de Pais'},
+    {data: new Date(2023, 8, 5), tema: 'Classe Bíblica Esportiva'},
+
+    {data: new Date(2023, 8, 11), tema: 'Classe Bíblica de Pais'},
+    {data: new Date(2023, 8, 12), tema: 'Classe Bíblica Esportiva'},
+
+    {data: new Date(2023, 8, 18), tema: 'Classe Bíblica de Pais'},
+    {data: new Date(2023, 8, 25), tema: 'Classe Bíblica de Pais'},
+    {data: new Date(2023, 8, 26), tema: 'Classe Bíblica Esporiva'},
+    
+    {data: new Date(2023, 9, 10), tema: 'Classe Bíblica Esporiva'},
+    {data: new Date(2023, 9, 24), tema: 'Classe Bíblica Esporiva'},
+    {data: new Date(2023, 10, 7), tema: 'Classe Bíblica Esporiva'},
+    {data: new Date(2023, 10, 21), tema: 'Classe Bíblica Esporiva'},
+    {data: new Date(2023, 11, 5), tema: 'Classe Bíblica Esporiva'},
+    
+]
+
+window.addEventListener('load', findNextBibleClass(classesbiblicas))
+function findNextBibleClass(array) {
+    // Obter a data atual
+    const currentDate = new Date();
+  
+    // Filtrar as datas que são iguais ou após a data atual
+    const futureDates = array.filter( (item) => item.data.getDate() >= currentDate.getDate() && item.data.getMonth() >= currentDate.getMonth() && item.data.getFullYear() >= currentDate.getFullYear() )
+  
+    console.log(futureDates)
+    // Ordenar as datas por ordem crescente
+    futureDates.sort((a, b) => a.data - b.data);
+  
+    // Se houver datas após a data atual, retorna a primeira delas
+    if (futureDates.length > 0) {
+        document.querySelector('#classesbiblicascontent').innerHTML = futureDates[0].data.getDate() + '/' + (futureDates[0].data.getMonth()+1) + ' - ' + futureDates[0].tema;
+    }
+    // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
+    // return array[array.length - 1];
+  }
