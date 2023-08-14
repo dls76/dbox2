@@ -161,7 +161,8 @@ function arredondarBordasInferiores() {
 // Route77
 let route = [
     {data: new Date(2023, 7, 12), tema: 'Quebrando o Silêncio', convidado: ''},
-    {data: new Date(2023, 7, 26), tema: 'Celebração Route', convidado: ''},
+    {data: new Date(2023, 7, 26), tema: 'Route no Way On Fire', convidado: ''},
+    {data: new Date(2023, 8, 2), tema: 'Celebração Route', convidado: ''},
     {data: new Date(2023, 8, 16), tema: 'Setembro Amarelo', convidado: ''},
     {data: new Date(2023, 8, 30), tema: 'Route Adventure', convidado: ''},
     {data: new Date(2023, 9, 7), tema: 'Batismo da Primavera', convidado: ''},
