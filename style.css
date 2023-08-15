@@ -18,13 +18,23 @@ body {
     box-sizing: border-box;
 }
 #header, #headerAdm {
-    height: 50px;
+    /* height: 4rem; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
     justify-content: space-between;
-    /* border: 1px solid red; */
+    margin: 2rem 0;
+}
+.alert_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.alert_icons i {
+    margin-left: 1.2rem;
 }
 #menu, #menuAdm {
     display: flex;
@@ -224,6 +234,7 @@ main#conteinerhome {
     border-radius: 10px;
     margin: 0 0 1.5rem 0;
     padding: 0 0 0 1rem;
+    display: none;
 }
 .important a {
     margin-right: 2rem;
@@ -510,6 +521,9 @@ main#conteinerhome {
     }
     #btn-mobile i {
         font-size: 1.5rem;
+    }
+    .alert_icons {
+        display: none;
     }
     #menu {
         display: block;

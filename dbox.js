@@ -240,3 +240,10 @@ function findNextBibleClass(array) {
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
     // return array[array.length - 1];
   }
+
+  const alertIcons = [...document.querySelectorAll('.alerticon')]
+  alertIcons.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        alert('Em construção')
+    })
+  })
