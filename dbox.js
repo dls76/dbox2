@@ -6,14 +6,30 @@ let plantaosexta = [
     {data: new Date(2023, 7, 4), person: "Nailson"}, 
     {data: new Date(2023, 7, 11), person: "Alexandro"}, 
     {data: new Date(2023, 7, 18), person: "Pr. Vinícius"}, 
+    {data: new Date(2023, 7, 25), person: "Jaque"}, 
+    {data: new Date(2023, 8, 1), person: "Sarita"}, 
+    {data: new Date(2023, 8, 15), person: "Carol"}, 
+    {data: new Date(2023, 8, 22), person: "Valéria"}, 
+    {data: new Date(2023, 8, 29), person: "Eula"}, 
+    {data: new Date(2023, 9, 6), person: "Malu"}, 
+    {data: new Date(2023, 9, 13), person: "Secretária"}, 
+    {data: new Date(2023, 9, 20), person: "Pedrina"}, 
+    {data: new Date(2023, 9, 27), person: "Júlia"}, 
+    {data: new Date(2023, 10, 3), person: "Eloisa"}, 
+    {data: new Date(2023, 10, 10), person: "Camila"}, 
 ]
+
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
 function proximoPlantaoDeSexta(array) {
     const currentDate = new Date();
-  
+
     // Filtrar as datas que são iguais ou após a data atual
-    const futureDates = array.filter((item) => item.data >= currentDate);
-  
+    const futureDates = array.filter((item) =>
+        item.data.getFullYear() >= currentDate.getFullYear() &&
+        item.data.getMonth() >= currentDate.getMonth() &&
+        item.data.getDate() >= currentDate.getDate()
+    );
+
     // Ordenar as datas por ordem crescente
     futureDates.sort((a, b) => a.data - b.data);
 
@@ -21,15 +37,17 @@ function proximoPlantaoDeSexta(array) {
     if (futureDates.length > 0) {
         let dia = futureDates[0].data.getDate()
         let mes = futureDates[0].data.getMonth() + 1
-        dia < 9 ? dia = '0' + dia : dia
-        mes < 9 ? mes = '0' + mes : mes
+        dia = dia < 10 ? '0' + dia : dia;
+        mes = mes < 10 ? '0' + mes : mes;
         let pessoa = futureDates[0].person
         document.querySelector('#plantaosexta').innerHTML = dia + '/' + mes + ' - ' +  pessoa
     }
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
     // return array[array.length - 1];
-  }
+}
 
+
+  
 // Cultos
 window.addEventListener('load', cultos)
 function cultos() {
