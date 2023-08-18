@@ -1,3 +1,11 @@
+.main-pedagogico {
+    box-sizing: border-box;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    background-color: whitesmoke;
+}
+
 .links-pedagogicos {
     display: flex;
     flex-direction: column;
@@ -37,46 +45,47 @@ details > summary {
     width: 20px;
     margin-right: 1rem
 }
-.main-pedagogico {
-    box-sizing: border-box;
-    padding: 2rem;
+
+
+.cronogramas {
     width: 90%;
     margin: auto;
-    height: 500px;
-    overflow-y: scroll;
-    background-color: whitesmoke;
+    padding: 1rem;
 }
-.conteiner-conselheiros, .conteiner-representantes {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem auto;
+
+.cronogramas h1 {
+    text-align: center;
+    padding: 1rem;
 }
-.tb-conselheiros, .tb-representantes, .tb-professores6m {
-    border-collapse: collapse;
-    font-size: .8rem;
-    margin-bottom: 3rem;
-    width: 45%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-.tb-conselheiros:nth-of-type(2){
-    width: 20%;
-}
-.tb-conselheiros thead tr:first-of-type, .tb-representantes thead, .tb-professores6m thead {
-    background-color: #bcbcbc;
-}
-.tb-conselheiros tr td, .tb-conselheiros th, .tb-representantes th, .tb-representantes tr td {
-    padding: .3rem;
-}
-.tb-professores6m tr td, .tb-professores6m th {
-    padding: .7rem;
-}
-.tb-conselheiros tr:nth-child(even), .tb-representantes tr:nth-child(even), .tb-professores6m tr:nth-child(even) {
-    background-color: #e7e7e7;
-}
-.tb-professores6m {
+
+.conteiner-cronogramas {
     width: 60%;
     margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
-#chenem {
-    width: 650px;
+
+.turma {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    margin: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.turma:hover {
+    cursor: pointer;
+    background-color: rgb(227, 227, 227);
+}
+
+footer {
+    height: 50vh;
 }
