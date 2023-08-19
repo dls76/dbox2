@@ -89,3 +89,11 @@ details > summary {
 footer {
     height: 50vh;
 }
+
+@media (max-width: 920px) {
+    .conteiner-cronogramas {
+        width: 100%;
+        padding: .5rem;
+    }
+
+}

@@ -613,9 +613,6 @@ main#conteinerhome {
         margin: auto;
         width: 100%;
     }
-    .conteiner-cronogramas {
-        width: 100%;
-    }
 }
 
 @media (max-width: 700px) {
