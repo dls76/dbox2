@@ -67,7 +67,6 @@ main#conteinerhome {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.7rem;
-    /* border: 10px solid red; */
 }
 .divhome {
     border-radius: 12px;
@@ -678,4 +677,154 @@ main#conteinerhome {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+/* CAROUSEL PRÓXIMOS EVENTOS*/
+
+
+.conteiner {
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.fa-solid {
+    font-size: 1.2rem;
+    transition: ease .3s;
+}
+
+.fa-angle-left {
+    left: 0;
+    margin-right: 1rem;
+}
+
+.fa-angle-right {
+    right: 0;
+    margin-left: 1rem;
+}
+
+.item {
+    width: 9rem;
+    height: 9rem;
+    flex-shrink: 0;
+    opacity: .3;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 2.5fr 1.5fr 1fr;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 1px solid lightgray;
+}
+
+.superior {
+    background-color: #36bedd;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.dataeventocard {
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding: .2rem 1rem;
+    background-color: #fff;
+}
+
+.diaeventocard, .meseventocard {
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: #36bedd;
+}
+
+.diaeventocard {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.meseventocard {
+    font-size: .5rem;
+    letter-spacing: 1.5px;
+}
+.meio {
+    text-align: center;
+    font-size: .7rem;
+    font-weight: 600;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.inferior {
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 0 1rem 0;
+}
+
+.current-item {
+    opacity: 1;
+}
+
+.gallery-wrapper {
+    overflow-x: auto;
+}
+
+.gallery-wrapper::-webkit-scrollbar {  
+    display: none;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+.navbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i.fa-dollar-sign, i.fa-file-lines {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #36bedd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+}
+
+i.fa-dollar-sign:hover, i.fa-file-lines:hover {
+    cursor: pointer;
+    background-color: #2d94ac;
+}
+
+.control {
+    color: #36bedd;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .7rem;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+
+}
+
+.control:hover {
+    background-color: #eeeeee;
 }

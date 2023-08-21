@@ -6,12 +6,12 @@ let plantaosexta = [
     {data: new Date(2023, 7, 4), person: "Nailson"}, 
     {data: new Date(2023, 7, 11), person: "Alexandro"}, 
     {data: new Date(2023, 7, 18), person: "Pr. Vinícius"}, 
-    {data: new Date(2023, 7, 25), person: "Jaque"}, 
+    {data: new Date(2023, 7, 25), person: "Malu"}, 
     {data: new Date(2023, 8, 1), person: "Sarita"}, 
     {data: new Date(2023, 8, 15), person: "Carol"}, 
     {data: new Date(2023, 8, 22), person: "Valéria"}, 
     {data: new Date(2023, 8, 29), person: "Eula"}, 
-    {data: new Date(2023, 9, 6), person: "Malu"}, 
+    {data: new Date(2023, 9, 6), person: "Jaque"}, 
     {data: new Date(2023, 9, 13), person: "Secretária"}, 
     {data: new Date(2023, 9, 20), person: "Pedrina"}, 
     {data: new Date(2023, 9, 27), person: "Júlia"}, 
@@ -265,3 +265,47 @@ function findNextBibleClass(array) {
         alert('Em construção')
     })
   })
+
+
+
+
+//   carousel
+
+const controls = document.querySelectorAll('.control')
+
+let currentItem = 0
+
+const items = document.querySelectorAll('.item')
+
+const maxItems = items.length
+
+controls.forEach(control => {
+    control.addEventListener('click', ()=>{
+
+        const isLeft = control.classList.contains('arrow-left')
+
+        if(isLeft) {
+            currentItem -= 1
+        } else {
+            currentItem += 1
+        }
+
+        if (currentItem >= maxItems) {
+            currentItem = 0
+        }
+
+        if (currentItem < 0) {
+            currentItem = maxItems -1
+        }
+
+        items.forEach(item => item.classList.remove('current-item'))
+
+        items[currentItem].scrollIntoView({
+            inline: "center",
+            behavior: "smooth"
+        })
+
+        items[currentItem].classList.add("current-item")
+    })
+})
+
