@@ -309,3 +309,7 @@ controls.forEach(control => {
     })
 })
 
+const btnovoatendimento = document.querySelector('#botaonovoatendimento')
+btnovoatendimento.addEventListener('click', ()=>{
+    window.open("https://dls76.github.io/matriculasDbox/")
+})

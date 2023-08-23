@@ -8,6 +8,31 @@
 body {
     background-color: #f3f3f3;
 }
+
+#botaonovoatendimento {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: #253B73;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+#botaonovoatendimento i {
+    font-size: 1.8rem;
+}
+
+#botaonovoatendimento:hover {
+    background-color: #162243;
+
+}
 .conteinergeral {
     width: 98%;
     max-width: 1500px;
