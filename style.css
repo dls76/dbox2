@@ -532,6 +532,10 @@ main#conteinerhome {
 
 @media (max-width: 1290px) {
 
+    #botaonovoatendimento {
+        display: none;
+    }
+    
     #header {
         margin: 1rem 0 0rem 0;
         width: 92%;margin: auto;padding-left: 0;
@@ -637,6 +641,8 @@ main#conteinerhome {
         margin: auto;
         width: 100%;
     }
+
+
 }
 
 @media (max-width: 700px) {
