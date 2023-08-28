@@ -10,8 +10,8 @@ body {
 }
 
 #botaonovoatendimento {
-    position: absolute;
-    bottom: 2rem;
+    position: fixed;
+    bottom: 3rem;
     right: 2rem;
     width: 3.5rem;
     height: 3.5rem;
