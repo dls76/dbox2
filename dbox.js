@@ -45,8 +45,6 @@ function proximoPlantaoDeSexta(array) {
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
     // return array[array.length - 1];
 }
-
-
   
 // Cultos
 window.addEventListener('load', cultos)
@@ -207,7 +205,6 @@ function findNextRoute(array) {
     // return array[array.length - 1];
   }
 
-
 // Classes Bíblicas
 let classesbiblicas = [
 
@@ -265,49 +262,6 @@ function findNextBibleClass(array) {
         alert('Em construção')
     })
   })
-
-
-
-
-//   carousel
-
-const controls = document.querySelectorAll('.control')
-
-let currentItem = 0
-
-const items = document.querySelectorAll('.item')
-
-const maxItems = items.length
-
-controls.forEach(control => {
-    control.addEventListener('click', ()=>{
-
-        const isLeft = control.classList.contains('arrow-left')
-
-        if(isLeft) {
-            currentItem -= 1
-        } else {
-            currentItem += 1
-        }
-
-        if (currentItem >= maxItems) {
-            currentItem = 0
-        }
-
-        if (currentItem < 0) {
-            currentItem = maxItems -1
-        }
-
-        items.forEach(item => item.classList.remove('current-item'))
-
-        items[currentItem].scrollIntoView({
-            inline: "center",
-            behavior: "smooth"
-        })
-
-        items[currentItem].classList.add("current-item")
-    })
-})
 
 const btnovoatendimento = document.querySelector('#botaonovoatendimento')
 btnovoatendimento.addEventListener('click', ()=>{
