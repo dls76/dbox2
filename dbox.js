@@ -272,18 +272,18 @@ window.addEventListener('load', plantaoentrevistas)
 function plantaoentrevistas() {
    
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Manhã Camila | Tarde Daisy'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Camila | Daisy'
     }
     if (datahoje.getDay() == 2) {
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Manhã Jaque | Tarde Valéria'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Jaque | Valéria'
     }
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Manhã Alexandro | Tarde Carol'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Alexandro | Carol'
     }
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Manhã Douglas | Tarde Sarita'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Douglas | Sarita'
     }
     if (datahoje.getDay() == 5) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Manhã Eula | Tarde Malú'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Eula | Malú'
     }
 }
