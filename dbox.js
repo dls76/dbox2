@@ -267,3 +267,23 @@ const btnovoatendimento = document.querySelector('#botaonovoatendimento')
 btnovoatendimento.addEventListener('click', ()=>{
     window.open("https://dls76.github.io/matriculasDbox/")
 })
+
+window.addEventListener('load', plantaoentrevistas)
+function plantaoentrevistas() {
+   
+    if (datahoje.getDay() == 1) { 
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Manhã Camila | Tarde Daisy'
+    }
+    if (datahoje.getDay() == 2) {
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Manhã Jaque | Tarde Valéria'
+    }
+    if (datahoje.getDay() == 3) { 
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Manhã Alexandro | Tarde Carol'
+    }
+    if (datahoje.getDay() == 4) { 
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Manhã Douglas | Tarde Sarita'
+    }
+    if (datahoje.getDay() == 5) { 
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Manhã Eula | Tarde Malú'
+    }
+}
