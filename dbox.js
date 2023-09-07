@@ -185,12 +185,13 @@ let route = [
     {data: new Date(2023, 7, 12), tema: 'Quebrando o Silêncio', convidado: ''},
     {data: new Date(2023, 7, 26), tema: 'Route no Way On Fire', convidado: ''},
     {data: new Date(2023, 8, 2), tema: 'Celebração Route', convidado: ''},
-    {data: new Date(2023, 8, 16), tema: 'Setembro Amarelo', convidado: ''},
-    {data: new Date(2023, 8, 30), tema: 'Route Adventure', convidado: ''},
+    {data: new Date(2023, 8, 16), tema: 'Setembro Amarelo - Campeonato All Star', convidado: ''},
+    {data: new Date(2023, 8, 30), tema: 'Route Adventure - Trilha', convidado: ''},
     {data: new Date(2023, 9, 7), tema: 'Batismo da Primavera', convidado: ''},
-    {data: new Date(2023, 10, 11), tema: 'Celebração Route', convidado: ''},
-    {data: new Date(2023, 10, 25), tema: 'Celebração Route', convidado: ''},
-    {data: new Date(2023, 11, 2), tema: 'Celebração final', convidado: ''},
+    {data: new Date(2023, 9, 21), tema: 'Futuro e Carreira - De repente 30', convidado: ''},
+    {data: new Date(2023, 10, 11), tema: 'Show de Talentos', convidado: ''},
+    {data: new Date(2023, 10, 25), tema: 'Leilão Champions League', convidado: ''},
+    {data: new Date(2023, 11, 2), tema: 'Encerramento - Champions e Festa Nações', convidado: ''},
 ]
 window.addEventListener('load', findNextRoute(route))
 function findNextRoute(array) {
@@ -262,12 +263,11 @@ function findNextBibleClass(array) {
     // return array[array.length - 1];
   }
 
-  const alertIcons = [...document.querySelectorAll('.alerticon')]
-  alertIcons.forEach((e)=>{
-    e.addEventListener('click', ()=>{
-        alert('Em construção')
-    })
+  const btnama = document.querySelector('#bt-ama')
+  btnama.addEventListener('click', ()=>{
+    window.open('https://sistemas.usb.org.br/ama/index.php')
   })
+
 
 const btnovoatendimento = document.querySelector('#botaonovoatendimento')
 btnovoatendimento.addEventListener('click', ()=>{
