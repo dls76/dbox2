@@ -63,17 +63,20 @@ function cultos() {
         document.querySelector('#cultos').innerHTML = 'Vice-diretor'
     }
     if (datahoje.getDay() == 4) {
-        if ( datahoje.getDate() == 3) {
-            document.querySelector('#cultos').innerHTML = '7h-Eula' + ' &raquo; ' + '10h10-Nailson' + ' &raquo; ' + '13h-Jaqueline' 
+        if ( datahoje.getDate() == 7) {
+            document.querySelector('#cultos').innerHTML = 'Feriado' 
         }
-        if ( datahoje.getDate() == 10) {
-            document.querySelector('#cultos').innerHTML = '7h-Carol ' + ' &raquo; ' + ' 10h10-Malú ' + ' &raquo; ' + ' 13h-Valéria' 
+        if ( datahoje.getDate() == 14) {
+            document.querySelector('#cultos').innerHTML = '7h-Jaque' + ' &raquo; ' + '10h10-Malú' + ' &raquo; ' + '13h-Valéria' 
+        }
+        if ( datahoje.getDate() == 21) {
+            document.querySelector('#cultos').innerHTML = '7h-Eula ' + ' &raquo; ' + ' 10h10-Nailson ' + ' &raquo; ' + ' 13h-Eliane' 
         }
         if ( datahoje.getDate() == 17) {
             document.querySelector('#cultos').innerHTML = '7h-Filipe ' + ' &raquo; ' + '10h10-Katleen ' + ' &raquo; ' + '13h-Allan' 
         }
-        if ( datahoje.getDate() == 24) {
-            document.querySelector('#cultos').innerHTML = '7h-Noemi ' + ' &raquo; ' + '10h10-Sarita ' + ' &raquo; ' + '13h-Eliane' 
+        if ( datahoje.getDate() == 28) {
+            document.querySelector('#cultos').innerHTML = '7h-Pr Leo ' + ' &raquo; ' + '10h10-Sarita ' + ' &raquo; ' + '13h-Pr Leo' 
         }
         if ( datahoje.getDate() == 31) {
             document.querySelector('#cultos').innerHTML = '7h-Fernando ' + ' &raquo; ' + '10h10-Camila ' + ' &raquo; ' + '13h-Drika' 
@@ -81,7 +84,10 @@ function cultos() {
         
     }
     if (datahoje.getDay() == 5) {
-        document.querySelector('#cultos').innerHTML = 'Pr. Leonardo'
+        if (datahoje.getDate() == 8) {
+            document.querySelector('#cultos').innerHTML = 'Recesso'
+        }
+            document.querySelector('#cultos').innerHTML = 'Vigília de jejum e oração'
     }
     if (datahoje.getDay() == 6) {
         document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
@@ -99,23 +105,23 @@ function plantaoDiarioCompensacao() {
     }    
     if (datahoje.getDay() == 1) { 
         document.querySelector('#plantaodiario').innerHTML = 'Douglas'
-        document.querySelector('#nomescomp').innerHTML = 'Manhã: Pr. Vinícius'
+        document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius | ---'
     }
     if (datahoje.getDay() == 2) {
         document.querySelector('#plantaodiario').innerHTML = 'Nailson'
-        document.querySelector('#nomescomp').innerHTML = 'Sem escala'
+        document.querySelector('#nomescomp').innerHTML = '--- | ---'
     }
     if (datahoje.getDay() == 3) { 
         document.querySelector('#plantaodiario').innerHTML = 'Josiane'
-        document.querySelector('#nomescomp').innerHTML = 'M-Jaqueline/Camila ' + ' &raquo; ' + 'T-Katleen/Nailson'
+        document.querySelector('#nomescomp').innerHTML = 'Jaqueline/Camila | Katleen/Nailson'
     }
     if (datahoje.getDay() == 4) { 
         document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
-        document.querySelector('#nomescomp').innerHTML = 'Valéria | Eula (tarde)'
+        document.querySelector('#nomescomp').innerHTML = 'Valéria | Eula'
     }
     if (datahoje.getDay() == 5) { 
         document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta.'
-        document.querySelector('#nomescomp').innerHTML = 'Manhã: Malú/Douglas - Tarde: Josi/Ale/Carol/Sarita'
+        document.querySelector('#nomescomp').innerHTML = 'Malú/Douglas | Josi/Ale/Carol/Sarita'
     }
     if (datahoje.getDay() == 6) { 
         document.querySelector('#plantaodiario').innerHTML = 'Feliz Sábado!'
@@ -285,5 +291,25 @@ function plantaoentrevistas() {
     }
     if (datahoje.getDay() == 5) { 
         document.querySelector('#plantaoentrevistascontent').innerHTML = 'Eula | Malú'
+    }
+}
+
+window.addEventListener('load', oracaopelasescolas)
+function oracaopelasescolas() {
+   
+    if (datahoje.getDay() == 1) { 
+        document.querySelector('#oracao').innerHTML = 'CAFRG & CAAP'
+    }
+    if (datahoje.getDay() == 2) {
+        document.querySelector('#oracao').innerHTML = 'CAAB & CCABR'
+    }
+    if (datahoje.getDay() == 3) { 
+        document.querySelector('#oracao').innerHTML = 'CAPI & CAPGUÁ'
+    }
+    if (datahoje.getDay() == 4) { 
+        document.querySelector('#oracao').innerHTML = 'CASJP & EAUV'
+    }
+    if (datahoje.getDay() == 5) { 
+        document.querySelector('#oracao').innerHTML = 'CAC & DEPTO'
     }
 }
