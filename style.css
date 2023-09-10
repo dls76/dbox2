@@ -343,14 +343,14 @@ main#conteinerhome {
     /* border: 1px solid red; */
 }
 .diadoevento {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bolder;
     letter-spacing: 0;
 }
 .mesdoevento {
     font-weight: bold;
     letter-spacing: 1px;
-    font-size: .9rem;
+    font-size: 1rem;
     padding-top: .2rem;
 }
 .infodoevento {
@@ -359,7 +359,7 @@ main#conteinerhome {
     border-radius: 0 10px 10px 0;
 }
 .titulodoevento {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #6a6a6a;
     white-space: nowrap;
@@ -552,19 +552,23 @@ main#conteinerhome {
     font-weight: 600;
     margin-bottom: 1rem;
 }
-.fecharmodalbox {
-    display: flex;
-    justify-content: flex-end;
-    margin: 2rem 0 0 0;
-}
 #fecharmodal {
-    padding: .7rem 1.4rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
     background-color: #BB2532;
     color: white;
-    border-radius: 10px;
+    font-weight: bolder;
     cursor: pointer;
-    text-align: center;
-    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 50vw;
+    top: 10vh;
+    transform: translateY(-50%);
+    z-index: 100000;    
 }
 .modal div.fechar:hover {
     color: black;
@@ -575,6 +579,11 @@ main#conteinerhome {
 .numerosurgencia {
     color: #BB2532;
     font-weight: bolder;
+}
+#modalurgencias{
+    height: 70vh;
+    overflow-y: scroll;
+    position: relative;
 }
 .footeradm {
     height: 200px;
@@ -882,4 +891,7 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
 }
 .control:hover {
     background-color: #eeeeee;
+}
+.emergenciasul {
+    overflow: auto;
 }
