@@ -588,6 +588,9 @@ main#conteinerhome {
 .footeradm {
     height: 200px;
 }
+#amadomenu, #fonesemergenciadomenu {
+    display: none !important;
+}
 
 /* ============ MEDIA QUERIES =============== */
 @media (max-width: 1290px) {
@@ -595,7 +598,12 @@ main#conteinerhome {
     #botaonovoatendimento {
         display: none;
     }
-    
+    .alert_icons {
+        display: none;
+    }
+    #amadomenu, #fonesemergenciadomenu {
+        display: flex !important;
+    }
     #header {
         margin: 1rem 0 0rem 0;
         width: 92%;margin: auto;padding-left: 0;
