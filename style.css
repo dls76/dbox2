@@ -269,9 +269,6 @@ main#conteinerhome {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     /* border: 1px solid red; */
 }
-.linksuteisbox:nth-of-type(2) {
-    display: none;
-}
 .linksuteis .img:hover {
     background-color: rgb(237, 237, 237);
 }
@@ -299,7 +296,6 @@ main#conteinerhome {
 #bi {
     width: 57px;
 }
-
 #rh {
     width: 20px;
 }
@@ -324,8 +320,9 @@ main#conteinerhome {
     margin: 1rem auto;
     display: grid;
     grid-template-columns: 1fr 3fr;
-}
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
+}
 .datadoevento {
     max-width: 150px;
     min-width: 30px;
@@ -336,15 +333,15 @@ main#conteinerhome {
     padding: .5rem;
     background-color: #6298F5;
     color: #fff;
-}
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
+}
 .diadoevento, .mesdoevento {
     display: flex;
     justify-content: center;
     align-items: center;
     /* border: 1px solid red; */
 }
-
 .diadoevento {
     font-size: 1.3rem;
     font-weight: bolder;
@@ -356,20 +353,18 @@ main#conteinerhome {
     font-size: .9rem;
     padding-top: .2rem;
 }
-
 .infodoevento {
     padding: .5rem;
-    border: 1px solid #6298F5;
+    /* border: 1px solid #6298F5; */
     border-radius: 0 10px 10px 0;
 }
-
 .titulodoevento {
     font-size: 1.2rem;
     font-weight: bold;
     color: #6a6a6a;
     white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .linksdoevento {
     padding-top: .15rem;
@@ -383,11 +378,6 @@ main#conteinerhome {
     border-radius: 20px;
     border: 1px solid rgb(214, 214, 214);
     margin-right: .6rem;
-}
-
-.regressivaevento {
-    color: rgb(186, 186, 186);
-    font-size: smaller;
 }
 .linksdoevento a:hover {
     background-color: gainsboro;
