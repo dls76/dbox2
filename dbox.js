@@ -185,7 +185,7 @@ let route = [
     {data: new Date(2023, 7, 12), tema: 'Quebrando o Silêncio', convidado: ''},
     {data: new Date(2023, 7, 26), tema: 'Route no Way On Fire', convidado: ''},
     {data: new Date(2023, 8, 2), tema: 'Celebração Route', convidado: ''},
-    {data: new Date(2023, 8, 16), tema: 'Setembro Amarelo - Campeonato All Star', convidado: ''},
+    {data: new Date(2023, 8, 16), tema: 'Campeonato All Star', convidado: ''},
     {data: new Date(2023, 8, 30), tema: 'Route Adventure - Trilha', convidado: ''},
     {data: new Date(2023, 9, 7), tema: 'Batismo da Primavera', convidado: ''},
     {data: new Date(2023, 9, 21), tema: 'Futuro e Carreira - De repente 30', convidado: ''},
@@ -276,7 +276,9 @@ btnovoatendimento.addEventListener('click', ()=>{
 
 window.addEventListener('load', plantaoentrevistas)
 function plantaoentrevistas() {
-   
+    if (datahoje.getDay() == 0) { 
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Hoje é domingão!'
+    }
     if (datahoje.getDay() == 1) { 
         document.querySelector('#plantaoentrevistascontent').innerHTML = 'Camila | Daisy'
     }
@@ -292,11 +294,17 @@ function plantaoentrevistas() {
     if (datahoje.getDay() == 5) { 
         document.querySelector('#plantaoentrevistascontent').innerHTML = 'Eula | Malú'
     }
+    if (datahoje.getDay() == 6) { 
+        document.querySelector('#oracao').innerHTML = 'Feliz Sábado!'
+    }
 }
 
 window.addEventListener('load', oracaopelasescolas)
 function oracaopelasescolas() {
-   
+
+    if (datahoje.getDay() == 0) { 
+        document.querySelector('#oracao').innerHTML = 'Hoje é domingão!'
+    }
     if (datahoje.getDay() == 1) { 
         document.querySelector('#oracao').innerHTML = 'CAFRG & CAAP'
     }
@@ -312,4 +320,8 @@ function oracaopelasescolas() {
     if (datahoje.getDay() == 5) { 
         document.querySelector('#oracao').innerHTML = 'CAC & DEPTO'
     }
+    if (datahoje.getDay() == 6) { 
+        document.querySelector('#oracao').innerHTML = 'Feliz Sábado!'
+    }
+
 }

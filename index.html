@@ -60,220 +60,198 @@
             <!-- <i class="fa-solid fa-circle-exclamation alerticon"></i> -->
             <i class="fa-solid fa-shield-halved alerticon" id="fonesurgencias"></i>
         </div>
+
     </header>
-
-    <!-- Barra azul com menus de emergência -->
-    <section class="important">
-
-        <a href="https://sistemas.usb.org.br/ama/index.php" target="_blank" class="cardurgentes">
-            <div class="restricoes">
-                <span class="material-icons">medical_services</span>
-                <div>Emergências (AMA)</div>
-            </div>
-        </a>
-
-        <a href="https://docs.google.com/spreadsheets/d/1BJsdME7Y-h7E7Dpcb3FcA0sVnCHO9R72c89bLrt5G9o/edit#gid=0" target="_blank" class="cardurgentes">
-            <div class="restricoes">
-                <span class="material-icons">info</span>
-                <div>Alunos com restrições</div>
-            </div>
-        </a>
-
-        <a class="cardurgentes" id="fonesurgencias">
-            <div class="restricoes">
-                <span class="material-icons">phone</span>
-                <div>Contatos de Urgência</div>
-            </div>
-        </a>
-        
-
-    </section>
 
     <main id="conteinerhome">
 
-        <!-- ESCALAS -->
+        <!-- escalas -->
         <div class="divhome" id="escalas">           
-
-            <!-- cultos -->
-            <a href="docs/escaladecultos.pdf" target="_blank">
-                
-                <div class="escala" id="escalacultos">
-                    
-                    <div class="icon">
-                        <img src="img/yes.png" alt="">
-                    </div>
-                    <div class="infocultos">
-                        <div class="tituloescala" id="titulocultos">Cultos</div>
-                        <div class="contentescala" id="cultos"></div>
-                        <i class="fa-solid fa-angle-right seta"></i>
-                    </div>
-                
-                </div>
             
-            </a>           
+            <div class="divhometitle">Escalas</div>
 
-            <!-- oração pelas escolas -->
-            <a href="docs/escaladeoracao.pdf" target="_blank">
-                
-                <div class="escala" id="escalaoracao">
+            <div class="conteinerescalas">
+                <!-- cultos -->
+                <a href="docs/escaladecultos.pdf" target="_blank">
                     
-                    <div class="icon">
-                        <img src="img/yes.png" alt="">
-                    </div>
-                    <div class="infocultos">
-                        <div class="tituloescala" id="titulooracao">Oração</div>
-                        <div class="contentescala" id="oracao"></div>
-                        <i class="fa-solid fa-angle-right seta"></i>
-                    </div>
-                
-                </div>
-            
-            </a>    
-
-<!-- plantão de matrículas -->
-            <a href="https://docs.google.com/spreadsheets/d/1S9H7FTswy8WTlA8Gny2SK3K0ySwdDMdOPOxpa1kk0u0/edit#gid=0" target="_blank">
-
-                <div class="escala" id="plantaoentrevistas">
+                    <div class="escala" id="escalacultos">
+                        
+                        <div class="icon">
+                            <img src="img/yes.png" alt="">
+                        </div>
+                        <div class="infocultos">
+                            <div class="tituloescala" id="titulocultos">Cultos</div>
+                            <div class="contentescala" id="cultos"></div>
+                            <i class="fa-solid fa-angle-right seta"></i>
+                        </div>
                     
-                    <div class="icon">
-                        <img src="img/yes.png" alt="">
-                    </div>
-                    <div>
-                        <div class="tituloescala" id="tituloclassesbiblicas">Plantão de Entrevistas</div>
-                        <div class="contentescala" id="plantaoentrevistascontent"></div>
-                        <i class="fa-solid fa-angle-right seta"></i>
                     </div>
                 
-                </div>
-            
-            </a>
+                </a>           
 
-<!-- compensacao -->
-            <a href="https://docs.google.com/spreadsheets/d/1MGUlVMKqtrx2s7F-rD61PugUSQopbXcP85MsT-lSM_I/edit#gid=0" target="_blank">
-                
-                <div class="escala">
+                <!-- oração pelas escolas -->
+                <a href="docs/escaladeoracao.pdf" target="_blank">
                     
-                    <div class="icon">
-                        <img src="img/yes.png" alt="" id="icon-compensacao">
-                    </div>
-                    <div>
-                        <div class="tituloescala" id="titulocompensacao">Compensação</div>
-                        <div class="contentescala" id="nomescomp"></div>
-                        <i class="fa-solid fa-angle-right seta"></i>
-                    </div>
-                
-                </div>
-            </a>
-<!-- plantao_diario -->
-            <a href="https://docs.google.com/spreadsheets/d/12CFog1TGB5rkYrlcAux73_bCYezO5dYTP8iY25rqRiQ/edit#gid=0" target="_blank">
-
-                <div class="escala">
+                    <div class="escala" id="escalaoracao">
+                        
+                        <div class="icon">
+                            <img src="img/yes.png" alt="">
+                        </div>
+                        <div class="infocultos">
+                            <div class="tituloescala" id="titulooracao">Oração</div>
+                            <div class="contentescala" id="oracao"></div>
+                            <i class="fa-solid fa-angle-right seta"></i>
+                        </div>
                     
-                    <div class="icon">
-                        <img src="img/yes.png"alt="" id="icon-plantao-diario">
-                    </div>
-
-                    <div>
-                        <div class="tituloescala">Plantão diário</div>
-                        <div class="contentescala" id="plantaodiario"></div>
-                        <i class="fa-solid fa-angle-right seta"></i>
                     </div>
                 
-                </div>
-            
-            </a>
-<!-- plantao_sexta -->
-            <a href="https://docs.google.com/spreadsheets/d/1J808LDd5tAqG4Qi9ehKcCO9CqjO7XVKJkoJUApMcvxY/edit#gid=0" target="_blank">
+                </a>    
 
-                <div class="escala" id="escalasexta">
+                <!-- plantão de matrículas -->
+                <a href="https://docs.google.com/spreadsheets/d/1S9H7FTswy8WTlA8Gny2SK3K0ySwdDMdOPOxpa1kk0u0/edit#gid=0" target="_blank">
+
+                    <div class="escala" id="plantaoentrevistas">
+                        
+                        <div class="icon">
+                            <img src="img/yes.png" alt="">
+                        </div>
+                        <div>
+                            <div class="tituloescala" id="tituloclassesbiblicas">Plantão de Entrevistas</div>
+                            <div class="contentescala" id="plantaoentrevistascontent"></div>
+                            <i class="fa-solid fa-angle-right seta"></i>
+                        </div>
                     
-                    <div class="icon">
-                        <img src="img/yes.png" alt="">
-                    </div>
-                    <div>
-                        <div class="tituloescala">Plantão sexta</div>
-                        <div class="contentescala" id="plantaosexta"></div>
-                        <i class="fa-solid fa-angle-right seta"></i>
                     </div>
                 
-                </div>
-            </a>
-            <!-- celebra fII -->
-            <!-- <a href="https://docs.google.com/spreadsheets/d/1-020pXSavJ-EBM5eRpbR5FBSZbzU5yHMSNkBo8Rk_HM/edit#gid=0" target="_blank">
+                </a>
 
-                <div class="escala" id="escalacelebra">
+                <!-- compensacao -->
+                <a href="https://docs.google.com/spreadsheets/d/1MGUlVMKqtrx2s7F-rD61PugUSQopbXcP85MsT-lSM_I/edit#gid=0" target="_blank">
                     
-                    <div class="icon">
-                        <img src="img/yes.png" alt="">
-                    </div>
-                    <div>
-                        <div class="tituloescala" id="titulocelebra">Celebra FII-EM</div>
-                        <div class="contentescala" id="celebra">Aguardando escala</div>
-                        <i class="fa-solid fa-angle-right seta"></i>
-                    </div>
-                
-                </div>
-            
-            </a> -->
-            <!-- celebra fi -->
-            <!-- <a href="#" target="_blank">
-
-                <div class="escala" id="escalacelebra1">
+                    <div class="escala">
+                        
+                        <div class="icon">
+                            <img src="img/yes.png" alt="" id="icon-compensacao">
+                        </div>
+                        <div>
+                            <div class="tituloescala" id="titulocompensacao">Compensação</div>
+                            <div class="contentescala" id="nomescomp"></div>
+                            <i class="fa-solid fa-angle-right seta"></i>
+                        </div>
                     
-                    <div class="icon">
-                        <img src="img/yes.png" alt="">
                     </div>
-                    <div>
-                        <div class="tituloescala" id="titulocelebra1">Celebra EI-FI</div>
-                        <div class="contentescala" id="celebra1">Aguardando escala</div>
-                        <i class="fa-solid fa-angle-right seta"></i>
-                    </div>
-                
-                </div>
-            
-            </a> -->
+                </a>
+                <!-- plantao_diario -->
+                <a href="https://docs.google.com/spreadsheets/d/12CFog1TGB5rkYrlcAux73_bCYezO5dYTP8iY25rqRiQ/edit#gid=0" target="_blank">
 
-<!-- Route 77 -->
-            <a href="https://docs.google.com/spreadsheets/d/1rbS7A4S3oJhQwrd6gpaeFfAaHzPkWriVJ6EKSIfCS5Y/edit#gid=0" target="_blank">
+                    <div class="escala">
+                        
+                        <div class="icon">
+                            <img src="img/yes.png"alt="" id="icon-plantao-diario">
+                        </div>
 
-                <div class="escala" id="escalaroute">
+                        <div>
+                            <div class="tituloescala">Plantão diário</div>
+                            <div class="contentescala" id="plantaodiario"></div>
+                            <i class="fa-solid fa-angle-right seta"></i>
+                        </div>
                     
-                    <div class="icon">
-                        <img src="img/yes.png" alt="">
-                    </div>
-                    <div>
-                        <div class="tituloescala" id="tituloroute">Route 77</div>
-                        <div class="contentescala" id="routescala"></div>
-                        <i class="fa-solid fa-angle-right seta"></i>
                     </div>
                 
-                </div>
-            
-            </a>
-<!-- classes bíblicas -->
-            <a href="https://docs.google.com/spreadsheets/d/1a0Cp80vlV2bMqGPjS2z7EyZd7EYzGn-b1FbxbjPPimc/edit#gid=0" target="_blank">
+                </a>
+                <!-- plantao_sexta -->
+                <a href="https://docs.google.com/spreadsheets/d/1J808LDd5tAqG4Qi9ehKcCO9CqjO7XVKJkoJUApMcvxY/edit#gid=0" target="_blank">
 
-                <div class="escala" id="classesbiblicas">
+                    <div class="escala" id="escalasexta">
+                        
+                        <div class="icon">
+                            <img src="img/yes.png" alt="">
+                        </div>
+                        <div>
+                            <div class="tituloescala">Plantão sexta</div>
+                            <div class="contentescala" id="plantaosexta"></div>
+                            <i class="fa-solid fa-angle-right seta"></i>
+                        </div>
                     
-                    <div class="icon">
-                        <img src="img/yes.png" alt="">
                     </div>
-                    <div>
-                        <div class="tituloescala" id="tituloclassesbiblicas">Classes Bíblicas</div>
-                        <div class="contentescala" id="classesbiblicascontent"></div>
-                        <i class="fa-solid fa-angle-right seta"></i>
+                </a>
+                <!-- celebra fII -->
+                <!-- <a href="https://docs.google.com/spreadsheets/d/1-020pXSavJ-EBM5eRpbR5FBSZbzU5yHMSNkBo8Rk_HM/edit#gid=0" target="_blank">
+
+                    <div class="escala" id="escalacelebra">
+                        
+                        <div class="icon">
+                            <img src="img/yes.png" alt="">
+                        </div>
+                        <div>
+                            <div class="tituloescala" id="titulocelebra">Celebra FII-EM</div>
+                            <div class="contentescala" id="celebra">Aguardando escala</div>
+                            <i class="fa-solid fa-angle-right seta"></i>
+                        </div>
+                    
                     </div>
                 
-                </div>
-            
-            </a>
+                </a> -->
+                <!-- celebra fi -->
+                <!-- <a href="#" target="_blank">
 
-           
-            
+                    <div class="escala" id="escalacelebra1">
+                        
+                        <div class="icon">
+                            <img src="img/yes.png" alt="">
+                        </div>
+                        <div>
+                            <div class="tituloescala" id="titulocelebra1">Celebra EI-FI</div>
+                            <div class="contentescala" id="celebra1">Aguardando escala</div>
+                            <i class="fa-solid fa-angle-right seta"></i>
+                        </div>
+                    
+                    </div>
+                
+                </a> -->
+
+                <!-- Route 77 -->
+                <a href="https://docs.google.com/spreadsheets/d/1rbS7A4S3oJhQwrd6gpaeFfAaHzPkWriVJ6EKSIfCS5Y/edit#gid=0" target="_blank">
+
+                    <div class="escala" id="escalaroute">
+                        
+                        <div class="icon">
+                            <img src="img/yes.png" alt="">
+                        </div>
+                        <div>
+                            <div class="tituloescala" id="tituloroute">Route 77</div>
+                            <div class="contentescala" id="routescala"></div>
+                            <i class="fa-solid fa-angle-right seta"></i>
+                        </div>
+                    
+                    </div>
+                
+                </a>
+                <!-- classes bíblicas -->
+                <a href="https://docs.google.com/spreadsheets/d/1a0Cp80vlV2bMqGPjS2z7EyZd7EYzGn-b1FbxbjPPimc/edit#gid=0" target="_blank">
+
+                    <div class="escala" id="classesbiblicas">
+                        
+                        <div class="icon">
+                            <img src="img/yes.png" alt="">
+                        </div>
+                        <div>
+                            <div class="tituloescala" id="tituloclassesbiblicas">Classes Bíblicas</div>
+                            <div class="contentescala" id="classesbiblicascontent"></div>
+                            <i class="fa-solid fa-angle-right seta"></i>
+                        </div>
+                    
+                    </div>
+                
+                </a>
+            </div>
+  
         </div>
 
-        <!-- LINKS RÁPIDOS -->
+        <!-- links rápidos -->
         <div class="divhome" id="divhomelinks">
+
+            <div class="divhometitle">Links Rápidos</div>
 
             <div class="linksuteis">
 
@@ -403,18 +381,24 @@
 
                 </div>
 
+                <div class="conteineraniversariantes">
+
+                    <div class="aniversariantes" id="aniver">
+                        <a href="aniversariantes-list.html" id="bt-aniver" target="_blank"></a>
+                        <div class="box-aniver-img" id="aniver-img">
+                            <!-- <div class="aniversariante" id="aniversariante">
+                                <img src="img/anivImg/dls.png">
+                                <div class="aniver-nome">Douglas Leal dos Santos</div>
+                                <div class="aniver-funcao">Diretor</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- Próximos Eventos -->
                 <div class="linksuteisbox" id="linksproxeventos"> 
 
-                
-                    <a href="docs/semanadapatria.pdf" target="_blank">
-                        <div class="img">
-                            <img src="img/brazil.png" alt="">
-                            <div class="legenda-links">Semana da Pátria</div>
-                        </div>
-                    </a>
-
-                    <a href="https://docs.google.com/document/d/1QatBFtlWLws1wtQ4mt38DVwcdi_vdeUtoBMEc4iV9mQ/edit?usp=sharing" target="_blank">
+                    <!-- <a href="https://docs.google.com/document/d/1QatBFtlWLws1wtQ4mt38DVwcdi_vdeUtoBMEc4iV9mQ/edit?usp=sharing" target="_blank">
                         <div class="img">
                             <img src="img/letter-d-yellow.png" alt="">
                             <div class="legenda-links">Dia D</div>
@@ -461,7 +445,7 @@
                             <img src="img/telephone-booth.png" alt="">
                             <div class="legenda-links">Intercâmbio</div>
                         </div>
-                    </a>
+                    </a> -->
 
                     
 
@@ -473,8 +457,10 @@
 
         </div>
 
-        <!-- CALENDÁRIO -->
+        <!-- calendário descritivo -->
         <div class="divhome" id="divhomecalendario">
+            <div class="divhometitle">Calendário Descritivo</div>
+
             <div class="box-cal-num">
 
                 <div class="mescalbox">
@@ -540,529 +526,247 @@
             </div>
         </div>
 
-        <!-- ANIVERSARIANTES -->
-        <div class="divhome" id="aniversariantes">
+        <!-- próximos eventos -->
+        <div class="divhome">
 
-            <div class="conteineraniversariantes">
+            <div class="divhometitle">Próximos Eventos</div>
 
-            <div class="aniversariantes" id="aniver">
-                <a href="aniversariantes-list.html" id="bt-aniver" target="_blank"></a>
-                <div class="box-aniver-img" id="aniver-img">
-                    <!-- <div class="aniversariante" id="aniversariante">
-                        <img src="img/anivImg/dls.png">
-                        <div class="aniver-nome">Douglas Leal dos Santos</div>
-                        <div class="aniver-funcao">Diretor</div>
-                    </div> -->
+            <div class="next-event-conteiner">
+                
+                <div class="nextevent">
+
+                    <div class="datadoevento">
+                        <div class="diadoevento">17</div>
+                        <div class="mesdoevento">Set</div>
+                    </div>
+
+                    <div class="infodoevento">
+
+                        <div class="titulodoevento">Dia D</div>
+                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                        <div class="linksdoevento">
+                            <a href="https://docs.google.com/document/d/1QatBFtlWLws1wtQ4mt38DVwcdi_vdeUtoBMEc4iV9mQ/edit" target="_blank">Planejamento</a>
+                            <a href="https://docs.google.com/spreadsheets/d/1biagHFuL-oY9Fvymo3W1_hLPLKuGTEji0nHzY2fHhVQ/edit#gid=0" target="_blank">Orçamento</a>
+                            <a href="" target="_blank">Programa</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-           
-            
 
+
+                <div class="nextevent">
+
+                    <div class="datadoevento">
+                        <div class="diadoevento">17</div>
+                        <div class="mesdoevento">Set</div>
+                    </div>
+
+                    <div class="infodoevento">
+
+                        <h1 class="titulodoevento">Fair Play</h1>
+                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                        <div class="linksdoevento">
+                            <a href="">Orçamento</a>
+                            <a href="">Programa</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nextevent">
+
+                    <div class="datadoevento">
+                        <div class="diadoevento">08</div>
+                        <div class="mesdoevento">Out</div>
+                    </div>
+
+                    <div class="infodoevento">
+
+                        <h1 class="titulodoevento">Segundo Dia D</h1>
+                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                        <div class="linksdoevento">
+                            <a href="">Orçamento</a>
+                            <a href="">Programa</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="nextevent">
+
+                    <div class="datadoevento">
+                        <div class="diadoevento">13</div>
+                        <div class="mesdoevento">Out</div>
+                    </div>
+
+                    <div class="infodoevento">
+
+                        <h1 class="titulodoevento">Dia do Professor</h1>
+                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                        <div class="linksdoevento">
+                            <a href="">Orçamento</a>
+                            <a href="">Programa</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="nextevent">
+
+                    <div class="datadoevento">
+                        <div class="diadoevento">12</div>
+                        <div class="mesdoevento">Dez</div>
+                    </div>
+
+                    <div class="infodoevento">
+
+                        <h1 class="titulodoevento">Formatura Ed. infantil</h1>
+                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                        <div class="linksdoevento">
+                            <a href="">Orçamento</a>
+                            <a href="">Programa</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nextevent">
+
+                    <div class="datadoevento">
+                        <div class="diadoevento">19</div>
+                        <div class="mesdoevento">Dez</div>
+                    </div>
+
+                    <div class="infodoevento">
+
+                        <h1 class="titulodoevento">Formatura 9º e EM</h1>
+                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                        <div class="linksdoevento">
+                            <a href="">Orçamento</a>
+                            <a href="">Programa</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nextevent">
+
+                    <div class="datadoevento">
+                        <div class="diadoevento">05</div>
+                        <div class="mesdoevento">Mai</div>
+                    </div>
+
+                    <div class="infodoevento">
+
+                        <h1 class="titulodoevento">Intercâmbio Internacional</h1>
+                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                        <div class="linksdoevento">
+                            <a href="https://docs.google.com/spreadsheets/d/1fszaXuiFUTxFFyIlyPBH5JAJCgAijxE1LJXaxdFa80k/edit#gid=0" target="_blank">Interessados</a>
+                            <!-- <a href="">Programa</a> -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+
+            </div>
 
         </div>
 
-
-        
-
-      
-
-       
-
-       
-
-
-
-        <!-- Horários -->
-         <!-- <div class="divhome" id="divhomehorarios">
-
-            <div class="cardhorario" id="t61">
-                
-                <div class="turma">61</div>
-                
-                <div class="horariofoto">
-                    <img src="img/acs.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Denise</div>
-                    <div class="horariodisciplina">Matemática</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t62">
-                
-                <div class="turma">62</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/abril/dielen.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Alessandra</div>
-                    <div class="horariodisciplina">Ciências</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t63">
-                
-                <div class="turma">63</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/abril/andre.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Luis Felipe</div>
-                    <div class="horariodisciplina">Religião</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t71">
-                
-                <div class="turma">71</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/maio/wilson.jpg" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Wilson</div>
-                    <div class="horariodisciplina">História</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t72">
-                
-                <div class="turma">72</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/maio/jaque.jpg" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Jaqueline</div>
-                    <div class="horariodisciplina">Redação</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t73">
-                
-                <div class="turma">73</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/abril/lucaslima.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Hermes</div>
-                    <div class="horariodisciplina">Matemática</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t81">
-                
-                <div class="turma">81</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/abril/anaclaudia.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Elisa</div>
-                    <div class="horariodisciplina">Química</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t82">
-                
-                <div class="turma">82</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/abril/jack.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Jackelini</div>
-                    <div class="horariodisciplina">Redação</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t83">
-                
-                <div class="turma">83</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/abril/elaine.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Elaine</div>
-                    <div class="horariodisciplina">Portugês</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t91">
-                
-                <div class="turma">91</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/maio/elisa.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Elisa</div>
-                    <div class="horariodisciplina">Química</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t92">
-                
-                <div class="turma">92</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/maio/patriciamaria.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Guilherme/Patrícia</div>
-                    <div class="horariodisciplina">Ed. Física</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t93">
-                
-                <div class="turma">93</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/maio/fernando.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Fernando</div>
-                    <div class="horariodisciplina">Física</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t111">
-                
-                <div class="turma">111</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/abril/sandranascimento.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Scheyla</div>
-                    <div class="horariodisciplina">Inglês</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t112">
-                
-                <div class="turma">112</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/maio/rodrigo.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Guilherme</div>
-                    <div class="horariodisciplina">Religião</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t121">
-                
-                <div class="turma">121</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/abril/andre.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Hermes</div>
-                    <div class="horariodisciplina">Matemática</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-
-            <div class="cardhorario" id="t131">
-                
-                <div class="turma">131</div>
-                
-                <div class="horariofoto">
-                    <img src="img/anivImg/abril/josiele.png" alt="">
-                </div>
-                
-                <div class="horarioinfo">
-                    <div class="nomeprof">Lia</div>
-                    <div class="horariodisciplina">Biologia</div>
-                </div>
-                
-                <div class="horariotime">
-                    <span>16:25</span>
-                </div>
-
-                <div class="proxhorario">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                
-
-            </div>
-           
-        </div>  -->
     </main>  
     
 </div> <!-- fecha .conteinergeral-->
       
-    
-
 <div class="body">
             
-        <div class="title">HORÁRIOS</div>
+    <div class="title">HORÁRIOS</div>
         
-        <div class="conteiner">
+    <div class="conteiner">
 
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <!-- <h2 class="h2">Infantil ao 5º</h2>
-                        <a class="horarios" href="horarios/turmas-manha-peq.pdf" target="_blank">Manhã</a>
-                        <a class="horarios" href="horarios/turmas-tarde-peq.pdf" target="_blank">Tarde</a>
-                        <a class="horarios" href="horarios/parque.pdf" target="_blank">Parque</a>
-                        <a class="horarios" href="horarios/recreios-peq.pdf" target="_blank">Recreio</a>
-                        <a class="horarios" href="horarios/reforco-e-oficinas-peq.pdf" target="_blank">Reforço e Oficinas</a>
-                        <a class="horarios" href="docs/regentes.pdf" target="_blank">Link Teste</a> -->
-                    </div>
-                </div>
-                <div class="face face2">
-                    <h2>Infantil ao 5º</h2>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <!-- <h2 class="h2">Infantil ao 5º</h2>
+                    <a class="horarios" href="horarios/turmas-manha-peq.pdf" target="_blank">Manhã</a>
+                    <a class="horarios" href="docs/regentes.pdf" target="_blank">Link Teste</a> -->
                 </div>
             </div>
-            
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <!-- <h2 class="h2">6º ao Médio</h2> -->
-                        
-                        <!-- <a class="horarios" href="" target="_blank">Manhã (geral)</a>
-                        <a class="horarios" href="" target="_blank">Manhã (turmas)</a>
-                        <a class="horarios" href="" target="_blank">Tarde (geral)</a>
-                        <a class="horarios" href="" target="_blank">Tarde (turmas)</a> -->
-                        <a class="horarios" href="docs/horariosturmas.pdf" target="_blank">Turmas</a>
-                        <a class="horarios" href="docs/horariosprofessores3bim.pdf" target="_blank">Professores</a>
-                        <!-- <a class="horarios" href="" target="_blank">Reforço 6º ao 8º</a> -->
-                    </div>
-                </div>
-                <div class="face face2">
-                    <h2>6º ao Médio</h2>
-                </div>
+            <div class="face face2">
+                <h2>Infantil ao 5º</h2>
             </div>
-            
-            <div class="card">
-                
-                <div class="face face1">
-                    
-                    <div class="content">
-                        
-                        <!-- <h2 class="h2">Outros horários</h2>
-                        
-                        <a class="horarios" href="horarios/escolinhas.pdf" target="_blank">Escolinhas</a>
-                        
-                        <a class="horarios" href="horarios/robótica.pdf" target="_blank">Robótica</a>
-                        
-                        <a class="horarios" href="horarios/maker.pdf" target="_blank">Sala Maker</a>
-                        
-                        <details id="ingles">
-                            <summary>Inglês</summary>
-                            <a href="">Horários</a>
-                            <a href="docs/ingles/freshman.pdf">Freshman</a>
-                            <a href="docs/ingles/kids.pdf">Kids</a>
-                            <a href="docs/ingles/teens.pdf">Teens</a>
-                        </details> -->
-                        
-                        
-                    </div>
-                </div>
-                <div class="face face2">
-                    <h2>Outros</h2>
-                </div>
-            </div>
-        
-    </div>
-    
-<div class="bgmodal" id="bgmodal">
-    
-    <div class="modal" id="modal">
-        
-        <h1>Fones de Urgência</h1>
-        <ul>
-            <li><span class="numerosurgencia">190</span> - Polícia</li>
-            <li><span class="numerosurgencia">192</span> - SAMU</li>
-            <li><span class="numerosurgencia">193</span> - Bombeiros</li>
-            <li><span class="numerosurgencia">156</span> - Conselho Tutelar (pós 18h e final de semana)</li>
-            <li><span class="numerosurgencia">3313-5558</span> - Conselho Tutelar (8h às 18h - Beth)</li>
-            <li><span class="numerosurgencia">9.9861-0767</span> - Sekron</li>
-            <li><span class="numerosurgencia">9.9682-5103</span> - Assessoria de Imprensa (Jordana)</li>
-            <li><span class="numerosurgencia">9.9681-9803</span> - Dr. Rodrigo Hahn (Advogado ASP)</li>
-        </ul>
-        <div class="fecharmodalbox">
-            <div class="fechar" id="fecharmodal">Fechar</div>
         </div>
+        
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <!-- <h2 class="h2">6º ao Médio</h2> -->
+                    
+                    <!-- <a class="horarios" href="" target="_blank">Manhã (geral)</a>
+                    <a class="horarios" href="" target="_blank">Manhã (turmas)</a>
+                    <a class="horarios" href="" target="_blank">Tarde (geral)</a>
+                    <a class="horarios" href="" target="_blank">Tarde (turmas)</a> -->
+                    <a class="horarios" href="docs/horariosturmas.pdf" target="_blank">Turmas</a>
+                    <a class="horarios" href="docs/horariosprofessores3bim.pdf" target="_blank">Professores</a>
+                    <!-- <a class="horarios" href="" target="_blank">Reforço 6º ao 8º</a> -->
+                </div>
+            </div>
+            <div class="face face2">
+                <h2>6º ao Médio</h2>
+            </div>
+        </div>
+        
+        <div class="card">
+            
+            <div class="face face1">
+                
+                <div class="content">
+                    
+                    <!-- <h2 class="h2">Outros horários</h2>
+                    
+                    <a class="horarios" href="horarios/escolinhas.pdf" target="_blank">Escolinhas</a>
+                    
+                    <a class="horarios" href="horarios/robótica.pdf" target="_blank">Robótica</a>
+                    
+                    <a class="horarios" href="horarios/maker.pdf" target="_blank">Sala Maker</a>
+                    
+                    <details id="ingles">
+                        <summary>Inglês</summary>
+                        <a href="">Horários</a>
+                        <a href="docs/ingles/freshman.pdf">Freshman</a>
+                        <a href="docs/ingles/kids.pdf">Kids</a>
+                        <a href="docs/ingles/teens.pdf">Teens</a>
+                    </details> -->
+                    
+                    
+                </div>
+            </div>
+            <div class="face face2">
+                <h2>Outros</h2>
+            </div>
+        </div>
+    
     </div>
     
-    
-</div>
+    <div class="bgmodal" id="bgmodal">
+        
+        <div class="modal" id="modal">
+            
+            <h1>Fones de Urgência</h1>
+            <ul>
+                <li><span class="numerosurgencia">190</span> - Polícia</li>
+                <li><span class="numerosurgencia">192</span> - SAMU</li>
+                <li><span class="numerosurgencia">193</span> - Bombeiros</li>
+                <li><span class="numerosurgencia">156</span> - Conselho Tutelar (pós 18h e final de semana)</li>
+                <li><span class="numerosurgencia">3313-5558</span> - Conselho Tutelar (8h às 18h - Beth)</li>
+                <li><span class="numerosurgencia">9.9861-0767</span> - Sekron</li>
+                <li><span class="numerosurgencia">9.9682-5103</span> - Assessoria de Imprensa (Jordana)</li>
+                <li><span class="numerosurgencia">9.9681-9803</span> - Dr. Rodrigo Hahn (Advogado ASP)</li>
+            </ul>
+            <div class="fecharmodalbox">
+                <div class="fechar" id="fecharmodal">Fechar</div>
+            </div>
+        </div>
+        
+        
+    </div>
 
 </div>
 
