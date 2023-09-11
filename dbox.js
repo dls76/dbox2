@@ -325,3 +325,14 @@ function oracaopelasescolas() {
     }
 
 }
+
+// Limitar caracteres em um elemento
+
+// const letters = document.querySelectorAll('.titulodoevento')
+// const limit = 28
+
+// for (let l of letters) {
+//     const aboveLimit = l.innerText.length > limit
+//     const dotsOrEmpty = aboveLimit ? '...' : ''
+//     l.innerText = l.innerText.substring(0, limit) + dotsOrEmpty
+// }
