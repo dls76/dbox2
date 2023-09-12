@@ -97,6 +97,7 @@ let eventos = [
     {data1: new Date(2023, 9, 23), data2: new Date(2023, 9, 3), descritivo: "Avaliação PAAEB – 5º ano, 9º ano e 2ª EM - Sugestão ASP (26 a", cal: "cac", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 9, 24), data2: new Date(2023, 9, 24), descritivo: "Rumo ao EM - PAIS", cal: "cac", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 9, 26), data2: new Date(2023, 9, 26), descritivo: "Aulão Unificado - Terceirão - Depende da data do Enem", cal: "cac", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 9, 28), data2: new Date(2023, 9, 28), descritivo: "Noite Esportiva - Clube Aventureiros Arautos Kids", cal: "cac", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 9, 31), data2: new Date(2023, 9, 31), descritivo: "Rumo ao 6º TMA", cal: "cac", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 9, 30), data2: new Date(2023, 9, 31), descritivo: "ECO - Encontro de Coordes e Orients - Presencial", cal: "cac", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 9, 31), data2: new Date(2023, 9, 31), descritivo: "Data limite para a regularização dos registros dos conteúdos do mês, no SAD", cal: "cac", resp: "", foto: "", detalhes: ""},
