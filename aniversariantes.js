@@ -36,6 +36,15 @@ const pessoas = [
     {nome: "Rafaela Lourenco de Mello", dia: 25, mes: 8, ano: 1990, funcao: "Função", foto:"", nascimento: new Date()},
     {nome: "Daniel Faria Filho", dia: 26, mes: 8, ano: 1963, funcao: "Função", foto:"", nascimento: new Date()},
     {nome: "Vinicius Fernando Serain", dia: 27, mes: 8, ano: 1990, funcao: "Pastoral", foto:"", nascimento: new Date()},
+
+    //OUTUBRO
+    {nome: "Daisy Karin Silva Ferreira", dia: 6, mes: 9, ano: 1993, funcao: "Função", foto:"", nascimento: new Date()},
+    {nome: "Larissa Cardoso de Franca Goncalves", dia: 2, mes: 9, ano: 1980, funcao: "Monitor", foto:"", nascimento: new Date()},
+    {nome: "Gisele Cordeiro da Silva", dia: 11, mes: 9, ano: 1988, funcao: "Função", foto:"", nascimento: new Date()},
+    {nome: "Rafael Guilherme Palma Silva", dia: 13, mes: 9, ano: 1988, funcao: "Função", foto:"", nascimento: new Date()},
+    {nome: "Rafaela Lourenco de Mello", dia: 25, mes: 9, ano: 1990, funcao: "Função", foto:"", nascimento: new Date()},
+    {nome: "Daniel Faria Filho", dia: 26, mes: 9, ano: 1963, funcao: "Função", foto:"", nascimento: new Date()},
+    {nome: "Vinicius Fernando Serain", dia: 27, mes: 9, ano: 1990, funcao: "Pastoral", foto:"", nascimento: new Date()},
     
 ]
 
