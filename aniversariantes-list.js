@@ -11,7 +11,7 @@ function loadAniversariantes() {
 
             let h1 = document.querySelector('#h1-aniversariantes')
             h1.classList.add('h1Aniver')
-            h1.innerHTML = "Aniversariantes de "+ mss[dataAtual.getMonth()]
+            h1.innerHTML = "Aniversariantes "+ mss[dataAtual.getMonth()]
 
             let main = document.querySelector('#main-aniversariantes')
             main.classList.add('mainAniver')

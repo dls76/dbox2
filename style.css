@@ -340,7 +340,6 @@ main#conteinerhome {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
 }
 .diadoevento {
     font-size: 1rem;
@@ -403,7 +402,9 @@ main#conteinerhome {
     background: #e7e7e7; 
   }
 
-/* SEÇÃO HORÁRIOS */
+
+  
+/* HORÁRIOS */
 .body {
     margin: 2rem 0 0 0;
     padding: 0 0 5rem 0;    
@@ -505,18 +506,7 @@ main#conteinerhome {
 .card:nth-child(2) .horarios:hover {
     color: #64D488;
 }
-#ingles summary {
-    color: rgb(77, 77, 77);
-    font-weight: normal;
-}
-#ingles summary:hover {
-    color: #E42C8A;
-}
-#ingles a {
-    display: block;
-    padding: 4px 10px;
-    color: gray;
-}
+
 
 /* ============ MODAL =========== */
 .bgmodal {

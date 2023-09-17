@@ -29,13 +29,13 @@ const pessoas = [
     {nome: "Laís Daniele dos Santos", dia: 28, mes: 7, ano: 2001, funcao: "Auxiliar Contraturno", foto:"img/anivImg/Lais.jpg", nascimento: new Date()},
     
     //SETEMBRO
-    {nome: "Renata Brasil Lima", dia: 1, mes: 8, ano: 1993, funcao: "Função", foto:"", nascimento: new Date()},
-    {nome: "Ingo Iwankiw", dia: 2, mes: 8, ano: 1980, funcao: "Monitor", foto:"", nascimento: new Date()},
-    {nome: "Felipe Guilherme Lima Bueno da Silva", dia: 11, mes: 8, ano: 1988, funcao: "Função", foto:"", nascimento: new Date()},
-    {nome: "Rafael Guilherme Palma Silva", dia: 13, mes: 8, ano: 1988, funcao: "Função", foto:"", nascimento: new Date()},
-    {nome: "Rafaela Lourenco de Mello", dia: 25, mes: 8, ano: 1990, funcao: "Função", foto:"", nascimento: new Date()},
-    {nome: "Daniel Faria Filho", dia: 26, mes: 8, ano: 1963, funcao: "Função", foto:"", nascimento: new Date()},
-    {nome: "Vinicius Fernando Serain", dia: 27, mes: 8, ano: 1990, funcao: "Pastoral", foto:"", nascimento: new Date()},
+    {nome: "Renata Brasil Lima", dia: 1, mes: 8, ano: 1993, funcao: "Função", foto:"img/anivImg/user.png", nascimento: new Date()},
+    {nome: "Ingo Iwankiw", dia: 2, mes: 8, ano: 1980, funcao: "Monitor", foto:"img/anivImg/user.png", nascimento: new Date()},
+    {nome: "Felipe Guilherme Lima Bueno da Silva", dia: 11, mes: 8, ano: 1988, funcao: "Função", foto:"img/anivImg/user.png", nascimento: new Date()},
+    {nome: "Rafael Guilherme Palma Silva", dia: 13, mes: 8, ano: 1988, funcao: "Função", foto:"img/anivImg/user.png", nascimento: new Date()},
+    {nome: "Rafaela Lourenco de Mello", dia: 25, mes: 8, ano: 1990, funcao: "Função", foto:"img/anivImg/user.png", nascimento: new Date()},
+    {nome: "Daniel Faria Filho", dia: 26, mes: 8, ano: 1963, funcao: "Função", foto:"img/anivImg/user.png", nascimento: new Date()},
+    {nome: "Vinicius Fernando Serain", dia: 27, mes: 8, ano: 1990, funcao: "Pastoral", foto:"img/anivImg/user.png", nascimento: new Date()},
 
     //OUTUBRO
     {nome: "Daisy Karin Silva Ferreira", dia: 6, mes: 9, ano: 1993, funcao: "Função", foto:"", nascimento: new Date()},

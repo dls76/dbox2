@@ -14,18 +14,22 @@ body {
 #anivLeft, #anivRight {
     font-size: 2rem;
     cursor: pointer;
-    padding: 1rem 1.3rem;
     transition: .4s;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    color: rgb(70, 70, 70);
 }
 
 #anivLeft:hover, #anivRight:hover {
-    background-color: #dedede;
+    cursor: pointer;
+    color: black;
 }
 
 .mainAniver {
     box-sizing: border-box;
-    margin: 8rem auto;
+    margin: 2rem auto;
     width: 60%;
     height: 600px;
     display: flex;
@@ -34,7 +38,13 @@ body {
 
 #headeraniversarianteslist {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding: 2rem 0 0 0;
+}
+
+.h1Aniver {
+    font-size: 2rem;
+    padding: 1rem;
 }
 
 .linha {
@@ -63,9 +73,9 @@ body {
 }
 img {
     border-radius: 50%;
-    width: 55px;
+    width: 2.5rem;
     /* border: 2px solid #213669; */
-    border: 3px solid #cdcdcd;
+    /* border: 3px solid #cdcdcd; */
 }
 .box-infoPessoa {
     padding-left: 10px;
