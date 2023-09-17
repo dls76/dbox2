@@ -731,21 +731,26 @@ main#conteinerhome {
 
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: .8rem;
+    border: 1px solid lightgray;
+    color: #253B73;
+    font-weight: 600;
+    transition: ease .3s;
 }
 .linksprincipais a:hover {
-    background-color: lightgray;
+    background-color: #253B73;
+    color: #fff;
 }
 .conteinerhorarios ul li {
     list-style: none;
 }
 #novoatendimento {
     color: #fff;
-    background-color: #253B73;
+    background-color: #BB2532;
 }
 #novoatendimento:hover {
-    background-color: #001340;
+    background-color: #851821;
     color: #fff;
 }
 #arm img {
