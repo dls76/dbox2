@@ -29,22 +29,25 @@ const pessoas = [
     {nome: "Laís Daniele dos Santos", dia: 28, mes: 7, ano: 2001, funcao: "Auxiliar Contraturno", foto:"img/anivImg/Lais.jpg", nascimento: new Date()},
     
     //SETEMBRO
-    {nome: "Renata Brasil Lima", dia: 1, mes: 8, ano: 1993, funcao: "Função", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Ingo Iwankiw", dia: 2, mes: 8, ano: 1980, funcao: "Monitor", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Felipe Guilherme Lima Bueno da Silva", dia: 11, mes: 8, ano: 1988, funcao: "Função", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Rafael Guilherme Palma Silva", dia: 13, mes: 8, ano: 1988, funcao: "Função", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Rafaela Lourenco de Mello", dia: 25, mes: 8, ano: 1990, funcao: "Função", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Daniel Faria Filho", dia: 26, mes: 8, ano: 1963, funcao: "Função", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Vinicius Fernando Serain", dia: 27, mes: 8, ano: 1990, funcao: "Pastoral", foto:"img/anivImg/user.png", nascimento: new Date()},
+    {nome: "Renata Brasil Lima", dia: 1, mes: 8, ano: 1993, funcao: "Professor(a)", foto:"img/anivImg/Renata.jpg", nascimento: new Date()},
+    {nome: "Ingo Iwankiw", dia: 2, mes: 8, ano: 1980, funcao: "Monitor(a)", foto:"img/anivImg/Ingo.jpg", nascimento: new Date()},
+    {nome: "Felipe Guilherme Lima Bueno da Silva", dia: 11, mes: 8, ano: 1988, funcao: "Professor(a)", foto:"img/anivImg/Felipe.jpg", nascimento: new Date()},
+    {nome: "Rafael Guilherme Palma Silva", dia: 13, mes: 8, ano: 1988, funcao: "Professor(a)", foto:"img/anivImg/Rafael.jpg", nascimento: new Date()},
+    {nome: "Rafaela Lourenco de Mello", dia: 25, mes: 8, ano: 1990, funcao: "Auxiliar", foto:"img/anivImg/Rafaela.jpg", nascimento: new Date()},
+    {nome: "Daniel Faria Filho", dia: 26, mes: 8, ano: 1963, funcao: "Monitor(a)", foto:"img/anivImg/Daniel.jpg", nascimento: new Date()},
+    {nome: "Vinicius Fernando Serain", dia: 27, mes: 8, ano: 1990, funcao: "Pastoral", foto:"img/anivImg/Vinicius.jpg", nascimento: new Date()},
 
     //OUTUBRO
-    {nome: "Daisy Karin Silva Ferreira", dia: 6, mes: 9, ano: 1993, funcao: "Função", foto:"", nascimento: new Date()},
-    {nome: "Larissa Cardoso de Franca Goncalves", dia: 2, mes: 9, ano: 1980, funcao: "Monitor", foto:"", nascimento: new Date()},
-    {nome: "Gisele Cordeiro da Silva", dia: 11, mes: 9, ano: 1988, funcao: "Função", foto:"", nascimento: new Date()},
-    {nome: "Rafael Guilherme Palma Silva", dia: 13, mes: 9, ano: 1988, funcao: "Função", foto:"", nascimento: new Date()},
-    {nome: "Rafaela Lourenco de Mello", dia: 25, mes: 9, ano: 1990, funcao: "Função", foto:"", nascimento: new Date()},
-    {nome: "Daniel Faria Filho", dia: 26, mes: 9, ano: 1963, funcao: "Função", foto:"", nascimento: new Date()},
-    {nome: "Vinicius Fernando Serain", dia: 27, mes: 9, ano: 1990, funcao: "Pastoral", foto:"", nascimento: new Date()},
+    {nome: "Daisy Karin Silva Ferreira", dia: 6, mes: 9, ano: 1993, funcao: "Matrículas", foto:"img/anivImg/", nascimento: new Date()},
+    {nome: "Larissa Cardoso de Franca Goncalves", dia: 6, mes: 9, ano: 1987, funcao: "Professor(a)", foto:"img/anivImg/", nascimento: new Date()},
+    {nome: "Gisele Cordeiro da Silva", dia: 9, mes: 9, ano: 1984, funcao: "Tutor(a)", foto:"img/anivImg/", nascimento: new Date()},
+    {nome: "Jaqueline Marcia Hoffmeister Senko", dia: 9, mes: 9, ano: 1980, funcao: "Coord(a) Pedagógico(a)", foto:"img/anivImg/", nascimento: new Date()},
+    {nome: "Joice Mari da Silva Pereira", dia: 10, mes: 9, ano: 1992, funcao: "Professor(a)", foto:"img/anivImg/", nascimento: new Date()},
+    {nome: "Douglas Frohlich Reded", dia: 19, mes: 9, ano: 1992, funcao: "Ti", foto:"img/anivImg/", nascimento: new Date()},
+    {nome: "Silmara de Lima Grochka", dia: 19, mes: 9, ano: 1993, funcao: "Zelador(a)", foto:"img/anivImg/", nascimento: new Date()},
+    {nome: "Isabele Carla dos Santos", dia: 24, mes: 9, ano: 2000, funcao: "Monitor(a)", foto:"img/anivImg/", nascimento: new Date()},
+    {nome: "Carmem Aparecida Abolis da Silva", dia: 25, mes: 9, ano: 1982, funcao: "Professor(a)", foto:"img/anivImg/", nascimento: new Date()},
+    {nome: "Rosineide de Souza Westphal", dia: 25, mes: 9, ano: 1982, funcao: "Monitor(a)", foto:"img/anivImg/", nascimento: new Date()},
     
 ]
 

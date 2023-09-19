@@ -109,7 +109,7 @@ function plantaoDiarioCompensacao() {
     }
     if (datahoje.getDay() == 2) {
         document.querySelector('#plantaodiario').innerHTML = 'Nailson'
-        document.querySelector('#nomescomp').innerHTML = '--- | ---'
+        document.querySelector('#nomescomp').innerHTML = 'Sem escala'
     }
     if (datahoje.getDay() == 3) { 
         document.querySelector('#plantaodiario').innerHTML = 'Josiane'
