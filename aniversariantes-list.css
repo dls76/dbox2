@@ -43,8 +43,9 @@ body {
 }
 
 .h1Aniver {
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 1rem;
+    font-weight: 600;
 }
 
 .linha {
@@ -99,6 +100,7 @@ img {
         width: 90%;
     }
     #h1-aniversariantes {
-        font-size: 1.3rem;
+        font-size: 2.5rem;
+        text-align: center;
     }
   }
