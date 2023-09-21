@@ -113,7 +113,7 @@ function plantaoDiarioCompensacao() {
     }
     if (datahoje.getDay() == 3) { 
         document.querySelector('#plantaodiario').innerHTML = 'Josiane'
-        document.querySelector('#nomescomp').innerHTML = 'Jaqueline/Camila | Katleen/Nailson'
+        document.querySelector('#nomescomp').innerHTML = 'Jaqueline/Camila | Carin/Nailson'
     }
     if (datahoje.getDay() == 4) { 
         document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
