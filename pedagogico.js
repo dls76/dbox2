@@ -1,0 +1,15 @@
+const turmas2023 = [
+    {turma: "21", turno: "M", regente: "Lídia"},
+    {turma: "22", turno: "V", regente: "Joice Dias"},
+    {turma: "23", turno: "V", regente: "Eliane"},
+    {turma: "24", turno: "V", regente: "Lídia"},
+    {turma: "31", turno: "M", regente: "Sandra"},
+    {turma: "32", turno: "V", regente: "Sandra"},
+    {turma: "33", turno: "V", regente: "Adriene"},
+    {turma: "41", turno: "M", regente: "Pâmela"},
+    {turma: "42", turno: "V", regente: "Luciany"},
+    {turma: "43", turno: "V", regente: "Ana Prado"},
+    {turma: "51", turno: "M", regente: "Luciany"},
+    {turma: "52", turno: "V", regente: "Pâmela"},
+    {turma: "53", turno: "V", regente: "Renata"},
+]
