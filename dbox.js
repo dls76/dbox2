@@ -104,11 +104,11 @@ function plantaoDiarioCompensacao() {
         document.querySelector('#nomescomp').innerHTML = 'Hoje é domingão!'
     }    
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Douglas'
+        document.querySelector('#plantaodiario').innerHTML = 'Nailson'
         document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius | ---'
     }
     if (datahoje.getDay() == 2) {
-        document.querySelector('#plantaodiario').innerHTML = 'Nailson'
+        document.querySelector('#plantaodiario').innerHTML = 'Douglas'
         document.querySelector('#nomescomp').innerHTML = 'Sem escala'
     }
     if (datahoje.getDay() == 3) { 
@@ -187,11 +187,11 @@ let route = [
     {data: new Date(2023, 8, 2), tema: 'Celebração Route', convidado: ''},
     {data: new Date(2023, 8, 16), tema: 'Campeonato All Star', convidado: ''},
     {data: new Date(2023, 8, 30), tema: 'Route Adventure - Trilha', convidado: ''},
-    {data: new Date(2023, 9, 7), tema: 'Batismo da Primavera', convidado: ''},
-    {data: new Date(2023, 9, 21), tema: 'Futuro e Carreira - De repente 30', convidado: ''},
-    {data: new Date(2023, 10, 11), tema: 'Show de Talentos', convidado: ''},
-    {data: new Date(2023, 10, 25), tema: 'Leilão Champions League', convidado: ''},
-    {data: new Date(2023, 11, 2), tema: 'Encerramento - Champions e Festa Nações', convidado: ''},
+    {data: new Date(2023, 9, 7), tema: 'Batismo da Primavera', convidado: 'Instituto Hiker'},
+    {data: new Date(2023, 9, 21), tema: 'Futuro e Carreira - De repente 30', convidado: 'Prof. Filipe'},
+    {data: new Date(2023, 10, 11), tema: 'Show de Talentos | Leilão Champions', convidado: 'Prof. Paulo'},
+    {data: new Date(2023, 10, 25), tema: 'Celebração final | Champions League', convidado: 'Pr. Vinícius'},
+    {data: new Date(2023, 11, 2), tema: 'Route no Impacto Curitiba', convidado: 'ASP|ACP'},
 ]
 window.addEventListener('load', findNextRoute(route))
 function findNextRoute(array) {
