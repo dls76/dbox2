@@ -102,7 +102,7 @@ main#conteinerhome {
 }
 
 
-/* XXXXXXXXXXXXX  CALENDARIO DESCRITIVO DE EVENTOS XXXXXXXXXXXXXXXXXX */
+/*  CALENDARIO DESCRITIVO DE EVENTOS */
 .evento {
     display: none;
     grid-template-columns: 1fr 5fr 1fr;

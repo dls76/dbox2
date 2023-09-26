@@ -107,16 +107,17 @@ i.seta {
 .box-aniver-img {
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
-    
+    align-items: center;
+    position: relative;
+    height: 100%;
 }
-.aniversariante {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 80px;
+.aniversariante {   
+    width: 100px;
     padding: 0 5px;
-    /* border: 1px solid yellow; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -5%)
 }
 .aniversariante img {
     border-radius: 50%; 
