@@ -280,16 +280,16 @@ function plantaoentrevistas() {
         document.querySelector('#plantaoentrevistascontent').innerHTML = 'Hoje é domingão!'
     }
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Camila | Daisy'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Douglas | Daisy'
     }
     if (datahoje.getDay() == 2) {
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Jaque | Valéria'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Jaque | Alexandro'
     }
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Alexandro | Carol'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Valéria | Carol'
     }
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Douglas | Sarita'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Camila | Sarita'
     }
     if (datahoje.getDay() == 5) { 
         document.querySelector('#plantaoentrevistascontent').innerHTML = 'Eula | Malú'
