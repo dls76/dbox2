@@ -1,3 +1,26 @@
+window.onload = redirecionarParaAniversariantes()
+
+function redirecionarParaAniversariantes() {
+    window.location.href='https://dls76.github.io/aniversariantes/'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const btnMobile = document.getElementById('btn-mobile')
 
 function toggleMenu() {
@@ -23,4 +46,5 @@ let pessoaString = localStorage.getItem('pessoa');
 // transformar em objeto novamente
 let pessoaObj = JSON.parse(pessoaString);
 
-console.log(pessoaObj.nome + " " + pessoaObj.idade); // Matheus
+// console.log(pessoaObj.nome + " " + pessoaObj.idade); 
+// Matheus

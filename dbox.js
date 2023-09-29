@@ -233,31 +233,35 @@ let classesbiblicas = [
 
     {data: new Date(2023, 8, 18), tema: 'Classe Bíblica de Pais'},
     {data: new Date(2023, 8, 25), tema: 'Classe Bíblica de Pais'},
-    {data: new Date(2023, 8, 26), tema: 'Classe Bíblica Esporiva'},
+    {data: new Date(2023, 8, 26), tema: 'Classe Bíblica Esportiva'},
     
-    {data: new Date(2023, 9, 10), tema: 'Classe Bíblica Esporiva'},
-    {data: new Date(2023, 9, 24), tema: 'Classe Bíblica Esporiva'},
-    {data: new Date(2023, 10, 7), tema: 'Classe Bíblica Esporiva'},
-    {data: new Date(2023, 10, 21), tema: 'Classe Bíblica Esporiva'},
-    {data: new Date(2023, 11, 5), tema: 'Classe Bíblica Esporiva'},
+    {data: new Date(2023, 9, 10), tema: 'Classe Bíblica Esportiva'},
+    {data: new Date(2023, 9, 24), tema: 'Classe Bíblica Esportiva'},
+
+    {data: new Date(2023, 10, 7), tema: 'Classe Bíblica Esportiva'},
+    {data: new Date(2023, 10, 21), tema: 'Classe Bíblica Esportiva'},
+    
+    {data: new Date(2023, 11, 5), tema: 'Classe Bíblica Esportiva'},
     
 ]
 
-window.addEventListener('load', findNextBibleClass(classesbiblicas))
+window.addEventListener('load', () => findNextBibleClass(classesbiblicas))
+
+
 function findNextBibleClass(array) {
     // Obter a data atual
     const currentDate = new Date();
   
     // Filtrar as datas que são iguais ou após a data atual
-    const futureDates = array.filter( (item) => item.data.getDate() >= currentDate.getDate() && item.data.getMonth() >= currentDate.getMonth() && item.data.getFullYear() >= currentDate.getFullYear() )
+    const myFutureDates = array.filter( (e) => e.data.getDate() >= currentDate.getDate() && e.data.getMonth() >= currentDate.getMonth() && e.data.getFullYear() >= currentDate.getFullYear() )
   
-    console.log(futureDates)
+
     // Ordenar as datas por ordem crescente
-    futureDates.sort((a, b) => a.data - b.data);
+    myFutureDates.sort((a, b) => a.data - b.data);
   
     // Se houver datas após a data atual, retorna a primeira delas
-    if (futureDates.length > 0) {
-        document.querySelector('#classesbiblicascontent').innerHTML = futureDates[0].data.getDate() + '/' + (futureDates[0].data.getMonth()+1) + ' - ' + futureDates[0].tema;
+    if (myFutureDates.length > 0) {
+        document.querySelector('#classesbiblicascontent').innerHTML = myFutureDates[0].data.getDate() + '/' + (myFutureDates[0].data.getMonth()+1) + ' - ' + myFutureDates[0].tema;
     }
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
     // return array[array.length - 1];

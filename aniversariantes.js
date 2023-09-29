@@ -35,7 +35,7 @@ const pessoas = [
     {nome: "Rafael Guilherme Palma Silva", dia: 13, mes: 8, ano: 1988, funcao: "Professor(a)", foto:"img/anivImg/Rafael.jpg", nascimento: new Date()},
     {nome: "Rafaela Lourenco de Mello", dia: 25, mes: 8, ano: 1990, funcao: "Auxiliar", foto:"img/anivImg/Rafaela.jpg", nascimento: new Date()},
     {nome: "Daniel Faria Filho", dia: 26, mes: 8, ano: 1963, funcao: "Monitor(a)", foto:"img/anivImg/Daniel.jpg", nascimento: new Date()},
-    {nome: "Vinicius Fernando Serain", dia: 27, mes: 8, ano: 1990, funcao: "Pastoral", foto:"img/anivImg/Vinicius.jpg", nascimento: new Date()},
+    {nome: "Vinicius Fernando Serain", dia: 27, mes: 8, ano: 1990, funcao: "Pastoral", foto:"img/anivImg/vini.jpg", nascimento: new Date()},
 
     //OUTUBRO
     {nome: "Daisy Karin Silva Ferreira", dia: 6, mes: 9, ano: 1993, funcao: "Matrículas", foto:"img/anivImg/", nascimento: new Date()},
@@ -95,16 +95,16 @@ function show() {
 
 
 
-    const btNext = document.querySelector('#anivRight')
+    // const btNext = document.querySelector('#anivRight')
 
-    btNext.addEventListener('click', ()=>{
-        alert('Próximo mês - em breve!')
-    })
+    // btNext.addEventListener('click', ()=>{
+    //     alert('Próximo mês - em breve!')
+    // })
 
 
 
-    const btPrev = document.querySelector('#anivLeft')
+    // const btPrev = document.querySelector('#anivLeft')
 
-    btPrev.addEventListener('click', ()=>{
-        alert('Mês anterior - em breve!')
-    })
+    // btPrev.addEventListener('click', ()=>{
+    //     alert('Mês anterior - em breve!')
+    // })
