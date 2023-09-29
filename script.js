@@ -1,24 +1,3 @@
-window.onload = redirecionarParaAniversariantes()
-
-function redirecionarParaAniversariantes() {
-    window.location.href='https://dls76.github.io/aniversariantes/'
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 const btnMobile = document.getElementById('btn-mobile')
