@@ -11,8 +11,9 @@ let plantaosexta = [
     {data: new Date(2023, 8, 15), person: "Carol"}, 
     {data: new Date(2023, 8, 22), person: "Valéria"}, 
     {data: new Date(2023, 8, 29), person: "Eula"}, 
+
     {data: new Date(2023, 9, 6), person: "Jaque"}, 
-    {data: new Date(2023, 9, 13), person: "Secretária"}, 
+    {data: new Date(2023, 9, 13), person: "Carin"}, 
     {data: new Date(2023, 9, 20), person: "Pedrina"}, 
     {data: new Date(2023, 9, 27), person: "Júlia"}, 
     {data: new Date(2023, 10, 3), person: "Eloisa"}, 
@@ -20,14 +21,13 @@ let plantaosexta = [
 ]
 
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
+
 function proximoPlantaoDeSexta(array) {
-    const currentDate = new Date();
+    const currentDate = new Date(2023, 9, 6);
 
     // Filtrar as datas que são iguais ou após a data atual
-    const futureDates = array.filter((item) =>
-        item.data.getFullYear() >= currentDate.getFullYear() &&
-        item.data.getMonth() >= currentDate.getMonth() &&
-        item.data.getDate() >= currentDate.getDate()
+    const futureDates = array.filter((item)=>
+        item.data >= currentDate
     );
 
     // Ordenar as datas por ordem crescente
@@ -41,9 +41,11 @@ function proximoPlantaoDeSexta(array) {
         mes = mes < 10 ? '0' + mes : mes;
         let pessoa = futureDates[0].person
         document.querySelector('#plantaosexta').innerHTML = dia + '/' + mes + ' - ' +  pessoa
-    }
+    } else {
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
     // return array[array.length - 1];
+   document.querySelector('#plantaosexta').innerHTML = 'Sem dados'
+    }
 }
   
 // Cultos
@@ -215,7 +217,6 @@ function findNextRoute(array) {
 // Classes Bíblicas
 let classesbiblicas = [
 
-
     {data: new Date(2023, 6, 31), tema: 'Classe Bíblica de Pais'},
     {data: new Date(2023, 7, 7), tema: 'Classe Bíblica de Pais'},
     {data: new Date(2023, 7, 8), tema: 'Classe Bíblica Esportiva'},
@@ -244,18 +245,15 @@ let classesbiblicas = [
     {data: new Date(2023, 11, 5), tema: 'Classe Bíblica Esportiva'},
     
 ]
-
-window.addEventListener('load', () => findNextBibleClass(classesbiblicas))
-
+window.addEventListener('load', findNextBibleClass(classesbiblicas))
 
 function findNextBibleClass(array) {
     // Obter a data atual
     const currentDate = new Date();
   
     // Filtrar as datas que são iguais ou após a data atual
-    const myFutureDates = array.filter( (e) => e.data.getDate() >= currentDate.getDate() && e.data.getMonth() >= currentDate.getMonth() && e.data.getFullYear() >= currentDate.getFullYear() )
+    const myFutureDates = array.filter( (e) => e.data >= currentDate )
   
-
     // Ordenar as datas por ordem crescente
     myFutureDates.sort((a, b) => a.data - b.data);
   
@@ -267,19 +265,10 @@ function findNextBibleClass(array) {
     // return array[array.length - 1];
   }
 
-  const btnama = document.querySelector('#bt-ama')
-  btnama.addEventListener('click', ()=>{
-    window.open('https://sistemas.usb.org.br/ama/index.php')
-  })
-
-
-const btnovoatendimento = document.querySelector('#botaonovoatendimento')
-btnovoatendimento.addEventListener('click', ()=>{
-    window.open("https://dls76.github.io/matriculasDbox/")
-})
-
+// Entrevistas
 window.addEventListener('load', plantaoentrevistas)
 function plantaoentrevistas() {
+
     if (datahoje.getDay() == 0) { 
         document.querySelector('#plantaoentrevistascontent').innerHTML = 'Hoje é domingão!'
     }
@@ -299,10 +288,12 @@ function plantaoentrevistas() {
         document.querySelector('#plantaoentrevistascontent').innerHTML = 'Eula | Malú'
     }
     if (datahoje.getDay() == 6) { 
-        document.querySelector('#oracao').innerHTML = 'Feliz Sábado!'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Feliz Sábado!'
     }
+    
 }
 
+// Oração
 window.addEventListener('load', oracaopelasescolas)
 function oracaopelasescolas() {
 
@@ -330,13 +321,16 @@ function oracaopelasescolas() {
 
 }
 
-// Limitar caracteres em um elemento
 
-// const letters = document.querySelectorAll('.titulodoevento')
-// const limit = 28
+// =====================================================================================
 
-// for (let l of letters) {
-//     const aboveLimit = l.innerText.length > limit
-//     const dotsOrEmpty = aboveLimit ? '...' : ''
-//     l.innerText = l.innerText.substring(0, limit) + dotsOrEmpty
-// }
+
+const btnama = document.querySelector('#bt-ama')
+btnama.addEventListener('click', ()=>{
+    window.open('https://sistemas.usb.org.br/ama/index.php')
+})
+
+const btnovoatendimento = document.querySelector('#botaonovoatendimento')
+btnovoatendimento.addEventListener('click', ()=>{
+    window.open("https://dls76.github.io/matriculasDbox/")
+})
