@@ -92,19 +92,3 @@ function show() {
         }
     } 
 }
-
-
-
-    // const btNext = document.querySelector('#anivRight')
-
-    // btNext.addEventListener('click', ()=>{
-    //     alert('Próximo mês - em breve!')
-    // })
-
-
-
-    // const btPrev = document.querySelector('#anivLeft')
-
-    // btPrev.addEventListener('click', ()=>{
-    //     alert('Mês anterior - em breve!')
-    // })
