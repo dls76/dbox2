@@ -38,22 +38,22 @@ const pessoas = [
     {nome: "Vinicius Fernando Serain", dia: 27, mes: 8, ano: 1990, funcao: "Pastoral", foto:"img/anivImg/vini.jpg", nascimento: new Date()},
 
     //OUTUBRO
-    {nome: "Daisy Karin Silva Ferreira", dia: 6, mes: 9, ano: 1993, funcao: "Matrículas", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Larissa Cardoso de Franca Goncalves", dia: 6, mes: 9, ano: 1987, funcao: "Professor(a)", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Gisele Cordeiro da Silva", dia: 9, mes: 9, ano: 1984, funcao: "Tutor(a)", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Jaqueline Marcia Hoffmeister Senko", dia: 9, mes: 9, ano: 1980, funcao: "Coord(a) Pedagógico(a)", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Joice Mari da Silva Pereira", dia: 10, mes: 9, ano: 1992, funcao: "Professor(a)", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Douglas Frohlich Reded", dia: 19, mes: 9, ano: 1992, funcao: "Ti", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Silmara de Lima Grochka", dia: 19, mes: 9, ano: 1993, funcao: "Zelador(a)", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Isabele Carla dos Santos", dia: 24, mes: 9, ano: 2000, funcao: "Monitor(a)", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Carmem Aparecida Abolis da Silva", dia: 25, mes: 9, ano: 1982, funcao: "Professor(a)", foto:"img/anivImg/user.png", nascimento: new Date()},
-    {nome: "Rosineide de Souza Westphal", dia: 25, mes: 9, ano: 1982, funcao: "Monitor(a)", foto:"img/anivImg/user.png", nascimento: new Date()},
+    {nome: "Daisy Karin Silva Ferreira", dia: 6, mes: 9, ano: 1993, funcao: "Matrículas", foto:"img/anivImg/outubro/Daisy.jpeg", nascimento: new Date()},
+    {nome: "Larissa Cardoso de Franca Goncalves", dia: 6, mes: 9, ano: 1987, funcao: "Professor(a)", foto:"img/anivImg/outubro/Larissa.jpeg", nascimento: new Date()},
+    {nome: "Gisele Cordeiro da Silva", dia: 9, mes: 9, ano: 1984, funcao: "Tutor(a)", foto:"img/anivImg/outubro/Gisele.png", nascimento: new Date()},
+    {nome: "Jaqueline Marcia Hoffmeister Senko", dia: 9, mes: 9, ano: 1980, funcao: "Coord(a) Pedagógico(a)", foto:"img/anivImg/outubro/Jaqueline.jpg", nascimento: new Date()},
+    {nome: "Joice Mari da Silva Pereira", dia: 10, mes: 9, ano: 1992, funcao: "Professor(a)", foto:"img/anivImg/outubro/Joice.jpg", nascimento: new Date()},
+    {nome: "Douglas Frohlich Reded", dia: 19, mes: 9, ano: 1992, funcao: "Ti", foto:"img/anivImg/outubro/douglasfrohlich.jpeg", nascimento: new Date()},
+    {nome: "Silmara de Lima Grochka", dia: 19, mes: 9, ano: 1993, funcao: "Zelador(a)", foto:"img/anivImg/outubro/Silmara.png", nascimento: new Date()},
+    {nome: "Isabele Carla dos Santos", dia: 24, mes: 9, ano: 2000, funcao: "Monitor(a)", foto:"img/anivImg/outubro/Isabella.jpeg", nascimento: new Date()},
+    {nome: "Carmem Aparecida Abolis da Silva", dia: 25, mes: 9, ano: 1982, funcao: "Professor(a)", foto:"img/anivImg/outubro/Carmem.jpg", nascimento: new Date()},
+    {nome: "Rosineide de Souza Westphal", dia: 25, mes: 9, ano: 1982, funcao: "Monitor(a)", foto:"img/anivImg/outubro/Rosineide.jpg", nascimento: new Date()},
     
 ]
 
 function show() {
 
-    var data = new Date()
+    var data = new Date(2023,9,6)
     var dia = data.getDate()   
     var mesAno = data.getMonth()
 
