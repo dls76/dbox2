@@ -41,7 +41,7 @@ const pessoas = [
     {nome: "Daisy Karin Silva Ferreira", dia: 6, mes: 9, ano: 1993, funcao: "Matrículas", foto:"img/anivImg/outubro/Daisy.jpeg", nascimento: new Date()},
     {nome: "Larissa Cardoso de Franca Goncalves", dia: 6, mes: 9, ano: 1987, funcao: "Professor(a)", foto:"img/anivImg/outubro/Larissa.jpeg", nascimento: new Date()},
     {nome: "Gisele Cordeiro da Silva", dia: 9, mes: 9, ano: 1984, funcao: "Tutor(a)", foto:"img/anivImg/outubro/Gisele.png", nascimento: new Date()},
-    {nome: "Jaqueline Marcia Hoffmeister Senko", dia: 9, mes: 9, ano: 1980, funcao: "Coord(a) Pedagógico(a)", foto:"img/anivImg/outubro/Jaqueline.jpg", nascimento: new Date()},
+    {nome: "Jaqueline Marcia H. Senko", dia: 9, mes: 9, ano: 1980, funcao: "Coord(a) Pedagógico(a)", foto:"img/anivImg/outubro/Jaqueline.jpg", nascimento: new Date()},
     {nome: "Joice Mari da Silva Pereira", dia: 10, mes: 9, ano: 1992, funcao: "Professor(a)", foto:"img/anivImg/outubro/Joice.jpg", nascimento: new Date()},
     {nome: "Douglas Frohlich Reded", dia: 19, mes: 9, ano: 1992, funcao: "Ti", foto:"img/anivImg/outubro/douglasfrohlich.jpeg", nascimento: new Date()},
     {nome: "Silmara de Lima Grochka", dia: 19, mes: 9, ano: 1993, funcao: "Zelador(a)", foto:"img/anivImg/outubro/Silmara.png", nascimento: new Date()},
