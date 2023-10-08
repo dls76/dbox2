@@ -939,3 +939,12 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
     text-decoration: none;
     color: #0D6EFD;
 }
+#linknovoatendimento {
+    display: flex;
+    align-items: center;
+    color: #253B73;
+    font-weight: 600;
+}
+#linknovoatendimento i {
+    margin-right: .5rem;
+}
