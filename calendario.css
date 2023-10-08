@@ -1,5 +1,6 @@
 .box-cal-num {
-    height: fit-content;
+    /* height: fit-content; */
+    height: 34rem;
     background-color: #fff;
     border-radius: 12px;
     width: 100%;
