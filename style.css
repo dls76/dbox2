@@ -700,6 +700,9 @@ main#conteinerhome {
     .box-cal-num {
         height: 300px;
     }
+    .footerprincipal {
+        display: none;
+    }
 }
 @media (max-width: 920px) {
 
