@@ -37,8 +37,8 @@ body {
 
 }
 .conteinergeral {
-    width: 98%;
-    max-width: 1500px;
+    width: 95%;
+    max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto auto auto;
