@@ -68,14 +68,14 @@ function cultos() {
         document.querySelector('#cultos').innerHTML = 'Vice-diretor'
     }
     if (datahoje.getDay() == 4) {
-        if ( datahoje.getDate() == 7) {
+        if ( datahoje.getDate() == 12) {
             document.querySelector('#cultos').innerHTML = 'Feriado' 
         }
-        if ( datahoje.getDate() == 14) {
-            document.querySelector('#cultos').innerHTML = '7h-Jaque' + ' &raquo; ' + '10h10-Malú' + ' &raquo; ' + '13h-Valéria' 
+        if ( datahoje.getDate() == 19) {
+            document.querySelector('#cultos').innerHTML = '7h-Carol' + ' &raquo; ' + '10h10-Valéria' + ' &raquo; ' + '13h-Malú' 
         }
-        if ( datahoje.getDate() == 21) {
-            document.querySelector('#cultos').innerHTML = '7h-Eula ' + ' &raquo; ' + ' 10h10-Nailson ' + ' &raquo; ' + ' 13h-Eliane' 
+        if ( datahoje.getDate() == 26) {
+            document.querySelector('#cultos').innerHTML = '7h-Filipi ' + ' &raquo; ' + ' 10h10-Jaqueline ' + ' &raquo; ' + ' 13h-Joice' 
         }
         if ( datahoje.getDate() == 28) {
             document.querySelector('#cultos').innerHTML = '7h-Pr Leo ' + ' &raquo; ' + '10h10-Sarita ' + ' &raquo; ' + '13h-Pr Leo' 
@@ -86,7 +86,7 @@ function cultos() {
         if (datahoje.getDate() == 8) {
             document.querySelector('#cultos').innerHTML = 'Recesso'
         }
-            document.querySelector('#cultos').innerHTML = 'Sexta do Poder'
+            document.querySelector('#cultos').innerHTML = 'Sexta do Poder - Jejum'
     }
     if (datahoje.getDay() == 6) {
         document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
