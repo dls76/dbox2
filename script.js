@@ -25,6 +25,53 @@ let pessoaString = localStorage.getItem('pessoa');
 // transformar em objeto novamente
 let pessoaObj = JSON.parse(pessoaString);
 
+
+
+
+
+
+// Abrir links simultâneos
+document.addEventListener('DOMContentLoaded', function() {
+    
+    let multipleLinks = document.querySelector('#btAbrirLinks')
+    openAllLinks.addEventListener('click', abrirLinks)
+    
+    let pedidos = document.querySelector('#pedidosOracao')
+    pedidos.addEventListener('click', pedidosOracao)
+    
+    function abrirLinks() {
+        var sites = [
+            'https://mais.cpb.com.br/licao-adultos/',
+            'https://mais.cpb.com.br/meditacoes-diarias/',
+            'https://www.bibliaonline.com.br/',
+            'https://reavivadosporsuapalavra.org/', 
+        ] 
+        for (let i = 0; i < sites.length; i++) {
+            window.open(sites[i])
+        }
+    };
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // console.log(pessoaObj.nome + " " + pessoaObj.idade); 
 // Matheus
 

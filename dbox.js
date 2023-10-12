@@ -11,13 +11,16 @@ let plantaosexta = [
     {data: new Date(2023, 8, 15), person: "Carol"}, 
     {data: new Date(2023, 8, 22), person: "Valéria"}, 
     {data: new Date(2023, 8, 29), person: "Eula"}, 
-
     {data: new Date(2023, 9, 6), person: "Jaque"}, 
-    {data: new Date(2023, 9, 13), person: "Carin"}, 
-    {data: new Date(2023, 9, 20), person: "Pedrina"}, 
-    {data: new Date(2023, 9, 27), person: "Júlia"}, 
-    {data: new Date(2023, 10, 3), person: "Eloisa"}, 
-    {data: new Date(2023, 10, 10), person: "Camila"}, 
+
+    {data: new Date(2023, 9, 20), person: "Carin"}, 
+    {data: new Date(2023, 9, 27), person: "Júlia"},
+
+    {data: new Date(2023, 10, 10), person: "Eloiza"}, 
+    {data: new Date(2023, 10, 17), person: "Camila"}, 
+    {data: new Date(2023, 10, 24), person: "Douglas"}, 
+    {data: new Date(2023, 11, 1), person: "Nailson"}, 
+    {data: new Date(2023, 11, 8), person: "Alexandro"}, 
 ]
 
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
@@ -74,14 +77,8 @@ function cultos() {
         if ( datahoje.getDate() == 21) {
             document.querySelector('#cultos').innerHTML = '7h-Eula ' + ' &raquo; ' + ' 10h10-Nailson ' + ' &raquo; ' + ' 13h-Eliane' 
         }
-        if ( datahoje.getDate() == 17) {
-            document.querySelector('#cultos').innerHTML = '7h-Filipe ' + ' &raquo; ' + '10h10-Katleen ' + ' &raquo; ' + '13h-Allan' 
-        }
         if ( datahoje.getDate() == 28) {
             document.querySelector('#cultos').innerHTML = '7h-Pr Leo ' + ' &raquo; ' + '10h10-Sarita ' + ' &raquo; ' + '13h-Pr Leo' 
-        }
-        if ( datahoje.getDate() == 31) {
-            document.querySelector('#cultos').innerHTML = '7h-Fernando ' + ' &raquo; ' + '10h10-Camila ' + ' &raquo; ' + '13h-Drika' 
         }
         
     }
@@ -89,15 +86,14 @@ function cultos() {
         if (datahoje.getDate() == 8) {
             document.querySelector('#cultos').innerHTML = 'Recesso'
         }
-            document.querySelector('#cultos').innerHTML = 'Vigília de jejum e oração'
+            document.querySelector('#cultos').innerHTML = 'Sexta do Poder'
     }
     if (datahoje.getDay() == 6) {
         document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
     }
-
 }
 
-//Plantão Diário
+// Plantão Diário
 window.addEventListener('load', plantaoDiarioCompensacao)
 function plantaoDiarioCompensacao() {
 
