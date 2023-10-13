@@ -924,7 +924,7 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
         width: 100%;
     }
     .footerprincipal {
-        display: none;
+        display: none !important;
     }
 }
 @media (max-width: 700px) {
