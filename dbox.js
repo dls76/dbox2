@@ -129,10 +129,14 @@ function plantaoDiarioCompensacao() {
 
 // Modal urgências
 let modalurgencias = document.querySelector('#fonesurgencias')
+
 modalurgencias.addEventListener('click', ()=>{ 
-let bgmodal = document.querySelector('#bgmodal')
-bgmodal.classList.add('modalOn')
+
+    let bgmodal = document.querySelector('#bgmodal')
+    bgmodal.classList.add('modalOn')
+
 })
+
 let fecharmodal = document.querySelector('#fecharmodal')
 fecharmodal.addEventListener('click', ()=>{
 

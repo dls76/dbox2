@@ -67,11 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-
 // console.log(pessoaObj.nome + " " + pessoaObj.idade); 
 // Matheus
 
