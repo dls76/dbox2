@@ -10,10 +10,7 @@
     <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="escalas.css">
     <link rel="stylesheet" href="calendario.css">
-    <link rel="stylesheet" href="pedagogico.css">
-    <link rel="stylesheet" href="administrativo.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,834 +22,824 @@
 
 <body>
 
-<span id="botaonovoatendimento">
-    <i class="fa-solid fa-plus"></i>
-</span>
+    <span id="botaonovoatendimento">
+        <i class="fa-solid fa-plus"></i>
+    </span>
 
-<div class="conteinergeral"> 
+    <!-- HOME  -->
+    <div class="conteinergeral"> 
 
-    <header id="header">
+        <header id="header">
 
-        <a id="logo">DBox</a>
-        
-
-        <nav id="nav">
-
-            <div id="btn-mobile">
-                <i class="fa-solid fa-bars"></i>    
-            </div>
-
-            <div class="menu" id="menu">
-
-                <a href="index.html" class="active">Home</a>
-                <a href="espiritual.html">Espiritual</a>
-                <a href="pedagogico.html">Pedagógico</a>
-                <a href="administrativo.html">Administrativo</a>
-                <a href="matriculas.html">Matrículas</a>
-                <a href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu">AMA</a>
-                <a id="fonesemergenciadomenu">Fones Emergência</a>
-
-            </div>
-
-        </nav>
-
-        <div class="alert_icons">
-            <i class="fa-solid fa-briefcase-medical alerticon" id="bt-ama"></i>
-            <!-- <i class="fa-solid fa-circle-exclamation alerticon"></i> -->
-            <i class="fa-solid fa-shield-halved alerticon" id="fonesurgencias"></i>
-
-        </div>
-
-    </header>
-
-    <main id="conteinerhome">
-
-        <!-- escalas -->
-        <div class="divhome" id="escalas">           
+            <a id="logo">DBox</a>
             
-            <div class="divhometitle">Escalas</div>
+            <nav id="nav">
 
-            <div class="conteinerescalas">
+                <div id="btn-mobile">
+                    <i class="fa-solid fa-bars"></i>    
+                </div>
+                <div class="menu" id="menu">
 
-                <!-- cultos -->
-                <a href="docs/escaladecultos.pdf" target="_blank">
-                    
-                    <div class="escala" id="escalacultos">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="">
-                        </div>
-                        <div class="infocultos">
-                            <div class="tituloescala" id="titulocultos">Cultos</div>
-                            <div class="contentescala" id="cultos"></div>
-                            <i class="fa-solid fa-angle-right seta"></i>
-                        </div>
-                    
-                    </div>
-                
-                </a>           
+                    <a href="index.html" class="active">Home</a>
+                    <a href="espiritual.html">Espiritual</a>
+                    <a href="pedagogico.html">Pedagógico</a>
+                    <a href="administrativo.html">Administrativo</a>
+                    <a href="matriculas.html">Matrículas</a>
+                    <a href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu">AMA</a>
+                    <a id="fonesemergenciadomenu">Fones Emergência</a>
 
-                <!-- oração pelas escolas -->
-                <a href="docs/escaladeoracao.pdf" target="_blank">
-                    
-                    <div class="escala" id="escalaoracao">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="">
-                        </div>
-                        <div class="infocultos">
-                            <div class="tituloescala" id="titulooracao">Oração</div>
-                            <div class="contentescala" id="oracao"></div>
-                            <i class="fa-solid fa-angle-right seta"></i>
-                        </div>
-                    
-                    </div>
-                
-                </a>    
+                </div>
 
-                <!-- plantão de entrevistas -->
-                <a href="https://docs.google.com/spreadsheets/d/1S9H7FTswy8WTlA8Gny2SK3K0ySwdDMdOPOxpa1kk0u0/edit#gid=0" target="_blank">
+            </nav>
 
-                    <div class="escala" id="plantaoentrevistas">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="">
-                        </div>
-                        <div>
-                            <div class="tituloescala" id="tituloclassesbiblicas">Entrevistas</div>
-                            <div class="contentescala" id="plantaoentrevistascontent"></div>
-                            <i class="fa-solid fa-angle-right seta"></i>
-                        </div>
-                    
-                    </div>
-                
-                </a>
-
-                <!-- compensacao -->
-                <a href="https://docs.google.com/spreadsheets/d/1MGUlVMKqtrx2s7F-rD61PugUSQopbXcP85MsT-lSM_I/edit#gid=0" target="_blank">
-                    
-                    <div class="escala">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="" id="icon-compensacao">
-                        </div>
-                        <div>
-                            <div class="tituloescala" id="titulocompensacao">Compensação</div>
-                            <div class="contentescala" id="nomescomp"></div>
-                            <i class="fa-solid fa-angle-right seta"></i>
-                        </div>
-                    
-                    </div>
-                </a>
-
-                <!-- plantao_diario -->
-                <a href="https://docs.google.com/spreadsheets/d/12CFog1TGB5rkYrlcAux73_bCYezO5dYTP8iY25rqRiQ/edit#gid=0" target="_blank">
-
-                    <div class="escala">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png"alt="" id="icon-plantao-diario">
-                        </div>
-
-                        <div>
-                            <div class="tituloescala">Plantão diário</div>
-                            <div class="contentescala" id="plantaodiario"></div>
-                            <i class="fa-solid fa-angle-right seta"></i>
-                        </div>
-                    
-                    </div>
-                
-                </a>
-
-                <!-- plantao_sexta -->
-                <a href="https://docs.google.com/spreadsheets/d/1J808LDd5tAqG4Qi9ehKcCO9CqjO7XVKJkoJUApMcvxY/edit#gid=0" target="_blank">
-
-                    <div class="escala" id="escalasexta">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="">
-                        </div>
-                        <div>
-                            <div class="tituloescala">Plantão sexta</div>
-                            <div class="contentescala" id="plantaosexta"></div>
-                            <i class="fa-solid fa-angle-right seta"></i>
-                        </div>
-                    
-                    </div>
-                </a>
-
-                <!-- celebra fII -->
-                <!-- <a href="https://docs.google.com/spreadsheets/d/1-020pXSavJ-EBM5eRpbR5FBSZbzU5yHMSNkBo8Rk_HM/edit#gid=0" target="_blank">
-
-                    <div class="escala" id="escalacelebra">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="">
-                        </div>
-                        <div>
-                            <div class="tituloescala" id="titulocelebra">Celebra FII-EM</div>
-                            <div class="contentescala" id="celebra">Aguardando escala</div>
-                            <i class="fa-solid fa-angle-right seta"></i>
-                        </div>
-                    
-                    </div>
-                
-                </a> -->
-                <!-- celebra fi -->
-                <!-- <a href="#" target="_blank">
-
-                    <div class="escala" id="escalacelebra1">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="">
-                        </div>
-                        <div>
-                            <div class="tituloescala" id="titulocelebra1">Celebra EI-FI</div>
-                            <div class="contentescala" id="celebra1">Aguardando escala</div>
-                            <i class="fa-solid fa-angle-right seta"></i>
-                        </div>
-                    
-                    </div>
-                
-                </a> -->
-
-                <!-- Route 77 -->
-                <a href="https://docs.google.com/spreadsheets/d/1rbS7A4S3oJhQwrd6gpaeFfAaHzPkWriVJ6EKSIfCS5Y/edit#gid=0" target="_blank">
-
-                    <div class="escala" id="escalaroute">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="">
-                        </div>
-                        <div>
-                            <div class="tituloescala" id="tituloroute">Route 77</div>
-                            <div class="contentescala" id="routescala"></div>
-                            <i class="fa-solid fa-angle-right seta"></i>
-                        </div>
-                    
-                    </div>
-                
-                </a>
-
-                <!-- classes bíblicas -->
-                <a href="https://docs.google.com/spreadsheets/d/1a0Cp80vlV2bMqGPjS2z7EyZd7EYzGn-b1FbxbjPPimc/edit#gid=0" target="_blank">
-
-                    <div class="escala" id="classesbiblicas">
-                        
-                        <div class="icon">
-                            <img src="img/yes.png" alt="">
-                        </div>
-                        <div>
-                            <div class="tituloescala" id="tituloclassesbiblicas">Classes Bíblicas</div>
-                            <div class="contentescala" id="classesbiblicascontent"></div>
-                            <i class="fa-solid fa-angle-right seta"></i>
-                        </div>
-                    
-                    </div>
-                
-                </a>
+            <div class="alert_icons">
+                <i class="fa-solid fa-briefcase-medical alerticon" id="bt-ama"></i>
+                <i class="fa-solid fa-shield-halved alerticon" id="fonesurgencias"></i>
             </div>
-  
-        </div>
 
-        <!-- links rápidos -->
-        <div class="divhome" id="divhomelinks">
+        </header>
 
-            <div class="divhometitle">Links Rápidos</div>
+        <main id="conteinerhome">
 
-            <div class="linksuteis">
-
-                <!-- Sistemas -->
-                <div class="linksuteisbox">
-
-                    
-                    <a href="https://calendar.google.com/calendar/u/1/r" target="_blank">
-                        <div class="img">
-                            <img src="img/googlecal.png" alt="">
-                            <div class="legenda-links">Google Agenda</div>
-                        </div>
-                    </a>
-
-                    <a href="https://mail.google.com/mail/u/1/#inbox" target="_blank">
-                        <div class="img">
-                            <img src="img/new.png" alt="">
-                            <div class="legenda-links">Gmail</div>
-                        </div>
-                    </a>
-
-                    <a href="https://cace.escolaemmovimento.com.br/Eteg.Cronus.Web_deploy/Acesso/Login?ReturnUrl=%2f" target="_blank">
-                        <div class="img">
-                            <img src="img/eem.png" alt="">
-                            <div class="legenda-links">Agenda</div>
-                        </div>
-                    </a>
-
-                    <a href="https://acrm.sdasystems.org/" target="_blank">
-                        <div class="img">
-                            <img src="img/acrm.png" alt="">
-                            <div class="legenda-links">ACRM</div>
-                        </div>
-                    </a>
-
-                    <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/77c97be9-7c06-4bd8-bf1a-38d63dcf5da5/ReportSection67140aaa99fc6fa1a2f8?redirectedFromSignup=1&experience=power-bi" target="_blank">
-                        <div class="img">
-                            <img src="img/bi1.png" alt="" id="bi">
-                            <div class="legenda-links">Power BI</div>
-                        </div>
-                    </a>
-
-                    <a href="https://docs.google.com/document/d/1BlQokG8xT9cu9bSSlhQIVR_ZjSl9JO2W/edit" target="_blank">
-                        <div class="img">
-                            <img src="img/calendar.png" alt="">
-                            <div class="legenda-links">Calendário</div>
-                        </div>
-                    </a>
-
-                    <!-- <a href="" target="_blank" onclick="window.open('https://www.google.com'); window.open('http://www.yahoo.com');">Click Here</a> -->
-
-                    <a href="" target="_blank" 
-                        onclick="
-                        window.open('https://calendar.google.com/calendar/u/1/r'); 
-                        window.open('https://mail.google.com/mail/u/1/#inbox'); 
-                        window.open('https://cace.escolaemmovimento.com.br/#!/home'); 
-                        window.open('https://acrm.sdasystems.org/pages/home/'); 
-                        window.open('https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/77c97be9-7c06-4bd8-bf1a-38d63dcf5da5?redirectedFromSignup=1&experience=power-bi'); 
-                        window.open('https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/EZYI_lKbaelCrakb9SS5sn8BUO-s20HMRqKvfDxKPIRE7Q?e=F95QvP');
-                        window.open('https://indique-asp.educacaoadventistabrasil.com.br/admin/login')
-                        ">
-                        <div class="img">
-                            <img src="img/energy.png">
-                            <div class="legenda-links">Rotinas</div>
-                        </div>
-                    </a>
-                 
-                    <a href="https://drive.google.com/drive/u/1/folders/1Wk8J7nSB0CVO-llLtehUB4v-5Hokbjuw" target="_blank">
-                        <div class="img">
-                            <img src="img/mail.png" alt="">
-                            <div class="legenda-links">Comunicados</div>
-                        </div>
-                    </a>
-
-                    <a href="https://login.cpbedu.me/" target="_blank">
-                        <div class="img">
-                            <img src="img/eclass.png" alt="">
-                            <div class="legenda-links">E-class</div>
-                        </div>
-                    </a>
-
-                    <a href="https://sad-asp.educadventista.org/" target="_blank">
-                        <div class="img">
-                            <img src="img/sad.png" alt="">
-                            <div class="legenda-links">SAD</div>
-                        </div>
-                    </a>
-
-                    <a href="https://sad-asp.educadventista.org/" target="_blank">
-                        <div class="img">
-                            <img src="img/sad-apoio.png" alt="">
-                            <div class="legenda-links">SAD Apoio</div>
-                        </div>
-                    </a>         
-
-                    <a href="https://drive.google.com/drive/u/1/folders/1fbfpzg_3XJEtU8soiihknAyCvixzxkpV" target="_blank">
-                        <div class="img">
-                            <img src="img/folder.png">
-                            <div class="legenda-links">RA</div>
-                        </div>
-                    </a>
-
-                    <a href="https://drive.google.com/drive/u/1/folders/0AIh4iGkMG6UuUk9PVA" target="_blank">
-                        <div class="img">
-                            <img src="img/drive.png" alt="">
-                            <div class="legenda-links">Escolas 2023</div>
-                        </div>
-                    </a>
-                   
-                    <a href="https://drive.google.com/drive/u/1/folders/12aZCnyamjgxcgNKGbQP5uhkHBy-dyEae" target="_blank">
-                        <div class="img">
-                            <img src="img/drive.png" alt="">
-                            <div class="legenda-links">CAC</div>
-                        </div>
-                    </a>
-
-                    <a href="https://rh.adventistas.org/" target="_blank">
-                        <div class="img">
-                            <img src="img/rhlogo.png" alt="" id="rh">
-                            <div class="legenda-links">RH</div>
-                        </div>
-                    </a>
-
-                    <a href="https://siga.sdasystems.org/" target="_blank">
-                        <div class="img">
-                            <img src="img/logoiasd.jpg" alt="">
-                            <div class="legenda-links">SIGA</div>
-                        </div>
-                    </a>
-
-                    <a href="https://ead.armsa.com/" target="_blank">
-                        <div class="img" id="arm">
-                            <img src="img/arm.jpg" alt="">
-                            <div class="legenda-links">ARM</div>
-                        </div>
-                    </a>
-
-                    <a href="" id="sharepoint">
-                        <div class="img">
-                            <img src="img/sharepoint.png" alt="">
-                            <div class="legenda-links">Sharepoint</div>
-                        </div>
-                    </a>
-
-                    <a href="https://ebolsa-asp.educadventista.org/" id="sharepoint" target="_blank">
-                        <div class="img">
-                            <img src="img/logoiasd.jpg" alt="">
-                            <div class="legenda-links">e-Bolsa</div>
-                        </div>
-                    </a>
-
-                    <a href="https://centraldofuncionario.com.br/" id="sharepoint" target="_blank">
-                        <div class="img">
-                            <img src="img/seculum.png" alt="">
-                            <div class="legenda-links">Secullum</div>
-                        </div>
-                    </a>
-
-                    <a href="https://indique-asp.educacaoadventistabrasil.com.br/admin/login" target="_blank">
-                        <div class="img">
-                            <img src="img/faviconVela.png" alt="">
-                            <div class="legenda-links">Indicações</div>
-                        </div>
-                    </a>
-
-                    <a href="https://weather.com/weather/today/l/4e6dc1807e947497fb8e0065241a1e4990ea4b5e9f35cb2385e81d14116ba0db" id="sharepoint" target="_blank">
-                        <div class="img">
-                            <img src="img/weather.png" alt="">
-                            <div class="legenda-links">Previsão</div>
-                        </div>
-                    </a>
-
-                    
-                </div>
-
-                <div class="conteineraniversariantes">
-
-                    <div class="aniversariantes" id="aniver">
-
-                        <a href="aniversariantes-list.html" id="bt-aniver" target="_blank"></a>
-
-                        <div class="box-aniver-img" id="aniver-img"></div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- calendário descritivo -->
-        <div class="divhome" id="divhomecalendario">
-            <div class="divhometitle">Calendário Descritivo</div>
-
-            <div class="box-cal-num">
-
-                <div class="mescalbox">
-                    
-                    <span class="spancal prev">
-                        <i class="fa-solid fa-chevron-left prev"></i>
-                    </span>
-                    <div class="mescal"></div>
-                    <span class="spancal next">
-                        <i class="fa-solid fa-chevron-right next"></i>
-                    </span>
+            <!-- escalas -->
+            <div class="divhome" id="escalas">           
                 
-                </div>
+                <div class="divhometitle">Escalas</div>
 
-                <div class="bodycal">
-                    <div class="weekdays">
-                        <div>Dom</div>
-                        <div>Seg</div>
-                        <div>Ter</div>
-                        <div>Qua</div>
-                        <div>Qui</div>
-                        <div>Sex</div>
-                        <div>Sáb</div>
-                    </div>
-                    <div class="days"></div>
-                </div>
+                <div class="conteinerescalas">
 
-                <div class="box-updown">
-                    <!-- <i class="fa-solid fa-angle-down block" id="bt-down"></i> -->
-                    <!-- <i class="fa-solid fa-angle-up hidden" id="bt-up"></i> -->
-                </div>
-                
-                <div class="btnsCal" id="btnsCal">
-                    <div class="btnHoje" id="btn-hoje">Hoje</div>
-                    <div id="btn-obs">Observações</div>
-                </div>
-            
-                <div class="filtros" id="filtros">
-                    <button id="bt-todos" class="btFiltro active-btn" onclick="filterSelection('all')">TUDO</button>
-                    <button id="bt-caab" class="btFiltro" onclick="filterSelection('cac')">CAC</button>
-                    <button id="bt-asp" class="btFiltro" onclick="filterSelection('asp')">ASP</button>
-                    <button id="bt-asp" class="btFiltro" onclick="filterSelection('pais')">PAIS</button>
-                </div>
-
-                <div class="body-proximoseventos" id="body-eventos">
-                    <!-- <div class="evento">
-        
-                        <div class="data">
-                            <div class="dias">
-                                <div class="dia">2</div>
-                                <div class="a">a</div>
-                                <div class="dia2">4</div>
+                    <!-- cultos -->
+                    <a href="docs/escaladecultos.pdf" target="_blank">
+                        
+                        <div class="escala" id="escalacultos">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png" alt="">
                             </div>
-                            <div class="mes">FEV</div>
+                            <div class="infocultos">
+                                <div class="tituloescala" id="titulocultos">Cultos</div>
+                                <div class="contentescala" id="cultos"></div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
                         </div>
-                        <div class="descricao">Reunião de Diretores</div>
-                        <div class="resp">
-                            <img src="img/user.png" alt="">
+                    
+                    </a>           
+
+                    <!-- oração pelas escolas -->
+                    <a href="docs/escaladeoracao.pdf" target="_blank">
+                        
+                        <div class="escala" id="escalaoracao">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png" alt="">
+                            </div>
+                            <div class="infocultos">
+                                <div class="tituloescala" id="titulooracao">Oração</div>
+                                <div class="contentescala" id="oracao"></div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
                         </div>
-                    </div>-->
+                    
+                    </a>    
+
+                    <!-- plantão de entrevistas -->
+                    <a href="https://docs.google.com/spreadsheets/d/1S9H7FTswy8WTlA8Gny2SK3K0ySwdDMdOPOxpa1kk0u0/edit#gid=0" target="_blank">
+
+                        <div class="escala" id="plantaoentrevistas">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png" alt="">
+                            </div>
+                            <div>
+                                <div class="tituloescala" id="tituloclassesbiblicas">Entrevistas</div>
+                                <div class="contentescala" id="plantaoentrevistascontent"></div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
+                        </div>
+                    
+                    </a>
+
+                    <!-- compensacao -->
+                    <a href="https://docs.google.com/spreadsheets/d/1MGUlVMKqtrx2s7F-rD61PugUSQopbXcP85MsT-lSM_I/edit#gid=0" target="_blank">
+                        
+                        <div class="escala">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png" alt="" id="icon-compensacao">
+                            </div>
+                            <div>
+                                <div class="tituloescala" id="titulocompensacao">Compensação</div>
+                                <div class="contentescala" id="nomescomp"></div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
+                        </div>
+                    </a>
+
+                    <!-- plantao_diario -->
+                    <a href="https://docs.google.com/spreadsheets/d/12CFog1TGB5rkYrlcAux73_bCYezO5dYTP8iY25rqRiQ/edit#gid=0" target="_blank">
+
+                        <div class="escala">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png"alt="" id="icon-plantao-diario">
+                            </div>
+
+                            <div>
+                                <div class="tituloescala">Plantão diário</div>
+                                <div class="contentescala" id="plantaodiario"></div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
+                        </div>
+                    
+                    </a>
+
+                    <!-- plantao_sexta -->
+                    <a href="https://docs.google.com/spreadsheets/d/1J808LDd5tAqG4Qi9ehKcCO9CqjO7XVKJkoJUApMcvxY/edit#gid=0" target="_blank">
+
+                        <div class="escala" id="escalasexta">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png" alt="">
+                            </div>
+                            <div>
+                                <div class="tituloescala">Plantão sexta</div>
+                                <div class="contentescala" id="plantaosexta"></div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
+                        </div>
+                    </a>
+
+                    <!-- celebra fII -->
+                    <!-- <a href="https://docs.google.com/spreadsheets/d/1-020pXSavJ-EBM5eRpbR5FBSZbzU5yHMSNkBo8Rk_HM/edit#gid=0" target="_blank">
+
+                        <div class="escala" id="escalacelebra">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png" alt="">
+                            </div>
+                            <div>
+                                <div class="tituloescala" id="titulocelebra">Celebra FII-EM</div>
+                                <div class="contentescala" id="celebra">Aguardando escala</div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
+                        </div>
+                    
+                    </a> -->
+                    <!-- celebra fi -->
+                    <!-- <a href="#" target="_blank">
+
+                        <div class="escala" id="escalacelebra1">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png" alt="">
+                            </div>
+                            <div>
+                                <div class="tituloescala" id="titulocelebra1">Celebra EI-FI</div>
+                                <div class="contentescala" id="celebra1">Aguardando escala</div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
+                        </div>
+                    
+                    </a> -->
+
+                    <!-- Route 77 -->
+                    <a href="https://docs.google.com/spreadsheets/d/1rbS7A4S3oJhQwrd6gpaeFfAaHzPkWriVJ6EKSIfCS5Y/edit#gid=0" target="_blank">
+
+                        <div class="escala" id="escalaroute">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png" alt="">
+                            </div>
+                            <div>
+                                <div class="tituloescala" id="tituloroute">Route 77</div>
+                                <div class="contentescala" id="routescala"></div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
+                        </div>
+                    
+                    </a>
+
+                    <!-- classes bíblicas -->
+                    <a href="https://docs.google.com/spreadsheets/d/1a0Cp80vlV2bMqGPjS2z7EyZd7EYzGn-b1FbxbjPPimc/edit#gid=0" target="_blank">
+
+                        <div class="escala" id="classesbiblicas">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png" alt="">
+                            </div>
+                            <div>
+                                <div class="tituloescala" id="tituloclassesbiblicas">Classes Bíblicas</div>
+                                <div class="contentescala" id="classesbiblicascontent"></div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
+                        </div>
+                    
+                    </a>
                 </div>
-
+    
             </div>
-        </div>
 
-        <!-- próximos eventos -->
-        <div class="divhome">
+            <!-- links rápidos -->
+            <div class="divhome" id="divhomelinks">
 
-            <div class="divhometitle">Próximos Eventos</div>
+                <div class="divhometitle">Links Rápidos</div>
 
-            <!-- conteiner dos próximos eventos -->
-            <div class="next-event-conteiner" id="nextEventConteiner">
+                <div class="linksuteis">
+
+                    <!-- Sistemas -->
+                    <div class="linksuteisbox">
+
+                        
+                        <a href="https://calendar.google.com/calendar/u/1/r" target="_blank">
+                            <div class="img">
+                                <img src="img/googlecal.png" alt="">
+                                <div class="legenda-links">Agenda</div>
+                            </div>
+                        </a>
+
+                        <a href="https://mail.google.com/mail/u/1/#inbox" target="_blank">
+                            <div class="img">
+                                <img src="img/new.png" alt="">
+                                <div class="legenda-links">Gmail</div>
+                            </div>
+                        </a>
+
+                        <a href="https://cace.escolaemmovimento.com.br/Eteg.Cronus.Web_deploy/Acesso/Login?ReturnUrl=%2f" target="_blank">
+                            <div class="img">
+                                <img src="img/eem.png" alt="">
+                                <div class="legenda-links">EEM</div>
+                            </div>
+                        </a>
+
+                        <a href="https://acrm.sdasystems.org/" target="_blank">
+                            <div class="img">
+                                <img src="img/acrm.png" alt="">
+                                <div class="legenda-links">ACRM</div>
+                            </div>
+                        </a>
+
+                        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/77c97be9-7c06-4bd8-bf1a-38d63dcf5da5/ReportSection67140aaa99fc6fa1a2f8?redirectedFromSignup=1&experience=power-bi" target="_blank">
+                            <div class="img">
+                                <img src="img/bi1.png" alt="" id="bi">
+                                <div class="legenda-links">Power BI</div>
+                            </div>
+                        </a>
+
+                        <a href="https://docs.google.com/document/d/1BlQokG8xT9cu9bSSlhQIVR_ZjSl9JO2W/edit" target="_blank">
+                            <div class="img">
+                                <img src="img/calendar.png" alt="">
+                                <div class="legenda-links">Calendário</div>
+                            </div>
+                        </a>
+
+                        <!-- <a href="" target="_blank" onclick="window.open('https://www.google.com'); window.open('http://www.yahoo.com');">Click Here</a> -->
+
+                        <a href="" target="_blank" 
+                            onclick="
+                            window.open('https://calendar.google.com/calendar/u/1/r'); 
+                            window.open('https://mail.google.com/mail/u/1/#inbox'); 
+                            window.open('https://cace.escolaemmovimento.com.br/#!/home'); 
+                            window.open('https://acrm.sdasystems.org/pages/home/'); 
+                            window.open('https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/77c97be9-7c06-4bd8-bf1a-38d63dcf5da5?redirectedFromSignup=1&experience=power-bi'); 
+                            window.open('https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/EZYI_lKbaelCrakb9SS5sn8BUO-s20HMRqKvfDxKPIRE7Q?e=F95QvP');
+                            window.open('https://indique-asp.educacaoadventistabrasil.com.br/admin/login')
+                            ">
+                            <div class="img">
+                                <img src="img/energy.png">
+                                <div class="legenda-links">Rotinas</div>
+                            </div>
+                        </a>
+                    
+                        <a href="https://drive.google.com/drive/u/1/folders/1Wk8J7nSB0CVO-llLtehUB4v-5Hokbjuw" target="_blank">
+                            <div class="img">
+                                <img src="img/mail.png" alt="">
+                                <div class="legenda-links">Comunicados</div>
+                            </div>
+                        </a>
+
+                        <a href="https://login.cpbedu.me/" target="_blank">
+                            <div class="img">
+                                <img src="img/eclass.png" alt="">
+                                <div class="legenda-links">E-class</div>
+                            </div>
+                        </a>
+
+                        <a href="https://sad-asp.educadventista.org/" target="_blank">
+                            <div class="img">
+                                <img src="img/sad.png" alt="">
+                                <div class="legenda-links">SAD</div>
+                            </div>
+                        </a>
+
+                        <a href="https://sad-asp.educadventista.org/" target="_blank">
+                            <div class="img">
+                                <img src="img/sad-apoio.png" alt="">
+                                <div class="legenda-links">SAD Apoio</div>
+                            </div>
+                        </a>         
+
+                        <a href="https://drive.google.com/drive/u/1/folders/1fbfpzg_3XJEtU8soiihknAyCvixzxkpV" target="_blank">
+                            <div class="img">
+                                <img src="img/folder.png">
+                                <div class="legenda-links">RA</div>
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/drive/u/1/folders/0AIh4iGkMG6UuUk9PVA" target="_blank">
+                            <div class="img">
+                                <img src="img/drive.png" alt="">
+                                <div class="legenda-links">Escolas 2023</div>
+                            </div>
+                        </a>
+                    
+                        <a href="https://drive.google.com/drive/u/1/folders/12aZCnyamjgxcgNKGbQP5uhkHBy-dyEae" target="_blank">
+                            <div class="img">
+                                <img src="img/drive.png" alt="">
+                                <div class="legenda-links">CAC</div>
+                            </div>
+                        </a>
+
+                        <a href="https://rh.adventistas.org/" target="_blank">
+                            <div class="img">
+                                <img src="img/rhlogo.png" alt="" id="rh">
+                                <div class="legenda-links">RH</div>
+                            </div>
+                        </a>
+
+                        <a href="https://siga.sdasystems.org/" target="_blank">
+                            <div class="img">
+                                <img src="img/logoiasd.jpg" alt="">
+                                <div class="legenda-links">SIGA</div>
+                            </div>
+                        </a>
+
+                        <a href="https://ead.armsa.com/" target="_blank">
+                            <div class="img" id="arm">
+                                <img src="img/arm.jpg" alt="">
+                                <div class="legenda-links">ARM</div>
+                            </div>
+                        </a>
+
+                        <a href="" id="sharepoint">
+                            <div class="img">
+                                <img src="img/sharepoint.png" alt="">
+                                <div class="legenda-links">Sharepoint</div>
+                            </div>
+                        </a>
+
+                        <a href="https://ebolsa-asp.educadventista.org/" id="sharepoint" target="_blank">
+                            <div class="img">
+                                <img src="img/logoiasd.jpg" alt="">
+                                <div class="legenda-links">e-Bolsa</div>
+                            </div>
+                        </a>
+
+                        <a href="https://centraldofuncionario.com.br/" id="sharepoint" target="_blank">
+                            <div class="img">
+                                <img src="img/seculum.png" alt="">
+                                <div class="legenda-links">Secullum</div>
+                            </div>
+                        </a>
+
+                        <a href="https://indique-asp.educacaoadventistabrasil.com.br/admin/login" target="_blank">
+                            <div class="img">
+                                <img src="img/faviconVela.png" alt="">
+                                <div class="legenda-links">Indicações</div>
+                            </div>
+                        </a>
+
+                        <a href="https://weather.com/weather/today/l/4e6dc1807e947497fb8e0065241a1e4990ea4b5e9f35cb2385e81d14116ba0db" id="sharepoint" target="_blank">
+                            <div class="img">
+                                <img src="img/weather.png" alt="">
+                                <div class="legenda-links">Previsão</div>
+                            </div>
+                        </a>
+
+                        
+                    </div>
+
+                    <div class="conteineraniversariantes">
+
+                        <div class="aniversariantes" id="aniver">
+
+                            <a href="aniversariantes-list.html" id="bt-aniver" target="_blank"></a>
+
+                            <div class="box-aniver-img" id="aniver-img"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- calendário descritivo -->
+            <div class="divhome" id="divhomecalendario">
+                <div class="divhometitle">Calendário Descritivo</div>
+
+                <div class="box-cal-num">
+
+                    <div class="mescalbox">
+                        
+                        <span class="spancal prev">
+                            <i class="fa-solid fa-chevron-left prev"></i>
+                        </span>
+                        <div class="mescal"></div>
+                        <span class="spancal next">
+                            <i class="fa-solid fa-chevron-right next"></i>
+                        </span>
+                    
+                    </div>
+
+                    <div class="bodycal">
+                        <div class="weekdays">
+                            <div>D</div>
+                            <div>S</div>
+                            <div>T</div>
+                            <div>Q</div>
+                            <div>Q</div>
+                            <div>S</div>
+                            <div>S</div>
+                        </div>
+                        <div class="days"></div>
+                    </div>
+
+                    <div class="box-updown">
+                        <!-- <i class="fa-solid fa-angle-down block" id="bt-down"></i> -->
+                        <!-- <i class="fa-solid fa-angle-up hidden" id="bt-up"></i> -->
+                    </div>
+                    
+                    <div class="btnsCal" id="btnsCal">
+                        <div class="btnHoje" id="btn-hoje">Hoje</div>
+                        <div id="btn-obs">Observações</div>
+                    </div>
                 
-                <!-- conteiner -->
-                <div class="nextevent">
-
-                    <!-- data -->
-                    <div class="datadoevento">
-                        <!-- dia1 -->
-                        <div class="diadoevento">17</div>
-                        <!-- mes -->
-                        <div class="mesdoevento">Set</div>
+                    <div class="filtros" id="filtros">
+                        <button id="bt-todos" class="btFiltro active-btn" onclick="filterSelection('all')">TUDO</button>
+                        <button id="bt-caab" class="btFiltro" onclick="filterSelection('cac')">CAC</button>
+                        <button id="bt-asp" class="btFiltro" onclick="filterSelection('asp')">ASP</button>
+                        <button id="bt-asp" class="btFiltro" onclick="filterSelection('pais')">PAIS</button>
                     </div>
 
-                    <!-- conteiner info -->
-                    <div class="infodoevento">
-
-                        <!-- titulo -->
-                        <div class="titulodoevento">Dia D</div>
-
-                        <!-- links -->
-                        <div class="linksdoevento">
-                            <!-- orçamento -->
-                            <a href="https://docs.google.com/spreadsheets/d/1biagHFuL-oY9Fvymo3W1_hLPLKuGTEji0nHzY2fHhVQ/edit#gid=0" target="_blank">Orçamento</a>
-                            <!-- programa -->
-                            <a href="https://docs.google.com/document/d/19ohdgtffT147l-nEwymOBptBczVkE7zp/edit" target="_blank">Programa</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="nextevent">
-
-                    <div class="datadoevento">
-                        <div class="diadoevento">17</div>
-                        <div class="mesdoevento">Set</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">Fair Play</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <a href="https://docs.google.com/spreadsheets/d/1RBjkg3dkzjB_5pjLMNnim9E-ADJhrIMDWWehyqD24KY/edit#gid=0" target="_blank">Orçamento</a>
-                            <!-- <a href="">Programa</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nextevent">
-
-                    <div class="datadoevento">
-                        <div class="diadoevento">18</div>
-                        <div class="mesdoevento">Set</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">CAC Aventura</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <a href="https://docs.google.com/spreadsheets/d/1_NF6XLoAbpMAkwLsIe1l8WSUgC3mK0v_fWMUHZFf600/edit#gid=0" target="_blank">Orçamento</a>
-                            <a href="https://docs.google.com/document/d/17JMABHeZPcbZRKxvNx9b6DFaCKjAS_2N/edit" target="_blank">Programa</a>
-                            <!-- <a href="">Programa</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nextevent">
-                    <div class="datadoevento">
-                        <div class="diadoevento">02 a 06</div>
-                        <div class="mesdoevento">Out</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">Sem. Oração FII-EM</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <a href="docs/semanaoracao6M.pdf" target="_blank">Horários</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nextevent">
-                    <div class="datadoevento">
-                        <div class="diadoevento">07</div>
-                        <div class="mesdoevento">Out</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">Batismo da Primavera</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <a href="">Orçamento</a>
-                            <a href="" target="_blank">Programa</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="nextevent">
-
-                    <div class="datadoevento">
-                        <div class="diadoevento">08</div>
-                        <div class="mesdoevento">Out</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">Dia D | Mostra Cultural</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <a href="">Orçamento</a>
-                            <a href="https://docs.google.com/document/d/1goGrZFdi918CFhWhrOH-Y6fxdgrJHC4WJ0aB4wjKas0/edit" target="_blank">Planejamento</a>
-                            <a href="docs/comunicados/mostracultural6M.pdf" target="_blank">Comunicado</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nextevent">
-
-                    <div class="datadoevento">
-                        <div class="diadoevento">09 a 11</div>
-                        <div class="mesdoevento">Out</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">Semana da Criança</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <a href="https://drive.google.com/drive/u/1/folders/1a3ZDieyZ9q6svJMrAX-q41QILu-HLd0s" target="_blank">Informações</a>
-                            <!-- <a href="docs/REGULAMENTO.png" target="_blank">Regulamento</a> -->
-                            <!-- <a href="" target="_blank">Orçam.</a> -->
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="nextevent">
-
-                    <div class="datadoevento">
-                        <div class="diadoevento">17</div>
-                        <div class="mesdoevento">Out</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">Dia do Professor</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <!-- <a href="">Orçamento</a> -->
-                            <!-- <a href="">Programa</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nextevent">
-
-                    <div class="datadoevento">
-                        <div class="diadoevento">12</div>
-                        <div class="mesdoevento">Nov</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">FEFI - Feira Futuros Empreendedores</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <!-- <a href="">Orçamento</a> -->
-                            <!-- <a href="">Programa</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nextevent">
-
-                    <div class="datadoevento">
-                        <div class="diadoevento">07</div>
-                        <div class="mesdoevento">Dez</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">Noite de Autógrafos</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <!-- <a href="" target="_blank">Datas</a> -->
-                            <!-- <a href="">Programa</a> -->
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="nextevent">
-
-                    <div class="datadoevento">
-                        <div class="diadoevento">12</div>
-                        <div class="mesdoevento">Dez</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">Formatura Ed. infantil 2023 e 2024</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <!-- <a href="">Orçamento</a> -->
-                            <!-- <a href="">Programa</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nextevent">
-
-                    <div class="datadoevento">
-                        <div class="diadoevento">19</div>
-                        <div class="mesdoevento">Dez</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">Formatura 9º e EM</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <!-- <a href="">Orçamento</a> -->
-                            <!-- <a href="">Programa</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nextevent" style="margin-bottom: 100vh;">
-
-                    <div class="datadoevento">
-                        <div class="diadoevento">05</div>
-                        <div class="mesdoevento">Mai</div>
-                    </div>
-
-                    <div class="infodoevento">
-
-                        <h1 class="titulodoevento">Intercâmbio</h1>
-                        <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
-                        <div class="linksdoevento">
-                            <a href="https://docs.google.com/spreadsheets/d/1fszaXuiFUTxFFyIlyPBH5JAJCgAijxE1LJXaxdFa80k/edit#gid=0" target="_blank">Interessados</a>
-                            <!-- <a href="">Programa</a> -->
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </main>  
-    
-</div> <!-- fecha .conteinergeral-->
-
-<!-- ============================================================ MENU MATRÍCULAS =============================================================== -->
-<!-- ============================================================================================================================================ -->
-
-<section class="footerprincipal">
-    <a href="https://dls76.github.io/matriculasDbox/" target="_blank" id="linknovoatendimento">
-    <i class="fa-solid fa-plus"></i> Novo Atendimento</a>
-    <a href="">Vagas</a>
-    <a href="https://docs.google.com/spreadsheets/d/1w6oDCjom87jLNrvSpCIO8-GGdbDlSm9j7iwI16JO4dc/edit#gid=0" target="_blank">Inclusão</a>
-    <a href="https://drive.google.com/drive/u/1/folders/1OQB-_YziWbeMfuSmuefWvL5XqtyzLEim" target="_blank">Entrevista</a>
-    <a href="" target="_blank">Contraturno</a>
-    <a href="https://catalogontstore.asp.org.br" target="_blank">Loja</a>
-    <a href="" target="_blank">Materiais</a>
-    <a onclick="toggleDocumentos()">Documentos</a>
-    <a href="" target="_blank">Transporte</a>
-    <a href="" target="_blank">Cantina</a>
-    <a href="https://portal.educacaoadventista.org.br/materiais-didaticos?type=0&modelo_id=1&entidade_id=37&editora_id=1" target="_blank">Livro Didático</a>
-</section>
-
-
-<!-- =============================================================== HORÁRIOS ======================================================================-->
-<!-- ============================================================================================================================================== -->
-
-<div class="body">
+                    <div class="body-proximoseventos" id="body-eventos">
+                        <!-- <div class="evento">
             
-    <div class="title">HORÁRIOS</div>
-        
-    <div class="conteiner">
+                            <div class="data">
+                                <div class="dias">
+                                    <div class="dia">2</div>
+                                    <div class="a">a</div>
+                                    <div class="dia2">4</div>
+                                </div>
+                                <div class="mes">FEV</div>
+                            </div>
+                            <div class="descricao">Reunião de Diretores</div>
+                            <div class="resp">
+                                <img src="img/user.png" alt="">
+                            </div>
+                        </div>-->
+                    </div>
 
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <a href="https://docs.google.com/spreadsheets/d/1gMXWtgRdxvC8WJlPoVldfnkUBRJNYyyAgsFiIeeRCEw/edit#gid=757367169" target="_blank"><li>Reforço EI e 1ºEF</li></a>
-                    <a href="https://docs.google.com/spreadsheets/d/1TThkrPs_Qh9i1J8kDN2iZGB_0UnzejNOdjECT6DYs4k/edit#gid=0" target="_blank"><li>Reforço 2ºEF e 3ºEF</li></a>
                 </div>
             </div>
-            <div class="face face2">
-                <h2>Infantil ao 5º</h2>
+
+            <!-- próximos eventos -->
+            <div class="divhome">
+
+                <div class="divhometitle">Próximos Eventos</div>
+
+                <!-- conteiner dos próximos eventos -->
+                <div class="next-event-conteiner" id="nextEventConteiner">
+                    
+                    <!-- conteiner -->
+                    <div class="nextevent">
+
+                        <!-- data -->
+                        <div class="datadoevento">
+                            <!-- dia1 -->
+                            <div class="diadoevento">17</div>
+                            <!-- mes -->
+                            <div class="mesdoevento">Set</div>
+                        </div>
+
+                        <!-- conteiner info -->
+                        <div class="infodoevento">
+
+                            <!-- titulo -->
+                            <div class="titulodoevento">Dia D</div>
+
+                            <!-- links -->
+                            <div class="linksdoevento">
+                                <!-- orçamento -->
+                                <a href="https://docs.google.com/spreadsheets/d/1biagHFuL-oY9Fvymo3W1_hLPLKuGTEji0nHzY2fHhVQ/edit#gid=0" target="_blank">Orçamento</a>
+                                <!-- programa -->
+                                <a href="https://docs.google.com/document/d/19ohdgtffT147l-nEwymOBptBczVkE7zp/edit" target="_blank">Programa</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="nextevent">
+
+                        <div class="datadoevento">
+                            <div class="diadoevento">17</div>
+                            <div class="mesdoevento">Set</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">Fair Play</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <a href="https://docs.google.com/spreadsheets/d/1RBjkg3dkzjB_5pjLMNnim9E-ADJhrIMDWWehyqD24KY/edit#gid=0" target="_blank">Orçamento</a>
+                                <!-- <a href="">Programa</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nextevent">
+
+                        <div class="datadoevento">
+                            <div class="diadoevento">18</div>
+                            <div class="mesdoevento">Set</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">CAC Aventura</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <a href="https://docs.google.com/spreadsheets/d/1_NF6XLoAbpMAkwLsIe1l8WSUgC3mK0v_fWMUHZFf600/edit#gid=0" target="_blank">Orçamento</a>
+                                <a href="https://docs.google.com/document/d/17JMABHeZPcbZRKxvNx9b6DFaCKjAS_2N/edit" target="_blank">Programa</a>
+                                <!-- <a href="">Programa</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nextevent">
+                        <div class="datadoevento">
+                            <div class="diadoevento">02 a 06</div>
+                            <div class="mesdoevento">Out</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">Sem. Oração FII-EM</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <a href="docs/semanaoracao6M.pdf" target="_blank">Horários</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nextevent">
+                        <div class="datadoevento">
+                            <div class="diadoevento">07</div>
+                            <div class="mesdoevento">Out</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">Batismo da Primavera</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <a href="">Orçamento</a>
+                                <a href="" target="_blank">Programa</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="nextevent">
+
+                        <div class="datadoevento">
+                            <div class="diadoevento">08</div>
+                            <div class="mesdoevento">Out</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">Dia D | Mostra Cultural</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <a href="">Orçamento</a>
+                                <a href="https://docs.google.com/document/d/1goGrZFdi918CFhWhrOH-Y6fxdgrJHC4WJ0aB4wjKas0/edit" target="_blank">Planejamento</a>
+                                <a href="docs/comunicados/mostracultural6M.pdf" target="_blank">Comunicado</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nextevent">
+
+                        <div class="datadoevento">
+                            <div class="diadoevento">09 a 11</div>
+                            <div class="mesdoevento">Out</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">Semana da Criança</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <a href="https://drive.google.com/drive/u/1/folders/1a3ZDieyZ9q6svJMrAX-q41QILu-HLd0s" target="_blank">Informações</a>
+                                <!-- <a href="docs/REGULAMENTO.png" target="_blank">Regulamento</a> -->
+                                <!-- <a href="" target="_blank">Orçam.</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="nextevent">
+
+                        <div class="datadoevento">
+                            <div class="diadoevento">17</div>
+                            <div class="mesdoevento">Out</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">Dia do Professor</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <!-- <a href="">Orçamento</a> -->
+                                <!-- <a href="">Programa</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nextevent">
+
+                        <div class="datadoevento">
+                            <div class="diadoevento">12</div>
+                            <div class="mesdoevento">Nov</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">FEFI - Feira Futuros Empreendedores</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <!-- <a href="">Orçamento</a> -->
+                                <!-- <a href="">Programa</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nextevent">
+
+                        <div class="datadoevento">
+                            <div class="diadoevento">07</div>
+                            <div class="mesdoevento">Dez</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">Noite de Autógrafos</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <!-- <a href="" target="_blank">Datas</a> -->
+                                <!-- <a href="">Programa</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="nextevent">
+
+                        <div class="datadoevento">
+                            <div class="diadoevento">12</div>
+                            <div class="mesdoevento">Dez</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">Formatura Ed. infantil 2023 e 2024</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <!-- <a href="">Orçamento</a> -->
+                                <!-- <a href="">Programa</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nextevent">
+
+                        <div class="datadoevento">
+                            <div class="diadoevento">19</div>
+                            <div class="mesdoevento">Dez</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">Formatura 9º e EM</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <!-- <a href="">Orçamento</a> -->
+                                <!-- <a href="">Programa</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nextevent" style="margin-bottom: 100vh;">
+
+                        <div class="datadoevento">
+                            <div class="diadoevento">05</div>
+                            <div class="mesdoevento">Mai</div>
+                        </div>
+
+                        <div class="infodoevento">
+
+                            <h1 class="titulodoevento">Intercâmbio</h1>
+                            <!-- <div class="regressivaevento"><em>Faltam 6 dias</em></div> -->
+                            <div class="linksdoevento">
+                                <a href="https://docs.google.com/spreadsheets/d/1fszaXuiFUTxFFyIlyPBH5JAJCgAijxE1LJXaxdFa80k/edit#gid=0" target="_blank">Interessados</a>
+                                <!-- <a href="">Programa</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-        </div>
+
+        </main>  
         
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <ul>
-                        <a class="horarios" href="docs/horariosturmas.pdf" target="_blank"><li>Turmas</li></a>
-                        <a class="horarios" href="docs/horariosprofessores3bim.pdf" target="_blank"><li>Professores</li></a>
-                    </ul>   
-                </div>
-            </div>
-            <div class="face face2">
-                <h2>6º ao Médio</h2>
-            </div>
-        </div>
-        
-        <div class="card"> 
-            <div class="face face1">
-                <div class="content">    
-                    <ul>
-                        <a href=""><li>Escolinhas</li></a>
-                        <a href=""><li>Inglês</li></a>
-                    </ul>
-                </div>
-            </div>
-            <div class="face face2">
-                <h2>Outros</h2>
-            </div>
-        </div>
-    
     </div>
-</div>
-    
-<!--============================================================= MODAL URGÊNCIAS =============================================================== -->
-<!-- ============================================================================================================================================ -->
 
+    <!-- MENU MATRÍCULAS -->
+    <section class="footerprincipal">
+        <a href="https://dls76.github.io/matriculasDbox/" target="_blank" id="linknovoatendimento">
+        <i class="fa-solid fa-plus"></i> Novo Atendimento</a>
+        <a href="">Vagas</a>
+        <a href="https://docs.google.com/spreadsheets/d/1w6oDCjom87jLNrvSpCIO8-GGdbDlSm9j7iwI16JO4dc/edit#gid=0" target="_blank">Inclusão</a>
+        <a href="https://drive.google.com/drive/u/1/folders/1OQB-_YziWbeMfuSmuefWvL5XqtyzLEim" target="_blank">Entrevista</a>
+        <a href="" target="_blank">Contraturno</a>
+        <a href="https://catalogontstore.asp.org.br" target="_blank">Loja</a>
+        <a href="" target="_blank">Materiais</a>
+        <a onclick="toggleDocumentos()">Documentos</a>
+        <a href="" target="_blank">Transporte</a>
+        <a href="" target="_blank">Cantina</a>
+        <a href="https://portal.educacaoadventista.org.br/materiais-didaticos?type=0&modelo_id=1&entidade_id=37&editora_id=1" target="_blank">Livro Didático</a>
+    </section>
+
+    <!-- HORÁRIOS -->
+    <div class="body">
+                
+        <div class="title">HORÁRIOS</div>
+            
+        <div class="conteiner">
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <a href="https://docs.google.com/spreadsheets/d/1gMXWtgRdxvC8WJlPoVldfnkUBRJNYyyAgsFiIeeRCEw/edit#gid=757367169" target="_blank"><li>Reforço EI e 1ºEF</li></a>
+                        <a href="https://docs.google.com/spreadsheets/d/1TThkrPs_Qh9i1J8kDN2iZGB_0UnzejNOdjECT6DYs4k/edit#gid=0" target="_blank"><li>Reforço 2ºEF e 3ºEF</li></a>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Infantil ao 5º</h2>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <ul>
+                            <a class="horarios" href="docs/horariosturmas.pdf" target="_blank"><li>Turmas</li></a>
+                            <a class="horarios" href="docs/horariosprofessores3bim.pdf" target="_blank"><li>Professores</li></a>
+                        </ul>   
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>6º ao Médio</h2>
+                </div>
+            </div>
+            
+            <div class="card"> 
+                <div class="face face1">
+                    <div class="content">    
+                        <ul>
+                            <a href=""><li>Escolinhas</li></a>
+                            <a href=""><li>Inglês</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Outros</h2>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+        
+    <!-- URGÊNCIAS -->
     <div class="bgmodal" id="bgmodal">
         
         

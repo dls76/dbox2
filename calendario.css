@@ -38,6 +38,7 @@
 }
 .spancal:hover {
     background-color: #bed0ff;
+    background-color: #ededed;
 }
 i.fa-chevron-right, i.fa-chevron-left {
     color: #253B73;
@@ -55,13 +56,12 @@ i.fa-chevron-right, i.fa-chevron-left {
 }
 .weekdays div {
     width: calc(100%/7);
-    font-size: 1rem;
-    /* padding: .3rem 0; */
+    font-size: .8rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #001855;
-    font-weight: 600;
+    color: gray;
+    font-weight: 500;
     font-family: 'Roboto Condensed', sans-serif;
 }
 .days {
@@ -77,19 +77,20 @@ i.fa-chevron-right, i.fa-chevron-left {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .2rem 0;
+    padding: .4rem 0;
     font-size: .8rem;
     font-weight: 500;
     transition: ease-in .1s;
     border-radius: 5px;
     font-family: 'Roboto Condensed', sans-serif;
-    /* border: 1px solid gray; */
+    color: gray;
 }
 .prev-date, .next-date {
     color: #b8b8b8;
 }
 .days div:hover:not(.today) {
     background-color: #bed0ff;
+    background-color: #ededed;
     cursor: pointer;
 }
 .btnsCal {
@@ -120,7 +121,7 @@ i.fa-chevron-right, i.fa-chevron-left {
     background-color: #253B73;
     color: #fff;
 }
-.today {
+.days div.today {
     background-color: #253B73;
     color: #fff;
 }

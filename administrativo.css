@@ -6,7 +6,6 @@
     font-weight: 600;
     color: #5d5d5d;
 }
-
 .conteiner-disciplina {
     width: 90%;
     display: grid;
@@ -17,11 +16,9 @@
     padding: 2rem;
     border-radius: 10px;
 }
-
 .conteiner-disciplina img {
     width: 30px;
 }
-
 .linha-disciplina {
     margin: 15px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -31,7 +28,6 @@
     border-radius: 7px;
     transition: ease-in-out .3s;
 }
-
 .linha-disciplina div {
     margin-left: 1rem;
     color: #0B1634;
@@ -40,11 +36,12 @@
     background-color: rgb(233, 233, 233);
     cursor: pointer;
 }
-
 #powerbi-icon {
     width: 24px;
 }
-
+.footeradm {
+    height: 200px;
+}
 @media (max-width: 990px) {
     .conteiner-disciplina {
         width: 90%;
