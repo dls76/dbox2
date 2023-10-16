@@ -55,21 +55,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-function scrollAlvo() { 
-    let myElement = document.getElementById('alvo');
-    let topPos = myElement.offsetTop;
-    document.getElementById('nextEventConteiner').scrollTop = topPos;
-}
+// function scrollAlvo() { 
+//     let myElement = document.getElementById('alvo');
+//     let topPos = myElement.offsetTop;
+//     document.getElementById('nextEventConteiner').scrollTop = topPos;
+// }
 
-const proximoseventos = [
-    {dataInicio: new Date(2023, 9, 20), dataFim: new Date(2023, 9, 20), nome: 'Teste 1', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {dataInicio: new Date(2023, 9, 21), dataFim: new Date(2023, 9, 21), nome: 'Teste 2', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {dataInicio: new Date(2023, 9, 22), dataFim: new Date(2023, 9, 22), nome: 'Teste 3', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {dataInicio: new Date(2023, 9, 23), dataFim: new Date(2023, 9, 23), nome: 'Teste 4', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {dataInicio: new Date(2023, 9, 24), dataFim: new Date(2023, 9, 24), nome: 'Teste 5', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {dataInicio: new Date(2023, 9, 25), dataFim: new Date(2023, 9, 25), nome: 'Teste 6', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {dataInicio: new Date(2023, 9, 26), dataFim: new Date(2023, 9, 29), nome: 'Teste 7', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-]
+// const proximoseventos = [
+//     {dataInicio: new Date(2023, 9, 20), dataFim: new Date(2023, 9, 20), nome: 'Teste 1', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+//     {dataInicio: new Date(2023, 9, 21), dataFim: new Date(2023, 9, 21), nome: 'Teste 2', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+//     {dataInicio: new Date(2023, 9, 22), dataFim: new Date(2023, 9, 22), nome: 'Teste 3', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+//     {dataInicio: new Date(2023, 9, 23), dataFim: new Date(2023, 9, 23), nome: 'Teste 4', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+//     {dataInicio: new Date(2023, 9, 24), dataFim: new Date(2023, 9, 24), nome: 'Teste 5', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+//     {dataInicio: new Date(2023, 9, 25), dataFim: new Date(2023, 9, 25), nome: 'Teste 6', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+//     {dataInicio: new Date(2023, 9, 26), dataFim: new Date(2023, 9, 29), nome: 'Teste 7', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+// ]
 
 for ( let i=0; i<proximoseventos.length; i++ ) {
 
