@@ -55,85 +55,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log(pessoaObj.nome + " " + pessoaObj.idade); 
-// Matheus
-
-/*
 function scrollAlvo() { 
     let myElement = document.getElementById('alvo');
     let topPos = myElement.offsetTop;
     document.getElementById('nextEventConteiner').scrollTop = topPos;
 }
 
- 
-
 const proximoseventos = [
-    {data1: new Date(2023, 9, 20), data2: new Date(2023, 9, 20), nome: 'Dia do Professor', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {data1: new Date(2023, 9, 21), data2: new Date(2023, 9, 21), nome: 'FEFI - Feira', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {data1: new Date(2023, 9, 22), data2: new Date(2023, 9, 22), nome: 'Noite de Autógrafos', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {data1: new Date(2023, 9, 23), data2: new Date(2023, 9, 23), nome: 'Formatura Pré', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {data1: new Date(2023, 9, 24), data2: new Date(2023, 9, 24), nome: 'Encerramento Route', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {data1: new Date(2023, 9, 25), data2: new Date(2023, 9, 25), nome: 'Formatura FII', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-    {data1: new Date(2023, 9, 26), data2: new Date(2023, 9, 26), nome: 'Conselho Final', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 20), dataFim: new Date(2023, 9, 20), nome: 'Teste 1', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 21), dataFim: new Date(2023, 9, 21), nome: 'Teste 2', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 22), dataFim: new Date(2023, 9, 22), nome: 'Teste 3', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 23), dataFim: new Date(2023, 9, 23), nome: 'Teste 4', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 24), dataFim: new Date(2023, 9, 24), nome: 'Teste 5', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 25), dataFim: new Date(2023, 9, 25), nome: 'Teste 6', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 26), dataFim: new Date(2023, 9, 29), nome: 'Teste 7', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
 ]
-
 
 for ( let i=0; i<proximoseventos.length; i++ ) {
 
+    let conteinerNextEvents = document.querySelector('#nextEventConteiner')
 
-    let conteiner = document.querySelector('#nextEventConteiner')
-
-    Criar as divs
-    Setar as classes
-    Setar os IDs
-    Inserir os conteúdos innerHTMLs
-    Append to parents
-    chamar a função de scrollar o alvo para o topo 
-
-    let data = document.createElement('div')
-    let dia1 = document.createElement('div')
-    let dia2 = document.createElement('div')
-    let mes = document.createElement('div')
-    let info = document.createElement('div')
-    let title = document.createElement('div')
-    let orcamento = document.createElement('a')
-    let programa = document.createElement('a')
-    let assignee = document.createElement('div')
-
-
-    data.classList.add('data')
-    dia1.classList.add('dia1')
-    dia2.classList.add('dia2')
-    mes.classList.add('mes')
-    info.classList.add('info')
-    title.classList.add('title')
-    orcamento.classList.add('orcamento')
-    programa.classList.add('programa')
-    assignee.classList.add('assignee')   
-
+    // Append to parents
+    // chamar a função de scrollar o alvo para o topo 
     
-    dia1.innerHTML = proximoseventos[i].dia1
-    dia2.innerHTML = proximoseventos[i].dia2
-    mes.innerHTML = proximoseventos[i].mes
-    title.innerHTML = proximoseventos[i].title
+    // Cria as divs
+    let dataBox = document.createElement('div')
+    let beginningDay = document.createElement('div')
+    let closeDay = document.createElement('div')
+    let mes = document.createElement('div')
+    // let info = document.createElement('div')
+    let eventName = document.createElement('div')
+    // let orcamento = document.createElement('a')
+    // let programa = document.createElement('a')
+    let assignee = document.createElement('div')
+    
+    // Adiciona as classes e IDs nas divs
+    dataBox.classList.add('dataBox')
+    beginningDay.classList.add('beginningDay')
+    closeDay.classList.add('closeDay')
+    mes.classList.add('mes')
+    // info.classList.add('info')
+    eventName.classList.add('eventName')
+    // orcamento.classList.add('orcamento')
+    // programa.classList.add('programa')
+    assignee.classList.add('assignee')   
+    
+    // Insere conteúdo nas divs
+    beginningDay.innerHTML = proximoseventos[i].dataInicio.getDate()
+    closeDay.innerHTML = proximoseventos[i].dataFim.getDate()
+    mes.innerHTML = proximoseventos[i].dataFim.getMonth() + 1
+    eventName.innerHTML = proximoseventos[i].nome
     assignee.innerHTML = proximoseventos[i].assignee
-
-
-
+    
+    // Append todos os elementos em seus parents
+    dataBox.appendChild(beginningDay)
+    dataBox.appendChild(closeDay)
+    dataBox.appendChild(mes)
+    dataBox.appendChild(eventName)
+    dataBox.appendChild(assignee)
+    conteinerNextEvents.appendChild(dataBox)
 }
-*/
 
 //funcao que identifica o alvo, determina seu offsettop e scrolla o conteiner do alvo até o offsettop do alvo:
 // Verificar quais datas do array proximosevetnos sao iguais ou superiores a data atual
@@ -142,3 +123,5 @@ for ( let i=0; i<proximoseventos.length; i++ ) {
 // determinar seu offsettop
 // chamar o scrolltop do nexteventconteiner usando o offsettop do alvo como valor
 // colocar tudo na funcao init para executar ao carregar a página 
+
+// window.addEventListener('load', scrollAlvo)

@@ -11,17 +11,17 @@ let plantaosexta = [
     {data: new Date(2023, 8, 15), person: "Carol"}, 
     {data: new Date(2023, 8, 22), person: "Valéria"}, 
     {data: new Date(2023, 8, 29), person: "Eula"}, 
-    {data: new Date(2023, 9, 6), person: "Jaque"}, 
-
+    
     {data: new Date(2023, 9, 20), person: "Carin"}, 
     {data: new Date(2023, 9, 27), person: "Júlia"},
-
+    
     {data: new Date(2023, 10, 10), person: "Eloiza"}, 
     {data: new Date(2023, 10, 17), person: "Camila"}, 
     {data: new Date(2023, 10, 24), person: "Douglas"}, 
     {data: new Date(2023, 11, 1), person: "Nailson"}, 
     {data: new Date(2023, 11, 8), person: "Alexandro"}, 
 ]
+
 
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
 
@@ -132,16 +132,16 @@ let modalurgencias = document.querySelector('#fonesurgencias')
 
 modalurgencias.addEventListener('click', ()=>{ 
 
-    let bgmodal = document.querySelector('#bgmodal')
-    bgmodal.classList.add('modalOn')
+let bgmodal = document.querySelector('#bgmodal')
+bgmodal.classList.add('modalOn')
 
 })
 
 let fecharmodal = document.querySelector('#fecharmodal')
 fecharmodal.addEventListener('click', ()=>{
 
-    let bgmodal = document.querySelector('#bgmodal')
-    bgmodal.classList.remove('modalOn')
+let bgmodal = document.querySelector('#bgmodal')
+bgmodal.classList.remove('modalOn')
 })
 
 // Celebras
@@ -320,10 +320,6 @@ function oracaopelasescolas() {
     }
 
 }
-
-
-// =====================================================================================
-
 
 const btnama = document.querySelector('#bt-ama')
 btnama.addEventListener('click', ()=>{

@@ -248,5 +248,3 @@ function mostrarEventos(){
 
     filterSelection("all")
 }
-
-// let calendarioDescritivo = document.querySelector('#body-eventos')
