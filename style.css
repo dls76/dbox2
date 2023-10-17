@@ -45,6 +45,12 @@ main#conteinerhome {
 .alert_icons i {
     margin-left: 1.2rem;
 }
+.alert_icons span {
+    margin: 0 .5rem;
+    color: #253B73;
+    color: gray;
+    font-size: 1.4rem;
+}
 
 #menu, #menuAdm {
     display: flex;

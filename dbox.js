@@ -347,3 +347,12 @@ if ( r < 86400000 ) {
     break
 }
 }*/
+
+
+// Ramais telefonicos
+let ramais = document.querySelector('#ramais')
+ramais.addEventListener('click', ramaisList)
+
+function ramaisList() {
+    alert('Ramais\nAlexandro\nCamila\nCarin\nCarol\nDaisy\nDouglas\nEloiza\nJaque\nJúlia\nMalú\nNailson\nSarita\nValéria\nVinícius')
+}
