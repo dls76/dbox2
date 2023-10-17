@@ -42,6 +42,29 @@
 .footeradm {
     height: 200px;
 }
+#linkcurriculos {
+    display: flex;
+    justify-content: flex-start;
+}
+#linkcurriculos input {
+    margin: 0 1rem;
+}
+#linkcurriculos button {
+    padding: .3rem 1rem;
+    outline: none;
+    border: none;
+    background-color: #2196F3;
+    color: #fff;
+    border-radius: 4px;
+}
+#linkcurriculos:hover {
+    cursor: auto;
+    background-color: #f3f3f3;
+}
+#linkcurriculos button:hover {
+    cursor: pointer;
+    background-color: #0c5fa2;
+}
 @media (max-width: 990px) {
     .conteiner-disciplina {
         width: 90%;

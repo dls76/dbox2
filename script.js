@@ -7,52 +7,10 @@ function toggleMenu() {
     const nav = document.getElementById('nav')
 
     nav.classList.toggle('active')
-    
 
 }
 
-btnMobile.addEventListener('click', toggleMenu)
-
-
-let pessoa = {nome: 'Matheus', idade: 29, cidade: 'Floripa'}
-
-// Transformar o objeto em string e salvar em localStorage
-localStorage.setItem('pessoa', JSON.stringify(pessoa));
-
-// Receber a string
-let pessoaString = localStorage.getItem('pessoa');
-
-// transformar em objeto novamente
-let pessoaObj = JSON.parse(pessoaString);
-
-
-
-
-
-
-// Abrir links simultâneos
-document.addEventListener('DOMContentLoaded', function() {
-    
-    let multipleLinks = document.querySelector('#btAbrirLinks')
-    openAllLinks.addEventListener('click', abrirLinks)
-    
-    let pedidos = document.querySelector('#pedidosOracao')
-    pedidos.addEventListener('click', pedidosOracao)
-    
-    function abrirLinks() {
-        var sites = [
-            'https://mais.cpb.com.br/licao-adultos/',
-            'https://mais.cpb.com.br/meditacoes-diarias/',
-            'https://www.bibliaonline.com.br/',
-            'https://reavivadosporsuapalavra.org/', 
-        ] 
-        for (let i = 0; i < sites.length; i++) {
-            window.open(sites[i])
-        }
-    };
-
-});
-
+// btnMobile.addEventListener('click', toggleMenu)
 
 
 // function scrollAlvo() { 
@@ -61,15 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
 //     document.getElementById('nextEventConteiner').scrollTop = topPos;
 // }
 
-// const proximoseventos = [
-//     {dataInicio: new Date(2023, 9, 20), dataFim: new Date(2023, 9, 20), nome: 'Teste 1', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-//     {dataInicio: new Date(2023, 9, 21), dataFim: new Date(2023, 9, 21), nome: 'Teste 2', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-//     {dataInicio: new Date(2023, 9, 22), dataFim: new Date(2023, 9, 22), nome: 'Teste 3', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-//     {dataInicio: new Date(2023, 9, 23), dataFim: new Date(2023, 9, 23), nome: 'Teste 4', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-//     {dataInicio: new Date(2023, 9, 24), dataFim: new Date(2023, 9, 24), nome: 'Teste 5', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-//     {dataInicio: new Date(2023, 9, 25), dataFim: new Date(2023, 9, 25), nome: 'Teste 6', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-//     {dataInicio: new Date(2023, 9, 26), dataFim: new Date(2023, 9, 29), nome: 'Teste 7', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
-// ]
+const proximoseventos = [
+    {dataInicio: new Date(2023, 9, 20), dataFim: new Date(2023, 9, 20), nome: 'Teste 1', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 21), dataFim: new Date(2023, 9, 21), nome: 'Teste 2', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 22), dataFim: new Date(2023, 9, 22), nome: 'Teste 3', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 23), dataFim: new Date(2023, 9, 23), nome: 'Teste 4', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 24), dataFim: new Date(2023, 9, 24), nome: 'Teste 5', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 25), dataFim: new Date(2023, 9, 25), nome: 'Teste 6', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+    {dataInicio: new Date(2023, 9, 26), dataFim: new Date(2023, 9, 29), nome: 'Teste 7', assignee: 'Douglas', pic: 'img/fotos/douglas.jpg'},
+]
+
 
 for ( let i=0; i<proximoseventos.length; i++ ) {
 
@@ -113,7 +72,7 @@ for ( let i=0; i<proximoseventos.length; i++ ) {
     dataBox.appendChild(mes)
     dataBox.appendChild(eventName)
     dataBox.appendChild(assignee)
-    conteinerNextEvents.appendChild(dataBox)
+    // conteinerNextEvents.appendChild(dataBox)
 }
 
 //funcao que identifica o alvo, determina seu offsettop e scrolla o conteiner do alvo até o offsettop do alvo:
@@ -125,3 +84,17 @@ for ( let i=0; i<proximoseventos.length; i++ ) {
 // colocar tudo na funcao init para executar ao carregar a página 
 
 // window.addEventListener('load', scrollAlvo)
+
+
+
+// Copiar link para página de cadastro de currículos do RH
+
+let btcurr = document.querySelector('#btcurriculos')
+btcurr.addEventListener('click', copiarlinkcurriculos)
+
+function copiarlinkcurriculos() {
+    let textoCopiado = document.getElementById("inputcurriculos");
+    textoCopiado.select();
+    textoCopiado.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+}
