@@ -84,11 +84,11 @@ i.fa-chevron-right, i.fa-chevron-left {
     transition: ease-in .1s;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
-    color: #353535;
+    color: #272727;
     /* font-weight: 600; */
 }
 .prev-date, .next-date {
-    color: gray;
+    color: rgb(161, 161, 161) !important;
 }
 .days div:hover:not(.today) {
     background-color: #ededed;
