@@ -40,8 +40,8 @@ let renderCalendar = ()=> {
         }
     }
 
-    for (let j = 1; j <= nextDays; j++ ) {
-        days += `<div class="next-date">${j}</div>`
+    for (let i = 1; i <= nextDays; i++ ) {
+        days += `<div class="next-date">${i}</div>`
     }
     monthDays.innerHTML = days
 }

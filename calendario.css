@@ -6,6 +6,7 @@
     width: 100%;
     padding: 0rem 1rem 1rem 1rem;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    /* border: 1px solid orange; */
 }
 .mescalbox {
     display: flex;
@@ -13,12 +14,11 @@
     padding: 1rem 0 .5rem 0;
     background-color: #fff;
     box-sizing: border-box;
-    /* border: 1px solid blue; */
     border-radius: 12px 12px 0 0;
 }
 .mescal {
     color: #253B73;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 1rem;
     display: flex;
@@ -62,7 +62,7 @@ i.fa-chevron-right, i.fa-chevron-left {
     align-items: center;
     color: gray;
     font-weight: 500;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .days {
     width: 100%;
@@ -71,25 +71,26 @@ i.fa-chevron-right, i.fa-chevron-left {
     background-color: #fff;
     padding: 5px;
     box-sizing: border-box;
+    /* border: 1px solid green; */
 }
 .days div {
     width: calc(100%/7);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .4rem 0;
+    padding: .5rem 0;
     font-size: .8rem;
     font-weight: 500;
     transition: ease-in .1s;
     border-radius: 5px;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: gray;
+    font-family: 'Roboto', sans-serif;
+    color: #353535;
+    /* font-weight: 600; */
 }
 .prev-date, .next-date {
-    color: #b8b8b8;
+    color: gray;
 }
 .days div:hover:not(.today) {
-    background-color: #bed0ff;
     background-color: #ededed;
     cursor: pointer;
 }
@@ -97,7 +98,6 @@ i.fa-chevron-right, i.fa-chevron-left {
     display: none;
     justify-content: flex-start;
     align-items: center;
-    /* padding: 5px; */
     margin: 1rem 0;
     width: 100%;
     box-sizing: border-box;
@@ -113,7 +113,7 @@ i.fa-chevron-right, i.fa-chevron-left {
     padding: .5rem 1.5rem;
     cursor: pointer;
     font-size: .8rem;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     transition: .3s;
     margin-right: .2rem;
 }
@@ -122,7 +122,7 @@ i.fa-chevron-right, i.fa-chevron-left {
     color: #fff;
 }
 .days div.today {
-    background-color: #253B73;
+    background-color: #6298F5;
     color: #fff;
 }
 .descritivo {
@@ -153,5 +153,28 @@ i.fa-chevron-right, i.fa-chevron-left {
     background-color: #dadada;
 }
 #bt-up {
+    display: none;
+}
+
+
+.body-proximoseventos {
+    height: 13rem;
+    overflow-y: scroll;
+    margin-top: -1rem;
+    /* border: 1px solid red; */
+}
+
+.body-proximoseventos::-webkit-scrollbar {
+    width: 0px;
+}
+
+.body-proximoseventos::-webkit-scrollbar-thumb {
+    background-color: #d0d0d0;
+    border-radius: 10px;
+    display: none;
+}
+
+.body-proximoseventos::-webkit-scrollbar-thumb:hover {
+    background-color: #b6b6b6;
     display: none;
 }

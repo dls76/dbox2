@@ -149,13 +149,13 @@ main#conteinerhome {
     font-size: .8rem;
     color: #B52532;
     font-weight: 700;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .contentescala {
     color: gray;
     font-size: .8rem;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 5px 0 0 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -523,26 +523,6 @@ i.seta {
     background-color: #fff;
 }
 
-.body-proximoseventos {
-    height: 15rem;
-    overflow-y: scroll;
-    margin-top: 1rem;
-}
-
-.body-proximoseventos::-webkit-scrollbar {
-    width: 0px;
-}
-
-.body-proximoseventos::-webkit-scrollbar-thumb {
-    background-color: #d0d0d0;
-    border-radius: 10px;
-    display: none;
-}
-
-.body-proximoseventos::-webkit-scrollbar-thumb:hover {
-    background-color: #b6b6b6;
-    display: none;
-}
 
 .displayToggle {
     display: grid;
