@@ -158,10 +158,9 @@ i.fa-chevron-right, i.fa-chevron-left {
 
 
 .body-proximoseventos {
-    height: 13rem;
+    height: 14.5rem;
     overflow-y: scroll;
     margin-top: -1rem;
-    /* border: 1px solid red; */
 }
 
 .body-proximoseventos::-webkit-scrollbar {
