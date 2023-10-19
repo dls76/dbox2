@@ -102,30 +102,37 @@ function plantaoentrevistas() {
 // Compensação e Plantão Diário
 function plantaoDiarioCompensacao() {
 
+    // domingo
     if (datahoje.getDay() == 0) { 
         document.querySelector('#plantaodiario').innerHTML = 'Hoje é domingão!'
         document.querySelector('#nomescomp').innerHTML = 'Hoje é domingão!'
     }    
+    // segunda
     if (datahoje.getDay() == 1) { 
         document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
-        document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius'
+        document.querySelector('#nomescomp').innerHTML = 'M: Pr. Vinícius'
     }
+    // terça
     if (datahoje.getDay() == 2) {
         document.querySelector('#plantaodiario').innerHTML = 'Nailson'
-        document.querySelector('#nomescomp').innerHTML = ''
+        document.querySelector('#nomescomp').innerHTML = 'Sem escala'
     }
+    // quarta
     if (datahoje.getDay() == 3) { 
         document.querySelector('#plantaodiario').innerHTML = 'Josiane'
-        document.querySelector('#nomescomp').innerHTML = 'Jaqueline/Camila | Carin/Nailson'
+        document.querySelector('#nomescomp').innerHTML = 'M: Jaque/Camila | T: Carin/Nailson'
     }
+    // quinta
     if (datahoje.getDay() == 4) { 
         document.querySelector('#plantaodiario').innerHTML = 'Douglas'
-        document.querySelector('#nomescomp').innerHTML = 'Valéria | Eula'
+        document.querySelector('#nomescomp').innerHTML = 'T: Valéria e Eula'
     }
+    // sexta
     if (datahoje.getDay() == 5) { 
         document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta.'
-        document.querySelector('#nomescomp').innerHTML = 'Malú/Douglas | Josi/Ale/Carol/Sarita'
+        document.querySelector('#nomescomp').innerHTML = 'M: Malú/Douglas | T: Josi/Ale/Carol/Sarita'
     }
+    // sábado
     if (datahoje.getDay() == 6) { 
         document.querySelector('#plantaodiario').innerHTML = 'Feliz Sábado!'
         document.querySelector('#nomescomp').innerHTML = 'Feliz Sábado!'
