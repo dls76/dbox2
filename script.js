@@ -10,7 +10,7 @@ function toggleMenu() {
 
 }
 
-// btnMobile.addEventListener('click', toggleMenu)
+btnMobile.addEventListener('click', toggleMenu)
 
 
 // function scrollAlvo() { 

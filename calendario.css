@@ -147,7 +147,6 @@ i.fa-chevron-right, i.fa-chevron-left {
     right: 1rem;
     padding: .5rem 1rem;
     border-radius: 10px;
-    /* background-color: #f3f3f3; */
 }
 .box-updown i:hover {
     background-color: #dadada;
