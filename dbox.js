@@ -162,7 +162,7 @@ let plantaosexta = [
 ]
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
 function proximoPlantaoDeSexta(array) {
-    const currentDate = new Date(2023, 9, 6);
+    const currentDate = new Date();
 
     // Filtrar as datas que são iguais ou após a data atual
     const futureDates = array.filter((item)=>
