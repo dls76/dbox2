@@ -605,6 +605,15 @@ i.seta {
     text-overflow: ellipsis;
 }
 
+.regressivaevento{
+    color: rgb(150, 150, 150);
+    font-size: .65rem;
+    padding: .2rem 0 .3rem;
+    /* text-align: right; */
+    font-style: italic;
+    display: none;
+}
+
 .linksdoevento {
     padding-top: .15rem;
 }
