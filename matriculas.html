@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="matriculas.css">
+    <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -26,7 +27,9 @@
         </nav>
     </header>
 
-    
+    <span id="botaonovoatendimento_matriculas">
+        <i class="fa-solid fa-plus"></i>
+    </span>
 
 <main class="main-matriculas">
 
@@ -113,5 +116,14 @@
 
 </div>
 
+    <script>
+    
+    // Novo atendimento página matriculas
+    const btnovoatendimento_matriculas = document.querySelector('#botaonovoatendimento_matriculas')
+        btnovoatendimento_matriculas.addEventListener('click', ()=>{
+        window.open("https://dls76.github.io/matriculasDbox/")
+    })
+
+    </script>
 </body>
 </html>

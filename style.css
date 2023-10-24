@@ -90,7 +90,7 @@ main#conteinerhome {
     height: fit-content;
 }
 
-#botaonovoatendimento {
+#botaonovoatendimento, #botaonovoatendimento_matriculas {
     position: fixed;
     bottom: 3rem;
     right: 2rem;
@@ -108,11 +108,11 @@ main#conteinerhome {
     /* display: none; */
 }
 
-#botaonovoatendimento i {
+#botaonovoatendimento i, #botaonovoatendimento_matriculas i {
     font-size: 1.8rem;
 }
 
-#botaonovoatendimento:hover {
+#botaonovoatendimento:hover, #botaonovoatendimento_matriculas:hover {
     background-color: #253B73;
 }
 
@@ -876,16 +876,6 @@ i.seta {
 
 .conteinerhorarios ul li {
     list-style: none;
-}
-
-#novoatendimento {
-    color: #fff;
-    background-color: #BB2532;
-}
-
-#novoatendimento:hover {
-    background-color: #851821;
-    color: #fff;
 }
 
 #arm img {

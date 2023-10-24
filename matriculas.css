@@ -21,10 +21,12 @@ header {
 .sec-matriculas p {
     width: 90%;
     margin: auto;
+    padding: .5rem 1rem;
+    border-radius: 30px;
+    font-size: .8rem;
+    color: #BB2532;
+    background-color: #ffecee;
     font-weight: 600;
-    color: rgb(85, 85, 85);
-    border-bottom: 1px solid lightgray;
-    padding: .7rem;
 }
 
 .linksprincipais {
@@ -48,6 +50,18 @@ header {
 }
 .linksprincipais a:hover {
     background-color: rgb(229, 229, 229);
+}
+
+
+#novoatendimento {
+    color: #BB2532;
+    background-color: #fff2f3;
+    border: 2px solid #BB2532;
+}
+
+#novoatendimento:hover {
+    background-color: #BB2532;
+    color: #fff;
 }
 
 .sistemas {
