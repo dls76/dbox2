@@ -264,6 +264,7 @@ let route = [
     {data: new Date(2023, 8, 30), tema: 'Route Adventure - Trilha', convidado: ''},
     {data: new Date(2023, 9, 7), tema: 'Batismo da Primavera', convidado: 'Instituto Hiker'},
     {data: new Date(2023, 9, 21), tema: 'Futuro e Carreira - De repente 30', convidado: 'Prof. Filipe'},
+    {data: new Date(2023, 9, 28), tema: 'Conversas de Garota', convidado: 'Maíra Mafra'},
     {data: new Date(2023, 10, 11), tema: 'Show de Talentos | Leilão Champions', convidado: 'Prof. Paulo'},
     {data: new Date(2023, 10, 25), tema: 'Celebração final | Champions League', convidado: 'Pr. Vinícius'},
     {data: new Date(2023, 11, 2), tema: 'Route no Impacto Curitiba', convidado: 'ASP|ACP'},
