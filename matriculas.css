@@ -1,14 +1,20 @@
+body {
+    background-color: #fff;
+}
 header {
     width: 95%;
     margin: 1rem auto !important;
 }
 .main-matriculas {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    max-width: 1440px;
+    margin: 3rem auto 0 auto;
+    width: 90%;
 }
 .sec-matriculas {
-    margin-top: 3rem;
-    /* height: 300px; */
+    margin-top: 1rem;
     width: 100%;
 }
 
@@ -16,42 +22,81 @@ header {
     width: 90%;
     margin: auto;
     font-weight: 600;
-    color: rgb(64, 64, 64);
+    color: rgb(85, 85, 85);
+    border-bottom: 1px solid lightgray;
+    padding: .7rem;
 }
 
 .linksprincipais {
-    width: 90%;
-    /* height: 200px; */
-    margin: 1rem auto;
+    height: fit-content;
+    margin: .5rem auto;
     padding: 1rem;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: start;
     flex-wrap: wrap;
     border-radius: 10px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
 }
 .linksprincipais a {
     font-size: 14px;
     padding: .5rem 1rem;
     border-radius: 30px;
-    margin: .5rem;
-    border: 1px solid lightgray;
+    margin: .3rem;
+    border: 1px solid gray;
     color: gray;
     transition: ease .3s;
 }
 .linksprincipais a:hover {
-    background-color: #253B73;
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(229, 229, 229);
 }
 
-@media (max-width: 1290px) {
+.sistemas {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.sistemas a {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    color: gray;
+    transition: .4s;
+}
+
+.sistemas a:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.sistemas a img {
+    width: 3rem;
+}
+
+.sistemas a div {
+    font-size: .7rem;
+    padding-top: .5rem;
+}
+
+@media (max-width: 1100px) {
     .main-matriculas {
-        display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .sec-matriculas {
         height: fit-content;
+    }
+
+}
+
+
+@media (max-width: 740px) {
+    .main-matriculas {
+        grid-template-columns: 1fr;
     }
 
 }
