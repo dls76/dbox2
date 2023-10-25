@@ -25,7 +25,9 @@ header {
     border-radius: 30px;
     font-size: .8rem;
     color: #BB2532;
+    color: #232b68;
     background-color: #ffecee;
+    background-color: #cfd4fb;
     font-weight: 600;
 }
 
@@ -55,12 +57,16 @@ header {
 
 #novoatendimento {
     color: #BB2532;
+    color: #232b68;
     background-color: #fff2f3;
+    background-color: #cfd4fb;
+
     border: 2px solid #BB2532;
+    border: 2px solid #232b68;
 }
 
 #novoatendimento:hover {
-    background-color: #BB2532;
+    background-color: #232b68;
     color: #fff;
 }
 
