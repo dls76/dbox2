@@ -11,8 +11,8 @@ body {
 }
 
 .conteinergeral {
-    width: 100%;
-    max-width: 1440px;
+    width: 96%;
+    max-width: 1400px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto auto auto;
