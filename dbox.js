@@ -364,6 +364,19 @@ let ramais = document.querySelector('#ramais')
 ramais.addEventListener('click', ramaisList)
 
 function ramaisList() {
-    alert('Alexandro - 7003\nCacilda - 7029\nCamila - 7013\nCarin - 7006\nCarol - 7016\nDaisy - 7042\nDiretor - 7002\nDouglas TI - 7020\nEloiza - 7023\nEula - 7011\nJaque - 7014\nJosiane - 7004\nJúlia - 7007\nMalú - 7010\nMarcio - 7025\nMônica/Thayse - 7028\nNailson - 7019\nPedrina - 7035\nProfessores - 7021\nSandriny - 7031\nSarita - 7012\nStephany - 7022\nValéria - 7009\nVinícius - 7024')
+        
+    const modalramais = document.querySelector('#modalramais')
+
+    modalramais.classList.add('show_ramais')
+
+}
+
+let fechar_ramais = document.querySelector('#fechar_ramais')
+
+fechar_ramais.addEventListener('click', fecharRamais)
+
+function fecharRamais() {
+    const modalramais = document.querySelector('#modalramais')
+    modalramais.classList.remove('show_ramais')
 
 }

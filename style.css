@@ -1081,6 +1081,45 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
     margin-right: .5rem;
 }
 
+/* Modal Ramais */
+#modalramais {
+    position: absolute;
+    z-index: 100;
+    top: -100;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#modalramais ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    margin: 2rem auto;
+    /* border: 1px solid gray; */
+}
+
+#modalramais h1 {
+    text-align: center;
+}
+
+#modalramais ul li {
+    font-size: 1.1rem;
+}
+
+.show_ramais {
+    top: 0;
+}
+
+#fechar_ramais {
+    padding: .5rem 1rem;
+    background-color: lightgray;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    cursor: pointer;
+}
+
 /* ============ MEDIA QUERIES =============== */
 @media (max-width: 1290px) {
 
