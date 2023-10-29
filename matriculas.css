@@ -56,18 +56,14 @@ header {
 
 
 #novoatendimento {
-    color: #BB2532;
-    color: #232b68;
-    background-color: #fff2f3;
-    background-color: #cfd4fb;
-
-    border: 2px solid #BB2532;
+    background-color: #232b68;
+    color: #fff;
     border: 2px solid #232b68;
 }
 
 #novoatendimento:hover {
-    background-color: #232b68;
-    color: #fff;
+    background-color: #cfd4fb;
+    color: #232b68;
 }
 
 .sistemas {
