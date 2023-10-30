@@ -1098,6 +1098,7 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: .5rem;
     width: 50%;
     height: 75vh;
     margin: 1rem auto;
@@ -1112,8 +1113,16 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
 
 #modalramais ul li {
     font-size: 1rem;
-    margin: .3rem;
+    margin: .2rem;
+    padding: .2rem;
     color: rgb(85, 85, 85);
+    transition: .2s;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+}
+
+#modalramais ul li:hover {
+    border: 1px solid gray;
 }
 
 .show_ramais {
@@ -1122,13 +1131,17 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
 
 #fechar_ramais {
     padding: .5rem 1rem;
-    background-color: lightgray;
-    background-color: rgb(128, 218, 254);
+    background-color: #6298F5;
+    color: #FFF;
     position: absolute;
     right: 2rem;
     top: 2rem;
     cursor: pointer;
     border-radius: 5px;
+}
+
+#fechar_ramais:hover {
+    background-color: #83b1ff;
 }
 
 /* ============ MEDIA QUERIES =============== */
