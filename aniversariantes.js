@@ -49,6 +49,12 @@ const pessoas = [
     {nome: "Carmem Aparecida Abolis da Silva", dia: 25, mes: 9, ano: 1982, funcao: "Professor(a)", foto:"img/anivImg/outubro/Carmem.jpg", nascimento: new Date()},
     {nome: "Rosineide de Souza Westphal", dia: 25, mes: 9, ano: 1982, funcao: "Monitor(a)", foto:"img/anivImg/outubro/Rosineide.jpg", nascimento: new Date()},
     
+    //NOVEMBRO
+    {nome: "Nome", dia: 1, mes: 10, ano: 2023, funcao: "Função", foto:"img/anivImg/novembro/user.png"},
+    {nome: "Nome", dia: 1, mes: 10, ano: 2023, funcao: "Função", foto:"img/anivImg/novembro/user.png"},
+    {nome: "Nome", dia: 1, mes: 10, ano: 2023, funcao: "Função", foto:"img/anivImg/novembro/user.png"},
+    {nome: "Nome", dia: 1, mes: 10, ano: 2023, funcao: "Função", foto:"img/anivImg/novembro/user.png"},
+    {nome: "Nome", dia: 1, mes: 10, ano: 2023, funcao: "Função", foto:"img/anivImg/novembro/user.png"},
 ]
 
 function show() {
