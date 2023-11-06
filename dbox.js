@@ -380,3 +380,42 @@ function fecharRamais() {
     modalramais.classList.remove('show_ramais')
 
 }
+
+//Plantão de matrículas
+let plantaomatriculas = [
+    {data: new Date(2023, 10, 7), person: "Daisy, Eula, Pedrina, Julia, Alexandro"}, 
+    {data: new Date(2023, 10, 14), person: "Daisy, Carol, Josi, Eloiza, Nailson"}, 
+    {data: new Date(2023, 10, 21), person: "Daisy, Camila, Pedrina, Carin, Douglas"}, 
+    {data: new Date(2023, 10, 28), person: "Daisy, Jaque, Josi, Julia, Alexandro"}, 
+    {data: new Date(2023, 11, 5), person: "Daisy, Valéria,	Pedrina, Eloiza, Nailson"},
+    {data: new Date(2023, 11, 12), person: "Daisy, Malu, Josi, Carin, Douglas"},
+    {data: new Date(2023, 11, 19), person: "Daisy, Sarita, Pedrina, Julia, Alexandro"},
+]
+window.addEventListener('load', proximoPlantaoDeMatricula(plantaomatriculas))
+function proximoPlantaoDeMatricula(array) {
+    const currentDate = new Date();
+
+    // Filtrar as datas que são iguais ou após a data atual
+    const futureDates = array.filter((item)=>
+        item.data >= currentDate
+    );
+
+    // Ordenar as datas por ordem crescente
+    futureDates.sort((a, b) => a.data - b.data);
+
+    // Se houver datas após a data atual, retorna a primeira delas
+    if (futureDates.length > 0) {
+        let dia = futureDates[0].data.getDate()
+        let mes = futureDates[0].data.getMonth() + 1
+        dia = dia < 10 ? '0' + dia : dia;
+        mes = mes < 10 ? '0' + mes : mes;
+        let pessoa = futureDates[0].person
+        document.querySelector('#titulo-plantao-matriculas').innerHTML = 'Plantão matrículas' +  ' - ' + dia + '/' + mes   
+        document.querySelector('#plantaomatriculas').innerHTML = pessoa
+    } 
+    // else {
+    // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
+    // return array[array.length - 1];
+//    document.querySelector('#plantaomatriculas').innerHTML = 'Sem dados'
+    // }
+}
