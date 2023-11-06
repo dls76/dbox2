@@ -1,3 +1,16 @@
+#escaladeoracao {
+    padding: 2rem 0;
+    text-align: center;
+    color: #253B73;
+    font-weight: 600;
+}
+
+#escaladeoracao span {
+    color: #253B73;
+    font-weight: bold;
+    color: red;
+}
+
 .devocionais {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

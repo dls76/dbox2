@@ -1,6 +1,6 @@
 let datahoje = new Date()
 window.addEventListener('load', cultos)
-window.addEventListener('load', oracaopelasescolas)
+// window.addEventListener('load', oracaopelasescolas)
 window.addEventListener('load', plantaoentrevistas)
 window.addEventListener('load', plantaoDiarioCompensacao)
 
@@ -43,33 +43,6 @@ function cultos() {
     if (datahoje.getDay() == 6) {
         document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
     }
-}
-
-// Oração
-function oracaopelasescolas() {
-
-    if (datahoje.getDay() == 0) { 
-        document.querySelector('#oracao').innerHTML = 'Hoje é domingão!'
-    }
-    if (datahoje.getDay() == 1) { 
-        document.querySelector('#oracao').innerHTML = 'CAFRG & CAAP'
-    }
-    if (datahoje.getDay() == 2) {
-        document.querySelector('#oracao').innerHTML = 'CAAB & CCABR'
-    }
-    if (datahoje.getDay() == 3) { 
-        document.querySelector('#oracao').innerHTML = 'CAPI & CAPGUÁ'
-    }
-    if (datahoje.getDay() == 4) { 
-        document.querySelector('#oracao').innerHTML = 'CASJP & EAUV'
-    }
-    if (datahoje.getDay() == 5) { 
-        document.querySelector('#oracao').innerHTML = 'CAC & DEPTO'
-    }
-    if (datahoje.getDay() == 6) { 
-        document.querySelector('#oracao').innerHTML = 'Feliz Sábado!'
-    }
-
 }
 
 // Entrevistas
@@ -327,9 +300,6 @@ btnovoatendimento.addEventListener('click', ()=>{
     window.open("https://dls76.github.io/matriculasDbox/")
 })
 
-
-
-
 // Celebras
 /*let celebras = [
 
@@ -378,7 +348,6 @@ fechar_ramais.addEventListener('click', fecharRamais)
 function fecharRamais() {
     const modalramais = document.querySelector('#modalramais')
     modalramais.classList.remove('show_ramais')
-
 }
 
 //Plantão de matrículas

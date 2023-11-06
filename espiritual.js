@@ -22,3 +22,30 @@
 //         alert('Não disponível no momento')
 //     } 
 // });
+
+// Oração
+function oracaopelasescolas() {
+
+    if (datahoje.getDay() == 0) { 
+        document.querySelector('#escolasparaorar').innerHTML = 'Hoje é domingão!'
+    }
+    if (datahoje.getDay() == 1) { 
+        document.querySelector('#escolasparaorar').innerHTML = 'CAFRG e CAAP'
+    }
+    if (datahoje.getDay() == 2) {
+        document.querySelector('#escolasparaorar').innerHTML = 'CAAB e CCABR'
+    }
+    if (datahoje.getDay() == 3) { 
+        document.querySelector('#escolasparaorar').innerHTML = 'CAPI e CAPGUÁ'
+    }
+    if (datahoje.getDay() == 4) { 
+        document.querySelector('#escolasparaorar').innerHTML = 'CASJP e EAUV'
+    }
+    if (datahoje.getDay() == 5) { 
+        document.querySelector('#escolasparaorar').innerHTML = 'CAC e Departamento'
+    }
+    if (datahoje.getDay() == 6) { 
+        document.querySelector('#escolasparaorar').innerHTML = 'Feliz Sábado!'
+    }
+
+}
