@@ -24,28 +24,37 @@
 // });
 
 // Oração
+window.addEventListener('load', oracaopelasescolas)
+
+let hoje = new Date().getDay()
+let msg = "Hoje estamos orando por "
 function oracaopelasescolas() {
 
-    if (datahoje.getDay() == 0) { 
-        document.querySelector('#escolasparaorar').innerHTML = 'Hoje é domingão!'
+    if (hoje == 0) { 
+        document.querySelector('#escaladeoracao').innerHTML = 'Hoje é domingão!'
     }
-    if (datahoje.getDay() == 1) { 
+    if (hoje == 1) {
+        document.querySelector('#escaladeoracao').innerHTML = msg 
         document.querySelector('#escolasparaorar').innerHTML = 'CAFRG e CAAP'
     }
-    if (datahoje.getDay() == 2) {
+    if (hoje == 2) {
+        document.querySelector('#escaladeoracao').innerHTML = msg 
         document.querySelector('#escolasparaorar').innerHTML = 'CAAB e CCABR'
     }
-    if (datahoje.getDay() == 3) { 
+    if (hoje == 3) { 
+        document.querySelector('#escaladeoracao').innerHTML = msg 
         document.querySelector('#escolasparaorar').innerHTML = 'CAPI e CAPGUÁ'
     }
-    if (datahoje.getDay() == 4) { 
+    if (hoje == 4) { 
+        document.querySelector('#escaladeoracao').innerHTML = msg 
         document.querySelector('#escolasparaorar').innerHTML = 'CASJP e EAUV'
     }
-    if (datahoje.getDay() == 5) { 
+    if (hoje == 5) { 
+        document.querySelector('#escaladeoracao').innerHTML = msg 
         document.querySelector('#escolasparaorar').innerHTML = 'CAC e Departamento'
     }
-    if (datahoje.getDay() == 6) { 
-        document.querySelector('#escolasparaorar').innerHTML = 'Feliz Sábado!'
+    if (hoje == 6) { 
+        document.querySelector('#escaladeoracao').innerHTML = 'Feliz Sábado!'
     }
 
 }
