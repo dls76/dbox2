@@ -50,11 +50,18 @@ const pessoas = [
     {nome: "Rosineide de Souza Westphal", dia: 25, mes: 9, ano: 1982, funcao: "Monitor(a)", foto:"img/anivImg/outubro/Rosineide.jpg", nascimento: new Date()},
     
     //NOVEMBRO
-    {nome: "Nome", dia: 1, mes: 10, ano: 2023, funcao: "Função", foto:"img/anivImg/novembro/user.png"},
-    {nome: "Nome", dia: 1, mes: 10, ano: 2023, funcao: "Função", foto:"img/anivImg/novembro/user.png"},
-    {nome: "Nome", dia: 1, mes: 10, ano: 2023, funcao: "Função", foto:"img/anivImg/novembro/user.png"},
-    {nome: "Nome", dia: 1, mes: 10, ano: 2023, funcao: "Função", foto:"img/anivImg/novembro/user.png"},
-    {nome: "Nome", dia: 1, mes: 10, ano: 2023, funcao: "Função", foto:"img/anivImg/novembro/user.png"},
+    {nome: "Suzanne Mendes dos Santos", dia: 1, mes: 10, ano: 1989, funcao: "Professora", foto:"img/anivImg/novembro/Suzanne.jpg"},
+    {nome: "Bruna do Rocio Biscoto dos Santos", dia: 15, mes: 10, ano: 1997, funcao: "Auxiliar de CT", foto:"img/anivImg/novembro/Bruna.png"},
+    {nome: "Josiane Vieira Lopes Klimek", dia: 18, mes: 10, ano: 1975, funcao: "Tesoureira", foto:"img/anivImg/novembro/Josiane.jpeg"},
+    {nome: "Henry Fidelis Pereira", dia: 19, mes: 10, ano: 1996, funcao: "Professor", foto:"img/anivImg/novembro/Henry.png"},
+    {nome: "Rosecler Vozniak Luiz", dia: 19, mes: 10, ano: 1967, funcao: "Tutora", foto:"img/anivImg/novembro/Rosecler.jpg"},
+
+
+    //DEZEMBRO
+    {nome: "Leonardo Vinicius Santos e Santos", dia: 11, mes: 11, ano: 2002, funcao: "Professor", foto:"img/anivImg/dezembro/Leonardo"},
+    {nome: "Valdene Neres de Sena Reis", dia: 12, mes: 11, ano: 1967, funcao: "Zeladora", foto:"img/anivImg/dezembro/Valdene"},
+    {nome: "Carin Grime de Melo", dia: 13, mes: 11, ano: 1988, funcao: "Secretária", foto:"img/anivImg/dezembro/Carin"},
+    {nome: "Glauton Vinicius de Andrade", dia: 27, mes: 11, ano: 1968, funcao: "Professor", foto:"img/anivImg/dezembro/Glauton"},
 ]
 
 function show() {
