@@ -1,8 +1,3 @@
-
-
-
-
-
 //===== Plantão de matrículas
 let escalaPlantaoDeMatriculas = [
     {data: new Date(2023, 10, 7), person: "Daisy, Eula, Pedrina, Julia, Alexandro"}, 
@@ -20,10 +15,7 @@ function proximoPlantaoDeMatricula(array) {
     const diaDeHoje = new Date();
 
     // Filtrar as datas que são iguais ou após a data atual
-    // const proximasDatas = array.filter((item) => item.data >= diaDeHoje);
-    // const proximasDatas = array.filter((item) => console.log(item.data));
     const proximasDatas = array.filter((item) => item.data >= diaDeHoje || item.data.toDateString() === diaDeHoje.toDateString());
-console.log(proximasDatas)
 
     // Ordenar as datas por ordem crescente
     proximasDatas.sort((a, b) => a.data - b.data);

@@ -1,6 +1,6 @@
 let datahoje = new Date()
+
 window.addEventListener('load', cultos)
-// window.addEventListener('load', oracaopelasescolas)
 window.addEventListener('load', plantaoentrevistas)
 window.addEventListener('load', plantaoDiarioCompensacao)
 
@@ -20,19 +20,19 @@ function cultos() {
         document.querySelector('#cultos').innerHTML = 'Vice-diretor'
     }
     if (datahoje.getDay() == 4) {
-        if ( datahoje.getDate() == 12) {
-            document.querySelector('#cultos').innerHTML = 'Feriado' 
+
+        if ( datahoje.getDate() == 9) {
+            document.querySelector('#cultos').innerHTML = 'ADM' 
         }
-        if ( datahoje.getDate() == 19) {
-            document.querySelector('#cultos').innerHTML = '7h-Carol' + ' &raquo; ' + '10h10-Valéria' + ' &raquo; ' + '13h-Malú' 
+        if ( datahoje.getDate() == 16) {
+            document.querySelector('#cultos').innerHTML = '7h-Eula' + ' &raquo; ' + '10h10-Nailson' + ' &raquo; ' + '13h-Jaque' 
         }
-        if ( datahoje.getDate() == 26) {
-            document.querySelector('#cultos').innerHTML = '7h-Filipi ' + ' &raquo; ' + ' 10h10-Jaqueline ' + ' &raquo; ' + ' 13h-Joice' 
+        if ( datahoje.getDate() == 23) {
+            document.querySelector('#cultos').innerHTML = '7h-Carol ' + ' &raquo; ' + ' 10h10-Valéria ' + ' &raquo; ' + ' 13h-Malu' 
         }
         if ( datahoje.getDate() == 28) {
-            document.querySelector('#cultos').innerHTML = '7h-Pr Leo ' + ' &raquo; ' + '10h10-Sarita ' + ' &raquo; ' + '13h-Pr Leo' 
+            document.querySelector('#cultos').innerHTML = '7h-Filipi ' + ' &raquo; ' + '10h10-Nailson ' + ' &raquo; ' + '13h-Ana' 
         }
-        
     }
     if (datahoje.getDay() == 5) {
         if (datahoje.getDate() == 8) {
@@ -43,6 +43,7 @@ function cultos() {
     if (datahoje.getDay() == 6) {
         document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
     }
+
 }
 
 
