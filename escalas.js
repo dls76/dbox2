@@ -159,13 +159,10 @@ let classesbiblicas = [
     {data: new Date(2023, 10, 7), tema: 'Classe Bíblica Esportiva'},
 
     {data: new Date(2023, 10, 13), tema: 'Pais'},
-    {data: new Date(2023, 10, 14), tema: 'Esportiva'},
 
     {data: new Date(2023, 10, 20), tema: 'Pais'},
-    {data: new Date(2023, 10, 21), tema: 'Esportiva'},
 
     {data: new Date(2023, 10, 27), tema: 'Pais'},
-    {data: new Date(2023, 10, 28), tema: 'Esportiva'},
 
     {data: new Date(2023, 11, 4), tema: 'Pais'},
     {data: new Date(2023, 11, 5), tema: 'Esportiva'},
