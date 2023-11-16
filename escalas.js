@@ -162,7 +162,7 @@ let classesbiblicas = [
 
     {data: new Date(2023, 10, 28), tema: 'Pais (casa)'},
 
-    {data: new Date(2023, 11, 5), tema: 'Esportiva'},
+    {data: new Date(2023, 11, 25), tema: 'Feliz Natal e Ano Novo!'},
 
 ]
 window.addEventListener('load', findNextBibleClass(classesbiblicas))
@@ -180,6 +180,7 @@ function findNextBibleClass(array) {
     if (myFutureDates.length > 0) {
         document.querySelector('#classesbiblicascontent').innerHTML = myFutureDates[0].data.getDate() + '/' + (myFutureDates[0].data.getMonth()+1) + ' - ' + myFutureDates[0].tema;
     }
+
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
     // return array[array.length - 1];
 }
