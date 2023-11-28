@@ -49,7 +49,7 @@ let route = [
     {data: new Date(2023, 9, 21), tema: 'Futuro e Carreira - De repente 30', convidado: 'Prof. Filipe'},
     {data: new Date(2023, 9, 28), tema: 'Conversas de Garota', convidado: 'Maíra Mafra'},
     {data: new Date(2023, 10, 11), tema: 'Show de Talentos | Leilão Champions', convidado: 'Prof. Paulo'},
-    {data: new Date(2023, 11, 2), tema: 'Route no Impacto Curitiba', convidado: 'ASP|ACP'},
+    {data: new Date(2023, 11, 3), tema: 'Champions League', convidado: ''},
     // {data: new Date(2023, 11, 9), tema: 'Celebração final | Champions League', convidado: 'Pr. Vinícius'},
 ]
 window.addEventListener('load', findNextRoute(route))
