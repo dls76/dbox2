@@ -30,7 +30,7 @@ function cultos() {
         if ( datahoje.getDate() == 23) {
             document.querySelector('#cultos').innerHTML = '7h-Carol ' + ' &raquo; ' + ' 10h10-Valéria ' + ' &raquo; ' + ' 13h-Malu' 
         }
-        if ( datahoje.getDate() == 28) {
+        if ( datahoje.getDate() == 30) {
             document.querySelector('#cultos').innerHTML = '7h-Filipi ' + ' &raquo; ' + '10h10-Nailson ' + ' &raquo; ' + '13h-Ana' 
         }
     }
