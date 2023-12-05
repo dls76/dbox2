@@ -56,13 +56,10 @@ const pessoas = [
     {nome: "Henry Fidelis Pereira", dia: 19, mes: 10, ano: 1996, funcao: "Professor", foto:"img/anivImg/novembro/henry.jpg"},
     {nome: "Rosecler Vozniak Luiz", dia: 19, mes: 10, ano: 1967, funcao: "Tutora", foto:"img/anivImg/novembro/Rosecler.jpg"},
 
-
     //DEZEMBRO
-    {nome: "Orlandina de Oliveira Couto", dia: 2, mes: 11, ano: 2002, funcao: "Zeladora", foto: "img/anivImg/dezembro/orlandina.png"},
-    {nome: "Leonardo Vinicius Santos e Santos", dia: 11, mes: 11, ano: 2002, funcao: "Professor", foto:"img/anivImg/dezembro/leonardo.png"},
-    {nome: "Valdene Neres de Sena Reis", dia: 12, mes: 11, ano: 1967, funcao: "Zeladora", foto:"img/anivImg/dezembro/valdene.png"},
-    {nome: "Carin Grime de Melo", dia: 13, mes: 11, ano: 1988, funcao: "Secretária", foto:"img/anivImg/dezembro/carin.png"},
-    {nome: "Glauton Vinicius de Andrade", dia: 27, mes: 11, ano: 1968, funcao: "Professor", foto:"img/anivImg/dezembro/glauton.png"},
+    {nome: "Valdene Neres de Sena Reis", dia: 12, mes: 11, ano: 1967, funcao: "Zeladora", foto:"img/anivImg/dezembro/valdene.jpg"},
+    {nome: "Carin Grime de Melo", dia: 13, mes: 11, ano: 1988, funcao: "Secretária", foto:"img/anivImg/dezembro/carin.jpg"},
+    {nome: "Glauton Vinicius de Andrade", dia: 27, mes: 11, ano: 1968, funcao: "Professor", foto:"img/anivImg/dezembro/glauton.jpg"},
 ]
 
 function show() {
