@@ -103,7 +103,7 @@ let eventos = [
     {data1: new Date(2023, 9, 31), data2: new Date(2023, 9, 31), descritivo: "Data limite para a regularização dos registros dos conteúdos do mês, no SAD", cal: "cac", resp: "", foto: "", detalhes: ""},
 
 ]
-
+/*
 function mostrarEventos(){
     
     for ( i = 0; i < eventos.length; i++ ) {
@@ -247,4 +247,4 @@ function mostrarEventos(){
     }
 
     filterSelection("all")
-}
+}*/

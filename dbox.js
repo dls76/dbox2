@@ -38,7 +38,7 @@ function cultos() {
         if (datahoje.getDate() == 8) {
             document.querySelector('#cultos').innerHTML = 'Recesso'
         }
-            document.querySelector('#cultos').innerHTML = 'Sexta do Poder - Jejum'
+            document.querySelector('#cultos').innerHTML = 'Pr. Leonardo'
     }
     if (datahoje.getDay() == 6) {
         document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
