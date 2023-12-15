@@ -43,6 +43,8 @@ function cultos() {
     if (datahoje.getDay() == 6) {
         document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
     }
+    
+    document.querySelector('#cultos').innerHTML = 'Feliz Natal!'
 
 }
 
@@ -50,27 +52,28 @@ function cultos() {
 // Entrevistas
 function plantaoentrevistas() {
 
-    if (datahoje.getDay() == 0) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Hoje é domingão!'
-    }
-    if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Douglas | Daisy'
-    }
-    if (datahoje.getDay() == 2) {
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Jaque | Alexandro'
-    }
-    if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Valéria | Carol'
-    }
-    if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Camila | Sarita'
-    }
-    if (datahoje.getDay() == 5) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Eula | Malú'
-    }
-    if (datahoje.getDay() == 6) { 
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Feliz Sábado!'
-    }
+    // if (datahoje.getDay() == 0) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Hoje é domingão!'
+    // }
+    // if (datahoje.getDay() == 1) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Douglas | Daisy'
+    // }
+    // if (datahoje.getDay() == 2) {
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Jaque | Alexandro'
+    // }
+    // if (datahoje.getDay() == 3) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Valéria | Carol'
+    // }
+    // if (datahoje.getDay() == 4) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Camila | Sarita'
+    // }
+    // if (datahoje.getDay() == 5) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Eula | Malú'
+    // }
+    // if (datahoje.getDay() == 6) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Feliz Sábado!'
+    // }
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Feliz Natal!'
 }
 
 //===== Compensação e Plantão Diário

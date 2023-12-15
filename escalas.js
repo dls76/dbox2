@@ -27,7 +27,7 @@ function proximoPlantaoDeMatricula(array) {
         dia = dia < 10 ? '0' + dia : dia;
         mes = mes < 10 ? '0' + mes : mes;
         let pessoa = proximasDatas[0].person
-        document.querySelector('#titulo-plantao-matriculas').innerHTML = 'Plantão matrículas' +  ' - ' + dia + '/' + mes   
+        document.querySelector('#titulo-plantao-matriculas').innerHTML = 'Plantão matrículas' /*+  ' - ' + dia + '/' + mes*/   
         document.querySelector('#plantaomatriculas').innerHTML = pessoa
     } 
     else {
@@ -93,6 +93,12 @@ let plantaosexta = [
     {data: new Date(2023, 10, 24), person: "Douglas"}, 
     {data: new Date(2023, 11, 1), person: "Nailson"}, 
     {data: new Date(2023, 11, 8), person: "Alexandro"}, 
+    {data: new Date(2023, 11, 15), person: "Feliz Natal!"}, 
+    {data: new Date(2023, 11, 22), person: "Feliz Natal!"}, 
+    {data: new Date(2023, 11, 29), person: "Feliz Ano Novo!"}, 
+    {data: new Date(2024, 0, 5), person: "Feliz Ano Novo!"}, 
+    {data: new Date(2024, 0, 12), person: "Feliz Ano Novo!"}, 
+    {data: new Date(2024, 0, 19), person: "Feliz Ano Novo!"}, 
 ]
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
 function proximoPlantaoDeSexta(array) {
