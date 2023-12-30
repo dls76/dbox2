@@ -7,15 +7,11 @@
     <title>DBox2.0</title>
     <link rel="shortcut icon" href="img/dbox-favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="calendario.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="aniver/aniver.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -27,14 +23,14 @@
           'GRAD' 0,
           'opsz' 24
         }
-        </style>
+    </style>
 </head>
 
-<body>
+<body onload="show()">
 
-    <span id="botaonovoatendimento" class="botaonovoatendimento">
+    <!-- <span id="botaonovoatendimento" class="botaonovoatendimento">
         <i class="fa-solid fa-plus"></i>
-    </span>
+    </span> -->
 
     <!-- HOME  -->
     <div class="conteinergeral"> 
@@ -950,14 +946,36 @@
     </div>
 
     
-        <div class="modal" id="modalramais">
-            <span class="fechar" id="fechar_ramais">Fechar</span>
-            <h1>Ramais</h1>
-            <ul id="ulramais">
-                
-            </ul>
-        </div>
+    <!-- <div class="modal" id="modalramais">
+        <span class="fechar" id="fechar_ramais">Fechar</span>
+        <h1>Ramais</h1>
+        <ul id="ulramais">
+            
+        </ul>
+    </div> -->
     
+    <div class="conteiner" id="conteiner">
+        <div class="content">      
+            <p id="hoje"></p>
+            <p id="parabens">Feliz Aniversário!</p>
+            <div id="boxAniversariantes">
+
+
+            </div> 
+            <p id="nome"></p>
+            <p id="funcao"></p>
+            <div class="bts">
+            <i class="fa-solid fa-circle-xmark bt-fechar" onclick="fechar()"></i>
+                <!-- <div class="btn-parabenizar">
+                    <a href="https://dls76.github.io/dbox2/" target="_blank">Fechar</a>
+                </div> -->
+                <!-- <div class="bt-fechar" onclick="fechar()"> -->
+                <!-- </div> -->
+            </div>
+            
+        </div>
+    </div>
+
 
     <script src="dbox.js"></script>
     <script src="aniversariantes.js"></script>
@@ -968,6 +986,108 @@
     <script src="espiritual.js"></script>
     <script src="ramais.js"></script>
     <script src="escalas.js"></script>
+    <script src="aniver/aniver.js"></script>
+    <script src="confetti.js"></script>
+
+    <script>
+        
+        function show() {
+
+var data = new Date()
+var diaSemana = data.getDay()
+var dia = data.getDate() 
+var mes = data.getMonth()
+var ano = data.getFullYear()
+
+dia = 27
+
+const diasDaSemana = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"]
+
+const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+
+const pessoas = [
+            
+{nome: "Tiago Moreira", dia: 1, mes: 0 , ano: 1988, funcao: "Professor", foto: "img/dezembro/glauton.jpg"},
+{nome: "Natalia Martins Schneider", dia: 3, mes: 0 , ano: 1988, funcao: "Professora", foto: "img/dezembro/glauton.jpg"},
+{nome: "Solange de Jesus Camargo Fritsche", dia: 4, mes: 0 , ano: 1977, funcao: "Professora", foto: "img/dezembro/glauton.jpg"},
+{nome: "Simone Figueiredo Boso", dia: 13, mes: 0 , ano: 1974, funcao: "Professora", foto: "img/dezembro/glauton.jpg"},
+{nome: "Maria de Lourdes Cardoso de Oliveira Dubinski", dia: 14, mes: 0 , ano: 1963, funcao: "Orientadora", foto: "img/dezembro/glauton.jpg"},
+{nome: "Camila dos Anjos Moura", dia: 20, mes: 0 , ano: 1990, funcao: "Coordenadora", foto: "img/dezembro/glauton.jpg"},
+{nome: "Stephanie Dayanne Barbosa Sant Ana Rudiniki", dia: 21, mes: 0 , ano: 1988, funcao: "Professora", foto: "img/dezembro/glauton.jpg"},
+{nome: "Lidia Aparecida de Andrades Montes", dia: 28, mes: 0 , ano: 1965, funcao: "Professora", foto: "img/dezembro/glauton.jpg"},
+
+
+
+{nome: "Valdene Neres de Sena Reis", dia: 12, mes: 11, ano: 1967, funcao: "Zeladora", foto:"img/dezembro/valdene.jpg"},
+{nome: "Carin Grime de Melo", dia: 13, mes: 11, ano: 1988, funcao: "Secretária", foto:"img/dezembro/carin.jpg"},
+{nome: "Glauton Vinicius de Andrade", dia: 27, mes: 11, ano: 1968, funcao: "Professor", foto:"img/dezembro/glauton.jpg"},
+
+]
+
+const aniversariantesDoDia = [] 
+
+// Data atual completa
+// document.getElementById('hoje').innerHTML = `Hoje é ${diasDaSemana[diaSemana]}, ${dia} de ${meses[mes]} de ${ano}.`
+
+//Verifica quem faz aniversário hoje e inclui o objeto no array aniversariantesDoDia
+for ( i=0; i < pessoas.length; i++ ) {
+
+    if (pessoas[i].dia == dia && pessoas[i].mes == mes) {
+      aniversariantesDoDia.push(pessoas[i]) 
+    }
+} 
+
+var n = aniversariantesDoDia.length
+
+if ( n > 0 ) {
+       
+    var k = 0
+    
+    do {
+        
+        // declare variables and create elements
+        const conteinerAniversariantes = document.querySelector("#boxAniversariantes")
+        const cardAniversariantes = document.createElement("div")   
+        const fotoAniversariantes = document.createElement("div")
+        const nomeAniversariante = document.createElement("div")
+        const funcaoAniversariante = document.createElement("div")
+        const img = new Image()
+        
+        // add classes
+        cardAniversariantes.classList.add('cardAniversariantes')
+        fotoAniversariantes.classList.add('fotoAniversariantes')
+        nomeAniversariante.classList.add('nomeAniversariante')
+        funcaoAniversariante.classList.add('funcaoAniversariante')
+        img.classList.add('foto')
+                   
+        // insert contents
+        img.src = aniversariantesDoDia[k].foto
+        nomeAniversariante.innerHTML = aniversariantesDoDia[k].nome
+        funcaoAniversariante.innerHTML = aniversariantesDoDia[k].funcao
+        
+        // append
+        fotoAniversariantes.appendChild(img)
+        cardAniversariantes.appendChild(fotoAniversariantes)
+        cardAniversariantes.appendChild(nomeAniversariante)
+        cardAniversariantes.appendChild(funcaoAniversariante)
+        conteinerAniversariantes.appendChild(cardAniversariantes)
+
+        k++
+
+    } while ( k < n )
+
+} else {
+    // document.body.style.display = "none"
+    window.location="https://dls76.github.io/dbox2/"
+}
+}
+
+function fechar() {
+document.getElementById('conteiner').style.display = "none"
+window.location="https://dls76.github.io/dbox2/"
+}
+
+    </script>
 </div>
 </body>
 </html>
