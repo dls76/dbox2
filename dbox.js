@@ -4,7 +4,6 @@ window.addEventListener('load', cultos)
 window.addEventListener('load', plantaoentrevistas)
 window.addEventListener('load', plantaoDiarioCompensacao)
 
-
 // Cultos
 function cultos() {
 
