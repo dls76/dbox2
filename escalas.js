@@ -31,8 +31,9 @@ function proximoPlantaoDeMatricula(array) {
         document.querySelector('#plantaomatriculas').innerHTML = pessoa
     } 
     else {
+        document.querySelector('#plantaomatriculas').innerHTML = 'Em definição...'
         // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
-        return array[array.length - 1];
+        // return array[array.length - 1];
         //document.querySelector('#plantaomatriculas').innerHTML = 'Sem dados'
     }
 }
@@ -67,6 +68,8 @@ function findNextRoute(array) {
     // Se houver datas após a data atual, retorna a primeira delas
     if (futureDates.length > 0) {
         document.querySelector('#routescala').innerHTML = futureDates[0].data.getDate() + '/' + (futureDates[0].data.getMonth()+1) + ' - ' + futureDates[0].tema;
+    } else {
+        document.querySelector('#routescala').innerHTML = 'Em definição...'
     }
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
     // return array[array.length - 1];
@@ -93,12 +96,12 @@ let plantaosexta = [
     {data: new Date(2023, 10, 24), person: "Douglas"}, 
     {data: new Date(2023, 11, 1), person: "Nailson"}, 
     {data: new Date(2023, 11, 8), person: "Alexandro"}, 
-    {data: new Date(2023, 11, 15), person: "Feliz Natal!"}, 
-    {data: new Date(2023, 11, 22), person: "Feliz Natal!"}, 
-    {data: new Date(2023, 11, 29), person: "Feliz Ano Novo!"}, 
-    {data: new Date(2024, 0, 5), person: "Feliz Ano Novo!"}, 
-    {data: new Date(2024, 0, 12), person: "Feliz Ano Novo!"}, 
-    {data: new Date(2024, 0, 19), person: "Feliz Ano Novo!"}, 
+    // {data: new Date(2023, 11, 15), person: "Feliz Natal!"}, 
+    // {data: new Date(2023, 11, 22), person: "Feliz Natal!"}, 
+    // {data: new Date(2023, 11, 29), person: "Feliz Ano Novo!"}, 
+    // {data: new Date(2024, 0, 5), person: "Feliz Ano Novo!"}, 
+    // {data: new Date(2024, 0, 12), person: "Feliz Ano Novo!"}, 
+    // {data: new Date(2024, 0, 19), person: "Feliz Ano Novo!"}, 
 ]
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
 function proximoPlantaoDeSexta(array) {
@@ -123,7 +126,7 @@ function proximoPlantaoDeSexta(array) {
     } else {
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
     // return array[array.length - 1];
-   document.querySelector('#plantaosexta').innerHTML = 'Sem dados'
+   document.querySelector('#plantaosexta').innerHTML = 'Em definição...'
     }
 }
 
@@ -168,7 +171,7 @@ let classesbiblicas = [
 
     {data: new Date(2023, 10, 28), tema: 'Pais (casa)'},
 
-    {data: new Date(2023, 11, 25), tema: 'Feliz Natal e Ano Novo!'},
+    // {data: new Date(2023, 11, 25), tema: 'Feliz Natal e Ano Novo!'},
 
 ]
 window.addEventListener('load', findNextBibleClass(classesbiblicas))
@@ -185,6 +188,8 @@ function findNextBibleClass(array) {
     // Se houver datas após a data atual, retorna a primeira delas
     if (myFutureDates.length > 0) {
         document.querySelector('#classesbiblicascontent').innerHTML = myFutureDates[0].data.getDate() + '/' + (myFutureDates[0].data.getMonth()+1) + ' - ' + myFutureDates[0].tema;
+    } else {
+        document.querySelector('#classesbiblicascontent').innerHTML = 'Em definição...'
     }
 
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)

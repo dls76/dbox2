@@ -11,18 +11,20 @@ body {
 }
 
 .conteinergeral {
-    width: 96%;
-    max-width: 1400px;
+    width: 98%;
+    max-width: 1500px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto auto auto;
     margin: auto;
     box-sizing: border-box;
+    /* border: 2px solid red; */
 }
 
 main#conteinerhome {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr .9fr 1.1fr;
     gap: 1rem;
 }
 
@@ -122,7 +124,7 @@ main#conteinerhome {
     flex-direction: column;
     border-radius: 12px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    padding: 2rem;
+    /* padding: 2rem; */
 }
 
 .escala {
@@ -540,28 +542,31 @@ i.seta {
 }
 
 .next-event-conteiner {
-    /* height: 12rem; */
-    /* overflow: auto; */
-    /* border-radius: 10px; */
-    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
-    /* Retornar o código acima e apagar o de baixo quando retornar em 2024 */
-
+    height: 35rem;
+    overflow: auto;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    border-radius: 12px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    padding: 2rem;
+    padding: 1rem 0;
 }
 
 .nextevent {
+    border: 1px solid lightgray;
     border-radius: 12px;
     min-height: 4rem;
     width: 90%;
-    margin: 1rem auto;
+    margin: .5rem auto;
     display: grid;
     grid-template-columns: 1fr 3fr;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     /* display: none; */
+}
+
+.nextevent:hover {
+    cursor: pointer;
+    border: 1px solid #6298F5;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 16px;
 }
 
 .datadoevento {
@@ -619,7 +624,7 @@ i.seta {
     padding: .2rem 0 .3rem;
     /* text-align: right; */
     font-style: italic;
-    display: none;
+    /* display: none; */
 }
 
 .linksdoevento {

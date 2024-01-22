@@ -7,44 +7,44 @@ window.addEventListener('load', plantaoDiarioCompensacao)
 // Cultos
 function cultos() {
 
-    if (datahoje.getDay() == 0) {
-        document.querySelector('#cultos').innerHTML = "Hoje é domingão!"
-    }
-    if (datahoje.getDay() == 1) {
-        document.querySelector('#cultos').innerHTML = 'Diretor'
-    }
-    if (datahoje.getDay() == 2) {
-        document.querySelector('#cultos').innerHTML = 'Pr. Vinícius'
-    }
-    if (datahoje.getDay() == 3) {
-        document.querySelector('#cultos').innerHTML = 'Vice-diretor'
-    }
-    if (datahoje.getDay() == 4) {
+    // if (datahoje.getDay() == 0) {
+    //     document.querySelector('#cultos').innerHTML = "Hoje é domingão!"
+    // }
+    // if (datahoje.getDay() == 1) {
+    //     document.querySelector('#cultos').innerHTML = 'Diretor'
+    // }
+    // if (datahoje.getDay() == 2) {
+    //     document.querySelector('#cultos').innerHTML = 'Pr. Vinícius'
+    // }
+    // if (datahoje.getDay() == 3) {
+    //     document.querySelector('#cultos').innerHTML = 'Vice-diretor'
+    // }
+    // if (datahoje.getDay() == 4) {
 
-        if ( datahoje.getDate() == 9) {
-            document.querySelector('#cultos').innerHTML = 'ADM' 
-        }
-        if ( datahoje.getDate() == 16) {
-            document.querySelector('#cultos').innerHTML = '7h-Eula' + ' &raquo; ' + '10h10-Nailson' + ' &raquo; ' + '13h-Jaque' 
-        }
-        if ( datahoje.getDate() == 23) {
-            document.querySelector('#cultos').innerHTML = '7h-Carol ' + ' &raquo; ' + ' 10h10-Valéria ' + ' &raquo; ' + ' 13h-Malu' 
-        }
-        if ( datahoje.getDate() == 30) {
-            document.querySelector('#cultos').innerHTML = '7h-Filipi ' + ' &raquo; ' + '10h10-Nailson ' + ' &raquo; ' + '13h-Ana' 
-        }
-    }
-    if (datahoje.getDay() == 5) {
-        if (datahoje.getDate() == 8) {
-            document.querySelector('#cultos').innerHTML = 'Recesso'
-        }
-            document.querySelector('#cultos').innerHTML = 'Pr. Leonardo'
-    }
-    if (datahoje.getDay() == 6) {
-        document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
-    }
+    //     if ( datahoje.getDate() == 9) {
+    //         document.querySelector('#cultos').innerHTML = 'ADM' 
+    //     }
+    //     if ( datahoje.getDate() == 16) {
+    //         document.querySelector('#cultos').innerHTML = '7h-Eula' + ' &raquo; ' + '10h10-Nailson' + ' &raquo; ' + '13h-Jaque' 
+    //     }
+    //     if ( datahoje.getDate() == 23) {
+    //         document.querySelector('#cultos').innerHTML = '7h-Carol ' + ' &raquo; ' + ' 10h10-Valéria ' + ' &raquo; ' + ' 13h-Malu' 
+    //     }
+    //     if ( datahoje.getDate() == 30) {
+    //         document.querySelector('#cultos').innerHTML = '7h-Filipi ' + ' &raquo; ' + '10h10-Nailson ' + ' &raquo; ' + '13h-Ana' 
+    //     }
+    // }
+    // if (datahoje.getDay() == 5) {
+    //     if (datahoje.getDate() == 8) {
+    //         document.querySelector('#cultos').innerHTML = 'Recesso'
+    //     }
+    //         document.querySelector('#cultos').innerHTML = 'Pr. Leonardo'
+    // }
+    // if (datahoje.getDay() == 6) {
+    //     document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
+    // }
     
-    document.querySelector('#cultos').innerHTML = 'Feliz Natal!'
+    document.querySelector('#cultos').innerHTML = 'Em definição...'
 
 }
 
@@ -73,7 +73,7 @@ function plantaoentrevistas() {
     // if (datahoje.getDay() == 6) { 
     //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Feliz Sábado!'
     // }
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Feliz Natal!'
+        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Em definição...'
 }
 
 //===== Compensação e Plantão Diário
@@ -81,38 +81,38 @@ function plantaoDiarioCompensacao() {
 
     // domingo
     if (datahoje.getDay() == 0) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Hoje é domingão!'
-        document.querySelector('#nomescomp').innerHTML = 'Hoje é domingão!'
+        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }    
     // segunda
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Douglas'
-        document.querySelector('#nomescomp').innerHTML = 'M: Pr. Vinícius'
+        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
     // terça
     if (datahoje.getDay() == 2) {
-        document.querySelector('#plantaodiario').innerHTML = 'Nailson'
-        document.querySelector('#nomescomp').innerHTML = 'Sem escala'
+        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
     // quarta
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Josiane'
-        document.querySelector('#nomescomp').innerHTML = 'M: Jaque/Camila | T: Carin/Nailson'
+        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
     // quinta
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
-        document.querySelector('#nomescomp').innerHTML = 'T: Valéria e Eula'
+        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
     // sexta
     if (datahoje.getDay() == 5) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta.'
-        document.querySelector('#nomescomp').innerHTML = 'M: Malú/Douglas | T: Josi/Ale/Carol/Sarita'
+        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
     // sábado
     if (datahoje.getDay() == 6) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Feliz Sábado!'
-        document.querySelector('#nomescomp').innerHTML = 'Feliz Sábado!'
+        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
 }
 
