@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f3f3f3;
+    background-color: #eeeeee;
 }
 
 .conteinergeral {
@@ -123,8 +123,7 @@ main#conteinerhome {
     display: flex;
     flex-direction: column;
     border-radius: 12px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    /* padding: 2rem; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .escala {
@@ -206,7 +205,6 @@ i.seta {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    /* border: 1px solid red; */
 }
 
 .linksuteis {
@@ -222,7 +220,7 @@ i.seta {
     gap: .5rem;
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     overflow: auto;
     height: 300px;
 }
@@ -297,7 +295,8 @@ i.seta {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
 }
 
 #anivBack {
@@ -547,7 +546,8 @@ i.seta {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: #fff;
     padding: 1rem 0;
 }
 
