@@ -156,24 +156,19 @@ i.fa-chevron-right, i.fa-chevron-left {
 #bt-up {
     display: none;
 }
-
-
 .body-proximoseventos {
     height: 14.5rem;
     overflow-y: scroll;
     margin-top: -1rem;
 }
-
 .body-proximoseventos::-webkit-scrollbar {
     width: 0px;
 }
-
 .body-proximoseventos::-webkit-scrollbar-thumb {
     background-color: #d0d0d0;
     border-radius: 10px;
     display: none;
 }
-
 .body-proximoseventos::-webkit-scrollbar-thumb:hover {
     background-color: #b6b6b6;
     display: none;

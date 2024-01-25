@@ -552,26 +552,26 @@ i.seta {
 }
 
 .nextevent {
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
     border-radius: 12px;
     min-height: 4rem;
     width: 90%;
     margin: .5rem auto;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 2fr 7fr;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     /* display: none; */
 }
 
 .nextevent:hover {
     cursor: pointer;
-    border: 1px solid #6298F5;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 16px;
 }
 
 .datadoevento {
-    max-width: 6rem;
-    min-width: 4rem;
+    /* max-width: 4rem; */
+    min-width: 2rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -612,10 +612,10 @@ i.seta {
     font-size: 1rem;
     font-weight: bold;
     color: #6a6a6a;
-    max-width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /* max-width: 200px; */
+    /* white-space: wrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
 }
 
 .regressivaevento{
