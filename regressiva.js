@@ -1,8 +1,14 @@
 window.addEventListener("load", function() {
+
     const proximosEventos = [
+
       { nome: "Capacitação de professores", data: new Date(2024, 0, 29) },
       { nome: "Reunião de pais EI-FI", data: new Date(2024, 0, 30) },
       { nome: "Reunião de pais novos FII-EM", data: new Date(2024, 1, 1) },
+      // { nome: "Entrega de Materiais", data: },
+      // { nome: "Primeiro dia de FII-EM", data: },
+      // { nome: "Reunião de pais de FII-EM", data: },
+      // { nome: "Primeiro dia de EI-FI", data: },
     ];
   
   // próximosEventos.forEach((e)=>{
