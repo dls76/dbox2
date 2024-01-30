@@ -5,6 +5,12 @@ window.addEventListener("load", function() {
       { nome: "Reunião de pais novos FII-EM", data: new Date(2024, 1, 1) },
     ];
   
+  próximosEventos.forEach((e)=>{
+    
+    const a = document.createElement('a')
+    
+  })
+  
     const regressivaEventos = [...document.querySelectorAll('.regressivaevento')];
   
     function countdown() {
