@@ -10,9 +10,48 @@ window.addEventListener("load", function() {
     // { nome: "Primeiro dia de EI-FI", data: },
   ];
 
-  // próximosEventos.forEach((e)=>{
-  //   const a = document.createElement('a')
-  // })
+  const eventosContainer = document.getElementById('eventos-container');
+
+  proximosEventos.forEach(evento => {
+    const a = document.createElement('a');
+    a.href = ''; // Add the appropriate link
+    a.target = '_blank';
+    a.classList.add('nextevent');
+
+    const dataDiv = document.createElement('div');
+    dataDiv.classList.add('datadoevento');
+
+    const diaEvento = document.createElement('div');
+    diaEvento.classList.add('diadoevento');
+    diaEvento.textContent = evento.data.getDate();
+
+    const mesEvento = document.createElement('div');
+    mesEvento.classList.add('mesdoevento');
+    // Assuming you have an array of month names
+    const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+    mesEvento.textContent = meses[evento.data.getMonth()];
+
+    dataDiv.appendChild(diaEvento);
+    dataDiv.appendChild(mesEvento);
+
+    const infoDiv = document.createElement('div');
+    infoDiv.classList.add('infodoevento');
+
+    const tituloEvento = document.createElement('div');
+    tituloEvento.classList.add('titulodoevento');
+    tituloEvento.textContent = evento.nome;
+
+    const regressivaEvento = document.createElement('div');
+    regressivaEvento.classList.add('regressivaevento');
+
+    infoDiv.appendChild(tituloEvento);
+    infoDiv.appendChild(regressivaEvento);
+
+    a.appendChild(dataDiv);
+    a.appendChild(infoDiv);
+
+    eventosContainer.appendChild(a);
+  });
 
   const regressivaEventos = [...document.querySelectorAll('.regressivaevento')];
 
@@ -21,8 +60,6 @@ window.addEventListener("load", function() {
 
     proximosEventos.forEach((evento, index) => {
       let eventDate = evento.data;
-
-      // Ajuste para levar em conta o horário atual
       eventDate.setHours(23, 59, 59, 999);
 
       let currentTime = now.getTime();
@@ -30,18 +67,7 @@ window.addEventListener("load", function() {
 
       let remTime = eventTime - currentTime;
 
-      let s = Math.floor(remTime / 1000);
-      let m = Math.floor(s / 60);
-      let h = Math.floor(m / 60);
-      let d = Math.floor(remTime / (1000 * 60 * 60 * 24)); // Fix this line
-
-      h %= 24;
-      m %= 60;
-      s %= 60;
-
-      h = (h < 10) ? "0" + h : h;
-      m = (m < 10) ? "0" + m : m;
-      s = (s < 10) ? "0" + s : s;
+      let d = Math.floor(remTime / (1000 * 60 * 60 * 24));
 
       if (d == 0) {
         regressivaEventos[index].innerHTML = `É hoje!`;
@@ -55,7 +81,7 @@ window.addEventListener("load", function() {
     });
 
     setTimeout(countdown, 1000);
-  } // Closing the countdown function
+  }
 
   // Inicializar a contagem regressiva
   countdown();
