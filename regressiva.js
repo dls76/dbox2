@@ -46,13 +46,14 @@ window.addEventListener("load", function() {
         m = (m < 10) ? "0" + m : m;
         s = (s < 10) ? "0" + s : s;
   
-        if (d <= 0) {
+        if (d == 0) {
           regressivaEventos[index].innerHTML = `É hoje!`;
         } else if (d === 1) {
           regressivaEventos[index].innerHTML = `Falta ${d} dia`;
-        } else {
+        } else if (d > 1) {
           regressivaEventos[index].innerHTML = `Faltam ${d} dias`;
-        }
+        } else {
+          regressivaEventos[index].innerHTML = `Aconteceu há ${d*(-1)} dia(s)`;
       });
   
       setTimeout(countdown, 1000);
