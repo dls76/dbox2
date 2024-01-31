@@ -57,7 +57,7 @@ window.addEventListener("load", function() {
       });
   
       setTimeout(countdown, 1000);
-    }
+    })
   
     // Inicializar a contagem regressiva
     countdown();
