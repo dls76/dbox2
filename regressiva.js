@@ -1,4 +1,4 @@
-const eventosContainer = document.getElementById('eventosConteiner');
+const eventosContainer = document.getElementById('nextEventsConteiner');
 
 proximosEventos.forEach((evento) => {
   const a = document.createElement('a');
