@@ -1,7 +1,6 @@
 window.addEventListener("load", function() {
 
     const proximosEventos = [
-
       { nome: "Capacitação de professores", data: new Date(2024, 0, 29) },
       { nome: "Reunião de pais EI-FI", data: new Date(2024, 0, 30) },
       { nome: "Reunião de pais novos FII-EM", data: new Date(2024, 1, 1) },
@@ -11,11 +10,9 @@ window.addEventListener("load", function() {
       // { nome: "Primeiro dia de EI-FI", data: },
     ];
   
-  // próximosEventos.forEach((e)=>{
-    
-  //   const a = document.createElement('a')
-    
-  // })
+    // próximosEventos.forEach((e)=>{
+    //   const a = document.createElement('a')
+    // })
   
     const regressivaEventos = [...document.querySelectorAll('.regressivaevento')];
   
@@ -53,14 +50,13 @@ window.addEventListener("load", function() {
         } else if (d > 1) {
           regressivaEventos[index].innerHTML = `Faltam ${d} dias`;
         } else {
-          regressivaEventos[index].innerHTML = `Aconteceu há ${d*(-1)} dia(s)`;
+          regressivaEventos[index].innerHTML = `Aconteceu há ${d * -1} dia(s)`;
+        }
       });
   
       setTimeout(countdown, 1000);
-    })
+    } // Closing the countdown function
   
     // Inicializar a contagem regressiva
     countdown();
-  });
-  
-  
+});
