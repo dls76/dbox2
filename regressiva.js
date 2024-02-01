@@ -7,6 +7,7 @@ const proximosEventos = [
   {nome: 'Reunião de pais novos 6º-EM', data: new Date(2024, 1, 1), link: "https://drive.google.com/drive/folders/1FOtTmkrZ4p3xxqme4Miafh8I8iBtyDeO?usp=sharing"},
   {nome: 'Entrega de materiais', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1-GlAccEqzgjwnVNqklVswqOQPVrJNeBJ?usp=sharing"},
   {nome: 'Primeiro dia - 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1pRvGEkBh-6kbAo7cZc6hZ2rpTq6V4x6S?usp=sharing"},
+  {nome: 'Semana de Acolhimento FII-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1g4pwjYw5j61YuviPKtKI_pMsifAaXy7y?usp=drive_link"},
   {nome: 'Reunião de pais 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1hrjh7zi_hFuTFZOOEHmfnE_UZW0UCwj3?usp=sharing"},
   {nome: 'Primeiro dia EI-5º', data: new Date(2024, 1, 6), link: "https://drive.google.com/drive/folders/1TXZPR2ibUICVDn_6g25l6uFalEe095HK?usp=sharing"},
 ];
