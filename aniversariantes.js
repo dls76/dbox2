@@ -24,6 +24,8 @@ const pessoas = [
     {nome: "Luciane Silverio Desbessel", dia: 21, mes: 1, ano: 1978, funcao: "Professora", foto:"img/account.png", nascimento: new Date()},
 ]
 
+
+// Mostra os aniversariantes do dia na home
 function show() {
 
     var data = new Date()
@@ -63,5 +65,6 @@ function show() {
             document.querySelector('#bt-aniver').innerHTML = "ANIVERSARIANTES " + mss[new Date().getMonth()].toUpperCase()
         
         }
+
     } 
 }

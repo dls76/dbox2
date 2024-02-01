@@ -563,6 +563,10 @@ i.seta {
     /* display: none; */
 }
 
+.nextevent:last-of-type {
+    margin-bottom: 100vh;
+}
+
 .nextevent:hover {
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 16px;
