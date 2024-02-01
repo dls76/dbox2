@@ -7,21 +7,22 @@ const mss = [
 const pessoas = [
     
     //Janeiro
-    {nome: "Natalia Martins Schneider", dia: 3, mes: 0, ano: 1998, funcao: "Professora", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Solange de Jesus Camargo", dia: 4, mes: 0, ano: 1977, funcao: "Professora", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Simone Figueiredo Boso", dia: 13, mes: 0, ano: 1974, funcao: "Professora", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Maria de Lourdes Cardoso de Oliveira Dubinski", dia: 14, mes: 0, ano: 1963, funcao: "Orientadora", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Camila dos Anjos Moura", dia: 20, mes: 0, ano: 1990, funcao: "Coordenadora", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Stephanie Dayanne Barbosa Sant Ana Rudiniki", dia: 21, mes: 0, ano: 1988, funcao: "Professora", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Lidia Aparecida Andrades Montes", dia: 28, mes: 0, ano: 1965, funcao: "Professora", foto:"img/account.png", nascimento: new Date()},
+    {nome: "Natalia Martins Schneider", dia: 3, mes: 0, ano: 1998, funcao: "Professora", foto:"img/account.png"},
+    {nome: "Solange de Jesus Camargo", dia: 4, mes: 0, ano: 1977, funcao: "Professora", foto:"img/account.png"},
+    {nome: "Simone Figueiredo Boso", dia: 13, mes: 0, ano: 1974, funcao: "Professora", foto:"img/account.png"},
+    {nome: "Maria de Lourdes Cardoso de Oliveira Dubinski", dia: 14, mes: 0, ano: 1963, funcao: "Orientadora", foto:"img/account.png"},
+    {nome: "Camila dos Anjos Moura", dia: 20, mes: 0, ano: 1990, funcao: "Coordenadora", foto:"img/account.png"},
+    {nome: "Stephanie Dayanne Barbosa Sant Ana Rudiniki", dia: 21, mes: 0, ano: 1988, funcao: "Professora", foto:"img/account.png"},
+    {nome: "Lidia Aparecida Andrades Montes", dia: 28, mes: 0, ano: 1965, funcao: "Professora", foto:"img/account.png"},
     
     // Fevereiro
-    {nome: "Janaina Andrade de Lima", dia: 7, mes: 1, ano: 1980, funcao: "", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Stephany Moralles Vinharski", dia: 10, mes: 1, ano: 1995, funcao: "Psicóloga", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Lucia Milczuk", dia: 16, mes: 1, ano: 1960, funcao: "Monitora", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Pamela Quintino Machado", dia: 17, mes: 1, ano: 1995, funcao: "Professora", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Julia Rocha de Magalhães", dia: 18, mes: 1, ano: 2000, funcao: "Recepcionista", foto:"img/account.png", nascimento: new Date()},
-    {nome: "Luciane Silverio Desbessel", dia: 21, mes: 1, ano: 1978, funcao: "Professora", foto:"img/account.png", nascimento: new Date()},
+    {nome: "Andressa Cristina Schmidt dos Santos", dia: 7, mes: 1, ano: 1985, funcao: "Orientadora", foto:"img/account.png"},
+    {nome: "Janaina Andrade de Lima", dia: 7, mes: 1, ano: 1980, funcao: "", foto:"img/account.png"},
+    {nome: "Stephany Moralles Vinharski", dia: 10, mes: 1, ano: 1995, funcao: "Psicóloga", foto:"img/account.png"},
+    {nome: "Lucia Milczuk", dia: 16, mes: 1, ano: 1960, funcao: "Monitora", foto:"img/account.png"},
+    {nome: "Pamela Quintino Machado", dia: 17, mes: 1, ano: 1995, funcao: "Professora", foto:"img/account.png"},
+    {nome: "Julia Rocha de Magalhães", dia: 18, mes: 1, ano: 2000, funcao: "Recepcionista", foto:"img/account.png"},
+    {nome: "Luciane Silverio Desbessel", dia: 21, mes: 1, ano: 1978, funcao: "Professora", foto:"img/account.png"},
 ]
 
 
