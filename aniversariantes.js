@@ -16,13 +16,12 @@ const pessoas = [
     {nome: "Lidia Aparecida Andrades Montes", dia: 28, mes: 0, ano: 1965, funcao: "Professora", foto:"img/account.png"},
     
     // Fevereiro
-    {nome: "Andressa Cristina Schmidt dos Santos", dia: 7, mes: 1, ano: 1985, funcao: "Orientadora", foto:"img/account.png"},
-    {nome: "Janaina Andrade de Lima", dia: 7, mes: 1, ano: 1980, funcao: "", foto:"img/account.png"},
-    {nome: "Stephany Moralles Vinharski", dia: 10, mes: 1, ano: 1995, funcao: "Psicóloga", foto:"img/account.png"},
-    {nome: "Lucia Milczuk", dia: 16, mes: 1, ano: 1960, funcao: "Monitora", foto:"img/account.png"},
-    {nome: "Pamela Quintino Machado", dia: 17, mes: 1, ano: 1995, funcao: "Professora", foto:"img/account.png"},
-    {nome: "Julia Rocha de Magalhães", dia: 18, mes: 1, ano: 2000, funcao: "Recepcionista", foto:"img/account.png"},
-    {nome: "Luciane Silverio Desbessel", dia: 21, mes: 1, ano: 1978, funcao: "Professora", foto:"img/account.png"},
+    {nome: "Andressa Cristina Schmidt dos Santos", dia: 7, mes: 1, ano: 1985, funcao: "Orientadora", foto:"img/anivImg/fevereiro/andressa.jpg"},
+    {nome: "Stephany Moralles Vinharski", dia: 10, mes: 1, ano: 1995, funcao: "Psicóloga", foto:"img/anivImg/fevereiro/stephanie.jpg"},
+    {nome: "Lucia Milczuk", dia: 16, mes: 1, ano: 1960, funcao: "Monitora", foto:"img/anivImg/fevereiro/lucia.jpg"},
+    {nome: "Pamela Quintino Machado", dia: 17, mes: 1, ano: 1995, funcao: "Professora", foto:"img/anivImg/fevereiro/pamela.jpg"},
+    {nome: "Julia Rocha de Magalhães", dia: 18, mes: 1, ano: 2000, funcao: "Recepcionista", foto:"img/anivImg/fevereiro/julia.jpg"},
+    {nome: "Luciane Silverio Desbessel", dia: 21, mes: 1, ano: 1978, funcao: "Professora", foto:"img/anivImg/fevereiro/luciane.jpg"},
 ]
 
 
