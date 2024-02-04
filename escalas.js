@@ -193,3 +193,44 @@ function findNextBibleClass(array) {
     // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
     // return array[array.length - 1];
 }
+
+const diaDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+
+const mesesDoAno = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro']
+
+let reuniaoadm = [
+    {data: new Date(2024, 1, 19)}, 
+    {data: new Date(2024, 1, 26)}, 
+    {data: new Date(2024, 2, 4)}, 
+    {data: new Date(2024, 2, 11)}, 
+    {data: new Date(2024, 2, 18)}, 
+    {data: new Date(2024, 2, 25)}, 
+]
+window.addEventListener('load', proximaReuniaoAdm(reuniaoadm))
+
+function proximaReuniaoAdm(array) {
+    const currentDate = new Date();
+
+    // Filtrar as datas que são iguais ou após a data atual
+    const futureDates = array.filter((item)=>
+        item.data >= currentDate || item.data.toDateString() === currentDate.toDateString()
+    );
+
+    // Ordenar as datas por ordem crescente
+    futureDates.sort((a, b) => a.data - b.data);
+
+    // Se houver datas após a data atual, retorna a primeira delas
+    if (futureDates.length > 0) {
+        let dia = futureDates[0].data.getDate()
+        let mes = futureDates[0].data.getMonth() + 1
+        dia = dia < 10 ? '0' + dia : dia;
+        // mes = mes < 10 ? '0' + mes : mes;
+        // let pessoa = futureDates[0].person
+        document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes]} | 14:00`
+
+    } else {
+    // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
+    // return array[array.length - 1];
+   document.querySelector('#reuniaoadm').innerHTML = 'Em definição...'
+    }
+}

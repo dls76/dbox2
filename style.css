@@ -549,6 +549,8 @@ i.seta {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: #fff;
     padding: 1rem 0;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 1rem;
 }
 
 .nextevent {
@@ -556,11 +558,12 @@ i.seta {
     border-radius: 12px;
     min-height: 4rem;
     width: 90%;
-    margin: .5rem auto;
+    margin: 1rem auto;
     display: grid;
     grid-template-columns: 2fr 7fr;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     /* display: none; */
+    scroll-snap-align: start;
 }
 
 .nextevent:last-of-type {
