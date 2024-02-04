@@ -2,14 +2,14 @@
 
 
 const proximosEventos = [
-  {nome: 'Capacitação de Professores', data: new Date(2024, 0, 29), link: "https://drive.google.com/drive/folders/1efLap5rz5Yxzak_Wr5F-4ODEwFrff1EH?usp=sharing"},
-  {nome: 'Reunião de pais EI-5º', data: new Date(2024, 0, 30), link: "https://drive.google.com/drive/folders/1Xv_eNsvJ5HeBKhStzjo0o3q71Odrzmki?usp=sharing"},
-  {nome: 'Reunião de pais novos 6º-EM', data: new Date(2024, 1, 1), link: "https://drive.google.com/drive/folders/1FOtTmkrZ4p3xxqme4Miafh8I8iBtyDeO?usp=sharing"},
-  {nome: 'Entrega de materiais', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1-GlAccEqzgjwnVNqklVswqOQPVrJNeBJ?usp=sharing"},
-  {nome: 'Primeiro dia - 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1pRvGEkBh-6kbAo7cZc6hZ2rpTq6V4x6S?usp=sharing"},
-  {nome: 'Semana de Acolhimento FII-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1g4pwjYw5j61YuviPKtKI_pMsifAaXy7y?usp=drive_link"},
-  {nome: 'Reunião de pais 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1hrjh7zi_hFuTFZOOEHmfnE_UZW0UCwj3?usp=sharing"},
-  {nome: 'Primeiro dia EI-5º', data: new Date(2024, 1, 6), link: "https://drive.google.com/drive/folders/1TXZPR2ibUICVDn_6g25l6uFalEe095HK?usp=sharing"},
+  {nome: 'Capacitação de Professores', data: new Date(2024, 0, 29), link: "https://drive.google.com/drive/folders/1efLap5rz5Yxzak_Wr5F-4ODEwFrff1EH?usp=sharing", resp: 'Responsável'},
+  {nome: 'Reunião de pais EI-5º', data: new Date(2024, 0, 30), link: "https://drive.google.com/drive/folders/1Xv_eNsvJ5HeBKhStzjo0o3q71Odrzmki?usp=sharing", resp: 'Responsável'},
+  {nome: 'Reunião de pais novos 6º-EM', data: new Date(2024, 1, 1), link: "https://drive.google.com/drive/folders/1FOtTmkrZ4p3xxqme4Miafh8I8iBtyDeO?usp=sharing", resp: 'Responsável'},
+  {nome: 'Entrega de materiais', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1-GlAccEqzgjwnVNqklVswqOQPVrJNeBJ?usp=sharing", resp: 'Responsável'},
+  {nome: 'Primeiro dia - 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1pRvGEkBh-6kbAo7cZc6hZ2rpTq6V4x6S?usp=sharing", resp: 'Responsável'},
+  {nome: 'Semana de Acolhimento FII-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1g4pwjYw5j61YuviPKtKI_pMsifAaXy7y?usp=drive_link", resp: 'Responsável'},
+  {nome: 'Reunião de pais 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1hrjh7zi_hFuTFZOOEHmfnE_UZW0UCwj3?usp=sharing", resp: 'Responsável'},
+  {nome: 'Primeiro dia EI-5º', data: new Date(2024, 1, 6), link: "https://drive.google.com/drive/folders/1TXZPR2ibUICVDn_6g25l6uFalEe095HK?usp=sharing", resp: 'Responsável'},
 ];
 
 const eventosContainer = document.getElementById('nextEventsConteiner');
@@ -44,7 +44,11 @@ proximosEventos.forEach((evento) => {
 
   const regressivaEvento = document.createElement('div');
   regressivaEvento.classList.add('regressivaevento');
-  
+
+  // const responsavel = document.createElement('div');
+  // responsavel.classList.add('regressivaevento');
+  // responsavel.innerText = evento.resp 
+
   // Calculate days remaining with time part set to midnight
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -65,6 +69,7 @@ proximosEventos.forEach((evento) => {
   }
 
   infoDiv.appendChild(tituloEvento);
+  // infoDiv.appendChild(responsavel)
   infoDiv.appendChild(regressivaEvento);
 
   a.appendChild(dataDiv);
@@ -108,3 +113,22 @@ function scrollToNextEvent() {
 
 // Chame a função ao carregar a página
 window.addEventListener('load', scrollToNextEvent);
+
+
+// function esmaecerEventosPassados() {
+
+//   const pastEvents = []
+
+//   const currentDate = new Date().getTime()
+
+//   proximosEventos.forEach((e)=>{
+//     const dateTarget = e.data.getTime()
+//     if (dateTarget <= currentDate) {
+//       pastEvents.push(e)
+//     }
+//   })
+
+//   pastEvents
+// }
+
+// window.addEventListener('load', esmaecerEventosPassados)

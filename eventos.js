@@ -1,41 +1,41 @@
 // window.addEventListener("load", mostrarEventos)
 
-const meses = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ']
+const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
 
 let eventos = [
 
     //Fevereiro
-    {data1: new Date(2023, 1, 1), data2: new Date(2023, 1, 1), descritivo: "Reunião com os pais novos 6° ao médio. ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 2), data2: new Date(2023, 1, 2), descritivo: "Reunião de Pastores recém-chegados na USB educação – zoom ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 2), data2: new Date(2023, 1, 2), descritivo: "Projeto Acolhimento EI ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 5), data2: new Date(2023, 1, 5), descritivo: "Entrega de materiais Ed.Infantil ao 5° ano ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 5), data2: new Date(2023, 1, 5), descritivo: "Início do 1º bimestre / Início das Aulas 6° ao médio ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 5), data2: new Date(2023, 1, 9), descritivo: "Semana de acolhimento dos alunos ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 5), data2: new Date(2023, 1, 5), descritivo: "Data limite para entrega do planejamento ao SOP com os critérios avaliativos do bimestre ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 6), data2: new Date(2023, 1, 6), descritivo: "Início das aulas Ed. Infantil ao 5° ano EFI ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 6), data2: new Date(2023, 1, 6), descritivo: "Início das aulas Contraturno. ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 5), data2: new Date(2023, 3, 15), descritivo: "Avaliação Diagnóstica - PAAEB (Público-alvo: alunos do 6º Ano EF e 1ª Série EM) ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 6), data2: new Date(2023, 1, 6), descritivo: "Comissão de Educação/Diretiva ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 6), data2: new Date(2023, 1, 6), descritivo: "Dia de acolhimento aos 6ºs anos ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 11), data2: new Date(2023, 1, 11), descritivo: "Dia do Zelador ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 12), data2: new Date(2023, 1, 12), descritivo: "Recesso Carnaval (Dia permutável com recesso) ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 13), data2: new Date(2023, 1, 13), descritivo: "Feriado Carnaval ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 14), data2: new Date(2023, 1, 14), descritivo: "Data limite para entrega das avaliações 1º Bimestre - Para Análise do SOP ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 14), data2: new Date(2023, 1, 20), descritivo: "Revisão e organização dos critérios avaliativos com os devidos conteúdos do 1º bimestre - SOP ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 14), data2: new Date(2023, 1, 23), descritivo: "Lançamento Redação Nota 1000 para alunos – EF II e EM – por escola (cada escola agendar com prof Marlus) ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 15), data2: new Date(2023, 1, 15), descritivo: "Redação Nota Mil ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 19), data2: new Date(2023, 1, 19), descritivo: "Inicio do uso dos livros didáticos (na unidades escolar). ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 19), data2: new Date(2023, 1, 23), descritivo: "Semana Hábitos de Estudo – SOE ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 19), data2: new Date(2023, 1, 21), descritivo: "Formação Programa Bilíngue – Catre S Luiz Purunã ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 22), data2: new Date(2023, 2, 2), descritivo: "Dez dias de Oração ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 23), data2: new Date(2023, 1, 23), descritivo: "Envio dos critérios avaliativos com os devidos conteúdos para alunos e pais ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 23), data2: new Date(2023, 1, 23), descritivo: "Reunião de alinhamento - ECO - SOE E SOP - On Line - 8h30 ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 23), data2: new Date(2023, 1, 23), descritivo: "Última data para cadastro e alteração de itinerários EM ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 26), data2: new Date(2023, 1, 26), descritivo: "Data limite para o cadastro de alunos na plataforma da CPB, aprimora, aplicativo CPB ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 26), data2: new Date(2023, 1, 26), descritivo: "Data limite para a obrigatoriedade do uso dos livros didáticos. Fazer o levantamento dos alunos que não compraram ainda. (ter o cuidado de verificar primeiramente se há falta de algum livro – loja)", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 26), data2: new Date(2023, 1, 29), descritivo: "Sondagem de escrita individual CAC / Sondagem de esquema corporal (DESENHO) ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 27), data2: new Date(2023, 1, 27), descritivo: "Feriado Municipal em Fazenda Rio Grande) ", cal: "", resp: "", foto: "", detalhes: ""},
-    {data1: new Date(2023, 1, 28), data2: new Date(2023, 1, 28), descritivo: "Reunião Comissão de Educação Especial ", cal: "", resp: "", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 1), data2: new Date(2023, 1, 1), descritivo: "Reunião com os pais novos 6° ao médio. ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 2), data2: new Date(2023, 1, 2), descritivo: "Reunião de Pastores recém-chegados na USB educação – zoom ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 2), data2: new Date(2023, 1, 2), descritivo: "Projeto Acolhimento EI ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 5), data2: new Date(2023, 1, 5), descritivo: "Entrega de materiais Ed.Infantil ao 5° ano ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 5), data2: new Date(2023, 1, 5), descritivo: "Início do 1º bimestre / Início das Aulas 6° ao médio ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 5), data2: new Date(2023, 1, 9), descritivo: "Semana de acolhimento dos alunos ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 5), data2: new Date(2023, 1, 5), descritivo: "Data limite para entrega do planejamento ao SOP com os critérios avaliativos do bimestre ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 6), data2: new Date(2023, 1, 6), descritivo: "Início das aulas Ed. Infantil ao 5° ano EFI ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 6), data2: new Date(2023, 1, 6), descritivo: "Início das aulas Contraturno. ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 5), data2: new Date(2023, 3, 15), descritivo: "Avaliação Diagnóstica - PAAEB (Público-alvo: alunos do 6º Ano EF e 1ª Série EM) ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 6), data2: new Date(2023, 1, 6), descritivo: "Comissão de Educação/Diretiva ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 6), data2: new Date(2023, 1, 6), descritivo: "Dia de acolhimento aos 6ºs anos ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 11), data2: new Date(2023, 1, 11), descritivo: "Dia do Zelador ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 12), data2: new Date(2023, 1, 12), descritivo: "Recesso Carnaval (Dia permutável com recesso) ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 13), data2: new Date(2023, 1, 13), descritivo: "Feriado Carnaval ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 14), data2: new Date(2023, 1, 14), descritivo: "Data limite para entrega das avaliações 1º Bimestre - Para Análise do SOP ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 14), data2: new Date(2023, 1, 20), descritivo: "Revisão e organização dos critérios avaliativos com os devidos conteúdos do 1º bimestre - SOP ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 14), data2: new Date(2023, 1, 23), descritivo: "Lançamento Redação Nota 1000 para alunos – EF II e EM – por escola (cada escola agendar com prof Marlus) ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 15), data2: new Date(2023, 1, 15), descritivo: "Redação Nota Mil ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 19), data2: new Date(2023, 1, 19), descritivo: "Inicio do uso dos livros didáticos (na unidades escolar). ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 19), data2: new Date(2023, 1, 23), descritivo: "Semana Hábitos de Estudo – SOE ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 19), data2: new Date(2023, 1, 21), descritivo: "Formação Programa Bilíngue – Catre S Luiz Purunã ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 22), data2: new Date(2023, 2, 2), descritivo: "Dez dias de Oração ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 23), data2: new Date(2023, 1, 23), descritivo: "Envio dos critérios avaliativos com os devidos conteúdos para alunos e pais ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 23), data2: new Date(2023, 1, 23), descritivo: "Reunião de alinhamento - ECO - SOE E SOP - On Line - 8h30 ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 23), data2: new Date(2023, 1, 23), descritivo: "Última data para cadastro e alteração de itinerários EM ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 26), data2: new Date(2023, 1, 26), descritivo: "Data limite para o cadastro de alunos na plataforma da CPB, aprimora, aplicativo CPB ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 26), data2: new Date(2023, 1, 26), descritivo: "Data limite para a obrigatoriedade do uso dos livros didáticos. Fazer o levantamento dos alunos que não compraram ainda. (ter o cuidado de verificar primeiramente se há falta de algum livro – loja)", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 26), data2: new Date(2023, 1, 29), descritivo: "Sondagem de escrita individual CAC / Sondagem de esquema corporal (DESENHO) ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 27), data2: new Date(2023, 1, 27), descritivo: "Feriado Municipal em Fazenda Rio Grande) ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
+    {data1: new Date(2023, 1, 28), data2: new Date(2023, 1, 28), descritivo: "Reunião Comissão de Educação Especial ", cal: "", resp: "Responsável: ", foto: "", detalhes: ""},
 
     //Março
     {data1: new Date(2023, 2, 1), data2: new Date(2023, 2, 31), descritivo: "Recuperação e Remediação do 1º ano e alunos não alfabetizados - (acrescentar alunos de outras séries) ", cal: "", resp: "", foto: "", detalhes: ""},
@@ -298,6 +298,27 @@ function mostrarEventos(){
 }*/
 
 
-    eventos.forEach((e)=>{
-        console.log(e.data1.getDate() + '-' + (e.data1.getMonth()+1) + ' | ' + e.descritivo)
-    })
+// eventos.forEach((e)=>{
+
+//     let pai = document.querySelector('#calendarioDescritivo')
+    
+//     let linha = document.createElement('div')
+//     linha.classList.add('descritivoCal')
+    
+//     let spanCal = document.createElement('span')
+//     spanCal.classList.add('spanCalData')
+    
+//     let spanDescritivo = document.createElement('span')
+//     spanDescritivo.classList.add('spanDescritivo')
+
+//     linha.appendChild(spanCal)
+//     linha.appendChild(spanDescritivo)
+    
+//     pai.appendChild(linha)    
+    
+//     spanCal.innerHTML = e.data1.getDate() + ' ' + (meses[e.data1.getMonth()])
+
+//     spanDescritivo.innerHTML = ' - ' + e.descritivo;
+
+    
+// })
