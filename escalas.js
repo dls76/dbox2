@@ -222,7 +222,7 @@ function proximaReuniaoAdm(array) {
     // Se houver datas após a data atual, retorna a primeira delas
     if (futureDates.length > 0) {
         let dia = futureDates[0].data.getDate()
-        let mes = futureDates[0].data.getMonth() + 1
+        let mes = futureDates[0].data.getMonth()
         dia = dia < 10 ? '0' + dia : dia;
         // mes = mes < 10 ? '0' + mes : mes;
         // let pessoa = futureDates[0].person
