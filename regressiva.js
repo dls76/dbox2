@@ -10,6 +10,7 @@ const proximosEventos = [
   {nome: 'Semana de Acolhimento', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1g4pwjYw5j61YuviPKtKI_pMsifAaXy7y?usp=drive_link", resp: 'Responsável'},
   {nome: 'Reunião de pais 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1hrjh7zi_hFuTFZOOEHmfnE_UZW0UCwj3?usp=sharing", resp: 'Responsável'},
   //{nome: 'Primeiro dia EI-5º', data: new Date(2024, 1, 6), link: "https://drive.google.com/drive/folders/1TXZPR2ibUICVDn_6g25l6uFalEe095HK?usp=sharing", resp: 'Responsável'},
+  {nome: 'Dia da Mulher', data: new Date(2024, 2, 8), link:"https://drive.google.com/drive/folders/1WGcBJR23u6IXfSmC1WXcG0RUcaCNpfE7?usp=sharing", resp: 'Responsável'}
 ];
 
 const eventosContainer = document.getElementById('nextEventsConteiner');
