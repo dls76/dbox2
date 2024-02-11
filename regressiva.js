@@ -2,15 +2,21 @@
 
 
 const proximosEventos = [
-  {nome: 'Capacitação de Professores', data: new Date(2024, 0, 29), link: "https://drive.google.com/drive/folders/1efLap5rz5Yxzak_Wr5F-4ODEwFrff1EH?usp=sharing", resp: 'Responsável'},
-  {nome: 'Reunião de pais EI-5º', data: new Date(2024, 0, 30), link: "https://drive.google.com/drive/folders/1Xv_eNsvJ5HeBKhStzjo0o3q71Odrzmki?usp=sharing", resp: 'Responsável'},
-  {nome: 'Reunião de pais novos 6º-EM', data: new Date(2024, 1, 1), link: "https://drive.google.com/drive/folders/1FOtTmkrZ4p3xxqme4Miafh8I8iBtyDeO?usp=sharing", resp: 'Responsável'},
-  {nome: 'Entrega de materiais', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1-GlAccEqzgjwnVNqklVswqOQPVrJNeBJ?usp=sharing", resp: 'Responsável'},
-  //{nome: 'Primeiro dia - 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1pRvGEkBh-6kbAo7cZc6hZ2rpTq6V4x6S?usp=sharing", resp: 'Responsável'},
-  {nome: 'Semana de Acolhimento', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1g4pwjYw5j61YuviPKtKI_pMsifAaXy7y?usp=drive_link", resp: 'Responsável'},
-  {nome: 'Reunião de pais 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1hrjh7zi_hFuTFZOOEHmfnE_UZW0UCwj3?usp=sharing", resp: 'Responsável'},
-  //{nome: 'Primeiro dia EI-5º', data: new Date(2024, 1, 6), link: "https://drive.google.com/drive/folders/1TXZPR2ibUICVDn_6g25l6uFalEe095HK?usp=sharing", resp: 'Responsável'},
-  {nome: 'Dia da Mulher', data: new Date(2024, 2, 8), link:"https://drive.google.com/drive/folders/1WGcBJR23u6IXfSmC1WXcG0RUcaCNpfE7?usp=sharing", resp: 'Responsável'}
+  {nome: 'Capacitação de Professores', data: new Date(2024, 0, 29), link: "https://drive.google.com/drive/folders/1efLap5rz5Yxzak_Wr5F-4ODEwFrff1EH?usp=sharing",},
+  {nome: 'Reunião de pais EI-5º', data: new Date(2024, 0, 30), link: "https://drive.google.com/drive/folders/1Xv_eNsvJ5HeBKhStzjo0o3q71Odrzmki?usp=sharing",},
+  {nome: 'Reunião de pais novos 6º-EM', data: new Date(2024, 1, 1), link: "https://drive.google.com/drive/folders/1FOtTmkrZ4p3xxqme4Miafh8I8iBtyDeO?usp=sharing",},
+  {nome: 'Entrega de materiais', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1-GlAccEqzgjwnVNqklVswqOQPVrJNeBJ?usp=sharing",},
+  {nome: 'Semana de Acolhimento', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1g4pwjYw5j61YuviPKtKI_pMsifAaXy7y?usp=drive_link",},
+  {nome: 'Reunião de pais 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1hrjh7zi_hFuTFZOOEHmfnE_UZW0UCwj3?usp=sharing",},
+  {nome: 'Dia da Mulher', data: new Date(2024, 2, 8), link:"https://drive.google.com/drive/folders/1WGcBJR23u6IXfSmC1WXcG0RUcaCNpfE7?usp=sharing",},
+  {nome: 'Reunião Participativa Pais - 1º Bimestre', data: new Date(2024, 2, 18), link:"",},
+  {nome: 'Cantatas de Páscoa', data: new Date(2024, 2, 24), link:"https://drive.google.com/drive/folders/1saT3-NGt231soOXGcC6_jgCWiiPRbsS6?usp=drive_link",},
+  {nome: 'Programa Dia das Mães', data: new Date(2024, 4, 5), link:"https://drive.google.com/drive/folders/1vyONKagq4wUlMKRDGutaHqidhr3WFrbC?usp=drive_link",},
+  {nome: 'Fair Play Conhecimento', data: new Date(2024, 4, 14), link:"https://drive.google.com/drive/folders/1_-Hm088-AikWoHf8ETETAJZmTISF1_Qq?usp=drive_link",},
+  {nome: 'Lançamento de Matrículas Equipe Gestora', data: new Date(2024, 7, 4), link:"https://drive.google.com/drive/folders/1fAj27bIfdN-ZQTvadISFZq9J2H79YaTY?usp=sharing",},
+  {nome: 'Programa Dia dos Pais', data: new Date(2024, 7, 18), link:"https://drive.google.com/drive/folders/1l_iYVD7GBGqXRdcaHT21lfocT4yC5DJP?usp=drive_link",},
+  {nome: 'Semana de Oração - 2º Semestre', data: new Date(2024, 7, 19), link:"https://drive.google.com/drive/folders/1wTuD_Njt9p-qmFbH07cnNBSAAG38z5ZQ?usp=drive_link",},
+  {nome: 'Formaturas 9º e 3ºEM', data: new Date(2024, 11, 15), link:"https://drive.google.com/drive/folders/1l4o7J9GUu3qdPC9UiDjk81_1ErYZGt0I?usp=drive_link",},
 ];
 
 const eventosContainer = document.getElementById('nextEventsConteiner');
@@ -59,8 +65,14 @@ proximosEventos.forEach((evento) => {
   // Update content based on days remaining
   if (daysRemaining < -1) {
     regressivaEvento.textContent = `Aconteceu há ${Math.abs(daysRemaining)} dias`;
+    dataDiv.classList.add('eventoPassado');
+    tituloEvento.style.color = "#D3D3D3"
+    regressivaEvento.style.color = "#D3D3D3"
   } else if (daysRemaining === -1) {
     regressivaEvento.textContent = 'Aconteceu há 1 dia';
+    dataDiv.classList.add('eventoPassado');
+    tituloEvento.style.color = "#D3D3D3"
+    regressivaEvento.style.color = "#D3D3D3"
   } else if (daysRemaining === 0) {
     regressivaEvento.textContent = 'É hoje!';
   } else if (daysRemaining === 1) {
