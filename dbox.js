@@ -7,45 +7,36 @@ window.addEventListener('load', plantaoDiarioCompensacao)
 // Cultos
 function cultos() {
 
-    // if (datahoje.getDay() == 0) {
-    //     document.querySelector('#cultos').innerHTML = "Hoje é domingão!"
-    // }
-    // if (datahoje.getDay() == 1) {
-    //     document.querySelector('#cultos').innerHTML = 'Diretor'
-    // }
-    // if (datahoje.getDay() == 2) {
-    //     document.querySelector('#cultos').innerHTML = 'Pr. Vinícius'
-    // }
-    // if (datahoje.getDay() == 3) {
-    //     document.querySelector('#cultos').innerHTML = 'Vice-diretor'
-    // }
-    // if (datahoje.getDay() == 4) {
+    if (datahoje.getDay() == 0) {
+        document.querySelector('#cultos').innerHTML = "Hoje é domingão!"
+    }
+    if (datahoje.getDay() == 1) {
+        document.querySelector('#cultos').innerHTML = 'Pr. Leonardo'
+    }
+    if (datahoje.getDay() == 2) {
+        document.querySelector('#cultos').innerHTML = 'Pr. Vinícius'
+    }
+    if (datahoje.getDay() == 3) {
+        document.querySelector('#cultos').innerHTML = 'Alexandro'
+    }
+    if (datahoje.getDay() == 4) {
 
-    //     if ( datahoje.getDate() == 9) {
-    //         document.querySelector('#cultos').innerHTML = 'ADM' 
-    //     }
-    //     if ( datahoje.getDate() == 16) {
-    //         document.querySelector('#cultos').innerHTML = '7h-Eula' + ' &raquo; ' + '10h10-Nailson' + ' &raquo; ' + '13h-Jaque' 
-    //     }
-    //     if ( datahoje.getDate() == 23) {
-    //         document.querySelector('#cultos').innerHTML = '7h-Carol ' + ' &raquo; ' + ' 10h10-Valéria ' + ' &raquo; ' + ' 13h-Malu' 
-    //     }
-    //     if ( datahoje.getDate() == 30) {
-    //         document.querySelector('#cultos').innerHTML = '7h-Filipi ' + ' &raquo; ' + '10h10-Nailson ' + ' &raquo; ' + '13h-Ana' 
-    //     }
-    // }
-    // if (datahoje.getDay() == 5) {
-    //     if (datahoje.getDate() == 8) {
-    //         document.querySelector('#cultos').innerHTML = 'Recesso'
-    //     }
-    //         document.querySelector('#cultos').innerHTML = 'Pr. Leonardo'
-    // }
-    // if (datahoje.getDay() == 6) {
-    //     document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
-    // }
-    
-    document.querySelector('#cultos').innerHTML = 'Em definição...'
-
+        if ( datahoje.getDate() == 15) {
+            document.querySelector('#cultos').innerHTML = 'Pr. Vinícius' 
+        }
+        if ( datahoje.getDate() == 22) {
+            document.querySelector('#cultos').innerHTML = '7h Andressa' + ' | ' + '10h15 Nailson' + ' | ' + '13h Jaque' 
+        }
+        if ( datahoje.getDate() == 29) {
+            document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h15 Valéria' + ' | ' + '13h Malu' 
+        }
+    }
+    if (datahoje.getDay() == 5) {
+        document.querySelector('#cultos').innerHTML = 'Douglas'
+    }
+    if (datahoje.getDay() == 6) {
+        document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
+    }
 }
 
 

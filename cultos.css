@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .calendar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: 'Arial Narrow', sans-serif;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .monthYear {
+      color: dodgerblue;
+    }
+  
+    button {
+      background-color: dodgerblue;
+      border: none;
+      outline: none;
+      width: 40px;
+      height: 40px;
+      color: white;
+      border-radius: 50%;
+    }
+    .weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      margin-bottom: 10px;
+    }
+    
+    .weekday {
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+    
+    .day {
+      border: 1px solid rgb(235, 235, 235);
+      padding: 10px;
+      font-size: 14px;
+      color: #8d8d8d;
+      height: 70px;
+    }
+    
+    .day-number {
+      font-weight: bold;
+      font-size: 14px;
+      color: dodgerblue;
+    }
+    
+    .day:hover {
+      background-color: whitesmoke;
+    }
+  
+    .current-day {
+      background-color: whitesmoke;
+    }
+    
+    .events {
+      margin-top: 10px;
+    }  
+  
+    @media (max-width: 980px) {
+      
+      .calendar {
+        width: 100%;
+      }
+  
+      .day {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 5px;
+      }
+    }
