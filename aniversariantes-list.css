@@ -31,9 +31,11 @@ body {
 .mainAniver {
     box-sizing: border-box;
     margin: 140px auto;
+    height: 80vh;
     width: 65%;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
 }
 
 #headeraniversarianteslist {

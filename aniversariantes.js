@@ -94,7 +94,8 @@ function show() {
 
         } else {    
             
-            document.querySelector('#bt-aniver').innerHTML = "ANIVERSARIANTES " + mss[new Date().getMonth()].toUpperCase()
+            document.querySelector('#bt-aniver').innerText = "Ver Aniversariantes "
+            //  + mss[new Date().getMonth()].toUpperCase()
         
         }
 
