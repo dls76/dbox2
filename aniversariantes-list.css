@@ -6,11 +6,12 @@
     text-decoration: none;
     list-style: none;
 }
+
 body {
     box-sizing: border-box;
     background-color: whitesmoke;
 }
-
+/* 
 #anivLeft, #anivRight {
     font-size: 2rem;
     cursor: pointer;
@@ -20,53 +21,67 @@ body {
     justify-content: center;
     padding: 0 2rem;
     color: rgb(70, 70, 70);
-}
-
+} */
+/* 
 #anivLeft:hover, #anivRight:hover {
     cursor: pointer;
     color: black;
-}
+} */
 
 .mainAniver {
     box-sizing: border-box;
-    margin: 1rem auto;
-    width: 60%;
-    height: 600px;
+    margin: 140px auto;
+    width: 65%;
     display: flex;
     flex-direction: column;
 }
 
 #headeraniversarianteslist {
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0 0 0;
+    padding: 1rem 0 1rem 0;
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    top: 0;
+    left: 0;
+    display: block;
+    text-align: center;
+    background-color: #fff;
 }
 
 .h1Aniver {
     font-size: 2rem;
     padding: 1rem;
     font-weight: 600;
+    margin: auto;
+}
+
+#headeraniversarianteslist p {
+    margin: auto;
+    color: gray;
 }
 
 .linha {
-    width: 90%;
+    width: 95%;
     margin: 0 auto 20px auto;
-    padding: 5px;
+    padding: 15px 5px;
     border-radius: 10px;
     display: flex;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
 .dia {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 2rem;
+    justify-content: center; */
+    font-size: 1rem;
     font-weight: 600;
-    font-family: 'Trebuchet MS', sans-serif;
     margin: 5px;
-    width: 80px;
+    width: 90px;
+    text-align: center;
+    /* border: 1px solid red; */
 }
+
 .box-foto {
     display: flex;
     justify-content: center;
@@ -74,9 +89,9 @@ body {
 }
 img {
     border-radius: 50%;
-    width: 2.5rem;
+    width: 3.6rem;
     /* border: 2px solid #213669; */
-    /* border: 3px solid #cdcdcd; */
+    border: 3px solid #000;
 }
 .box-infoPessoa {
     padding-left: 10px;
@@ -86,27 +101,45 @@ img {
     justify-content: center;
 }
 .nome{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 .funcao{
-    font-size: 1rem;
+    font-size: 14px;
     color: rgb(86, 86, 86);
-    font-family: 'Arial Narrow';
+    /* font-family: 'Arial Narrow'; */
 }
 
 @media (max-width: 700px) {
     .mainAniver {
-        width: 90%;
+        width: 95%;
     }
     #h1-aniversariantes {
-        font-size: 2.5rem;
+        font-size: 24px;
         text-align: center;
     }
     img {
      width: 2rem;
+     border: 1px solid #000;
     }
     .dia, .nome {
-        font-size: 1rem;
+        font-size: 14px;
     }
+  }
+
+  .regressivaAniver {
+    color: rgb(145, 145, 145);
+    font-size: 14px;
+    width: 140px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    /* font-family: 'Arial Narrow'; */
+    font-weight: 500;
+  }
+
+  .footerAniver {
+    height: 40vh;
   }
