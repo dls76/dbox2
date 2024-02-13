@@ -25,35 +25,6 @@ const pessoas = [
     {nome: "Julia Rocha de Magalhães", data: new Date (2024, 1, 18), dia: 18, mes: 1, ano: 2000, funcao: "Recepcionista", foto:"img/anivImg/fevereiro/julia.jpg"},
     {nome: "Luciane Silverio Desbessel", data: new Date (2024, 1, 21), dia: 21, mes: 1, ano: 1978, funcao: "Professora", foto:"img/anivImg/fevereiro/luciane.jpg"},
 
-    //Março
-    {nome: "Andressa", data: new Date(2024, 2, 1), dia: 1, mes: 2, ano: 1985, funcao: "Orientadora", foto: "img/anivImg/fevereiro/andressa.jpg"},
-
-    //Abril
-    {nome: "Andressa", data: new Date(2024, 3, 1), dia: 1, mes: 3, ano: 1985, funcao: "Orientadora", foto: "img/anivImg/fevereiro/andressa.jpg"},
-    
-    //Maio
-    {nome: "Andressa", data: new Date(2024, 4, 1), dia: 1, mes: 4, ano: 1985, funcao: "Orientadora", foto: "img/anivImg/fevereiro/andressa.jpg"},
-
-    //Junho
-    {nome: "Andressa", data: new Date(2024, 5, 1), dia: 1, mes: 5, ano: 1985, funcao: "Orientadora", foto: "img/anivImg/fevereiro/andressa.jpg"},
-
-    // Julho
-    {nome: "Andressa", data: new Date(2024, 6, 1), dia: 1, mes: 6, ano: 1985, funcao: "Orientadora", foto: "img/anivImg/fevereiro/andressa.jpg"},
-
-    // Agosto
-    {nome: "Andressa", data: new Date(2024, 7, 1), dia: 1, mes: 7, ano: 1985, funcao: "Orientadora", foto: "img/anivImg/fevereiro/andressa.jpg"},
-
-    // Setembro
-    {nome: "Andressa", data: new Date(2024, 8, 1), dia: 1, mes: 8, ano: 1985, funcao: "Orientadora", foto: "img/anivImg/fevereiro/andressa.jpg"},
-
-    // Outubro
-    {nome: "Andressa", data: new Date(2024, 9, 1), dia: 1, mes: 9, ano: 1985, funcao: "Orientadora", foto: "img/anivImg/fevereiro/andressa.jpg"},
-
-    // Novembro
-    {nome: "Andressa", data: new Date(2024, 10, 1), dia: 1, mes: 10, ano: 1985, funcao: "Orientadora", foto: "img/anivImg/fevereiro/andressa.jpg"},
-
-    // Dezembro
-    {nome: "Andressa", data: new Date(2024, 11, 1), dia: 1, mes: 11, ano: 1985, funcao: "Orientadora", foto: "img/anivImg/fevereiro/andressa.jpg"},
 ]
 
 

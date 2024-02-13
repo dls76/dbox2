@@ -47,7 +47,7 @@ body {
     left: 0;
     display: block;
     text-align: center;
-    background-color: #fff;
+    background-color: #EDC7F9;
 }
 
 .h1Aniver {
@@ -55,11 +55,12 @@ body {
     padding: 1rem;
     font-weight: 600;
     margin: auto;
+    color: #5c3966;
 }
 
 #headeraniversarianteslist p {
     margin: auto;
-    color: gray;
+    color: #7b468b;
 }
 
 .linha {
@@ -131,17 +132,11 @@ img {
 
   .regressivaAniver {
     color: rgb(145, 145, 145);
+    width: 150px;
     font-size: 14px;
-    width: 140px;
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 1rem;
-    /* font-family: 'Arial Narrow'; */
     font-weight: 500;
-  }
-
-  .footerAniver {
-    height: 40vh;
   }

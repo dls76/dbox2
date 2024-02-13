@@ -283,6 +283,17 @@ i.seta {
 }
 
 /* Anivesariantes */
+
+.conteineraniversariantes {
+    position: relative;
+    /* border: 1px solid green; */
+}
+
+.conteineraniversariantes img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
 #aniver {
     height: 220px;
     box-sizing: border-box;
@@ -290,13 +301,16 @@ i.seta {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    position: relative;
-    background-image: url(img/anivBack.png);
+    /* position: relative; */
+    /* background-image: url(img/anivBack.png);
     background-repeat: no-repeat;
     background-position: bottom center;
-    background-size: cover;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
+    background-size: cover; */
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 #anivBack {
@@ -304,8 +318,8 @@ i.seta {
 }
 
 #bt-aniver {
-    width: 60%;
-    margin: auto;
+    width: 180px;
+    /* margin: 0 auto; */
     background-color: #EDC7F9;
     outline: none;
     border-radius: 10px;
@@ -313,14 +327,13 @@ i.seta {
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 12px;
-    padding: .8rem 0;
+    padding: 1rem 0;
     text-align: center;
     transition: ease-in-out .3s;
     position: absolute;
-    top: 56%;
+    top: 60%;
     left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 10;
+    transform: translateX(-50%);
 }
 
 #bt-aniver:hover {

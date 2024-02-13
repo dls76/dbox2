@@ -2,15 +2,6 @@ window.addEventListener('load', function() {
     loadAniversariantes();
     scrollToNextEvent();
 });
-
-// const pessoas = [ 
-//     {nome: "Andressa Cristina Schmidt dos Santos", data: new Date (2024, 1, 7), dia: 7, mes: 1, ano: 1985, funcao: "Orientadora", foto:"img/anivImg/fevereiro/andressa.jpg"},
-//     {nome: "Stephany Moralles Vinharski", data: new Date (2024, 1, 10), dia: 10, mes: 1, ano: 1995, funcao: "Psicóloga", foto:"img/anivImg/fevereiro/stephanie.jpg"},
-//     {nome: "Lucia Milczuk", data: new Date (2024, 1, 16), dia: 16, mes: 1, ano: 1960, funcao: "Monitora", foto:"img/anivImg/fevereiro/lucia.jpg"},
-//     {nome: "Pamela Quintino Machado", data: new Date (2024, 1, 17), dia: 17, mes: 1, ano: 1995, funcao: "Professora", foto:"img/anivImg/fevereiro/pamela.jpg"},
-//     {nome: "Julia Rocha de Magalhães", data: new Date (2024, 1, 18), dia: 18, mes: 1, ano: 2000, funcao: "Recepcionista", foto:"img/anivImg/fevereiro/julia.jpg"},
-//     {nome: "Luciane Silverio Desbessel", data: new Date (2024, 1, 21), dia: 21, mes: 1, ano: 1978, funcao: "Professora", foto:"img/anivImg/fevereiro/luciane.jpg"},
-// ];
     
 let dataAtual = new Date();
     
