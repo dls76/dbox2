@@ -772,6 +772,10 @@ i.seta {
     background: linear-gradient(45deg, #3503ad, #f7308c);
 }
 
+.conteiner .card:nth-child(4) .face.face2 {
+    background: linear-gradient(45deg, #CCFF00, #09AFFF);
+}
+
 .conteiner .card:hover .face.face2 {
     height: 60px;
     font-size: 2rem;
