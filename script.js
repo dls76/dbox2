@@ -95,11 +95,5 @@ for ( let i=0; i<proximoseventos.length; i++ ) {
 
 
 // Copia link da página de cadastro de currículos do RH para a clipboard
-let btcurr = document.querySelector('#btcurriculos')
-btcurr.addEventListener('click', copiarlinkcurriculos)
-function copiarlinkcurriculos() {
-    let textoCopiado = document.getElementById("inputcurriculos");
-    textoCopiado.select();
-    textoCopiado.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-}
+
+ 

@@ -198,22 +198,35 @@
         <span class="linha-disciplina" id="linkcurriculos">
             <img src="img/link.png" alt="">
             <input type="text" id="inputcurriculos" value="https://www.gcpecfatorrh.com.br/RecrutamentoFatorRH/?document=CPF&locale=pt_BR&client=ASP" readonly>
-            <button id="btcurriculos">Copiar link</button>
+            <button id="btcurriculos" onclick="copyContent()">Copiar link</button>
         </span>
+        
+        <script>
+            const copyContent = async () => { 
+                try { 
+                    const text = document.getElementById('inputcurriculos').value;
+                    await navigator.clipboard.writeText(text); 
+                    console.log('Content copied to clipboard'); 
+                } catch (err) { 
+                    console.error('Failed to copy: ', err); 
+                } 
+            } 
+        </script>
+        
 
         <a class="linha-disciplina" href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/luciana_ceccon_adventistas_org/EcbPdqT1FpdKtoAIdz5hTNABMrvHOAUp9HMAfYIZ8O70Jw?e=rBEnzL" target="_blank">
             <img src="img/excel.png" alt="">
             <div>Painel de Vagas RH</div>
         </a>
         
-        <a class="linha-disciplina" href="https://docs.google.com/spreadsheets/d/1L43G2__thchYG8H8ECBkIcCgyUrpe66xHDDGJR9ZarM/edit#gid=0" target="_blank">
-            <img src="img/user.png" alt="">
-            <div>Ramais Telefônicos</div>
-        </a>
-        
         <a href="https://docs.google.com/spreadsheets/d/1dquE3KabCQodkCAW-WCSJHsMi7sw2yCQWm8krNwmvVs/edit#gid=0" class="linha-disciplina" target="_blank">
             <img src="img/calendar.png" alt="">
             <div>Locações Auditório e outros</div>
+        </a>
+
+        <a href="docs/agendaCompletaAsp2024.pdf" class="linha-disciplina" target="_blank">
+            <img src="img/agendaAsp.jpg" alt="">
+            <div>Agenda ASP 2024</div>
         </a>
         
 
