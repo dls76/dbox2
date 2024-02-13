@@ -56,9 +56,9 @@
                     <a href="pedagogico.html">Pedagógico</a>
                     <a href="administrativo.html">Administrativo</a>
                     <a href="matriculas.html">Matrículas</a>
-                    <a href="https://drive.google.com/drive/u/2/folders/1WjoKELoexBcDoEvT8qphUjK-b6jl2q2q" target="_blank">Calendário ASP 2024</a>
+                    <a href="ramais.html" target="_blank">Ramais</a>
                     <a href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu">AMA</a>
-                    <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/EacB1gNLddpIrk25koSVAk8B_vHNh5OXKNsFN8YduzH6VA?e=56O76S" target="_blank">Quadro Funcionários</a>
+                    <!-- <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/EacB1gNLddpIrk25koSVAk8B_vHNh5OXKNsFN8YduzH6VA?e=56O76S" target="_blank">Quadro Funcionários</a> -->
 
                 </div>
 
@@ -70,7 +70,7 @@
                 <span class="material-symbols-outlined" id="bt-ama">medical_services</span>
                 <span class="material-symbols-outlined" id="fonesurgencias">shield</span>
                 <!-- <span class="material-icons">call</span> -->
-                <span class="material-symbols-outlined"  id="ramais">account_circle</span>
+                <!-- <span class="material-symbols-outlined"  id="ramais">account_circle</span> -->
 
             </div>
 
@@ -491,6 +491,21 @@
                 <!-- <div class="calendarioDescritivo" id="calendarioDescritivo">
                     
                 </div> -->
+
+                <a class="bannerTemporario" href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/EacB1gNLddpIrk25koSVAk8B_vHNh5OXKNsFN8YduzH6VA?e=gU6PzO" target="_blank">
+                    <div>
+                        <img class="img-planilha" src="img/google-sheets.png">
+                        <p style="color: #00AD3C; font-weight: 600;">Planilha RH</p>
+                        <p style="color:gray;">Quadro de Funcionários</p>
+                    </div>
+                </a>
+                <style>
+                    .bannerTemporario {display: block; margin-top: 1.5rem; height: 240px; background: linear-gradient(45deg, rgb(231, 231, 231), rgb(249, 249, 249),  rgb(231, 231, 231)); border-radius: 12px; position: relative; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;}
+                    .bannerTemporario:hover {background: linear-gradient(45deg, #c5ffda, #f0fff5, #c5ffda)}
+                    .bannerTemporario div {width: 100%; text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;}
+                    .bannerTemporario p {text-align: center; font-family: 'Roboto';}
+                    .bannerTemporario img {width: 50px; margin-bottom: 16px;}
+                </style>
             </div>
 
             <!-- próximos eventos -->
@@ -591,8 +606,6 @@
         
     <!-- URGÊNCIAS -->
     <div class="bgmodal" id="bgmodal">
-        
-        
         <div class="modal" id="modalurgencias">    
             <div class="fechar" id="fecharmodal">Fechar</div>
             <h1>Fones de Urgência</h1>
@@ -608,18 +621,9 @@
                 <li><span class="numerosurgencia">9.9681-9803</span> - Dr. Rodrigo Hahn (Advogado ASP)</li>
             </ul> 
         </div>
-        
-        
     </div>
 
-    <!-- Ramais -->
-    <div class="modal" id="modalramais">
-        <span class="fechar" id="fechar_ramais">Fechar</span>
-        <h1>Ramais</h1>
-        <ul id="ulramais">
-            
-        </ul>
-    </div>
+    
  
 
     <script src="dbox.js"></script>
