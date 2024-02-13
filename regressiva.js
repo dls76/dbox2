@@ -11,6 +11,7 @@ const proximosEventos = [
   {nome: 'Dia da Mulher', data: new Date(2024, 2, 8), link:"https://drive.google.com/drive/folders/1WGcBJR23u6IXfSmC1WXcG0RUcaCNpfE7?usp=sharing",},
   {nome: 'Reunião Participativa Pais - 1º Bimestre', data: new Date(2024, 2, 18), link:"",},
   {nome: 'Cantatas de Páscoa', data: new Date(2024, 2, 24), link:"https://drive.google.com/drive/folders/1saT3-NGt231soOXGcC6_jgCWiiPRbsS6?usp=drive_link",},
+  {nome: 'Semana Santa', data: new Date(2024, 2, 25), link:"https://drive.google.com/drive/folders/1aNfoXjhq_cV3mT5QM4cirQbollpRC2WZ",},
   {nome: 'Programa Dia das Mães', data: new Date(2024, 4, 5), link:"https://drive.google.com/drive/folders/1vyONKagq4wUlMKRDGutaHqidhr3WFrbC?usp=drive_link",},
   {nome: 'Fair Play Conhecimento', data: new Date(2024, 4, 14), link:"https://drive.google.com/drive/folders/1_-Hm088-AikWoHf8ETETAJZmTISF1_Qq?usp=drive_link",},
   {nome: 'Lançamento de Matrículas Equipe Gestora', data: new Date(2024, 7, 4), link:"https://drive.google.com/drive/folders/1fAj27bIfdN-ZQTvadISFZq9J2H79YaTY?usp=sharing",},
