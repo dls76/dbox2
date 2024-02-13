@@ -80,7 +80,7 @@
 
 .dboxfooter {
     background-color: #253B73;
-    height: 50vh;
+    height: 80vh;
 }
 
 @media (max-width: 1200px) {
@@ -105,4 +105,14 @@
     .sec_calendarios div a {
         margin-bottom: 2rem;
     }
+
+    
+.sec_calendarios h1 {
+    /* text-align: center; */
+    font-size: 32px;
+    /* color: #253B73; */
+    /* margin-bottom: 3rem; */
+    /* border: 1px solid red; */
+}
+
 }
