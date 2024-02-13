@@ -41,8 +41,16 @@
 <style>
     *{font-family: sans-serif; margin: 0; padding: 0;}
     h1 {text-align: center; padding: 25px;}
-    ul {width: 50%; margin: auto; height: 500px; overflow: hidden; display: flex; flex-direction: column; flex-wrap: wrap; box-shadow: 0px 0px 8px lightgray; padding: 25px;}
+    ul {width: 50%; margin: auto; height: 500px; overflow: hidden; display: flex; flex-direction: column; flex-wrap: wrap; box-shadow: 0px 0px 8px lightgray; padding: 25px; border-radius: 12px;}
     li {list-style-type:none; color: rgb(61, 61, 61); padding: 8px; margin: 4px;}
+
+    @media (max-width: 1065px) {
+        ul {
+            width: 70%;
+            height: fit-content;
+        }
+
+    }
 </style>
 </body>
 </html>
