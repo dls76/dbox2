@@ -81,6 +81,7 @@
 .dboxfooter {
     background-color: #253B73;
     height: 80vh;
+    font-size: 64px;
 }
 
 @media (max-width: 1200px) {
