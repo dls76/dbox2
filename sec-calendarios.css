@@ -81,14 +81,11 @@
 .dboxfooter {
     background-color: #253B73;
     height: 80vh;
-<<<<<<< HEAD
     font-size: 64px;
-=======
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
->>>>>>> b1afa6b69ffb408bdee6454ca7fd740c8d38e0ba
+    color: #fff;
 }
 
 @media (max-width: 1200px) {
