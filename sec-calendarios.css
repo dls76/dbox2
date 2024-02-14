@@ -81,6 +81,10 @@
 .dboxfooter {
     background-color: #253B73;
     height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 1200px) {
