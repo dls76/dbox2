@@ -7,20 +7,10 @@ const daysElement = document.querySelector('.days');
 
 const eventos = [
 
-    
-    {data: new Date(2024, 1, 1), culto1: 'Andressa', culto2: 'Nailson', culto3: 'Jaqueline'},
-    {data: new Date(2024, 1, 2), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
-
-    {data: new Date(2024, 1, 5), culto1: 'Feriado', culto2: 'Feriado', culto3: 'Feriado'},
-    {data: new Date(2024, 1, 6), culto1: 'Feriado', culto2: 'Feriado', culto3: 'Feriado'},
-    {data: new Date(2024, 1, 7), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
-    {data: new Date(2024, 1, 8), culto1: 'Andressa', culto2: 'Nailson', culto3: 'Jaqueline'},
-    {data: new Date(2024, 1, 9), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
-
     {data: new Date(2024, 1, 12), culto1: 'Feriado', culto2: 'Feriado', culto3: 'Feriado'},
     {data: new Date(2024, 1, 13), culto1: 'Feriado', culto2: 'Feriado', culto3: 'Feriado'},
     {data: new Date(2024, 1, 14), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
-    {data: new Date(2024, 1, 15), culto1: 'Andressa', culto2: 'Nailson', culto3: 'Jaqueline'},
+    {data: new Date(2024, 1, 15), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
     {data: new Date(2024, 1, 16), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
 
     {data: new Date(2024, 1, 19), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
@@ -79,6 +69,9 @@ function renderCalendar() {
     const dayNumberElement = document.createElement('div');
     dayNumberElement.classList.add('day-number');
     dayNumberElement.textContent = i;
+    // if ( i === currentDate.getDate()) {
+    //   dayNumberElement.style.color = "dodgerblue"
+    // }
     dayElement.appendChild(dayNumberElement);
 
     if (currentDate.getDate() === i && currentDate.getMonth() === (new Date()).getMonth() && currentDate.getFullYear() === (new Date()).getFullYear()) {
