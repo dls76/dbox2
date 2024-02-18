@@ -25,6 +25,8 @@ const pessoas = [
     {nome: "Julia Rocha de Magalhães", data: new Date (2024, 1, 18), dia: 18, mes: 1, ano: 2000, funcao: "Recepcionista", foto:"img/anivImg/fevereiro/julia.jpg"},
     {nome: "Luciane Silverio Desbessel", data: new Date (2024, 1, 21), dia: 21, mes: 1, ano: 1978, funcao: "Professora", foto:"img/anivImg/fevereiro/luciane.jpg"},
 
+    //Março
+    {nome: "Douglas Leal dos Santos", data: new Date(2024, 2, 20), dia: 20, mes: 2, ano: 1976, funcao: "Diretor", foto:"img/anivImg/marco/dls.png"},
 ]
 
 
@@ -37,9 +39,13 @@ function show() {
 
     for ( i=0; i < pessoas.length; i++ ) {
 
-        if ( pessoas[i].dia == dia && pessoas[i].mes == mesAno ) {
+        const conteinerAniv = document.querySelector('#conteineraniversariantes')
 
+        
+        if ( pessoas[i].dia == dia && pessoas[i].mes == mesAno ) {
+            
             document.querySelector('#bt-aniver').style.display = "none"
+            
 
             var div = document.createElement('div')
             div.classList.add('aniversariante')
@@ -49,7 +55,7 @@ function show() {
             img.src = pessoas[i].foto
             img.classList.add('foto')
             div.appendChild(img)
-
+            
             const nomeAniver = document.createElement("div")
             nomeAniver.innerHTML = pessoas[i].nome
             nomeAniver.classList.add('aniver-nome')
@@ -60,13 +66,17 @@ function show() {
             funcaoAniver.classList.add('aniver-funcao')
             div.appendChild(funcaoAniver)
 
-            // const proxAniv = document.querySelector('#proxAniv')
-            // proxAniv.innerHTML = mss[mesAno]
+            var link = document.createElement('a');
+            link.href = 'https://dls76.github.io/dbox2/aniversariantes-list.html';
+            link.target = '_blank';
+            link.innerText = 'Ver Mais'
+            link.classList.add('abrirList')
+            
+            div.appendChild(link)
 
         } else {    
             
             document.querySelector('#bt-aniver').innerText = "Ver Aniversariantes "
-            //  + mss[new Date().getMonth()].toUpperCase()
         
         }
 

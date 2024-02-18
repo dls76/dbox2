@@ -325,7 +325,6 @@ i.seta {
 .aniversariante {
     width: 100px;
     padding: 0 10px;
-    /* border: 2px solid blue; */
 }
 
 
@@ -371,6 +370,7 @@ i.seta {
 
 .aniver-nome {
     font-size: .75rem;
+    width: 100%;
 }
 
 .aniver-nome, .aniver-funcao {
@@ -391,6 +391,15 @@ i.seta {
     margin: 10px;
     border-radius: 50%;
     border: 2px solid white;
+}
+
+.abrirList {
+    color: rgb(160, 160, 160);
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: .5rem;
 }
 
 /*  Calendário Descritivo */
