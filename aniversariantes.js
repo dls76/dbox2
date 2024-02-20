@@ -76,7 +76,7 @@ function show() {
 
         } else {    
             
-            document.querySelector('#bt-aniver').innerText = "Ver Aniversariantes "
+            document.querySelector('#bt-aniver').innerText = "Ver Aniversariantes"
         
         }
 
