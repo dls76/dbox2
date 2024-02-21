@@ -101,7 +101,7 @@
                     
                     </a>           
 
-                    <a href="https://docs.google.com/spreadsheets/d/1S9H7FTswy8WTlA8Gny2SK3K0ySwdDMdOPOxpa1kk0u0/edit#gid=0" target="_blank">
+                    <!-- <a href="https://docs.google.com/spreadsheets/d/1S9H7FTswy8WTlA8Gny2SK3K0ySwdDMdOPOxpa1kk0u0/edit#gid=0" target="_blank">
 
                         <div class="escala" id="plantaoentrevistas">
                             
@@ -116,7 +116,7 @@
                         
                         </div>
                     
-                    </a>
+                    </a> -->
 
                     <a href="https://docs.google.com/spreadsheets/d/1MGUlVMKqtrx2s7F-rD61PugUSQopbXcP85MsT-lSM_I/edit#gid=0" target="_blank">
                         
@@ -439,7 +439,16 @@
 
             <!-- calendário descritivo -->
             <div class="divhome" id="divhomecalendario">
-                <div class="divhometitle">Calendário Descritivo</div>
+
+                <style>
+                    #divhomecalendario {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: auto auto;
+                        gap: 1.8rem;
+                    }
+                </style>
+                <!-- <div class="divhometitle">Calendário Descritivo</div> -->
 
                 <div class="box-cal-num">
 
@@ -468,10 +477,10 @@
                         <div class="days"></div>
                     </div>
 
-                    <div class="box-updown">
+                    <!-- <div class="box-updown"> -->
                         <!-- <i class="fa-solid fa-angle-down block" id="bt-down"></i> -->
                         <!-- <i class="fa-solid fa-angle-up hidden" id="bt-up"></i> -->
-                    </div>
+                    <!-- </div> -->
                     
                     <div class="btnsCal" id="btnsCal">
                         <div class="btnHoje" id="btn-hoje">Hoje</div>
@@ -485,18 +494,7 @@
                         <button id="bt-asp" class="btFiltro" onclick="filterSelection('pais')">PAIS</button>
                     </div> -->
 
-                    <a href="dezdias.html" target="_blank" style="width: 110%; border-radius: 12px;"><img id="dez" src="img/dezdias24b.jpeg" style="width: 100%; border-radius: 12px;"></a>
-
-                    <!-- <script>
-                        
-                        const img = document.querySelector('#dez')
-                        img.addEventListener('click', ()=>{
-                            window.open('dezdias.html', '_blank')
-                        })
-                        
-                    </script> -->
-
-                    <div class="body-proximoseventos" id="body-eventos">
+                    <!-- <div class="body-proximoseventos" id="body-eventos"> -->
                         <!-- <div class="evento">
             
                             <div class="data">
@@ -512,13 +510,20 @@
                                 <img src="img/user.png" alt="">
                             </div>
                         </div>-->
-                    </div>
+                    <!-- </div> -->
 
                 </div>
                 
                 
-               
+                <a id="adez" href="dezdias.html" target="_blank" style="width: 100%; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                    <img id="dez" src="img/dezdias24b.jpeg" style="width: 100%; border-radius: 12px;">
+                </a>
                     
+                <style>
+                    #adez:hover {
+                        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+                    }
+                </style>
                 
                 
             </div>
@@ -529,7 +534,7 @@
             <div class="divhome">
 
                 <div class="divhometitle">Próximos Eventos</div>
-                <!-- conteiner dos próximos eventos -->
+
                 <div class="next-event-conteiner" id="nextEventsConteiner"></div>
 
             </div>

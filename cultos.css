@@ -61,7 +61,7 @@
       color: dodgerblue;
     }
     
-    .day:hover {
+    .day:hover:not(.current-day) {
       background-color: whitesmoke;
     }
   

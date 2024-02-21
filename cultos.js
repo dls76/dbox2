@@ -14,8 +14,8 @@ const eventos = [
     {data: new Date(2024, 1, 16), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
 
     {data: new Date(2024, 1, 19), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
-    {data: new Date(2024, 1, 20), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
-    {data: new Date(2024, 1, 21), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 1, 20), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 1, 21), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
     {data: new Date(2024, 1, 22), culto1: 'Andressa', culto2: 'Nailson', culto3: 'Jaqueline'},
     {data: new Date(2024, 1, 23), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
     

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reuniões Administrativas</title>
+    <style>
+        * {
+            font-family: 'arial';
+        }
+        h1 {
+            text-align: center;
+        }
+        .conteinerRA {
+            text-align: center;
+        }
+        .ras {
+            width: 50%;
+            margin: 1rem auto;
+            padding: 1rem;
+            text-align: left;
+            position: relative;
+            border: 1px solid gray;
+            border-radius: 6px;
+        }
+        .nextRA {
+            color: red;
+            font-weight: 600;
+        }
+        .divNext {
+            padding: 1rem 2.5rem;
+            background-color: red;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: -100%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Reuniões Administrativas</h1>
+    <main class="conteinerRA" id="conteinerRA">
+
+    </main>
+    
+    <script>
+        const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+
+        const ras = [
+            {data: new Date(2024, 1, 26)},
+            {data: new Date(2024, 2, 4)},
+            {data: new Date(2024, 2, 11)},
+            {data: new Date(2024, 2, 18)},
+            {data: new Date(2024, 2, 25)},
+        ]
+
+        const currentDate = new Date()
+        const currentDay = currentDate.getDate()
+        const currentMonth = currentDate.getMonth()
+
+        ras.forEach((e)=>{
+            const main = document.querySelector('#conteinerRA')
+
+            let dia = e.data.getDate()
+            let mes = meses[e.data.getMonth()]
+            let ano = e.data.getFullYear()
+
+            if (dia < 10) {
+                dia = '0'+dia
+            }
+
+            const div = document.createElement('div')
+            div.classList.add('ras')
+
+            div.innerHTML = dia + ' de ' + mes + ' de ' + ano
+            main.appendChild(div)
+
+            if (e.data.getDate() === currentDay && e.data.getMonth() === currentMonth) {
+                div.classList.add('nextRA')
+                const spanNext = document.createElement('span')
+                spanNext.classList.add('divNext')
+                spanNext.innerHTML = 'Próxima RA >'
+                div.appendChild(spanNext)
+            }
+        })
+    </script>
+</body>
+</html>

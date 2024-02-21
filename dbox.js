@@ -1,7 +1,7 @@
 let datahoje = new Date()
 
 window.addEventListener('load', cultos)
-window.addEventListener('load', plantaoentrevistas)
+// window.addEventListener('load', plantaoentrevistas)
 window.addEventListener('load', plantaoDiarioCompensacao)
 
 // Cultos
@@ -72,37 +72,37 @@ function plantaoDiarioCompensacao() {
 
     // domingo
     if (datahoje.getDay() == 0) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje é domingo'
         document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }    
     // segunda
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#plantaodiario').innerHTML = 'Nailson'
         document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
     // terça
     if (datahoje.getDay() == 2) {
-        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
         document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
     // quarta
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#plantaodiario').innerHTML = 'Josiane'
         document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
     // quinta
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#plantaodiario').innerHTML = 'Douglas'
         document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
     // sexta
     if (datahoje.getDay() == 5) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta'
         document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
     // sábado
     if (datahoje.getDay() == 6) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Em definição...'
+        document.querySelector('#plantaodiario').innerHTML = 'Feliz Sábado!'
         document.querySelector('#nomescomp').innerHTML = 'Em definição...'
     }
 }

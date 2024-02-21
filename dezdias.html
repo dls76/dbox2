@@ -6,13 +6,41 @@
     <title>Dez Dias de Oração 2024 - Imagem</title>
 </head>
 <body>
-    <img src="img/dezdias24.jpeg" alt="">
+    <main id="maindezdias">
+        <img src="img/dezdias24.jpeg" alt="">
+        <a href="https://www.adventistas.org/pt/mulher/projeto/10-dias-de-oracao/" target="_blank">SAIBA MAIS CLICANDO AQUI</a>
+    </main>
+
     <style>
-        img {
-            max-width: 80%;
+    
+    #maindezdias {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+    img {
+            width: 100%;
             display: block;
-            margin: auto;
         }
+        a {
+            background-color: #422c26;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            display: block;
+            padding: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 0 auto;
+        }
+        a:hover {
+            background-color: #000;
+        }
+        @media (max-width: 900px) {
+            #maindezdias {
+                max-width: 100%;
+            }
+        }
+
     </style>
 </body>
 </html>
