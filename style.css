@@ -718,11 +718,11 @@ i.seta {
 }
 
 .conteiner {
-    width: 1200px;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 15px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin: 0 20px;
 }
 
 .conteiner .card {
