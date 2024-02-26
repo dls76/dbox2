@@ -1,4 +1,60 @@
-.main-pedagogico {
+.sec-pedagogico {
+    min-height: 100vh;
+    background-color: #A8DAF9;
+
+}
+.sec-pedagogico h1 {
+    font-size: 64px;
+    padding: 2rem 0;
+    text-align: center;
+    color: #002c48;
+}
+.conteiner-pedagogico {
+    width: calc(100% - 4rem);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    min-height: 60vh;
+}
+.conteiner-pedagogico div p {
+    padding: 1rem;
+    color: #002c48;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.conteiner-pedagogico a {
+    text-decoration: none;
+    list-style: none;
+    padding: 0 0 0 20px;
+    margin-bottom: 1rem;
+    color: #00558a;
+    font-weight: 600;
+}
+.conteiner-pedagogico ul li:hover {
+    color: black;
+}
+
+.pedagogico {
+    background-color: #ecf7fe;
+}
+
+.conteiner-pedagogico .item-pedagogico {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    margin: 10px 0 10px 30px;
+}
+
+
+
+
+
+
+
+/* .main-pedagogico {
     box-sizing: border-box;
     padding: 2rem;
     width: 90%;
@@ -100,4 +156,4 @@ footer {
         padding: .5rem;
     }
 
-}
+} */
