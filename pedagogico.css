@@ -21,6 +21,12 @@
         width: calc(100% - 2rem);
         grid-template-columns: 1fr;
     }
+    .conteiner-pedagogico a {
+        padding: 0 0 0 10px;
+        font-size: 13px;    
+    }
+}
+    
 .conteiner-pedagogico div p {
     padding: 1rem;
     background-color: #4093c7;
