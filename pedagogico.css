@@ -25,6 +25,10 @@
         padding: 0 0 0 10px;
         font-size: 13px;    
     }
+    .item-pedagogico {
+        width: 80%;
+        margin: 12px 0 12px 12px;
+    }
 }
     
 .conteiner-pedagogico div p {
