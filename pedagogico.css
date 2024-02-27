@@ -1,7 +1,6 @@
 .sec-pedagogico {
     min-height: 100vh;
     background-color: #A8DAF9;
-
 }
 .sec-pedagogico h1 {
     font-size: 64px;
@@ -19,10 +18,12 @@
 }
 .conteiner-pedagogico div p {
     padding: 1rem;
-    color: #002c48;
+    background-color: #4093c7;
+    color: white;
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    border-bottom: 1px solid white;
 }
 .conteiner-pedagogico a {
     text-decoration: none;
@@ -45,7 +46,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 70%;
-    margin: 10px 0 10px 30px;
+    margin: 18px 0 18px 30px;
 }
 
 
