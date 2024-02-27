@@ -16,6 +16,11 @@
     gap: 2rem;
     min-height: 60vh;
 }
+@media (max-width: 900px){
+    .conteiner-pedagogico {
+        width: calc(100% - 2rem);
+        grid-template-columns: 1fr;
+    }
 .conteiner-pedagogico div p {
     padding: 1rem;
     background-color: #4093c7;
