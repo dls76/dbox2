@@ -1,6 +1,7 @@
 .sec-pedagogico {
     min-height: 100vh;
     background-color: #A8DAF9;
+    padding-bottom: 2rem;
 }
 .sec-pedagogico h1 {
     font-size: 64px;
