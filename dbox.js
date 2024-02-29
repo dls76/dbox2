@@ -1,4 +1,4 @@
-let datahoje = new Date(2024,2,1)
+let datahoje = new Date()
 
 window.addEventListener('load', cultos)
 // window.addEventListener('load', plantaoentrevistas)
