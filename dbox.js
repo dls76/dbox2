@@ -1,4 +1,4 @@
-let datahoje = new Date()
+let datahoje = new Date(2024,2,1)
 
 window.addEventListener('load', cultos)
 // window.addEventListener('load', plantaoentrevistas)
@@ -67,43 +67,50 @@ function plantaoentrevistas() {
         document.querySelector('#plantaoentrevistascontent').innerHTML = 'Em definição...'
 }
 
+
 //===== Compensação e Plantão Diário
 function plantaoDiarioCompensacao() {
 
     // domingo
     if (datahoje.getDay() == 0) { 
         document.querySelector('#plantaodiario').innerHTML = 'Hoje é domingo'
-        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Curta sua manhã!'
+        document.querySelector('#nomescompTarde').innerHTML = 'Curta sua tarde!'
     }    
     // segunda
     if (datahoje.getDay() == 1) { 
         document.querySelector('#plantaodiario').innerHTML = 'Nailson'
-        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius'
+        document.querySelector('#nomescompTarde').innerHTML = 'Ninguém'
     }
     // terça
     if (datahoje.getDay() == 2) {
         document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
-        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Ninguém'
+        document.querySelector('#nomescompTarde').innerHTML = 'Ninguém'
     }
     // quarta
     if (datahoje.getDay() == 3) { 
         document.querySelector('#plantaodiario').innerHTML = 'Josiane'
-        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Jaque Camila'
+        document.querySelector('#nomescompTarde').innerHTML = 'Andressa Nailson'
     }
     // quinta
     if (datahoje.getDay() == 4) { 
         document.querySelector('#plantaodiario').innerHTML = 'Douglas'
-        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Ninguém'
+        document.querySelector('#nomescompTarde').innerHTML = 'Valéria Sarita'
     }
     // sexta
     if (datahoje.getDay() == 5) { 
         document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta'
-        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Malu'
+        document.querySelector('#nomescompTarde').innerHTML = 'Alexandro Josi Carol'
     }
     // sábado
     if (datahoje.getDay() == 6) { 
         document.querySelector('#plantaodiario').innerHTML = 'Feliz Sábado!'
-        document.querySelector('#nomescomp').innerHTML = 'Em definição...'
+        document.querySelector('#nomescomp').innerHTML = 'Feliz Sábado'
     }
 }
 
