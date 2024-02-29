@@ -1,7 +1,11 @@
 .sec-pedagogico {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-color: #A8DAF9;
+<<<<<<< Updated upstream
     padding-bottom: 2rem;
+=======
+    padding-bottom: 4rem;
+>>>>>>> Stashed changes
 }
 .sec-pedagogico h1 {
     font-size: 64px;
@@ -15,8 +19,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    min-height: 60vh;
+    gap: 3rem;
 }
 @media (max-width: 900px){
     .sec-pedagogico {
@@ -43,6 +46,7 @@
     font-weight: 600;
     margin-bottom: 1rem;
     border-bottom: 1px solid white;
+    text-align: center;
 }
 .conteiner-pedagogico a {
     text-decoration: none;
@@ -52,11 +56,9 @@
     color: #00558a;
     font-weight: 600;
 }
-.conteiner-pedagogico ul li:hover {
-    color: black;
-}
 .pedagogico {
     background-color: #ecf7fe;
+    padding-bottom: 1rem;
 }
 .conteiner-pedagogico .item-pedagogico {
     display: flex;
