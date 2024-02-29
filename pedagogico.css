@@ -1,11 +1,7 @@
 .sec-pedagogico {
     /* min-height: 100vh; */
     background-color: #A8DAF9;
-<<<<<<< Updated upstream
-    padding-bottom: 2rem;
-=======
-    padding-bottom: 4rem;
->>>>>>> Stashed changes
+    padding-bottom: 3rem;
 }
 .sec-pedagogico h1 {
     font-size: 64px;
