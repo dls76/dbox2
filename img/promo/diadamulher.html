@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da Mulher</title>
+</head>
+<style>
+    * {margin: 0;padding: 0;}
+    p {
+        color: #821031; 
+        font-weight: 800;
+        font-family: sans-serif; 
+        text-align: center;
+        font-size: 64px; 
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+</style>
+<body>
+    <img src="diadamulher.jpg" alt="" style="width: 800px; display: block; margin: 2rem auto;">
+    <p></p>
+
+        <script>
+
+const hoje = new Date()
+hoje.setHours(0,0,0,0)
+
+const evento = new Date(2024, 2, 8, 0, 0, 0, 0)
+
+const diff = evento - hoje 
+
+const diasFaltando = Math.floor(diff/(1000*60*60*24))
+
+let p = document.querySelector('p')
+
+if (diasFaltando > 1) {
+    p.innerHTML = `Faltam ${diasFaltando} dias`
+} else if (diasFaltando == 1) {
+    p.innerHTML = `É amanhã!`
+} else if (diasFaltando == 0) {
+    p.innerHTML = `É hoje!`
+} else if (diasFaltando == -1) {
+    p.innerHTML = `Foi ontem`
+} else {
+    p.innerHTML = `Foi há ${Math.abs(diasFaltando)} dias`
+}
+
+
+    </script>
+</body>
+
+</html>
