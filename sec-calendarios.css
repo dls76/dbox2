@@ -1,7 +1,6 @@
 .sec_calendarios {
     background-color: #fff;
-    height: 70vh;
-    padding: 6rem;
+    padding: 12rem 0;
 }
 
 .sec_calendarios h1 {
@@ -12,7 +11,7 @@
 }
 
 .sec_calendarios div:first-of-type {
-    padding: 2rem;
+    /* padding: 2rem; */
     display: flex;
     justify-content: space-between;
     width: 70%;
@@ -92,32 +91,26 @@
     .sec_calendarios div:first-of-type {
         width: 90%;
     }
+    
 }
 
 
 @media (max-width: 800px) {
-
     .sec_calendarios {
         height: fit-content;
+        padding: 6rem 0;
     }
-
     .sec_calendarios div:first-of-type {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
     .sec_calendarios div a {
         margin-bottom: 2rem;
     }
 
-    
 .sec_calendarios h1 {
-    /* text-align: center; */
-    font-size: 32px;
-    /* color: #253B73; */
-    /* margin-bottom: 3rem; */
-    /* border: 1px solid red; */
+    font-size: 64px;
 }
 
 }

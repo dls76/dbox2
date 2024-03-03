@@ -1,11 +1,10 @@
 .sec-pedagogico {
-    /* min-height: 100vh; */
     background-color: #A8DAF9;
-    padding-bottom: 3rem;
+    padding: 12rem 0;
 }
 .sec-pedagogico h1 {
     font-size: 64px;
-    padding: 2rem 0;
+    padding: 0 0 2rem 0;
     text-align: center;
     color: #002c48;
 }
@@ -20,6 +19,7 @@
 @media (max-width: 900px){
     .sec-pedagogico {
         min-height: fit-content;
+        padding: 6rem 0;
         }
     .conteiner-pedagogico {
         width: calc(100% - 2rem);
