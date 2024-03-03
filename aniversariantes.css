@@ -106,3 +106,124 @@
     align-items: flex-end;
     margin-top: .5rem;
 }
+
+/* Código da página de aniversariantes antiga */
+
+.conteiner {
+    width: 100vw;
+    height: 100vh;
+    opacity: .95;
+    background-image: linear-gradient(to bottom, #6d2db0, #7131b4, #7636b8, #7a3abc, #7e3ec0);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 70%;
+    height: 80vh;
+    background: #fff;
+    padding: 2rem;
+    position: absolute;
+    box-shadow: 5px 5px 10px #70707090;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+p {
+    text-align: center;
+    font-weight: bolder;
+}
+
+#hoje {
+    color: rgb(107, 107, 107);
+    font-size: 0.8em;
+}
+
+#parabens {
+    margin: .3rem;
+    font-size: 1.8em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #6d2db0;
+}
+
+.bt-fechar {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    font-weight: 600;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt-fechar:hover {
+    color: gray;
+}
+
+#boxAniversariantes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 440px;
+    overflow: auto;
+    width: 100%;
+}
+
+.cardAniversariantes {
+    background-color: #fff;
+    /* background-color: #EDC7F9; */
+    border-radius: 10px;
+    width: 260px;
+    height: 360px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6fr 3fr 1fr 1fr;
+    padding: 1.4rem;
+    margin: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: 1px solid lightgray;
+}
+
+.nomeAniversariante {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+    color: rgb(50, 50, 50);
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nomeAniversariante::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: #6d2db0;
+    margin: 1rem auto;
+}
+
+.funcaoAniversariante {
+    font-size: 1rem;
+    color: gray;
+    text-align: center;
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fotoAniversariantes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.foto {
+    width: 150px;
+    border-radius: 50%;
+    border: 4px solid rgb(201, 201, 201);
+}
