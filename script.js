@@ -97,3 +97,10 @@ for ( let i=0; i<proximoseventos.length; i++ ) {
 // Copia link da página de cadastro de currículos do RH para a clipboard
 
  
+document.getElementById("linkRotinas").addEventListener("click", function(event){
+    event.preventDefault();
+    window.open("https://calendar.google.com/calendar/u/0/r");
+    window.open("https://mail.google.com/mail/u/0/#inbox");
+    window.open("https://www.classapp.com.br/");
+    window.open("https://acrm.sdasystems.org/login/");
+});

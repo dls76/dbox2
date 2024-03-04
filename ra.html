@@ -24,10 +24,11 @@
             border-radius: 6px;
         }
         .nextRA {
-            color: red;
+            color: dodgerblue; /* Alteração da cor para azul dodgerblue */
             font-weight: 600;
+            border: 2px solid dodgerblue;
         }
-        .divNext {
+        /* .divNext {
             padding: 1rem 2.5rem;
             background-color: red;
             color: white;
@@ -35,6 +36,16 @@
             top: 50%;
             left: -100%;
             transform: translateY(-50%);
+        } */
+        .nextRA .nextText {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-color: dodgerblue;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
         }
     </style>
 </head>
@@ -59,6 +70,8 @@
         const currentDay = currentDate.getDate()
         const currentMonth = currentDate.getMonth()
 
+        let nextRA = null;
+
         ras.forEach((e)=>{
             const main = document.querySelector('#conteinerRA')
 
@@ -78,12 +91,20 @@
 
             if (e.data.getDate() === currentDay && e.data.getMonth() === currentMonth) {
                 div.classList.add('nextRA')
-                const spanNext = document.createElement('span')
-                spanNext.classList.add('divNext')
-                spanNext.innerHTML = 'Próxima RA >'
-                div.appendChild(spanNext)
+            }
+            else if (nextRA === null && e.data > currentDate) {
+                nextRA = div;
             }
         })
+
+        if (nextRA) {
+            nextRA.classList.add('nextRA');
+            const nextText = document.createElement('span');
+            nextText.textContent = 'Próxima';
+            nextText.classList.add('nextText');
+            nextRA.appendChild(nextText);
+        }
+    
     </script>
 </body>
 </html>

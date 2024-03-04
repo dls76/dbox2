@@ -77,31 +77,32 @@
 //===== Plantão sexta
 
 let plantaosexta = [
-    {data: new Date(2023, 6, 28), person: "Douglas"}, 
-    {data: new Date(2023, 7, 4), person: "Nailson"}, 
-    {data: new Date(2023, 7, 11), person: "Alexandro"}, 
-    {data: new Date(2023, 7, 18), person: "Pr. Vinícius"}, 
-    {data: new Date(2023, 7, 25), person: "Malu"}, 
-    {data: new Date(2023, 8, 1), person: "Sarita"}, 
-    {data: new Date(2023, 8, 15), person: "Carol"}, 
-    {data: new Date(2023, 8, 22), person: "Valéria"}, 
-    {data: new Date(2023, 8, 29), person: "Eula"}, 
-    
-    {data: new Date(2023, 9, 20), person: "Carin"}, 
-    {data: new Date(2023, 9, 27), person: "Júlia"},
-    
-    {data: new Date(2023, 10, 10), person: "Eloiza"}, 
-    {data: new Date(2023, 10, 17), person: "Camila"}, 
-    {data: new Date(2023, 10, 24), person: "Douglas"}, 
-    {data: new Date(2023, 11, 1), person: "Nailson"}, 
-    {data: new Date(2023, 11, 8), person: "Alexandro"}, 
-    // {data: new Date(2023, 11, 15), person: "Feliz Natal!"}, 
-    // {data: new Date(2023, 11, 22), person: "Feliz Natal!"}, 
-    // {data: new Date(2023, 11, 29), person: "Feliz Ano Novo!"}, 
-    // {data: new Date(2024, 0, 5), person: "Feliz Ano Novo!"}, 
-    // {data: new Date(2024, 0, 12), person: "Feliz Ano Novo!"}, 
-    // {data: new Date(2024, 0, 19), person: "Feliz Ano Novo!"}, 
+    {data: new Date(2024, 1, 8), person: "Alexandro"}, 
+    {data: new Date(2024, 2, 1), person: "Nailson"}, 
+    {data: new Date(2024, 2, 8), person: "Douglas"}, 
+    {data: new Date(2024, 2, 15), person: "Pr. Vinícius"}, 
+    {data: new Date(2024, 2, 22), person: "Josi"}, 
+    {data: new Date(2024, 2, 29), person: "Malu"}, 
+    {data: new Date(2024, 3, 5), person: "Sarita"}, 
+    {data: new Date(2024, 3, 12), person: "Carol"}, 
+    {data: new Date(2024, 3, 19), person: "Valéria"}, 
+    {data: new Date(2024, 3, 26), person: "Andressa"}, 
+    {data: new Date(2024, 4, 3), person: "Camila"}, 
+    {data: new Date(2024, 4, 10), person: "Júlia"},
+    {data: new Date(2024, 4, 17), person: "Carin"}, 
+    {data: new Date(2024, 4, 24), person: "Recepcionista"}, 
+    {data: new Date(2024, 4, 31), person: "Auxiliar Tesouraria"}, 
+    {data: new Date(2024, 5, 7), person: "Promotora Matrículas"}, 
+    {data: new Date(2024, 5, 14), person: "Biblioteca 1"}, 
+    {data: new Date(2024, 5, 21), person: "Biblioteca 2"}, 
+    {data: new Date(2024, 5, 28), person: "TI"}, 
+    {data: new Date(2024, 6, 5), person: "TI2"}, 
+    {data: new Date(2024, 6, 12), person: ""}, 
+    {data: new Date(2024, 6, 19), person: ""}, 
+    {data: new Date(2024, 6, 26), person: ""}, 
+    {data: new Date(2024, 7, 2), person: ""}, 
 ]
+
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
 function proximoPlantaoDeSexta(array) {
     const currentDate = new Date();
