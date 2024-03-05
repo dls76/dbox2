@@ -130,70 +130,6 @@ function proximoPlantaoDeSexta(array) {
     }
 }
 
-//===== Classes Bíblicas
-let classesbiblicas = [
-
-    {data: new Date(2023, 6, 31), tema: 'Classe Bíblica de Pais'},
-    {data: new Date(2023, 7, 7), tema: 'Classe Bíblica de Pais'},
-    {data: new Date(2023, 7, 8), tema: 'Classe Bíblica Esportiva'},
-    
-    {data: new Date(2023, 7, 14), tema: 'Classe Bíblica de Pais'},
-    {data: new Date(2023, 7, 21), tema: 'Classe Bíblica de Pais'},
-    {data: new Date(2023, 7, 22), tema: 'Classe Bíblica Esportiva'},
-
-    {data: new Date(2023, 7, 28), tema: 'Classe Bíblica de Pais'},
-    {data: new Date(2023, 8, 4), tema: 'Classe Bíblica de Pais'},
-    {data: new Date(2023, 8, 5), tema: 'Classe Bíblica Esportiva'},
-
-    {data: new Date(2023, 8, 11), tema: 'Classe Bíblica de Pais'},
-    {data: new Date(2023, 8, 12), tema: 'Classe Bíblica Esportiva'},
-
-    {data: new Date(2023, 8, 18), tema: 'Classe Bíblica de Pais'},
-    {data: new Date(2023, 8, 25), tema: 'Classe Bíblica de Pais'},
-    {data: new Date(2023, 8, 26), tema: 'Classe Bíblica Esportiva'},
-    
-    {data: new Date(2023, 9, 10), tema: 'Classe Bíblica Esportiva'},
-    
-    {data: new Date(2023, 9, 16), tema: 'Pais'},
-    {data: new Date(2023, 9, 17), tema: 'Esportiva'},
-
-    {data: new Date(2023, 9, 23), tema: 'Pais'},
-    {data: new Date(2023, 9, 24), tema: 'Esportiva'},
-
-    {data: new Date(2023, 9, 30), tema: 'Pais'},
-    {data: new Date(2023, 9, 31), tema: 'Esportiva'},
-
-    {data: new Date(2023, 10, 6), tema: 'Pais'},
-    {data: new Date(2023, 10, 7), tema: 'Classe Bíblica Esportiva'},
-
-    {data: new Date(2023, 10, 13), tema: 'Pais'},
-
-    {data: new Date(2023, 10, 28), tema: 'Pais (casa)'},
-
-    // {data: new Date(2023, 11, 25), tema: 'Feliz Natal e Ano Novo!'},
-
-]
-window.addEventListener('load', findNextBibleClass(classesbiblicas))
-function findNextBibleClass(array) {
-    // Obter a data atual
-    const currentDate = new Date();
-  
-    // Filtrar as datas que são iguais ou após a data atual
-    const myFutureDates = array.filter( (e) => e.data >= currentDate || e.data.toDateString() === currentDate.toDateString() )
-  
-    // Ordenar as datas por ordem crescente
-    myFutureDates.sort((a, b) => a.data - b.data);
-  
-    // Se houver datas após a data atual, retorna a primeira delas
-    if (myFutureDates.length > 0) {
-        document.querySelector('#classesbiblicascontent').innerHTML = myFutureDates[0].data.getDate() + '/' + (myFutureDates[0].data.getMonth()+1) + ' - ' + myFutureDates[0].tema;
-    } else {
-        document.querySelector('#classesbiblicascontent').innerHTML = 'Em definição...'
-    }
-
-    // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
-    // return array[array.length - 1];
-}
 
 const diaDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
 
@@ -207,31 +143,26 @@ let reuniaoadm = [
     {data: new Date(2024, 2, 18)}, 
     {data: new Date(2024, 2, 25)}, 
 ]
-window.addEventListener('load', proximaReuniaoAdm(reuniaoadm))
+window.addEventListener('load', () => proximaReuniaoAdm(reuniaoadm)); 
+// Corrigido para garantir que proximaReuniaoAdm seja passada como uma função
 
 function proximaReuniaoAdm(array) {
+
     const currentDate = new Date();
 
-    // Filtrar as datas que são iguais ou após a data atual
     const futureDates = array.filter((item)=>
-        item.data >= currentDate || item.data.toDateString() === currentDate.toDateString()
+        item.data >= currentDate || (item.data.getFullYear() === currentDate.getFullYear() && item.data.getMonth() === currentDate.getMonth() && item.data.getDate() === currentDate.getDate())
     );
 
-    // Ordenar as datas por ordem crescente
     futureDates.sort((a, b) => a.data - b.data);
 
-    // Se houver datas após a data atual, retorna a primeira delas
     if (futureDates.length > 0) {
-        let dia = futureDates[0].data.getDate()
-        let mes = futureDates[0].data.getMonth()
+        let mes = futureDates[0].data.getMonth();
+        let dia = futureDates[0].data.getDate();
         dia = dia < 10 ? '0' + dia : dia;
-        // mes = mes < 10 ? '0' + mes : mes;
-        // let pessoa = futureDates[0].person
-        document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes]} | 14:00`
-
+        mes = mes < 9 ? '0' + (mes + 1) : (mes + 1); 
+        document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} | 14:30`; 
     } else {
-    // Caso contrário, retorna a última data no array (mais distante do dia de hoje)
-    // return array[array.length - 1];
-   document.querySelector('#reuniaoadm').innerHTML = 'Em definição...'
+        document.querySelector('#reuniaoadm').innerHTML = 'Aguardando atualização...'
     }
 }
