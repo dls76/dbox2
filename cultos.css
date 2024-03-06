@@ -18,6 +18,7 @@
     
     .monthYear {
       color: dodgerblue;
+      margin: 0 2rem;
     }
   
     button {
@@ -28,6 +29,10 @@
       height: 40px;
       color: white;
       border-radius: 50%;
+      cursor: pointer;
+    }
+    .fa-angle-left, .fa-angle-right {
+      font-size: 1rem;
     }
     .weekdays {
       display: grid;
