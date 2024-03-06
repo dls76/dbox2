@@ -56,6 +56,19 @@ const eventos = [
     {data: new Date(2024, 2, 29), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
 ];
 
+// if ( datahoje.getDate() == 7) {
+//   document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h15 Nailson' + ' | ' + '13h Andressa' 
+// }
+// if ( datahoje.getDate() == 14) {
+//   document.querySelector('#cultos').innerHTML = '7h Fillipe' + ' | ' + '10h15 Malú' + ' | ' + '13h Pr. Vinícius' 
+// }
+// if ( datahoje.getDate() == 21) {
+//   document.querySelector('#cultos').innerHTML = '7h Jhéssica' + ' | ' + '10h15 Valéria' + ' | ' + '13h Pr. Vinícius' 
+// }
+// if ( datahoje.getDate() == 28) {
+//   document.querySelector('#cultos').innerHTML = '7h Nailson' + ' | ' + '10h15 Nailson' + ' | ' + '13h Drika' 
+// }
+
 let currentDate = new Date();
 
 function renderCalendar() {
