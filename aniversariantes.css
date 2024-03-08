@@ -130,7 +130,8 @@
     flex-direction: column;
     justify-content: flex-start;
     /* align-items: center; */
-    min-width: 70%;
+    width: 70%;
+    max-width: 900px;
     /* height: 80vh; */
     background: #fff;
     padding: 2rem;
@@ -161,12 +162,12 @@ p {
 }
 
 #fecharAniversariantes {
-    /* margin-top: 1rem; */
+    /* margin: 1rem; */
     padding: 1rem 2rem;
     text-align: center;
     width: 260px;
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
     right: 50%;
     transform: translateX(50%);
     font-weight: 600;
@@ -182,6 +183,7 @@ p {
     align-items: flex-start;
     flex-wrap: wrap;
     min-height: 440px;
+    height: 490px;
     overflow: auto;
     width: 100%;
 }
