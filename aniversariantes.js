@@ -132,7 +132,6 @@ function show() {
         if ( pessoas[i].dia == dia && pessoas[i].mes == mesAno ) {
             
             document.querySelector('#bt-aniver').style.display = "none"
-            
 
             var div = document.createElement('div')
             div.classList.add('aniversariante')
