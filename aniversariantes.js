@@ -131,6 +131,9 @@ function show() {
         
         if ( pessoas[i].dia == dia && pessoas[i].mes == mesAno ) {
             
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${window.scrollY}px`;
+
             document.querySelector('#bt-aniver').style.display = "none"
 
             var div = document.createElement('div')
@@ -161,7 +164,7 @@ function show() {
             div.appendChild(link)
 
         } else {    
-            
+
             document.querySelector('#bt-aniver').innerText = "Ver Aniversariantes"
         
         }
@@ -242,4 +245,6 @@ function mostrarAnimacaoAniversariante() {
 let bt = document.querySelector('#fecharAniversariantes')
 bt.addEventListener('click', ()=>{
     document.querySelector('#conteinerAniv').style.display = "none"
+    document.body.style.position = '';
+    document.body.style.top = '';
 })
