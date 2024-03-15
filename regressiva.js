@@ -9,7 +9,7 @@ const proximosEventos = [
   {nome: 'Semana de Acolhimento', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1g4pwjYw5j61YuviPKtKI_pMsifAaXy7y?usp=drive_link",},
   {nome: 'Reunião de pais 6º-EM', data: new Date(2024, 1, 5), link: "https://drive.google.com/drive/folders/1hrjh7zi_hFuTFZOOEHmfnE_UZW0UCwj3?usp=sharing",},
   {nome: 'Dia da Mulher', data: new Date(2024, 2, 8), link:"https://drive.google.com/drive/folders/1WGcBJR23u6IXfSmC1WXcG0RUcaCNpfE7?usp=sharing",},
-  {nome: 'Reunião Participativa Pais - 1º Bimestre', data: new Date(2024, 2, 18), link:"",},
+  {nome: 'Reunião Participativa Pais - 1º Bimestre', data: new Date(2024, 2, 18), link:"https://docs.google.com/document/d/10XuzU_aT508nZt3NeaQTS8ID2lZxpNxf5h0eRi4hP2I/edit",},
   {nome: 'Cantatas de Páscoa', data: new Date(2024, 2, 24), link:"https://drive.google.com/drive/folders/1saT3-NGt231soOXGcC6_jgCWiiPRbsS6?usp=drive_link",},
   {nome: 'Semana Santa', data: new Date(2024, 2, 25), link:"https://drive.google.com/drive/folders/1aNfoXjhq_cV3mT5QM4cirQbollpRC2WZ",},
   {nome: 'Acreditação - prazo final para auto-avaliação', data: new Date(2024, 3, 26), link:"https://drive.google.com/drive/u/1/folders/138CBruFqXcFV02TVsLXgUfTZ4yrlTqh9",},
