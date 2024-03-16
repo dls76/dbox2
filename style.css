@@ -11,6 +11,25 @@ html {
 body {
     background-color: #eeeeee;
 }
+.scrollTopButton {
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #253B73;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.scrollTopButton:hover {
+    background-color: #11214a;
+}
 .conteinergeral {
     width: 98%;
     max-width: 1500px;
@@ -21,13 +40,11 @@ body {
     box-sizing: border-box;
     /* border: 2px solid red; */
 }
-
 main#conteinerhome {
     display: grid;
     grid-template-columns: 1fr .9fr .9fr 1.1fr;
     gap: 1rem;
 }
-
 #header, #headerAdm {
     display: flex;
     justify-content: center;
@@ -36,14 +53,12 @@ main#conteinerhome {
     justify-content: space-between;
     margin: 1rem 0;
 }
-
 .alert_icons {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
-
 .alert_icons i {
     margin-left: 1.2rem;
 }
@@ -53,13 +68,11 @@ main#conteinerhome {
     color: gray;
     font-size: 1.4rem;
 }
-
 #menu, #menuAdm {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 #menu a, #menuAdm a {
     display: block;
     margin: 0 10px;
@@ -70,28 +83,23 @@ main#conteinerhome {
     transition: all ease-in-out .3s;
     text-decoration: none;
 }
-
 #menu a:hover, #menuAdm a:hover {
     background-color: #253B73;
     color: #fff;
 }
-
 #logo, #logoAdm {
     font-size: 1.7rem;
     font-weight: bolder;
     color: #253B73;
 }
-
 #btn-mobile {
     display: none;
 }
-
 .divhome {
     border-radius: 12px;
     position: relative;
     height: fit-content;
 }
-
 #botaonovoatendimento, #botaonovoatendimento_matriculas {
     position: fixed;
     bottom: 3rem;
@@ -109,15 +117,12 @@ main#conteinerhome {
     transition: ease;
     /* display: none; */
 }
-
 #botaonovoatendimento i, #botaonovoatendimento_matriculas i {
     font-size: 1.8rem;
 }
-
 #botaonovoatendimento:hover, #botaonovoatendimento_matriculas:hover {
     background-color: #253B73;
 }
-
 /* Escalas */
 .conteinerescalas {
     display: flex;
@@ -125,7 +130,6 @@ main#conteinerhome {
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-
 .escala {
     background-color: #fff;
     border-bottom: .5px solid #e2e2e2;
@@ -136,17 +140,14 @@ main#conteinerhome {
     transition: .3s;
     position: relative;
 }
-
 .icon {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .icon img {
     width: 1rem;
 }
-
 .tituloescala {
     font-size: .8rem;
     color: #B52532;
@@ -154,7 +155,6 @@ main#conteinerhome {
     font-family: 'Roboto', sans-serif;
 
 }
-
 .contentescala {
     color: gray;
     font-size: .8rem;
@@ -167,31 +167,25 @@ main#conteinerhome {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
-
 .escala:hover {
     background-color: #ededed;
     cursor: pointer;
 }
-
 #escalacultos {
     border-radius: 12px 12px 0 0;
 }
-
 .horarioculto {
     /* color: #B52532; */
     color: #000;
     font-weight: 700;
     margin-right: .2rem;
 }
-
 .responsavelculto {
     margin-right: .6rem;
 }
-
 #celebra, #celebra1, #celebra2 {
     color: gray;
 }
-
 i.seta {
     color: #B52532;
     position: absolute;
@@ -199,21 +193,18 @@ i.seta {
     top: 50%;
     transform: translate(0, -50%)
 }
-
 /* Links rápidos */
 #divhomelinks {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
 }
-
 .linksuteis {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     gap: 1.7rem;
 }
-
 .linksuteisbox {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -224,32 +215,26 @@ i.seta {
     overflow: auto;
     height: 300px;
 }
-
 /* width */
 .linksuteisbox::-webkit-scrollbar {
     width: .4rem;
 }
-
 /* Track */
 .linksuteisbox::-webkit-scrollbar-track {
     border-radius: 4px;
 }
-
 /* Handle */
 .linksuteisbox::-webkit-scrollbar-thumb {
     background: #e9e9e9;
     border-radius: 10px;
 }
-
 /* Handle on hover */
 .linksuteisbox::-webkit-scrollbar-thumb:hover {
     background: rgb(214, 214, 214);
 }
-
 .linksuteis .img:hover {
     background-color: #ededed;
 }
-
 .img {
     display: flex;
     flex-direction: column;
@@ -261,27 +246,22 @@ i.seta {
     margin: 4px;
     transition: all .3s;
 }
-
 .img img {
     width: 30px;
     object-fit: cover;
 }
-
 .legenda-links {
     font-size: .8rem;
     font-family: 'Roboto Condensed', sans-serif;
     color: gray;
     padding-top: .5rem;
 }
-
 #bi {
     width: 57px;
 }
-
 #rh {
     width: 20px;
 }
-
 /*  Calendário Descritivo */
 .evento {
     display: none;
@@ -296,17 +276,14 @@ i.seta {
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
 }
-
 .show {
     display: grid;
 }
-
 .filtros {
     display: none;
     grid-template-columns: repeat(4, 1fr);
     gap: .2rem;
 }
-
 .btFiltro {
     background-color: #e6e6e6;
     outline: none;
@@ -320,7 +297,6 @@ i.seta {
     font-family: 'Roboto Condensed', sans-serif;
     transition: .3s;
 }
-
 .btFiltro:hover {
     cursor: pointer;
     background-color: #253B73;

@@ -1,4 +1,4 @@
-window.addEventListener("load", mostrarAnimacaoAniversariante)
+// window.addEventListener("load", mostrarAnimacaoAniversariante)
 window.addEventListener("load", show)
 
 

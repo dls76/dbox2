@@ -104,3 +104,7 @@ document.getElementById("linkRotinas").addEventListener("click", function(event)
     window.open("https://www.classapp.com.br/");
     window.open("https://acrm.sdasystems.org/login/");
 });
+
+function scrollToTop() {
+    window.scrollTo(0, 0)
+}
