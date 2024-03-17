@@ -108,3 +108,12 @@ document.getElementById("linkRotinas").addEventListener("click", function(event)
 function scrollToTop() {
     window.scrollTo(0, 0)
 }
+
+const btTop = document.querySelector('#top')
+window.addEventListener("scroll", ()=>{
+    if (window.scrollY > 200) {
+        btTop.classList.add("active")
+    } else {
+        btTop.classList.remove("active")
+    }
+})
