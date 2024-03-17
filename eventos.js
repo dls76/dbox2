@@ -151,7 +151,7 @@ let eventos = [
     {data1: new Date(2023, 4, 30), data2: new Date(2023, 4, 30), descritivo: "Feriado Corpus Christi", cal: "", resp: "", foto: "", detalhes: ""},
     {data1: new Date(2023, 4, 31), data2: new Date(2023, 4, 31), descritivo: "Recesso", cal: "", resp: "", foto: "", detalhes: ""},
 ]
-/*
+
 function mostrarEventos(){
     
     for ( i = 0; i < eventos.length; i++ ) {
@@ -295,30 +295,30 @@ function mostrarEventos(){
     }
 
     filterSelection("all")
-}*/
+}
 
 
-// eventos.forEach((e)=>{
+eventos.forEach((e)=>{
 
-//     let pai = document.querySelector('#calendarioDescritivo')
+    let pai = document.querySelector('#calendarioDescritivo')
     
-//     let linha = document.createElement('div')
-//     linha.classList.add('descritivoCal')
+    let linha = document.createElement('div')
+    linha.classList.add('descritivoCal')
     
-//     let spanCal = document.createElement('span')
-//     spanCal.classList.add('spanCalData')
+    let spanCal = document.createElement('span')
+    spanCal.classList.add('spanCalData')
     
-//     let spanDescritivo = document.createElement('span')
-//     spanDescritivo.classList.add('spanDescritivo')
+    let spanDescritivo = document.createElement('span')
+    spanDescritivo.classList.add('spanDescritivo')
 
-//     linha.appendChild(spanCal)
-//     linha.appendChild(spanDescritivo)
+    linha.appendChild(spanCal)
+    linha.appendChild(spanDescritivo)
     
-//     pai.appendChild(linha)    
+    pai.appendChild(linha)    
     
-//     spanCal.innerHTML = e.data1.getDate() + ' ' + (meses[e.data1.getMonth()])
+    spanCal.innerHTML = e.data1.getDate() + ' ' + (meses[e.data1.getMonth()])
 
-//     spanDescritivo.innerHTML = ' - ' + e.descritivo;
+    spanDescritivo.innerHTML = ' - ' + e.descritivo;
 
     
-// })
+})

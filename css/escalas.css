@@ -1,0 +1,71 @@
+
+/* Escalas */
+.conteinerescalas {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.escala {
+    background-color: #fff;
+    border-bottom: .5px solid #e2e2e2;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 0;
+    transition: .3s;
+    position: relative;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon img {
+    width: 1rem;
+}
+.tituloescala {
+    font-size: .8rem;
+    color: #B52532;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+
+}
+.contentescala {
+    color: gray;
+    font-size: .8rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 40px 0 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.escala:hover {
+    background-color: #ededed;
+    cursor: pointer;
+}
+#escalacultos {
+    border-radius: 12px 12px 0 0;
+}
+.horarioculto {
+    /* color: #B52532; */
+    color: #000;
+    font-weight: 700;
+    margin-right: .2rem;
+}
+.responsavelculto {
+    margin-right: .6rem;
+}
+#celebra, #celebra1, #celebra2 {
+    color: gray;
+}
+i.seta {
+    color: #B52532;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translate(0, -50%)
+}
