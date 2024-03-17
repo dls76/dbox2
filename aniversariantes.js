@@ -120,7 +120,7 @@ const pessoas = [
 // Mostra os aniversariantes do dia na home
 function show() {
 
-    var data = new Date()
+    var data = new Date(2024, 2, 20)
     var dia = data.getDate()   
     var mesAno = data.getMonth()
 
@@ -134,7 +134,7 @@ function show() {
             document.body.style.position = 'fixed';
             document.body.style.top = `-${window.scrollY}px`;
 
-            document.querySelector('#bt-aniver').style.display = "none"
+            // document.querySelector('#bt-aniver').style.display = "none"
 
             var div = document.createElement('div')
             div.classList.add('aniversariante')
@@ -166,6 +166,8 @@ function show() {
         } else {    
 
             document.querySelector('#bt-aniver').innerText = "Ver Aniversariantes"
+            document.querySelector('#bt-aniver').style.textAlign = "center !important;"
+
         
         }
 
@@ -173,7 +175,7 @@ function show() {
 }
 
 function mostrarAnimacaoAniversariante() {
-    let data = new Date()
+    let data = new Date(2024, 2, 20)
     let diaSemana = data.getDay()
     let dia = data.getDate() 
     let mes = data.getMonth()
