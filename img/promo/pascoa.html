@@ -13,16 +13,49 @@
     img {
         width: 50%; 
         display: block; 
-        margin: 2rem auto;
+        margin: 1rem auto;
     }
     p {
-        color: #523E21; 
+        
+        color: #a27223;
         font-weight: 800;
         font-family: sans-serif; 
         text-align: center;
-        font-size: 64px; 
+        font-size: 32px; 
         text-transform: uppercase;
-        letter-spacing: 5px;
+        margin-bottom: 1rem;
+        /* letter-spacing: 5px; */
+    }
+    div {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid gray; */
+    }
+    button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: #523E21;
+        font-weight: 600;
+        background: linear-gradient();
+        background-image: linear-gradient(to bottom, #a27223, #765d36, #523E21);
+        padding: 0 3rem;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    button img {
+        width: 20px;
+    }
+    button span {
+        color: #fff;
+        margin-left: 5px;
     }
     @media (max-width: 1100px) {
         img {
@@ -45,12 +78,24 @@
             font-size: 42px;
         }
     }
+    
 </style>
 <body>
+
     <img src="pascoa.png">
+
     <p></p>
 
-        <script>
+    <div onclick="openPascoaDrive()">
+        <button>
+            <img src="../drive.png">
+            <span>Planejamento</span>
+        </button>
+    </div>
+
+
+
+<script>
 
 const hoje = new Date()
 hoje.setHours(0,0,0,0)
@@ -75,7 +120,9 @@ if (diasFaltando > 1) {
     p.innerHTML = `Foi há ${Math.abs(diasFaltando)} dias`
 }
 
-
+function openPascoaDrive() {
+    window.location = "https://drive.google.com/drive/u/1/folders/1saT3-NGt231soOXGcC6_jgCWiiPRbsS6"
+}
     </script>
 </body>
 

@@ -7,6 +7,7 @@
     <title>DBox2.0</title>
     <link rel="shortcut icon" href="img/dbox-favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="sec-linksrapidos.css">
     <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="aniversariantes.css">
     <link rel="stylesheet" href="pedagogico.css">
@@ -201,7 +202,7 @@
             </div>
 
             <!-- links rápidos -->
-            <div class="divhome" id="divhomelinks">
+            <div class="divhome" id="divhomelinks" style="display: none;">
 
                 <div class="divhometitle">Links Rápidos</div>
 
@@ -304,6 +305,16 @@
                 </div>
             </div>
 
+
+            <!-- próximos eventos -->
+            <div class="divhome">
+
+                <div class="divhometitle">Próximos Eventos</div>
+
+                <div class="next-event-conteiner" id="nextEventsConteiner"></div>
+
+            </div>
+
             <!-- calendário descritivo -->
             <div class="divhome" id="divhomecalendario">
 
@@ -382,9 +393,9 @@
                 </div>
                 
                 
-                <a id="promo" href="./img/promo/pascoa.html" target="_blank" style="width: 100%; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                <!-- <a id="promo" href="./img/promo/pascoa.html" target="_blank" style="width: 100%; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                     <img id="dez" src="img/promo/pascoa.png" style="width: 100%; border-radius: 12px;">
-                </a>
+                </a> -->
                     
                 <style>
                     #promo:hover {
@@ -395,37 +406,108 @@
                 
             </div>
 
-            
-            
-            <!-- próximos eventos -->
-            <div class="divhome">
 
-                <div class="divhometitle">Próximos Eventos</div>
+            <div class="divhome" id="divhomebanners">
 
-                <div class="next-event-conteiner" id="nextEventsConteiner"></div>
+                <a class="linkbanners" href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/EXvmhfysaiFGj437psh--PUBxzxhWp38Zv02k6pR8JlSSg?e=bIbXFh" target="_blank">
+                    <img src="img/acreditacao-small.jpg">
+                    <div>ACREDITAÇÃO</div>
+                </a>
+
+                <a class="linkbanners" href="./img/promo/pascoa.html">
+                    <img src="./img/promo/pascoa.png">
+                    <!-- <div></div> -->
+                </a>
+
+                
+                
 
             </div>
+            
+            
 
         </main>  
         
     </div>
 
+    <section class="sec-linksrapidos">
+        <a href="https://calendar.google.com/calendar/u/1/r" target="_blank">
+            <div class="img">
+                <img src="img/googlecal.png" alt="">
+                <div class="legenda-links">Agenda</div>
+            </div>
+        </a>
+        <a href="https://mail.google.com/mail/u/1/#inbox" target="_blank">
+            <div class="img">
+                <img src="img/new.png" alt="">
+                <div class="legenda-links">Gmail</div>
+            </div>
+        </a>
+        <a href="https://www.classapp.com.br/" target="_blank">
+            <div class="img">
+                <img src="img/classapp.png" alt="">
+                <div class="legenda-links">ClassApp</div>
+            </div>
+        </a>
+        <a href="https://docs.google.com/document/d/1t20GTBVKuTzeVQHjsl0gPZw_ITVORl97/edit" target="_blank">
+            <div class="img">
+                <img src="img/calendar.png" alt="">
+                <div class="legenda-links">Calendário</div>
+            </div>
+        </a>
+        <a href="https://drive.google.com/drive/u/1/folders/1Wk8J7nSB0CVO-llLtehUB4v-5Hokbjuw" target="_blank">
+            <div class="img">
+                <img src="img/mail.png" alt="">
+                <div class="legenda-links">Comunicados</div>
+            </div>
+        </a>  
+        <a href="" target="_blank" id="linkRotinas">
+            <div class="img">
+                <img src="img/energy.png" alt="">
+                <div class="legenda-links">Rotinas</div>
+            </div>
+        </a>
+        <a href="https://sistemas.usb.org.br/ama/index.php" target="_blank">
+            <div class="img">
+                <img src="img/ama.png" style="width: 38px;">
+                <div class="legenda-links">AMA</div>
+            </div>
+        </a>
+        <a href="https://acrm.sdasystems.org/" target="_blank">
+            <div class="img">
+                <img src="img/acrm.png" alt="">
+                <div class="legenda-links">ACRM</div>
+            </div>
+        </a>
+        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/77c97be9-7c06-4bd8-bf1a-38d63dcf5da5/ReportSection67140aaa99fc6fa1a2f8?redirectedFromSignup=1&experience=power-bi" target="_blank">
+            <div class="img">
+                <img src="img/bi1.png" alt="" id="bi">
+                <div class="legenda-links">Power BI</div>
+            </div>
+        </a>
+        <a href="https://www.office.com/?auth=2" target="_blank">
+            <div class="img">
+                <img src="img/office365.png" alt="">
+                <div class="legenda-links">Office365</div>
+            </div>
+        </a>
+    </section>
     <!-- MENU MATRÍCULAS -->
-    <section class="footerprincipal">
+    <!-- <section class="footerprincipal">
         <a href="https://dls76.github.io/matriculasDbox/" target="_blank" id="linknovoatendimento">
         <i class="fa-solid fa-plus"></i> Novo Atendimento</a>
         <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=183482623" target="_blank">Vagas</a>
         <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=1846726838" target="_blank">Reservas novas</a>
         <a href="https://docs.google.com/spreadsheets/d/1w6oDCjom87jLNrvSpCIO8-GGdbDlSm9j7iwI16JO4dc/edit#gid=0" target="_blank">Inclusão</a>
-        <a href="https://drive.google.com/drive/u/1/folders/1OQB-_YziWbeMfuSmuefWvL5XqtyzLEim" target="_blank">Entrevista</a>
+        <a href="https://drive.google.com/drive/u/1/folders/1OQB-_YziWbeMfuSmuefWvL5XqtyzLEim" target="_blank">Entrevista</a> -->
         <!-- <a href="" target="_blank">Contraturno</a> -->
-        <a href="https://catalogontstore.asp.org.br" target="_blank">Loja</a>
+        <!-- <a href="https://catalogontstore.asp.org.br" target="_blank">Loja</a> -->
         <!-- <a href="" target="_blank">Materiais</a> -->
         <!-- <a onclick="toggleDocumentos()">Documentos</a> -->
         <!-- <a href="" target="_blank">Transporte</a> -->
         <!-- <a href="" target="_blank">Cantina</a> -->
-        <a href="https://portal.educacaoadventista.org.br/materiais-didaticos?type=0&modelo_id=1&entidade_id=37&editora_id=1" target="_blank">Didáticos Online</a>
-    </section>
+        <!-- <a href="https://portal.educacaoadventista.org.br/materiais-didaticos?type=0&modelo_id=1&entidade_id=37&editora_id=1" target="_blank">Didáticos Online</a> -->
+    <!-- </section> -->
 
     <!-- HORÁRIOS -->
     <div class="body" id="bodysection">
