@@ -30,6 +30,7 @@ body {
     transition: all .4s;
     padding: 20px;
     z-index: 1000;
+    cursor: pointer;
 }
 .scrollTopButton.active {
     bottom: 30px;

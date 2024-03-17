@@ -152,14 +152,14 @@ bgmodal.classList.remove('modalOn')
 })
 
 // Novo atendimento
-const btnovoatendimento = document.querySelector('#botaonovoatendimento')
-btnovoatendimento.addEventListener('click', ()=>{
-    window.open("https://dls76.github.io/matriculasDbox/")
-})
+// const btnovoatendimento = document.querySelector('#botaonovoatendimento')
+// btnovoatendimento.addEventListener('click', ()=>{
+//     window.open("https://dls76.github.io/matriculasDbox/")
+// })
 
 // Ramais telefonicos
-let ramais = document.querySelector('#ramais')
-ramais.addEventListener('click', ramaisList)
+// let ramais = document.querySelector('#ramais')
+// ramais.addEventListener('click', ramaisList)
 
 function ramaisList() {
         
@@ -168,9 +168,9 @@ function ramaisList() {
     modalramais.classList.add('show_ramais')
 
 }
-let fechar_ramais = document.querySelector('#fechar_ramais')
-fechar_ramais.addEventListener('click', fecharRamais)
-function fecharRamais() {
-    const modalramais = document.querySelector('#modalramais')
-    modalramais.classList.remove('show_ramais')
-}
+// let fechar_ramais = document.querySelector('#fechar_ramais')
+// fechar_ramais.addEventListener('click', fecharRamais)
+// function fecharRamais() {
+//     const modalramais = document.querySelector('#modalramais')
+//     modalramais.classList.remove('show_ramais')
+// }

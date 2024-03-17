@@ -36,6 +36,6 @@
 
         const listaramais = [...document.querySelectorAll('.liramais')]
 
-        ui.appendChild(li)
+        // ui.appendChild(li)
 
     }             

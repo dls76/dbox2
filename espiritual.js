@@ -7,7 +7,7 @@ let msg = "Hoje estamos orando por "
 function oracaopelasescolas() {
 
     if (hoje == 0) { 
-        document.querySelector('#escaladeoracao').innerHTML = 'Hoje é domingão!'
+        // document.querySelector('#escaladeoracao').innerHTML = 'Hoje é domingão!'
     }
     if (hoje == 1) {
         document.querySelector('#escaladeoracao').innerHTML = msg 

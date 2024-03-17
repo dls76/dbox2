@@ -56,7 +56,7 @@ function carregarCelebras() {
         celebra.appendChild(temaCelebra)
         celebra.appendChild(respCelebra)
 
-        main.appendChild(celebra)
+        // main.appendChild(celebra)
         
     })
 }
