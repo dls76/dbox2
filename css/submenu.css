@@ -1,0 +1,17 @@
+.submenu {
+    /* border: 1px solid red; */
+    text-align: right;
+    margin: 0 0 1rem 0;
+}
+
+.submenu a {
+    color: black;
+    font-size: 14px;
+    padding: 1rem;
+    /* font-family: 'Arial Narrow'; */
+    transition: all .4s;
+}
+
+.submenu a:hover {
+    text-decoration: underline;
+}

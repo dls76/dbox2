@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="CSS/sec-linksrapidos.css">
     
     <!-- Arquivos CSS da Home -->
+    <link rel="stylesheet" href="css/submenu.css">
     <link rel="stylesheet" href="css/escalas.css">
     <link rel="stylesheet" href="css/next-events.css">
     <link rel="stylesheet" href="css/calendario-num.css">
@@ -67,26 +68,37 @@
                 <div id="btn-mobile">
                     <i class="fa-solid fa-bars"></i>    
                 </div>
+
                 <div class="menu" id="menu">
 
                     <a href="index.html" class="active">Home</a>
-                    <a href="espiritual.html">Espiritual</a>
+                    <a href="#sec-linksrapidos">Links</a>
+                    <a href="#bodysection">Horários</a>
+                    <a href="#sec-calendarios">Calendários</a>
+                    <!-- <a href="espiritual.html">Espiritual</a> -->
                     <a href="#sec-pedagogico">Pedagógico</a>
-                    <a href="administrativo.html">Administrativo</a>
-                    <a href="matriculas.html">Matrículas</a>
-                    <a href="ramais.html" target="_blank">Ramais</a>
+                    <!-- <a href="administrativo.html">Administrativo</a> -->
+                    <!-- <a href="matriculas.html">Matrículas</a> -->
+                    <!-- <a href="ramais.html" target="_blank">Ramais</a> -->
                     <a href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu">AMA</a>
-
                 </div>
-
             </nav>
+
+           
 
             <div class="alert_icons">
                 <span class="material-symbols-outlined" id="bt-ama">medical_services</span>
                 <span class="material-symbols-outlined" id="fonesurgencias">shield</span>
             </div>
-
         </header>
+
+        <div class="submenu">
+            <a href="espiritual.html" target="_blank">Espiritual</a>
+            <a href="administrativo.html" target="_blank">Administrativo</a>
+            <a href="matriculas.html" target="_blank">Matrículas</a>
+            <a href="ramais.html" target="_blank">Ramais</a>
+        </div>
+
 
         <main id="conteinerhome">
 
@@ -249,11 +261,6 @@
                         <div class="days"></div>
                     </div>
 
-                    <!-- <div class="box-updown">
-                        <i class="fa-solid fa-angle-down block" id="bt-down"></i>
-                        <i class="fa-solid fa-angle-up hidden" id="bt-up"></i>
-                    </div> -->
-                    
                     <div class="btnsCal" id="btnsCal">
                         <div class="btnHoje" id="btn-hoje">Hoje</div>
                         <div id="btn-obs">Observações</div>
@@ -266,28 +273,13 @@
                         <button id="bt-asp" class="btFiltro" onclick="filterSelection('pais')">PAIS</button>
                     </div> -->
 
-                    <div class="body-proximoseventos" id="body-eventos"></div>
+                    <!-- <div class="body-proximoseventos" id="body-eventos"></div> -->
 
-                    
-                    
-                </div>
-                
-                
-
-                <!-- <a id="promo" href="./img/promo/pascoa.html" target="_blank" style="width: 100%; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                    <img id="dez" src="img/promo/pascoa.png" style="width: 100%; border-radius: 12px;">
-                </a> -->
-                    
-                <style>
-                    #promo:hover {
-                        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-                    }
-                </style>
-                
+                </div>  
                 
             </div>
 
-
+            <!-- Banners promocionais ou destaque -->
             <div class="divhome" id="divhomebanners">
 
                 <a class="linkbanners" href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/EXvmhfysaiFGj437psh--PUBxzxhWp38Zv02k6pR8JlSSg?e=bIbXFh" target="_blank">
@@ -307,13 +299,16 @@
 
             </div>
             
-            
-
         </main>  
         
     </div>
 
-    <section class="sec-linksrapidos">
+    <section class="sec-linksrapidos" id="sec-linksrapidos">
+
+    <h1>Links Rápidos</h1>
+
+    <main class="links-rapidos">
+
         <a href="https://calendar.google.com/calendar/u/1/r" target="_blank">
             <div class="img">
                 <img src="img/googlecal.png" alt="">
@@ -374,6 +369,9 @@
                 <div class="legenda-links">Office365</div>
             </div>
         </a>
+
+    </main>
+
     </section>
 
     <!-- HORÁRIOS -->
@@ -443,7 +441,7 @@
         </div>
     </div>
     
-<div class="sec_calendarios">
+<div class="sec_calendarios" id="sec-calendarios">
 
     <h1>Calendários</h1>
 
