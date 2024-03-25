@@ -82,11 +82,12 @@ let plantaosexta = [
     {data: new Date(2024, 2, 8), person: "Douglas"}, 
     {data: new Date(2024, 2, 15), person: "Pr. Vinícius"}, 
     {data: new Date(2024, 2, 22), person: "Josi"}, 
-    {data: new Date(2024, 2, 29), person: "Malu"}, 
-    {data: new Date(2024, 3, 5), person: "Sarita"}, 
-    {data: new Date(2024, 3, 12), person: "Carol"}, 
-    {data: new Date(2024, 3, 19), person: "Valéria"}, 
-    {data: new Date(2024, 3, 26), person: "Andressa"}, 
+    {data: new Date(2024, 3, 5), person: "Malu"}, 
+    {data: new Date(2024, 3, 12), person: "Sarita"}, 
+    {data: new Date(2024, 3, 19), person: "Carol"}, 
+    {data: new Date(2024, 3, 26), person: "Valéria"}, 
+    // Ajustar as próximas datas
+    {data: new Date(2024, 4, 3), person: "Andressa"}, 
     {data: new Date(2024, 4, 3), person: "Camila"}, 
     {data: new Date(2024, 4, 10), person: "Júlia"},
     {data: new Date(2024, 4, 17), person: "Carin"}, 
@@ -141,7 +142,8 @@ let reuniaoadm = [
     {data: new Date(2024, 2, 4)}, 
     {data: new Date(2024, 2, 11)}, 
     {data: new Date(2024, 2, 18)}, 
-    {data: new Date(2024, 2, 25)}, 
+    {data: new Date(2024, 3, 1)}, 
+    {data: new Date(2024, 3, 8)}, 
 ]
 window.addEventListener('load', () => proximaReuniaoAdm(reuniaoadm)); 
 // Corrigido para garantir que proximaReuniaoAdm seja passada como uma função
