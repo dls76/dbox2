@@ -10,12 +10,18 @@ body {
     color: #5d5d5d;
 }
 .menuadministativo {
+    max-width: 90%;
+    margin: auto;
     display: flex;
-    justify-content: space-evenly;
-    padding: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    /* padding: 1rem; */
     background-color: #fff;
+    /* border: 1px solid red; */
 }
 .menuadministativo a {
+    /* border: 1px solid red; */
     width: 110px;
     max-width: 120px;
     border-radius: 10px;
