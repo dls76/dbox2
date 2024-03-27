@@ -2,16 +2,19 @@
     /* border: 1px solid red; */
     text-align: right;
     margin: 0 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .submenu a {
     color: black;
     font-size: 14px;
     padding: 1rem;
-    /* font-family: 'Arial Narrow'; */
     transition: all .4s;
 }
 
 .submenu a:hover {
     text-decoration: underline;
 }
+

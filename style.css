@@ -63,6 +63,8 @@ main#conteinerhome {
     justify-content: space-between;
     margin: 1rem 0 0 0;
     /* border: 1px solid red; */
+    background-color: #253B73;
+    padding: .5rem;
 }
 .alert_icons {
     display: flex;
@@ -75,9 +77,8 @@ main#conteinerhome {
 }
 .alert_icons span {
     margin: 0 .5rem;
-    color: #253B73;
-    color: gray;
-    font-size: 1.4rem;
+    color: white;
+    font-size: 1.5rem;
 }
 #menu, #menuAdm {
     display: flex;
@@ -89,22 +90,26 @@ main#conteinerhome {
     margin: 0 10px;
     padding: 10px 25px;
     color: #0b1634;
+    color: white;
     font-weight: 600;
     border-radius: 10px;
     transition: all ease-in-out .3s;
     text-decoration: none;
 }
 #menu a:hover, #menuAdm a:hover {
-    background-color: #253B73;
-    color: #fff;
+    /* background-color: #253B73; */
+    color: gray;
 }
 #logo, #logoAdm {
     font-size: 1.7rem;
     font-weight: bolder;
     color: #253B73;
+    color: #fff;
+    padding-left: 1rem;
 }
 #btn-mobile {
     display: none;
+    color: white;
 }
 .divhome {
     border-radius: 12px;
