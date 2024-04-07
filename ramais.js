@@ -39,3 +39,10 @@
         // ui.appendChild(li)
 
     }             
+
+    
+const btRamaisMenu = document.querySelector('#ramais-do-menu')
+    btRamaisMenu.addEventListener('click', ()=>{
+        window.open('ramais.html')
+})
+    

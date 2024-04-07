@@ -174,3 +174,4 @@ function ramaisList() {
 //     const modalramais = document.querySelector('#modalramais')
 //     modalramais.classList.remove('show_ramais')
 // }
+
