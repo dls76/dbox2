@@ -20,7 +20,8 @@ const proximosEventos = [
   {nome: 'Lançamento de Matrículas Equipe Gestora', data: new Date(2024, 7, 4), link:"https://drive.google.com/drive/folders/1fAj27bIfdN-ZQTvadISFZq9J2H79YaTY?usp=sharing",},
   {nome: 'Programa Dia dos Pais', data: new Date(2024, 7, 18), link:"https://drive.google.com/drive/folders/1l_iYVD7GBGqXRdcaHT21lfocT4yC5DJP?usp=drive_link",},
   {nome: 'Semana de Oração - 2º Semestre', data: new Date(2024, 7, 19), link:"https://drive.google.com/drive/folders/1wTuD_Njt9p-qmFbH07cnNBSAAG38z5ZQ?usp=drive_link",},
-  {nome: 'Formaturas 9º e 3ºEM', data: new Date(2024, 11, 15), link:"https://drive.google.com/drive/folders/1l4o7J9GUu3qdPC9UiDjk81_1ErYZGt0I?usp=drive_link",},
+  {nome: 'Formaturas 9º e 3ºEM', data: new Date(2024, 11, 15), link:"https://drive.google.com/drive/folders/1JFtpr7N_WGLJnh37ETSgS9EJw-Y3nweu?usp=sharing",},
+  {nome: 'Formatura Ed. Infantil', data: new Date(2024, 11, 17), link:"https://drive.google.com/drive/folders/1e8EjN1-wI4VhjStq0h0tCPN5GjRFkdvI?usp=sharing",},
 ];
 
 const eventosContainer = document.getElementById('nextEventsConteiner');
