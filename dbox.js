@@ -7,40 +7,42 @@ window.addEventListener('load', plantaoDiarioCompensacao)
 // Cultos
 function cultos() {
 
-    if (datahoje.getDay() == 0) {
-        document.querySelector('#cultos').innerHTML = "Hoje é domingão!"
-    }
-    if (datahoje.getDay() == 1) {
-        document.querySelector('#cultos').innerHTML = 'Alexandro'
-    }
-    if (datahoje.getDay() == 2) {
-        document.querySelector('#cultos').innerHTML = 'Pr. Vinícius'
-    }
-    if (datahoje.getDay() == 3) {
-        document.querySelector('#cultos').innerHTML = 'Pr. Leonardo'
-    }
-    if (datahoje.getDay() == 4) {
+    // if (datahoje.getDay() == 0) {
+    //     document.querySelector('#cultos').innerHTML = "Hoje é domingão!"
+    // }
+
+    // if (datahoje.getDay() == 1) {
+    //     document.querySelector('#cultos').innerHTML = 'Alexandro'
+    // }
+    // if (datahoje.getDay() == 2) {
+    //     document.querySelector('#cultos').innerHTML = 'Pr. Vinícius'
+    // }
+    // if (datahoje.getDay() == 3) {
+    //     document.querySelector('#cultos').innerHTML = 'Pr. Leonardo'
+    // }
+    // if (datahoje.getDay() == 4) {
 
 
-        if ( datahoje.getDate() == 7) {
-            document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h15 Nailson' + ' | ' + '13h Andressa' 
-        }
-        if ( datahoje.getDate() == 14) {
-            document.querySelector('#cultos').innerHTML = '7h Fillipe' + ' | ' + '10h15 Malú' + ' | ' + '13h Pr. Vinícius' 
-        }
-        if ( datahoje.getDate() == 21) {
-            document.querySelector('#cultos').innerHTML = '7h Jhéssica' + ' | ' + '10h15 Valéria' + ' | ' + '13h Pr. Vinícius' 
-        }
-        if ( datahoje.getDate() == 28) {
-            document.querySelector('#cultos').innerHTML = '7h Nailson' + ' | ' + '10h15 Nailson' + ' | ' + '13h Drika' 
-        }
-    }
-    if (datahoje.getDay() == 5) {
-        document.querySelector('#cultos').innerHTML = 'Douglas'
-    }
-    if (datahoje.getDay() == 6) {
-        document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
-    }
+    //     if ( datahoje.getDate() == 7) {
+    //         document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h15 Nailson' + ' | ' + '13h Andressa' 
+    //     }
+    //     if ( datahoje.getDate() == 14) {
+    //         document.querySelector('#cultos').innerHTML = '7h Fillipe' + ' | ' + '10h15 Malú' + ' | ' + '13h Pr. Vinícius' 
+    //     }
+    //     if ( datahoje.getDate() == 21) {
+    //         document.querySelector('#cultos').innerHTML = '7h Jhéssica' + ' | ' + '10h15 Valéria' + ' | ' + '13h Pr. Vinícius' 
+    //     }
+    //     if ( datahoje.getDate() == 28) {
+    //         document.querySelector('#cultos').innerHTML = '7h Nailson' + ' | ' + '10h15 Nailson' + ' | ' + '13h Drika' 
+    //     }
+    // }
+    // if (datahoje.getDay() == 5) {
+    //     document.querySelector('#cultos').innerHTML = 'Douglas'
+    // }
+    // if (datahoje.getDay() == 6) {
+    //     document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
+    // }
+    document.querySelector('#cultos').innerHTML = 'Convidado - Semana do Retiro Espiritual'
 }
 
 
@@ -174,4 +176,3 @@ function ramaisList() {
 //     const modalramais = document.querySelector('#modalramais')
 //     modalramais.classList.remove('show_ramais')
 // }
-
