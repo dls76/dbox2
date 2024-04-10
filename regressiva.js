@@ -12,11 +12,12 @@ const proximosEventos = [
   {nome: 'Reunião Participativa Pais - 1º Bimestre', data: new Date(2024, 2, 18), link:"https://docs.google.com/document/d/10XuzU_aT508nZt3NeaQTS8ID2lZxpNxf5h0eRi4hP2I/edit",},
   {nome: 'Cantatas de Páscoa', data: new Date(2024, 2, 24), link:"https://drive.google.com/drive/folders/1saT3-NGt231soOXGcC6_jgCWiiPRbsS6?usp=drive_link",},
   {nome: 'Semana Santa', data: new Date(2024, 2, 25), link:"https://drive.google.com/drive/folders/1aNfoXjhq_cV3mT5QM4cirQbollpRC2WZ",},
-  {nome: 'Acreditação - prazo final para auto-avaliação', data: new Date(2024, 3, 26), link:"https://drive.google.com/drive/u/1/folders/138CBruFqXcFV02TVsLXgUfTZ4yrlTqh9",},
+  {nome: 'Retiro Espiritual', data: new Date(2024, 3, 13), link:"https://docs.google.com/spreadsheets/d/1kJg9Qv0M2NpcBZmPnvfI4Joa7cCxP3JE0750Axxzcpc/edit#gid=832496255",},
+  {nome: 'Acreditação (postagem)', data: new Date(2024, 3, 26), link:"https://drive.google.com/drive/u/1/folders/138CBruFqXcFV02TVsLXgUfTZ4yrlTqh9",},
   {nome: 'Programa Dia das Mães', data: new Date(2024, 4, 5), link:"https://drive.google.com/drive/folders/1vyONKagq4wUlMKRDGutaHqidhr3WFrbC?usp=drive_link",},
   {nome: "Intercâmbio Internacional", data: new Date(2024, 4, 5), link: "https://docs.google.com/spreadsheets/d/1fszaXuiFUTxFFyIlyPBH5JAJCgAijxE1LJXaxdFa80k/edit#gid=0"},
   {nome: 'Fair Play Conhecimento', data: new Date(2024, 4, 14), link:"https://drive.google.com/drive/folders/1_-Hm088-AikWoHf8ETETAJZmTISF1_Qq?usp=drive_link",},
-  {nome: 'Acreditação - Visita de Avaliação', data: new Date(2024, 4, 22), link:"https://docs.google.com/document/d/14UBtmtTUkg5j-DAx2tQH9REMu76OxzcsyaBWvlsyj6w/edit?usp=sharing",},
+  {nome: 'Acreditação (presencial)', data: new Date(2024, 4, 22), link:"https://docs.google.com/document/d/14UBtmtTUkg5j-DAx2tQH9REMu76OxzcsyaBWvlsyj6w/edit?usp=sharing",},
   {nome: 'Lançamento de Matrículas Equipe Gestora', data: new Date(2024, 7, 4), link:"https://drive.google.com/drive/folders/1fAj27bIfdN-ZQTvadISFZq9J2H79YaTY?usp=sharing",},
   {nome: 'Programa Dia dos Pais', data: new Date(2024, 7, 18), link:"https://drive.google.com/drive/folders/1l_iYVD7GBGqXRdcaHT21lfocT4yC5DJP?usp=drive_link",},
   {nome: 'Semana de Oração - 2º Semestre', data: new Date(2024, 7, 19), link:"https://drive.google.com/drive/folders/1wTuD_Njt9p-qmFbH07cnNBSAAG38z5ZQ?usp=drive_link",},
@@ -95,8 +96,6 @@ proximosEventos.forEach((evento) => {
 
   eventosContainer.appendChild(a);
 });
-
-// ... Seu código anterior ...
 
 // Função para rolar até o topo do próximo evento com base na data atual
 function scrollToNextEvent() {
