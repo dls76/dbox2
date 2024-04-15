@@ -140,7 +140,7 @@
                 data: {
                   labels: ['Concluído', 'Faltando'],
                   datasets: [{
-                    data: [5, 70],
+                    data: [5, 71],
                     backgroundColor: [
                         '#FF4069',
                         'rgba(248,248,248,.6)',
@@ -154,6 +154,16 @@
                 options: {
                     responsive: false,
                     plugins: {
+                        title: {
+                            display: true,
+                            text: 'ARQUIVOS CONCLUÍDOS',
+                            font: {
+                                weight: 'bold',
+                                size: 24
+                            },
+                            position: 'top',
+                            color: '#000',
+                        },
                         legend: {
                             display: false,
                             labels: {
