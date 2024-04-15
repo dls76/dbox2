@@ -144,6 +144,8 @@ let reuniaoadm = [
     {data: new Date(2024, 2, 18)}, 
     {data: new Date(2024, 3, 1)}, 
     {data: new Date(2024, 3, 8)}, 
+    {data: new Date(2024, 3, 15)},
+    {data: new Date(2024, 3, 22)},
 ]
 window.addEventListener('load', () => proximaReuniaoAdm(reuniaoadm)); 
 // Corrigido para garantir que proximaReuniaoAdm seja passada como uma função
