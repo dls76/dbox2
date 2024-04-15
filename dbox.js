@@ -85,7 +85,7 @@ function plantaoDiarioCompensacao() {
     }    
     // segunda
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Hoje é domingo! :)'
+        document.querySelector('#plantaodiario').innerHTML = 'Douglas'
         document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius (M)'
         //document.querySelector('#nomescompTarde').innerHTML = 'Ninguém'
     }
@@ -97,13 +97,13 @@ function plantaoDiarioCompensacao() {
     }
     // quarta
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Josiane'
+        document.querySelector('#plantaodiario').innerHTML = 'Nailson'
         document.querySelector('#nomescomp').innerHTML = 'Jaque Camila'
         document.querySelector('#nomescompTarde').innerHTML = 'Andressa Nailson'
     }
     // quinta
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Douglas'
+        document.querySelector('#plantaodiario').innerHTML = 'Josi'
         document.querySelector('#nomescomp').innerHTML = 'Ninguém'
         document.querySelector('#nomescompTarde').innerHTML = 'Valéria Sarita'
     }
