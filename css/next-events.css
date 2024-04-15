@@ -9,8 +9,10 @@
 }
 
 .next-event-conteiner {
-    height: 35rem;
-    overflow: auto;
+    /* height: 35rem; */
+    height: 28rem;
+    /* overflow: auto; */
+    overflow: hidden;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
