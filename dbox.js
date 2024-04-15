@@ -85,8 +85,8 @@ function plantaoDiarioCompensacao() {
     }    
     // segunda
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Nailson'
-        document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius [M]'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje é domingo! :)'
+        document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius (M)'
         //document.querySelector('#nomescompTarde').innerHTML = 'Ninguém'
     }
     // terça
