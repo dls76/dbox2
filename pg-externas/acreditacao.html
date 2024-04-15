@@ -20,7 +20,7 @@
                 background-position: center top;
                 height: 100vh;
                 width: 100%;
-                opacity: .9;
+                opacity: .8;
                 display: flex;
                 flex-direction: column;
                 /* justify-content: center; */
@@ -80,7 +80,7 @@
                 align-items: center;
                 width: 80%;
                 flex-wrap: wrap;
-                margin: auto;
+                margin: 1rem auto;
             }
             .conteiner a, .conteiner div {
                 margin: 1rem;
@@ -101,12 +101,12 @@
         </style>
     </head>
     <body>
-
         <main>
             <header>
                 <h1>ACREDITAÇÃO</h1>
                 <p>Colégio Adventista Centenário</p>
             </header>
+
             <div class="conteiner">
 
                 <a href="https://mailadventistas-my.sharepoint.com/:f:/g/personal/douglas_leal_usb_educadventista_org1/EoAFndF2igJNvnBvYtMdVqMBhmQawsOKm8uMMnlNZtbAKw?e=K1u8kB" target="_blank">Pasta de Arquivos</a>
@@ -124,6 +124,54 @@
                 </div>
                 <a href="https://ubs.eduqas.cl/sign-in" target="_blank">Sistema SGQE</a>
             </div>
+        
+            <div id="chartJs">
+                <canvas id="myChart" width="360"></canvas>
+            </div>
+              
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+              
+            <script>
+              var ctx = document.getElementById("myChart");
+              var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ['Concluído', 'Faltando'],
+                  datasets: [{
+                    data: [25, 75],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(220, 220, 220, .5)',
+                    ],
+                    borderColor: [
+                      'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                            labels: {
+                                color: 'rgb(0,0,0)',        
+                            }
+                        }
+                    }
+                }
+              });
+              
+            </script>
+        
+            <style>
+            #myChart {
+                margin: 2rem auto;
+                border-radius: 12px;
+            }
+            </style>
         </main>
+
     </body>
     </html>
