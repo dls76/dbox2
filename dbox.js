@@ -11,9 +11,9 @@ function cultos() {
     //     document.querySelector('#cultos').innerHTML = "Hoje é domingão!"
     // }
 
-    // if (datahoje.getDay() == 1) {
-    //     document.querySelector('#cultos').innerHTML = 'Alexandro'
-    // }
+    if (datahoje.getDay() == 1) {
+         document.querySelector('#cultos').innerHTML = 'Alexandro'
+    }
     // if (datahoje.getDay() == 2) {
     //     document.querySelector('#cultos').innerHTML = 'Pr. Vinícius'
     // }
@@ -42,7 +42,7 @@ function cultos() {
     // if (datahoje.getDay() == 6) {
     //     document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
     // }
-    document.querySelector('#cultos').innerHTML = 'Convidado - Semana do Retiro Espiritual'
+    //document.querySelector('#cultos').innerHTML = 'Convidado - Semana do Retiro Espiritual'
 }
 
 
