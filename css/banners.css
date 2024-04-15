@@ -6,7 +6,7 @@
     position: relative;
     margin-bottom: 1rem;
     height: fit-content;
-    height: 170px;
+    height: 150px;
 }
 .divhome#divhomebanners a.linkbanners:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -22,15 +22,19 @@
     /* border: 1px solid black; */
     position: absolute;
     z-index: 1000;
-    top: 85%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #253B73;
-    color: #000;
-    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-    0px -4px 10px rgba(255,255,255,0.3);
-    font-weight: 600;
+    /* color: #253B73; */
+    /* color: #000; */
+    /* text-shadow: 2px 7px 5px rgba(0,0,0,0.3),  */
+    /* 0px -4px 10px rgba(255,255,255,0.3); */
+    /* font-weight: 600; */
     font-size: 16px;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+    /* color: rgb(43, 43, 43); */
 }
 
 #acreditacao, #diadasmaes, #olimpiadas {
@@ -41,11 +45,15 @@
 }
 #acreditacao {
     background-image: url(../img/acreditacao-small.jpg);
+    color: #054FBA;
 }
 #diadasmaes {
     background-image: url(../img/picnic2.jpg);
+    color: rgb(44, 61, 16);
+    text-shadow: 0 0 5px white;
 }
 #olimpiadas {
-    background-image: url(../img/olympics.jpg);
+    background-image: url(../img/olympics2.jpg);
+    color: rgb(43, 43, 43);
 }
 
