@@ -14,40 +14,38 @@ function cultos() {
     if (datahoje.getDay() == 1) {
          document.querySelector('#cultos').innerHTML = 'Alexandro'
     }
-    // if (datahoje.getDay() == 2) {
-    //     document.querySelector('#cultos').innerHTML = 'Pr. Vinícius'
-    // }
-    // if (datahoje.getDay() == 3) {
-    //     document.querySelector('#cultos').innerHTML = 'Pr. Leonardo'
-    // }
-    // if (datahoje.getDay() == 4) {
+    if (datahoje.getDay() == 2) {
+        document.querySelector('#cultos').innerHTML = 'Pr. Vinícius'
+    }
+    if (datahoje.getDay() == 3) {
+        document.querySelector('#cultos').innerHTML = 'Pr. Leonardo'
+    }
+    if (datahoje.getDay() == 4) {
 
-
-    //     if ( datahoje.getDate() == 7) {
-    //         document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h15 Nailson' + ' | ' + '13h Andressa' 
-    //     }
-    //     if ( datahoje.getDate() == 14) {
-    //         document.querySelector('#cultos').innerHTML = '7h Fillipe' + ' | ' + '10h15 Malú' + ' | ' + '13h Pr. Vinícius' 
-    //     }
-    //     if ( datahoje.getDate() == 21) {
-    //         document.querySelector('#cultos').innerHTML = '7h Jhéssica' + ' | ' + '10h15 Valéria' + ' | ' + '13h Pr. Vinícius' 
-    //     }
-    //     if ( datahoje.getDate() == 28) {
-    //         document.querySelector('#cultos').innerHTML = '7h Nailson' + ' | ' + '10h15 Nailson' + ' | ' + '13h Drika' 
-    //     }
-    // }
-    // if (datahoje.getDay() == 5) {
-    //     document.querySelector('#cultos').innerHTML = 'Douglas'
-    // }
-    // if (datahoje.getDay() == 6) {
-    //     document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
-    // }
-    //document.querySelector('#cultos').innerHTML = 'Convidado - Semana do Retiro Espiritual'
+        if ( datahoje.getDate() == 7) {
+            document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
+        }
+        if ( datahoje.getDate() == 14) {
+            document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
+        }
+        if ( datahoje.getDate() == 21) {
+            document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
+        }
+        if ( datahoje.getDate() == 28) {
+            document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
+        }
+    }
+    if (datahoje.getDay() == 5) {
+        document.querySelector('#cultos').innerHTML = 'Douglas'
+    }
+    if (datahoje.getDay() == 6) {
+        document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
+    }
 }
 
 
 // Entrevistas
-function plantaoentrevistas() {
+// function plantaoentrevistas() {
 
     // if (datahoje.getDay() == 0) { 
     //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Hoje é domingão!'
@@ -70,8 +68,8 @@ function plantaoentrevistas() {
     // if (datahoje.getDay() == 6) { 
     //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Feliz Sábado!'
     // }
-        document.querySelector('#plantaoentrevistascontent').innerHTML = 'Em definição...'
-}
+        // document.querySelector('#plantaoentrevistascontent').innerHTML = 'Em definição...'
+// }
 
 
 //===== Compensação e Plantão Diário
@@ -85,38 +83,37 @@ function plantaoDiarioCompensacao() {
     }    
     // segunda
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Douglas'
-        document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius (M)'
-        //document.querySelector('#nomescompTarde').innerHTML = 'Ninguém'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Josi'
+        document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius'
     }
     // terça
     if (datahoje.getDay() == 2) {
-        document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Alexandro'
         document.querySelector('#nomescomp').innerHTML = 'Ninguém'
-        document.querySelector('#nomescompTarde').innerHTML = 'Ninguém'
+        document.querySelector('#nomescompTarde').innerHTML = 'Nailson'
     }
     // quarta
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Nailson'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Nailson'
         document.querySelector('#nomescomp').innerHTML = 'Jaque Camila'
-        document.querySelector('#nomescompTarde').innerHTML = 'Andressa Nailson'
+        document.querySelector('#nomescompTarde').innerHTML = 'Andressa'
     }
     // quinta
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Josi'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Douglas'
         document.querySelector('#nomescomp').innerHTML = 'Ninguém'
         document.querySelector('#nomescompTarde').innerHTML = 'Valéria Sarita'
     }
     // sexta
     if (datahoje.getDay() == 5) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Ver plantão de sexta'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje: ver plantão de sexta'
         document.querySelector('#nomescomp').innerHTML = 'Malu'
         document.querySelector('#nomescompTarde').innerHTML = 'Alexandro Josi Carol'
     }
     // sábado
     if (datahoje.getDay() == 6) { 
         document.querySelector('#plantaodiario').innerHTML = 'Feliz Sábado!'
-        document.querySelector('#nomescomp').innerHTML = 'Feliz Sábado'
+        document.querySelector('#nomescomp').innerHTML = 'Feliz Sábado!'
     }
 }
 
