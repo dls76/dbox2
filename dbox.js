@@ -22,17 +22,17 @@ function cultos() {
     }
     if (datahoje.getDay() == 4) {
 
-        if ( datahoje.getDate() == 7) {
-            document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
+        // if ( datahoje.getDate() == 11) {
+        //     document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
+        // }
+        // if ( datahoje.getDate() == 18) {
+        //     document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
+        // }
+        if ( datahoje.getDate() == 18) {
+            document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h15 Nailson' + ' | ' + '13h ???' 
         }
-        if ( datahoje.getDate() == 14) {
-            document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
-        }
-        if ( datahoje.getDate() == 21) {
-            document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
-        }
-        if ( datahoje.getDate() == 28) {
-            document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
+        if ( datahoje.getDate() == 25) {
+            document.querySelector('#cultos').innerHTML = '7h Fillipi' + ' | ' + '10h15 Malú' + ' | ' + '13h Adriene' 
         }
     }
     if (datahoje.getDay() == 5) {
