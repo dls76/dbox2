@@ -1,16 +1,16 @@
 let datahoje = new Date()
 
 window.addEventListener('load', cultos)
+window.addEventListener('load', compensacao)
+window.addEventListener('load', plantaoDiario)
 // window.addEventListener('load', plantaoentrevistas)
-window.addEventListener('load', plantaoDiarioCompensacao)
 
 // Cultos
 function cultos() {
 
-    // if (datahoje.getDay() == 0) {
-    //     document.querySelector('#cultos').innerHTML = "Hoje é domingão!"
-    // }
-
+    if (datahoje.getDay() == 0) {
+        document.querySelector('#cultos').innerHTML = "Hoje é domingo!"
+    }
     if (datahoje.getDay() == 1) {
          document.querySelector('#cultos').innerHTML = 'Alexandro'
     }
@@ -43,76 +43,67 @@ function cultos() {
     }
 }
 
-
-// Entrevistas
-// function plantaoentrevistas() {
-
-    // if (datahoje.getDay() == 0) { 
-    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Hoje é domingão!'
-    // }
-    // if (datahoje.getDay() == 1) { 
-    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Douglas | Daisy'
-    // }
-    // if (datahoje.getDay() == 2) {
-    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Jaque | Alexandro'
-    // }
-    // if (datahoje.getDay() == 3) { 
-    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Valéria | Carol'
-    // }
-    // if (datahoje.getDay() == 4) { 
-    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Camila | Sarita'
-    // }
-    // if (datahoje.getDay() == 5) { 
-    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Eula | Malú'
-    // }
-    // if (datahoje.getDay() == 6) { 
-    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Feliz Sábado!'
-    // }
-        // document.querySelector('#plantaoentrevistascontent').innerHTML = 'Em definição...'
-// }
-
-
-//===== Compensação e Plantão Diário
-function plantaoDiarioCompensacao() {
+//Plantão Diário
+function plantaoDiario() {
 
     // domingo
     if (datahoje.getDay() == 0) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Hoje é domingo'
-        document.querySelector('#nomescomp').innerHTML = 'Curta sua manhã!'
-        document.querySelector('#nomescompTarde').innerHTML = 'Curta sua tarde!'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje é domingo!'
     }    
     // segunda
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Josi'
-        document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius'
+        document.querySelector('#plantaodiario').innerHTML = 'Josi'
     }
     // terça
     if (datahoje.getDay() == 2) {
-        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Alexandro'
-        document.querySelector('#nomescomp').innerHTML = 'Ninguém'
-        document.querySelector('#nomescompTarde').innerHTML = 'Nailson'
+        document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
     }
     // quarta
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Nailson'
-        document.querySelector('#nomescomp').innerHTML = 'Jaque Camila'
-        document.querySelector('#nomescompTarde').innerHTML = 'Andressa'
+        document.querySelector('#plantaodiario').innerHTML = 'Nailson'
     }
     // quinta
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Douglas'
-        document.querySelector('#nomescomp').innerHTML = 'Ninguém'
-        document.querySelector('#nomescompTarde').innerHTML = 'Valéria Sarita'
+        document.querySelector('#plantaodiario').innerHTML = 'Douglas'
     }
     // sexta
     if (datahoje.getDay() == 5) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Hoje: ver plantão de sexta'
-        document.querySelector('#nomescomp').innerHTML = 'Malu'
-        document.querySelector('#nomescompTarde').innerHTML = 'Alexandro Josi Carol'
+        document.querySelector('#plantaodiario').innerHTML = 'ver plantão de sexta'
     }
     // sábado
     if (datahoje.getDay() == 6) { 
         document.querySelector('#plantaodiario').innerHTML = 'Feliz Sábado!'
+    }
+}
+
+function compensacao() {
+
+    // domingo
+    if (datahoje.getDay() == 0) { 
+        document.querySelector('#nomescomp').innerHTML = 'Hoje é domingo!'
+    }    
+    // segunda
+    if (datahoje.getDay() == 1) { 
+        document.querySelector('#nomescomp').innerHTML = 'Pr. Vinícius'
+    }
+    // terça
+    if (datahoje.getDay() == 2) {
+        document.querySelector('#nomescomp').innerHTML = 'Nailson'
+    }
+    // quarta
+    if (datahoje.getDay() == 3) { 
+        document.querySelector('#nomescomp').innerHTML = 'Jaque, Camila (M), Andressa (T)'
+    }
+    // quinta
+    if (datahoje.getDay() == 4) { 
+        document.querySelector('#nomescomp').innerHTML = 'Valéria (M), Sarita (T)'
+    }
+    // sexta
+    if (datahoje.getDay() == 5) { 
+        document.querySelector('#nomescomp').innerHTML = 'Malu (M), Ale, Josi, Carol (T)'
+    }
+    // sábado
+    if (datahoje.getDay() == 6) { 
         document.querySelector('#nomescomp').innerHTML = 'Feliz Sábado!'
     }
 }
@@ -150,16 +141,6 @@ let bgmodal = document.querySelector('#bgmodal')
 bgmodal.classList.remove('modalOn')
 })
 
-// Novo atendimento
-// const btnovoatendimento = document.querySelector('#botaonovoatendimento')
-// btnovoatendimento.addEventListener('click', ()=>{
-//     window.open("https://dls76.github.io/matriculasDbox/")
-// })
-
-// Ramais telefonicos
-// let ramais = document.querySelector('#ramais')
-// ramais.addEventListener('click', ramaisList)
-
 function ramaisList() {
         
     const modalramais = document.querySelector('#modalramais')
@@ -167,9 +148,30 @@ function ramaisList() {
     modalramais.classList.add('show_ramais')
 
 }
-// let fechar_ramais = document.querySelector('#fechar_ramais')
-// fechar_ramais.addEventListener('click', fecharRamais)
-// function fecharRamais() {
-//     const modalramais = document.querySelector('#modalramais')
-//     modalramais.classList.remove('show_ramais')
+
+// Entrevistas
+// function plantaoentrevistas() {
+
+    // if (datahoje.getDay() == 0) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Hoje é domingão!'
+    // }
+    // if (datahoje.getDay() == 1) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Douglas | Daisy'
+    // }
+    // if (datahoje.getDay() == 2) {
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Jaque | Alexandro'
+    // }
+    // if (datahoje.getDay() == 3) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Valéria | Carol'
+    // }
+    // if (datahoje.getDay() == 4) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Camila | Sarita'
+    // }
+    // if (datahoje.getDay() == 5) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Eula | Malú'
+    // }
+    // if (datahoje.getDay() == 6) { 
+    //     document.querySelector('#plantaoentrevistascontent').innerHTML = 'Feliz Sábado!'
+    // }
+        // document.querySelector('#plantaoentrevistascontent').innerHTML = 'Em definição...'
 // }
