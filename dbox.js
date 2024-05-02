@@ -28,11 +28,12 @@ function cultos() {
         // if ( datahoje.getDate() == 18) {
         //     document.querySelector('#cultos').innerHTML = '7h ???' + ' | ' + '10h15 ???' + ' | ' + '13h ???' 
         // }
-        if ( datahoje.getDate() == 18) {
-            document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h15 Nailson' + ' | ' + '13h ???' 
-        }
-        if ( datahoje.getDate() == 25) {
-            document.querySelector('#cultos').innerHTML = '7h Fillipi' + ' | ' + '10h15 Malú' + ' | ' + '13h Adriene' 
+        // if ( datahoje.getDate() == 18) {
+        //     document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h15 Nailson' + ' | ' + '13h ???' 
+        // }
+        if ( datahoje.getDate() == 2) {
+            // document.querySelector('#cultos').innerHTML = '7h Fillipi' + ' | ' + '10h15 Malú' + ' | ' + '13h Adriene' 
+            document.querySelector('#cultos').innerHTML = 'Pr. Vinícius' 
         }
     }
     if (datahoje.getDay() == 5) {
@@ -96,11 +97,13 @@ function compensacao() {
     }
     // quinta
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#nomescomp').innerHTML = 'Valéria (M), Sarita (T)'
+        // document.querySelector('#nomescomp').innerHTML = 'Valéria (M), Sarita (T)'
+        document.querySelector('#nomescomp').innerHTML = 'Semana de Feriado'
     }
     // sexta
     if (datahoje.getDay() == 5) { 
-        document.querySelector('#nomescomp').innerHTML = 'Malu (M), Ale, Josi, Carol (T)'
+        // document.querySelector('#nomescomp').innerHTML = 'Malu (M), Ale, Josi, Carol (T)'
+        document.querySelector('#nomescomp').innerHTML = 'Semana de Feriado'
     }
     // sábado
     if (datahoje.getDay() == 6) { 
