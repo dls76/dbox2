@@ -19,22 +19,15 @@
     border-radius: 12px;
 }
 .divhome#divhomebanners a div {
-    /* border: 1px solid black; */
     position: absolute;
     z-index: 1000;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* color: #253B73; */
-    /* color: #000; */
-    /* text-shadow: 2px 7px 5px rgba(0,0,0,0.3),  */
-    /* 0px -4px 10px rgba(255,255,255,0.3); */
-    /* font-weight: 600; */
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 1px;
-    /* color: rgb(43, 43, 43); */
+    letter-spacing: .5px;
 }
 
 #acreditacao, #diadasmaes, #olimpiadas {
@@ -57,3 +50,9 @@
     color: rgb(43, 43, 43);
 }
 
+#formaturaInfantil {
+    background-image: url(../img/bg_formaturaInfantil.jpg);
+    color: white;
+    background-position: center right;
+    border-radius: 12px;
+}
