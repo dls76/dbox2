@@ -54,7 +54,8 @@ const eventos = [
     {data: new Date(2024, 2, 27), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
     {data: new Date(2024, 2, 28), culto1: 'Drika', culto2: 'Nailson', culto3: 'Drika'},
     {data: new Date(2024, 2, 29), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
-//Abril
+
+    //Abril
     {data: new Date(2024, 3, 15), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
     {data: new Date(2024, 3, 16), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
     {data: new Date(2024, 3, 17), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
@@ -66,6 +67,34 @@ const eventos = [
     {data: new Date(2024, 3, 24), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
     {data: new Date(2024, 3, 25), culto1: 'Fillipe', culto2: 'Malú', culto3: 'Adriene'},
     {data: new Date(2024, 3, 26), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+
+    //Maio
+    {data: new Date(2024, 4, 2), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 4, 2), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+
+    {data: new Date(2024, 4, 6), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 4, 7), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 4, 8), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 4, 9), culto1: 'Andressa', culto2: 'Nailson', culto3: 'Malu'},
+    {data: new Date(2024, 4, 10), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+
+    {data: new Date(2024, 4, 13), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 4, 14), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 4, 15), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 4, 16), culto1: 'Jaque', culto2: 'Jairo', culto3: 'Drika'},
+    {data: new Date(2024, 4, 17), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+
+    {data: new Date(2024, 4, 20), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 4, 21), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 4, 22), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 4, 23), culto1: 'Fillipe', culto2: 'Valéria', culto3: 'Marcio'},
+    {data: new Date(2024, 4, 24), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+
+    {data: new Date(2024, 4, 27), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 4, 28), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 4, 29), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 4, 30), culto1: 'Jhéssica', culto2: 'Nailson', culto3: 'Eliane'},
+    {data: new Date(2024, 4, 31), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
 ];
 
 // if ( datahoje.getDate() == 7) {
