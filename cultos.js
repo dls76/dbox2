@@ -70,7 +70,6 @@ const eventos = [
 
     //Maio
     {data: new Date(2024, 4, 2), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
-    {data: new Date(2024, 4, 2), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
 
     {data: new Date(2024, 4, 6), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
     {data: new Date(2024, 4, 7), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
