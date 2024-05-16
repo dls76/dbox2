@@ -321,22 +321,28 @@
             <div>Cadastro Currículos</div>
         </a>
 
+        <a class="linha-disciplina" href="docs/rh/msgnaoselecionado.pdf" target="_blank">
+            <img src="img/pdf.png" alt="">
+            <div>Mensagem Não Selecionados</div>
+        </a>
+
         <span class="linha-disciplina" id="linkcurriculos">
             <img src="img/link.png" alt="">
             <input type="text" id="inputcurriculos" value="https://www.gcpecfatorrh.com.br/RecrutamentoFatorRH/?document=CPF&locale=pt_BR&client=ASP" readonly>
             <button id="btcurriculos" onclick="copyContent()">Copiar link</button>
         </span>
         
+
         <script>
             const copyContent = async () => { 
                 try { 
                     const text = document.getElementById('inputcurriculos').value;
                     await navigator.clipboard.writeText(text); 
-                    console.log('Content copied to clipboard'); 
                 } catch (err) { 
                     console.error('Failed to copy: ', err); 
                 } 
             } 
+
         </script>
         
 
@@ -386,6 +392,12 @@
             <img src="img/check_green.png" alt="">
             <div>Congresso Maranata</div>
         </a>
+
+        <a href="https://docs.google.com/spreadsheets/d/1rcPviRavWIXeVVzGsso0WTM8KsySpBba/edit#gid=553854322" class="linha-disciplina" target="_blank">
+            <img src="img/check_green.png" alt="">
+            <div>Congresso Maranata Planilha Eloísa</div>
+        </a>
+        
 
         <a href="https://drive.google.com/drive/u/1/folders/11gy6c5xJuoetLK7Evm4LGGUPRxLYmiwY" class="linha-disciplina" target="_blank">
             <img src="img/manager.png" alt="">
