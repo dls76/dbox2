@@ -61,7 +61,6 @@ const pessoas = [
     {nome: "Luciana da Silveira Perszel de Andrade", data: new Date(2024, 4, 12), dia: 12, mes: 4, ano: 1976, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Pablo Silva Pimentel", data: new Date(2024, 4, 14), dia: 14, mes: 4, ano: 1988, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Larissa Ingrid de Oliveira Amaral", data: new Date(2024, 4, 15), dia: 15, mes: 4, ano: 1997, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Leila Pereira da Costa Santos", data: new Date(2024, 4, 20), dia: 20, mes: 4, ano: 1986, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Eliane Cristina Manfrini Gualberto", data: new Date(2024, 4, 21), dia: 21, mes: 4, ano: 1978, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Janaina Santos Pereira", data: new Date(2024, 4, 25), dia: 25, mes: 4, ano: 1983, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Valeria Geraldino Miranda", data: new Date(2024, 4, 25), dia: 25, mes: 4, ano: 1970, funcao: "Função", foto: 'img/anivImg/user.png'},
