@@ -37,10 +37,16 @@
     background-size: cover;
     border-radius: 12px;
 }
-#acreditacao, #acreditacao2 {
+#acreditacao {
     background-image: url(../img/acreditacao-small.jpg);
     color: #054FBA;
 }
+
+#acreditacao2 {
+    background-image: url(../img/acreditacao-small.jpg);
+    color: #054FBA;
+}
+
 #diadasmaes {
     background-image: url(../img/picnic2.jpg);
     color: rgb(44, 61, 16);
