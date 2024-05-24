@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximos Eventos</title>
+</head>
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main {
+            width: 100%;
+            max-width: 1500px;
+            margin: auto;
+        }
+        body {
+            background-color: whitesmoke;
+        }
+
+        .evento {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 0;
+            margin: 2rem 0;
+            background-color: white;
+        }
+
+        .fotoevento {
+            background-image: url(../img/promo/diadospais.png);
+            background-size: cover;
+        }
+
+        .infoevento {
+            padding: .5rem 1rem;
+        }
+        .tituloevento {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .detalhesevento, .regressivaevento {
+            font-size: 14px;
+            /* border: 1px solid blue; */
+            margin: 10px 0;
+        }
+        .regressivaevento {
+            color: rgb(161, 161, 161);
+            font-style: italic;
+        }
+        
+    </style>
+    <h1>Próximos Eventos</h1>
+
+    <main>
+
+        <div class="evento">
+
+            <div class="fotoevento"></div>
+
+            <div class="infoevento">
+                <div class="tituloevento">DIA DOS PAIS</div>
+                <div class="detalhesevento">28 de Novembro | 20h - Ginásio</div>
+                <div class="regressivaevento"><i>Faltam 185 dias</i></div>
+            </div>
+
+            <div class="fotoresponsavelevento">
+                <img src="" alt="">
+            </div>
+
+        </div>
+
+        
+
+    </main>
+
+</body>
+</html>
