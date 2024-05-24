@@ -97,13 +97,11 @@ function compensacao() {
     }
     // quinta
     if (datahoje.getDay() == 4) { 
-        // document.querySelector('#nomescomp').innerHTML = 'Valéria (M), Sarita (T)'
-        document.querySelector('#nomescomp').innerHTML = 'Semana de Feriado'
+        document.querySelector('#nomescomp').innerHTML = 'Valéria (M), Renata (T)'
     }
     // sexta
     if (datahoje.getDay() == 5) { 
-        // document.querySelector('#nomescomp').innerHTML = 'Malu (M), Ale, Josi, Carol (T)'
-        document.querySelector('#nomescomp').innerHTML = 'Semana de Feriado'
+        document.querySelector('#nomescomp').innerHTML = 'Malu (M), Ale, Josi, Carol (T)'
     }
     // sábado
     if (datahoje.getDay() == 6) { 
