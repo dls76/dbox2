@@ -93,7 +93,7 @@ function compensacao() {
     }
     // quarta
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#nomescomp').innerHTML = 'Jaque, Camila (M), Andressa (T)'
+        document.querySelector('#nomescomp').innerHTML = 'Semana com feriado'
     }
     // quinta
     if (datahoje.getDay() == 4) { 
