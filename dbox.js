@@ -89,7 +89,7 @@ function compensacao() {
     }
     // terça
     if (datahoje.getDay() == 2) {
-        document.querySelector('#nomescomp').innerHTML = 'Nailson'
+        document.querySelector('#nomescomp').innerHTML = 'Semana com feriado'
     }
     // quarta
     if (datahoje.getDay() == 3) { 
