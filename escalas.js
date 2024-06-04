@@ -171,8 +171,11 @@ function proximaReuniaoAdm(array) {
         dia = dia < 10 ? '0' + dia : dia;
         mes = mes < 9 ? '0' + (mes + 1) : (mes + 1); 
         let link = document.querySelector('#ralink')
+        let linkrapidora = document.querySelector('#linkrapidora')
+
         document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} | 14:30`; 
         link.setAttribute("href", futureDates[0].link)
+        linkrapidora.setAttribute("href", futureDates[0].link)
     } else {
         document.querySelector('#reuniaoadm').innerHTML = 'Aguardando atualização...'
     }
