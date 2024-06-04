@@ -149,8 +149,8 @@ let reuniaoadm = [
     {data: new Date(2024, 4, 6)},
     {data: new Date(2024, 4, 13), link: 'link da reunião'},
     {data: new Date(2024, 5, 10), link: 'https://docs.google.com/document/d/1FLS1MoVRcYZ1uZshPi0TDnmBzE0JThaMhcgqlPmuEaE/edit'},
-    {data: new Date(2024, 5, 17), link: 'link da reunião'},
-    {data: new Date(2024, 5, 24), link: 'link da reunião'},
+    {data: new Date(2024, 5, 17), link: 'https://docs.google.com/document/d/1b85h-wEY53S7f1V-A6yy1FY2yFUzczW9NF-8dx3mMCw/edit'},
+    {data: new Date(2024, 5, 24), link: 'https://docs.google.com/document/d/11lAYtsBrkPbB2MaeBx5aF9Sr0KA44uy2ufONP31kPps/edit'},
 ]
 window.addEventListener('load', () => proximaReuniaoAdm(reuniaoadm)); 
 // Corrigido para garantir que proximaReuniaoAdm seja passada como uma função
@@ -170,8 +170,9 @@ function proximaReuniaoAdm(array) {
         let dia = futureDates[0].data.getDate();
         dia = dia < 10 ? '0' + dia : dia;
         mes = mes < 9 ? '0' + (mes + 1) : (mes + 1); 
+        let link = document.querySelector('#ralink')
         document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} | 14:30`; 
-        document.querySelector('#ralinks').setAttribute('href', 'futureDates[0].link')
+        link.setAttribute("href", futureDates[0].link)
     } else {
         document.querySelector('#reuniaoadm').innerHTML = 'Aguardando atualização...'
     }
