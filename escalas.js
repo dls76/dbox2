@@ -148,7 +148,7 @@ let reuniaoadm = [
     {data: new Date(2024, 3, 22)},
     {data: new Date(2024, 4, 6)},
     {data: new Date(2024, 4, 13), link: 'link da reunião'},
-    {data: new Date(2024, 5, 10), link: 'link da reunião'},
+    {data: new Date(2024, 5, 10), link: 'https://docs.google.com/document/d/1FLS1MoVRcYZ1uZshPi0TDnmBzE0JThaMhcgqlPmuEaE/edit'},
     {data: new Date(2024, 5, 17), link: 'link da reunião'},
     {data: new Date(2024, 5, 24), link: 'link da reunião'},
 ]
@@ -171,6 +171,7 @@ function proximaReuniaoAdm(array) {
         dia = dia < 10 ? '0' + dia : dia;
         mes = mes < 9 ? '0' + (mes + 1) : (mes + 1); 
         document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} | 14:30`; 
+        document.querySelector('#').setAttribute('href', 'futureDates[0].link')
     } else {
         document.querySelector('#reuniaoadm').innerHTML = 'Aguardando atualização...'
     }
