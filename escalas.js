@@ -171,7 +171,7 @@ function proximaReuniaoAdm(array) {
         dia = dia < 10 ? '0' + dia : dia;
         mes = mes < 9 ? '0' + (mes + 1) : (mes + 1); 
         document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} | 14:30`; 
-        document.querySelector('#').setAttribute('href', 'futureDates[0].link')
+        document.querySelector('#ralinks').setAttribute('href', 'futureDates[0].link')
     } else {
         document.querySelector('#reuniaoadm').innerHTML = 'Aguardando atualização...'
     }
