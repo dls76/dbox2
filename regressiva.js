@@ -18,7 +18,7 @@ const proximosEventos = [
   {nome: 'Fair Play Conhecimento', data: new Date(2024, 4, 14), link:"https://drive.google.com/drive/folders/1_-Hm088-AikWoHf8ETETAJZmTISF1_Qq?usp=drive_link",},
   {nome: 'Dia das Mães', data: new Date(2024, 4, 19), link:"https://drive.google.com/drive/folders/1vyONKagq4wUlMKRDGutaHqidhr3WFrbC?usp=drive_link",},
   {nome: 'Acreditação', data: new Date(2024, 4, 22), link:"https://dls76.github.io/dbox2/pg-externas/acreditacao.html",},
-  {nome: 'Olimpíadas do CAC', data: new Date(2024, 6, 29), link:"https://drive.google.com/drive/folders/1MeOeRl-HrD7_X-N-oTQcBAbROWVfKdOF?usp=sharing",},
+  {nome: 'Olimpíadas do CAC', data: new Date(2024, 7, 21), link:"https://drive.google.com/drive/folders/1MeOeRl-HrD7_X-N-oTQcBAbROWVfKdOF?usp=sharing",},
   {nome: 'Lançamento de Matrículas Equipe Gestora', data: new Date(2024, 7, 4), link:"https://drive.google.com/drive/folders/1fAj27bIfdN-ZQTvadISFZq9J2H79YaTY?usp=sharing",},
   {nome: 'Programa Dia dos Pais', data: new Date(2024, 7, 18), link:"https://drive.google.com/drive/folders/1l_iYVD7GBGqXRdcaHT21lfocT4yC5DJP?usp=drive_link",},
   {nome: 'Semana de Oração - 2º Semestre', data: new Date(2024, 7, 19), link:"https://drive.google.com/drive/folders/1wTuD_Njt9p-qmFbH07cnNBSAAG38z5ZQ?usp=drive_link",},
