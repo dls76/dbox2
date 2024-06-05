@@ -171,7 +171,7 @@ main#conteinerhome {
     transition: all .3s;
 }
 .img img {
-    width: 35px;
+    width: 40px;
     object-fit: cover;
 }
 .legenda-links {
