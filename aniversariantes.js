@@ -64,15 +64,15 @@ const pessoas = [
     {nome: "Valeria Geraldino Miranda", data: new Date(2024, 4, 25), dia: 25, mes: 4, ano: 1970, funcao: "Orientadora", foto: 'img/anivImg/may/valeria.jpg'},
     {nome: "Beatriz Jimenez Pinon", data: new Date(2024, 4, 27), dia: 27, mes: 4, ano: 1997, funcao: "Zeladora", foto: 'img/anivImg/may/beatriz.jpg'},
     {nome: "Ariannis Pinon Frometa", data: new Date(2024, 4, 28), dia: 28, mes: 4, ano: 1980, funcao: "Zeladora", foto: 'img/anivImg/may/ariannis.jpg'},
-    {nome: "Glacira Mari Dutra", data: new Date(2024, 4, 30), dia: 30, mes: 4, ano: 1966, funcao: "Promotora de Matrículas", foto: 'img/anivImg/may/glacira.jpg'},
+    // {nome: "Glacira Mari Dutra", data: new Date(2024, 4, 30), dia: 30, mes: 4, ano: 1966, funcao: "Promotora de Matrículas", foto: 'img/anivImg/may/glacira.jpg'},
 
     // Junho
-    {nome: "Aline de Oliveira Dellaqua", data: new Date(2024, 5, 5), dia: 5, mes: 5, ano: 1989, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Larissa de Lima Cabral Martins", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1995, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Eraldo Soares Silva Junior", data: new Date(2024, 5, 17), dia: 17, mes: 5, ano: 1983, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Michelle Fröhlich Bittencourt Machado", data: new Date(2024, 5, 25), dia: 25, mes: 5, ano: 1984, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Joyce da Silva Ferreira", data: new Date(2024, 5, 28), dia: 28, mes: 5, ano: 1992, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Pedrina Rosemeire dos Santos", data: new Date(2024, 5, 29), dia: 29, mes: 5, ano: 1974, funcao: "Função", foto: 'img/anivImg/user.png'},
+    // {nome: "Aline de Oliveira Dellaqua", data: new Date(2024, 5, 5), dia: 5, mes: 5, ano: 1989, funcao: "Função", foto: 'img/anivImg/user.png'},
+    {nome: "Larissa de Lima Cabral Martins", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1995, funcao: "Função", foto: 'img/anivImg/junho/larissa.jpg'},
+    {nome: "Eraldo Soares Silva Junior", data: new Date(2024, 5, 17), dia: 17, mes: 5, ano: 1983, funcao: "Função", foto: 'img/anivImg/junho/eraldo.jpg'},
+    // {nome: "Michelle Fröhlich Bittencourt Machado", data: new Date(2024, 5, 25), dia: 25, mes: 5, ano: 1984, funcao: "Função", foto: 'img/anivImg/.png'},
+    {nome: "Joyce da Silva Ferreira", data: new Date(2024, 5, 28), dia: 28, mes: 5, ano: 1992, funcao: "Função", foto: 'img/anivImg/junho/joyce.jpg'},
+    // {nome: "Pedrina Rosemeire dos Santos", data: new Date(2024, 5, 29), dia: 29, mes: 5, ano: 1974, funcao: "Função", foto: 'img/anivImg/user.png'},
     
     // Julho
     {nome: "Ana Prado Bevilaqua", data: new Date(2024, 6, 4), dia: 4, mes: 6, ano: 1978, funcao: "Função", foto: 'img/anivImg/user.png'},
@@ -83,13 +83,13 @@ const pessoas = [
     {nome: "Luciana de Moraes Jardim", data: new Date(2024, 6, 22), dia: 22, mes: 6, ano: 1972, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Nailson Veras do Nascimento", data: new Date(2024, 6, 24), dia: 24, mes: 6, ano: 1979, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Thayse Oliveira dos Passos", data: new Date(2024, 6, 25), dia: 25, mes: 6, ano: 1984, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Leidiane Cristina Germano", data: new Date(2024, 6, 27), dia: 27, mes: 6, ano: 1988, funcao: "Função", foto: 'img/anivImg/user.png'},
+    // {nome: "Leidiane Cristina Germano", data: new Date(2024, 6, 27), dia: 27, mes: 6, ano: 1988, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Mônica Cristina Martins de Novais", data: new Date(2024, 6, 31), dia: 31, mes: 6, ano: 1979, funcao: "Função", foto: 'img/anivImg/user.png'},
     
     // Agosto
     {nome: "Vanessa Moura de Freitas", data: new Date(2024, 7, 2), dia: 2, mes: 7, ano: 1985, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Caroline Cristina de Brito", data: new Date(2024, 7, 4), dia: 4, mes: 7, ano: 1988, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Jessica Aparecida Dionisio", data: new Date(2024, 7, 12), dia: 12, mes: 7, ano: 1996, funcao: "Função", foto: 'img/anivImg/user.png'},
+    // {nome: "Jessica Aparecida Dionisio", data: new Date(2024, 7, 12), dia: 12, mes: 7, ano: 1996, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Leonardo Ormianin Torres", data: new Date(2024, 7, 12), dia: 12, mes: 7, ano: 1999, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Allan Almeida Lima", data: new Date(2024, 7, 26), dia: 26, mes: 7, ano: 1982, funcao: "Função", foto: 'img/anivImg/user.png'},
     {nome: "Laís Daniele dos Santos", data: new Date(2024, 7, 28), dia: 28, mes: 7, ano: 2001, funcao: "Função", foto: 'img/anivImg/user.png'},
