@@ -22,17 +22,18 @@ function cultos() {
     }
     if (datahoje.getDay() == 4) {
 
-        if ( datahoje.getDate() == 16) {
-            document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h15 Jairo' + ' | ' + '13h Drika' 
-        }
-        if ( datahoje.getDate() == 23) {
-            document.querySelector('#cultos').innerHTML = '7h Fillipe' + ' | ' + '10h15 Valéria' + ' | ' + '13h Marcio' 
-        }
-        if ( datahoje.getDate() == 30) {
-            document.querySelector('#cultos').innerHTML = '7h Jhéssica' + ' | ' + '10h15 Nailson' + ' | ' + '13h Elaine' 
-        }
-        // if ( datahoje.getDate() == 2) {
-        //     document.querySelector('#cultos').innerHTML = '7h Fillipi' + ' | ' + '10h15 Malú' + ' | ' + '13h Adriene' 
+        //if ( datahoje.getDate() == 6) {
+            document.querySelector('#cultos').innerHTML = 'Aguardando atualização'
+            //7h ' + ' | ' + '10h15 ' + ' | ' + '13h ' 
+        //}
+        //if ( datahoje.getDate() == 13) {
+            //document.querySelector('#cultos').innerHTML = '7h ' + ' | ' + '10h15 ' + ' | ' + '13h ' 
+        //}
+        //if ( datahoje.getDate() == 20) {
+          //  document.querySelector('#cultos').innerHTML = '7h ' + ' | ' + '10h15 ' + ' | ' + '13h ' 
+        //}
+        //if ( datahoje.getDate() == 27) {
+            //document.querySelector('#cultos').innerHTML = '7h ' + ' | ' + '10h15 ' + ' | ' + '13h ' 
         //     document.querySelector('#cultos').innerHTML = 'Pr. Vinícius' 
         // }
     }
