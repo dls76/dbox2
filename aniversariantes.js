@@ -57,22 +57,17 @@ const pessoas = [
     {nome: "Adriene dos Santos Anacleto", data: new Date(2024, 4, 10), dia: 10, mes: 4, ano: 1992, funcao: "Professora", foto: 'img/anivImg/may/adriene.jpg'},
     {nome: "Carmelis Del Valle Garcia Guilarte", data: new Date(2024, 4, 10), dia: 10, mes: 4, ano: 1980, funcao: "Monitora", foto: 'img/anivImg/may/carmelis.jpg'},
     {nome: "Maria Zelia de Souza Silva Queiroz", data: new Date(2024, 4, 10), dia: 10, mes: 4, ano: 1990, funcao: "Auxiliar de Classe", foto: 'img/anivImg/may/maria.jpg'},
-    // {nome: "Lucas Gabriel Santos Rocha", data: new Date(2024, 4, 12), dia: 12, mes: 4, ano: 2005, funcao: "Monitor", foto: 'img/anivImg/may/.jpg'},
     {nome: "Pablo Silva Pimentel", data: new Date(2024, 4, 14), dia: 14, mes: 4, ano: 1988, funcao: "Professor", foto: 'img/anivImg/may/pablo.jpg'},
-    // {nome: "Larissa Ingrid de Oliveira Amaral", data: new Date(2024, 4, 15), dia: 15, mes: 4, ano: 1997, funcao: "Professora?", foto: 'img/anivImg/may/'},
     {nome: "Eliane Cristina Manfrini Gualberto", data: new Date(2024, 4, 21), dia: 21, mes: 4, ano: 1978, funcao: "Monitora", foto: 'img/anivImg/may/eliane.jpg'},
     {nome: "Valeria Geraldino Miranda", data: new Date(2024, 4, 25), dia: 25, mes: 4, ano: 1970, funcao: "Orientadora", foto: 'img/anivImg/may/valeria.jpg'},
     {nome: "Beatriz Jimenez Pinon", data: new Date(2024, 4, 27), dia: 27, mes: 4, ano: 1997, funcao: "Zeladora", foto: 'img/anivImg/may/beatriz.jpg'},
     {nome: "Ariannis Pinon Frometa", data: new Date(2024, 4, 28), dia: 28, mes: 4, ano: 1980, funcao: "Zeladora", foto: 'img/anivImg/may/ariannis.jpg'},
-    // {nome: "Glacira Mari Dutra", data: new Date(2024, 4, 30), dia: 30, mes: 4, ano: 1966, funcao: "Promotora de Matrículas", foto: 'img/anivImg/may/glacira.jpg'},
 
     // Junho
-    // {nome: "Aline de Oliveira Dellaqua", data: new Date(2024, 5, 5), dia: 5, mes: 5, ano: 1989, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Larissa de Lima Cabral Martins", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1995, funcao: "Função", foto: 'img/anivImg/junho/larissa.jpg'},
-    {nome: "Eraldo Soares Silva Junior", data: new Date(2024, 5, 17), dia: 17, mes: 5, ano: 1983, funcao: "Função", foto: 'img/anivImg/junho/eraldo.jpg'},
-    // {nome: "Michelle Fröhlich Bittencourt Machado", data: new Date(2024, 5, 25), dia: 25, mes: 5, ano: 1984, funcao: "Função", foto: 'img/anivImg/.png'},
-    {nome: "Joyce da Silva Ferreira", data: new Date(2024, 5, 28), dia: 28, mes: 5, ano: 1992, funcao: "Função", foto: 'img/anivImg/junho/joyce.jpg'},
-    // {nome: "Pedrina Rosemeire dos Santos", data: new Date(2024, 5, 29), dia: 29, mes: 5, ano: 1974, funcao: "Função", foto: 'img/anivImg/user.png'},
+    {nome: "Larissa de Lima Cabral Martins", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1995, funcao: "Professora", foto: 'img/anivImg/junho/larissa.jpg'},
+    {nome: "Izabel Marques Batista", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1976, funcao: "Zeladora", foto: 'img/anivImg/junho/izabel.png'},
+    {nome: "Eraldo Soares Silva Junior", data: new Date(2024, 5, 17), dia: 17, mes: 5, ano: 1983, funcao: "Professor", foto: 'img/anivImg/junho/eraldo.jpg'},
+    {nome: "Joyce da Silva Ferreira", data: new Date(2024, 5, 28), dia: 28, mes: 5, ano: 1992, funcao: "Professora", foto: 'img/anivImg/junho/joyce.jpg'},
     
     // Julho
     {nome: "Ana Prado Bevilaqua", data: new Date(2024, 6, 4), dia: 4, mes: 6, ano: 1978, funcao: "Função", foto: 'img/anivImg/user.png'},
