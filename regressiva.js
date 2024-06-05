@@ -27,6 +27,10 @@ const proximosEventos = [
   {nome: 'Dia do Estudante', data: new Date(2024, 7, 11), link: ""}
 ];
 
+proximosEventos.sort((a, b) => a.data - b.data)
+
+
+
 const eventosContainer = document.getElementById('nextEventsConteiner');
 
 proximosEventos.forEach((evento) => {
