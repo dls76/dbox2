@@ -24,7 +24,8 @@ const proximosEventos = [
   {nome: 'Semana de Oração - 2º Semestre', data: new Date(2024, 7, 19), link:"https://drive.google.com/drive/folders/1wTuD_Njt9p-qmFbH07cnNBSAAG38z5ZQ?usp=drive_link",},
   {nome: 'Formaturas 9º e 3ºEM', data: new Date(2024, 11, 15), link:"https://drive.google.com/drive/folders/1JFtpr7N_WGLJnh37ETSgS9EJw-Y3nweu?usp=sharing",},
   {nome: 'Formatura Ed. Infantil', data: new Date(2024, 11, 17), link:"https://drive.google.com/drive/folders/1e8EjN1-wI4VhjStq0h0tCPN5GjRFkdvI?usp=sharing",},
-  {nome: 'Dia do Estudante', data: new Date(2024, 7, 11), link: ""}
+  {nome: 'Dia do Estudante', data: new Date(2024, 7, 11), link: ""},
+  {nome: 'Recesso', data: new Date(2024, 5, 29)},
 ];
 
 proximosEventos.sort((a, b) => a.data - b.data)
