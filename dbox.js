@@ -22,10 +22,10 @@ function cultos() {
     }
     if (datahoje.getDay() == 4) {
 
-        //if ( datahoje.getDate() == 6) {
-            document.querySelector('#cultos').innerHTML = 'Aguardando atualização'
+        if (datahoje.getDate() == 6) {
+            document.querySelector('#cultos').innerHTML = 'Pr. Vinícius'
             //7h ' + ' | ' + '10h15 ' + ' | ' + '13h ' 
-        //}
+        }
         //if ( datahoje.getDate() == 13) {
             //document.querySelector('#cultos').innerHTML = '7h ' + ' | ' + '10h15 ' + ' | ' + '13h ' 
         //}
