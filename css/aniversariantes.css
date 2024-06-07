@@ -138,12 +138,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* align-items: center; */
     width: 70%;
     max-width: 900px;
-    /* height: 80vh; */
     background: #fff;
-    padding: 2rem;
+    padding: 5rem 2rem 2rem 2rem;
     position: absolute;
     box-shadow: 5px 5px 10px #70707090;
     top: 50%;
