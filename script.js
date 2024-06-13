@@ -11,14 +11,12 @@ function toggleMenu() {
 
 btnMobile.addEventListener('click', toggleMenu)
 
-
- 
 document.getElementById("linkRotinas").addEventListener("click", function(event){
     event.preventDefault();
-    window.open("https://calendar.google.com/calendar/u/0/r");
-    window.open("https://mail.google.com/mail/u/0/#inbox");
-    window.open("https://www.classapp.com.br/");
-    window.open("https://acrm.sdasystems.org/login/");
+    window.open("https://calendar.google.com/calendar/u/0/r", "_blank");
+    window.open("https://mail.google.com/mail/u/0/#inbox", "_blank");
+    window.open("https://www.classapp.com.br/", "_blank");
+    window.open("https://acrm.sdasystems.org/login/", "_blank");
 });
 
 function scrollToTop() {
