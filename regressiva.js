@@ -1,6 +1,3 @@
-
-
-
 const proximosEventos = [
   {nome: 'Capacitação de Professores', data: new Date(2024, 0, 29), link: "https://drive.google.com/drive/folders/1efLap5rz5Yxzak_Wr5F-4ODEwFrff1EH?usp=sharing",},
   {nome: 'Reunião de pais EI-5º', data: new Date(2024, 0, 30), link: "https://drive.google.com/drive/folders/1Xv_eNsvJ5HeBKhStzjo0o3q71Odrzmki?usp=sharing",},
@@ -29,8 +26,6 @@ const proximosEventos = [
 ];
 
 proximosEventos.sort((a, b) => a.data - b.data)
-
-
 
 const eventosContainer = document.getElementById('nextEventsConteiner');
 
