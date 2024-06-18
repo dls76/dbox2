@@ -37,30 +37,20 @@
     background-size: cover;
     border-radius: 12px;
 }
-/* #acreditacao {
-    background-image: url(../img/acreditacao-small.jpg);
-    color: #054FBA;
-}
-
-#acreditacao2 {
-    background-image: url(../img/acreditacao-small.jpg);
-    color: #054FBA;
-}
-
-#diadasmaes {
-    background-image: url(../img/picnic2.jpg);
-    color: rgb(44, 61, 16);
-    text-shadow: 0 0 5px white;
-} */
 
 #manutencao {
     background-image: url(../img/manutencao.jpg);
     background-size: cover;
     border-radius: 12px;
     color: #fff;
-    text-shadow: 0 0 10px black;
+    text-shadow: 0 0 6px black;
     text-align: center;
-} 
+}
+
+.divhome#divhomebanners a div#divmanutencao {
+    top: 45%;
+}
+
 #diadospais {
     background-image: url(../img/promo/diadospais.png);
     color: #fff;
