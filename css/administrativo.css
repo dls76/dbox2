@@ -1,6 +1,11 @@
 body {
     background-color: #fff;
 }
+main {
+    /* border: 2px solid red; */
+    max-width: 1400px;
+    margin: auto;
+}
 .titulosecao {
     width: 90%;
     margin: 2rem auto 0 auto;
@@ -10,7 +15,7 @@ body {
     color: #5d5d5d;
 }
 .menuadministativo {
-    max-width: 90%;
+    max-width: 1400px;
     margin: auto;
     display: flex;
     justify-content: center;
