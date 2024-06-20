@@ -66,10 +66,10 @@ const pessoas = [
     // Junho
     {nome: "Larissa de Lima Cabral Martins", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1995, funcao: "Professora", foto: 'img/anivImg/junho/larissa.jpg'},
     {nome: "Izabel Marques Batista", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1976, funcao: "Zeladora", foto: 'img/anivImg/junho/izabel.png'},
+    {nome: "Andrezza Santos", data: new Date(2024, 5, 14), dia: 14, mes: 5, ano: 2024, funcao: "Zeladora", foto: ''},
+    {nome: "Rutilea Lopes", data: new Date(2024, 5, 14), dia: 14, mes: 5, ano: 2024, funcao: "Tutora", foto: ''},
     {nome: "Eraldo Soares Silva Junior", data: new Date(2024, 5, 17), dia: 17, mes: 5, ano: 1983, funcao: "Professor", foto: 'img/anivImg/junho/eraldo.jpg'},
     {nome: "Joyce da Silva Ferreira", data: new Date(2024, 5, 28), dia: 28, mes: 5, ano: 1992, funcao: "Professora", foto: 'img/anivImg/junho/joyce.jpg'},
-    {nome: "Rutilea Lopes", data: new Date(2024, 5, 14), dia: 14, mes: 5, ano: 2024, funcao: "Tutora", foto: ''},
-    {nome: "Andrezza Santos", data: new Date(2024, 5, 14), dia: 14, mes: 5, ano: 2024, funcao: "Zeladora", foto: ''},
     
     // Julho
     {nome: "Ana Prado Bevilaqua", data: new Date(2024, 6, 4), dia: 4, mes: 6, ano: 1978, funcao: "Função", foto: 'img/anivImg/user.png'},
