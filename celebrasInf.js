@@ -14,6 +14,8 @@ function carregarCelebras() {
         {data: new Date(2024, 5, 27), responsavel: 'Pastoral', tema: 'Encerramento de ciclos | Animação RED: a vida é uma fera.'},
         {data: new Date(2024, 6, 25), responsavel: 'SOE e SOP', tema: 'Mérito Acadêmico | Premiação.'},
         {data: new Date(2024, 7, 1), responsavel: 'SOE e SOP', tema: 'Hábitos de Estudo | DIGA: Habilidade social anti-bullying.'},
+
+        
     ]
     
     celebras.forEach((e)=>{
