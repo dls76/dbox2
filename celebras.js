@@ -31,6 +31,12 @@ function carregarCelebras() {
         {data: new Date(2024, 7, 15), responsavel: 'SOE e SOP', tema: 'Olimpíadas | Curiosidades, cultura, entretenimento, quadro de medalhas (Pastor fora).'},
         {data: new Date(2024, 7, 22), responsavel: 'Direção e SOP', tema: 'Olimpíadas do CAC | Não haverá Cultura Geral.'},
         {data: new Date(2024, 7, 29), responsavel: 'Pastoral e SOE', tema: 'Quebrando Silêncio | Trazer psicólogo(a); entrega de revistas para os alunos.'},
+
+        //Setembro
+        {data: new Date(2024, 8, 5), responsavel: 'Prof. Conselheiro(a)', tema: 'Sugestão: turmas 131/91/71/93: tema da disciplina do prof. com participação dos alunos.'},
+        {data: new Date(2024, 8, 12), responsavel: 'Prof. Conselheiro(a)', tema: 'Sugestão: turmas 121/92/72/83: tema da disciplina do prof. com participação dos alunos.'},
+        {data: new Date(2024, 8, 19), responsavel: 'Pastoral e SOE', tema: 'Dia mundial dos desbravadores | Aventura: mostrando os valores e atrativos do clube - liderança Route Adventure.'},
+        {data: new Date(2024, 8, 26), responsavel: 'Pastoral e SOE', tema: 'Setembro Amarelo | Psicólogo.'},
     ]
     
     celebras.forEach((e)=>{

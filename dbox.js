@@ -22,17 +22,20 @@ function cultos() {
     }
     if (datahoje.getDay() == 4) {
 
+        if (datahoje.getDate() == 1) {
+            document.querySelector('#cultos').innerHTML = '7h Carol' + ' | ' + '10h Renata' + ' | ' + '13h Pr. Vinícius' 
+        }
         if (datahoje.getDate() == 8) {
-            document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h15 Malu' + ' | ' + '13h Márcio' 
+            document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h Malu' + ' | ' + '13h Márcio' 
         }
         if ( datahoje.getDate() == 15) {
-            document.querySelector('#cultos').innerHTML = '7h Andressa' + ' | ' + '10h15 Jairo' + ' | ' + '13h Drica' 
+            document.querySelector('#cultos').innerHTML = '7h Andressa' + ' | ' + '10h Jairo' + ' | ' + '13h Drica' 
         }
         if ( datahoje.getDate() == 22) {
-           document.querySelector('#cultos').innerHTML = '7h Jhéssica' + ' | ' + '10h15 Valéria' + ' | ' + '13h Eliane' 
+           document.querySelector('#cultos').innerHTML = '7h Jhéssica' + ' | ' + '10h Valéria' + ' | ' + '13h Eliane' 
         }
         if ( datahoje.getDate() == 27) {
-            document.querySelector('#cultos').innerHTML = '7h Pr. Vinícius' + ' | ' + '10h15 Ingo' + ' | ' + '13h Ana B.'  
+            document.querySelector('#cultos').innerHTML = '7h Pr. Vinícius' + ' | ' + '10h Ingo' + ' | ' + '13h Ana B.'  
         }
     }
     if (datahoje.getDay() == 5) {
