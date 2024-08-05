@@ -154,6 +154,7 @@ let reuniaoadm = [
     {data: new Date(2024, 5, 10), link: 'https://docs.google.com/document/d/1FLS1MoVRcYZ1uZshPi0TDnmBzE0JThaMhcgqlPmuEaE/edit'},
     {data: new Date(2024, 5, 17), link: 'https://docs.google.com/document/d/1b85h-wEY53S7f1V-A6yy1FY2yFUzczW9NF-8dx3mMCw/edit'},
     {data: new Date(2024, 5, 24), link: 'https://docs.google.com/document/d/11lAYtsBrkPbB2MaeBx5aF9Sr0KA44uy2ufONP31kPps/edit'},
+    {data: new Date(2024, 7, 8), link: 'https://docs.google.com/document/d/1mZIlLV_RcyJ-WzSJKOW2mUuw0THU2kBh-tKG9uNfcTM/edit?usp=sharing'},
 ]
 window.addEventListener('load', () => proximaReuniaoAdm(reuniaoadm)); 
 // Corrigido para garantir que proximaReuniaoAdm seja passada como uma função
@@ -176,10 +177,10 @@ function proximaReuniaoAdm(array) {
         let link = document.querySelector('#ralink')
         let linkrapidora = document.querySelector('#linkrapidora')
 
-        document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} | 14:30`; 
+        document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} | 16:00`; 
         link.setAttribute("href", futureDates[0].link)
         linkrapidora.setAttribute("href", futureDates[0].link)
     } else {
-        document.querySelector('#reuniaoadm').innerHTML = 'Aguardando atualização...'
+        document.querySelector('#reuniaoadm').innerHTML = 'Data e horário a definir'
     }
 }
