@@ -31,7 +31,7 @@
     letter-spacing: .5px;
 }
 
-#acreditacao, #diadasmaes, #olimpiadas, #diadospais, #acreditacao2 {
+#acreditacao, #diadasmaes, #olimpiadas, #acreditacao2 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -47,20 +47,18 @@
     text-align: center;
 }
 
+#diadospais {
+    background-image: url(../img/promo/diadospais.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 12px;
+}
+
 .divhome#divhomebanners a div#divmanutencao {
     top: 50%;
 }
 
-#diadospais {
-    background-image: url(../img/promo/diadospais.png);
-    color: #fff;
-    text-shadow: 0 0 5px black;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    opacity: .8;
-}
-#diadospais:hover{
-    opacity: 1;
-}
 #olimpiadas {
     background-image: url(../img/olympics2.jpg);
     color: rgb(43, 43, 43);
