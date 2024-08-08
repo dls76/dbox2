@@ -24,25 +24,25 @@ function carregarCelebras() {
 
         //Setembro
         {data: new Date(2024, 8, 5), responsavel: 'Pastoral', tema: 'Semana de Oração | Convidado especial: Pr Samuel Marcon.'},
-        {data: new Date(2024, 8, 12), responsavel: 'SOE e SOP', tema: 'Quebrando o Silêncio/Setembro Amarelo | Convidada especial: Psicóloga Stephany.'},
+        {data: new Date(2024, 8, 10), responsavel: 'SOE e SOP', tema: 'Quebrando o Silêncio/Setembro Amarelo | Convidada especial: Psicóloga Stephany.'},
         {data: new Date(2024, 8, 19), responsavel: 'SOE e SOP', tema: 'Alimentação saudável | Entrega dos presentes dos aniversariantes - Turmas do 3ºEF.'},
-        {data: new Date(2024, 8, 26), responsavel: 'SOE e SOP', tema: 'Semana de Oração | Convidado especial: Pr Samuel Marcon.'},
+        {data: new Date(2024, 8, 24), responsavel: 'SOE e SOP', tema: 'Atividades "Quebrando Silêncio": Apresentação dos alunos.'},
 
         //Outubro
-        {data: new Date(2024, 9, 3), responsavel: 'SOE e SOP', tema: 'Dia mundial do sorriso | Convidado especial: Dentista Matheus Tosta (entrevistado pelo Pastor).'},
-        {data: new Date(2024, 9, 10), responsavel: 'SOE e SOP', tema: 'Semana da Criança | Atividades especiais.'},
+        {data: new Date(2024, 9, 1), responsavel: 'SOE/SOP', tema: 'Dia mundial do sorriso | Convidado especial: Dentista Matheus Tosta (entrevistado pelo Pastor).'},
+        {data: new Date(2024, 9, 10), responsavel: 'SOE/SOP', tema: 'Semana da Criança | Atividades especiais.'},
         {data: new Date(2024, 9, 17), responsavel: 'Pastoral', tema: 'Dia do Pastor | Entrevista de alunos com o Pr Vinicius.'},
         {data: new Date(2024, 9, 24), responsavel: 'Pastoral', tema: 'Semana Criacionista | Carreta Hussein: exposição de animais da Savana Africana.'},
-        {data: new Date(2024, 9, 31), responsavel: 'SOE e SOP', tema: 'Motivação | Comemoração dos aniversariantes.'},
+        {data: new Date(2024, 9, 31), responsavel: 'SOE e SOP', tema: 'Comemoração dos Aniversarsiantes | Motivacional.'},
         
         //Novembro
         {data: new Date(2024, 10, 7), responsavel: 'Pastoral', tema: 'Cordêro Show | Conhecendo seu Diretor: entrevista com o Diretor.'},
-        {data: new Date(2024, 10, 14), responsavel: 'SOE e SOP', tema: 'Reunião Participativa de Pais | não haverá Cultura Geral.'},
+        {data: new Date(2024, 10, 14), responsavel: 'SOE/SOP', tema: 'Reunião Participativa de Pais | não haverá Cultura Geral.'},
         {data: new Date(2024, 10, 21), responsavel: 'Pastoral e SOE', tema: 'Fechamentos e Mérito Acadêmico | Red PIXAR.'},
-        {data: new Date(2024, 10, 28), responsavel: 'SOE e SOP', tema: 'Thanksgiving e Dia do Monitor | Ação de graças e homenagem aos Monitores.'},
+        {data: new Date(2024, 10, 28), responsavel: 'Pastoral', tema: 'Thanksgiving e Dia do Monitor | Ação de graças e homenagem aos Monitores.'},
 
         //Dezembro
-        {data: new Date(2024, 11, 5), responsavel: 'Pastoral e SOE', tema: 'Fechamentos e Mérito Acadêmico | Red PIXAR.'},
+        {data: new Date(2024, 11, 5), responsavel: 'Pastoral/SOE', tema: 'Fechamentos e Mérito Acadêmico | Red PIXAR.'},
 
     ]
     
