@@ -79,7 +79,7 @@ function carregarCelebras() {
         if (mes < 10) { mes = '0' + mes} else {mes}
         
 
-        dataCelebra.innerHTML = `${dia}|${mes} - `
+        dataCelebra.innerHTML = `${dia}/${mes} - `
         temaCelebra.innerHTML = `${e.tema} `
         respCelebra.innerHTML =  `(${e.responsavel})`
 
