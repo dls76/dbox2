@@ -155,7 +155,7 @@ let reuniaoadm = [
     {data: new Date(2024, 5, 17), link: 'https://docs.google.com/document/d/1b85h-wEY53S7f1V-A6yy1FY2yFUzczW9NF-8dx3mMCw/edit'},
     {data: new Date(2024, 5, 24), link: 'https://docs.google.com/document/d/11lAYtsBrkPbB2MaeBx5aF9Sr0KA44uy2ufONP31kPps/edit'},
     {data: new Date(2024, 7, 8), link: 'https://docs.google.com/document/d/1mZIlLV_RcyJ-WzSJKOW2mUuw0THU2kBh-tKG9uNfcTM/edit?usp=sharing'},
-    {data: new Date(2024, 19, 7), link: 'https://docs.google.com/document/d/1vi2-oLJOnA0Ko0VpoinHeLUd8aIf55LT8szn2-aryhA/edit'},
+    {data: new Date(2024, 7, 19), link: 'https://docs.google.com/document/d/1vi2-oLJOnA0Ko0VpoinHeLUd8aIf55LT8szn2-aryhA/edit'},
 ]
 window.addEventListener('load', () => proximaReuniaoAdm(reuniaoadm)); 
 // Corrigido para garantir que proximaReuniaoAdm seja passada como uma função
