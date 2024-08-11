@@ -84,53 +84,47 @@ const pessoas = [
     {nome: "Mônica Cristina Martins de Novais", data: new Date(2024, 6, 31), dia: 31, mes: 6, ano: 1979, funcao: "Função", foto: 'img/anivImg/user.png'},
     
     // Agosto
-    {nome: "Vanessa Moura de Freitas", data: new Date(2024, 7, 2), dia: 2, mes: 7, ano: 1985, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Caroline Cristina de Brito", data: new Date(2024, 7, 4), dia: 4, mes: 7, ano: 1988, funcao: "Função", foto: 'img/anivImg/user.png'},
-    // {nome: "Jessica Aparecida Dionisio", data: new Date(2024, 7, 12), dia: 12, mes: 7, ano: 1996, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Leonardo Ormianin Torres", data: new Date(2024, 7, 12), dia: 12, mes: 7, ano: 1999, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Allan Almeida Lima", data: new Date(2024, 7, 26), dia: 26, mes: 7, ano: 1982, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Laís Daniele dos Santos", data: new Date(2024, 7, 28), dia: 28, mes: 7, ano: 2001, funcao: "Função", foto: 'img/anivImg/user.png'},
+    {nome: "Vanessa Moura de Freitas", data: new Date(2024, 7, 2), dia: 2, mes: 7, ano: 1985, funcao: "Zeladora", foto: 'img/anivImg/agosto/vanessa.jpg'},
+    {nome: "Caroline Cristina de Brito", data: new Date(2024, 7, 4), dia: 4, mes: 7, ano: 1988, funcao: "Coordenadora", foto: 'img/anivImg/agosto/caroline.jpg'},
+    {nome: "Leonardo Ormianin Torres", data: new Date(2024, 7, 12), dia: 12, mes: 7, ano: 1999, funcao: "Professor", foto: 'img/anivImg/agosto/leonardo.jpg'},
+    {nome: "Allan Almeida Lima", data: new Date(2024, 7, 26), dia: 26, mes: 7, ano: 1982, funcao: "Professor", foto: 'img/anivImg/agosto/allan.jpg'},
+    {nome: "Laís Daniele dos Santos", data: new Date(2024, 7, 28), dia: 28, mes: 7, ano: 2001, funcao: "Auxiliar", foto: 'img/anivImg/agosto/lais.jpg'},
     
     // Setembro
-    {nome: "Renata Brasil Lima", data: new Date(2024, 8, 1), dia: 1, mes: 8, ano: 1993, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Ingo Iwankiw", data: new Date(2024, 8, 2), dia: 2, mes: 8, ano: 1980, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Felipe Guilherme Lima Bueno da Silva", data: new Date(2024, 8, 11), dia: 11, mes: 8, ano: 1988, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Margarete do Nascimento Monteiro", data: new Date(2024, 8, 12), dia: 12, mes: 8, ano: 1971, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Rafaela Lourenco de Mello", data: new Date(2024, 8, 25), dia: 25, mes: 8, ano: 1990, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Daniel Faria Filho", data: new Date(2024, 8, 26), dia: 26, mes: 8, ano: 1963, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Vinicius Fernando Serain", data: new Date(2024, 8, 27), dia: 27, mes: 8, ano: 1990, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Joniel Mendes de Araujo", data: new Date(2024, 8, 30), dia: 30, mes: 8, ano: 1989, funcao: "Função", foto: 'img/anivImg/user.png'},
+    {nome: "Renata Brasil Lima", data: new Date(2024, 8, 1), dia: 1, mes: 8, ano: 1993, funcao: "Orientadora", foto: 'img/anivImg/setembro/renata.jpg'},
+    {nome: "Ingo Iwankiw", data: new Date(2024, 8, 2), dia: 2, mes: 8, ano: 1980, funcao: "Monitor", foto: 'img/anivImg/setembro/ingo.jpg'},
+    {nome: "Felipe Guilherme Lima Bueno da Silva", data: new Date(2024, 8, 11), dia: 11, mes: 8, ano: 1988, funcao: "Professor", foto: 'img/anivImg/setembro/felipeguilherme.jpg'},
+    {nome: "Margarete do Nascimento Monteiro", data: new Date(2024, 8, 12), dia: 12, mes: 8, ano: 1971, funcao: "SOPI", foto: 'img/anivImg/setembro/margarete.jpg'},
+    {nome: "Daniel Faria Filho", data: new Date(2024, 8, 26), dia: 26, mes: 8, ano: 1963, funcao: "Função", foto: 'img/anivImg/setembro/daniel.jpg'},
+    {nome: "Vinicius Fernando Serain", data: new Date(2024, 8, 27), dia: 27, mes: 8, ano: 1990, funcao: "Monitor", foto: 'img/anivImg/setembro/prvinicius.jpg'},
+    {nome: "Joniel Mendes de Araujo", data: new Date(2024, 8, 30), dia: 30, mes: 8, ano: 1989, funcao: "Professor", foto: 'img/anivImg/setembro/joniel.jpg'},
     
     // Outubro
-    {nome: "Daisy Karin Silva Ferreira", data: new Date(2024, 9, 6), dia: 6, mes: 9, ano: 1993, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Larissa Cardoso de Franca Goncalves", data: new Date(2024, 9, 6), dia: 6, mes: 9, ano: 1987, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Gisele Cordeiro da Silva", data: new Date(2024, 9, 9), dia: 9, mes: 9, ano: 1984, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Jaqueline Marcia Hoffmeister Senko", data: new Date(2024, 9, 9), dia: 9, mes: 9, ano: 1980, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Joice Mari da Silva Pereira", data: new Date(2024, 9, 10), dia: 10, mes: 9, ano: 1992, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Christian Felipe Preciliano Santiago", data: new Date(2024, 9, 12), dia: 12, mes: 9, ano: 2004, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Douglas Frohlich Reded", data: new Date(2024, 9, 19), dia: 19, mes: 9, ano: 1992, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Silmara de Lima Grochka", data: new Date(2024, 9, 19), dia: 19, mes: 9, ano: 1993, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Carmem Aparecida Abolis da Silva", data: new Date(2024, 9, 25), dia: 25, mes: 9, ano: 1982, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Rosineide de Souza Westphal", data: new Date(2024, 9, 25), dia: 25, mes: 9, ano: 1982, funcao: "Função", foto: 'img/anivImg/user.png'},
+    {nome: "Daisy Karin Silva Ferreira", data: new Date(2024, 9, 6), dia: 6, mes: 9, ano: 1993, funcao: "Call Center", foto: 'img/anivImg/outubro/daisy.jpeg'},
+    {nome: "Larissa Cardoso de Franca Goncalves", data: new Date(2024, 9, 6), dia: 6, mes: 9, ano: 1987, funcao: "Professora", foto: 'img/anivImg/outubro/larissa.jpeg'},
+    {nome: "Jaqueline Marcia Hoffmeister Senko", data: new Date(2024, 9, 9), dia: 9, mes: 9, ano: 1980, funcao: "Coordenadora", foto: 'img/anivImg/outubro/jaquelinesenko.png'},
+    {nome: "Joice Mari da Silva Pereira", data: new Date(2024, 9, 10), dia: 10, mes: 9, ano: 1992, funcao: "Professora", foto: 'img/anivImg/outubro/joice.jpg'},
+    {nome: "Christian Felipe Preciliano Santiago", data: new Date(2024, 9, 12), dia: 12, mes: 9, ano: 2004, funcao: "Monitor", foto: 'img/anivImg/outubro/christian.jpg'},
+    {nome: "Douglas Frohlich Reded", data: new Date(2024, 9, 19), dia: 19, mes: 9, ano: 1992, funcao: "TI", foto: 'img/anivImg/outubro/douglasfrohlich.jpeg'},
+    {nome: "Silmara de Lima Grochka", data: new Date(2024, 9, 19), dia: 19, mes: 9, ano: 1993, funcao: "Tutora", foto: 'img/anivImg/outubro/silmara.jpg'},
+    {nome: "Carmem Aparecida Abolis da Silva", data: new Date(2024, 9, 25), dia: 25, mes: 9, ano: 1982, funcao: "Professora", foto: 'img/anivImg/outubro/carmem.jpg'},
+    {nome: "Rosineide de Souza Westphal", data: new Date(2024, 9, 25), dia: 25, mes: 9, ano: 1982, funcao: "Monitora", foto: 'img/anivImg/outubro/rosineide.jpg'},
     
     // Novembro
-    {nome: "Suzanne Mendes dos Santos", data: new Date(2024, 10, 4), dia: 4, mes: 10, ano: 1989, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Bruna do Rocio Biscoto dos Santos", data: new Date(2024, 10, 15), dia: 15, mes: 10, ano: 1997, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Josiane Vieira Lopes Klimek", data: new Date(2024, 10, 18), dia: 18, mes: 10, ano: 1975, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Henry Fidelis Pereira", data: new Date(2024, 10, 19), dia: 19, mes: 10, ano: 1996, funcao: "Função", foto: 'img/anivImg/user.png'},
+    {nome: "Bruna do Rocio Biscoto dos Santos", data: new Date(2024, 10, 15), dia: 15, mes: 10, ano: 1997, funcao: "Auxiliar", foto: 'img/anivImg/user.png'},
+    {nome: "Josiane Vieira Lopes Klimek", data: new Date(2024, 10, 18), dia: 18, mes: 10, ano: 1975, funcao: "Tesoureira", foto: 'img/anivImg/user.png'},
+    {nome: "Henry Fidelis Pereira", data: new Date(2024, 10, 19), dia: 19, mes: 10, ano: 1996, funcao: "Professor", foto: 'img/anivImg/user.png'},
     
     // Dezembro
-    {nome: "Leonardo Vinicius Santos e Santos", data: new Date(2024, 11, 11), dia: 11, mes: 11, ano: 2002, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Valdene Neres de Sena Reis", data: new Date(2024, 11, 12), dia: 12, mes: 11, ano: 1967, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Carin Grime de Melo", data: new Date(2024, 11, 13), dia: 13, mes: 11, ano: 1988, funcao: "Função", foto: 'img/anivImg/user.png'},
-    {nome: "Glauton Vinicius de Andrade", data: new Date(2024, 11, 27), dia: 27, mes: 11, ano: 1968, funcao: "Função", foto: 'img/anivImg/user.png'},
+    {nome: "Carin Grime de Melo", data: new Date(2024, 11, 13), dia: 13, mes: 11, ano: 1988, funcao: "Secretária", foto: 'img/anivImg/user.png'},
+    {nome: "Glauton Vinicius de Andrade", data: new Date(2024, 11, 27), dia: 27, mes: 11, ano: 1968, funcao: "Professor", foto: 'img/anivImg/user.png'},
 ]
 
 
 // Mostra os aniversariantes do dia na home
 function show() {
 
-    var data = new Date(2024, 2, 20)
+    var data = new Date()
     var dia = data.getDate()   
     var mesAno = data.getMonth()
 
@@ -185,7 +179,7 @@ function show() {
 }
 
 function mostrarAnimacaoAniversariante() {
-    let data = new Date()
+    let data = new Date(2024, 9, 6)
     let diaSemana = data.getDay()
     let dia = data.getDate() 
     let mes = data.getMonth()
