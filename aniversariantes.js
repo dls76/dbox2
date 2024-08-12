@@ -179,7 +179,7 @@ function show() {
 }
 
 function mostrarAnimacaoAniversariante() {
-    let data = new Date(2024, 9, 6)
+    let data = new Date()
     let diaSemana = data.getDay()
     let dia = data.getDate() 
     let mes = data.getMonth()
