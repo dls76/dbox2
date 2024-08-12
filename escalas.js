@@ -97,7 +97,8 @@ let plantaosexta = [
     {data: new Date(2024, 5, 28), person: "Nailson, Ingo e Rose"}, 
     {data: new Date(2024, 5, 28), person: "Ingo, Lucas e Isa"}, 
     {data: new Date(2024, 7, 2), person: "Alexandro e 2 monitores"}, 
-    {data: new Date(2024, 7, 9), person: "Douglas e 2 monitores"}, 
+    {data: new Date(2024, 7, 9), person: "Alexandro e 2 monitores"}, 
+    {data: new Date(2024, 7, 16), person: "Douglas e 2 monitores"}, 
      
 
     // {data: new Date(2024, 6, 5), person: "TI2"}, 
