@@ -253,4 +253,4 @@ bt.addEventListener('click', ()=>{
     document.querySelector('#conteinerAniv').style.display = "none"
     document.body.style.position = '';
     document.body.style.top = '';
-})
+}) 
