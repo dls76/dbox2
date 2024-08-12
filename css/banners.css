@@ -55,6 +55,15 @@
     border-radius: 12px;
 }
 
+#lancamentomatriculas {
+    background-image: url(../img/promo/bannermatriculas.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 12px;
+}
+
+
 .divhome#divhomebanners a div#divmanutencao {
     top: 50%;
 }
