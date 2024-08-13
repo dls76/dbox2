@@ -55,23 +55,23 @@ function plantaoDiario() {
     }    
     // segunda
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Josi'
+        document.querySelector('#plantaodiario').innerHTML = 'Carol'
     }
     // terça
     if (datahoje.getDay() == 2) {
-        document.querySelector('#plantaodiario').innerHTML = 'Alexandro'
+        document.querySelector('#plantaodiario').innerHTML = 'Alexandro | Jaque'
     }
     // quarta
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Nailson'
+        document.querySelector('#plantaodiario').innerHTML = 'Renata | Malu'
     }
     // quinta
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Douglas'
+        document.querySelector('#plantaodiario').innerHTML = 'Valéria | Andressa'
     }
     // sexta
     if (datahoje.getDay() == 5) { 
-        document.querySelector('#plantaodiario').innerHTML = 'ver plantão de sexta'
+        document.querySelector('#plantaodiario').innerHTML = 'Douglas | Camila'
     }
     // sábado
     if (datahoje.getDay() == 6) { 
@@ -91,7 +91,7 @@ function compensacao() {
     }
     // terça
     if (datahoje.getDay() == 2) {
-        document.querySelector('#nomescomp').innerHTML = 'Nailson (T)'
+        document.querySelector('#nomescomp').innerHTML = 'Douglas (T)'
     }
     // quarta
     if (datahoje.getDay() == 3) { 
