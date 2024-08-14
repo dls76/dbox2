@@ -77,35 +77,43 @@
 //===== Plantão sexta
 
 let plantaosexta = [
-    {data: new Date(2024, 1, 8), person: "Alexandro"}, 
-    {data: new Date(2024, 2, 1), person: "Nailson"}, 
-    {data: new Date(2024, 2, 8), person: "Douglas"}, 
-    {data: new Date(2024, 2, 15), person: "Pr. Vinícius"}, 
-    {data: new Date(2024, 2, 22), person: "Josi"}, 
-    {data: new Date(2024, 3, 5), person: "Malu"}, 
-    {data: new Date(2024, 3, 12), person: "Sarita"}, 
-    {data: new Date(2024, 3, 19), person: "Carol"}, 
-    {data: new Date(2024, 3, 26), person: "Valéria"}, 
-    {data: new Date(2024, 4, 3), person: "Andressa e Lúcia/Ingo"}, 
-    {data: new Date(2024, 4, 10), person: "Camila, Eliane e Daniel"}, 
-    {data: new Date(2024, 4, 17), person: "Douglas, Jairo e Rose"},
-    {data: new Date(2024, 4, 24), person: "Carin, Lucas e Isa"}, 
-    {data: new Date(2024, 4, 31), person: "Recesso"}, 
-    {data: new Date(2024, 5, 7), person: "Valéria, Carmelis e Christian"}, 
-    {data: new Date(2024, 5, 14), person: "Jaqueline, Kadu e Lúcia"}, 
-    {data: new Date(2024, 5, 21), person: "Pr. Vinícius, Daniel e Eliane"}, 
-    {data: new Date(2024, 5, 28), person: "Nailson, Ingo e Rose"}, 
-    {data: new Date(2024, 5, 28), person: "Ingo, Lucas e Isa"}, 
-    {data: new Date(2024, 7, 2), person: "Alexandro e 2 monitores"}, 
-    {data: new Date(2024, 7, 9), person: "Alexandro e 2 monitores"}, 
-    {data: new Date(2024, 7, 16), person: "Douglas e 2 monitores"}, 
-     
-
-    // {data: new Date(2024, 6, 5), person: "TI2"}, 
-    // {data: new Date(2024, 6, 12), person: ""}, 
-    // {data: new Date(2024, 6, 19), person: ""}, 
-    // {data: new Date(2024, 6, 26), person: ""}, 
-    // {data: new Date(2024, 7, 2), person: ""}, 
+    // {data: new Date(2024, 1, 8), person: "Alexandro"}, 
+    // {data: new Date(2024, 2, 1), person: "Nailson"}, 
+    // {data: new Date(2024, 2, 8), person: "Douglas"}, 
+    // {data: new Date(2024, 2, 15), person: "Pr. Vinícius"}, 
+    // {data: new Date(2024, 2, 22), person: "Josi"}, 
+    // {data: new Date(2024, 3, 5), person: "Malu"}, 
+    // {data: new Date(2024, 3, 12), person: "Sarita"}, 
+    // {data: new Date(2024, 3, 19), person: "Carol"}, 
+    // {data: new Date(2024, 3, 26), person: "Valéria"}, 
+    // {data: new Date(2024, 4, 3), person: "Andressa e Lúcia/Ingo"}, 
+    // {data: new Date(2024, 4, 10), person: "Camila, Eliane e Daniel"}, 
+    // {data: new Date(2024, 4, 17), person: "Douglas, Jairo e Rose"},
+    // {data: new Date(2024, 4, 24), person: "Carin, Lucas e Isa"}, 
+    // {data: new Date(2024, 4, 31), person: "Recesso"}, 
+    // {data: new Date(2024, 5, 7), person: "Valéria, Carmelis e Christian"}, 
+    // {data: new Date(2024, 5, 14), person: "Jaqueline, Kadu e Lúcia"}, 
+    // {data: new Date(2024, 5, 21), person: "Pr. Vinícius, Daniel e Eliane"}, 
+    // {data: new Date(2024, 5, 28), person: "Nailson, Ingo e Rose"}, 
+    {data: new Date(2024, 6, 26), person: "Ingo"}, 
+    {data: new Date(2024, 7, 2), person: "Alexandro"}, 
+    {data: new Date(2024, 7, 9), person: "Alexandro"}, 
+    {data: new Date(2024, 7, 16), person: "Douglas"}, 
+    {data: new Date(2024, 7, 23), person: "Pr. Vinícius"},
+    {data: new Date(2024, 7, 30), person: "Carol"},
+    {data: new Date(2024, 8, 6), person: "Renata"},
+    {data: new Date(2024, 8, 13), person: "Andressa"},
+    {data: new Date(2024, 8, 20), person: "Jaqueline"},
+    {data: new Date(2024, 8, 27), person: "Malú"},
+    {data: new Date(2024, 9, 4), person: "Valéria"},
+    {data: new Date(2024, 9, 11), person: "Camila"},
+    {data: new Date(2024, 9, 18), person: "Carin"},
+    {data: new Date(2024, 9, 25), person: "Alexandro"},
+    {data: new Date(2024, 10, 1), person: "Douglas"},
+    {data: new Date(2024, 10, 8), person: "ingo"},
+    {data: new Date(2024, 10, 22), person: "Pr. Vinícius"},
+    {data: new Date(2024, 10, 29), person: "Nailson"},
+    {data: new Date(2024, 11, 6), person: "Nailson"},
 ]
 
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
@@ -134,7 +142,17 @@ function proximoPlantaoDeSexta(array) {
    document.querySelector('#plantaosexta').innerHTML = 'Em definição...'
     }
 }
+function mostrarPlantaoDeSexta() {
 
+    let main = document.querySelector('#main')
+    
+    for (let i = 0; i <= plantaosexta.length; i++) {
+        let item = document.createElement('div')
+        item.classList.add('itemplantao')
+        item.innerHTML = plantaosexta[i].data + ' - ' + plantaosexta[i].person 
+        main.appendChild(item)
+    }
+}
 
 const diaDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
 

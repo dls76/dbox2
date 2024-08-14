@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantão de Sexta</title>
+    <style>
+        .itemplantao {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <script src="../escalas.js"></script> <!-- Certifique-se de que o caminho está correto -->
+
+    <h1>Plantão de Sexta</h1>
+    <main id="main"></main>
+
+    <script>
+        // Verifique se plantaosexta está definido
+        if (typeof plantaosexta !== 'undefined') {
+            mostrarPlantaoDeSexta();
+        } else {
+            console.error('O array plantaosexta não foi encontrado.');
+        }
+
+        function mostrarPlantaoDeSexta() {
+            let main = document.querySelector('#main');
+            main.innerHTML = ''; // Limpar o conteúdo anterior, se houver.
+
+            const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
+
+            for (let i = 0; i < plantaosexta.length; i++) {
+                let item = document.createElement('div');
+                item.classList.add('itemplantao');
+                item.innerHTML = plantaosexta[i].data.getDate() + '/' + meses[plantaosexta[i].data.getMonth()] + ' - ' + plantaosexta[i].person;
+                main.appendChild(item);
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
+
