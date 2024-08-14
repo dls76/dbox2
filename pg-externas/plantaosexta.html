@@ -5,10 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plantão de Sexta</title>
     <style>
+        
+        * {
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            position: fixed; 
+            display: block; 
+            width: 100%; 
+            padding: 1rem; 
+            background-color: #253B73; 
+            color: white;
+        }
+
+        main {
+            padding-top: 100px;
+            /* background-color: whitesmoke; */
+        }
+
         .itemplantao {
             margin-bottom: 10px;
             padding: 10px;
             border: 1px solid #ccc;
+            width: 50%;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        .itemplantao:hover:not(.destaque) {
+            background-color: whitesmoke;
+        }
+
+        .destaque {
+            background-color: #79BAFF;
+            /* color: white !important; */
+            font-weight: 700;
+        }
+
+        .passado {
+            color: lightgray;
+        }
+
+        footer {
+            background-color: rgb(121, 186, 255);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            color: #253B73;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -17,7 +68,9 @@
 
     <h1>Plantão de Sexta</h1>
     <main id="main"></main>
-
+    <footer>
+        DBOX
+    </footer>
     <script>
         // Verifique se plantaosexta está definido
         if (typeof plantaosexta !== 'undefined') {
@@ -30,18 +83,59 @@
             let main = document.querySelector('#main');
             main.innerHTML = ''; // Limpar o conteúdo anterior, se houver.
 
-            const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
+            const meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+
+            const hoje = new Date();
+            let proximoPlantao = null;
+            let proximoPlantaoElement = null;
+
+            for (let i = 0; i < plantaosexta.length; i++) {
+                const plantaoData = plantaosexta[i].data;
+
+                if (plantaoData >= hoje && (!proximoPlantao || plantaoData < proximoPlantao.data)) {
+                    proximoPlantao = plantaosexta[i];
+                }
+            }
 
             for (let i = 0; i < plantaosexta.length; i++) {
                 let item = document.createElement('div');
+                let data = document.createElement('span');
+                let nome = document.createElement('span');
+
+                data.classList.add('data');
+                nome.classList.add('nome');
                 item.classList.add('itemplantao');
-                item.innerHTML = plantaosexta[i].data.getDate() + '/' + meses[plantaosexta[i].data.getMonth()] + ' - ' + plantaosexta[i].person;
+
+                data.innerHTML = plantaosexta[i].data.getDate() + ' ' + meses[plantaosexta[i].data.getMonth()] + ' | ';
+                nome.innerHTML = plantaosexta[i].person;
+
+                item.appendChild(data);
+                item.appendChild(nome);
+
+                // Destaque o próximo plantão
+                if (plantaosexta[i] === proximoPlantao) {
+                    item.classList.add('destaque');
+                    proximoPlantaoElement = item; // Salva o elemento do próximo plantão
+                } else if (plantaosexta[i].data < proximoPlantao.data) {
+                    // Estilize os plantões passados
+                    item.classList.add('passado');
+                }
+
                 main.appendChild(item);
             }
-        }
 
-        
+            // Rola para o próximo plantão
+            if (proximoPlantaoElement) {
+                const headerOffset = document.querySelector('h1').offsetHeight;
+                const elementPosition = proximoPlantaoElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = (elementPosition - headerOffset ) - 30;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'auto'
+                });
+            }
+        }
     </script>
 </body>
 </html>
-
