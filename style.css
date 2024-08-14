@@ -45,14 +45,15 @@ body {
     max-width: 1500px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto auto;
+    grid-template-rows: 1fr auto;
     margin: auto;
     box-sizing: border-box;
     /* border: 2px solid red; */
+    height: fit-content;
 }
 main#conteinerhome {
     display: grid;
-    grid-template-columns: 1fr 1.3fr .9fr .8fr;
+    grid-template-columns: 1.1fr 1.1fr .9fr .9fr;
     gap: 1rem;
 }
 #header, #headerAdm {
@@ -115,14 +116,12 @@ main#conteinerhome {
     border-radius: 12px;
     position: relative;
     height: fit-content;
+    height: 480px;
+    /* border: 1px solid red; */
 }
 
 /* Links rápidos */
-#divhomelinks {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-}
+
 .linksuteis {
     display: grid;
     grid-template-columns: 1fr;
@@ -156,7 +155,7 @@ main#conteinerhome {
 .linksuteisbox::-webkit-scrollbar-thumb:hover {
     background: rgb(214, 214, 214);
 }
-.linksuteis .img:hover {
+.linksrapidos .img:hover {
     background-color: #ededed;
 }
 .img {
@@ -171,7 +170,7 @@ main#conteinerhome {
     transition: all .3s;
 }
 .img img {
-    width: 40px;
+    width: 36px;
     object-fit: cover;
 }
 .legenda-links {

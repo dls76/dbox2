@@ -1,17 +1,32 @@
-.sec-banners {
-    /* height: 400px; */
-    background-color: #fff;
+.sec-banners div {
+    background-color: #EEEEEE;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 6rem 0;
 }
 
-.sec-banners a {
+.sec-banners h1 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 4rem 0 1rem 0;
+}
+
+.linkeventos  {
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.sec-banners div a {
     height: 120px;
     margin: 2rem;
-    padding: 1rem;
+    /* padding: 1rem; */
     width: 250px;
     border-radius: 10px;
     display: flex;
