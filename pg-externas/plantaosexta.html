@@ -134,7 +134,7 @@
 
             let dia = plantaosexta[i].data.getDate()
             if (dia < 10) {dia = '0'+ dia}
-            data.innerHTML = plantaosexta[i].data.getDate() + ' ' + meses[plantaosexta[i].data.getMonth()] + ' | ';
+            data.innerHTML = dia + ' ' + meses[plantaosexta[i].data.getMonth()] + ' | ';
             nome.innerHTML = plantaosexta[i].person + ', ' + plantaosexta[i].monitoria
 
             item.appendChild(data);
