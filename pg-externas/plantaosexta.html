@@ -61,6 +61,12 @@
             color: #253B73;
             font-weight: 600;
         }
+
+        footer a {
+            color: #253B73;
+            text-decoration: none;
+        }
+
     </style>
 </head>
 <body>
@@ -68,74 +74,77 @@
 
     <h1>Plantão de Sexta</h1>
     <main id="main"></main>
-    <footer>
-        DBOX
-    </footer>
+    <footer><a href="https://dls76.github.io/dbox2/">DBox</a></footer>
+
     <script>
-        // Verifique se plantaosexta está definido
-        if (typeof plantaosexta !== 'undefined') {
-            mostrarPlantaoDeSexta();
-        } else {
-            console.error('O array plantaosexta não foi encontrado.');
-        }
+    // Verifique se plantaosexta está definido
+    if (typeof plantaosexta !== 'undefined') {
+        mostrarPlantaoDeSexta();
+    } else {
+        console.error('O array plantaosexta não foi encontrado.');
+    }
 
-        function mostrarPlantaoDeSexta() {
-            let main = document.querySelector('#main');
-            main.innerHTML = ''; // Limpar o conteúdo anterior, se houver.
+    function mostrarPlantaoDeSexta() {
 
-            const meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+        let main = document.querySelector('#main');
+        main.innerHTML = ''; // Limpar o conteúdo anterior, se houver.
 
-            const hoje = new Date();
-            let proximoPlantao = null;
-            let proximoPlantaoElement = null;
+        const meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
 
-            for (let i = 0; i < plantaosexta.length; i++) {
-                const plantaoData = plantaosexta[i].data;
+        const hoje = new Date();
+        let proximoPlantao = null;
+        let proximoPlantaoElement = null;
 
-                if (plantaoData >= hoje && (!proximoPlantao || plantaoData < proximoPlantao.data)) {
-                    proximoPlantao = plantaosexta[i];
-                }
-            }
+        for (let i = 0; i < plantaosexta.length; i++) {
+            const plantaoData = plantaosexta[i].data;
 
-            for (let i = 0; i < plantaosexta.length; i++) {
-                let item = document.createElement('div');
-                let data = document.createElement('span');
-                let nome = document.createElement('span');
-
-                data.classList.add('data');
-                nome.classList.add('nome');
-                item.classList.add('itemplantao');
-
-                data.innerHTML = plantaosexta[i].data.getDate() + ' ' + meses[plantaosexta[i].data.getMonth()] + ' | ';
-                nome.innerHTML = plantaosexta[i].person;
-
-                item.appendChild(data);
-                item.appendChild(nome);
-
-                // Destaque o próximo plantão
-                if (plantaosexta[i] === proximoPlantao) {
-                    item.classList.add('destaque');
-                    proximoPlantaoElement = item; // Salva o elemento do próximo plantão
-                } else if (plantaosexta[i].data < proximoPlantao.data) {
-                    // Estilize os plantões passados
-                    item.classList.add('passado');
-                }
-
-                main.appendChild(item);
-            }
-
-            // Rola para o próximo plantão
-            if (proximoPlantaoElement) {
-                const headerOffset = document.querySelector('h1').offsetHeight;
-                const elementPosition = proximoPlantaoElement.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = (elementPosition - headerOffset ) - 30;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'auto'
-                });
+            if (plantaoData >= hoje && (!proximoPlantao || plantaoData < proximoPlantao.data)) {
+                proximoPlantao = plantaosexta[i];
             }
         }
+
+        // Cria os elementos HTML e exibe na página 
+        for (let i = 0; i < plantaosexta.length; i++) {
+        
+            let item = document.createElement('div');
+            let data = document.createElement('span');
+            let nome = document.createElement('span');
+
+            data.classList.add('data');
+            nome.classList.add('nome');
+            item.classList.add('itemplantao');
+
+            data.innerHTML = plantaosexta[i].data.getDate() + ' ' + meses[plantaosexta[i].data.getMonth()] + ' | ';
+            nome.innerHTML = plantaosexta[i].person + ', ' + plantaosexta[i].monitoria
+
+            item.appendChild(data);
+            item.appendChild(nome);
+
+            // Destaque o próximo plantão
+            if (plantaosexta[i] === proximoPlantao) {
+                item.classList.add('destaque');
+                proximoPlantaoElement = item; // Salva o elemento do próximo plantão
+            } else if (plantaosexta[i].data < proximoPlantao.data) {
+                // Estilize os plantões passados
+                item.classList.add('passado');
+            }
+
+            main.appendChild(item);
+        }
+
+        // Rola para o próximo plantão
+        if (proximoPlantaoElement) {
+            const headerOffset = document.querySelector('h1').offsetHeight;
+            const elementPosition = proximoPlantaoElement.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = (elementPosition - headerOffset ) - 30;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'auto'
+            });
+        }
+    }
+
     </script>
 </body>
 </html>
