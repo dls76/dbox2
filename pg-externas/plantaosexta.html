@@ -28,6 +28,11 @@
             /* background-color: whitesmoke; */
         }
 
+        .data {
+            color: dodgerblue;
+            font-weight: 600;
+        }
+
         .itemplantao {
             margin-bottom: 10px;
             padding: 10px;
@@ -42,15 +47,22 @@
         }
 
         .destaque {
-            background-color: #79BAFF;
-            /* color: white !important; */
+            background-color: #c2e0ff;
+            color: black;
             font-weight: 700;
+        }
+
+        .destaque .data {
+            color: black;
         }
 
         .passado {
             color: lightgray;
         }
 
+        .passado .data {
+            color: lightgray;
+        }
         footer {
             background-color: rgb(121, 186, 255);
             color: white;
@@ -114,6 +126,8 @@
             nome.classList.add('nome');
             item.classList.add('itemplantao');
 
+            let dia = plantaosexta[i].data.getDate()
+            if (dia < 10) {dia = '0'+ dia}
             data.innerHTML = plantaosexta[i].data.getDate() + ' ' + meses[plantaosexta[i].data.getMonth()] + ' | ';
             nome.innerHTML = plantaosexta[i].person + ', ' + plantaosexta[i].monitoria
 
@@ -136,7 +150,7 @@
         if (proximoPlantaoElement) {
             const headerOffset = document.querySelector('h1').offsetHeight;
             const elementPosition = proximoPlantaoElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = (elementPosition - headerOffset ) - 30;
+            const offsetPosition = (elementPosition - headerOffset ) - 50;
 
             window.scrollTo({
                 top: offsetPosition,
