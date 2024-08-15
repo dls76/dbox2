@@ -176,7 +176,13 @@ let reuniaoadm = [
     {data: new Date(2024, 5, 17), link: 'https://docs.google.com/document/d/1b85h-wEY53S7f1V-A6yy1FY2yFUzczW9NF-8dx3mMCw/edit'},
     {data: new Date(2024, 5, 24), link: 'https://docs.google.com/document/d/11lAYtsBrkPbB2MaeBx5aF9Sr0KA44uy2ufONP31kPps/edit'},
     {data: new Date(2024, 7, 8), link: 'https://docs.google.com/document/d/1mZIlLV_RcyJ-WzSJKOW2mUuw0THU2kBh-tKG9uNfcTM/edit?usp=sharing'},
-    {data: new Date(2024, 7, 19), link: 'https://docs.google.com/document/d/1vi2-oLJOnA0Ko0VpoinHeLUd8aIf55LT8szn2-aryhA/edit'},
+    {data: new Date(2024, 7, 19), link: 'https://docs.google.com/document/d/1vi2-oLJOnA0Ko0VpoinHeLUd8aIf55LT8szn2-aryhA/edit', hora: '15:30'},
+    {data: new Date(2024, 7, 26), link: 'https://docs.google.com/document/d/1PJ5WCP-m0p0XCJi7r-XbaXs3KaBnpOUz5YlYr-yYl9M/edit?usp=sharing', hora: '14:00'},
+    {data: new Date(2024, 8, 2), link: 'https://docs.google.com/document/d/101rrvsGBze6ZwlcTTUzNR9Kava4ayN0X83rzQPHnZJo/edit?usp=sharing', hora: '14:00'},
+    {data: new Date(2024, 8, 9), link: 'https://docs.google.com/document/d/1IuDlLRka2kBM21Ra2h263ERRMyqvJz681nI_w5MnOck/edit?usp=sharing', hora: '14:00'},
+    {data: new Date(2024, 8, 16), link: 'https://docs.google.com/document/d/13iCohiX1efAtCym0RSQEAvrDi84Aq4OSiFyFLMMwciE/edit?usp=drive_link', hora: '14:00'},
+    {data: new Date(2024, 8, 23), link: 'https://docs.google.com/document/d/1djB2GlKVCPU28vMJDYQ-y9yGh1zMCONEMC5mztamMQo/edit?usp=drive_link', hora: '14:00'},
+    {data: new Date(2024, 8, 30), link: 'https://docs.google.com/document/d/1mBxqgpwbEttLQW0TEO3z0LnZdNN4yHGELQJEoR_NWnY/edit?usp=sharing', hora: '14:00'},
 ]
 window.addEventListener('load', () => proximaReuniaoAdm(reuniaoadm)); 
 // Corrigido para garantir que proximaReuniaoAdm seja passada como uma função
@@ -199,7 +205,7 @@ function proximaReuniaoAdm(array) {
         let link = document.querySelector('#ralink')
         let linkrapidora = document.querySelector('#linkrapidora')
 
-        document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} | 14:00`; 
+        document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} - ${futureDates[0].hora}`; 
         link.setAttribute("href", futureDates[0].link)
         linkrapidora.setAttribute("href", futureDates[0].link)
     } else {
