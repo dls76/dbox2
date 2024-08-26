@@ -55,6 +55,14 @@
     border-radius: 12px;
 }
 
+#betocarrero {
+    background-image: url(../img/promo/betocarrero2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 12px;
+}
+
 #lancamentomatriculas {
     background-image: url(../img/campanha2025/facebookcapa.png);
     background-size:cover;

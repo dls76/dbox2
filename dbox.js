@@ -55,23 +55,23 @@ function plantaoDiario() {
     }    
     // segunda
     if (datahoje.getDay() == 1) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Carol'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Carol | Nailson*'
     }
     // terça
     if (datahoje.getDay() == 2) {
-        document.querySelector('#plantaodiario').innerHTML = 'Alexandro | Jaque'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Alexandro | Jaque'
     }
     // quarta
     if (datahoje.getDay() == 3) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Renata | Malu'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Renata | Valéria'
     }
     // quinta
     if (datahoje.getDay() == 4) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Valéria | Andressa'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Malú | Douglas'
     }
     // sexta
     if (datahoje.getDay() == 5) { 
-        document.querySelector('#plantaodiario').innerHTML = 'Douglas | Camila'
+        document.querySelector('#plantaodiario').innerHTML = 'Hoje: Andressa | Camila'
     }
     // sábado
     if (datahoje.getDay() == 6) { 
