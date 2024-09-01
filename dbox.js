@@ -3,7 +3,7 @@ let datahoje = new Date()
 window.addEventListener('load', cultos)
 window.addEventListener('load', compensacao)
 window.addEventListener('load', plantaoDiario)
-// window.addEventListener('load', plantaoentrevistas)
+window.addEventListener('load', mostrarEscalaDeOracao)
 
 // Cultos
 function cultos() {
@@ -45,6 +45,32 @@ function cultos() {
         document.querySelector('#cultos').innerHTML = 'Feliz Sábado!'
     }
 }
+
+function mostrarEscalaDeOracao() {
+
+    if (datahoje.getDay() == 0) {
+        document.querySelector('#contentoracao').innerHTML = "Hoje é domingo!"
+    }
+    if (datahoje.getDay() == 1) {
+         document.querySelector('#contentoracao').innerHTML = 'Fazenda e Afonso Pena'
+    }
+    if (datahoje.getDay() == 2) {
+        document.querySelector('#contentoracao').innerHTML = 'Alto Boqueirão e Bom Retiro'
+    }
+    if (datahoje.getDay() == 3) {
+        document.querySelector('#contentoracao').innerHTML = 'Pinhais e Paranaguá'
+    }
+    if (datahoje.getDay() == 4) {
+        document.querySelector('#contentoracao').innerHTML = 'São José e União'
+    }
+    if (datahoje.getDay() == 5) {
+        document.querySelector('#contentoracao').innerHTML = 'Centenário e Departamento'
+    }
+    if (datahoje.getDay() == 6) {
+        document.querySelector('#contentoracao').innerHTML = 'Feliz Sábado!'
+    }
+}
+
 
 //Plantão Diário
 function plantaoDiario() {
