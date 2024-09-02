@@ -124,6 +124,31 @@ const eventos = [
     
     //Setembro
     {data: new Date(2024, 8, 2), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 8, 3), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 8, 4), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 8, 5), culto1: 'Agaurdando escala', culto2: 'Agaurdando escala', culto3: 'Agaurdando escala'},
+    {data: new Date(2024, 8, 6), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+    {data: new Date(2024, 8, 9), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 8, 10), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 8, 11), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 8, 12), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 8, 13), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+    {data: new Date(2024, 8, 16), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 8, 17), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 8, 18), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 8, 19), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 8, 20), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+    {data: new Date(2024, 8, 23), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 8, 24), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 8, 25), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 8, 26), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 8, 27), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+    {data: new Date(2024, 8, 30), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 9, 1), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 9, 2), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 9, 3), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 9, 4), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+    
 
 
 
