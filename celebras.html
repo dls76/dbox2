@@ -92,6 +92,16 @@
             text-decoration: none;
             background-color: #000;
         }
+        .main .celebra.proximo-evento .dataCelebra::before {
+            content: "";
+            position: absolute;
+            left: -15px; /* Ajuste a posição conforme necessário */
+            top: 50%;
+            transform: translateY(-50%);
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid gray;
+        }
     </style>
 </head>
 <body>
@@ -117,8 +127,41 @@
 
     </main>
 
+    <script>
+    
+    window.addEventListener('DOMContentLoaded', () => {
+    function carregarCelebras() {
+        // ... (seu código)
 
+        // Encontrar o próximo evento
+        const hoje = new Date();
+        let proximoEvento = null;
+
+        // Declarar elementos fora do if para ter acesso em todo o escopo da função
+        const elementos = document.querySelectorAll('.celebra');
+
+        celebras.forEach(evento => {
+            if (evento.data >= hoje && (!proximoEvento || evento.data < proximoEvento.data)) {
+                proximoEvento = evento;
+            }
+        });
+
+        if (proximoEvento) {
+            elementos.forEach(elemento => {
+                // Verificar se o elemento existe antes de acessar suas propriedades
+                const dataCelebraElement = elemento.querySelector('.dataCelebra');
+                if (dataCelebraElement) {
+                    if (dataCelebraElement.textContent.includes(`${proximoEvento.data.getDate()}/${proximoEvento.data.getMonth() + 1}`)) {
+                        elemento.classList.add('proximo-evento');
+                    }
+                } else {
+                    console.error('Elemento .dataCelebra não encontrado');
+                }
+            });
+        }
+    }
+});
+
+</script>
 </body>
 </html>
-
-
