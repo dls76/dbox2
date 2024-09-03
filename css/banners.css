@@ -12,9 +12,7 @@
 .divhome#divhomebanners a.linkbanners:hover {
     opacity: .7;
 }
-.divhome#divhomebanners a img:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+
 .divhome#divhomebanners a img {
     max-width: 100%;
     border-radius: 12px;
@@ -31,55 +29,6 @@
     letter-spacing: .5px;
 }
 
-#acreditacao, #diadasmaes, #olimpiadas, #acreditacao2 {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    border-radius: 12px;
-}
-
-#manutencao {
-    background-image: url(../img/manutencao.jpg);
-    background-size: cover;
-    border-radius: 12px;
-    color: #fff;
-    text-shadow: 0 0 6px black;
-    text-align: center;
-}
-
-#diadospais {
-    background-image: url(../img/promo/diadospais.jpeg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border-radius: 12px;
-}
-
-#betocarrero {
-    background-image: url(../img/promo/betocarrero2.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border-radius: 12px;
-}
-
-#lancamentomatriculas {
-    background-image: url(../img/campanha2025/facebookcapa.png);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border-radius: 12px;
-}
-
-
-.divhome#divhomebanners a div#divmanutencao {
-    top: 50%;
-}
-
-#olimpiadas {
-    background-image: url(../img/olympics2.jpg);
-    color: rgb(43, 43, 43);
-}
 #semanaoracao {
     background-image: url(../img/semanaoracaobanner.jpg);
     background-size: cover;
@@ -87,13 +36,14 @@
     border-radius: 12px;
     text-shadow: 0px 0px 6px white;
 }
-#confra {
-    background-image: url(../img/lonatto.jpg);
-    background-size: cover;
+
+#fairplay {
+    background-color: white;
     color: rgb(49, 49, 49);
     border-radius: 12px;
     text-shadow: 0px 0px 6px white;
 }
+
 #formaturaInfantil {
     background-image: url(../img/bg_formaturaInfantil.jpg);
     color: white;
