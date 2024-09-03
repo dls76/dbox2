@@ -116,3 +116,6 @@ header {
     }
 
 }
+
+#btBolsistas {background-color: #0FFF50; color: #103f1c; font-weight: 600;border: 1px solid lightgreen;}
+    #btBolsistas:hover {background-color: rgb(127, 255, 127); color: rgb(34, 51, 34); font-weight: 600;}
