@@ -1,6 +1,4 @@
 export function plantaoDeEntrevistas() {
-
-    console.log('A função foi chamada.')
     
     const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
     const diaSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
@@ -11,26 +9,44 @@ export function plantaoDeEntrevistas() {
         {data: new Date(2024, 8, 4), nomeM: 'Malú', nomeT: 'Renata'},
         {data: new Date(2024, 8, 5), nomeM: 'Valéria', nomeT: 'Douglas'},
         {data: new Date(2024, 8, 6), nomeM: 'Andressa', nomeT: 'Camila'},
-        {data: new Date(2024, 8, 9), nomeM: 'Carol', nomeT: 'Valéria'},
+
+        {data: new Date(2024, 8, 9), nomeM: 'Carol', nomeT: 'Jaque'},
         {data: new Date(2024, 8, 10), nomeM: 'Alexandro', nomeT: 'Jaque'},
         {data: new Date(2024, 8, 11), nomeM: 'Renata', nomeT: 'Malú'},
         {data: new Date(2024, 8, 12), nomeM: 'Valéria', nomeT: 'Douglas'},
         {data: new Date(2024, 8, 13), nomeM: 'Andressa', nomeT: 'Camila'},
-        {data: new Date(2024, 8, 16), nomeM: 'Carol', nomeT: 'Valéria'},
+        
+        {data: new Date(2024, 8, 16), nomeM: 'Carol', nomeT: 'Andressa'},
         {data: new Date(2024, 8, 17), nomeM: 'Alexandro', nomeT: 'Jaque'},
         {data: new Date(2024, 8, 18), nomeM: 'Renata', nomeT: 'Malú'},
         {data: new Date(2024, 8, 19), nomeM: 'Valéria', nomeT: 'Douglas'},
         {data: new Date(2024, 8, 20), nomeM: 'Andressa', nomeT: 'Camila'},
-        {data: new Date(2024, 8, 23), nomeM: 'Carol', nomeT: 'Valéria'},
+        
+        {data: new Date(2024, 8, 23), nomeM: 'Carol', nomeT: 'Malú'},
         {data: new Date(2024, 8, 24), nomeM: 'Alexandro', nomeT: 'Jaque'},
         {data: new Date(2024, 8, 25), nomeM: 'Renata', nomeT: 'Malú'},
         {data: new Date(2024, 8, 26), nomeM: 'Valéria', nomeT: 'Douglas'},
         {data: new Date(2024, 8, 27), nomeM: 'Andressa', nomeT: 'Camila'},
-        {data: new Date(2024, 8, 30), nomeM: 'Carol', nomeT: 'Valéria'},
+        
+        {data: new Date(2024, 8, 30), nomeM: 'Carol', nomeT: 'Carol'},
         {data: new Date(2024, 9, 1), nomeM: 'Alexandro', nomeT: 'Jaque'},
         {data: new Date(2024, 9, 2), nomeM: 'Renata', nomeT: 'Malú'},
         {data: new Date(2024, 9, 3), nomeM: 'Valéria', nomeT: 'Douglas'},
         {data: new Date(2024, 9, 4), nomeM: 'Andressa', nomeT: 'Camila'},
+
+        {data: new Date(2024, 9, 7), nomeM: 'Carol', nomeT: 'Camila'},
+        {data: new Date(2024, 9, 8), nomeM: 'Alexandro', nomeT: 'Jaque'},
+        {data: new Date(2024, 9, 9), nomeM: 'Renata', nomeT: 'Malú'},
+        {data: new Date(2024, 9, 10), nomeM: 'Valéria', nomeT: 'Douglas'},
+        {data: new Date(2024, 9, 11), nomeM: 'Andressa', nomeT: 'Camila'},
+
+        {data: new Date(2024, 9, 14), nomeM: 'Carol', nomeT: 'Renata'},
+        {data: new Date(2024, 9, 15), nomeM: 'Alexandro', nomeT: 'Jaque'},
+        {data: new Date(2024, 9, 16), nomeM: 'Renata', nomeT: 'Malú'},
+        {data: new Date(2024, 9, 17), nomeM: 'Valéria', nomeT: 'Douglas'},
+        {data: new Date(2024, 9, 18), nomeM: 'Andressa', nomeT: 'Camila'},
+
+        {data: new Date(2024, 9, 19), nomeM: 'Carol', nomeT: 'Valéria'},
     ];
 
     // Obter a data atual
