@@ -10,8 +10,14 @@
     <style>
         * {
             font-family: 'Poppins', sans-serif, Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        h1 {text-align: center;}
+        h1 {
+            text-align: center;
+            padding: 10px 0;
+            background-color: white;
+        }
         main {
             width: 60%;
             margin: auto;
@@ -31,24 +37,22 @@
             color: white;
             border: 1px solid dodgerblue;
         }
- @media (max-width: 800px) {
-  main {
-    width: 90%;
-  }
-}
+        footer {
+            background-color: lightgray;
+            height: 60vh;
+        }
+        @media (max-width: 800px) {
+            main {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Escala de Entrevistas</h1>
-    <main id="conteinerEntrevistas">
-    </main>
+    <main id="conteinerEntrevistas"></main>
     <div id="plantaodiario"></div>
-    
+    <footer></footer>
     <script type="module" src="plantaoEntrevistas.js"></script>
-    <script type="module">
-        import { plantaoDeEntrevistas } from './plantaoEntrevistas.js';
-        document.addEventListener('DOMContentLoaded', plantaoDeEntrevistas);
-      </script>
-
 </body>
 </html>

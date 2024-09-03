@@ -41,11 +41,9 @@ export function plantaoDeEntrevistas() {
         {data: new Date(2024, 9, 19), nomeM: 'Carol', nomeT: 'Valéria'},
     ];
 
-    // Obter a data atual
     const hoje = new Date();
-    hoje.setHours(0, 0, 0, 0); // Zerando a hora para comparar apenas data
+    hoje.setHours(0, 0, 0, 0);
 
-    // Encontrar a entrevista do dia ou a próxima em dia útil
     let indexEntrevistaAtual = -1;
     for (let i = 0; i < entrevistas.length; i++) {
         const dataEntrevista = entrevistas[i].data;
@@ -59,14 +57,12 @@ export function plantaoDeEntrevistas() {
         }
     }
 
-    // Atualizar o conteúdo de #conteinerEntrevistas se ele existir
     const conteinerEntrevistas = document.querySelector('#conteinerEntrevistas');
     if (conteinerEntrevistas) {
-        let mesAtual = -1; // Inicializa uma variável para rastrear o mês atual
+        let mesAtual = -1;
 
         for (let i = 0; i < entrevistas.length; i++) {
             const mesEntrevista = entrevistas[i].data.getMonth();
-
             if (mesEntrevista !== mesAtual) {
                 mesAtual = mesEntrevista;
 
@@ -86,19 +82,17 @@ export function plantaoDeEntrevistas() {
             }
 
             entrevistasDoDia.innerHTML = `${dia} - ${diaSemanaTexto} - ${entrevistas[i].nomeM} | ${entrevistas[i].nomeT}`;
-
             conteinerEntrevistas.appendChild(entrevistasDoDia);
         }
     }
 
-    // Atualizar o conteúdo de #plantaodiario se ele existir
     const plantaoDiario = document.querySelector('#plantaodiario');
     if (plantaoDiario) {
         const diaAtualSemana = hoje.getDay();
 
-        if (diaAtualSemana === 6) { // Sábado
+        if (diaAtualSemana === 6) {
             plantaoDiario.innerHTML = 'Feliz Sábado';
-        } else if (diaAtualSemana === 0) { // Domingo
+        } else if (diaAtualSemana === 0) {
             plantaoDiario.innerHTML = 'Hoje é domingo';
         } else if (indexEntrevistaAtual !== -1) {
             const entrevistaAtual = entrevistas[indexEntrevistaAtual];
@@ -107,5 +101,4 @@ export function plantaoDeEntrevistas() {
     }
 }
 
-// Esteja certo de que o código seja executado após o DOM ser carregado
 document.addEventListener('DOMContentLoaded', plantaoDeEntrevistas);
