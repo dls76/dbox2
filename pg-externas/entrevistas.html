@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrevistas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Trad:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif, Arial, Helvetica, sans-serif;
+        }
+        main {
+            width: 50%;
+        }
+        .entrevistasDoDia {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            border: 1px solid lightgray;
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        .destaque {
+            background-color: dodgerblue;
+            color: white;
+            border: 1px solid dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escala de Entrevistas</h1>
+    <main id="conteinerEntrevistas">
+    </main>
+    <div id="plantaodiario"></div>
+    
+    <script type="module" src="plantaoEntrevistas.js"></script>
+    <script type="module">
+        import { plantaoDeEntrevistas } from './plantaoEntrevistas.js';
+        document.addEventListener('DOMContentLoaded', plantaoDeEntrevistas);
+      </script>
+
+</body>
+</html>

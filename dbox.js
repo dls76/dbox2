@@ -2,8 +2,9 @@ let datahoje = new Date()
 
 window.addEventListener('load', cultos)
 window.addEventListener('load', compensacao)
-window.addEventListener('load', plantaoDiario)
+// window.addEventListener('load', plantaoDiario)
 window.addEventListener('load', mostrarEscalaDeOracao)
+
 
 // Cultos
 function cultos() {
