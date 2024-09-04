@@ -7,6 +7,7 @@
 }
 body {
     background-color: #855efc;
+    background-color: #855efc;
     padding: 0 20px 20px 20px;
     height: 100vh;
 }
@@ -44,9 +45,9 @@ main {
     grid-template-columns: 1fr 3fr;
     gap: 20px;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1700px;
     margin: 0 auto;
-    height: 85vh;
+    height: 90vh;
 }
 .numerico {
     width: 100%;
@@ -76,10 +77,11 @@ main {
 .data {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     color: #855efc;
+    color: #000;
     font-weight: 600;
-    /* border-right: 1px solid whitesmoke; */
+    font-size: 18px;
 }
 .evento div {
     display: flex; 
@@ -89,4 +91,7 @@ main {
 .evento:hover {
     background-color: whitesmoke;
     cursor: pointer;
+}
+.titulo-evento {
+    font-size: 18px;
 }
