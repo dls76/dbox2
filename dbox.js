@@ -139,7 +139,7 @@ function compensacao() {
 }
 
 // Última escala
-window.addEventListener('load', arredondarBordasInferiores)
+// window.addEventListener('load', arredondarBordasInferiores)
 function arredondarBordasInferiores() {
     const divescalas = document.querySelectorAll('.escala')
     const escalas = Array.from(divescalas)

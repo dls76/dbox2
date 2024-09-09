@@ -1,0 +1,68 @@
+#divhomeproxaniversariantes {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: (0, 0, 0, 0.16) 0px 1px 4px;
+    height: 480px;
+}
+.tituloproximosanivers {
+    color: #253B73;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 0 1rem 0;
+}
+.proximosaniversariantes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 16px 0;
+}
+.proximosaniversariantes .fotoaniv {
+    width: 44px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.proximosaniversariantes .fotoaniv img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 2px solid #253B73;
+}
+.nome {
+    padding: 6px 14px 0 6px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Roboto Condensed';
+}
+.nome span {
+    color: gray;
+    font-weight: 400;
+    font-family: 'Roboto Condensed';
+    padding-left: 4px;
+}
+.data {
+    text-align: center;
+    background-color: #253B73;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto Condensed';
+    padding: 6px 10px;
+}   
+.mais {
+    font-family: 'Roboto Condensed';
+    font-weight: 600;
+    font-size: 18px;
+    color: #253B73;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0;
+    border: 2px solid #253B73;
+    padding: 4px 16px;
+    border-radius: 10px;
+}
+.maisBox {
+    text-align: right;
+}
