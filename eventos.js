@@ -3,7 +3,7 @@ const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'O
 
 let eventos = [
 
-    {dataInicial: new Date(2024, 8, 9), dataFinal: new Date(2024, 8, ), nome: "Convenção Jovem Maranata 2024 Brasília/DF , saída na terça (terça 28 e retorno domingo 02)", responsável: "Douglas", foto: 'img/dls.png'},
+    // {dataInicial: new Date(2024, 8, 9), dataFinal: new Date(2024, 8, ), nome: "Convenção Jovem Maranata 2024 Brasília/DF , saída na terça (terça 28 e retorno domingo 02)", responsável: "Douglas", foto: 'img/dls.png'},
     {dataInicial: new Date(2024, 8, 2), dataFinal: new Date(2024, 8, 2), nome: "Reunião Administrativa - Departamentais e Coordenadores – Remoto (tarde)", responsável: "Douglas", foto: 'img/dls.png'},
     {dataInicial: new Date(2024, 8, 2), dataFinal: new Date(2024, 8, 30), nome: "30 - Hipótese de Escrita EI 4, 5 anos e 1º ano EF – 3ª Testagem", responsável: "Douglas", foto: 'img/dls.png'},
     {dataInicial: new Date(2024, 8, 2), dataFinal: new Date(2024, 8, 2), nome: "Início do Ranking matrículas 2024", responsável: "Douglas", foto: 'img/dls.png'},

@@ -26,7 +26,15 @@ main {width: 60%;margin: auto;}
 
 .eventBorders:hover {
     background-color: #414141;
+    /* background-color: rgb(235, 235, 235); */
+    
 }
+
+/* Regra CSS para modo claro */
+.modo-claro-hover:hover {
+  background-color: rgb(235, 235, 235);
+}
+
 
 .eventBorders:hover .event, 
 .eventBorders:hover .date, 
