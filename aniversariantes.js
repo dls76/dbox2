@@ -120,64 +120,6 @@ const pessoas = [
     {nome: "Glauton Vinicius de Andrade", data: new Date(2024, 11, 27), dia: 27, mes: 11, ano: 1968, funcao: "Professor", foto: 'img/anivImg/user.png'},
 ]
 
-
-// Mostra os aniversariantes do dia na home
-// function show() {
-
-//     var data = new Date()
-//     var dia = data.getDate()   
-//     var mesAno = data.getMonth()
-
-//     for ( i=0; i < pessoas.length; i++ ) {
-
-//         const conteinerAniv = document.querySelector('#conteineraniversariantes')
-
-        
-//         if ( pessoas[i].dia == dia && pessoas[i].mes == mesAno ) {
-            
-//             document.body.style.position = 'fixed';
-//             document.body.style.top = `-${window.scrollY}px`;
-
-//             // document.querySelector('#bt-aniver').style.display = "none"
-
-//             var div = document.createElement('div')
-//             div.classList.add('aniversariante')
-//             document.querySelector('#aniver-img').appendChild(div)
-
-//             var img = new Image()
-//             img.src = pessoas[i].foto
-//             img.classList.add('foto')
-//             div.appendChild(img)
-            
-//             const nomeAniver = document.createElement("div")
-//             nomeAniver.innerHTML = pessoas[i].nome
-//             nomeAniver.classList.add('aniver-nome')
-//             div.appendChild(nomeAniver)
-            
-//             const funcaoAniver = document.createElement("div")
-//             funcaoAniver.innerHTML = pessoas[i].funcao
-//             funcaoAniver.classList.add('aniver-funcao')
-//             div.appendChild(funcaoAniver)
-
-//             var link = document.createElement('a');
-//             link.href = 'https://dls76.github.io/dbox2/aniversariantes-list.html';
-//             link.target = '_blank';
-//             link.innerText = 'Ver Mais'
-//             link.classList.add('abrirList')
-            
-//             div.appendChild(link)
-
-//         } else {    
-
-//             document.querySelector('#bt-aniver').innerText = "Ver Aniversariantes"
-//             document.querySelector('#bt-aniver').style.textAlign = "center !important;"
-
-        
-//         }
-
-//     } 
-// }
-
 function mostrarAnimacaoAniversariante() {
     let data = new Date()
     let diaSemana = data.getDay()
