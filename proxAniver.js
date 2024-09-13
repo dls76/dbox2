@@ -27,67 +27,91 @@ export const nomes = [
     {nome: "Carin Grime de Melo", data: new Date(2024, 11, 13), dia: 13, mes: 11, ano: 1988, funcao: "Secretária", foto: 'img/anivImg/user.png'},
     {nome: "Glauton Vinicius de Andrade", data: new Date(2024, 11, 27), dia: 27, mes: 11, ano: 1968, funcao: "Professor", foto: 'img/anivImg/user.png'},
 ]
+
+
 function adicionarProximosAniversariantes() {
+
     const container = document.getElementById('divhomeproxaniversariantes');
     const hoje = new Date();
-    hoje.setHours(0, 0, 0, 0); // Zera as horas
+    hoje.setHours(0, 0, 0, 0); // Zera as horas para comparar corretamente
 
+    // Filtra os próximos aniversariantes
     const proximos = nomes.filter(pessoa => {
-        const aniversario = new Date(pessoa.data);
-        aniversario.setHours(0, 0, 0, 0); // Zera as horas para comparar apenas o dia
-        return aniversario >= hoje;
+        const aniversario = new Date(pessoa.data); // Pega a data de aniversário da pessoa
+        aniversario.setFullYear(hoje.getFullYear()); // Define o ano atual para comparação
+
+        return aniversario.getTime() >= hoje.getTime(); // Compara as datas
     }).slice(0, 3); // Pega os 3 primeiros aniversariantes
 
     // Limpa o container antes de adicionar os novos aniversariantes
     container.innerHTML = '';
 
-    proximos.forEach(aniversariante => {
-        const divAniv = document.createElement('div');
-        divAniv.classList.add('proximosaniversariantes');
+    // Adiciona o título
+    let titulo = document.createElement('div');
+    titulo.classList.add('tituloproximosanivers');
+    titulo.innerHTML = 'Próximos Aniversários';
+    container.appendChild(titulo);
 
-        const divFoto = document.createElement('div');
-        divFoto.classList.add('fotoaniv');
-        const img = document.createElement('img');
-        img.src = aniversariante.foto;
-        img.alt = aniversariante.nome;
-        divFoto.appendChild(img);
+    // Verifica se há aniversariantes e, se sim, adiciona-os ao container
+    if (proximos.length > 0) {
+        
+        proximos.forEach(aniversariante => {
+            // Código que usa a variável aniversariante
+            const divAniv = document.createElement('div');
+            divAniv.classList.add('proximosaniversariantes');
+        
+            const divFoto = document.createElement('div');
+            divFoto.classList.add('fotoaniv');
+            const img = document.createElement('img');
+            img.src = aniversariante.foto;
+            img.alt = aniversariante.nome;
+            divFoto.appendChild(img);
+        
+            // Extrai os nomes conforme a regra que você implementou
+            const nomes = aniversariante.nome.split(' ');
+            let nomeExibido;
+            
+            if (nomes[1] && nomes[1].length <= 3 && nomes[2]) {
+                nomeExibido = `${nomes[0]} ${nomes[1]} ${nomes[2]}`;
+            } else {
+                nomeExibido = `${nomes[0]} ${nomes[1]}`;
+            }
+        
+            const divNome = document.createElement('div');
+            divNome.classList.add('nome');
+            divNome.innerHTML = `${nomeExibido} <span>(${aniversariante.funcao})</span>`;
+        
+            const divData = document.createElement('div');
+            divData.classList.add('data');
+            
+            // Verifica se o aniversário é hoje
+            const aniversarioHoje = (aniversariante.data.getDate() === hoje.getDate() && aniversariante.data.getMonth() === hoje.getMonth());
+        
+            if (aniversarioHoje) {
+                divData.textContent = 'Hoje!';
+                divData.style.color = 'white';
+                
+            } else {
+                divData.textContent = `${aniversariante.data.getDate()}/${aniversariante.data.getMonth() + 1}`;
+            }
+        
+            divAniv.appendChild(divFoto);
+            divAniv.appendChild(divNome);
+            divAniv.appendChild(divData);
+            
+            container.appendChild(divAniv);
+        });
+        
 
-        // Extrai apenas os dois ou três primeiros nomes, conforme a regra
-        const nomes = aniversariante.nome.split(' ');
-        let nomeExibido;
 
-        // Se o segundo nome tiver 3 letras ou menos, inclui o terceiro nome
-        if (nomes[1] && nomes[1].length <= 3 && nomes[2]) {
-            nomeExibido = `${nomes[0]} ${nomes[1]} ${nomes[2]}`;
-        } else {
-            nomeExibido = `${nomes[0]} ${nomes[1]}`;
-        }
 
-        const divNome = document.createElement('div');
-        divNome.classList.add('nome');
-        divNome.innerHTML = `${nomeExibido} <span>(${aniversariante.funcao})</span>`;
-
-        const divData = document.createElement('div');
-        divData.classList.add('data');
-
-        const aniversarioHoje = (aniversariante.data.getDate() === hoje.getDate() &&
-                                aniversariante.data.getMonth() === hoje.getMonth());
-
-        if (aniversarioHoje) {
-            divData.textContent = 'Hoje!'; // Mostra "HOJE" para aniversariantes do dia
-            // divData.style.backgroundColor = 'blue';
-            divData.style.color = 'white';
-            mostrarModal(aniversariante); // Mostra o modal para aniversariante do dia
-        } else {
-            divData.textContent = `${aniversariante.data.getDate()}/${aniversariante.data.getMonth() + 1}`;
-        }
-
-        divAniv.appendChild(divFoto);
-        divAniv.appendChild(divNome);
-        divAniv.appendChild(divData);
-
-        container.appendChild(divAniv);
-    });
+    } else {
+        // Caso não haja aniversariantes, exibe uma mensagem
+        let semAniversariantes = document.createElement('div');
+        semAniversariantes.classList.add('semAniversariantes');
+        semAniversariantes.innerHTML = 'Nenhum aniversariante nos próximos dias.';
+        container.appendChild(semAniversariantes);
+    }
 
     // Adicionar o botão "Mais" ao final da lista de aniversariantes
     const maisBox = document.createElement('div');
@@ -101,45 +125,6 @@ function adicionarProximosAniversariantes() {
 
     maisBox.appendChild(maisLink);
     container.appendChild(maisBox); // Adiciona o botão ao container principal
-}
-
-// Função para mostrar o modal com o aniversariante do dia
-function mostrarModal(aniversariante) {
-    const modal = document.getElementById('aniversarianteModal');
-    const foto = document.getElementById('fotoAniversariante');
-    const nome = document.getElementById('nomeAniversariante');
-    const funcao = document.getElementById('funcaoAniversariante');
-
-    // Define os valores no modal
-    foto.src = aniversariante.foto;
-
-    // Extrai o nome da pessoa conforme a regra (dois ou três nomes)
-    const nomes = aniversariante.nome.split(' ');
-    let nomeExibido;
-    if (nomes[1] && nomes[1].length <= 3 && nomes[2]) {
-        nomeExibido = `${nomes[0]} ${nomes[1]} ${nomes[2]}`;
-    } else {
-        nomeExibido = `${nomes[0]} ${nomes[1]}`;
-    }
-
-    nome.textContent = nomeExibido;
-    funcao.textContent = aniversariante.funcao;
-
-    // Exibe o modal
-    modal.style.display = 'block';
-
-    // Fecha o modal ao clicar no "x"
-    const span = document.getElementsByClassName('close')[0];
-    span.onclick = function() {
-        modal.style.display = 'none';
-    };
-
-    // Fecha o modal ao clicar fora dele
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    };
 }
 
 // Chama a função correta ao carregar a página

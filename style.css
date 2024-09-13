@@ -120,8 +120,17 @@ main#conteinerhome {
     /* border: 1px solid red; */
 }
 
-/* Links rápidos */
+.divhomelinksrapidos {
+    background-color: #fff;
+    height: 480px;
+    overflow-y: hidden;
+}
 
+/* Links rápidos */
+.divhomelinks {
+    display: flex;
+    flex-direction: column;
+}
 .linksuteis {
     display: grid;
     grid-template-columns: 1fr;
@@ -169,14 +178,24 @@ main#conteinerhome {
     margin: 4px;
     transition: all .3s;
 }
-.img img {
-    width: 36px;
-    object-fit: cover;
+.img i.fa-comments,
+.img i.fa-calendar-days,
+.img i.fa-square-envelope,
+.img i.fa-desktop,
+.img i.fa-chart-simple,
+.img i.fa-stethoscope,
+.img i.fa-bolt,
+.img i.fa-list, 
+.img i.fa-chalkboard-user {
+    width: 42px;
+    color: #253B73;
+    text-align: center;
 }
+
 .legenda-links {
     font-size: .9rem;
     font-family: 'Roboto Condensed', sans-serif;
-    color: gray;
+    color: rgb(169, 169, 169);
     padding-top: .5rem;
 }
 #bi {
