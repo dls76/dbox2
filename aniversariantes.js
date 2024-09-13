@@ -94,10 +94,10 @@ const pessoas = [
     // {nome: "Renata Brasil Lima", data: new Date(2024, 8, 1), dia: 1, mes: 8, ano: 1993, funcao: "Orientadora", foto: 'img/anivImg/setembro/renata.jpg'},
     {nome: "Ingo Iwankiw", data: new Date(2024, 8, 2), dia: 2, mes: 8, ano: 1980, funcao: "Monitor", foto: 'img/anivImg/setembro/ingo.jpg'},
     {nome: "Felipe Guilherme Lima Bueno da Silva", data: new Date(2024, 8, 11), dia: 11, mes: 8, ano: 1988, funcao: "Professor", foto: 'img/anivImg/setembro/felipeguilherme.jpg'},
-    {nome: "Margarete do Nascimento Monteiro", data: new Date(2024, 8, 12), dia: 12, mes: 8, ano: 1971, funcao: "SOPI", foto: 'img/anivImg/setembro/margarete.jpg'},
-    {nome: "Daniel Faria Filho", data: new Date(2024, 8, 26), dia: 26, mes: 8, ano: 1963, funcao: "Função", foto: 'img/anivImg/setembro/daniel.jpg'},
-    {nome: "Vinicius Fernando Serain", data: new Date(2024, 8, 27), dia: 27, mes: 8, ano: 1990, funcao: "Monitor", foto: 'img/anivImg/setembro/prvinicius.jpg'},
-    {nome: "Joniel Mendes de Araujo", data: new Date(2024, 8, 30), dia: 30, mes: 8, ano: 1989, funcao: "Professor", foto: 'img/anivImg/setembro/joniel.jpg'},
+    {nome: "Margarete do Nascimento Monteiro", data: new Date(2024, 8, 12), dia: 12, mes: 8, ano: 1971, funcao: "SOPI", foto: 'img/anivImg/setembro/marga.png'},
+    {nome: "Daniel Faria Filho", data: new Date(2024, 8, 26), dia: 26, mes: 8, ano: 1963, funcao: "Função", foto: 'img/anivImg/setembro/dani.png'},
+    {nome: "Vinicius Fernando Serain", data: new Date(2024, 8, 27), dia: 27, mes: 8, ano: 1990, funcao: "Monitor", foto: 'img/anivImg/setembro/vini.png'},
+    {nome: "Joniel Mendes de Araujo", data: new Date(2024, 8, 30), dia: 30, mes: 8, ano: 1989, funcao: "Professor", foto: 'img/anivImg/setembro/joniel.png'},
     
     // Outubro
     {nome: "Daisy Karin Silva Ferreira", data: new Date(2024, 9, 6), dia: 6, mes: 9, ano: 1993, funcao: "Call Center", foto: 'img/anivImg/outubro/daisy.jpeg'},

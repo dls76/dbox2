@@ -53,7 +53,7 @@ body {
 }
 main#conteinerhome {
     display: grid;
-    grid-template-columns: 1.1fr .9fr .9fr 1.1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
 }
 #header, #headerAdm {
