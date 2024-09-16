@@ -24,16 +24,16 @@ function carregarCelebras() {
 
         //Setembro
         {data: new Date(2024, 8, 5), responsavel: 'Pastoral', tema: 'Semana de Oração | Convidado especial: Pr Samuel Marcon.'},
-        {data: new Date(2024, 8, 10), responsavel: 'SOE e SOP', tema: 'Quebrando o Silêncio/Setembro Amarelo | Convidada especial: Psicóloga Stephany.'},
+        {data: new Date(2024, 8, 17), responsavel: 'SOE e SOP', tema: 'Quebrando o Silêncio | Convidada especial: Psicóloga Stephany.'},
         {data: new Date(2024, 8, 19), responsavel: 'SOE e SOP', tema: 'Alimentação saudável | Entrega dos presentes dos aniversariantes - Turmas do 3ºEF.'},
-        {data: new Date(2024, 8, 24), responsavel: 'SOE e SOP', tema: 'Atividades "Quebrando Silêncio": Apresentação dos alunos.'},
+        {data: new Date(2024, 8, 26), responsavel: 'SOE e SOP', tema: 'Semana de provas - não haverá Cultura Geral.'},
 
         //Outubro
         {data: new Date(2024, 9, 1), responsavel: 'SOE/SOP', tema: 'Dia mundial do sorriso | Convidado especial: Dentista Matheus Tosta (entrevistado pelo Pastor).'},
-        {data: new Date(2024, 9, 10), responsavel: 'SOE/SOP', tema: 'Semana da Criança | Atividades especiais.'},
+        {data: new Date(2024, 9, 10), responsavel: 'SOE/SOP', tema: 'Semana da Criança | alunos apresentam para os colegas.'},
         {data: new Date(2024, 9, 17), responsavel: 'Pastoral', tema: 'Dia do Pastor | Entrevista de alunos com o Pr Vinicius.'},
         {data: new Date(2024, 9, 24), responsavel: 'Pastoral', tema: 'Semana Criacionista | Carreta Hussein: exposição de animais da Savana Africana.'},
-        {data: new Date(2024, 9, 31), responsavel: 'SOE e SOP', tema: 'Comemoração dos Aniversarsiantes | Motivacional.'},
+        {data: new Date(2024, 9, 31), responsavel: 'SOE e SOP', tema: 'Comemoração dos Aniversariantes | Motivacional.'},
         
         //Novembro
         {data: new Date(2024, 10, 7), responsavel: 'Pastoral', tema: 'Cordêro Show | Conhecendo seu Diretor: entrevista com o Diretor.'},
