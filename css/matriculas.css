@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: whitesmoke;
 }
 
 #header, #headerAdm {
@@ -31,7 +31,7 @@ body {
 .main-matriculas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
     max-width: 1440px;
     margin: 3rem auto 0 auto;
     width: 90%;
@@ -42,34 +42,39 @@ body {
 }
 
 .sec-matriculas p {
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: .5rem 1rem;
-    border-radius: 30px;
+    border-radius: 4px;
     font-size: .8rem;
-    color: #BB2532;
-    color: #232b68;
-    background-color: #ffecee;
-    background-color: #cfd4fb;
-    font-weight: 600;
+    color: #3e499a;
+    background-color: #eef1ff;
+    font-weight: 800;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-bottom: 1px solid rgb(182, 182, 182);
+    border-left: 1px solid rgb(182, 182, 182);
 }
 
 .linksprincipais {
     height: fit-content;
+    min-height: 180px;
     margin: .5rem auto;
-    padding: 1rem;
+    padding: 20px;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     flex-wrap: wrap;
-    border-radius: 10px;
-    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
 }
 .linksprincipais a {
     font-size: 14px;
     padding: .5rem 1rem;
-    border-radius: 30px;
+    border-radius: 4px;
     margin: .3rem;
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     color: gray;
     transition: ease .3s;
 }
@@ -79,9 +84,9 @@ body {
 
 
 #novoatendimento {
-    background-color: #232b68;
-    color: #fff;
-    border: 2px solid #232b68;
+    font-weight: bold;
+    color: #3e499a;
+
 }
 
 #novoatendimento:hover {
@@ -92,7 +97,11 @@ body {
 .sistemas {
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 90%;
+    padding: 4rem 0;
 }
 
 .sistemas a {
@@ -104,7 +113,7 @@ body {
     font-size: .8rem;
     width: 6rem;
     height: 6rem;
-    border-radius: 50%;
+    border-radius: 4px;
     color: gray;
     transition: .4s;
 }
@@ -114,7 +123,7 @@ body {
 }
 
 .sistemas a img {
-    width: 3rem;
+    width: 2.6rem;
 }
 
 .sistemas a div {
@@ -139,6 +148,17 @@ body {
     }
 
 }
-
+/* 
 #btBolsistas {background-color: #0FFF50; color: #103f1c; font-weight: 600;border: 1px solid lightgreen;}
-    #btBolsistas:hover {background-color: rgb(127, 255, 127); color: rgb(34, 51, 34); font-weight: 600;}
+    #btBolsistas:hover {background-color: rgb(127, 255, 127); color: rgb(34, 51, 34); font-weight: 600;} */
+
+
+    footer {
+        color: rgb(101, 101, 101);
+        font-size: 2rem;
+        background-color: lightgray;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
