@@ -32,11 +32,11 @@ function cultos() {
         if ( datahoje.getDate() == 15) {
             document.querySelector('#cultos').innerHTML = '7h Andressa' + ' | ' + '10h Jairo' + ' | ' + '13h Drica' 
         }
-        if ( datahoje.getDate() == 22) {
-           document.querySelector('#cultos').innerHTML = '7h Jhéssica' + ' | ' + '10h Valéria' + ' | ' + '13h Eliane' 
+        if ( datahoje.getDate() == 19) {
+           document.querySelector('#cultos').innerHTML = '7h Andressa' + ' | ' + '10h Valéria' + ' | ' + '13h Marcio' 
         }
-        if ( datahoje.getDate() == 27) {
-            document.querySelector('#cultos').innerHTML = '7h Pr. Vinícius' + ' | ' + '10h Ingo' + ' | ' + '13h Ana B.'  
+        if ( datahoje.getDate() == 26) {
+            document.querySelector('#cultos').innerHTML = '7h Jaque' + ' | ' + '10h Malu' + ' | ' + '13h Drika'  
         }
     }
     if (datahoje.getDay() == 5) {
