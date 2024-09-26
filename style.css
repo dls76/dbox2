@@ -115,14 +115,14 @@ main#conteinerhome {
 .divhome {
     border-radius: 12px;
     position: relative;
-    height: fit-content;
     height: 480px;
     /* border: 1px solid red; */
+    /* overflow-y: hidden; */
 }
 
 .divhomelinksrapidos {
     background-color: #fff;
-    height: 480px;
+    /* height: 480px; */
     overflow-y: hidden;
 }
 
@@ -547,8 +547,8 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
         padding: 20px;
         width: 100%;
         margin: 0 auto;
+        border: 1px solid red;
         grid-template-columns: 1fr 1fr;
-
     }
 
     .body {
