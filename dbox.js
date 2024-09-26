@@ -47,6 +47,7 @@ function cultos() {
     }
 }
 
+//Oração
 function mostrarEscalaDeOracao() {
 
     if (datahoje.getDay() == 0) {
@@ -71,7 +72,6 @@ function mostrarEscalaDeOracao() {
         document.querySelector('#contentoracao').innerHTML = 'Feliz Sábado!'
     }
 }
-
 
 //Plantão Diário
 function plantaoDiario() {
@@ -139,13 +139,14 @@ function compensacao() {
 }
 
 // Última escala
-// window.addEventListener('load', arredondarBordasInferiores)
+window.addEventListener('load', arredondarBordasInferiores)
 function arredondarBordasInferiores() {
     const divescalas = document.querySelectorAll('.escala')
     const escalas = Array.from(divescalas)
     const ultimaescala = escalas.length - 1
     const uesc = escalas[ultimaescala]
     uesc.style.borderRadius = "0 0 12px 12px"
+    uesc.style.height = "100%"
 }
 
 // AMA

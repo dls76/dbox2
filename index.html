@@ -202,6 +202,25 @@
                         </div>
                     
                     </a>
+
+                    <a href="plantaoterca.html" target="_blank">
+
+                        <div class="escala">
+                            
+                            <div class="icon">
+                                <img src="img/yes.png" alt="">
+                            </div>
+                            <div>
+                                <div class="tituloescala" id="tituloterca">Plantão Terça</div>
+                                <div class="contentescala" id="plantaoterca"></div>
+                                <i class="fa-solid fa-angle-right seta"></i>
+                            </div>
+                        
+                        </div>
+                    
+                    </a>
+
+                    
                    
                 </div>
     
@@ -687,6 +706,7 @@
 
 
 
+    <script src="plantaoterca.js"></script>
     <script type="module" src="proxAniver.js"></script>
     <script type="module" src="modalAniver.js"></script>
     <script src="dbox.js"></script>
@@ -698,6 +718,19 @@
     <script type="module">
         import { plantaoDeEntrevistas } from './pg-externas/plantaoEntrevistas.js';
         document.addEventListener('DOMContentLoaded', plantaoDeEntrevistas);
+    </script>
+    <script type="module">
+        import { getProximoPlantao } from './plantaoterca.js';
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const plantao = getProximoPlantao();
+            if (plantao) {
+                let dia = plantao.data.getDate();
+                let mes = plantao.data.getMonth() + 1;
+                dia = dia < 10 ? "0" + dia : dia;
+                document.querySelector('#plantaoterca').innerHTML = `${dia}/${mes} - ${plantao.nome}`;
+            }
+        });
     </script>
 </body>
 </html>

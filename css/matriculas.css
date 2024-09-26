@@ -101,11 +101,11 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     width: 90%;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .sistemas a {
-    margin: 1rem;
+    margin: 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;

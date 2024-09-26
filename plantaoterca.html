@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantão Terça</title>
+</head>
+<style>
+    * {font-family: sans-serif;margin: 0;padding: 0;}
+    h1{text-align: center; padding: 2rem;}
+    span {
+        width: 50%;
+        margin: 4px auto;
+        padding: 10px;
+        display: block;
+        border: 1px solid gray;
+        border-radius: 10px;
+    }
+    /* Estilo para destacar o próximo plantão */
+    .destaque {
+        font-weight: bold;
+        background-color: rgb(192, 255, 192);
+    }
+    span:hover {
+        background-color: whitesmoke;
+    }
+    footer {
+        height: 40vh;
+        background-color: gainsboro;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+</style>
+<body>
+    <h1>Plantão de Terça - 19h</h1>
+    <main id="main">
+
+    </main>
+
+    <footer>
+        DBOX
+    </footer>
+    <script src="plantaoterca.js"></script>
+    <script type="module">
+        import { getListaPlantoes } from './plantaoterca.js';
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const listaPlantoes = getListaPlantoes();
+            document.querySelector('#main').innerHTML = listaPlantoes;
+        });
+    </script>
+    <script type="module">
+        import { getListaPlantoesComDestaque } from './plantaoterca.js';
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const listaPlantoes = getListaPlantoesComDestaque();
+            document.querySelector('#main').innerHTML = listaPlantoes;
+        });
+    </script>
+</body>
+</html>
