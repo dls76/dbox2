@@ -95,9 +95,6 @@ function adicionarProximosAniversariantes() {
             container.appendChild(divAniv);
         });
         
-
-
-
     } else {
         // Caso não haja aniversariantes, exibe uma mensagem
         let semAniversariantes = document.createElement('div');
