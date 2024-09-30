@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/calendario-num.css">
     <link rel="stylesheet" href="css/banners.css">    
     <!-- <link rel="stylesheet" href="css/aniversariantes.css"> -->
+    <link rel="stylesheet" href="css/divhomeaniver.css">
     <link rel="stylesheet" href="css/sec-banners.css">
     <link rel="stylesheet" href="css/sec-horarios.css">
     
@@ -663,7 +664,7 @@
 
 
 <!-- URGÊNCIAS -->
-<div class="bgmodal" id="bgmodal">
+<!-- <div class="bgmodal" id="bgmodal">
     <div class="modal" id="modalurgencias">    
         <div class="fechar" id="fecharmodal">Fechar</div>
         <h1>Fones de Urgência</h1>
@@ -679,25 +680,17 @@
             <li><span class="numerosurgencia">9.9681-9803</span> - Dr. Rodrigo Hahn (Advogado ASP)</li>
         </ul> 
     </div>
-</div>
-
-<!-- Modal aniversariantes-->
-<div id="aniversarianteModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Parabéns!</h2>
-        <div class="modal-foto">
-            <img id="fotoAniversariante" src="" alt="Foto do Aniversariante">
-        </div>
-        <div class="modal-nome" id="nomeAniversariante"></div>
-        <div class="modal-funcao" id="funcaoAniversariante"></div>
-    </div>
-</div>
+</div> -->
 
 
 
     <script src="plantaoterca.js"></script>
-    <script type="module" src="proxAniver.js"></script>
+    <!-- <script type="module" src="proxAniver.js"></script> -->
+    <script type="module">
+        import { adicionarProximosAniversariantes } from './proxAniver.js';
+        window.onload = adicionarProximosAniversariantes;
+    </script>
+    
     <script type="module" src="modalAniver.js"></script>
     <script src="dbox.js"></script>
     <script src="calendario.js"></script>
@@ -705,22 +698,23 @@
     <script src="ramais.js"></script>
     <script src="escalas.js"></script>
     <script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
-    <script type="module">
-        import { plantaoDeEntrevistas } from './pg-externas/plantaoEntrevistas.js';
-        document.addEventListener('DOMContentLoaded', plantaoDeEntrevistas);
-    </script>
-    <script type="module">
-        import { getProximoPlantao } from './plantaoterca.js';
 
-        window.addEventListener('DOMContentLoaded', function () {
-            const plantao = getProximoPlantao();
-            if (plantao) {
-                let dia = plantao.data.getDate();
-                let mes = plantao.data.getMonth() + 1;
-                dia = dia < 10 ? "0" + dia : dia;
-                document.querySelector('#plantaoterca').innerHTML = `${dia}/${mes} - ${plantao.nome}`;
-            }
-        });
-    </script>
+        <script type="module">
+            import { plantaoDeEntrevistas } from './pg-externas/plantaoEntrevistas.js';
+            document.addEventListener('DOMContentLoaded', plantaoDeEntrevistas);
+        </script>
+        <script type="module">
+            import { getProximoPlantao } from './plantaoterca.js';
+
+            window.addEventListener('DOMContentLoaded', function () {
+                const plantao = getProximoPlantao();
+                if (plantao) {
+                    let dia = plantao.data.getDate();
+                    let mes = plantao.data.getMonth() + 1;
+                    dia = dia < 10 ? "0" + dia : dia;
+                    document.querySelector('#plantaoterca').innerHTML = `${dia}/${mes} - ${plantao.nome}`;
+                }
+            });
+        </script>
 </body>
 </html>

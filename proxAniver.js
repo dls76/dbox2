@@ -117,5 +117,7 @@ function adicionarProximosAniversariantes() {
     container.appendChild(maisBox); // Adiciona o botão ao container principal
 }
 
+window.adicionarProximosAniversariantes = adicionarProximosAniversariantes;
+
 // Chama a função correta ao carregar a página
 window.onload = adicionarProximosAniversariantes;
