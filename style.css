@@ -547,7 +547,7 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
         padding: 20px;
         width: 100%;
         margin: 0 auto;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         grid-template-columns: 1fr 1fr;
     }
 
