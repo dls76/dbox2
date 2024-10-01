@@ -40,9 +40,12 @@
 
     }             
 
-    
+// const btRamaisMenu = document.querySelector('#ramais-do-menu')
+//     btRamaisMenu.addEventListener('click', ()=>{
+//         window.open('ramais.html')
+// }) 
+
 const btRamaisMenu = document.querySelector('#ramais-do-menu')
-    btRamaisMenu.addEventListener('click', ()=>{
-        window.open('ramais.html')
-})
-    
+btRamaisMenu.addEventListener('click', () => {
+    window.location.href = 'ramais.html';
+});
