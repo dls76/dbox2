@@ -7,9 +7,9 @@ export const nomes = [
     {nome: "Vinicius Fernando Serain", data: new Date(2024, 8, 27), dia: 27, mes: 8, ano: 1990, funcao: "Pastoral", foto: 'img/anivImg/setembro/vini.png'},
     {nome: "Joniel Mendes de Araujo", data: new Date(2024, 8, 30), dia: 30, mes: 8, ano: 1989, funcao: "Professor", foto: 'img/anivImg/setembro/joni.png'},
     
-    // Outubro
-    {nome: "Daisy Karin Silva Ferreira", data: new Date(2024, 9, 6), dia: 6, mes: 9, ano: 1993, funcao: "Call Center", foto: 'img/anivImg/outubro/daisy.jpeg'},
-    {nome: "Larissa Cardoso de Franca Goncalves", data: new Date(2024, 9, 6), dia: 6, mes: 9, ano: 1987, funcao: "Professora", foto: 'img/anivImg/outubro/larissa.jpeg'},
+    // Outubro 
+    {nome: "Daisy Karin Silva Ferreira", data: new Date(2024, 9, 6), dia: 6, mes: 9, ano: 1993, funcao: "Call Center", foto: 'img/anivImg/outubro/Daisy.jpeg'},
+    {nome: "Larissa Cardoso de Franca Goncalves", data: new Date(2024, 9, 6), dia: 6, mes: 9, ano: 1987, funcao: "Professora", foto: 'img/anivImg/outubro/Larissa.jpeg'},
     {nome: "Jaqueline Marcia Hoffmeister Senko", data: new Date(2024, 9, 9), dia: 9, mes: 9, ano: 1980, funcao: "Coordenadora", foto: 'img/anivImg/outubro/jaquelinesenko.png'},
     {nome: "Joice Mari da Silva Pereira", data: new Date(2024, 9, 10), dia: 10, mes: 9, ano: 1992, funcao: "Professora", foto: 'img/anivImg/outubro/joice.jpg'},
     {nome: "Christian Felipe Preciliano Santiago", data: new Date(2024, 9, 12), dia: 12, mes: 9, ano: 2004, funcao: "Monitor", foto: 'img/anivImg/outubro/christian.jpg'},
