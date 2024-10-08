@@ -1,5 +1,12 @@
+.sec-banners {
+    background-color: #fff;
+    margin: 2rem auto;
+    border-radius: 20px;    
+    width: 98%;
+}
+
 .sec-banners div {
-    background-color: #EEEEEE;
+    background-color: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
