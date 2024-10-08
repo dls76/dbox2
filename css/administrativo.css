@@ -12,7 +12,9 @@ main {
     padding: 1rem;
     font-family: 'Roboto', sans-serif, Arial, Helvetica;
     font-weight: 600;
-    color: #5d5d5d;
+    /* color: #5d5d5d; */
+    color: #253B73;
+    font-weight: 700;
 }
 .menuadministativo {
     max-width: 1400px;
@@ -21,12 +23,9 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* padding: 1rem; */
     background-color: #fff;
-    /* border: 1px solid red; */
 }
 .menuadministativo a {
-    /* border: 1px solid red; */
     width: 110px;
     max-width: 120px;
     border-radius: 10px;
@@ -45,7 +44,7 @@ main {
     border-radius: 10px;
 }
 .conteiner-disciplina img {
-    width: 30px;
+    width: 26px;
 }
 .linha-disciplina {
     margin: 15px;
@@ -59,6 +58,7 @@ main {
 .linha-disciplina div {
     margin-left: 1rem;
     color: #0B1634;
+    color: gray;
 }
 .linha-disciplina:hover {
     background-color: rgb(233, 233, 233);
