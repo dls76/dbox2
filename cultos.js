@@ -149,8 +149,76 @@ const eventos = [
     {data: new Date(2024, 9, 3), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
     {data: new Date(2024, 9, 4), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
     
+    //Outubro
+    {data: new Date(2024, 9, 11), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+    {data: new Date(2024, 9, 14), culto1: 'Recesso', culto2: 'Recesso', culto3: 'Recesso'},
+    {data: new Date(2024, 9, 15), culto1: 'Feriado', culto2: 'Feriado', culto3: 'Feriado'},
+    {data: new Date(2024, 9, 16), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 9, 17), culto1: 'Jaque', culto2: 'Malú', culto3: 'Valéria'},
+    {data: new Date(2024, 9, 18), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
 
+    {data: new Date(2024, 9, 21), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 9, 22), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 9, 23), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 9, 24), culto1: 'Andressa', culto2: 'Nailson', culto3: 'Drika'},
+    {data: new Date(2024, 9, 25), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
 
+    {data: new Date(2024, 9, 28), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 9, 29), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 9, 30), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 9, 31), culto1: 'Jhéssica', culto2: 'Vinícius', culto3: 'Allan'},
+    {data: new Date(2024, 10, 1), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+
+    //Novembro
+    {data: new Date(2024, 10, 4), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 10, 5), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 10, 6), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 10, 7), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 10, 8), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+    
+    {data: new Date(2024, 10, 11), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 10, 12), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 10, 13), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 10, 14), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 10, 15), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+
+    {data: new Date(2024, 10, 18), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 10, 19), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 10, 20), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 10, 21), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 10, 22), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+
+    {data: new Date(2024, 10, 25), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 10, 26), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 10, 27), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 10, 28), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 10, 29), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+    
+
+    //Dezembro
+    {data: new Date(2024, 11, 2), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 11, 3), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 11, 4), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 11, 5), culto1: 'Jaque', culto2: 'Malu', culto3: 'Drika'},
+    {data: new Date(2024, 11, 6), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+    
+    {data: new Date(2024, 11, 9), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
+    {data: new Date(2024, 11, 10), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2024, 11, 11), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2024, 11, 12), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 11, 13), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+
+    {data: new Date(2024, 11, 16), culto1: 'Escala férias', culto2: 'Escala férias', culto3: 'Escala férias'},
+    {data: new Date(2024, 11, 17), culto1: 'Escala férias', culto2: 'Escala férias', culto3: 'Escala férias'},
+    {data: new Date(2024, 11, 18), culto1: 'Escala férias', culto2: 'Escala férias', culto3: 'Escala férias'},
+    {data: new Date(2024, 11, 19), culto1: 'Escala férias', culto2: 'Escala férias', culto3: 'Escala férias'},
+    {data: new Date(2024, 11, 20), culto1: 'Escala férias', culto2: 'Escala férias', culto3: 'Escala férias'},
+    
+    {data: new Date(2024, 11, 23), culto1: 'Escala férias', culto2: 'Escala férias', culto3: 'Escala férias'},
+    {data: new Date(2024, 11, 24), culto1: 'Escala férias', culto2: 'Escala férias', culto3: 'Escala férias'},
+    {data: new Date(2024, 11, 25), culto1: 'Escala férias', culto2: 'Escala férias', culto3: 'Escala férias'},
+    {data: new Date(2024, 11, 26), culto1: 'Escala férias', culto2: 'Escala férias', culto3: 'Escala férias'},
+    {data: new Date(2024, 11, 27), culto1: 'Escala férias', culto2: 'Escala férias', culto3: 'Escala férias'},
 
 ];
 
