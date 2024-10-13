@@ -13,27 +13,37 @@ export const plantoes = [
     { data: new Date(2024, 11, 17), nome: "Alícia, Juliana, Sila, Malu" }
 ];
 
-// Função para obter o próximo plantão
+
+// Função para obter o próximo plantão, destacando o atual até o final do dia
 export function getProximoPlantao() {
-    const hoje = new Date();
-    let futureDates = plantoes.filter(e => e.data >= hoje);
+    const agora = new Date();
+    // Filtra os plantões futuros ou que estão no mesmo dia
+    let futureDates = plantoes.filter(e => e.data >= agora.setHours(0, 0, 0, 0));
     return futureDates.length > 0 ? futureDates[0] : null;
 }
 
 // Função para gerar a lista de plantões com destaque no próximo plantão
 export function getListaPlantoesComDestaque() {
+
+
     const proximoPlantao = getProximoPlantao();
+    const hoje = new Date().setHours(0, 0, 0, 0); // Dia atual sem horas
+
     
     return plantoes.map(plantao => {
+
         let dia = plantao.data.getDate();
         let mes = plantao.data.getMonth() + 1;
         dia = dia < 10 ? "0" + dia : dia;
-
-        // Verifica se o plantão é o próximo e adiciona uma classe de destaque
-        if (proximoPlantao && plantao.data.getTime() === proximoPlantao.data.getTime()) {
+        
+        // Verifica se o plantão é o próximo ou se estamos no dia do plantão
+        if (proximoPlantao && plantao.data.getTime() === proximoPlantao.data.getTime() && plantao.data.getTime() >= hoje) {
+            
             return `<span class="destaque">${dia}/${mes} - ${plantao.nome}</span>`;
         }
-
+        
+        
         return `<span class="plantao">${dia}/${mes} - ${plantao.nome}</span>`;
     }).join('<br>');
+    
 }
