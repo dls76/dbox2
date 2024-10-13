@@ -96,12 +96,12 @@ const pessoas = [
     {nome: "Carmem Aparecida Abolis da Silva", data: new Date(2024, 9, 25), dia: 25, mes: 9, ano: 1982, funcao: "Professora", foto: 'img/anivImg/outubro/Carmem.png'},
     {nome: "Rosineide de Souza Westphal", data: new Date(2024, 9, 25), dia: 25, mes: 9, ano: 1982, funcao: "Monitora", foto: 'img/anivImg/outubro/rosineide.jpg'},
     
-    {nome: "Bruna do Rocio Biscoto dos Santos", data: new Date(2024, 10, 15), dia: 15, mes: 10, ano: 1997, funcao: "Auxiliar", foto: 'img/anivImg/user.png'},
-    {nome: "Josiane Vieira Lopes Klimek", data: new Date(2024, 10, 18), dia: 18, mes: 10, ano: 1975, funcao: "Tesoureira", foto: 'img/anivImg/user.png'},
-    {nome: "Henry Fidelis Pereira", data: new Date(2024, 10, 19), dia: 19, mes: 10, ano: 1996, funcao: "Professor", foto: 'img/anivImg/user.png'},
+    {nome: "Bruna do Rocio Biscoto dos Santos", data: new Date(2024, 10, 15), dia: 15, mes: 10, ano: 1997, funcao: "Auxiliar", foto: 'img/anivImg/novembro/Bruna.jpg'},
+    {nome: "Josiane Vieira Lopes Klimek", data: new Date(2024, 10, 18), dia: 18, mes: 10, ano: 1975, funcao: "Tesoureira", foto: 'img/anivImg/novembro/Josiane.jpeg'},
+    {nome: "Henry Fidelis Pereira", data: new Date(2024, 10, 19), dia: 19, mes: 10, ano: 1996, funcao: "Professor", foto: 'img/anivImg/novembro/henry.jpg'},
     
-    {nome: "Carin Grime de Melo", data: new Date(2024, 11, 13), dia: 13, mes: 11, ano: 1988, funcao: "Secretária", foto: 'img/anivImg/user.png'},
-    {nome: "Glauton Vinicius de Andrade", data: new Date(2024, 11, 27), dia: 27, mes: 11, ano: 1968, funcao: "Professor", foto: 'img/anivImg/user.png'},
+    {nome: "Carin Grime de Melo", data: new Date(2024, 11, 13), dia: 13, mes: 11, ano: 1988, funcao: "Secretária", foto: 'img/anivImg/dezembro/Carin.jpg'},
+    {nome: "Glauton Vinicius de Andrade", data: new Date(2024, 11, 27), dia: 27, mes: 11, ano: 1968, funcao: "Professor", foto: 'img/anivImg/dezembro/Glauton.jpg'},
 ]
 
 function mostrarAnimacaoAniversariante() {
