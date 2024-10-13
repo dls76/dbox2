@@ -94,7 +94,7 @@ const pessoas = [
     {nome: "Douglas Frohlich Reded", data: new Date(2024, 9, 19), dia: 19, mes: 9, ano: 1992, funcao: "TI", foto: 'img/anivImg/outubro/douglasfrohlich.jpeg'},
     {nome: "Silmara de Lima Grochka", data: new Date(2024, 9, 19), dia: 19, mes: 9, ano: 1993, funcao: "Tutora", foto: 'img/anivImg/outubro/silmara.jpg'},
     {nome: "Carmem Aparecida Abolis da Silva", data: new Date(2024, 9, 25), dia: 25, mes: 9, ano: 1982, funcao: "Professora", foto: 'img/anivImg/outubro/Carmem.png'},
-    {nome: "Rosineide de Souza Westphal", data: new Date(2024, 9, 25), dia: 25, mes: 9, ano: 1982, funcao: "Monitora", foto: 'img/anivImg/outubro/rosineide.jpg'},
+    {nome: "Rosineide de Souza Westphal", data: new Date(2024, 9, 25), dia: 25, mes: 9, ano: 1982, funcao: "Monitora", foto: 'img/anivImg/outubro/Rosineide.jpg'},
     
     {nome: "Bruna do Rocio Biscoto dos Santos", data: new Date(2024, 10, 15), dia: 15, mes: 10, ano: 1997, funcao: "Auxiliar", foto: 'img/anivImg/novembro/Bruna.jpg'},
     {nome: "Josiane Vieira Lopes Klimek", data: new Date(2024, 10, 18), dia: 18, mes: 10, ano: 1975, funcao: "Tesoureira", foto: 'img/anivImg/novembro/Josiane.jpeg'},
