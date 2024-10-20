@@ -101,7 +101,7 @@ let plantaosexta = [
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
 
 function proximoPlantaoDeSexta(array) {
-    const currentDate = new Date(2024, 9, 25); // Data de teste: 25 de outubro de 2024
+    const currentDate = new Date(); // Data de teste: 25 de outubro de 2024
     const todayAtMidnight = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), 0, 0, 0, 0); // Data atual sem horas
 
     // Filtrar as datas que são iguais ou após a data atual
