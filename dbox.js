@@ -2,7 +2,7 @@ let datahoje = new Date();
 
 window.addEventListener("load", cultos);
 window.addEventListener("load", compensacao);
-// window.addEventListener('load', plantaoDiario)
+window.addEventListener('load', escalaDeEntrevistas)
 window.addEventListener("load", mostrarEscalaDeOracao);
 
 // Cultos
@@ -83,41 +83,33 @@ function mostrarEscalaDeOracao() {
   }
 }
 
-//Plantão Diário
-function plantaoDiario() {
-  // domingo
-  if (datahoje.getDay() == 0) {
-    document.querySelector("#plantaodiario").innerHTML = "Hoje é domingo!";
-  }
-  // segunda
-  if (datahoje.getDay() == 1) {
-    document.querySelector("#plantaodiario").innerHTML =
-      "Hoje: Carol | Nailson*";
-  }
-  // terça
-  if (datahoje.getDay() == 2) {
-    document.querySelector("#plantaodiario").innerHTML =
-      "Hoje: Alexandro | Jaque";
-  }
-  // quarta
-  if (datahoje.getDay() == 3) {
-    document.querySelector("#plantaodiario").innerHTML =
-      "Hoje: Renata | Valéria";
-  }
-  // quinta
-  if (datahoje.getDay() == 4) {
-    document.querySelector("#plantaodiario").innerHTML = "Hoje: Malú | Douglas";
-  }
-  // sexta
-  if (datahoje.getDay() == 5) {
-    document.querySelector("#plantaodiario").innerHTML =
-      "Hoje: Andressa | Camila";
-  }
-  // sábado
-  if (datahoje.getDay() == 6) {
-    document.querySelector("#plantaodiario").innerHTML = "Feliz Sábado!";
+//Entrevistas
+function escalaDeEntrevistas() {
+  const hoje = new Date()
+  const diaDaSemana = hoje.getDay()
+  const ferias = false
+  const feriadoRecesso = false
+
+  const plantao = [
+    "Hoje é domingo!",
+    "Carol(M) | Nailson(T)",
+    "Alexandro(M) | Jaque(T)",
+    "Renata(M) | Valéria(T)",
+    "Malú(M) | Douglas(T)",
+    "Andressa(M) | Camila(T)",
+    "Feliz Sábado!"
+  ];
+
+  // Verifica se é feriado ou recesso
+  if (ferias) {
+    document.querySelector("#plantaodiario").innerHTML = "Férias"
+  } else if (feriadoRecesso) {
+    document.querySelector('#plantaodiario').innerHTML = "Feriado/recesso"
+  } else {
+    document.querySelector("#plantaodiario").innerHTML = plantao[diaDaSemana];
   }
 }
+
 
 function compensacao() {
 

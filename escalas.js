@@ -119,7 +119,7 @@ function proximoPlantaoDeSexta(array) {
         let pessoa = futureDates[0].person;
         let monitoria = futureDates[0].monitoria;
 
-        document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa} (Monitoria: ${monitoria})`;
+        document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
     } else {
         // Caso contrário, retorna uma mensagem de definição futura
         document.querySelector('#plantaosexta').innerHTML = 'Em definição...';
