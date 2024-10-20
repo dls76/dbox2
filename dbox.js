@@ -121,7 +121,7 @@ function plantaoDiario() {
 
 function compensacao() {
 
-  const isFeriado = true;
+  const isFeriado = false;
   const dataHoje = new Date();
   const diaSemana = dataHoje.getDay();
 
@@ -129,7 +129,7 @@ function compensacao() {
     "Hoje é domingo!",
     "Pr. Vinícius (M)",
     "Douglas (T)",
-    "Jaqueline e Camila (M), Andressa e Carin (T)",
+    "Jaque, Camila (M), Andressa, Carin (T)",
     "Valéria (M), Renata (T)",
     "Malu (M), Ale, Josi e Carol (T)",
     "Feliz Sábado!",
