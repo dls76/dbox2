@@ -68,7 +68,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 300px;
+            height: 100vh;
             color: #253B73;
             font-weight: 600;
         }
@@ -112,13 +112,17 @@
         let proximoPlantao = null;
         let proximoPlantaoElement = null;
 
+       
         for (let i = 0; i < plantaosexta.length; i++) {
-            const plantaoData = plantaosexta[i].data;
+        const plantaoData = plantaosexta[i].data;
 
-            if (plantaoData >= hoje && (!proximoPlantao || plantaoData < proximoPlantao.data)) {
-                proximoPlantao = plantaosexta[i];
-            }
+        // Define a hora do plantão como 23:59:59
+        plantaoData.setHours(23, 59, 59); 
+
+        if (plantaoData >= hoje && (!proximoPlantao || plantaoData < proximoPlantao.data)) {
+            proximoPlantao = plantaosexta[i];
         }
+    }
 
         // Cria os elementos HTML e exibe na página 
         for (let i = 0; i < plantaosexta.length; i++) {
