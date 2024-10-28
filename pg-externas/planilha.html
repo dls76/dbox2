@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minha Página Dinâmica</title>
+</head>
+<body>
+  <div id="conteudo"></div>
+  
+  <script>
+    // Substitua com sua chave de API e o ID da planilha
+    const apiKey = 'AIzaSyDa_QKQD84jTfx5Yrqp4GRAGVzHFLTHEKY'; // Coloque sua chave de API aqui
+    const spreadsheetId = '1rGD4twKHTabYK0givCXyjCo_9Dya8YudDbtLKx37vDc'; // Coloque o ID da sua planilha aqui
+    const range = 'A2:B100'; // Intervalo da planilha que você quer acessar (exemplo: de A2 a B5)
+
+    function carregarDados() {
+      // URL para acessar os dados
+      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const conteudoDiv = document.getElementById("conteudo");
+          conteudoDiv.innerHTML = ''; // Limpa o conteúdo anterior
+
+          // Loop pelos dados e exibição na página
+          data.values.forEach(row => {
+            const div = document.createElement('div');
+            div.innerHTML = `Data: ${row[0]}, Nome: ${row[1]}`;
+            conteudoDiv.appendChild(div);
+          });
+        })
+        .catch(error => {
+          console.error('Erro na requisição:', error);
+        });
+    }
+
+    carregarDados(); // Chama a função ao carregar a página
+
+    setInterval(carregarDados, 5000); // Atualiza a cada 5 segundos
+  </script>
+</body>
+</html>
