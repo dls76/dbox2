@@ -4,8 +4,32 @@
 <head>
   <title>Minha Página Dinâmica</title>
 </head>
+<style>
+  * {
+    margin: 0; padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  h1 {padding: 10px;}
+  p {padding: 4px; margin-bottom: 4px;}
+.div {
+  padding: 2px;
+  color: rgb(87, 87, 87);
+  margin-bottom: 2px;
+}
+footer {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: rgb(204, 204, 204);
+}
+</style>
 <body>
+  <h1>Página de Teste</h1>
+  <p>Conexão Planilha Google com página web hospedada no Github</p>
   <div id="conteudo"></div>
+  <footer>DBox</footer>
   
   <script>
     // Substitua com sua chave de API e o ID da planilha
@@ -26,7 +50,8 @@
           // Loop pelos dados e exibição na página
           data.values.forEach(row => {
             const div = document.createElement('div');
-            div.innerHTML = `Data: ${row[0]}, Nome: ${row[1]}`;
+            div.classList.add('div')
+            div.innerHTML = `${row[0]} - ${row[1]}`;
             conteudoDiv.appendChild(div);
           });
         })
