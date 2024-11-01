@@ -180,19 +180,18 @@ main#conteinerhome {
 }
 
 .img i.fa-comments,
-.img i.fa-calendar,
-.img i.fa-envelope,
+.img i#fa-calendar,
+.img i#fa-envelope,
 .img i.fa-desktop,
-.img i.fa-chart-pie,
+.img i#fa-chart-pie,
 .img i.fa-chart-simple,
 .img i.fa-bolt,
 .img i.fa-chalkboard-user,
 .img i.fa-suitcase-medical,
-.img i.fa-briefcase-medical,
-.img i.fa-unlock,
-.img i.fa-dollar-sign,
-.img i.fa-file-lines,
-.img i.fa-comments-dollar {
+.img i#fa-briefcase-medical,
+.img i#fa-unlock,
+.img i#fa-file-lines,
+.img i#fa-comments-dollar {
     width: 46px;
     color: #253B73;
     text-align: center;
