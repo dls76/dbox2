@@ -7,7 +7,7 @@
 }
 body {
     background-color: #855efc;
-    background-color: #855efc;
+    background-color: #253B73;
     padding: 0 20px 20px 20px;
     height: 100vh;
 }
@@ -81,17 +81,17 @@ main {
     color: #855efc;
     color: #000;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
 }
 .evento div {
     display: flex; 
     align-items: center; 
-    padding: 6px;
+    padding: 2px;
 }
 .evento:hover {
     background-color: whitesmoke;
     cursor: pointer;
 }
 .titulo-evento {
-    font-size: 18px;
+    font-size: 14px;
 }
