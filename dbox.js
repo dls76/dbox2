@@ -94,8 +94,8 @@ function escalaDeEntrevistas() {
     "Hoje é domingo!",
     "Carol(M) | Nailson(T)",
     "Alexandro(M) | Jaque(T)",
-    "Renata(M) | Valéria(T)",
-    "Malú(M) | Douglas(T)",
+    "Renata(M) | Malú(T)",
+    "Valéria(M) | Douglas(T)",
     "Andressa(M) | Camila(T)",
     "Feliz Sábado!"
   ];

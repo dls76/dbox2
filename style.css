@@ -175,22 +175,31 @@ main#conteinerhome {
     cursor: pointer;
     padding: 14px 0px;
     border-radius: 12px;
-    margin: 4px;
+    margin: 2px;
     transition: all .3s;
 }
+
 .img i.fa-comments,
-.img i.fa-calendar-days,
-.img i.fa-square-envelope,
+.img i.fa-calendar,
+.img i.fa-envelope,
 .img i.fa-desktop,
+.img i.fa-chart-pie,
 .img i.fa-chart-simple,
-.img i.fa-stethoscope,
 .img i.fa-bolt,
-.img i.fa-list, 
 .img i.fa-chalkboard-user,
-.img i.fa-suitcase-medical {
-    width: 42px;
+.img i.fa-suitcase-medical,
+.img i.fa-briefcase-medical,
+.img i.fa-unlock,
+.img i.fa-dollar-sign,
+.img i.fa-file-lines,
+.img i.fa-comments-dollar {
+    width: 46px;
     color: #253B73;
     text-align: center;
+}
+
+.img i.fa-unlock {
+    color: #253B73;
 }
 
 .legenda-links {
@@ -388,22 +397,22 @@ main#conteinerhome {
     justify-content: center;
     align-items: center;
 }
-
+/* 
 i.fa-dollar-sign, i.fa-file-lines {
     width: 1.6rem;
     height: 1.6rem;
-    background-color: #36bedd;
+    background-color: #253B73;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     color: #fff;
-}
-
+} */
+/* 
 i.fa-dollar-sign:hover, i.fa-file-lines:hover {
     cursor: pointer;
-    background-color: #2d94ac;
-}
+    background-color: #253B73;
+} */
 
 .control {
     color: #36bedd;
