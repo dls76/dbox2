@@ -7,38 +7,45 @@ window.addEventListener("load", mostrarEscalaDeOracao);
 
 // Cultos
 function cultos() {
-  if (datahoje.getDay() == 0) {
+
+  const dataAtual = new Date()
+
+  if (dataAtual.getDay() == 0) {
     document.querySelector("#cultos").innerHTML = "Hoje é domingo!";
   }
-  if (datahoje.getDay() == 1) {
+  if (dataAtual.getDay() == 1) {
       document.querySelector("#cultos").innerHTML = "Alexandro";
   }
-  if (datahoje.getDay() == 2) {
+  if (dataAtual.getDay() == 2) {
       document.querySelector("#cultos").innerHTML = "Pr. Vinícius";
   }
-  if (datahoje.getDay() == 3) {
+  if (dataAtual.getDay() == 3) {
     document.querySelector("#cultos").innerHTML = "Pr. Leonardo";
   }
-  if (datahoje.getDay() == 4) {
+  if (dataAtual.getDay() == 4) {
 
-    if (datahoje.getDate() == 14) {
+    if (dataAtual.getDate() == 7) {
+      document.querySelector("#cultos").innerHTML =
+        "7h Andressa" + " | " + "10h Nailson" + " | " + "13h Márcio";
+    }
+    if (dataAtual.getDate() == 14) {
       document.querySelector("#cultos").innerHTML =
         "7h Jaque" + " | " + "10h Valéria" + " | " + "13h Drika";
     }
-    if (datahoje.getDate() == 21) {
+    if (dataAtual.getDate() == 21) {
       document.querySelector("#cultos").innerHTML =
         "7h Carol" + " | " + "10h Renata" + " | " + "13h Jhéssica";
     }
-    if (datahoje.getDate() == 28) {
+    if (dataAtual.getDate() == 28) {
       document.querySelector("#cultos").innerHTML =
         "7h Carol" + " | " + "10h Malu" + " | " + "Ana Prado";
     }
   }
   
-  if (datahoje.getDay() == 5) {
+  if (dataAtual.getDay() == 5) {
     document.querySelector("#cultos").innerHTML = "Douglas";
   }
-  if (datahoje.getDay() == 6) {
+  if (dataAtual.getDay() == 6) {
     document.querySelector("#cultos").innerHTML = "Feliz Sábado!";
   }
 }
