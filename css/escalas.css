@@ -30,7 +30,8 @@
     font-family: 'Roboto', sans-serif;
 }
 .contentescala {
-    color: gray;
+    color: #575757;
+    font-weight: 600;
     font-size: .8rem;
     font-family: 'Roboto', sans-serif;
     padding: 5px 40px 0 0;

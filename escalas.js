@@ -163,7 +163,7 @@ let reuniaoadm = [
     {data: new Date(2024, 9, 21), link: 'https://docs.google.com/document/d/1aFNQdo6JRduqbet2Os6sZmXcDVrNT_pyoSIkBXsr7tU/edit', hora: '14:00'},
     {data: new Date(2024, 9, 28), link: 'https://docs.google.com/document/d/17DlKWlGz6d9ukgjCvcp_yGG3XRCRZOKOrTnqRUGTSq4/edit', hora: '14:00'},
     {data: new Date(2024, 10, 4), link: 'https://docs.google.com/document/d/1yEsLvM9PyMRF6rjG7f5FrSK96dBzcRzOGg7bGa-Dh0I/edit', hora: '14:00'},
-    {data: new Date(2024, 10, 11), link: 'https://docs.google.com/document/d/1w8_tfpt2aePPHVx5yCifPdnyJfvSdMZJSUV-N_FOmsQ/edit', hora: '14:00'},
+    {data: new Date(2024, 10, 11), link: 'https://docs.google.com/document/d/1w8_tfpt2aePPHVx5yCifPdnyJfvSdMZJSUV-N_FOmsQ/edit', hora: '08:00'},
     {data: new Date(2024, 10, 18), link: 'https://docs.google.com/document/d/1vgbdz7wzI_akA6HzoXsLrRX1tQZysDUNI0xiKAK3bFU/edit', hora: '14:00'},
     {data: new Date(2024, 10, 25), link: 'https://docs.google.com/document/d/16MbweVTFWxbCBVRE8Mekp05Hzs-UwM6W1YY-me6gU6I/edit', hora: '14:00'},
     {data: new Date(2024, 11, 2), link: 'https://docs.google.com/document/d/1M09QL4NEvRUP8nsErFno5dpB5Myb37xkufSv8om2nGM/edit', hora: '14:00'},
