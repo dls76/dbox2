@@ -113,11 +113,10 @@ main#conteinerhome {
     color: white;
 }
 .divhome {
+    background-color: #fff;
     border-radius: 12px;
     position: relative;
     height: 480px;
-    /* border: 1px solid red; */
-    /* overflow-y: hidden; */
 }
 
 .divhomelinksrapidos {

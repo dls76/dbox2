@@ -134,13 +134,14 @@ function compensacao() {
 // Última escala
 window.addEventListener("load", arredondarBordasInferiores);
 function arredondarBordasInferiores() {
-  // const pai = document.querySelector('#conteinerescalas')
   const divescalas = document.querySelectorAll(".escala");
   const escalas = Array.from(divescalas);
   const ultimaescala = escalas.length - 1;
   const uesc = escalas[ultimaescala];
-  uesc.style.borderRadius = "0 0 12px 12px";
-  uesc.style.flexGrow = "1";
+  // uesc.style.borderRadius = "0 0 12px 12px";
+  uesc.style.borderBottom = "none";
+  uesc.style.boxShadow = "none";
+  // uesc.style.flexGrow = "1";
 }
 
 // AMA
