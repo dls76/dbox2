@@ -173,25 +173,25 @@ const eventos = [
     {data: new Date(2024, 10, 4), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
     {data: new Date(2024, 10, 5), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
     {data: new Date(2024, 10, 6), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
-    {data: new Date(2024, 10, 7), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 10, 7), culto1: 'Andressa', culto2: 'Nailson', culto3: 'Marcio'},
     {data: new Date(2024, 10, 8), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
     
     {data: new Date(2024, 10, 11), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
     {data: new Date(2024, 10, 12), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
     {data: new Date(2024, 10, 13), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
-    {data: new Date(2024, 10, 14), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
-    {data: new Date(2024, 10, 15), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
+    {data: new Date(2024, 10, 14), culto1: 'Jaque', culto2: 'Valéria', culto3: 'Drika'},
+    {data: new Date(2024, 10, 15), culto1: 'Feriado', culto2: 'Feriado', culto3: 'Feriado'},
 
     {data: new Date(2024, 10, 18), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
     {data: new Date(2024, 10, 19), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
     {data: new Date(2024, 10, 20), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
-    {data: new Date(2024, 10, 21), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 10, 21), culto1: 'Carol', culto2: 'Renata', culto3: 'Jhéssica'},
     {data: new Date(2024, 10, 22), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
 
     {data: new Date(2024, 10, 25), culto1: 'Alexandro', culto2: 'Alexandro', culto3: 'Alexandro'},
     {data: new Date(2024, 10, 26), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
     {data: new Date(2024, 10, 27), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
-    {data: new Date(2024, 10, 28), culto1: 'Aguardando escala', culto2: 'Aguardando escala', culto3: 'Aguardando escala'},
+    {data: new Date(2024, 10, 28), culto1: 'Carol', culto2: 'Malu', culto3: 'Ana Prado'},
     {data: new Date(2024, 10, 29), culto1: 'Diretor', culto2: 'Diretor', culto3: 'Diretor'},
     
 

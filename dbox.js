@@ -20,8 +20,12 @@ function cultos() {
       document.querySelector("#cultos").innerHTML = "Pr. Vinícius";
   }
   if (dataAtual.getDay() == 3) {
-    document.querySelector("#cultos").innerHTML = "Pr. Leonardo";
-  }
+    if (dataAtual.getDate() == 20) {
+      document.querySelector("#cultos").innerHTML = "Feriado";
+    } else {
+      document.querySelector("#cultos").innerHTML = "Pr. Leonardo";
+    }
+  } 
   if (dataAtual.getDay() == 4) {
 
     if (dataAtual.getDate() == 7) {
@@ -43,7 +47,11 @@ function cultos() {
   }
   
   if (dataAtual.getDay() == 5) {
+    if (dataAtual.getDate() == 15) {
+      document.querySelector('#cultos').innerHTML = "Feriado"
+    } else { 
     document.querySelector("#cultos").innerHTML = "Douglas";
+    }
   }
   if (dataAtual.getDay() == 6) {
     document.querySelector("#cultos").innerHTML = "Feliz Sábado!";
