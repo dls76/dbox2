@@ -116,7 +116,7 @@ function escalaDeEntrevistas() {
 
 function compensacao() {
 
-  const isFeriado = true;
+  const isFeriado = false;
   const dataHoje = new Date();
   const diaSemana = dataHoje.getDay();
 
