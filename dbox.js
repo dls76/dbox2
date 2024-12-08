@@ -119,6 +119,8 @@ function compensacao() {
   const isFeriado = false;
   const dataHoje = new Date();
   const diaSemana = dataHoje.getDay();
+  const isFirstOrLast = true;
+  const isVacation = false;
 
   const nomesPorDia = [
     "Hoje é domingo!",
@@ -134,6 +136,10 @@ function compensacao() {
 
   if (isFeriado) {
     elementoNome.innerHTML = "Semana com feriado";
+  } else if (isFirstOrLast) {
+    elementoNome.innerHTML = "Primeira/última semana"
+  } else if (isVacation) {
+    elementoNome.innerHTML = "Férias"
   } else {
     elementoNome.innerHTML = nomesPorDia[diaSemana];
   }

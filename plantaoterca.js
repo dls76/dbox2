@@ -9,7 +9,7 @@ export const plantoes = [
     { data: new Date(2024, 10, 19), nome: "Douglas, Alícia, Carin, Sila, Valéria" },
     { data: new Date(2024, 10, 26), nome: "Alexandro, Josi, Juliana, Sila, Renata" },
     { data: new Date(2024, 11, 3), nome: "Douglas, Alícia, Carin, Sila, Carol" },
-    { data: new Date(2024, 11, 10), nome: "Alexandro, Josi, Juliana, Sila, Andressa" },
+    { data: new Date(2024, 11, 10), nome: "Confraternização final de ano" },
     { data: new Date(2024, 11, 17), nome: "Alícia, Juliana, Sila, Malu" }
 ];
 

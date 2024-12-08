@@ -122,7 +122,7 @@ function proximoPlantaoDeSexta(array) {
         document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
     } else {
         // Caso contrário, retorna uma mensagem de definição futura
-        document.querySelector('#plantaosexta').innerHTML = 'Em definição...';
+        document.querySelector('#plantaosexta').innerHTML = 'Próxima escala em 2025';
     }
 }
 
