@@ -13,7 +13,6 @@ btnMobile.addEventListener('click', toggleMenu)
 
 document.getElementById("linkRotinas").addEventListener("click", function(event){
     event.preventDefault();
-    window.open("https://app.todoist.com/app/filter/2317565822", "_blank");
     window.open("https://calendar.google.com/calendar/u/0/r", "_blank");
     window.open("https://mail.google.com/mail/u/0/#inbox", "_blank");
     window.open("https://www.classapp.com.br/", "_blank");
