@@ -120,7 +120,7 @@ function compensacao() {
   const dataHoje = new Date();
   const diaSemana = dataHoje.getDay();
   const isFirstOrLast = true;
-  const isVacation = false;
+  const isVacation = true;
 
   const nomesPorDia = [
     "Hoje é domingo!",
