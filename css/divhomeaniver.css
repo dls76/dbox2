@@ -49,6 +49,12 @@
     border: 1px solid #e7e7e7;
     /* box-shadow: 10px 10px 10px rgba(0,0,0,0.1) inset, 15px 25px 10px rgba(0,0,0,0.05), 15px 20px 20px rgba(0,0,0,.05), inset -10px -10px 15px rgba(255,255,255,0.9); */
 }
+.semAniversariantes {
+    color: rgb(173, 173, 173);
+    padding: 1.5rem;
+    font-family: 'Arial narrow';
+    font-family: 'Roboto condensed';
+}
 .nome {
     padding: 6px 14px 0 6px;
     display: flex;

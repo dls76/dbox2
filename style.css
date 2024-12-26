@@ -118,13 +118,11 @@ main#conteinerhome {
     position: relative;
     height: 480px;
 }
-
 .divhomelinksrapidos {
     background-color: #fff;
     /* height: 480px; */
     overflow-y: hidden;
 }
-
 /* Links rápidos */
 .divhomelinks {
     display: flex;
@@ -177,7 +175,6 @@ main#conteinerhome {
     margin: 2px;
     transition: all .3s;
 }
-
 .img i.fa-comments,
 .img i#fa-calendar,
 .img i#fa-envelope,
@@ -195,11 +192,9 @@ main#conteinerhome {
     color: #253B73;
     text-align: center;
 }
-
 .img i.fa-unlock {
     color: #253B73;
 }
-
 .legenda-links {
     font-size: .9rem;
     font-family: 'Roboto Condensed', sans-serif;
@@ -212,7 +207,6 @@ main#conteinerhome {
 #rh {
     width: 20px;
 }
-
 /*  Calendário Descritivo */
 .evento {
     display: none;
@@ -233,58 +227,46 @@ main#conteinerhome {
 .displayToggle {
     display: grid;
 }
-
 /* width */
 #modalurgencias::-webkit-scrollbar {
     width: .4rem;
 }
-
 /* Track */
 #modalurgencias::-webkit-scrollbar-track {
     /* box-shadow: inset 0 0 5px grey;  */
     border-radius: 2px;
 }
-
 /* Handle */
 #modalurgencias::-webkit-scrollbar-thumb {
     background: #7c7c7c;
     border-radius: 10px;
 }
-
 /* Handle on hover */
 #modalurgencias::-webkit-scrollbar-thumb:hover {
     background-color: #a8a8a8;
 
 }
-
 #amadomenu, #fonesemergenciadomenu {
     display: none !important;
 }
-
-
 .conteinerhorarios ul li {
     list-style: none;
 }
-
 #arm img {
     width: 30px;
     border-radius: 50%;
 }
-
 .imgculto img {
     width: 1rem;
 }
-
 .imgcultotarde img {
     width: 1.4rem;
 }
-
 #escalacompensacao {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .conteiner {
     position: relative;
     padding: 1rem;
@@ -292,22 +274,18 @@ main#conteinerhome {
     margin: 0 auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-
 .fa-solid {
     font-size: 1.2rem;
     transition: ease .3s;
 }
-
 .fa-angle-left {
     left: 0;
     margin-right: 1rem;
 }
-
 .fa-angle-right {
     right: 0;
     margin-left: 1rem;
 }
-
 .item {
     width: 9rem;
     height: 9rem;
@@ -320,7 +298,6 @@ main#conteinerhome {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border: 1px solid lightgray;
 }
-
 .superior {
     background-color: #36bedd;
     border-radius: 1rem 1rem 0 0;
@@ -329,14 +306,12 @@ main#conteinerhome {
     align-items: center;
     position: relative;
 }
-
 .dataeventocard {
     border: 2px solid white;
     border-radius: 1rem;
     padding: .2rem 1rem;
     background-color: #fff;
 }
-
 .diaeventocard, .meseventocard {
     text-align: center;
     box-sizing: border-box;
@@ -345,17 +320,14 @@ main#conteinerhome {
     font-weight: 600;
     color: #36bedd;
 }
-
 .diaeventocard {
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
 .meseventocard {
     font-size: .5rem;
     letter-spacing: 1.5px;
 }
-
 .meio {
     text-align: center;
     font-size: .7rem;
@@ -363,7 +335,6 @@ main#conteinerhome {
     padding: 1rem;
     box-sizing: border-box;
 }
-
 .inferior {
     border-radius: 0 0 1rem 1rem;
     display: flex;
@@ -371,47 +342,25 @@ main#conteinerhome {
     align-items: center;
     padding: 0 0 1rem 0;
 }
-
 .current-item {
     opacity: 1;
 }
-
 .gallery-wrapper {
     overflow-x: auto;
 }
-
 .gallery-wrapper::-webkit-scrollbar {
     display: none;
 }
-
 .gallery {
     display: flex;
     flex-flow: row nowrap;
     gap: 1rem;
 }
-
 .navbuttons {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/* 
-i.fa-dollar-sign, i.fa-file-lines {
-    width: 1.6rem;
-    height: 1.6rem;
-    background-color: #253B73;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: #fff;
-} */
-/* 
-i.fa-dollar-sign:hover, i.fa-file-lines:hover {
-    cursor: pointer;
-    background-color: #253B73;
-} */
-
 .control {
     color: #36bedd;
     cursor: pointer;
@@ -427,15 +376,12 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
     /* border: 1px solid red; */
 
 }
-
 .control:hover {
     background-color: #eeeeee;
 }
-
 .emergenciasul {
     overflow: auto;
 }
-
 .footerprincipal {
     display: flex;
     justify-content: center;
@@ -444,7 +390,6 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
     padding: 3rem 1rem;
     margin: 1rem 0 0 0;
 }
-
 .footerprincipal a {
     padding: 0 1rem;
     color: gray;
@@ -452,23 +397,19 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
     font-family: 'Roboto condensed', sans-serif;
     font-size: 1rem;
 }
-
 .footerprincipal a:hover {
     text-decoration: none;
     color: #0D6EFD;
 }
-
 #linknovoatendimento {
     display: flex;
     align-items: center;
     color: #253B73;
     font-weight: 600;
 }
-
 #linknovoatendimento i {
     margin-right: .5rem;
 }
-
 /* ============ MEDIA QUERIES =============== */
 @media (max-width: 1290px) {
 
@@ -588,13 +529,11 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
         width: 60%;
     }
 }
-
 @media (max-width: 1100px) {
     #modalramais ul {
         width: 70%;
     }
 }
-
 @media (max-width: 920px) {
 
     .important {
@@ -627,7 +566,6 @@ i.fa-dollar-sign:hover, i.fa-file-lines:hover {
     }
     
 }
-
 @media (max-width: 700px) {
 
     main#conteinerhome {
