@@ -77,31 +77,18 @@
 //===== Plantão sexta
 
 let plantaosexta = [
-    {data: new Date(2024, 6, 26), person: "Ingo", monitoria: "Isa e Lucas"}, 
-    {data: new Date(2024, 7, 2), person: "Alexandro", monitoria: "Jairo e Lúcia"}, 
-    {data: new Date(2024, 7, 9), person: "Alexandro", monitoria: "Kadu e Carmelis"}, 
-    {data: new Date(2024, 7, 16), person: "Douglas", monitoria: "Cris e Rose"}, 
-    {data: new Date(2024, 7, 23), person: "Pr. Vinícius", monitoria: "Daniel e Eliane"},
-    {data: new Date(2024, 7, 30), person: "Carol", monitoria: "Lucas e Isa"},
-    {data: new Date(2024, 8, 6), person: "Renata", monitoria: "Jairo e Lúcia"},
-    {data: new Date(2024, 8, 13), person: "Andressa", monitoria: "Kadu e Carmelis"},
-    {data: new Date(2024, 8, 20), person: "Malú", monitoria: "Cris e Rose"},
-    {data: new Date(2024, 8, 27), person: "Jaque", monitoria: "Daniel e Eliane"},
-    {data: new Date(2024, 9, 4), person: "Valéria", monitoria: "Lucas e Isa"},
-    {data: new Date(2024, 9, 11), person: "Camila", monitoria: "Jairo e Lúcia"},
-    {data: new Date(2024, 9, 18), person: "Carin", monitoria: "Cris e Rose"},
-    {data: new Date(2024, 9, 25), person: "Alexandro", monitoria: "Daniel e Eliane"},
-    {data: new Date(2024, 10, 1), person: "Douglas", monitoria: "Lucas e Isa"},
-    {data: new Date(2024, 10, 8), person: "Nailson", monitoria: "Jairo e Lúcia"},
-    {data: new Date(2024, 10, 22), person: "Pr. Vinícius", monitoria: "Cris e Rose"},
-    {data: new Date(2024, 10, 29), person: "Nailson", monitoria: "Daniel e Eliane"},
-    {data: new Date(2024, 11, 6), person: "Nailson", monitoria: "Lucas e Isa"},
+    {data: new Date(2024, 11, 27), person: "Próxima escala em fev"/*, monitoria: "Isa e Lucas"*/},
+    {data: new Date(2025, 0, 3), person: "Próxima escala em fev"/*, monitoria: "Isa e Lucas"*/},
+    {data: new Date(2025, 0, 10), person: "Próxima escala em fev"/*, monitoria: "Isa e Lucas"*/},
+    {data: new Date(2025, 0, 17), person: "Próxima escala em fev"/*, monitoria: "Isa e Lucas"*/},
+    
 ]
 
 window.addEventListener('load', proximoPlantaoDeSexta(plantaosexta))
 
 function proximoPlantaoDeSexta(array) {
-    const currentDate = new Date(); // Data de teste: 25 de outubro de 2024
+
+    const currentDate = new Date(); 
     const todayAtMidnight = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), 0, 0, 0, 0); // Data atual sem horas
 
     // Filtrar as datas que são iguais ou após a data atual
@@ -119,7 +106,8 @@ function proximoPlantaoDeSexta(array) {
         let pessoa = futureDates[0].person;
         let monitoria = futureDates[0].monitoria;
 
-        document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
+        // document.querySelector('#plantaosexta').innerHTML    = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
+        document.querySelector('#plantaosexta').innerHTML = `${pessoa}`;
     } else {
         // Caso contrário, retorna uma mensagem de definição futura
         document.querySelector('#plantaosexta').innerHTML = 'Próxima escala em 2025';
@@ -144,8 +132,6 @@ function mostrarPlantaoDeSexta() {
 
 const diaDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
 const mesesDoAno = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-
-
 
 let reuniaoadm = [
     // {data: new Date(2024, 5, 10), link: 'https://docs.google.com/document/d/1FLS1MoVRcYZ1uZshPi0TDnmBzE0JThaMhcgqlPmuEaE/edit'},
