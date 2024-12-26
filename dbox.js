@@ -129,7 +129,7 @@ function compensacao() {
   const isFeriado = false;
   const dataHoje = new Date();
   const diaSemana = dataHoje.getDay();
-  const isFirstOrLast = true;
+  const isFirstOrLast = false;
   const isVacation = true;
 
   const nomesPorDia = [
