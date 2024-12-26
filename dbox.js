@@ -8,54 +8,55 @@ window.addEventListener("load", mostrarEscalaDeOracao);
 // Cultos
 function cultos() {
 
-  const dataAtual = new Date()
+  // const dataAtual = new Date()
 
-  if (dataAtual.getDay() == 0) {
-    document.querySelector("#cultos").innerHTML = "Hoje é domingo!";
-  }
-  if (dataAtual.getDay() == 1) {
-      document.querySelector("#cultos").innerHTML = "Alexandro";
-  }
-  if (dataAtual.getDay() == 2) {
-      document.querySelector("#cultos").innerHTML = "Pr. Vinícius";
-  }
-  if (dataAtual.getDay() == 3) {
-    if (dataAtual.getDate() == 20) {
-      document.querySelector("#cultos").innerHTML = "Feriado";
-    } else {
-      document.querySelector("#cultos").innerHTML = "Pr. Leonardo";
-    }
-  } 
-  if (dataAtual.getDay() == 4) {
+  // if (dataAtual.getDay() == 0) {
+    // document.querySelector("#cultos").innerHTML = "Hoje é domingo!";
+    document.querySelector("#cultos").innerHTML = "Alexandro (fazer escala)";
+  // }
+  // if (dataAtual.getDay() == 1) {
+  //     document.querySelector("#cultos").innerHTML = "Alexandro";
+  // }
+  // if (dataAtual.getDay() == 2) {
+  //     document.querySelector("#cultos").innerHTML = "Pr. Vinícius";
+  // }
+  // if (dataAtual.getDay() == 3) {
+  //   if (dataAtual.getDate() == 20) {
+  //     document.querySelector("#cultos").innerHTML = "Feriado";
+  //   } else {
+  //     document.querySelector("#cultos").innerHTML = "Pr. Leonardo";
+  //   }
+  // } 
+  // if (dataAtual.getDay() == 4) {
 
-    if (dataAtual.getDate() == 7) {
-      document.querySelector("#cultos").innerHTML =
-        "7h Andressa" + " | " + "10h Nailson" + " | " + "13h Márcio";
-    }
-    if (dataAtual.getDate() == 14) {
-      document.querySelector("#cultos").innerHTML =
-        "7h Jaque" + " | " + "10h Valéria" + " | " + "13h Drika";
-    }
-    if (dataAtual.getDate() == 21) {
-      document.querySelector("#cultos").innerHTML =
-        "7h Carol" + " | " + "10h Renata" + " | " + "13h Jhéssica";
-    }
-    if (dataAtual.getDate() == 28) {
-      document.querySelector("#cultos").innerHTML =
-        "7h Carol" + " | " + "10h Malu" + " | " + "Ana Prado";
-    }
-  }
+  //   if (dataAtual.getDate() == 7) {
+  //     document.querySelector("#cultos").innerHTML =
+  //       "7h Andressa" + " | " + "10h Nailson" + " | " + "13h Márcio";
+  //   }
+  //   if (dataAtual.getDate() == 14) {
+  //     document.querySelector("#cultos").innerHTML =
+  //       "7h Jaque" + " | " + "10h Valéria" + " | " + "13h Drika";
+  //   }
+  //   if (dataAtual.getDate() == 21) {
+  //     document.querySelector("#cultos").innerHTML =
+  //       "7h Carol" + " | " + "10h Renata" + " | " + "13h Jhéssica";
+  //   }
+  //   if (dataAtual.getDate() == 28) {
+  //     document.querySelector("#cultos").innerHTML =
+  //       "7h Carol" + " | " + "10h Malu" + " | " + "Ana Prado";
+  //   }
+  // }
   
-  if (dataAtual.getDay() == 5) {
-    if (dataAtual.getDate() == 15) {
-      document.querySelector('#cultos').innerHTML = "Feriado"
-    } else { 
-    document.querySelector("#cultos").innerHTML = "Douglas";
-    }
-  }
-  if (dataAtual.getDay() == 6) {
-    document.querySelector("#cultos").innerHTML = "Feliz Sábado!";
-  }
+  // if (dataAtual.getDay() == 5) {
+  //   if (dataAtual.getDate() == 15) {
+  //     document.querySelector('#cultos').innerHTML = "Feriado"
+  //   } else { 
+  //   document.querySelector("#cultos").innerHTML = "Douglas";
+  //   }
+  // }
+  // if (dataAtual.getDay() == 6) {
+  //   document.querySelector("#cultos").innerHTML = "Feliz Sábado!";
+  // }
 }
 
 //Oração
