@@ -33,7 +33,7 @@ function proximoPlantaoDeSexta(array) {
         document.querySelector('#plantaosexta').innerHTML = `Férias`;
     } else {
         // Caso contrário, retorna uma mensagem de definição futura
-        document.querySelector('#plantaosexta').innerHTML = 'Próxima escala em 2025';
+        document.querySelector('#plantaosexta').innerHTML = 'Em construção';
     }
 }
 
@@ -58,7 +58,9 @@ const mesesDoAno = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 
 
 let reuniaoadm = [
     // {data: new Date(2024, 11, 9), link: 'https://docs.google.com/document/d/1tTqxSn2NH6EkcadEhb5RWnngNLDCDhWMO3nri6YP35s/edit', hora: '14:00'},   
-    {data: new Date(2025, 0, 16), link: 'https://docs.google.com/document/d/1tTqxSn2NH6EkcadEhb5RWnngNLDCDhWMO3nri6YP35s/edit', hora: 'horário a definir'},   
+    {data: new Date(2025, 1, 11), link: 'https://docs.google.com/document/d/156fZLY64Ek7Rp1o2TqvozNcY9C5StDO3YjMnDiCrqVs/edit?tab=t.0', hora: '14h'},   
+    {data: new Date(2025, 1, 18), link: 'https://docs.google.com/document/d/1U-kMueb17ViNZQ_tDXZfhgcpQmMFruQhFwM4ShrskG8/edit?tab=t.0', hora: '14h'},   
+    {data: new Date(2025, 1, 25), link: 'https://docs.google.com/document/d/1wz3gE9hmnWQhB49L_hAB7ue-iR3USJPdsmXiw4wCy5E/edit?tab=t.0', hora: '14h'},   
 ]
 window.addEventListener('load', () => proximaReuniaoAdm(reuniaoadm)); 
 // Corrigido para garantir que proximaReuniaoAdm seja passada como uma função

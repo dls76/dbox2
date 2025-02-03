@@ -98,23 +98,13 @@ function escalaDeEntrevistas() {
   const ferias = false
   const feriadoRecesso = false
 
-  // const plantao = [
-  //   "Hoje é domingo!",
-  //   "Carol(M) | Nailson(T)",
-  //   "Alexandro(M) | Jaque(T)",
-  //   "Renata(M) | Malú(T)",
-  //   "Valéria(M) | Douglas(T)",
-  //   "Andressa(M) | Camila(T)",
-  //   "Feliz Sábado!"
-  // ];
-
   const plantao = [
     "Hoje é domingo!",
-    "Alexandro",
-    "Alexandro",
-    "Alexandro",
-    "Alexandro",
-    "Alexandro",
+    "Carol(M) | Jaque(T)",
+    "Murilo(M) | Sila(T)",
+    "Renata(M) | Malú(T)",
+    "Valéria(M) | Douglas(T)",
+    "Andressa(M) | Camila(T)",
     "Feliz Sábado!"
   ];
 
