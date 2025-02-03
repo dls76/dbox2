@@ -1,6 +1,6 @@
 export const nomes = [
 
-    {nome: "Tiago Moreira...", data: new Date(2024, 0, 1), dia: 1, mes: 0, ano: 1998, funcao: "Professor", foto: 'img/anivImg/janeiro/Tiago.jpeg'},
+    {nome: "Tiago Moreira", data: new Date(2024, 0, 1), dia: 1, mes: 0, ano: 1998, funcao: "Professor", foto: 'img/anivImg/janeiro/Tiago.jpeg'},
     {nome: "Solange de Jesus Camargo", data: new Date(2024, 0, 4), dia: 4, mes: 0, ano: 1977, funcao: "Professora", foto:"img/anivImg/janeiro/"},
     {nome: "Simone Figueiredo Boso", data: new Date(2024, 0, 13), dia: 13, mes: 0, ano: 1974, funcao: "Professora", foto:"img/anivImg/janeiro/simone.jpg"},
     {nome: "Maria de Lourdes Cardoso de Oliveira Dubinski", data: new Date(2024, 0,  ), dia: 14, mes: 0, ano: 1963, funcao: "Orientadora", foto:"img/anivImg/janeiro/malu.jpg"},

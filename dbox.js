@@ -8,55 +8,59 @@ window.addEventListener("load", mostrarEscalaDeOracao);
 // Cultos
 function cultos() {
 
-  // const dataAtual = new Date()
+  const dataAtual = new Date()
 
-  // if (dataAtual.getDay() == 0) {
-    // document.querySelector("#cultos").innerHTML = "Hoje é domingo!";
-    document.querySelector("#cultos").innerHTML = "Alexandro (fazer escala)";
-  // }
-  // if (dataAtual.getDay() == 1) {
-  //     document.querySelector("#cultos").innerHTML = "Alexandro";
-  // }
-  // if (dataAtual.getDay() == 2) {
-  //     document.querySelector("#cultos").innerHTML = "Pr. Vinícius";
-  // }
-  // if (dataAtual.getDay() == 3) {
-  //   if (dataAtual.getDate() == 20) {
-  //     document.querySelector("#cultos").innerHTML = "Feriado";
-  //   } else {
-  //     document.querySelector("#cultos").innerHTML = "Pr. Leonardo";
-  //   }
-  // } 
-  // if (dataAtual.getDay() == 4) {
+  if (dataAtual.getDay() == 0) {
+    document.querySelector("#cultos").innerHTML = "Hoje é domingo!";
+  }
+  if (dataAtual.getDay() == 1) {
+    if (dataAtual.getDate() == 3) {
+      document.querySelector("#cultos").innerHTML = "Douglas";
+    } else {
+      document.querySelector("#cultos").innerHTML = "Murilo";
+    }
+  }
+  if (dataAtual.getDay() == 2) {
+    if (dataAtual.getDate() == 4) {
+      document.querySelector("#cultos").innerHTML = "Murilo";
+    } else {
+      document.querySelector("#cultos").innerHTML = "Pr. Vinícius";
+    }
+  }
+  if (dataAtual.getDay() == 3) {
+    if (dataAtual.getDate() == 5) {
+      document.querySelector("#cultos").innerHTML = "Nailson";
+    } else {
+      document.querySelector("#cultos").innerHTML = "Pr. Leonardo";
+    }
+  } 
+  if (dataAtual.getDay() == 4) {
 
-  //   if (dataAtual.getDate() == 7) {
-  //     document.querySelector("#cultos").innerHTML =
-  //       "7h Andressa" + " | " + "10h Nailson" + " | " + "13h Márcio";
-  //   }
-  //   if (dataAtual.getDate() == 14) {
-  //     document.querySelector("#cultos").innerHTML =
-  //       "7h Jaque" + " | " + "10h Valéria" + " | " + "13h Drika";
-  //   }
-  //   if (dataAtual.getDate() == 21) {
-  //     document.querySelector("#cultos").innerHTML =
-  //       "7h Carol" + " | " + "10h Renata" + " | " + "13h Jhéssica";
-  //   }
-  //   if (dataAtual.getDate() == 28) {
-  //     document.querySelector("#cultos").innerHTML =
-  //       "7h Carol" + " | " + "10h Malu" + " | " + "Ana Prado";
-  //   }
-  // }
+    if (dataAtual.getDate() == 6) {
+      document.querySelector("#cultos").innerHTML =
+        "7h Andressa" + " | " + "10h Nailson" + " | " + "13h Malu";
+    }
+    if (dataAtual.getDate() == 13) {
+      document.querySelector("#cultos").innerHTML =
+        "7h Jaque" + " | " + "10h Valéria" + " | " + "13h Drika";
+    }
+    if (dataAtual.getDate() == 20) {
+      document.querySelector("#cultos").innerHTML =
+        "7h Carol" + " | " + "10h Renata" + " | " + "13h Jhessica";
+    }
+    if (dataAtual.getDate() == 27) {
+      document.querySelector("#cultos").innerHTML =
+        "7h Marcio" + " | " + "10h Nailson" + " | " + "Ana Prado";
+    }
+  }
   
-  // if (dataAtual.getDay() == 5) {
-  //   if (dataAtual.getDate() == 15) {
-  //     document.querySelector('#cultos').innerHTML = "Feriado"
-  //   } else { 
-  //   document.querySelector("#cultos").innerHTML = "Douglas";
-  //   }
-  // }
-  // if (dataAtual.getDay() == 6) {
-  //   document.querySelector("#cultos").innerHTML = "Feliz Sábado!";
-  // }
+  if (dataAtual.getDay() == 5) {
+    document.querySelector("#cultos").innerHTML = "Douglas";
+  }
+  
+  if (dataAtual.getDay() == 6) {
+    document.querySelector("#cultos").innerHTML = "Feliz Sábado!";
+  }
 }
 
 //Oração
@@ -126,20 +130,21 @@ function escalaDeEntrevistas() {
 
 
 function compensacao() {
-
-  const isFeriado = false;
+  
   const dataHoje = new Date();
   const diaSemana = dataHoje.getDay();
+
+  const isFeriado = false;
   const isFirstOrLast = false;
-  const isVacation = true;
+  const isVacation = false;
 
   const nomesPorDia = [
     "Hoje é domingo!",
     "Pr. Vinícius (M)",
-    "Douglas (T)",
+    "Sem compensações hoje",
     "Jaque, Camila (M), Andressa, Carin (T)",
     "Valéria (M), Renata (T)",
-    "Malu (M), Ale, Josi e Carol (T)",
+    "Malu, Douglas (M), Josi, Carol (T)",
     "Feliz Sábado!",
   ];
 
