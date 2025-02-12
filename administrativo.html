@@ -111,6 +111,43 @@
             <div>Protocolo Acidentes</div>
         </a>
 
+        <span class="linha-disciplina" id="linkbolsaadv">
+            <img src="img/link.png" alt="">
+            <span style="color: rgb(90, 90, 90); font-size: 14px; margin-left: 5px;margin-right: 5px;">Link Adventistas</span>
+            <input type="text" id="inputbolsas" value="https://forms.office.com/r/sRmWVXwbeF" readonly>
+            <button id="btbolsasadv" onclick="copyContentBolsas()" style="margin-left: 10px;">Copiar</button>
+        </span>
+
+        <style>
+            #inputbolsas {display: none;}
+            #btbolsasadv {
+                background-color: dodgerblue;
+                color: white;
+                border: none;
+                padding: 5px 3px 5px 3px;
+                border-radius: 4px;
+                width: 100px;
+            }
+
+            #inputbolsas {
+    pointer-events: none; /* Impede interações no input */
+}
+
+#btbolsasadv {
+    cursor: pointer;
+    background-color: dodgerblue; /* Cor padrão do botão */
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#btbolsasadv:hover {
+    background-color: rgb(2, 62, 122); /* Tom levemente mais escuro ao passar o mouse */
+}
+
+        </style>
+        
+
         <!-- <a class="linha-disciplina" href="" target="_blank">
             <img src="img/emergency.png" alt="">
             <div>Telefones Emergências</div>
@@ -282,7 +319,6 @@
             <img src="img/pdf.png" alt="">
             <div>Pátio Coberto</div>
         </a>
-
     </div>
 
     <div class="titulosecao">RH</div>
@@ -332,7 +368,18 @@
                 } catch (err) { 
                     console.error('Failed to copy: ', err); 
                 } 
-            } 
+            }
+            
+            function copyContentBolsas() {
+    const input = document.getElementById("inputbolsas");
+    navigator.clipboard.writeText(input.value)
+        .then(() => alert("Link copiado!"))
+        .catch(err => console.error("Erro ao copiar: ", err));
+}
+
+
+
+
 
         </script>
         
@@ -404,6 +451,12 @@
             <div>Ramais Voip</div>
         </a>
 
+        <a href="https://docs.google.com/spreadsheets/d/1UBzy3p9qrPAhEr968kJS09TBpHMgzcLBU9V1XR-4vWg/edit?gid=0#gid=0" class="linha-disciplina" target="_blank">
+            <img src="img/google-sheets.png" alt="">
+            <div>Encaminhamentos Psicóloga</div>
+        </a>
+
+        
         <a href="pg-externas\planilha.html"></a>
     </div>
     
