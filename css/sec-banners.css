@@ -32,10 +32,10 @@
 }
 
 .sec-banners div a {
-    height: 120px;
+    height: 200px;
     margin: 2rem;
     /* padding: 1rem; */
-    width: 250px;
+    width: 380px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -78,7 +78,31 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-shadow: 0 0 4px black;
-
     color: white;
+}
 
+
+#mulher {
+    background-image: url(../img/bannermulher.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 0 0 4px black;
+    color: white;
+}
+
+
+#pascoa2025 {
+    background-image: url(../img/pascoa2025.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 0 0 4px black;
+    color: white;
+}
+
+#dezdias {
+    background-image: url(../img/dezdias2025.jpg    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 0 0 4px black;
+    color: white;
 }
