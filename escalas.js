@@ -1,9 +1,46 @@
 
 let plantaosexta = [
-    {data: new Date(2024, 11, 27), person: "Próxima escala em fev"/*, monitoria: "Isa e Lucas"*/},
-    {data: new Date(2025, 0, 3), person: "Próxima escala em fev"/*, monitoria: "Isa e Lucas"*/},
-    {data: new Date(2025, 0, 10), person: "Próxima escala em fev"/*, monitoria: "Isa e Lucas"*/},
-    {data: new Date(2025, 0, 17), person: "Próxima escala em fev"/*, monitoria: "Isa e Lucas"*/},
+    {data: new Date(2025, 1, 7), person: "Nailson", monitoria: "Lincon e Carmelis"},
+    {data: new Date(2025, 1, 14), person: "Douglas", monitoria: "Gabriel e Isabele"},
+    {data: new Date(2025, 1, 21), person: "Pr. Vinícius", monitoria: "Kadu e Rose"},
+    {data: new Date(2025, 1, 28), person: "Murilo", monitoria: "Daniel e Eliane"},
+    {data: new Date(2025, 2, 7), person: "Renata", monitoria: "Christian e Lucia"},
+    {data: new Date(2025, 2, 14), person: "Andressa", monitoria: "Lucas e Carmelis"},
+    {data: new Date(2025, 2, 21), person: "Jaque", monitoria: "Lincon e Isabele"},
+    {data: new Date(2025, 2, 28), person: "Malu", monitoria: "Gabriel e Rose"},
+    {data: new Date(2025, 3, 4), person: "Valéria", monitoria: "Kadu e Eliane"},
+    {data: new Date(2025, 3, 11), person: "Camila", monitoria: "Daneiel e Lucia"},
+    {data: new Date(2025, 3, 18), person: "Josi", monitoria: "Christian e Carmelis"},
+    {data: new Date(2025, 3, 25), person: "Carin", monitoria: "Lincon e Isabele"},
+    // {data: new Date(2025, 4, 9), person: "Carol", monitoria: "Gabriel e Rose"},
+    // {data: new Date(2025, 4, 9), person: "Carol", monitoria: "Kadu e Eliane"},
+    // {data: new Date(2025, 4, 9), person: "Carol", monitoria: "Daniel e Lucia"},
+    // {data: new Date(2025, 4, 9), person: "Carol", monitoria: "Christian e Carmelis"},
+    // {data: new Date(2025, 4, 9), person: "Carol", monitoria: "Lucas e Isabele"},
+    // {data: new Date(2025, 4, 9), person: "Carol", monitoria: "Lincon e Rose"},
+    // {data: new Date(2025, 4, 9), person: "Carol", monitoria: "Gabriel e Eliane"},
+    // {data: new Date(2025, 4, 9), person: "Carol", monitoria: "Kadu e Lucia"},
+    // {data: new Date(2025, 4, 9), person: "Carol", monitoria: "Daniel e Carmelis"},
+    
+    
+
+
+// Carlos Eduardo (Kadu) e Eliane
+// 16/05/25
+// Daniel e Lucia
+// 23/05/25
+// Christian e Carmelis
+// 30/05/25
+// Lucas e Isabele
+// 06/06/25
+// Lincon e Rose
+// 13/06/25
+// Gabriel e Eliane
+// 20/06/25
+// Carlos Eduardo (Kadu) e Lucia
+// 27/06/25
+// Daniel e Carmelis
+// 04/07/25
     
 ]
 
@@ -29,12 +66,12 @@ function proximoPlantaoDeSexta(array) {
         let pessoa = futureDates[0].person;
         let monitoria = futureDates[0].monitoria;
 
-        // document.querySelector('#plantaosexta').innerHTML    = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
-        document.querySelector('#plantaosexta').innerHTML = `Férias`;
-    } else {
+        document.querySelector('#plantaosexta').innerHTML    = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
+    } 
+    // else {
         // Caso contrário, retorna uma mensagem de definição futura
-        document.querySelector('#plantaosexta').innerHTML = 'Em construção';
-    }
+    //     document.querySelector('#plantaosexta').innerHTML = 'Em construção';
+    // }
 }
 
 function mostrarPlantaoDeSexta() {
