@@ -1,4 +1,4 @@
-export const plantoes = [
+const plantoes = [
     { data: new Date(2024, 8, 24), nome: "Alexandro, Josi, Carin, Sila, Valéria" },
     { data: new Date(2024, 9, 1), nome: "Douglas, Alícia, Carin, Sila, Renata" },
     { data: new Date(2024, 9, 8), nome: "Alexandro, Josi, Juliana, Sila, Carol" },
@@ -15,15 +15,15 @@ export const plantoes = [
 
 
 // Função para obter o próximo plantão, destacando o atual até o final do dia
-export function getProximoPlantao() {
-    const agora = new Date();
+//  function getProximoPlantao() {
+    // const agora = new Date();
     // Filtra os plantões futuros ou que estão no mesmo dia
-    let futureDates = plantoes.filter(e => e.data >= agora.setHours(0, 0, 0, 0));
-    return futureDates.length > 0 ? futureDates[0] : null;
-}
+    // let futureDates = plantoes.filter(e => e.data >= agora.setHours(0, 0, 0, 0));
+    // return futureDates.length > 0 ? futureDates[0] : null;
+// }
 
 // Função para gerar a lista de plantões com destaque no próximo plantão
-export function getListaPlantoesComDestaque() {
+ function getListaPlantoesComDestaque() {
 
 
     const proximoPlantao = getProximoPlantao();

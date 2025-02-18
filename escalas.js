@@ -1,37 +1,57 @@
+// 
 
-let reuniaoadm = [
-     
-    {data: new Date(2025, 1, 11), link: 'https://docs.google.com/document/d/156fZLY64Ek7Rp1o2TqvozNcY9C5StDO3YjMnDiCrqVs/edit?tab=t.0', hora: '14h'},   
-    {data: new Date(2025, 1, 18), link: 'https://docs.google.com/document/d/1U-kMueb17ViNZQ_tDXZfhgcpQmMFruQhFwM4ShrskG8/edit?tab=t.0', hora: '14h'},   
-    {data: new Date(2025, 1, 25), link: 'https://docs.google.com/document/d/1wz3gE9hmnWQhB49L_hAB7ue-iR3USJPdsmXiw4wCy5E/edit?tab=t.0', hora: '14h'},   
-]
-window.addEventListener('load', () => proximaReuniaoAdm(reuniaoadm)); 
-// Corrigido para garantir que proximaReuniaoAdm seja passada como uma função
+
+const reuniaoadm = [
+    { data: new Date(2025, 1, 11), link: 'https://docs.google.com/document/d/156fZLY64Ek7Rp1o2TqvozNcY9C5StDO3YjMnDiCrqVs/edit?tab=t.0', hora: '14h' },
+    { data: new Date(2025, 1, 18), link: 'https://docs.google.com/document/d/1U-kMueb17ViNZQ_tDXZfhgcpQmMFruQhFwM4ShrskG8/edit?tab=t.0', hora: '14h' },
+    { data: new Date(2025, 1, 25), link: 'https://docs.google.com/document/d/1wz3gE9hmnWQhB49L_hAB7ue-iR3USJPdsmXiw4wCy5E/edit?tab=t.0', hora: '14h' },
+    { data: new Date(2025, 2, 4), link: 'https://docs.google.com/document/d/1zWy9d7jIYYxMye3dvr_uZNpOGrGrBNQXxMQ3n3tG7Xs/edit?usp=sharing', hora: '14h' },
+];
+
+const diaDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+const mesesDoAno = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
+window.addEventListener('load', function() {
+    proximaReuniaoAdm(reuniaoadm);
+});
+
 function proximaReuniaoAdm(array) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Normalizando a data para evitar problemas com horários
 
-    const currentDate = new Date();
-
-    const futureDates = array.filter((item)=>
-        item.data >= currentDate || (item.data.getFullYear() === currentDate.getFullYear() && item.data.getMonth() === currentDate.getMonth() && item.data.getDate() === currentDate.getDate())
-    );
+    const futureDates = array.filter(item => {
+        const itemDate = new Date(item.data);
+        itemDate.setHours(0, 0, 0, 0);
+        return itemDate >= today;
+    });
 
     futureDates.sort((a, b) => a.data - b.data);
 
-    if (futureDates.length > 0) {
-        let mes = futureDates[0].data.getMonth();
-        let dia = futureDates[0].data.getDate();
-        dia = dia < 10 ? '0' + dia : dia;
-        mes = mes < 9 ? '0' + (mes + 1) : (mes + 1); 
-        let link = document.querySelector('#ralink')
-        let linkrapidora = document.querySelector('#linkrapidora')
+    const reuniaoAdmElement = document.querySelector('#reuniaoadm');
+    const linkElement = document.querySelector('#ralink');
+    const linkRapidoraElement = document.querySelector('#linkrapidora');
 
-        document.querySelector('#reuniaoadm').innerHTML = `${diaDaSemana[futureDates[0].data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} - ${futureDates[0].hora}`; 
-        link.setAttribute("href", futureDates[0].link)
-        linkrapidora.setAttribute("href", futureDates[0].link)
+    if (!reuniaoAdmElement || !linkElement || !linkRapidoraElement) {
+        console.error('Elemento não encontrado no DOM.');
+        return;
+    }
+
+    if (futureDates.length > 0) {
+        const proxReuniao = futureDates[0];
+        let dia = proxReuniao.data.getDate().toString().padStart(2, '0');
+        let mes = (proxReuniao.data.getMonth() + 1).toString().padStart(2, '0');
+
+        reuniaoAdmElement.innerHTML = `${diaDaSemana[proxReuniao.data.getDay()]}, ${dia} de ${mesesDoAno[mes - 1]} - ${proxReuniao.hora}`;
+        linkElement.setAttribute("href", proxReuniao.link);
+        linkRapidoraElement.setAttribute("href", proxReuniao.link);
     } else {
-        document.querySelector('#reuniaoadm').innerHTML = 'Data e horário a definir'
+        reuniaoAdmElement.innerHTML = 'Data e horário a definir';
     }
 }
+
+window.addEventListener('load', () => {
+    proximoPlantaoDeSexta(plantaosexta);
+});
 
 
 let plantaosexta = [
@@ -74,19 +94,17 @@ let plantaosexta = [
     { data: new Date(2025, 10, 21), person: "Douglas", monitoria: "" },
     { data: new Date(2025, 10, 28), person: "Vinícius", monitoria: "" },
     { data: new Date(2025, 11, 5), person: "Leonardo", monitoria: "" },
-    { data: new Date(2025, 12, 12), person: "Murilo", monitoria: "" },
+    { data: new Date(2025, 12, 12), person: "Murilo", monitoria: "" }
 ];
-
-const mesesDoAno = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
 
 function proximoPlantaoDeSexta(array) {
+    
     const currentDate = new Date();
     const todayAtMidnight = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), 0, 0, 0, 0);
-
     const futureDates = array.filter(item => item.data >= todayAtMidnight);
     futureDates.sort((a, b) => a.data - b.data);
-
+    
     if (futureDates.length > 0) {
         let dia = futureDates[0].data.getDate();
         let mes = futureDates[0].data.getMonth() + 1;
@@ -94,9 +112,9 @@ function proximoPlantaoDeSexta(array) {
         mes = mes < 10 ? '0' + mes : mes;
         let pessoa = futureDates[0].person;
         let monitoria = futureDates[0].monitoria;
-
         document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
     }
+    
 }
 
 function formatarData(data) {

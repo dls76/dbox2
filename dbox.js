@@ -3,7 +3,7 @@ let datahoje = new Date();
 window.addEventListener("load", cultos);
 window.addEventListener("load", compensacao);
 window.addEventListener('load', escalaDeEntrevistas)
-window.addEventListener("load", mostrarEscalaDeOracao);
+// window.addEventListener("load", mostrarEscalaDeOracao);
 
 // Cultos
 function cultos() {
@@ -63,7 +63,7 @@ function cultos() {
   }
 }
 
-//Oração
+/*Oração
 function mostrarEscalaDeOracao() {
   if (datahoje.getDay() == 0) {
     document.querySelector("#contentoracao").innerHTML = "Hoje é domingo!";
@@ -89,7 +89,7 @@ function mostrarEscalaDeOracao() {
   if (datahoje.getDay() == 6) {
     document.querySelector("#contentoracao").innerHTML = "Feliz Sábado!";
   }
-}
+}*/
 
 //Entrevistas
 function escalaDeEntrevistas() {
