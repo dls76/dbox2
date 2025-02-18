@@ -22,16 +22,67 @@ const eventos = [
 
     {data: new Date(2025, 1, 17), culto1: 'Murilo', culto2: 'Murilo', culto3: 'Murilo'},
     {data: new Date(2025, 1, 18), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
-    {data: new Date(2025, 1, 19), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2025, 1, 19), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
     {data: new Date(2025, 1, 20), culto1: 'Carol', culto2: 'Renata', culto3: 'Jhessica'},
-    {data: new Date(2025, 1, 21), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+    {data: new Date(2025, 1, 21), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
 
     {data: new Date(2025, 1, 24), culto1: 'Murilo', culto2: 'Murilo', culto3: 'Murilo'},
     {data: new Date(2025, 1, 25), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
-    {data: new Date(2025, 1, 26), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+    {data: new Date(2025, 1, 26), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
     {data: new Date(2025, 1, 27), culto1: 'Márcio', culto2: 'Nailson', culto3: 'Ana Prado'},
-    {data: new Date(2025, 1, 28), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+    {data: new Date(2025, 1, 28), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
 
+    // Março
+
+    {data: new Date(2025, 2, 3), culto1: 'Recesso', culto2: 'Recesso', culto3: 'Recesso'},
+    {data: new Date(2025, 2, 4), culto1: 'Feriado', culto2: 'Feriado', culto3: 'Feriado'},
+    {data: new Date(2025, 2, 5), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+    {data: new Date(2025, 2, 6), culto1: '', culto2: '', culto3: ''},
+    {data: new Date(2025, 2, 7), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+
+    {data: new Date(2025, 2, 10), culto1: 'Murilo', culto2: 'Murilo', culto3: 'Murilo'},
+    {data: new Date(2025, 2, 11), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2025, 2, 12), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+    {data: new Date(2025, 2, 13), culto1: '', culto2: '', culto3: ''},
+    {data: new Date(2025, 2, 14), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+
+    {data: new Date(2025, 2, 17), culto1: 'Murilo', culto2: 'Murilo', culto3: 'Murilo'},
+    {data: new Date(2025, 2, 18), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2025, 2, 19), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+    {data: new Date(2025, 2, 20), culto1: '', culto2: '', culto3: ''},
+    {data: new Date(2025, 2, 21), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+
+    {data: new Date(2025, 2, 24), culto1: 'Murilo', culto2: 'Murilo', culto3: 'Murilo'},
+    {data: new Date(2025, 2, 25), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2025, 2, 26), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+    {data: new Date(2025, 2, 27), culto1: '', culto2: '', culto3: ''},
+    {data: new Date(2025, 2, 28), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+
+    // Abril
+
+    {data: new Date(2025, 2, 31), culto1: 'Recesso', culto2: 'Recesso', culto3: 'Recesso'},
+    {data: new Date(2025, 3, 1), culto1: 'Feriado', culto2: 'Feriado', culto3: 'Feriado'},
+    {data: new Date(2025, 3, 2), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+    {data: new Date(2025, 3, 3), culto1: '', culto2: '', culto3: ''},
+    {data: new Date(2025, 3, 4), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+
+    {data: new Date(2025, 3, 7), culto1: 'Murilo', culto2: 'Murilo', culto3: 'Murilo'},
+    {data: new Date(2025, 3, 8), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2025, 3, 9), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+    {data: new Date(2025, 3, 10), culto1: '', culto2: '', culto3: ''},
+    {data: new Date(2025, 3, 11), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
+
+    {data: new Date(2025, 3, 14), culto1: 'Murilo', culto2: 'Murilo', culto3: 'Murilo'},
+    {data: new Date(2025, 3, 15), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2025, 3, 16), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+    {data: new Date(2025, 3, 17), culto1: '', culto2: '', culto3: ''},
+    {data: new Date(2025, 3, 18), culto1: 'Feriado', culto2: 'Feriado', culto3: 'Feriado'},
+
+    {data: new Date(2025, 3, 21), culto1: 'Feriado', culto2: 'Feriado', culto3: 'Feriado'},
+    {data: new Date(2025, 3, 22), culto1: 'Pr. Vinícius', culto2: 'Pr. Vinícius', culto3: 'Pr. Vinícius'},
+    {data: new Date(2025, 3, 23), culto1: 'Douglas', culto2: 'Douglas', culto3: 'Douglas'},
+    {data: new Date(2025, 3, 24), culto1: '', culto2: '', culto3: ''},
+    {data: new Date(2025, 3, 25), culto1: 'Pr. Leonardo', culto2: 'Pr. Leonardo', culto3: 'Pr. Leonardo'},
 ];
 
 // if ( datahoje.getDate() == 7) {
