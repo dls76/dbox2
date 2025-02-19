@@ -1,122 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DBox</title>
-    <link rel="shortcut icon" href="img/dbox-favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/sec-linksrapidos.css">
-    
-    <!-- Arquivos CSS da Home -->
-     <link rel="stylesheet" href="css/modalAniver.css">
-    <link rel="stylesheet" href="css/submenu.css">
-    <link rel="stylesheet" href="css/escalas.css">
-    <link rel="stylesheet" href="css/next-events.css">
-    <link rel="stylesheet" href="css/calendario-num.css">
-    <link rel="stylesheet" href="css/banners.css">    
-    
-    <!-- <link rel="stylesheet" href="css/aniversariantes.css"> -->
-    <link rel="stylesheet" href="css/divhomeaniver.css">
-    <link rel="stylesheet" href="css/sec-banners.css">
-    <link rel="stylesheet" href="css/sec-horarios.css">
-    
-    <link rel="stylesheet" href="css/pedagogico.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/sec-calendarios.css">
-    <link rel="stylesheet" href="css/modal-urgencias.css">
-    <link rel="stylesheet" href="./css/espiritual.css">
-    
-    <!-- Arquivos externos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./css/divhomeaniver.css">
+    <link rel="shortcut icon" href="img/dbox-favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/sec-linksrapidos.css" />
 
-    <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
+    <!-- Arquivos CSS da Home -->
+    <link rel="stylesheet" href="css/modalAniver.css" />
+    <link rel="stylesheet" href="css/submenu.css" />
+    <link rel="stylesheet" href="css/escalas.css" />
+    <link rel="stylesheet" href="css/next-events.css" />
+    <link rel="stylesheet" href="css/calendario-num.css" />
+    <link rel="stylesheet" href="css/banners.css" />
+
+    <!-- <link rel="stylesheet" href="css/aniversariantes.css"> -->
+    <link rel="stylesheet" href="css/divhomeaniver.css" />
+    <link rel="stylesheet" href="css/sec-banners.css" />
+    <link rel="stylesheet" href="css/sec-horarios.css" />
+
+    <link rel="stylesheet" href="css/pedagogico.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/sec-calendarios.css" />
+    <link rel="stylesheet" href="css/modal-urgencias.css" />
+    <link rel="stylesheet" href="./css/espiritual.css" />
+
+    <!-- Arquivos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./css/divhomeaniver.css" />
+
+    <script
+      src="https://kit.fontawesome.com/8abf0ff8b8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8abf0ff8b8.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="confetti.js"></script>
 
-
     <style>
-        .material-symbols-outlined {
-          font-variation-settings:
-          'FILL' 0,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 24
-        }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- scroll top button -->
     <div class="scrollTopButton" id="top" onclick="scrollToTop()">
-        <i class="fa-solid fa-angle-up"></i>
+      <i class="fa-solid fa-angle-up"></i>
     </div>
 
     <!-- HOME  -->
-    <div class="conteinergeral"> 
+    <div class="conteinergeral">
+      <header id="header">
+        <a id="logo" href="calendario-dbox.html" target="_blank">DBox</a>
+        <nav id="nav">
+          <div id="btn-mobile">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="menu" id="menu">
+            <!-- <a href="index.html" class="active">Home</a> -->
+            <!-- <a href="#sec-pedagogico">Pedagógico</a> -->
+            <a href="administrativo.html" target="_blank">ADMINISTRATIVO</a>
+            <a href="espiritual.html" target="_blank">ESPIRITUAL</a>
+            <a href="matriculas.html" target="_blank">MATRÍCULAS</a>
+            <a href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu"
+              >AMA</a
+            >
+            <a
+              href="https://docs.google.com/spreadsheets/d/1sIpNNR8-OwM3wvFjYwrROTtSpL2Jxm2eI4hWECsVXWk/edit?gid=0#gid=0"
+              target="_blank"
+              >INVESTIMENTOS</a
+            >
+            <a href="https://forms.gle/m9E6FBc93x9dhqfJ6" target="_blank"
+              >COMPRAS</a
+            >
+          </div>
+        </nav>
+        <div class="alert_icons">
+          <span class="material-symbols-outlined" id="bt-ama"
+            >medical_services</span
+          >
+          <span class="material-symbols-outlined" id="fonesurgencias"
+            >shield</span
+          >
+          <span class="material-symbols-outlined" id="ramais-do-menu"
+            >call</span
+          >
+        </div>
+      </header>
 
-        <header id="header">
-            <a id="logo" href="calendario-dbox.html" target="_blank">DBox</a>          
-            <nav id="nav">
-                <div id="btn-mobile">
-                    <i class="fa-solid fa-bars"></i>    
+      <main id="conteinerhome">
+        <!-- Escalas -->
+        <div class="divhome" id="escalas">
+          <div class="titulodivhomeescalas">Escalas</div>
+
+          <div class="conteinerescalas" id="conteinerescalas">
+            <a href="cultos.html" target="_blank">
+              <div class="escala" id="escalacultos">
+                <div class="icon">
+                  <img src="img/yes.png" alt="" />
                 </div>
-                <div class="menu" id="menu">
-                    <!-- <a href="index.html" class="active">Home</a> -->
-                    <!-- <a href="#sec-pedagogico">Pedagógico</a> -->
-                    <a href="administrativo.html" target="_blank">ADMINISTRATIVO</a>
-                    <a href="espiritual.html" target="_blank">ESPIRITUAL</a>
-                    <a href="matriculas.html" target="_blank">MATRÍCULAS</a>        
-                    <a href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu">AMA</a>
-                    <a href="https://docs.google.com/spreadsheets/d/1sIpNNR8-OwM3wvFjYwrROTtSpL2Jxm2eI4hWECsVXWk/edit?gid=0#gid=0" target="_blank">INVESTIMENTOS</a>
-                    <a href="https://forms.gle/m9E6FBc93x9dhqfJ6" target="_blank">COMPRAS</a>
+
+                <div>
+                  <div class="tituloescala">Cultos do dia</div>
+                  <div class="contentescala" id="cultos"></div>
+                  <i class="fa-solid fa-angle-right seta"></i>
                 </div>
-            </nav>
-            <div class="alert_icons">
-                <span class="material-symbols-outlined" id="bt-ama">medical_services</span>
-                <span class="material-symbols-outlined" id="fonesurgencias">shield</span>
-                <span class="material-symbols-outlined" id="ramais-do-menu">call</span>
-            </div>
-        </header>
+              </div>
+            </a>
 
-        <main id="conteinerhome">
-
-            <!-- Escalas -->
-            <div class="divhome" id="escalas">           
-
-                <div class="titulodivhomeescalas">Escalas</div>
-
-                <div class="conteinerescalas" id="conteinerescalas">
-
-
-                    <a href="cultos.html" target="_blank">
-
-                                                
-                        <div class="escala" id="escalacultos">
-                            
-                            <div class="icon">
-                                <img src="img/yes.png" alt="">
-                            </div>
-
-                            <div>
-                                <div class="tituloescala">Cultos do dia</div>
-                                <div class="contentescala" id="cultos"></div>
-                                <i class="fa-solid fa-angle-right seta"></i>
-                            </div>
-                        
-                        </div>
-                    </a>
-
-                    <!-- <a href="pg-externas/escaladeoracao.html" target="_blank">
+            <!-- <a href="pg-externas/escaladeoracao.html" target="_blank">
 
                                                 
                         <div class="escala">
@@ -133,79 +147,80 @@
                         
                         </div>
                     </a> -->
-                  
-                    <a href="https://docs.google.com/spreadsheets/d/1MGUlVMKqtrx2s7F-rD61PugUSQopbXcP85MsT-lSM_I/edit#gid=0" target="_blank">
-                        
-                        <div class="escala">
-                            
-                            <div class="icon">
-                                <img src="img/yes.png" alt="" id="icon-compensacao">
-                            </div>
-                            <div>
-                                <div class="tituloescala" id="titulocompensacao">Compensação</div>
-                                <div class="contentescala" id="box-nomescomp" style="display: flex;align-items: center;">
-                                    <span id="nomescomp" style="margin-right: 1rem;"></span>
-                                </div>
-                                <i class="fa-solid fa-angle-right seta"></i>
-                            </div>
-                        
-                        </div>
-                    </a>
 
-                    <a href="pg-externas/entrevistas.html" target="_blank">
+            <a
+              href="https://docs.google.com/spreadsheets/d/1MGUlVMKqtrx2s7F-rD61PugUSQopbXcP85MsT-lSM_I/edit#gid=0"
+              target="_blank"
+            >
+              <div class="escala">
+                <div class="icon">
+                  <img src="img/yes.png" alt="" id="icon-compensacao" />
+                </div>
+                <div>
+                  <div class="tituloescala" id="titulocompensacao">
+                    Compensação
+                  </div>
+                  <div
+                    class="contentescala"
+                    id="box-nomescomp"
+                    style="display: flex; align-items: center"
+                  >
+                    <span id="nomescomp" style="margin-right: 1rem"></span>
+                  </div>
+                  <i class="fa-solid fa-angle-right seta"></i>
+                </div>
+              </div>
+            </a>
 
-                        <div class="escala">
-                            
-                            <div class="icon">
-                                <img src="img/yes.png"alt="" id="icon-plantao-diario">
-                            </div>
+            <a href="pg-externas/entrevistas.html" target="_blank">
+              <div class="escala">
+                <div class="icon">
+                  <img src="img/yes.png" alt="" id="icon-plantao-diario" />
+                </div>
 
-                            <div>
-                                <div class="tituloescala">Entrevistas</div>
-                                <div class="contentescala" id="box-plantaodiario" style="display: flex; align-items: center;">
-                                    <span id="plantaodiario"></span>
-                                </div>
-                                <i class="fa-solid fa-angle-right seta"></i>
-                            </div>
-                        
-                        </div>
-                    
-                    </a>
+                <div>
+                  <div class="tituloescala">Entrevistas</div>
+                  <div
+                    class="contentescala"
+                    id="box-plantaodiario"
+                    style="display: flex; align-items: center"
+                  >
+                    <span id="plantaodiario"></span>
+                  </div>
+                  <i class="fa-solid fa-angle-right seta"></i>
+                </div>
+              </div>
+            </a>
 
-                    <a href="pg-externas/plantaosexta.html">
+            <a href="pg-externas/plantaosexta.html">
+              <div class="escala" id="escalasexta">
+                <div class="icon">
+                  <img src="img/yes.png" alt="" />
+                </div>
+                <div>
+                  <div class="tituloescala">Plantão de sexta</div>
+                  <div class="contentescala" id="plantaosexta"></div>
+                  <i class="fa-solid fa-angle-right seta"></i>
+                </div>
+              </div>
+            </a>
 
-                        <div class="escala" id="escalasexta">
-                            
-                            <div class="icon">
-                                <img src="img/yes.png" alt="">
-                            </div>
-                            <div>
-                                <div class="tituloescala">Plantão de sexta</div>
-                                <div class="contentescala" id="plantaosexta"></div>
-                                <i class="fa-solid fa-angle-right seta"></i>
-                            </div>
-                        
-                        </div>
-                    </a>
+            <a id="ralink" target="_blank">
+              <div class="escala">
+                <div class="icon">
+                  <img src="img/yes.png" alt="" />
+                </div>
+                <div>
+                  <div class="tituloescala" id="tituloroute">
+                    Próxima Reunião Administrativa
+                  </div>
+                  <div class="contentescala" id="reuniaoadm"></div>
+                  <i class="fa-solid fa-angle-right seta"></i>
+                </div>
+              </div>
+            </a>
 
-                    <a id="ralink" target="_blank">
-
-                        <div class="escala">
-                            
-                            <div class="icon">
-                                <img src="img/yes.png" alt="">
-                            </div>
-                            <div>
-                                <div class="tituloescala" id="tituloroute">Próxima Reunião Administrativa</div>
-                                <div class="contentescala" id="reuniaoadm"></div>
-                                <i class="fa-solid fa-angle-right seta"></i>
-                            </div>
-                        
-                        </div>
-                    
-                    </a>
-
-                    <!-- <a href="plantaoterca.html" target="_blank">
+            <!-- <a href="plantaoterca.html" target="_blank">
 
                         <div class="escala">
                             
@@ -221,530 +236,951 @@
                         </div>
                     
                     </a> -->
+          </div>
+        </div>
 
-                </div>
-    
+        <!-- Links Rápidos -->
+        <div class="divhome divhomelinksrapidos">
+          <div class="titulodivhomelinksrapidos">Links Rápidos</div>
+
+          <div class="divhome linksrapidos" id="divhomelinks">
+            <a href="https://www.classapp.com.br/">
+              <div class="img">
+                <!-- <img src="img/classapp.png" alt=""> -->
+                <i class="fa-solid fa-comments"></i>
+                <div class="legenda-links">ClassApp</div>
+              </div>
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1I6YiGoD11yMZSHNSu1ThFNH6kKCBsgSAniEvg_DDGrM/edit?tab=t.0"
+              target="_blank"
+            >
+              <div class="img">
+                <!-- <img src="img/calendar.png" alt=""> -->
+                <!-- <i class="fa-regular fa-calendar"></i> -->
+                <!-- <i class="fa-regular fa-calendar-check"></i> -->
+                <i class="fa-solid fa-calendar" id="fa-calendar"></i>
+                <div class="legenda-links">Calendário</div>
+              </div>
+            </a>
+            <a
+              href="https://drive.google.com/drive/folders/1IBY-bU8idQcpgfW98ORSfBmN2hfqL1zy?usp=sharing"
+              target="_blank"
+            >
+              <div class="img">
+                <!-- <img src="img/mail.png" alt=""> -->
+                <!-- <i class="fa-regular fa-envelope"></i> -->
+                <!-- <i class="fa-regular fa-file-pdf"></i> -->
+                <!-- <i class="fa-solid fa-square-envelope"></i> -->
+                <i class="fa-solid fa-envelope" id="fa-envelope"></i>
+                <div class="legenda-links">Comunicados</div>
+              </div>
+            </a>
+            <a href="https://acrm.sdasystems.org/">
+              <div class="img">
+                <!-- <img src="img/acrm.png" alt=""> -->
+                <!-- <i class="fa-solid fa-desktop"></i> -->
+                <i class="fa-solid fa-chart-pie" id="fa-chart-pie"></i>
+                <div class="legenda-links">ACRM</div>
+              </div>
+            </a>
+
+            <a
+              href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/77c97be9-7c06-4bd8-bf1a-38d63dcf5da5/ReportSection67140aaa99fc6fa1a2f8?redirectedFromSignup=1&experience=power-bi"
+            >
+              <div class="img">
+                <!-- <img src="img/bi1.png" alt="" id="bi"> -->
+                <i class="fa-solid fa-chart-simple"></i>
+                <div class="legenda-links">Power BI</div>
+              </div>
+            </a>
+
+            <a href="https://sistemas.usb.org.br/ama/index.php">
+              <div class="img">
+                <!-- <img src="img/ama.png" style="width: 38px;"> -->
+                <i
+                  class="fa-solid fa-briefcase-medical"
+                  id="fa-briefcase-medical"
+                ></i>
+                <div class="legenda-links">AMA</div>
+              </div>
+            </a>
+
+            <a href="" id="linkRotinas">
+              <div class="img">
+                <!-- <img src="img/electricity.png" alt=""> -->
+                <i class="fa-solid fa-bolt"></i>
+                <div class="legenda-links">Rotinas</div>
+              </div>
+            </a>
+
+            <a id="linkrapidora" target="_blank">
+              <div class="img">
+                <!-- <img src="img/raicon.png"> -->
+                <i class="fa-solid fa-file-lines" id="fa-file-lines"></i>
+                <div class="legenda-links">Próx. RA</div>
+              </div>
+            </a>
+
+            <a href="https://login.cpbedu.me/">
+              <div class="img">
+                <!-- <img src="img/eclass.png"> -->
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <div class="legenda-links">E-Class</div>
+              </div>
+            </a>
+
+            <a href="https://sad-asp.educadventista.org/index.php">
+              <div class="img">
+                <!-- <img src="img/eclass.png"> -->
+                <i class="fa-solid fa-desktop"></i>
+                <div class="legenda-links">SAD</div>
+              </div>
+            </a>
+
+            <a href="https://matriculas-dbox.vercel.app/">
+              <div class="img">
+                <!-- <img src="img/eclass.png"> -->
+                <!-- <i class="fa-solid fa-dollar-sign"></i>     -->
+                <i
+                  class="fa-solid fa-comments-dollar"
+                  id="fa-comments-dollar"
+                ></i>
+                <div class="legenda-links">Valores</div>
+              </div>
+            </a>
+
+            <a
+              href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit?gid=183482623#gid=183482623lo"
+            >
+              <div class="img">
+                <!-- <img src="img/eclass.png"> -->
+                <i class="fa-solid fa-unlock" id="fa-unlock"></i>
+                <div class="legenda-links">Vagas</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Calendário Numérico -->
+        <div class="divhome" id="divhomecalendario">
+          <div class="box-cal-num">
+            <div class="titulocalendario">Calendário</div>
+
+            <div class="mescalbox">
+              <span class="spancal prev">
+                <i class="fa-solid fa-chevron-left prev"></i>
+              </span>
+
+              <div class="mescal"></div>
+
+              <span class="spancal next">
+                <i class="fa-solid fa-chevron-right next"></i>
+              </span>
             </div>
 
-            <!-- Links Rápidos -->
-            <div class="divhome divhomelinksrapidos">
-                
-                <div class="titulodivhomelinksrapidos">Links Rápidos</div>
-
-                            <div class="divhome linksrapidos" id="divhomelinks">
-                
-                
-                                <a href="https://www.classapp.com.br/" >
-                                    <div class="img">
-                                        <!-- <img src="img/classapp.png" alt=""> -->
-                                        <i class="fa-solid fa-comments"></i>
-                                        <div class="legenda-links">ClassApp</div>
-                                    </div>
-                                </a>
-                                <a href="https://docs.google.com/document/d/1I6YiGoD11yMZSHNSu1ThFNH6kKCBsgSAniEvg_DDGrM/edit?tab=t.0" target="_blank">
-                                    <div class="img">
-                                        <!-- <img src="img/calendar.png" alt=""> -->
-                                        <!-- <i class="fa-regular fa-calendar"></i> -->
-                                        <!-- <i class="fa-regular fa-calendar-check"></i> -->
-                                        <i class="fa-solid fa-calendar" id="fa-calendar"></i>
-                                        <div class="legenda-links">Calendário</div>
-                                    </div>
-                                </a>
-                                <a href="https://drive.google.com/drive/folders/1IBY-bU8idQcpgfW98ORSfBmN2hfqL1zy?usp=sharing" target="_blank">
-                                    <div class="img">
-                                        <!-- <img src="img/mail.png" alt=""> -->
-                                        <!-- <i class="fa-regular fa-envelope"></i> -->
-                                        <!-- <i class="fa-regular fa-file-pdf"></i> -->
-                                        <!-- <i class="fa-solid fa-square-envelope"></i> -->
-                                        <i class="fa-solid fa-envelope" id="fa-envelope"></i>
-                                        <div class="legenda-links">Comunicados</div>
-                                    </div>
-                                </a>
-                                <a href="https://acrm.sdasystems.org/" >
-                                    <div class="img">
-                                        <!-- <img src="img/acrm.png" alt=""> -->
-                                        <!-- <i class="fa-solid fa-desktop"></i> -->
-                                        <i class="fa-solid fa-chart-pie" id="fa-chart-pie"></i>
-                                        <div class="legenda-links">ACRM</div>
-                                    </div>
-                                </a>
-                
-                                <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/77c97be9-7c06-4bd8-bf1a-38d63dcf5da5/ReportSection67140aaa99fc6fa1a2f8?redirectedFromSignup=1&experience=power-bi" >
-                                    <div class="img">
-                                        <!-- <img src="img/bi1.png" alt="" id="bi"> -->
-                                        <i class="fa-solid fa-chart-simple"></i>
-                                        <div class="legenda-links">Power BI</div>
-                                    </div>
-                                </a>
-                
-                                <a href="https://sistemas.usb.org.br/ama/index.php" >
-                                    <div class="img">
-                                        <!-- <img src="img/ama.png" style="width: 38px;"> -->
-                                        <i class="fa-solid fa-briefcase-medical" id="fa-briefcase-medical"></i>
-                                        <div class="legenda-links">AMA</div>
-                                    </div>
-                                </a>
-                
-                                <a href=""  id="linkRotinas">
-                                    <div class="img">
-                                        <!-- <img src="img/electricity.png" alt=""> -->
-                                        <i class="fa-solid fa-bolt"></i>
-                                        <div class="legenda-links">Rotinas</div>
-                                    </div>
-                                </a>
-                
-                
-                
-                                <a id="linkrapidora" target="_blank">
-                                    <div class="img">
-                                        <!-- <img src="img/raicon.png"> -->
-                                        <i class="fa-solid fa-file-lines" id="fa-file-lines"></i>
-                                        <div class="legenda-links">Próx. RA</div>
-                                    </div>
-                                </a>
-                
-                                <a href="https://login.cpbedu.me/" >
-                                    <div class="img">
-                                        <!-- <img src="img/eclass.png"> -->
-                                        <i class="fa-solid fa-chalkboard-user"></i>
-                                        <div class="legenda-links">E-Class</div>
-                                    </div>
-                                </a>
-
-                                <a href="https://sad-asp.educadventista.org/index.php" >
-                                    <div class="img">
-                                        <!-- <img src="img/eclass.png"> -->
-                                        <i class="fa-solid fa-desktop"></i>
-                                        <div class="legenda-links">SAD</div>
-                                    </div>
-                                </a>
-                
-
-                                <a href="https://matriculas-dbox.vercel.app/">
-                                    <div class="img">
-                                        <!-- <img src="img/eclass.png"> -->
-                                        <!-- <i class="fa-solid fa-dollar-sign"></i>     -->
-                                        <i class="fa-solid fa-comments-dollar" id="fa-comments-dollar"></i>    
-                                        <div class="legenda-links">Valores</div>
-                                    </div>
-                                </a>
-
-                                <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit?gid=183482623#gid=183482623lo">
-                                    <div class="img">
-                                        <!-- <img src="img/eclass.png"> -->
-                                        <i class="fa-solid fa-unlock" id="fa-unlock"></i>
-                                        <div class="legenda-links">Vagas</div>
-                                    </div>
-                                </a>
-
-                                
-                
-                                
-                
-                            </div>
+            <div class="bodycal">
+              <div class="weekdays">
+                <div>D</div>
+                <div>S</div>
+                <div>T</div>
+                <div>Q</div>
+                <div>Q</div>
+                <div>S</div>
+                <div>S</div>
+              </div>
+              <div class="days"></div>
             </div>
 
-            <!-- Calendário Numérico -->
-            <div class="divhome" id="divhomecalendario">
-
-                <div class="box-cal-num">
-                    <div class="titulocalendario">Calendário</div>
-
-                    <div class="mescalbox">
-                        
-                        <span class="spancal prev">
-                            <i class="fa-solid fa-chevron-left prev"></i>
-                        </span>
-
-                        <div class="mescal"></div>
-                        
-                        <span class="spancal next">
-                            <i class="fa-solid fa-chevron-right next"></i>
-                        </span>
-                    
-                    </div>
-
-                    <div class="bodycal">
-                        <div class="weekdays">
-                            <div>D</div>
-                            <div>S</div>
-                            <div>T</div>
-                            <div>Q</div>
-                            <div>Q</div>
-                            <div>S</div>
-                            <div>S</div>
-                        </div>
-                        <div class="days"></div>
-                    </div>
-
-                    <div class="btnsCal" id="btnsCal">
-                        <div class="btnHoje" id="btn-hoje">Hoje</div>
-                        <div id="btn-obs">Observações</div>
-                    </div>
-                    
-                </div>  
-
+            <div class="btnsCal" id="btnsCal">
+              <div class="btnHoje" id="btn-hoje">Hoje</div>
+              <div id="btn-obs">Observações</div>
             </div>
+          </div>
+        </div>
 
-            <div class="divhome" id="divhomeproxaniversariantes">
-            </div>
-            
-        </main>  
-        
+        <div class="divhome" id="divhomeproxaniversariantes"></div>
+      </main>
     </div>
-    
+
     <!-- BANNERS -->
-    <section class="sec-banners" >
+    <section class="sec-banners">
+      <h1>Eventos e Projetos</h1>
 
-    
-        <h1>Eventos e Projetos</h1>
+      <div>
+        <div>
+          <a
+            href="https://drive.google.com/drive/folders/1xNHO67AGvrB1dW7rNzQTYmaFrxLlJeRJ"
+            id="dezdias"
+            target="_blank"
+          ></a>
+        </div>
+        <div>
+          <a
+            href="https://drive.google.com/drive/folders/11vJIF1Msvibv_Xh3OmYNLaMvPaGWTSRy?usp=drive_link"
+            id="mulher"
+            target="_blank"
+          ></a>
+        </div>
+        <div>
+          <a
+            href="https://drive.google.com/drive/folders/16T8FmmbtTS6I-95kGEGNDndEp0gEJa6C"
+            id="pascoa2025"
+            target="_blank"
+          ></a>
+        </div>
+        <!-- <div><a href=""  id=""></a></div> -->
+        <!-- <div><a href="https://ead.clinicaadven tista.com.br/"  id="mentesfortes">Curso Mentes Fortes</a></div> -->
+      </div>
 
-        
-            <div>
-                <div><a href="https://drive.google.com/drive/folders/1xNHO67AGvrB1dW7rNzQTYmaFrxLlJeRJ"  id="dezdias" target="_blank"></a></div>
-                <div><a href="https://drive.google.com/drive/folders/11vJIF1Msvibv_Xh3OmYNLaMvPaGWTSRy?usp=drive_link"  id="mulher" target="_blank"></a></div>
-                <div><a href="https://drive.google.com/drive/folders/16T8FmmbtTS6I-95kGEGNDndEp0gEJa6C" id="pascoa2025" target="_blank"></a></div>
-                <!-- <div><a href=""  id=""></a></div> -->
-                <!-- <div><a href="https://ead.clinicaadven tista.com.br/"  id="mentesfortes">Curso Mentes Fortes</a></div> -->
-            </div>
-        
-
-    
-        <!-- <a class="linkeventos" href="pg-externas/eventos.html" target="_blank">Ver todos os eventos...</a> -->
-        <br><br><br><br>
+      <!-- <a class="linkeventos" href="pg-externas/eventos.html" target="_blank">Ver todos os eventos...</a> -->
+      <br /><br /><br /><br />
     </section>
-<br>
+    <br />
 
-<section class="sec-temp">
-
-    <div>
-        <a href="https://forms.gle/m9E6FBc93x9dhqfJ6" target="_blank">Solicitação de compras</a>
-    </div>
-
-</section>
+    <section class="sec-temp">
+      <div>
+        <a href="https://forms.gle/m9E6FBc93x9dhqfJ6" target="_blank"
+          >Solicitação de compras</a
+        >
+      </div>
+    </section>
 
     <!-- HORÁRIOS -->
     <div class="body" id="bodysection">
-                
-        <div class="title">Horários</div>
-            
-        <div class="conteiner">
+      <div class="title">Horários</div>
 
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <a href="" >Manhã</a><br><br>
-                        <a href="" >Tarde</a><br><br>
-                        <a href="" >Intervalos profs</a><br><br>
-                        <a href="" >Cultura Geral</a><br><br>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <h2>Infantil ao 1º</h2>
-                </div>
+      <div class="conteiner">
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <a href="">Manhã</a><br /><br />
+              <a href="">Tarde</a><br /><br />
+              <a href="">Intervalos profs</a><br /><br />
+              <a href="">Cultura Geral</a><br /><br />
             </div>
-            
-            <div class="card"> 
-                <div class="face face1">
-                    <div class="content">        
-                        <a href="" >Manhã</a><br><br>
-                        <a href="" >Tarde</a><br><br>
-                        <a href="" >Reforço</a><br><br>
-                        <a href="" >Cultura Geral</a><br><br>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <h2>2º ao 5º</h2>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <!-- <a class="horarios" href="https://drive.google.com/file/d/1VbkhGEnhJVERJGE6x72GQ4IbIDudRvO3/view?usp=sharing" >Por Turma</a> -->
-                        <a class="horarios" href="docs/horarios/horario6M2025.pdf" >Horário 2025</a> 
-                        <!-- <a href="docs/horarios/reforco6M.pdf" >Reforço</a><br><br> -->
-                        <!-- <a href="celebras.html" >Cultura Geral</a><br><br> -->
-                    </div>
-                </div>
-                <div class="face face2">
-                    <h2>6º ao Médio</h2>
-                </div>
-            </div>
-
-
-            <div class="card"> 
-                <div class="face face1">
-                    <div class="content">    
-                        <ul>
-                            <a href="" >Contraturno Organização</a><br><br>
-                            <a href="" >Contraturno Horários</a><br><br>
-                            <a href="" >Recreios</a><br><br>
-                            <a href="" >Terceirizados</a>
-                        </ul>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <h2>Outros</h2>
-                </div>
-            </div>
-        
+          </div>
+          <div class="face face2">
+            <h2>Infantil ao 1º</h2>
+          </div>
         </div>
+
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <a href="">Manhã</a><br /><br />
+              <a href="">Tarde</a><br /><br />
+              <a href="">Reforço</a><br /><br />
+              <a href="">Cultura Geral</a><br /><br />
+            </div>
+          </div>
+          <div class="face face2">
+            <h2>2º ao 5º</h2>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <!-- <a class="horarios" href="https://drive.google.com/file/d/1VbkhGEnhJVERJGE6x72GQ4IbIDudRvO3/view?usp=sharing" >Por Turma</a> -->
+              <a class="horarios" href="docs/horarios/horario6M2025.pdf"
+                >Horário 2025</a
+              >
+              <!-- <a href="docs/horarios/reforco6M.pdf" >Reforço</a><br><br> -->
+              <!-- <a href="celebras.html" >Cultura Geral</a><br><br> -->
+            </div>
+          </div>
+          <div class="face face2">
+            <h2>6º ao Médio</h2>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <ul>
+                <a href="">Contraturno Organização</a
+                ><br /><br />
+                <a href="">Contraturno Horários</a
+                ><br /><br />
+                <a href="">Recreios</a
+                ><br /><br />
+                <a href="">Terceirizados</a>
+              </ul>
+            </div>
+          </div>
+          <div class="face face2">
+            <h2>Outros</h2>
+          </div>
+        </div>
+      </div>
     </div>
-    
+
     <!-- CALENDÁRIOS -->
     <div class="sec_calendarios" id="sec-calendarios">
+      <h1>Calendários</h1>
 
-        <h1>Calendários</h1>
-
-        <div style="display: flex; justify-content: space-around;">
-            
-            <a href="https://docs.google.com/document/d/1I6YiGoD11yMZSHNSu1ThFNH6kKCBsgSAniEvg_DDGrM/edit?tab=t.0" target="_blank">
-                <svg class="svg_cac" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-month" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M7 14h.013" /><path d="M10.01 14h.005" /><path d="M13.01 14h.005" /><path d="M16.015 14h.005" /><path d="M13.015 17h.005" /><path d="M7.01 17h.005" /><path d="M10.01 17h.005" /></svg>
-                <p>CAC</p>
-            </a>
-            <a href="https://docs.google.com/document/d/1XZjyDDu_iti9YoIzxXMakkT-tR0oOBMB/edit" target="_blank">
-                <svg class="svg_educ" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M16 19h6" /><path d="M19 16v6" /></svg>
-                <p>Depto</p>
-            </a>
-            <!-- <a href="" >
+      <div style="display: flex; justify-content: space-around">
+        <a
+          href="https://docs.google.com/document/d/1I6YiGoD11yMZSHNSu1ThFNH6kKCBsgSAniEvg_DDGrM/edit?tab=t.0"
+          target="_blank"
+        >
+          <svg
+            class="svg_cac"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-calendar-month"
+            width="52"
+            height="52"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"
+            />
+            <path d="M16 3v4" />
+            <path d="M8 3v4" />
+            <path d="M4 11h16" />
+            <path d="M7 14h.013" />
+            <path d="M10.01 14h.005" />
+            <path d="M13.01 14h.005" />
+            <path d="M16.015 14h.005" />
+            <path d="M13.015 17h.005" />
+            <path d="M7.01 17h.005" />
+            <path d="M10.01 17h.005" />
+          </svg>
+          <p>CAC</p>
+        </a>
+        <a
+          href="https://docs.google.com/document/d/1XZjyDDu_iti9YoIzxXMakkT-tR0oOBMB/edit"
+          target="_blank"
+        >
+          <svg
+            class="svg_educ"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-calendar-plus"
+            width="52"
+            height="52"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5"
+            />
+            <path d="M16 3v4" />
+            <path d="M8 3v4" />
+            <path d="M4 11h16" />
+            <path d="M16 19h6" />
+            <path d="M19 16v6" />
+          </svg>
+          <p>Depto</p>
+        </a>
+        <!-- <a href="" >
                 <svg class="svg_educ" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M16 19h6" /><path d="M19 16v6" /></svg>
                 <p>Educação 2025</p>
             </a> -->
-            <!-- <a href="docs/calendariopais.pdf" >
+        <!-- <a href="docs/calendariopais.pdf" >
                 <svg class="svg_pais" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-user" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21h-6a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4.5" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M19 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M22 22a2 2 0 0 0 -2 -2h-2a2 2 0 0 0 -2 2" /></svg>
                 <p>Pais</p>
             </a> -->
-            <!-- <a href="docs/agendaAsp2024.pdf" >
+        <!-- <a href="docs/agendaAsp2024.pdf" >
                 <svg class="svg_asp" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-church" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M10 21v-4a2 2 0 0 1 4 0v4" /><path d="M10 5l4 0" /><path d="M12 3l0 5" /><path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" /></svg>
                 <p>ASP</p>
             </a> -->
-
-        </div>
+      </div>
     </div>
 
     <!-- PEDAGÓGICO -->
-    <section class="sec-pedagogico" id="sec-pedagogico" style="display: none;">
+    <section class="sec-pedagogico" id="sec-pedagogico" style="display: none">
+      <h1>Pedagógico</h1>
 
-        <h1>Pedagógico</h1>
+      <div class="menupedagogico">
+        <a href="https://login.cpbedu.me/">
+          <div class="img">
+            <img src="img/eclass.png" alt="" />
+            <div class="legenda-links">E-class</div>
+          </div>
+        </a>
 
-        <div class="menupedagogico">
+        <a href="https://sad-asp.educadventista.org/">
+          <div class="img">
+            <img src="img/sad.png" alt="" />
+            <div class="legenda-links">SAD</div>
+          </div>
+        </a>
 
-            <a href="https://login.cpbedu.me/" >
-                <div class="img">
-                    <img src="img/eclass.png" alt="">
-                    <div class="legenda-links">E-class</div>
-                </div>
-            </a>
+        <a href="https://sad-asp.educadventista.org/">
+          <div class="img">
+            <img src="img/sad-apoio.png" alt="" />
+            <div class="legenda-links">SAD Apoio</div>
+          </div>
+        </a>
 
-            <a href="https://sad-asp.educadventista.org/" >
-                <div class="img">
-                    <img src="img/sad.png" alt="">
-                    <div class="legenda-links">SAD</div>
-                </div>
-            </a>
-            
-            <a href="https://sad-asp.educadventista.org/" >
-                <div class="img">
-                    <img src="img/sad-apoio.png" alt="">
-                    <div class="legenda-links">SAD Apoio</div>
-                </div>
-            </a>         
+        <a
+          href="https://drive.google.com/drive/u/1/folders/0ABBSgetqrCe2Uk9PVA"
+        >
+          <div class="img">
+            <img src="img/drive.png" alt="" />
+            <div class="legenda-links">Escolas 2024</div>
+          </div>
+        </a>
 
-            <a href="https://drive.google.com/drive/u/1/folders/0ABBSgetqrCe2Uk9PVA" >
-                <div class="img">
-                    <img src="img/drive.png" alt="">
-                    <div class="legenda-links">Escolas 2024</div>
-                </div>
-            </a>
+        <a
+          href="https://drive.google.com/drive/u/1/folders/12aZCnyamjgxcgNKGbQP5uhkHBy-dyEae"
+        >
+          <div class="img">
+            <img src="img/drive.png" alt="" />
+            <div class="legenda-links">CAC</div>
+          </div>
+        </a>
 
-            <a href="https://drive.google.com/drive/u/1/folders/12aZCnyamjgxcgNKGbQP5uhkHBy-dyEae" >
-                <div class="img">
-                    <img src="img/drive.png" alt="">
-                    <div class="legenda-links">CAC</div>
-                </div>
-            </a>
+        <a
+          href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/josiane_klimek_usb_educadventista_org/ERl-SHiRZiBHnfobhDmkWdwBcxVNJbQjxd7XzJLQD_Qk-Q?e=6DMukh"
+        >
+          <div class="img">
+            <img src="img/women.png" alt="" />
+            <div class="legenda-links" style="text-align: center">
+              Tutoras e Auxiliares
+            </div>
+          </div>
+        </a>
 
-            <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/josiane_klimek_usb_educadventista_org/ERl-SHiRZiBHnfobhDmkWdwBcxVNJbQjxd7XzJLQD_Qk-Q?e=6DMukh" >
-                <div class="img">
-                    <img src="img/women.png" alt="">
-                    <div class="legenda-links" style="text-align: center;">Tutoras e Auxiliares</div>
-                </div>
-            </a>
+        <a
+          href="https://docs.google.com/document/d/1go0yr0F4aMp5-SFc-qH_DkZM0mZhnAf5Wfg5D1id7k8/edit?usp=sharing"
+        >
+          <div class="img">
+            <img src="img/job-application.png" alt="" />
+            <div class="legenda-links" style="text-align: center">
+              Solicitação de Tutoras
+            </div>
+          </div>
+        </a>
 
-            <a href="https://docs.google.com/document/d/1go0yr0F4aMp5-SFc-qH_DkZM0mZhnAf5Wfg5D1id7k8/edit?usp=sharing" >
-                <div class="img">
-                    <img src="img/job-application.png" alt="">
-                    <div class="legenda-links" style="text-align: center;">Solicitação de Tutoras</div>
-                </div>
-            </a>
+        <a
+          href="https://drive.google.com/drive/folders/16oq3K820nPlcMEm74hAp2Qt4QTqPAxuc?usp=sharing"
+        >
+          <div class="img">
+            <img src="img/megaphone.png" alt="" />
+            <div class="legenda-links">Comunicados Pedagógicos</div>
+          </div>
+        </a>
+      </div>
 
-            <a href="https://drive.google.com/drive/folders/16oq3K820nPlcMEm74hAp2Qt4QTqPAxuc?usp=sharing" >
-                <div class="img">
-                    <img src="img/megaphone.png" alt="">
-                    <div class="legenda-links">Comunicados Pedagógicos</div>
-                </div>
-            </a>
-
-
-            
-
-
-            
-
+      <div class="conteiner-pedagogico">
+        <div class="pedagogico">
+          <p>EI - FI</p>
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-table-export"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M12.5 21h-7.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5"
+                />
+                <path d="M3 10h18" />
+                <path d="M10 3v18" />
+                <path d="M16 19h6" />
+                <path d="M19 16l3 3l-3 3" />
+              </svg>
+            </div>
+            <div>
+              <a
+                href="https://drive.google.com/drive/u/1/folders/1eVfQI696DHhqYgT0ypZeZ_DTMZIKYRQ7"
+                >Planilha de Leitura</a
+              >
+            </div>
+          </div>
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-calendar-time"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"
+                />
+                <path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                <path d="M15 3v4" />
+                <path d="M7 3v4" />
+                <path d="M3 11h16" />
+                <path d="M18 16.496v1.504l1 1" />
+              </svg>
+            </div>
+            <div>
+              <a href="cronogramas.html" target="_blank"
+                >Cronogramas avaliativos por turma</a
+              >
+            </div>
+          </div>
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-mood-smile-beam"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" />
+                <path d="M10 10c-.5 -1 -2.5 -1 -3 0" />
+                <path d="M17 10c-.5 -1 -2.5 -1 -3 0" />
+                <path d="M14.5 15a3.5 3.5 0 0 1 -5 0" />
+              </svg>
+            </div>
+            <div>
+              <a href="docs/projetos-soe-f1.pdf" target="_blank"
+                >Projetos SOE</a
+              >
+            </div>
+          </div>
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-list-numbers"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M11 6h9" />
+                <path d="M11 12h9" />
+                <path d="M12 18h8" />
+                <path d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4" />
+                <path d="M6 10v-6l-2 2" />
+              </svg>
+            </div>
+            <div>
+              <a
+                href="https://docs.google.com/spreadsheets/d/1yKQk8YyWsaUNrT7nS41JmeRrzlBQ8AV-k7X_1xOgTQ4/edit?usp=sharing"
+                target="_blank"
+                >Estatística, regentes e auxiliares</a
+              >
+            </div>
+          </div>
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-ribbon-health"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M7 21s9.286 -9.841 9.286 -13.841a3.864 3.864 0 0 0 -1.182 -3.008a4.13 4.13 0 0 0 -3.104 -1.144a4.13 4.13 0 0 0 -3.104 1.143a3.864 3.864 0 0 0 -1.182 3.01c0 4 9.286 13.84 9.286 13.84"
+                />
+              </svg>
+            </div>
+            <div>
+              <a
+                href="https://docs.google.com/spreadsheets/d/1ABFncJR7BPQ0Mf4wy4nH8S6RG_sWD58FFULXtjdsnok/edit#gid=917459885"
+                target="_blank"
+                >Alunos AEE (EI-1º)</a
+              >
+            </div>
+          </div>
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-ribbon-health"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M7 21s9.286 -9.841 9.286 -13.841a3.864 3.864 0 0 0 -1.182 -3.008a4.13 4.13 0 0 0 -3.104 -1.144a4.13 4.13 0 0 0 -3.104 1.143a3.864 3.864 0 0 0 -1.182 3.01c0 4 9.286 13.84 9.286 13.84"
+                />
+              </svg>
+            </div>
+            <div>
+              <a
+                href="https://docs.google.com/spreadsheets/d/1FPW0LS-nYvV4uTe2vG4XBXjlT8nW6pGfTz_83v0GQeA/edit?usp=sharing"
+                target="_blank"
+                >Alunos AEE (2º-5º)</a
+              >
+            </div>
+          </div>
         </div>
 
-        <div class="conteiner-pedagogico">
-            <div class="pedagogico">
-                <p>EI - FI</p>
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-table-export" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12.5 21h-7.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" /><path d="M3 10h18" /><path d="M10 3v18" /><path d="M16 19h6" /><path d="M19 16l3 3l-3 3" /></svg>
-                    </div>
-                    <div><a href="https://drive.google.com/drive/u/1/folders/1eVfQI696DHhqYgT0ypZeZ_DTMZIKYRQ7" >Planilha de Leitura</a></div>
-                </div>
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" /><path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M15 3v4" /><path d="M7 3v4" /><path d="M3 11h16" /><path d="M18 16.496v1.504l1 1" /></svg>
-                    </div>
-                    <div><a href="cronogramas.html" target="_blank">Cronogramas avaliativos por turma</a></div>
-                </div>
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-smile-beam" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" /><path d="M10 10c-.5 -1 -2.5 -1 -3 0" /><path d="M17 10c-.5 -1 -2.5 -1 -3 0" /><path d="M14.5 15a3.5 3.5 0 0 1 -5 0" /></svg>
-                    </div>
-                    <div><a href="docs/projetos-soe-f1.pdf" target="_blank">Projetos SOE</a></div>
-                </div>
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list-numbers" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11 6h9" /><path d="M11 12h9" /><path d="M12 18h8" /><path d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4" /><path d="M6 10v-6l-2 2" /></svg>
-                    </div>
-                    <div><a href="https://docs.google.com/spreadsheets/d/1yKQk8YyWsaUNrT7nS41JmeRrzlBQ8AV-k7X_1xOgTQ4/edit?usp=sharing" target="_blank">Estatística, regentes e auxiliares</a></div>
-                </div>
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ribbon-health" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 21s9.286 -9.841 9.286 -13.841a3.864 3.864 0 0 0 -1.182 -3.008a4.13 4.13 0 0 0 -3.104 -1.144a4.13 4.13 0 0 0 -3.104 1.143a3.864 3.864 0 0 0 -1.182 3.01c0 4 9.286 13.84 9.286 13.84" /></svg>
-                    </div>
-                    <div><a href="https://docs.google.com/spreadsheets/d/1ABFncJR7BPQ0Mf4wy4nH8S6RG_sWD58FFULXtjdsnok/edit#gid=917459885" target="_blank">Alunos AEE (EI-1º)</a></div>
-                </div>
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ribbon-health" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 21s9.286 -9.841 9.286 -13.841a3.864 3.864 0 0 0 -1.182 -3.008a4.13 4.13 0 0 0 -3.104 -1.144a4.13 4.13 0 0 0 -3.104 1.143a3.864 3.864 0 0 0 -1.182 3.01c0 4 9.286 13.84 9.286 13.84" /></svg>
-                    </div>
-                    <div><a href="https://docs.google.com/spreadsheets/d/1FPW0LS-nYvV4uTe2vG4XBXjlT8nW6pGfTz_83v0GQeA/edit?usp=sharing" target="_blank">Alunos AEE (2º-5º)</a></div>
-                </div>
+        <div class="pedagogico">
+          <p>FII - EM</p>
+
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-calendar-week"
+                width="22"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"
+                />
+                <path d="M16 3v4" />
+                <path d="M8 3v4" />
+                <path d="M4 11h16" />
+                <path d="M8 14v4" />
+                <path d="M12 14v4" />
+                <path d="M16 14v4" />
+              </svg>
             </div>
-
-            <div class="pedagogico">
-                <p>FII - EM</p>
-
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-week" width="22" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M8 14v4" /><path d="M12 14v4" /><path d="M16 14v4" /></svg>
-                    </div>
-                    <div><a href="docs/calendariorecuperacoes2b.pdf" target="_blank">Calendário de Recuperações 2º bimestre</a></div>
-                </div>
-
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-week" width="22" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M8 14v4" /><path d="M12 14v4" /><path d="M16 14v4" /></svg>
-                    </div>
-                    <div><a href="docs/horarios/calendario-avaliacoes-bim1.pdf" target="_blank">Calendário geral de avaliações</a></div>
-                </div>
-
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" /><path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M15 3v4" /><path d="M7 3v4" /><path d="M3 11h16" /><path d="M18 16.496v1.504l1 1" /></svg>
-                    </div>
-                    <div><a href="cronogramas.html" target="_blank">Cronogramas avaliativos por turma</a></div>
-                </div>
-
-                <div class="item-pedagogico">
-                    <div>
-                        <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="#002c48"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
-                    </div>
-                    <div><a href="pg-externas/sextou.html" target="_blank">Sextou no CAC</a></div>
-                </div>
-                
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
-                    </div>
-                    <div><a href="https://docs.google.com/spreadsheets/d/10o89DeQeL-_ZSxcsXItIn9FJWZvYJ42E/edit#gid=2031292764" target="_blank">Professores e disciplinas</a></div>
-                </div>
-
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-star" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h.5" /><path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" /></svg>
-                    </div>
-                    <div><a href="pg-externas/conselheiros.html" target="_blank">Professores Conselheiros</a></div>
-                </div>
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ribbon-health" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 21s9.286 -9.841 9.286 -13.841a3.864 3.864 0 0 0 -1.182 -3.008a4.13 4.13 0 0 0 -3.104 -1.144a4.13 4.13 0 0 0 -3.104 1.143a3.864 3.864 0 0 0 -1.182 3.01c0 4 9.286 13.84 9.286 13.84" /></svg>
-                    </div>
-                    <div><a href="https://docs.google.com/document/d/1lu3yMir1Bt7-WMrnlEKWq_FTNjgKaY1B/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true" target="_blank">Alunos AEE (6º ao 8º)</a></div>
-                </div>
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ribbon-health" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 21s9.286 -9.841 9.286 -13.841a3.864 3.864 0 0 0 -1.182 -3.008a4.13 4.13 0 0 0 -3.104 -1.144a4.13 4.13 0 0 0 -3.104 1.143a3.864 3.864 0 0 0 -1.182 3.01c0 4 9.286 13.84 9.286 13.84" /></svg>
-                    </div>
-                    <div><a href="https://drive.google.com/drive/folders/1-qsm9zdy2KUaz2X9fPIxgbMPBJ3qcBVV?usp=sharing" target="_blank">Alunos AEE (9º ao EM)</a></div>
-                </div>
-
-                <div class="item-pedagogico">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-border-all" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="#002c48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M4 12l16 0" /><path d="M12 4l0 16" /></svg>
-                    </div>
-                    <div><a href="https://docs.google.com/spreadsheets/d/1M50RcRhbxqUEIrWMl7WtWy047Om8anf1q43GJLdXQoA/edit?usp=sharing" target="_blank">Espelhos de Classe</a></div>
-                </div>
-
-                
+            <div>
+              <a href="docs/calendariorecuperacoes2b.pdf" target="_blank"
+                >Calendário de Recuperações 2º bimestre</a
+              >
             </div>
+          </div>
+
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-calendar-week"
+                width="22"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"
+                />
+                <path d="M16 3v4" />
+                <path d="M8 3v4" />
+                <path d="M4 11h16" />
+                <path d="M8 14v4" />
+                <path d="M12 14v4" />
+                <path d="M16 14v4" />
+              </svg>
+            </div>
+            <div>
+              <a
+                href="docs/horarios/calendario-avaliacoes-bim1.pdf"
+                target="_blank"
+                >Calendário geral de avaliações</a
+              >
+            </div>
+          </div>
+
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-calendar-time"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"
+                />
+                <path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                <path d="M15 3v4" />
+                <path d="M7 3v4" />
+                <path d="M3 11h16" />
+                <path d="M18 16.496v1.504l1 1" />
+              </svg>
+            </div>
+            <div>
+              <a href="cronogramas.html" target="_blank"
+                >Cronogramas avaliativos por turma</a
+              >
+            </div>
+          </div>
+
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#002c48"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+                />
+                <path d="M3 7l9 6l9 -6" />
+              </svg>
+            </div>
+            <div>
+              <a href="pg-externas/sextou.html" target="_blank"
+                >Sextou no CAC</a
+              >
+            </div>
+          </div>
+
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-user"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+              </svg>
+            </div>
+            <div>
+              <a
+                href="https://docs.google.com/spreadsheets/d/10o89DeQeL-_ZSxcsXItIn9FJWZvYJ42E/edit#gid=2031292764"
+                target="_blank"
+                >Professores e disciplinas</a
+              >
+            </div>
+          </div>
+
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-user-star"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+                <path
+                  d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z"
+                />
+              </svg>
+            </div>
+            <div>
+              <a href="pg-externas/conselheiros.html" target="_blank"
+                >Professores Conselheiros</a
+              >
+            </div>
+          </div>
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-ribbon-health"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M7 21s9.286 -9.841 9.286 -13.841a3.864 3.864 0 0 0 -1.182 -3.008a4.13 4.13 0 0 0 -3.104 -1.144a4.13 4.13 0 0 0 -3.104 1.143a3.864 3.864 0 0 0 -1.182 3.01c0 4 9.286 13.84 9.286 13.84"
+                />
+              </svg>
+            </div>
+            <div>
+              <a
+                href="https://docs.google.com/document/d/1lu3yMir1Bt7-WMrnlEKWq_FTNjgKaY1B/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
+                target="_blank"
+                >Alunos AEE (6º ao 8º)</a
+              >
+            </div>
+          </div>
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-ribbon-health"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M7 21s9.286 -9.841 9.286 -13.841a3.864 3.864 0 0 0 -1.182 -3.008a4.13 4.13 0 0 0 -3.104 -1.144a4.13 4.13 0 0 0 -3.104 1.143a3.864 3.864 0 0 0 -1.182 3.01c0 4 9.286 13.84 9.286 13.84"
+                />
+              </svg>
+            </div>
+            <div>
+              <a
+                href="https://drive.google.com/drive/folders/1-qsm9zdy2KUaz2X9fPIxgbMPBJ3qcBVV?usp=sharing"
+                target="_blank"
+                >Alunos AEE (9º ao EM)</a
+              >
+            </div>
+          </div>
+
+          <div class="item-pedagogico">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-border-all"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#002c48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                />
+                <path d="M4 12l16 0" />
+                <path d="M12 4l0 16" />
+              </svg>
+            </div>
+            <div>
+              <a
+                href="https://docs.google.com/spreadsheets/d/1M50RcRhbxqUEIrWMl7WtWy047Om8anf1q43GJLdXQoA/edit?usp=sharing"
+                target="_blank"
+                >Espelhos de Classe</a
+              >
+            </div>
+          </div>
         </div>
-
-
-
-
+      </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="dboxfooter"><a href="calendario-dbox.html" target="_blank">DBox</a></footer>
+    <footer class="dboxfooter">
+      <a href="calendario-dbox.html" target="_blank">DBox</a>
+    </footer>
 
-
-<!-- URGÊNCIAS -->
-<div class="bgmodal" id="bgmodal">
-    <div class="modal" id="modalurgencias">    
+    <!-- URGÊNCIAS -->
+    <div class="bgmodal" id="bgmodal">
+      <div class="modal" id="modalurgencias">
         <div class="fechar" id="fecharmodal">Fechar</div>
         <h1>Fones de Urgência</h1>
         <ul class="emergenciasul">
-            <li><span class="numerosurgencia">190</span> - Polícia</li>
-            <li><span class="numerosurgencia">192</span> - SAMU</li>
-            <li><span class="numerosurgencia">193</span> - Bombeiros</li>
-            <li><span class="numerosurgencia">3267-7888</span> - Conselho Tutelar Cajurú (8h-12h e 13h-18h)</li>
-            <li><span class="numerosurgencia">3363-7681</span> - Conselho Tutelar Matriz (8h às 18h)</li>
-            <li><span class="numerosurgencia">9.9861-0767</span> - Sekron</li>
-            <li><span class="numerosurgencia">3361-2326</span> - Vigilância Sanitária</li>
-            <li><span class="numerosurgencia">9.9682-5103</span> - Assessoria de Imprensa (Jordana)</li>
-            <li><span class="numerosurgencia">9.9681-9803</span> - Dr. Rodrigo Hahn (Advogado ASP)</li>
-        </ul> 
+          <li><span class="numerosurgencia">190</span> - Polícia</li>
+          <li><span class="numerosurgencia">192</span> - SAMU</li>
+          <li><span class="numerosurgencia">193</span> - Bombeiros</li>
+          <li>
+            <span class="numerosurgencia">3267-7888</span> - Conselho Tutelar
+            Cajurú (8h-12h e 13h-18h)
+          </li>
+          <li>
+            <span class="numerosurgencia">3363-7681</span> - Conselho Tutelar
+            Matriz (8h às 18h)
+          </li>
+          <li><span class="numerosurgencia">9.9861-0767</span> - Sekron</li>
+          <li>
+            <span class="numerosurgencia">3361-2326</span> - Vigilância
+            Sanitária
+          </li>
+          <li>
+            <span class="numerosurgencia">9.9682-5103</span> - Assessoria de
+            Imprensa (Jordana)
+          </li>
+          <li>
+            <span class="numerosurgencia">9.9681-9803</span> - Dr. Rodrigo Hahn
+            (Advogado ASP)
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
 
-
-<script>
-   
-
-
-</script>
+    <script></script>
 
     <script src="plantaoterca.js"></script>
     <!-- <script type="module" src="proxAniver.js"></script> -->
     <script type="module">
-        import { adicionarProximosAniversariantes } from './proxAniver.js';
-        window.onload = adicionarProximosAniversariantes;
+      import { adicionarProximosAniversariantes } from "./proxAniver.js";
+      window.onload = adicionarProximosAniversariantes;
     </script>
-    
+
     <script type="module" src="modalAniver.js"></script>
     <script src="dbox.js"></script>
     <script src="calendario.js"></script>
@@ -753,7 +1189,7 @@
     <script src="escalas.js"></script>
     <script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
 
-        <!-- <script type="module">
+    <!-- <script type="module">
             import { plantaoDeEntrevistas } from './pg-externas/plantaoEntrevistas.js';
             document.addEventListener('DOMContentLoaded', plantaoDeEntrevistas);
         </script>
@@ -770,6 +1206,5 @@
                 }
             });
         </script> -->
-</body>
+  </body>
 </html>
-
