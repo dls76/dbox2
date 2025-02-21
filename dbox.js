@@ -2,101 +2,53 @@ let datahoje = new Date();
 
 window.addEventListener("load", cultos);
 window.addEventListener("load", compensacao);
-window.addEventListener('load', escalaDeEntrevistas)
+window.addEventListener("load", escalaDeEntrevistas);
 // window.addEventListener("load", mostrarEscalaDeOracao);
 
 // Cultos
 function cultos() {
+  const dataAtual = new Date();
+  let responsavelCulto = "Sem informação";
 
-  const dataAtual = new Date()
+  switch (dataAtual.getDay()) {
+    case 0:
+      responsavelCulto = "Hoje é domingo!";
+      break;
+    case 1:
+      responsavelCulto = "Murilo";
+      break;
+    case 2:
+      responsavelCulto = "Pr. Vinícius";
+      break;
+    case 3:
+      responsavelCulto = "Douglas";
+      break;
+    case 4:
+      const agendaQuinta = {
+        6: "7h Andressa | 10h Nailson | 13h Malu",
+        13: "7h Jaque | 10h Valéria | 13h Drika",
+        20: "7h Carol | 10h Renata | 13h Jhessica",
+        27: "7h Marcio | 10h Nailson | Ana Prado",
+      };
+      responsavelCulto = agendaQuinta[dataAtual.getDate()] || responsavelCulto;
+      break;
+    case 5:
+      responsavelCulto = "Pr. Leonardo";
+      break;
+    case 6:
+      responsavelCulto = "Feliz Sábado!";
+      break;
+  }
 
-  if (dataAtual.getDay() == 0) {
-    document.querySelector("#cultos").innerHTML = "Hoje é domingo!";
-  }
-  if (dataAtual.getDay() == 1) {
-    if (dataAtual.getDate() == 3) {
-      document.querySelector("#cultos").innerHTML = "Douglas";
-    } else {
-      document.querySelector("#cultos").innerHTML = "Murilo";
-    }
-  }
-  if (dataAtual.getDay() == 2) {
-    if (dataAtual.getDate() == 4) {
-      document.querySelector("#cultos").innerHTML = "Murilo";
-    } else {
-      document.querySelector("#cultos").innerHTML = "Pr. Vinícius";
-    }
-  }
-  if (dataAtual.getDay() == 3) {
-    if (dataAtual.getDate() == 5) {
-      document.querySelector("#cultos").innerHTML = "Nailson";
-    } else {
-      document.querySelector("#cultos").innerHTML = "Pr. Leonardo";
-    }
-  } 
-  if (dataAtual.getDay() == 4) {
-
-    if (dataAtual.getDate() == 6) {
-      document.querySelector("#cultos").innerHTML =
-        "7h Andressa" + " | " + "10h Nailson" + " | " + "13h Malu";
-    }
-    if (dataAtual.getDate() == 13) {
-      document.querySelector("#cultos").innerHTML =
-        "7h Jaque" + " | " + "10h Valéria" + " | " + "13h Drika";
-    }
-    if (dataAtual.getDate() == 20) {
-      document.querySelector("#cultos").innerHTML =
-        "7h Carol" + " | " + "10h Renata" + " | " + "13h Jhessica";
-    }
-    if (dataAtual.getDate() == 27) {
-      document.querySelector("#cultos").innerHTML =
-        "7h Marcio" + " | " + "10h Nailson" + " | " + "Ana Prado";
-    }
-  }
-  
-  if (dataAtual.getDay() == 5) {
-    document.querySelector("#cultos").innerHTML = "Douglas";
-  }
-  
-  if (dataAtual.getDay() == 6) {
-    document.querySelector("#cultos").innerHTML = "Feliz Sábado!";
-  }
+  document.querySelector("#cultos").innerHTML = responsavelCulto;
 }
-
-/*Oração
-function mostrarEscalaDeOracao() {
-  if (datahoje.getDay() == 0) {
-    document.querySelector("#contentoracao").innerHTML = "Hoje é domingo!";
-  }
-  if (datahoje.getDay() == 1) {
-    document.querySelector("#contentoracao").innerHTML =
-      "Fazenda e Afonso Pena";
-  }
-  if (datahoje.getDay() == 2) {
-    document.querySelector("#contentoracao").innerHTML =
-      "Alto Boqueirão e Bom Retiro";
-  }
-  if (datahoje.getDay() == 3) {
-    document.querySelector("#contentoracao").innerHTML = "Pinhais e Paranaguá";
-  }
-  if (datahoje.getDay() == 4) {
-    document.querySelector("#contentoracao").innerHTML = "São José e União";
-  }
-  if (datahoje.getDay() == 5) {
-    document.querySelector("#contentoracao").innerHTML =
-      "Centenário e Departamento";
-  }
-  if (datahoje.getDay() == 6) {
-    document.querySelector("#contentoracao").innerHTML = "Feliz Sábado!";
-  }
-}*/
 
 //Entrevistas
 function escalaDeEntrevistas() {
-  const hoje = new Date()
-  const diaDaSemana = hoje.getDay()
-  const ferias = false
-  const feriadoRecesso = false
+  const hoje = new Date();
+  const diaDaSemana = hoje.getDay();
+  const ferias = false;
+  const feriadoRecesso = false;
 
   const plantao = [
     "Hoje é domingo!",
@@ -105,22 +57,20 @@ function escalaDeEntrevistas() {
     "Renata(M) | Malú(T)",
     "Valéria(M) | Douglas(T)",
     "Andressa(M) | Camila(T)",
-    "Feliz Sábado!"
+    "Feliz Sábado!",
   ];
 
   // Verifica se é feriado ou recesso
   if (ferias) {
-    document.querySelector("#plantaodiario").innerHTML = "Férias"
+    document.querySelector("#plantaodiario").innerHTML = "Férias";
   } else if (feriadoRecesso) {
-    document.querySelector('#plantaodiario').innerHTML = "Feriado/recesso"
+    document.querySelector("#plantaodiario").innerHTML = "Feriado/recesso";
   } else {
     document.querySelector("#plantaodiario").innerHTML = plantao[diaDaSemana];
   }
 }
 
-
 function compensacao() {
-  
   const dataHoje = new Date();
   const diaSemana = dataHoje.getDay();
 
@@ -143,9 +93,9 @@ function compensacao() {
   if (isFeriado) {
     elementoNome.innerHTML = "Semana com feriado";
   } else if (isFirstOrLast) {
-    elementoNome.innerHTML = "Primeira/última semana"
+    elementoNome.innerHTML = "Primeira/última semana";
   } else if (isVacation) {
-    elementoNome.innerHTML = "Férias"
+    elementoNome.innerHTML = "Férias";
   } else {
     elementoNome.innerHTML = nomesPorDia[diaSemana];
   }
