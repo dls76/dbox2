@@ -3,7 +3,6 @@ let datahoje = new Date();
 window.addEventListener("load", cultos);
 window.addEventListener("load", compensacao);
 window.addEventListener("load", escalaDeEntrevistas);
-// window.addEventListener("load", mostrarEscalaDeOracao);
 
 // Cultos
 function cultos() {
@@ -122,7 +121,6 @@ btnama.addEventListener("click", () => {
 
 // Modal urgências
 let modalurgencias = document.querySelector("#fonesurgencias");
-
 modalurgencias.addEventListener("click", () => {
   let bgmodal = document.querySelector("#bgmodal");
   bgmodal.classList.add("modalOn");
