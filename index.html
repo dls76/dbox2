@@ -107,7 +107,14 @@
           <span class="material-symbols-outlined" id="ramais-do-menu"
             >call</span
           >
+          <span class="material-symbols-outlined" id="atendimentos_direcao"
+            >block</span
+          >
         </div>
+
+        
+
+        
       </header>
 
       <main id="conteinerhome">
@@ -437,14 +444,6 @@
       <br /><br /><br /><br />
     </section>
     <br />
-
-    <section class="sec-temp">
-      <div>
-        <a href="https://forms.gle/m9E6FBc93x9dhqfJ6" target="_blank"
-          >Solicitação de compras</a
-        >
-      </div>
-    </section>
 
     <!-- HORÁRIOS -->
     <div class="body" id="bodysection">
@@ -1188,6 +1187,17 @@
     <script src="ramais.js"></script>
     <script src="escalas.js"></script>
     <script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
+
+    <script>
+      function atendimentoDirecao() {
+        let bt = document.querySelector("#atendimentos_direcao");
+        bt.addEventListener("click", () => {
+          window.open("https://docs.google.com/document/d/1RCEvuf0cto7XesP9g1my7moTVaWvTzjvJ6c0Ksfd7qQ/edit?usp=sharing", "_blank"); 
+        });
+      }
+
+      atendimentoDirecao()
+    </script>
 
     <!-- <script type="module">
             import { plantaoDeEntrevistas } from './pg-externas/plantaoEntrevistas.js';
