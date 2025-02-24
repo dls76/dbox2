@@ -9,41 +9,46 @@
     
 <div class="modal" id="modalramais">
 
-    <h1>Ramais</h1>
+    <h1>&#9742; RAMAIS</h1>
 
     <ul id="ulramais">
-        <li>&#9742; Andressa - 7012</li>
-        <li>&#9742; Alícia - 7035</li>
-        <li>&#9742; Cacilda - 7029</li>
-        <li>&#9742; Camila - 7013</li>
-        <li>&#9742; Carin - 7006</li>
-        <li>&#9742; Carol - 7016</li>
-        <li>&#9742; Diretor - 7002</li>
-        <li>&#9742; Gabriel - 7007</li>
-        <li>&#9742; Isa - 7023</li>
-        <li>&#9742; Jaque - 7014</li>
-        <li>&#9742; Josiane - 7004</li>
-        <li>&#9742; Kaori - 7022</li>
-        <li>&#9742; Lincon - 7031</li>
-        <li>&#9742; Malú - 7010</li>
-        <li>&#9742; Marcio - 7025</li>
-        <li>&#9742; Mônica/Ana Paula - 7028</li>
-        <li>&#9742; Murilo - 7003</li>
-        <li>&#9742; Nailson - 7019</li>
-        <li>&#9742; Professores - 7021</li>
-        <li>&#9742; Renata - 7011</li>
-        <li>&#9742; Sila - 7032</li>
-        <li>&#9742; Valéria - 7009</li>
-        <li>&#9742; Vinícius - 7024</li>
+        <li class="ramal">Andressa - <span class="numero">7012</span></li>
+        <li class="ramal">Alícia - <span class="numero">7035</span></li>
+        <li class="ramal">Cacilda - <span class="numero">7029</span></li>
+        <li class="ramal">Camila - <span class="numero">7013</span></li>
+        <li class="ramal">Carin - <span class="numero">7006</span></li>
+        <li class="ramal">Carol - <span class="numero">7016</span></li>
+        <li class="ramal">Diretor - <span class="numero">7002</span></li>
+        <li class="ramal">Gabriel - <span class="numero">7007</span></li>
+        <li class="ramal">Isa - <span class="numero">7023</span></li>
+        <li class="ramal">Jaque - <span class="numero">7014</span></li>
+        <li class="ramal">Josiane - <span class="numero">7004</span></li>
+        <li class="ramal">Kaori - <span class="numero">7022</span></li>
+        <li class="ramal">Lincon - <span class="numero">7031</span></li>
+        <li class="ramal">Malú - <span class="numero">7010</span></li>
+        <li class="ramal">Marcio - <span class="numero">7025</span></li>
+        <li class="ramal">Mônica/Ana Paula - <span class="numero">7028</span></li>
+        <li class="ramal">Murilo - <span class="numero">7003</span></li>
+        <li class="ramal">Nailson - <span class="numero">7019</span></li>
+        <li class="ramal">Professores - <span class="numero">7021</span></li>
+        <li class="ramal">Renata - <span class="numero">7011</span></li>
+        <li class="ramal">Sila - <span class="numero">7032</span></li>
+        <li class="ramal">Valéria - <span class="numero">7009</span></li>
+        <li class="ramal">Vinícius - <span class="numero">7024</span></li>
     </ul>
 </div>
 
 <style>
-    *{font-family: sans-serif; margin: 0; padding: 0;}
-    h1 {text-align: center; padding: 25px;}
+    *{margin: 0; padding: 0;}
+    h1 {font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 25px;}
     ul {width: 50%; margin: auto; height: 500px; overflow: hidden; display: flex; flex-direction: column; flex-wrap: wrap; box-shadow: 0px 0px 8px lightgray; padding: 25px; border-radius: 12px;}
     li {list-style-type:none; color: rgb(61, 61, 61); padding: 8px; margin: 4px;}
-
+    .ramal {color: rgb(65, 65, 65); font-weight: 500;font-family: Arial, Helvetica, sans-serif;border: 1px solid lightgray;border-radius: 4px;}
+    .ramal:hover {background-color: whitesmoke;}
+    .ramal .numero {
+        color: rgb(118, 2, 190);
+        font-weight: bold;
+    }
     @media (max-width: 1065px) {
         ul {
             width: 70%;
