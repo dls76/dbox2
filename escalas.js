@@ -54,8 +54,8 @@ window.addEventListener('load', () => {
 let plantaosexta = [
     { data: new Date(2025, 1, 7), person: "Murilo", monitoria: "Lincon e Carmelis" },
     { data: new Date(2025, 1, 14), person: "Douglas", monitoria: "Gabriel e Isabele" },
-    { data: new Date(2025, 1, 21), person: "Vinícius", monitoria: "Kadu e Rose" },
-    { data: new Date(2025, 1, 28), person: "Leonardo", monitoria: "Daniel e Eliane" },
+    { data: new Date(2025, 1, 21), person: "Leonardo", monitoria: "Kadu e Rose" },
+    { data: new Date(2025, 1, 28), person: "Vinícius", monitoria: "Daniel e Eliane" },
     { data: new Date(2025, 2, 7), person: "Nailson", monitoria: "Christian e Lucia" },
     { data: new Date(2025, 2, 14), person: "Carol", monitoria: "Lucas e Carmelis" },
     { data: new Date(2025, 2, 21), person: "Renata", monitoria: "Lincon e Isabele" },
