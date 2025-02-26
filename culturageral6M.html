@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Eventos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #ffffff; /* Fundo branco */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #4a90e2;
+            /* color: black; */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        .month-section {
+            margin-bottom: 20px;
+        }
+
+        .month-title {
+            color: #4a90e2;
+            /* color: black; */
+            font-size: 1.8em;
+            font-weight: 600;
+            margin: 20px 0 10px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+
+        .event-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .event-card {
+            background-color: #f9fafb;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transição para transform e sombra */
+            position: relative;
+        }
+
+
+.event-card:hover {
+    transform: scale(1.02); /* Aumento sutil */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada no hover */
+}
+
+
+        /* Etiqueta "Próximo" com cor laranja suave */
+        .event-card.next-event::before {
+            content: "Próximo";
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background-color: #f28c38; /* Laranja suave para contraste */
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8em;
+        }
+
+        .event-card.next-event {
+            border: 2px solid #f28c38;
+        }
+
+        .event-card .header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .event-card .day {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #4a90e2;
+        }
+
+        .event-card h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .event-card .location {
+            margin: 5px 0;
+            color: #666;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cultura Geral - 6º ao EM</h1>
+        <div id="event-list" class="event-list"></div>
+    </div>
+    <script>
+        // Array de objetos representando os eventos
+        const events = [
+            { date: "2025-02-06", name: "Boas-vindas, cód. ética, recepção novos", location: "Equipe ADM" },
+            { date: "2025-02-13", name: "Lançamento 10 dias de oração", location: "Pastoral" },
+            { date: "2025-02-20", name: "Palestrante Vanessa - Missionária", location: "Pastoral" },
+            { date: "2025-02-27", name: "Lançamento da Route", location: "Pastoral" },
+            { date: "2025-03-06", name: "Dia da mulher", location: "Pastoral" },
+            { date: "2025-03-13", name: "Palestra: histórico da escola centenário", location: "Diretor" },
+            { date: "2025-03-20", name: "Lançamento do PMDE", location: "Pr. Vinícius e terceirão" },
+            { date: "2025-03-27", name: "Impacto Esperança", location: "Pastoral" },
+            { date: "2025-04-03", name: "Dia mundial conscientização autismo", location: "SOE: sugestão, Camila Moura" },
+            { date: "2025-04-10", name: "Dia da saúde e nutrição", location: "Profs Educ. Fís." },
+            { date: "2025-04-17", name: "Semana de oração: Páscoa", location: "Pastoral" },
+            { date: "2025-04-24", name: "Dra. Angela: Bullying e Cyberbullying", location: "SOE" },
+            { date: "2025-05-01", name: "Feriado (Dia do Trabalho)", location: "" },
+            { date: "2025-05-08", name: "Dia das Mães", location: "Pastoral" },
+            { date: "2025-05-15", name: "Mérito acadêmico", location: "SOE" },
+            { date: "2025-05-22", name: "Hábitos de estudos - Edinir", location: "SOE" },
+            { date: "2025-05-29", name: "Reunião Participativa", location: "" },
+            { date: "2025-06-05", name: "Meio Ambiente: Juliano (a confirmar)", location: "Pastoral" },
+            { date: "2025-06-12", name: "Relacionamentos: Luciana Valente", location: "Carol" },
+            { date: "2025-06-19", name: "Feriado", location: "" },
+            { date: "2025-07-03", name: "Encerrando ciclos: pt. 1", location: "SOE" },
+            { date: "2025-07-24", name: "Dia do Amigo", location: "Pastoral" },
+            { date: "2025-07-31", name: "Relatório da Missão", location: "Pastoral" }
+        ];
+
+        const currentDate = new Date("2025-02-27");
+
+        // Função para encontrar o próximo evento
+        function getNextEvent(events) {
+            return events.find(event => new Date(event.date) > currentDate);
+        }
+
+        // Função para obter o nome do mês em português
+        function getMonthName(date) {
+            const months = [
+                "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+            ];
+            return months[date.getMonth()];
+        }
+
+        // Função para renderizar os cards agrupados por mês
+        function renderEvents() {
+            const eventList = document.getElementById("event-list");
+            const nextEvent = getNextEvent(events);
+            let currentMonth = null;
+
+            // Ordena os eventos por data
+            events.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+            events.forEach(event => {
+                const eventDate = new Date(event.date);
+                const monthName = getMonthName(eventDate);
+
+                // Adiciona o título do mês se mudou
+                if (currentMonth !== monthName) {
+                    currentMonth = monthName;
+                    const monthSection = document.createElement("div");
+                    monthSection.classList.add("month-section");
+
+                    const monthTitle = document.createElement("div");
+                    monthTitle.classList.add("month-title");
+                    monthTitle.textContent = monthName;
+                    monthSection.appendChild(monthTitle);
+
+                    eventList.appendChild(monthSection);
+                }
+
+                // Cria o card do evento
+                const card = document.createElement("div");
+                card.classList.add("event-card");
+
+                if (event === nextEvent) {
+                    card.classList.add("next-event");
+                }
+
+                card.innerHTML = `
+                    <div class="header">
+                        <span class="day">${eventDate.getDate()}</span>
+                        <h2>${event.name}</h2>
+                    </div>
+                    <div class="location">Responsável: ${event.location}</div>
+                `;
+
+                eventList.appendChild(card);
+            });
+        }
+
+        // Chama a função ao carregar a página
+        renderEvents();
+    </script>
+</body>
+</html>
