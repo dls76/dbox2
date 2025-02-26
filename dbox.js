@@ -119,8 +119,6 @@ btnama.addEventListener("click", () => {
   window.open("https://sistemas.usb.org.br/ama/index.php");
 });
 
-
-
 function ramaisList() {
   const modalramais = document.querySelector("#modalramais");
 
