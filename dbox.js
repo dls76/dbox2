@@ -119,18 +119,7 @@ btnama.addEventListener("click", () => {
   window.open("https://sistemas.usb.org.br/ama/index.php");
 });
 
-// Modal urgências
-let modalurgencias = document.querySelector("#fonesurgencias");
-modalurgencias.addEventListener("click", () => {
-  let bgmodal = document.querySelector("#bgmodal");
-  bgmodal.classList.add("modalOn");
-});
 
-let fecharmodal = document.querySelector("#fecharmodal");
-fecharmodal.addEventListener("click", () => {
-  let bgmodal = document.querySelector("#bgmodal");
-  bgmodal.classList.remove("modalOn");
-});
 
 function ramaisList() {
   const modalramais = document.querySelector("#modalramais");

@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     proximaEscalaCultoRa(escalados);
-    console.log('script ok')
   });
 
 const escalados = [

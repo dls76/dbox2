@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/next-events.css" />
     <link rel="stylesheet" href="css/calendario-num.css" />
     <link rel="stylesheet" href="css/banners.css" />
-
+    <link rel="stylesheet" href="modalUrgencias.css">
     <!-- <link rel="stylesheet" href="css/aniversariantes.css"> -->
     <link rel="stylesheet" href="css/divhomeaniver.css" />
     <link rel="stylesheet" href="css/sec-banners.css" />
@@ -101,7 +101,7 @@
           <span class="material-symbols-outlined" id="bt-ama"
             >medical_services</span
           >
-          <span class="material-symbols-outlined" id="fonesurgencias"
+          <span class="material-symbols-outlined" id="open-emergency"
             >shield</span
           >
           <span class="material-symbols-outlined" id="ramais-do-menu"
@@ -133,7 +133,7 @@
               </div>
             </a>
 
-            <a href="" target="_blank">
+            <a href="pedagogiadventista.html" target="_blank">
               <div class="escala">
                 <div class="icon">
                   <img src="img/yes.png" alt="" />
@@ -1128,42 +1128,27 @@
     <footer class="dboxfooter">
       <a href="calendario-dbox.html" target="_blank">DBox</a>
     </footer>
-
+    
     <!-- URGÊNCIAS -->
-    <div class="bgmodal" id="bgmodal">
-      <div class="modal" id="modalurgencias">
-        <div class="fechar" id="fecharmodal">Fechar</div>
-        <h1>Fones de Urgência</h1>
-        <ul class="emergenciasul">
-          <li><span class="numerosurgencia">190</span> - Polícia</li>
-          <li><span class="numerosurgencia">192</span> - SAMU</li>
-          <li><span class="numerosurgencia">193</span> - Bombeiros</li>
-          <li>
-            <span class="numerosurgencia">3267-7888</span> - Conselho Tutelar
-            Cajurú (8h-12h e 13h-18h)
-          </li>
-          <li>
-            <span class="numerosurgencia">3363-7681</span> - Conselho Tutelar
-            Matriz (8h às 18h)
-          </li>
-          <li><span class="numerosurgencia">9.9861-0767</span> - Sekron</li>
-          <li>
-            <span class="numerosurgencia">3361-2326</span> - Vigilância
-            Sanitária
-          </li>
-          <li>
-            <span class="numerosurgencia">9.9682-5103</span> - Assessoria de
-            Imprensa (Jordana)
-          </li>
-          <li>
-            <span class="numerosurgencia">9.9681-9803</span> - Dr. Rodrigo Hahn
-            (Advogado ASP)
-          </li>
-        </ul>
+    <div id="modal-container">
+      <div id="emergency-modal">
+          <button id="close-modal-btn">Fechar</button>
+          <h1>Fones de Urgência</h1>
+          <ul class="contact-list">
+              <li><span class="emergency-number">190</span> - Polícia</li>
+              <li><span class="emergency-number">192</span> - SAMU</li>
+              <li><span class="emergency-number">193</span> - Bombeiros</li>
+              <li><span class="emergency-number">3267-7888</span> - Conselho Tutelar Cajurú (8h-12h e 13h-18h)</li>
+              <li><span class="emergency-number">3363-7681</span> - Conselho Tutelar Matriz (8h às 18h)</li>
+              <li><span class="emergency-number">9.9861-0767</span> - Sekron</li>
+              <li><span class="emergency-number">3361-2326</span> - Vigilância Sanitária</li>
+              <li><span class="emergency-number">9.9682-5103</span> - Assessoria de Imprensa (Jordana)</li>
+              <li><span class="emergency-number">9.9681-9803</span> - Dr. Rodrigo Hahn (Advogado ASP)</li>
+          </ul>
       </div>
-    </div>
+  </div>
 
-    <script></script>
+
 
     <script src="plantaoterca.js"></script>
     <!-- <script type="module" src="proxAniver.js"></script> -->
@@ -1173,13 +1158,14 @@
     </script>
 
     <script type="module" src="modalAniver.js"></script>
-    <script src="dbox.js"></script>
     <script src="calendario.js"></script>
     <script src="script.js"></script>
     <script src="ramais.js"></script>
     <script src="escalas.js"></script>
     <script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
     <script src="escalaCultoRA.js"></script>
+    <script src="dbox.js"></script>
+    <script src="modalUrgencias.js"></script>
     <script>
       function atendimentoDirecao() {
         let bt = document.querySelector("#atendimentos_direcao");
