@@ -104,5 +104,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-shadow: 0 0 4px black;
-    color: white;
+}
+
+#geracaofuturo {
+    background-image: url(../img/logo_horizontal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0 4px black;
 }
