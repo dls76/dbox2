@@ -8,36 +8,190 @@
     <style>
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: #ffffff; /* Fundo branco */
+            background-color: #f9fafb;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
         }
 
-        .container {
-            max-width: 800px;
+        header {
+            background-color: #4a90e2;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        h1 {
-            color: #4a90e2;
-            /* color: black; */
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2em;
+        .logo {
+            color: white;
+            font-size: 1.4em;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(53, 122, 189, 0.2);
+            color: white;
+        }
+
+        nav a.active {
+            background-color: #f28c38;
+            color: white;
             font-weight: 600;
         }
 
+        .wrapper {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            gap: 30px;
+            padding: 30px;
+            margin-top: 60px;
+            height: calc(100vh - 60px);
+        }
+
+        .calendar-container {
+            width: 280px;
+            background-color: #2c3e50;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
+            color: #ecf0f1;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(236, 240, 241, 0.2);
+        }
+
+        .calendar-header button {
+            background-color: rgba(236, 240, 241, 0.1);
+            color: #ecf0f1;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: background-color 0.2s ease;
+        }
+
+        .calendar-header button:hover {
+            background-color: rgba(236, 240, 241, 0.3);
+        }
+
+        .calendar-header span {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #ecf0f1;
+        }
+
+        .calendar-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 12px;
+        }
+
+        .calendar-buttons button {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .calendar-buttons button:hover {
+            background-color: #d35400;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            text-align: center;
+        }
+
+        .calendar .day-name {
+            font-weight: 500;
+            color: rgba(236, 240, 241, 0.7);
+            font-size: 0.8em;
+        }
+
+        .calendar .day {
+            padding: 8px;
+            border-radius: 50%;
+            font-size: 0.9em;
+            color: #ecf0f1;
+            transition: background-color 0.2s ease;
+        }
+
+        .calendar .day.today {
+            background-color: #e67e22;
+            color: white;
+            font-weight: 600;
+        }
+
+        .calendar .day.empty {
+            color: rgba(236, 240, 241, 0.3);
+        }
+
+        .calendar .day:not(.today):hover {
+            background-color: rgba(236, 240, 241, 0.1);
+        }
+
+        .container {
+            max-width: 840px;
+            flex: 1;
+            overflow-y: auto;
+            height: 100%;
+        }
+
         .month-section {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .month-title {
             color: #4a90e2;
-            /* color: black; */
-            font-size: 1.8em;
+            font-size: 1.6em;
             font-weight: 600;
-            margin: 20px 0 10px;
-            border-bottom: 1px solid #e0e0e0;
+            margin: 15px 0 10px;
+            border-bottom: 1px solid rgba(224, 224, 224, 0.5);
             padding-bottom: 5px;
         }
 
@@ -48,106 +202,179 @@
         }
 
         .event-card {
-            background-color: #f9fafb;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transição para transform e sombra */
+            background-color: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.2s ease;
             position: relative;
         }
 
+        .event-card:hover {
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
 
-.event-card:hover {
-    transform: scale(1.02); /* Aumento sutil */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada no hover */
-}
-
-
-        /* Etiqueta "Próximo" com cor laranja suave */
         .event-card.next-event::before {
             content: "Próximo";
             position: absolute;
-            top: -10px;
-            left: 15px;
-            background-color: #f28c38; /* Laranja suave para contraste */
+            top: -8px;
+            left: 12px;
+            background-color: #f28c38;
             color: white;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.8em;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75em;
         }
 
         .event-card.next-event {
-            border: 2px solid #f28c38;
+            border: 1px solid rgba(242, 140, 56, 0.5);
         }
 
         .event-card .header {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 5px;
+            gap: 8px;
+            margin-bottom: 4px;
         }
 
         .event-card .day {
-            font-size: 1.4em;
-            font-weight: 700;
+            font-size: 1.3em;
+            font-weight: 600;
             color: #4a90e2;
         }
 
         .event-card h2 {
             margin: 0;
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #333;
             font-weight: 500;
         }
 
-        .event-card .location {
-            margin: 5px 0;
-            color: #666;
-            font-size: 0.95em;
+        .event-card .responsavel {
+            margin: 4px 0 0;
+            color: #777;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Cultura Geral - 6º ao EM</h1>
-        <div id="event-list" class="event-list"></div>
+    <header>
+        <div class="header-content">
+            <a href="?section=6aoem" class="logo">Cultura Geral</a>
+            <nav>
+                <a href="?section=infantil" id="infantil-link">Infantil ao 1º ano</a>
+                <a href="?section=fund1" id="fund1-link">2º ao 5º ano</a>
+                <a href="?section=6aoem" id="6aoem-link" class="active">6º ao Médio</a>
+            </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prev-month">◄</button>
+                <span id="month-year"></span>
+                <button id="next-month">►</button>
+            </div>
+            <div class="calendar" id="calendar"></div>
+            <div class="calendar-buttons">
+                <button id="today-btn">Hoje</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="event-list" class="event-list"></div>
+        </div>
     </div>
+    
     <script>
-        // Array de objetos representando os eventos
-        const events = [
-            { date: "2025-02-06", name: "Boas-vindas, cód. ética, recepção novos", location: "Equipe ADM" },
-            { date: "2025-02-13", name: "Lançamento 10 dias de oração", location: "Pastoral" },
-            { date: "2025-02-20", name: "Palestrante Vanessa - Missionária", location: "Pastoral" },
-            { date: "2025-02-27", name: "Lançamento da Route", location: "Pastoral" },
-            { date: "2025-03-06", name: "Dia da mulher", location: "Pastoral" },
-            { date: "2025-03-13", name: "Palestra: histórico da escola centenário", location: "Diretor" },
-            { date: "2025-03-20", name: "Lançamento do PMDE", location: "Pr. Vinícius e terceirão" },
-            { date: "2025-03-27", name: "Impacto Esperança", location: "Pastoral" },
-            { date: "2025-04-03", name: "Dia mundial conscientização autismo", location: "SOE: sugestão, Camila Moura" },
-            { date: "2025-04-10", name: "Dia da saúde e nutrição", location: "Profs Educ. Fís." },
-            { date: "2025-04-17", name: "Semana de oração: Páscoa", location: "Pastoral" },
-            { date: "2025-04-24", name: "Dra. Angela: Bullying e Cyberbullying", location: "SOE" },
-            { date: "2025-05-01", name: "Feriado (Dia do Trabalho)", location: "" },
-            { date: "2025-05-08", name: "Dia das Mães", location: "Pastoral" },
-            { date: "2025-05-15", name: "Mérito acadêmico", location: "SOE" },
-            { date: "2025-05-22", name: "Hábitos de estudos - Edinir", location: "SOE" },
-            { date: "2025-05-29", name: "Reunião Participativa", location: "" },
-            { date: "2025-06-05", name: "Meio Ambiente: Juliano (a confirmar)", location: "Pastoral" },
-            { date: "2025-06-12", name: "Relacionamentos: Luciana Valente", location: "Carol" },
-            { date: "2025-06-19", name: "Feriado", location: "" },
-            { date: "2025-07-03", name: "Encerrando ciclos: pt. 1", location: "SOE" },
-            { date: "2025-07-24", name: "Dia do Amigo", location: "Pastoral" },
-            { date: "2025-07-31", name: "Relatório da Missão", location: "Pastoral" }
-        ];
+        // Dados dos eventos para cada seção (inicialmente iguais, você pode editar depois)
+        const eventData = {
+            "6aoem": [
+                { date: "2025-02-06", name: "Boas-vindas, cód. ética, recepção novos", responsavel: "Equipe ADM" },
+                { date: "2025-02-13", name: "Lançamento 10 dias de oração", responsavel: "Pastoral" },
+                { date: "2025-02-20", name: "Palestrante Vanessa - Missionária", responsavel: "Pastoral" },
+                { date: "2025-02-27", name: "Lançamento da Route", responsavel: "Pastoral" },
+                { date: "2025-03-06", name: "Dia da mulher", responsavel: "Pastoral" },
+                { date: "2025-03-13", name: "Palestra: histórico da escola centenário", responsavel: "Diretor" },
+                { date: "2025-03-20", name: "Lançamento do PMDE", responsavel: "Pr. Vinícius e terceirão" },
+                { date: "2025-03-27", name: "Impacto Esperança", responsavel: "Pastoral" },
+                { date: "2025-04-03", name: "Dia mundial conscientização autismo", responsavel: "SOE: sugestão, Camila Moura" },
+                { date: "2025-04-10", name: "Dia da saúde e nutrição", responsavel: "Profs Educ. Fís." },
+                { date: "2025-04-17", name: "Semana de oração: Páscoa", responsavel: "Pastoral" },
+                { date: "2025-04-24", name: "Dra. Angela: Bullying e Cyberbullying", responsavel: "SOE" },
+                { date: "2025-05-01", name: "Feriado (Dia do Trabalho)", responsavel: "" },
+                { date: "2025-05-08", name: "Dia das Mães", responsavel: "Pastoral" },
+                { date: "2025-05-15", name: "Mérito acadêmico", responsavel: "SOE" },
+                { date: "2025-05-22", name: "Hábitos de estudos - Edinir", responsavel: "SOE" },
+                { date: "2025-05-29", name: "Reunião Participativa", responsavel: "" },
+                { date: "2025-06-05", name: "Projeto Geração Futuro: lixo eletrônico", responsavel: "Pastoral" },
+                { date: "2025-06-12", name: "Relacionamentos: Luciana Valente", responsavel: "Carol" },
+                { date: "2025-06-19", name: "Feriado", responsavel: "" },
+                { date: "2025-06-26", name: "Meio ambiente: Juliano (a confirmar)", responsavel: "Pastoral" },
+                { date: "2025-07-03", name: "Encerrando ciclos: pt. 1", responsavel: "SOE" },
+                { date: "2025-07-24", name: "Dia do Amigo", responsavel: "Pastoral" },
+                { date: "2025-07-31", name: "Relatório da Missão", responsavel: "Pastoral" }
+            ],
+            "infantil": [
+                { date: "2025-02-07", name: "Teste", responsavel: "Equipe ADM" },
+                { date: "2025-02-13", name: "Lançamento 10 dias de oração", responsavel: "Pastoral" },
+                { date: "2025-02-20", name: "Palestrante Vanessa - Missionária", responsavel: "Pastoral" },
+                { date: "2025-02-27", name: "Lançamento da Route", responsavel: "Pastoral" },
+                { date: "2025-03-06", name: "Dia da mulher", responsavel: "Pastoral" },
+                { date: "2025-03-13", name: "Palestra: histórico da escola centenário", responsavel: "Diretor" },
+                { date: "2025-03-20", name: "Lançamento do PMDE", responsavel: "Pr. Vinícius e terceirão" },
+                { date: "2025-03-27", name: "Impacto Esperança", responsavel: "Pastoral" },
+                { date: "2025-04-03", name: "Dia mundial conscientização autismo", responsavel: "SOE: sugestão, Camila Moura" },
+                { date: "2025-04-10", name: "Dia da saúde e nutrição", responsavel: "Profs Educ. Fís." },
+                { date: "2025-04-17", name: "Semana de oração: Páscoa", responsavel: "Pastoral" },
+                { date: "2025-04-24", name: "Dra. Angela: Bullying e Cyberbullying", responsavel: "SOE" },
+                { date: "2025-05-01", name: "Feriado (Dia do Trabalho)", responsavel: "" },
+                { date: "2025-05-08", name: "Dia das Mães", responsavel: "Pastoral" },
+                { date: "2025-05-15", name: "Mérito acadêmico", responsavel: "SOE" },
+                { date: "2025-05-22", name: "Hábitos de estudos - Edinir", responsavel: "SOE" },
+                { date: "2025-05-29", name: "Reunião Participativa", responsavel: "" },
+                { date: "2025-06-05", name: "Projeto Geração Futuro: lixo eletrônico", responsavel: "Pastoral" },
+                { date: "2025-06-12", name: "Relacionamentos: Luciana Valente", responsavel: "Carol" },
+                { date: "2025-06-19", name: "Feriado", responsavel: "" },
+                { date: "2025-06-26", name: "Meio ambiente: Juliano (a confirmar)", responsavel: "Pastoral" },
+                { date: "2025-07-03", name: "Encerrando ciclos: pt. 1", responsavel: "SOE" },
+                { date: "2025-07-24", name: "Dia do Amigo", responsavel: "Pastoral" },
+                { date: "2025-07-31", name: "Relatório da Missão", responsavel: "Pastoral" }
+            ],
+            "fund1": [
+                { date: "2025-02-06", name: "Boas-vindas, cód. ética, recepção novos", responsavel: "Equipe ADM" },
+                { date: "2025-02-13", name: "Lançamento 10 dias de oração", responsavel: "Pastoral" },
+                { date: "2025-02-20", name: "Palestrante Vanessa - Missionária", responsavel: "Pastoral" },
+                { date: "2025-02-27", name: "Lançamento da Route", responsavel: "Pastoral" },
+                { date: "2025-03-06", name: "Dia da mulher", responsavel: "Pastoral" },
+                { date: "2025-03-13", name: "Palestra: histórico da escola centenário", responsavel: "Diretor" },
+                { date: "2025-03-20", name: "Lançamento do PMDE", responsavel: "Pr. Vinícius e terceirão" },
+                { date: "2025-03-27", name: "Impacto Esperança", responsavel: "Pastoral" },
+                { date: "2025-04-03", name: "Dia mundial conscientização autismo", responsavel: "SOE: sugestão, Camila Moura" },
+                { date: "2025-04-10", name: "Dia da saúde e nutrição", responsavel: "Profs Educ. Fís." },
+                { date: "2025-04-17", name: "Semana de oração: Páscoa", responsavel: "Pastoral" },
+                { date: "2025-04-24", name: "Dra. Angela: Bullying e Cyberbullying", responsavel: "SOE" },
+                { date: "2025-05-01", name: "Feriado (Dia do Trabalho)", responsavel: "" },
+                { date: "2025-05-08", name: "Dia das Mães", responsavel: "Pastoral" },
+                { date: "2025-05-15", name: "Mérito acadêmico", responsavel: "SOE" },
+                { date: "2025-05-22", name: "Hábitos de estudos - Edinir", responsavel: "SOE" },
+                { date: "2025-05-29", name: "Reunião Participativa", responsavel: "" },
+                { date: "2025-06-05", name: "Projeto Geração Futuro: lixo eletrônico", responsavel: "Pastoral" },
+                { date: "2025-06-12", name: "Relacionamentos: Luciana Valente", responsavel: "Carol" },
+                { date: "2025-06-19", name: "Feriado", responsavel: "" },
+                { date: "2025-06-26", name: "Meio ambiente: Juliano (a confirmar)", responsavel: "Pastoral" },
+                { date: "2025-07-03", name: "Encerrando ciclos: pt. 1", responsavel: "SOE" },
+                { date: "2025-07-24", name: "Dia do Amigo", responsavel: "Pastoral" },
+                { date: "2025-07-31", name: "Relatório da Missão", responsavel: "Pastoral" }
+            ]
+        };
 
-        const currentDate = new Date("2025-02-27");
+        const currentDate = new Date(new Date().setHours(0, 0, 0, 0));
+        let displayedDate = new Date(currentDate);
 
-        // Função para encontrar o próximo evento
         function getNextEvent(events) {
             return events.find(event => new Date(event.date) > currentDate);
         }
 
-        // Função para obter o nome do mês em português
         function getMonthName(date) {
             const months = [
                 "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
@@ -156,20 +383,60 @@
             return months[date.getMonth()];
         }
 
-        // Função para renderizar os cards agrupados por mês
-        function renderEvents() {
+        function renderCalendar() {
+            const calendar = document.getElementById("calendar");
+            const monthYear = document.getElementById("month-year");
+            calendar.innerHTML = '';
+
+            const year = displayedDate.getFullYear();
+            const month = displayedDate.getMonth();
+            monthYear.textContent = `${getMonthName(displayedDate)} ${year}`;
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            const dayNames = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+            dayNames.forEach(name => {
+                const dayName = document.createElement("div");
+                dayName.classList.add("day-name");
+                dayName.textContent = name;
+                calendar.appendChild(dayName);
+            });
+
+            for (let i = 0; i < firstDay; i++) {
+                const emptyDay = document.createElement("div");
+                emptyDay.classList.add("day", "empty");
+                calendar.appendChild(emptyDay);
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement("div");
+                dayElement.classList.add("day");
+                dayElement.textContent = day;
+
+                if (year === currentDate.getFullYear() &&
+                    month === currentDate.getMonth() &&
+                    day === currentDate.getDate()) {
+                    dayElement.classList.add("today");
+                }
+
+                calendar.appendChild(dayElement);
+            }
+        }
+
+        function renderEvents(section) {
+            const events = eventData[section];
             const eventList = document.getElementById("event-list");
             const nextEvent = getNextEvent(events);
+            eventList.innerHTML = ''; // Limpa a lista atual
             let currentMonth = null;
 
-            // Ordena os eventos por data
             events.sort((a, b) => new Date(a.date) - new Date(b.date));
 
             events.forEach(event => {
-                const eventDate = new Date(event.date);
+                const eventDate = new Date(event.date + "T00:00:00");
                 const monthName = getMonthName(eventDate);
 
-                // Adiciona o título do mês se mudou
                 if (currentMonth !== monthName) {
                     currentMonth = monthName;
                     const monthSection = document.createElement("div");
@@ -183,7 +450,6 @@
                     eventList.appendChild(monthSection);
                 }
 
-                // Cria o card do evento
                 const card = document.createElement("div");
                 card.classList.add("event-card");
 
@@ -191,20 +457,76 @@
                     card.classList.add("next-event");
                 }
 
+                const responsavelHtml = event.responsavel ? `<div class="responsavel">Responsável: ${event.responsavel}</div>` : '';
+
                 card.innerHTML = `
                     <div class="header">
                         <span class="day">${eventDate.getDate()}</span>
                         <h2>${event.name}</h2>
                     </div>
-                    <div class="location">Responsável: ${event.location}</div>
+                    ${responsavelHtml}
                 `;
 
                 eventList.appendChild(card);
             });
+
+            const currentMonthName = getMonthName(currentDate);
+            const monthTitles = document.querySelectorAll(".month-title");
+            const headerHeight = document.querySelector("header").offsetHeight;
+            const eventListContainer = document.querySelector(".container");
+            monthTitles.forEach(title => {
+                if (title.textContent === currentMonthName) {
+                    const titleTop = title.offsetTop - headerHeight - 40;
+                    eventListContainer.scrollTo({ top: titleTop, behavior: "smooth" });
+                }
+            });
         }
 
-        // Chama a função ao carregar a página
-        renderEvents();
+        function updateActiveLink(section) {
+            const links = document.querySelectorAll("nav a");
+            links.forEach(link => {
+                link.classList.remove("active");
+                if (link.id === `${section}-link`) {
+                    link.classList.add("active");
+                }
+            });
+        }
+
+        function handleNavigation() {
+            const params = new URLSearchParams(window.location.search);
+            const section = params.get("section") || "6aoem"; // Default para 6º ao EM
+            updateActiveLink(section);
+            renderEvents(section);
+        }
+
+        document.getElementById("prev-month").addEventListener("click", () => {
+            displayedDate.setMonth(displayedDate.getMonth() - 1);
+            renderCalendar();
+        });
+
+        document.getElementById("next-month").addEventListener("click", () => {
+            displayedDate.setMonth(displayedDate.getMonth() + 1);
+            renderCalendar();
+        });
+
+        document.getElementById("today-btn").addEventListener("click", () => {
+            displayedDate = new Date(currentDate);
+            renderCalendar();
+        });
+
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const section = link.id.replace("-link", "");
+                window.history.pushState({}, "", `?section=${section}`);
+                handleNavigation();
+            });
+        });
+
+        window.addEventListener("popstate", handleNavigation);
+
+        renderCalendar();
+        handleNavigation(); // Carrega a seção inicial
     </script>
 </body>
 </html>
