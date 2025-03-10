@@ -114,13 +114,22 @@ function arredondarBordasInferiores() {
 }
 
 // AMA
-const btnama = document.querySelector("#bt-ama");
-btnama.addEventListener("click", () => {
-  window.open("https://sistemas.usb.org.br/ama/index.php");
-});
+// const btnama = document.querySelector("#bt-ama");
+// btnama.addEventListener("click", () => {
+//   window.open("https://sistemas.usb.org.br/ama/index.php");
+// });
 
 function ramaisList() {
   const modalramais = document.querySelector("#modalramais");
-
   modalramais.classList.add("show_ramais");
 }
+
+document.querySelector('#bt-compras').addEventListener('click', function(event) {
+  event.preventDefault(); // Impede que o <a> tente seguir o href="#"
+  window.open("https://docs.google.com/forms/d/e/1FAIpQLSdC0vb83SeBrHw-uYLmU_bNQaZX50nhl1ewGuRU1OUls96nfw/viewform", "_blank");
+});
+
+document.querySelector('#bt-investimentos').addEventListener('click', function(event) {
+  event.preventDefault(); // Impede que o <a> tente seguir o href="#"
+  window.open("https://docs.google.com/spreadsheets/d/1sIpNNR8-OwM3wvFjYwrROTtSpL2Jxm2eI4hWECsVXWk/edit?gid=0#gid=0", "_blank");
+});

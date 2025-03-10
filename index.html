@@ -81,35 +81,36 @@
           <div class="menu" id="menu">
             <!-- <a href="index.html" class="active">Home</a> -->
             <!-- <a href="#sec-pedagogico">Pedagógico</a> -->
-            <a href="administrativo.html" target="_blank">ADMINISTRATIVO</a>
-            <a href="espiritual.html" target="_blank">ESPIRITUAL</a>
-            <a href="matriculas.html" target="_blank">MATRÍCULAS</a>
-            <a href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu"
-              >AMA</a
-            >
-            <a
+            <a id="nav-ama" href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu"><i class="fa-solid fa-truck-medical"></i> AMA</a>
+            <a id="nav-adm" href="administrativo.html" target="_blank"><i class="fa-solid fa-square-poll-vertical"></i> Administrativo</a>
+            <a id="nav-espiritual" href="espiritual.html" target="_blank"><i class="fa-solid fa-hands-praying"></i> Espiritual</a>
+            <a id="nav-matriculas" href="matriculas.html" target="_blank"><i class="fa-solid fa-chart-line"></i> Matrículas</a>
+            <!-- <a
               href="https://docs.google.com/spreadsheets/d/1sIpNNR8-OwM3wvFjYwrROTtSpL2Jxm2eI4hWECsVXWk/edit?gid=0#gid=0"
               target="_blank"
               >INVESTIMENTOS</a
             >
             <a href="https://forms.gle/m9E6FBc93x9dhqfJ6" target="_blank"
               >COMPRAS</a
-            >
+            > -->
           </div>
         </nav>
         <div class="alert_icons">
-          <span class="material-symbols-outlined" id="bt-ama"
+          <!-- <span class="material-symbols-outlined" id="bt-ama"
             >medical_services</span
-          >
-          <span class="material-symbols-outlined" id="open-emergency"
+          > -->
+          <span data-tooltip="Fones Emergência" class="material-symbols-outlined" id="open-emergency"
             >shield</span
           >
           <span class="material-symbols-outlined" id="ramais-do-menu"
             >call</span
           >
-          <span class="material-symbols-outlined" id="atendimentos_direcao"
-            >block</span
-          >
+          <span class="material-symbols-outlined" id="bt-compras">
+            shopping_cart
+            </span>
+            <span class="material-symbols-outlined" id="bt-investimentos">
+              attach_money
+              </span>
         </div>
       </header>
 
@@ -294,16 +295,17 @@
               </div>
             </a>
 
-            <a href="https://sistemas.usb.org.br/ama/index.php">
+            <a
+              href="https://docs.google.com/document/d/1RCEvuf0cto7XesP9g1my7moTVaWvTzjvJ6c0Ksfd7qQ/edit?usp=sharing" target="_blank"
+            >
               <div class="img">
-                <!-- <img src="img/ama.png" style="width: 38px;"> -->
-                <i
-                  class="fa-solid fa-briefcase-medical"
-                  id="fa-briefcase-medical"
-                ></i>
-                <div class="legenda-links">AMA</div>
+                <!-- <img src="img/bi1.png" alt="" id="bi"> -->
+                <i class="fa-solid fa-user-tie"></i>
+                <div class="legenda-links">Direção</div>
               </div>
             </a>
+
+            
 
             <a href="" id="linkRotinas">
               <div class="img">
@@ -1153,7 +1155,7 @@
     <script src="escalaCultoRA.js"></script>
     <script src="dbox.js"></script>
     <script src="modalUrgencias.js"></script>
-    <script>
+    <!-- <script>
       function atendimentoDirecao() {
         let bt = document.querySelector("#atendimentos_direcao");
         bt.addEventListener("click", () => {
@@ -1164,7 +1166,7 @@
         });
       }
 
-      atendimentoDirecao();
+      atendimentoDirecao(); -->
     </script>
 
     <!-- <script type="module">
