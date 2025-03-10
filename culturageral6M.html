@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Eventos</title>
+    <title>Cultura Geral</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -284,7 +284,6 @@
             <div id="event-list" class="event-list"></div>
         </div>
     </div>
-    
     <script>
         // Dados dos eventos para cada seção (inicialmente iguais, você pode editar depois)
         const eventData = {
@@ -315,56 +314,28 @@
                 { date: "2025-07-31", name: "Relatório da Missão", responsavel: "Pastoral" }
             ],
             "infantil": [
-                { date: "2025-02-07", name: "Teste", responsavel: "Equipe ADM" },
-                { date: "2025-02-13", name: "Lançamento 10 dias de oração", responsavel: "Pastoral" },
-                { date: "2025-02-20", name: "Palestrante Vanessa - Missionária", responsavel: "Pastoral" },
-                { date: "2025-02-27", name: "Lançamento da Route", responsavel: "Pastoral" },
-                { date: "2025-03-06", name: "Dia da mulher", responsavel: "Pastoral" },
-                { date: "2025-03-13", name: "Palestra: histórico da escola centenário", responsavel: "Diretor" },
-                { date: "2025-03-20", name: "Lançamento do PMDE", responsavel: "Pr. Vinícius e terceirão" },
-                { date: "2025-03-27", name: "Impacto Esperança", responsavel: "Pastoral" },
-                { date: "2025-04-03", name: "Dia mundial conscientização autismo", responsavel: "SOE: sugestão, Camila Moura" },
-                { date: "2025-04-10", name: "Dia da saúde e nutrição", responsavel: "Profs Educ. Fís." },
-                { date: "2025-04-17", name: "Semana de oração: Páscoa", responsavel: "Pastoral" },
-                { date: "2025-04-24", name: "Dra. Angela: Bullying e Cyberbullying", responsavel: "SOE" },
-                { date: "2025-05-01", name: "Feriado (Dia do Trabalho)", responsavel: "" },
-                { date: "2025-05-08", name: "Dia das Mães", responsavel: "Pastoral" },
-                { date: "2025-05-15", name: "Mérito acadêmico", responsavel: "SOE" },
-                { date: "2025-05-22", name: "Hábitos de estudos - Edinir", responsavel: "SOE" },
-                { date: "2025-05-29", name: "Reunião Participativa", responsavel: "" },
-                { date: "2025-06-05", name: "Projeto Geração Futuro: lixo eletrônico", responsavel: "Pastoral" },
-                { date: "2025-06-12", name: "Relacionamentos: Luciana Valente", responsavel: "Carol" },
-                { date: "2025-06-19", name: "Feriado", responsavel: "" },
-                { date: "2025-06-26", name: "Meio ambiente: Juliano (a confirmar)", responsavel: "Pastoral" },
-                { date: "2025-07-03", name: "Encerrando ciclos: pt. 1", responsavel: "SOE" },
-                { date: "2025-07-24", name: "Dia do Amigo", responsavel: "Pastoral" },
-                { date: "2025-07-31", name: "Relatório da Missão", responsavel: "Pastoral" }
+                { date: "2025-03-07", name: "Aguardando atualização", responsavel: "Aguardando atualização" },
+                { date: "2025-03-14", name: "Aguardando atualização", responsavel: "Aguardando atualização" },
+                { date: "2025-03-21", name: "Aguardando atualização", responsavel: "Aguardando atualização" },
+                { date: "2025-03-28", name: "Aguardando atualização", responsavel: "Aguardando atualização" },
+                { date: "2025-04-04", name: "Aguardando atualização", responsavel: "Aguardando atualização" },
+                { date: "2025-04-11", name: "Aguardando atualização", responsavel: "Aguardando atualização" },
+                { date: "2025-04-18", name: "Aguardando atualização", responsavel: "Aguardando atualização" },
+                { date: "2025-04-25", name: "Aguardando atualização", responsavel: "Aguardando atualização" },
+                { date: "2025-05-02", name: "Aguardando atualização", responsavel: "Aguardando atualização" },
+                { date: "2025-05-09", name: "Aguardando atualização", responsavel: "Aguardando atualização" },
             ],
             "fund1": [
-                { date: "2025-02-06", name: "Boas-vindas, cód. ética, recepção novos", responsavel: "Equipe ADM" },
-                { date: "2025-02-13", name: "Lançamento 10 dias de oração", responsavel: "Pastoral" },
-                { date: "2025-02-20", name: "Palestrante Vanessa - Missionária", responsavel: "Pastoral" },
-                { date: "2025-02-27", name: "Lançamento da Route", responsavel: "Pastoral" },
                 { date: "2025-03-06", name: "Dia da mulher", responsavel: "Pastoral" },
-                { date: "2025-03-13", name: "Palestra: histórico da escola centenário", responsavel: "Diretor" },
-                { date: "2025-03-20", name: "Lançamento do PMDE", responsavel: "Pr. Vinícius e terceirão" },
+                { date: "2025-03-13", name: "Lançamento APRIMORA", responsavel: "Jaque" },
+                { date: "2025-03-20", name: "Lançamento OBMEP - exemplos de rotinas diárias p/ desenvolver habilidade social + Hábitos de estudo - todas as turmas no auditório", responsavel: "Malu e Jaque" },
                 { date: "2025-03-27", name: "Impacto Esperança", responsavel: "Pastoral" },
-                { date: "2025-04-03", name: "Dia mundial conscientização autismo", responsavel: "SOE: sugestão, Camila Moura" },
-                { date: "2025-04-10", name: "Dia da saúde e nutrição", responsavel: "Profs Educ. Fís." },
-                { date: "2025-04-17", name: "Semana de oração: Páscoa", responsavel: "Pastoral" },
-                { date: "2025-04-24", name: "Dra. Angela: Bullying e Cyberbullying", responsavel: "SOE" },
-                { date: "2025-05-01", name: "Feriado (Dia do Trabalho)", responsavel: "" },
-                { date: "2025-05-08", name: "Dia das Mães", responsavel: "Pastoral" },
-                { date: "2025-05-15", name: "Mérito acadêmico", responsavel: "SOE" },
-                { date: "2025-05-22", name: "Hábitos de estudos - Edinir", responsavel: "SOE" },
-                { date: "2025-05-29", name: "Reunião Participativa", responsavel: "" },
-                { date: "2025-06-05", name: "Projeto Geração Futuro: lixo eletrônico", responsavel: "Pastoral" },
-                { date: "2025-06-12", name: "Relacionamentos: Luciana Valente", responsavel: "Carol" },
-                { date: "2025-06-19", name: "Feriado", responsavel: "" },
-                { date: "2025-06-26", name: "Meio ambiente: Juliano (a confirmar)", responsavel: "Pastoral" },
-                { date: "2025-07-03", name: "Encerrando ciclos: pt. 1", responsavel: "SOE" },
-                { date: "2025-07-24", name: "Dia do Amigo", responsavel: "Pastoral" },
-                { date: "2025-07-31", name: "Relatório da Missão", responsavel: "Pastoral" }
+                { date: "2025-04-03", name: "Hábitos de estudo - Vídeo motivação ou Dia da Conscientização sobre o Autismo (a confirmar)", responsavel: "Malu" },
+                { date: "2025-04-10", name: "Ensaio da Cantata de Páscoa", responsavel: "Jaque e Malu" },
+                { date: "2025-04-17", name: "Semana Santa - semana de oração", responsavel: "Pr. Vinícius" },
+                { date: "2025-04-24", name: "Projeto DIGA", responsavel: "Malu" },
+                { date: "2025-05-01", name: "Recesso (Dia do Trabalho 01/05)", responsavel: "" },
+                { date: "2025-05-08", name: "Hábitos de Estudo - Alternativo - Online - Para pais e responsáveis", responsavel: "Malu" },
             ]
         };
 

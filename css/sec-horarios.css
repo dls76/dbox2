@@ -1,124 +1,78 @@
-
-/* Horários */
-.body {
-    /* margin: 2rem 0 0 0; */
-    padding: 0 0 5rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(45deg, #24006b, #f42f8c);
+.horarios-section {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    padding: 20px;
+    width: 98%;
+    max-width: 1500px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.title {
-    color: white;
-    font-size: 4rem;
-    padding: 3rem 0 3rem 0;
-    display: block;
-    width: 100%;
+.horarios-section h2 {
+    font-size: 3rem;
+    color: #253B73;
     text-align: center;
-    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.conteiner {
-    width: 100%;
+.horarios-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
-    margin: 0 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
-.conteiner .card {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    margin: 0 auto;
-    background: #fff;
-    box-shadow: 0 15px 60px rgba(0, 0, 0, .5);
+@media (min-width: 992px) {
+    .horarios-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .horarios-section {
+        padding: 40px;
+    }
+
+    .horarios-section h2 {
+        margin-bottom: 30px;
+    }
 }
 
-.conteiner .card .face {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.conteiner .card .face.face1 {
-    box-sizing: border-box;
+.horarios-column {
     padding: 20px;
 }
 
-.conteiner .card .face.face1 h2 {
-    margin: 0;
+.horarios-column h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.horarios-column ul {
+    list-style: none;
     padding: 0;
 }
 
-.conteiner .card .face.face2 {
-    background: #111;
-    transition: 0.5s;
+.horarios-column li {
+    margin-bottom: 8px;
 }
 
-.conteiner .card:nth-child(1) .face.face2 {
-    background: linear-gradient(45deg, #3503ad, #f7308c);
+.horarios-column a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #e9ecef;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.conteiner .card:nth-child(2) .face.face2 {
-    background: linear-gradient(45deg, #CCFF00, #09AFFF);
+.horarios-column a:hover {
+    background-color: #d1d5db;
 }
 
-.conteiner .card:nth-child(3) .face.face2 {
-    background: linear-gradient(45deg, #3503ad, #f7308c);
-}
-
-.conteiner .card:nth-child(4) .face.face2 {
-    background: linear-gradient(45deg, #CCFF00, #09AFFF);
-}
-
-.conteiner .card:hover .face.face2 {
-    height: 60px;
-    font-size: 2rem;
-}
-
-.conteiner .card .face.face2:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: rgba(255, 255, 255, .1);
-}
-
-.conteiner .card .face.face2 h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 2em;
-    color: #fff;
-    transition: .5s;
-    text-shadow: 0 2PX 5PX rgba(0, 0, 0, .2);
-}
-
-.conteiner .card:hover .face.face2 h2 {
-    font-size: 1rem;
-}
-
-.horarios {
-    display: block;
-    padding: 8px 0;
-    color: rgb(77, 77, 77);
-}
-
-.horarios:hover {
-    color: #E42C8A;
-}
-
-.card:nth-child(2) .horarios:hover {
-    color: #64D488;
+.horarios-column a i {
+    margin-right: 10px;
+    color: #2C3E50;
 }
