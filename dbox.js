@@ -70,7 +70,7 @@ function escalaDeEntrevistas() {
 }
 
 function compensacao() {
-  const dataHoje = new Date();
+  const dataHoje = new Date(2025, 2, 12);
   const diaSemana = dataHoje.getDay();
 
   const isFeriado = false;
@@ -81,7 +81,7 @@ function compensacao() {
     "Hoje é domingo!",
     "Pr. Vinícius (M)",
     "Sem compensações hoje",
-    "Jaque, Camila (M), Andressa, Carin (T)",
+    "Jaque,Camila/Andressa,Carin,Nailson",
     "Valéria (M), Renata (T)",
     "Malu, Douglas (M), Josi, Carol (T)",
     "Feliz Sábado!",
@@ -98,6 +98,11 @@ function compensacao() {
   } else {
     elementoNome.innerHTML = nomesPorDia[diaSemana];
   }
+
+  // if (diaSemana === 3) {
+  //   elementoNome.style.fontSize = "10px";
+  // }
+
 }
 
 // Última escala
