@@ -79,11 +79,11 @@ function compensacao() {
 
   const nomesPorDia = [
     "Hoje é domingo!",
-    "Pr. Vinícius (M)",
+    "Pr. Vinícius",
     "Sem compensações hoje",
     "Jaque,Camila/Andressa,Carin,Nailson",
-    "Valéria (M), Renata (T)",
-    "Malu, Douglas (M), Josi, Carol (T)",
+    "Valéria/Renata",
+    "Malu,Douglas/Josi,Carol",
     "Feliz Sábado!",
   ];
 
