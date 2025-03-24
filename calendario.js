@@ -7,23 +7,30 @@ let ano = data.getFullYear()
 // Feriados fixos
 const feriadosFixos = {
     "1-1": "Ano Novo",
-    "25-12": "Natal",
-    "7-9": "Independência do Brasil",
-    "15-11": "Proclamação da República",
-    "1-5": "Dia do Trabalho",
     "3-3": "Carnaval",
     "4-3": "Carnaval",
     "18-4": "Sexta-feira da Paixão",
     "21-4": "Tiradentes",
+    "1-5": "Dia do Trabalho",
     "2-5": "Recesso",
     "19-6": "Corpus Christi",
     "20-6": "Recesso",
-    "8-9": "Aniversário de Curitiba"
+    "8-9": "Aniversário de Curitiba",
+    "15-10": "Dia do professor",
 }
 
 // Feriados por intervalo (mês indexado de 0 a 11)
 const feriadosIntervalo = {
-    6: [[5, 23]] // Julho (mês 6 no JavaScript) tem feriado de 5 a 12
+    6: [[5, 23]],
+    11: [[19, 31]],
+}
+
+// Dias de reunião participativa
+const reunioes = {
+    "18-3": true,
+    "29-5": true,
+    "28-8": true,
+    "10-11": true,
 }
 
 let renderCalendar = () => {
@@ -45,8 +52,10 @@ let renderCalendar = () => {
     for (let i = 1; i <= lastDay; i++) {
         let dateKey = `${i}-${data.getMonth() + 1}`
         let isFeriado = feriadosFixos[dateKey] !== undefined
+        let isReuniao = reunioes[dateKey] !== undefined
+        let diaSemana = new Date(data.getFullYear(), data.getMonth(), i).getDay()
+        let isFimDeSemana = diaSemana === 0 || diaSemana === 6
 
-        // Verifica se o dia pertence a um intervalo de feriados do mês atual
         if (feriadosIntervalo[data.getMonth()]) {
             feriadosIntervalo[data.getMonth()].forEach(([inicio, fim]) => {
                 if (i >= inicio && i <= fim) {
@@ -55,13 +64,20 @@ let renderCalendar = () => {
             })
         }
 
+        let classList = "dayMonth"
+        let style = ""
+
         if (i === new Date().getDate() && data.getMonth() === new Date().getMonth() && new Date().getFullYear() === data.getFullYear()) {
-            days += `<div class="today dayMonth">${i}</div>`
+            classList += " today"
         } else if (isFeriado) {
-            days += `<div class="dayMonth" style="font-weight: 700; border: 1px solid #5e7ed3;">${i}</div>`
-        } else {
-            days += `<div class="dayMonth">${i}</div>`
+            style = "font-weight: 700; background-color: var(--cor-feriado); color: #fff;"
+        } else if (isReuniao) {
+            style = "background-color: var(--cor-reuniao); font-weight: 700; border-radius: 5px;"
+        } else if (isFimDeSemana) {
+            style = "color: var(--cor-fim-de-semana);"
         }
+
+        days += `<div class="${classList}" style="${style}">${i}</div>`
     }
     
     for (let i = 1; i <= nextDays; i++) {

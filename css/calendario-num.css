@@ -1,3 +1,9 @@
+:root {
+    --cor-fim-de-semana: #C2C2C2;
+    --cor-feriado: #c2c2c2;
+    --cor-reuniao: #cbdaff;
+}
+
 #divhomecalendario {
     display: grid;
     grid-template-columns: 1fr;
@@ -103,7 +109,7 @@ i.fa-chevron-right, i.fa-chevron-left {
 }
 
 .prev-date, .next-date {
-    color: rgb(194, 194, 194) !important;
+    color: var(--cor-fim-de-semana) !important;
 }
 
 .days div:hover:not(.today) {
