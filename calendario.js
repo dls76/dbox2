@@ -70,9 +70,9 @@ let renderCalendar = () => {
         if (i === new Date().getDate() && data.getMonth() === new Date().getMonth() && new Date().getFullYear() === data.getFullYear()) {
             classList += " today"
         } else if (isFeriado) {
-            style = "font-weight: 700; background-color: var(--cor-feriado); color: #fff;"
+            style = "font-weight: 700; background-color: var(--cor-feriado); color: #5e7ed3;"
         } else if (isReuniao) {
-            style = "background-color: var(--cor-reuniao); font-weight: 700; border-radius: 5px;"
+            style = "font-weight: 700; border-radius: 5px; border: 1px solid #5E7ED3"
         } else if (isFimDeSemana) {
             style = "color: var(--cor-fim-de-semana);"
         }
@@ -107,3 +107,41 @@ document.querySelector("#btn-obs").addEventListener("click", () => {
 })
 
 renderCalendar()
+
+// Adicione este código após a função renderCalendar
+document.querySelector('.days').addEventListener('click', function(e) {
+    if (e.target.classList.contains('dayMonth')) {
+        const dia = e.target.textContent;
+        const mes = data.getMonth() + 1;
+        const key = `${dia}-${mes}`;
+        
+        // Verificar feriados fixos
+        if (feriadosFixos[key]) {
+            alert(feriadosFixos[key]);
+            return;
+        }
+
+        // Verificar feriados por intervalo
+        if (feriadosIntervalo[data.getMonth()]) {
+            feriadosIntervalo[data.getMonth()].forEach(([inicio, fim]) => {
+                if (dia >= inicio && dia <= fim) {
+                    alert(`Feriado não especificado (intervalo ${inicio} a ${fim})`);
+                }
+            });
+        }
+    }
+});
+
+document.querySelector('.days').addEventListener('click', function(e) {
+    if (e.target.classList.contains('dayMonth')) {
+        const dia = e.target.textContent;
+        const mes = data.getMonth() + 1;
+        const key = `${dia}-${mes}`;
+        
+        // Verificar feriados fixos
+        if (reunioes[key]) {
+            alert('Reunião Participativa');
+            return;
+        }
+    }
+});
