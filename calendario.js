@@ -21,8 +21,8 @@ const feriadosFixos = {
 
 // Feriados por intervalo (mês indexado de 0 a 11)
 const feriadosIntervalo = {
-    6: [[5, 23]],
-    11: [[19, 31]],
+    6: [[7, 23]],
+    11: [[19, 31]]
 }
 
 // Dias de reunião participativa
@@ -125,7 +125,7 @@ document.querySelector('.days').addEventListener('click', function(e) {
         if (feriadosIntervalo[data.getMonth()]) {
             feriadosIntervalo[data.getMonth()].forEach(([inicio, fim]) => {
                 if (dia >= inicio && dia <= fim) {
-                    alert(`Feriado não especificado (intervalo ${inicio} a ${fim})`);
+                    alert(`Recesso discente`);
                 }
             });
         }
