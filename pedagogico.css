@@ -2,63 +2,377 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: whitesmoke;
-}
-
-main {
-    width: 100%;
-    max-width: 1560px;
+    background-color: #f5f5f5;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    /* position: relative; */
+    background-color: #1a2526;
+    color: white;
+    padding: 10px 20px;
 }
 
-header .menu {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
     display: flex;
-    justify-content: space-between;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.user-profile {
+    display: flex;
     align-items: center;
 }
 
-header .dbox {
-    color: #032c50;; 
-    font-weight: 600;
-    font-size: 1.4rem;
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-header a {
-    padding: 10px;
+.user-profile span {
     display: block;
-    list-style: none;
-    text-decoration: none;
+    font-size: 14px;
 }
 
-.home {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 1fr;
-    height: calc(100vh - 70px);
-    gap: 1.5rem;
-}
-
-.subhome {
-    background-color: #fff;
-}
-
-nav {
-    background-color: #032c50;
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2a3f5f;
     color: white;
-    font-size: 1.1rem;
+    padding: 10px 20px;
 }
 
-.home nav ul li {
-    padding: 10px 15px;
+.sub-header ul {
+    display: flex;
+    list-style: none;
+}
+
+.sub-header ul li {
+    margin: 0 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.info-home {
+    font-size: 14px;
+}
+
+main {
+    padding: 20px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px; /* Espaçamento entre os cartões */
+}
+
+.card {
+    width: 23%;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Estilização para o link que envolve o card */
+.card-link {
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    color: inherit; /* Herda a cor do texto do card (branco, neste caso) */
+    display: block; /* Faz o link ocupar todo o espaço do card */
+    width: 100%; /* Garante que o link preencha a largura do card */
+}
+
+/* Garante que o card dentro do link mantenha o layout original */
+.card-link .card {
+    width: 100%; /* Mantém a largura do card */
+}
+
+/* Opcional: Adiciona um efeito hover para indicar que o card é clicável */
+.card-link:hover .card {
+    opacity: 0.9; /* Reduz a opacidade ao passar o mouse, para feedback visual */
+}
+
+.card.orange {
+    background-color: #ff8c66;
+}
+
+.card.blue {
+    background-color: #4a90e2;
+}
+
+.card.pink {
+    background-color: #ff6f91;
+}
+
+.card.light-blue {
+    background-color: #66b3ff;
+}
+
+.card .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: flex; /* Adicionado para centralizar o ícone */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+
+.bottom-section .column {
+    width: 32%; /* Para 3 colunas */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para a seção com 4 colunas */
+.bottom-section.four-columns {
+    gap: 15px; /* Espaçamento um pouco menor para acomodar 4 colunas */
+}
+
+.bottom-section.four-columns .column {
+    width: 23.5%; /* Ajuste da largura para 4 colunas com gap */
+}
+
+.column h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #2a3f5f;
+}
+
+.column input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.column ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+.column ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+/* Estilização para os links dentro dos li */
+.column ul li a {
+    color: inherit; /* Mantém a cor do texto igual ao do li (preto por padrão) */
+    text-decoration: none; 
+}
+
+/* Estilização para o span, que agora está fora do link */
+.column ul li span {
+    color: #888; /* Mantém a cor do span igual à original */
+    font-size: 12px;
+}
+
+/* Opcional: Adiciona um efeito hover para indicar que o texto principal é um link */
+.column ul li a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse, para indicar que é clicável */
+}
+.column button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a3f5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.column button:hover {
+    background-color: #1a2526;
+}
+
+/* Media Queries */
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .user-profile {
+        margin-top: 10px;
+    }
+
+    .sub-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sub-header ul {
+        flex-direction: column;
+    }
+
+    .sub-header ul li {
+        margin: 5px 0;
+    }
+
+    .info-home {
+        margin-top: 10px;
+    }
+
+    .top-section {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .card {
+        width: 48%;
+        margin-bottom: 15px;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .bottom-section .column {
+        width: 100%;
+        margin-bottom: 0; /* Removido margin-bottom, já que o gap cuida do espaçamento */
+    }
+
+    .bottom-section.four-columns .column {
+        width: 100%;
+    }
+}
+
+
+/* Dispositivos móveis (até 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        font-size: 12px;
+    }
+
+    .user-profile img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .user-profile span {
+        font-size: 12px;
+    }
+
+    .sub-header {
+        padding: 10px;
+    }
+
+    .sub-header ul li {
+        font-size: 12px;
+    }
+
+    .info-home {
+        font-size: 12px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .top-section {
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .bottom-section {
+        gap: 10px;
+    }
+
+    .column {
+        padding: 15px;
+    }
+
+    .column h2 {
+        font-size: 16px;
+    }
+
+    .column ul li {
+        font-size: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .column ul li span {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .column button {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
