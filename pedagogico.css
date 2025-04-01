@@ -9,6 +9,11 @@ body {
     background-color: #f5f5f5;
 }
 
+.generalConteiner {
+    max-width: 1500px;
+    margin: auto;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -16,6 +21,7 @@ header {
     background-color: #1a2526;
     color: white;
     padding: 10px 20px;
+    margin: 0 20px;
 }
 
 .logo {
@@ -76,6 +82,7 @@ nav ul li {
 
 main {
     padding: 20px;
+    
 }
 
 .top-section {
@@ -180,6 +187,7 @@ main {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    
 }
 
 .column ul {
