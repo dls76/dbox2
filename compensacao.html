@@ -176,7 +176,7 @@ function formatDate(date) {
 
 // Função para determinar a semana a ser destacada com base na data atual
 function getHighlightedWeek(weeks) {
-    const today = new Date('2025-03-30'); // Data atual (fixada para teste)
+    const today = new Date(); // Data atual (fixada para teste)
     const dayOfWeek = today.getDay(); // 0 (Domingo) a 6 (Sábado)
     let targetWeekStart;
 

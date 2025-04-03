@@ -73,4 +73,3 @@ function proximaEscalaCultoRa(array) {
     escalaCultoElement.innerHTML = "Data a definir";
 }
 }
-
