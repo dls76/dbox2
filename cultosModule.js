@@ -13,7 +13,7 @@ export const nomes = {
   };
   
   export function getDataAtual() {
-    return new Date(2025, 3, 9);
+    return new Date();
   }
   
   export const horarios = ["7", "10", "13"];

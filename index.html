@@ -606,6 +606,27 @@
   document.querySelector("#cultos").innerHTML = responsavelCulto;
 </script>
 
+<script type="module">
+  import { escalados } from './pedagAdvModule.js';
+
+  const hoje = getDataAtual();
+  const diaSemana = hoje.getDay();
+  const dataHoje = hoje.toISOString().split('T')[0]; // Formata a data como YYYY-MM-DD
+
+  let responsavelCulto = '';
+
+  if (diaSemana === 0) {
+    responsavelCulto = 'Hoje é domingo';
+  } else if (diaSemana === 6) {
+    responsavelCulto = 'Feliz Sábado';
+  } else {
+    const responsavel = substituicoes[dataHoje] || nomes[diaSemana];
+    responsavelCulto = horarios.map(hora => `${hora}h ${responsavel}`).join(' | ');
+  }
+
+  document.querySelector("#cultos").innerHTML = responsavelCulto;
+</script>
+
 
 <script>
 
