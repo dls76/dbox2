@@ -68,7 +68,7 @@ function proximaEscalaCultoRa(array) {
     // let diaSemana = diaDaSemana[proxReuniao.data.getDay()];
 
     // Concatenando nome do responsável e o capítulo
-    escalaCultoElement.innerHTML = `${dia} de ${mesesDoAno[mes].slice(0,3)} - ${proxReuniao.nome} (${proxReuniao.cap})`;
+    escalaCultoElement.innerHTML = `${dia}/${mesesDoAno[mes].slice(0,3)} - ${proxReuniao.nome} (${proxReuniao.cap})`;
 } else {
     escalaCultoElement.innerHTML = "Data a definir";
 }
