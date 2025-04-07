@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cultos Diários</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      height: 100%;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem;
+      background-color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .titulo {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .header h2 {
+      font-size: 1.4rem;
+    }
+
+    .header button {
+      padding: 0.4rem 1rem;
+      font-size: 1rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .header button:hover {
+      background: #0056b3;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.4rem;
+    }
+
+    .day-name {
+      background: #e9ecef;
+      padding: 0.3rem;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .day {
+      background: #fdfdfd;
+      border-radius: 4px;
+      padding: 0.3rem;
+      box-shadow: 0 0 3px rgba(0,0,0,0.1);
+      font-size: 0.7rem;
+      display: flex;
+      flex-direction: column;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .day.today {
+      background: #cce5ff;
+      border: 2px solid #339af0;
+    }
+
+    .day:not(.today):hover {
+      background: #f1f3f5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .day strong {
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+    }
+
+    .culto {
+      margin: 0; /* Alteração: remove margem vertical para controle preciso */
+      white-space: nowrap;
+      overflow: hidden;
+      /* Nova linha: define padding para controle de espaçamento */
+      padding: 0.1rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .titulo { font-size: 1.6rem; }
+      .header h2 { font-size: 1.1rem; }
+      .day { font-size: 0.65rem; }
+    }
+
+    @media (max-width: 480px) {
+      .titulo { font-size: 1.4rem; }
+      .header h2 { font-size: 1rem; }
+      .day { font-size: 0.6rem; padding: 0.2rem; }
+    }
+
+    @media (max-width: 400px) {
+      .culto {
+        font-size: 0.55rem;
+        /* Alteração: mantém padding consistente */
+        padding: 0.1rem 0;
+      }
+      .culto::before {
+        content: attr(data-nome);
+        display: block;
+      }
+      .culto {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        color: transparent;
+      }
+      .culto::before {
+        color: black;
+      }
+      .day {
+        font-size: 0.55rem;
+        /* Nova linha: ajusta padding interno para consistência */
+        padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .day { font-size: 0.5rem; }
+      .titulo { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="titulo">Cultos Diários</div>
+    <div class="header">
+      <button onclick="mudarMes(-1)">←</button>
+      <h2 id="mesAno"></h2>
+      <button onclick="mudarMes(1)">→</button>
+    </div>
+    <div class="calendar" id="calendario"></div>
+  </div>
+  <script type="module">
+    import { montarCalendario, mudarMes } from './cultosModule.js';
+  
+    let dataAtual = new Date(2025, 3, 1);
+    montarCalendario(dataAtual);
+  
+    function mudarMesHandler(direcao) {
+      mudarMes(dataAtual, direcao);
+    }
+  </script>
+  
+</body>
+</html>
