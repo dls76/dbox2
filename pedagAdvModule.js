@@ -31,7 +31,7 @@ function carregarEscalas() {
 
         const card = document.createElement("div");
         card.classList.add("card");
-        card.innerHTML = `<strong>${dia}/${mes}</strong> - ${item.nome} (cap. ${item.cap})`;
+        card.innerHTML = `<strong>${dia}/${mes.slice(0, 3)}</strong> - ${item.nome} (cap. ${item.cap})`;
 
         if (item.data < today) {
             card.classList.add("passado");
