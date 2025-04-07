@@ -561,12 +561,12 @@
 <script src="calendario.js"></script>
 <script src="script.js"></script>
 <script src="ramais.js"></script>
-<script src="escalas.js"></script>
 <script src="escalaCultoRA.js"></script>
 <script src="dbox.js"></script>
 <script src="modalUrgencias.js"></script>
-<script src="cultos_escala.js"></script>
+<!-- <script src="cultos_escala.js"></script> -->
 
+<script type="module" src="escalas.js"></script>
 <script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
 <script type="module" src="modalAniver.js"></script>
 
@@ -592,39 +592,76 @@
   document.querySelector("#cultos").innerHTML = responsavelCulto;
 </script>
 
-<!-- Script Pedagogia Adventista com importações -->
+<!-- Pedagogia Adventista com importações -->
 <script type="module">
-  import { escalados } from './pedagAdvModule.js';
-  import { mesesDoAno } from './pedagAdvModule.js';
+  import { escalados, mesesDoAno, getDataAtual } from './pedagAdvModule.js';
   
-  const currentDay = getDataAtual();
-  const diaSemana = currentDay.getDay();
-  const currentDate = currentDay.toISOString().split('T')[0]; // Formata a data como YYYY-MM-DD
+  function proximaEscalaCultoRa(array) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
 
-  let assignee = '';
+    const futureDates = array.filter(
+      (item) => new Date(item.data).getTime() >= today.getTime()
+    );
 
-  if (diaSemana === 0) {
-    assignee = 'Hoje é domingo';
-  } else if (diaSemana === 6) {
-    assignee = 'Feliz Sábado';
+    futureDates.sort((a, b) => a.data.getTime() - b.data.getTime());
+
+    const escalaCultoElement =
+      document.querySelector("#escalaCultoRa");
+
+    if (!escalaCultoElement) {
+      console.error("Elemento não encontrado no DOM.");
+      return;
+    }
+
+    if (futureDates.length > 0) {
+      const proxReuniao = futureDates[0];
+      let dia = proxReuniao.data.getDate().toString().padStart(2, "0");
+      let mes = proxReuniao.data.getMonth();
+      // let diaSemana = diaDaSemana[proxReuniao.data.getDay()];
+
+      // Concatenando nome do responsável e o capítulo
+      escalaCultoElement.innerHTML = `${dia}/${mesesDoAno[mes].slice(0,3)} - ${proxReuniao.nome} (${proxReuniao.cap})`;
   } else {
-    const responsavel = substituicoes[currentDate] || nomes[diaSemana];
-    assignee = horarios.map(hora => `${hora}h ${responsavel}`).join(' | ');
+      escalaCultoElement.innerHTML = "Data a definir";
   }
+}
 
-  document.querySelector("#cultos").innerHTML = assignee;
+proximaEscalaCultoRa(escalados)
+
 </script>
 
+<!-- Plantão de Sexta -->
+<script type="module">
+
+  import { plantaosexta } from '../escalas.js'
+  
+  function proximoPlantaoDeSexta(array) {
+    const dataAtualizada = new Date();
+    const todayAtMidnight = new Date(dataAtualizada.getFullYear(), dataAtualizada.getMonth(), dataAtualizada.getDate(), 0, 0, 0, 0);
+    const futureDates = array.filter(item => item.data >= todayAtMidnight);
+    futureDates.sort((a, b) => a.data - b.data);
+    if (futureDates.length > 0) {
+        let dia = futureDates[0].data.getDate();
+        let mes = futureDates[0].data.getMonth() + 1;
+        dia = dia < 10 ? '0' + dia : dia;
+        mes = mes < 10 ? '0' + mes : mes;
+        let pessoa = futureDates[0].person;
+        let monitoria = futureDates[0].monitoria;
+        document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
+    }
+  }
+  
+  proximoPlantaoDeSexta(plantaosexta)
+
+</script>
 
 <script>
 
-  let datahoje = new Date();
-
-  window.addEventListener("load", cultos);
   window.addEventListener("load", compensacao);
+
   window.addEventListener("load", escalaDeEntrevistas);
 
-  //Entrevistas
   function escalaDeEntrevistas() {
     const hoje = new Date();
     const diaDaSemana = hoje.getDay();
@@ -692,11 +729,13 @@
     modalramais.classList.add("show_ramais");
   }
 
+  // Pedido de compras
   document.querySelector('#bt-compras').addEventListener('click', function(event) {
   event.preventDefault(); // Impede que o <a> tente seguir o href="#"
   window.open("https://docs.google.com/forms/d/e/1FAIpQLSdC0vb83SeBrHw-uYLmU_bNQaZX50nhl1ewGuRU1OUls96nfw/viewform", "_blank");
   });
 
+  // Investimentos
   document.querySelector('#bt-investimentos').addEventListener('click', function(event) {
   event.preventDefault(); // Impede que o <a> tente seguir o href="#"
   window.open("https://docs.google.com/spreadsheets/d/1sIpNNR8-OwM3wvFjYwrROTtSpL2Jxm2eI4hWECsVXWk/edit?gid=0#gid=0", "_blank");

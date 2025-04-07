@@ -3,8 +3,8 @@ const reuniaoadm = [
     { data: new Date(2025, 1, 18), link: 'https://docs.google.com/document/d/1U-kMueb17ViNZQ_tDXZfhgcpQmMFruQhFwM4ShrskG8/edit?tab=t.0', hora: '14h' },
     { data: new Date(2025, 1, 25), link: 'https://docs.google.com/document/d/1wz3gE9hmnWQhB49L_hAB7ue-iR3USJPdsmXiw4wCy5E/edit?tab=t.0', hora: '14h' },
     { data: new Date(2025, 2, 11), link: 'https://docs.google.com/document/d/1zWy9d7jIYYxMye3dvr_uZNpOGrGrBNQXxMQ3n3tG7Xs/edit?usp=sharing', hora: '14h' },
-    // { data: new Date(2025, 2, 18), link: 'https://docs.google.com/document/d/1VZ_lhrittOKwXyG1l-4TAGIau4F_ZKL1xaLSlJyc0Vc/edit?usp=sharing', hora: '14h' },
-    // { data: new Date(2025, 2, 25), link: 'https://docs.google.com/document/d/1jOR4o663EtSDQc2CfZFRH9NldRNHOymZAuFyU1Wr6zk/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 2, 18), link: 'https://docs.google.com/document/d/1VZ_lhrittOKwXyG1l-4TAGIau4F_ZKL1xaLSlJyc0Vc/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 2, 25), link: 'https://docs.google.com/document/d/1jOR4o663EtSDQc2CfZFRH9NldRNHOymZAuFyU1Wr6zk/edit?usp=sharing', hora: '14h' },
     { data: new Date(2025, 3, 1), link: 'https://docs.google.com/document/d/1mj0Yjc5Y24-RDtN6HIFbamM6wvxS-oR9f379403MeBk/edit?tab=t.0', hora: '14h' },
     { data: new Date(2025, 3, 8), link: 'https://docs.google.com/document/d/1PoJ92xQ3alOjUxmsaD-pTDqmLYyKYxOF8BWvdHSTH08/edit?tab=t.0', hora: '14h' },
     { data: new Date(2025, 3, 15), link: 'https://docs.google.com/document/d/1Sfy95UJORUr6navCZGJcl-IYul553bI9i9Dp3aSc0jc/edit?tab=t.0', hora: '14h' },
@@ -53,12 +53,7 @@ function proximaReuniaoAdm(array) {
     }
 }
 
-window.addEventListener('load', () => {
-    proximoPlantaoDeSexta(plantaosexta);
-});
-
-
-let plantaosexta = [
+export let plantaosexta = [
     // { data: new Date(2025, 1, 7), person: "Murilo", monitoria: "Lincon e Carmelis" },
     // { data: new Date(2025, 1, 14), person: "Douglas", monitoria: "Gabriel e Isabele" },
     // { data: new Date(2025, 1, 21), person: "Leonardo", monitoria: "Kadu e Rose" },
@@ -101,54 +96,3 @@ let plantaosexta = [
     { data: new Date(2025, 11, 5), person: "Leonardo", monitoria: "" },
     { data: new Date(2025, 12, 12), person: "Murilo", monitoria: "" }
 ];
-
-
-function proximoPlantaoDeSexta(array) {
-    
-    const currentDate = new Date();
-    const todayAtMidnight = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), 0, 0, 0, 0);
-    const futureDates = array.filter(item => item.data >= todayAtMidnight);
-    futureDates.sort((a, b) => a.data - b.data);
-    
-    if (futureDates.length > 0) {
-        let dia = futureDates[0].data.getDate();
-        let mes = futureDates[0].data.getMonth() + 1;
-        dia = dia < 10 ? '0' + dia : dia;
-        mes = mes < 10 ? '0' + mes : mes;
-        let pessoa = futureDates[0].person;
-        let monitoria = futureDates[0].monitoria;
-        document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
-    }
-    
-}
-
-function formatarData(data) {
-    let dia = data.getDate();
-    let mes = data.getMonth() + 1;
-    dia = dia < 10 ? '0' + dia : dia;
-    mes = mes < 10 ? '0' + mes : mes;
-    return `${dia}/${mes}`;
-}
-
-function mostrarPlantaoDeSexta() {
-    let main = document.querySelector('#main');
-    let currentMonth = null;
-
-    plantaosexta.forEach(item => {
-        let nomeMes = mesesDoAno[item.data.getMonth()];
-
-        if (nomeMes !== currentMonth) {
-            let tituloMes = document.createElement('h1');
-            tituloMes.textContent = nomeMes;
-            main.appendChild(tituloMes);
-            currentMonth = nomeMes;
-        }
-
-        let dataFormatada = formatarData(item.data);
-
-        let div = document.createElement('div');
-        div.classList.add('itemplantao');
-        div.innerHTML = `${dataFormatada} - ${item.person} (Monitoria: ${item.monitoria})`;
-        main.appendChild(div);
-    });
-}

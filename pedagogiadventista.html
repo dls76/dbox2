@@ -74,48 +74,47 @@
     <h1>Pedagogia Adventista</h1>
     <main id="main"></main>
     <footer>Dbox</footer>
-    <script src="pedagogiaAdv_app.js"></script>
      <script type="module">
-        import {escalados} from './pedagAdvModule.js'
-        import { mesesDoAno } from './pedagAdvModule.js';
+        import { escalados, mesesDoAno } from './pedagAdvModule.js'
 
         function carregarEscalas() {
-    const main = document.querySelector("#main");
-    main.innerHTML = "";
 
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+            const main = document.querySelector("#main");
+            main.innerHTML = "";
 
-    let proximoElemento = null;
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
 
-    escalados.forEach((item) => {
-        let dia = item.data.getDate().toString().padStart(2, "0");
-        let mes = mesesDoAno[item.data.getMonth()].slice(0, 3);
+            let proximoElemento = null;
 
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.innerHTML = `<strong>${dia}/${mes}</strong> - ${item.nome} (cap. ${item.cap})`;
+            escalados.forEach((item) => {
+                let dia = item.data.getDate().toString().padStart(2, "0");
+                let mes = mesesDoAno[item.data.getMonth()].slice(0, 3);
 
-        if (item.data < today) {
-            card.classList.add("passado");
-        } else if (!proximoElemento) {
-            card.classList.add("destaque");
-            proximoElemento = card;
+                const card = document.createElement("div");
+                card.classList.add("card");
+                card.innerHTML = `<strong>${dia}/${mes}</strong> - ${item.nome} (cap. ${item.cap})`;
+
+                if (item.data < today) {
+                    card.classList.add("passado");
+                } else if (!proximoElemento) {
+                    card.classList.add("destaque");
+                    proximoElemento = card;
+                }
+
+                main.appendChild(card);
+            });
+
+            if (proximoElemento) {
+                setTimeout(() => {
+                    const h1Height = document.querySelector("h1").offsetHeight;
+                    const scrollPosition = proximoElemento.offsetTop - h1Height - 10;
+                    window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+                }, 500);
+            }
         }
 
-        main.appendChild(card);
-    });
-
-    if (proximoElemento) {
-        setTimeout(() => {
-            const h1Height = document.querySelector("h1").offsetHeight;
-            const scrollPosition = proximoElemento.offsetTop - h1Height - 10;
-            window.scrollTo({ top: scrollPosition, behavior: "smooth" });
-        }, 500);
-    }
-}
-
-document.addEventListener("DOMContentLoaded", carregarEscalas);
+        carregarEscalas()
 
      </script>
 </body>

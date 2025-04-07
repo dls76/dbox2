@@ -87,13 +87,16 @@
     </style>
 </head>
 <body>
-    <script src="../escalas.js"></script> <!-- Certifique-se de que o caminho está correto -->
+    <!-- <script src="../escalas.js"></script> Certifique-se de que o caminho está correto -->
 
     <h1>Plantão de Sexta</h1>
     <main id="main"></main>
     <footer><a href="https://dls76.github.io/dbox2/">DBox</a></footer>
 
-    <script>
+    <script type="module">
+    
+    import { plantaosexta } from '../escalas.js'
+    
     // Verifique se plantaosexta está definido
     if (typeof plantaosexta !== 'undefined') {
         mostrarPlantaoDeSexta();
