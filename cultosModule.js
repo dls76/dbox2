@@ -1,19 +1,19 @@
 export const nomes = {
     1: "Vice",        // Segunda
-    2: "Pr.Vini", // Terça
+    2: "Vini", // Terça
     3: "Dire",      // Quarta
-    4: "Arisson",  // Quinta
-    5: "Pr.Leo"  // Sexta
+    4: "Aris",  // Quinta
+    5: "Leo"  // Sexta
   };
   
   export const substituicoes = {
-    "2025-04-10": "Pr.Aris",
-    // "2025-04-17": "Convidado",
-    // "2025-04-24": "Convidado"
+    // "2025-04-10": "Nome",
+    // "2025-04-17": "Nome",
+    // "2025-04-24": "Nome"
   };
   
   export function getDataAtual() {
-    return new Date(2025, 3, 10);
+    return new Date(2025, 3, 9);
   }
   
   export const horarios = ["7", "10", "13"];

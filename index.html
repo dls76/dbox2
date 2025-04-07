@@ -600,7 +600,7 @@
     responsavelCulto = 'Feliz Sábado';
   } else {
     const responsavel = substituicoes[dataHoje] || nomes[diaSemana];
-    responsavelCulto = horarios.map(hora => `${hora}h - ${responsavel}`).join(' | ');
+    responsavelCulto = horarios.map(hora => `${hora}h ${responsavel}`).join(' | ');
   }
 
   document.querySelector("#cultos").innerHTML = responsavelCulto;
