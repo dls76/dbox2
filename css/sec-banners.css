@@ -3,6 +3,7 @@
     margin: 2rem auto;
     border-radius: 20px;    
     width: 98%;
+    padding: 0 0 4rem 0;
 }
 
 .sec-banners div {
@@ -32,10 +33,9 @@
 }
 
 .sec-banners div a {
-    height: 200px;
+    height: 145px;
     margin: 2rem;
-    /* padding: 1rem; */
-    width: 380px;
+    width: 280px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -112,4 +112,12 @@
     background-size: cover;
     background-position: center;
     text-shadow: 0 0 4px black;
+}
+
+
+#semanasanta25 {
+    background-image: url(../img/promo/semsantainf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
 }

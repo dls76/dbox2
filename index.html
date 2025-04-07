@@ -76,12 +76,11 @@
           <i class="fa-solid fa-bars"></i>
         </div>
         <div class="menu" id="menu">
-          <a id="nav-ama" href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu"><i class="fa-solid fa-truck-medical"></i> AMA</a>
+          <a id="nav-ama" href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu" target="_blank"><i class="fa-solid fa-truck-medical"></i> AMA</a>
           <a id="nav-ped" href="pedagogico.html" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Pedagógico</a>
           <a id="nav-adm" href="administrativo.html" target="_blank"><i class="fa-solid fa-square-poll-vertical"></i> Administrativo</a>
           <a id="nav-espiritual" href="espiritual.html" target="_blank"><i class="fa-solid fa-hands-praying"></i> Espiritual</a>
           <a id="nav-matriculas" href="matriculas.html" target="_blank"><i class="fa-solid fa-chart-line"></i> Matrículas</a>
-    
         </div>
       </nav>
 
@@ -384,28 +383,11 @@
   <!-- BANNERS -->
   <section class="sec-banners">
     <h1>Eventos e Projetos</h1>
-
     <div>
-      <div>
-        <a
-          href="https://drive.google.com/drive/folders/16T8FmmbtTS6I-95kGEGNDndEp0gEJa6C"
-          id="pascoa2025"
-          target="_blank"
-        ></a>
-      </div>
-      <div>
-        <a
-          href="https://drive.google.com/drive/folders/1ZPUdah1Uk3ENt8kIIY4eq7qvs2ljq3f7?usp=drive_link"
-          id="geracaofuturo"
-          target="_blank"
-        ></a>
-      </div>
-      <!-- <div><a href=""  id=""></a></div> -->
-      <!-- <div><a href="https://ead.clinicaadven tista.com.br/"  id="mentesfortes">Curso Mentes Fortes</a></div> -->
+      <div><a href="https://drive.google.com/drive/folders/16T8FmmbtTS6I-95kGEGNDndEp0gEJa6C" id="pascoa2025" target="_blank"></a></div>
+      <div><a href="https://drive.google.com/drive/folders/1OM8hhmCWGhZPNEGzPkFhKvDlV6hGOS7Y?usp=drive_link" id="semanasanta25" target="_blank"></a></div>
+      <div><a href="https://drive.google.com/drive/folders/1ZPUdah1Uk3ENt8kIIY4eq7qvs2ljq3f7?usp=drive_link" id="geracaofuturo" target="_blank"></a></div>
     </div>
-
-    <!-- <a class="linkeventos" href="pg-externas/eventos.html" target="_blank">Ver todos os eventos...</a> -->
-    <br /><br /><br /><br />
   </section>
   
   <!-- HORÁRIOS -->
@@ -448,6 +430,7 @@
           <li><a href="docs/horarios/F2M/reforcoeoficina_EM.pdf" target="_blank"><i class="fas fa-pencil"></i> Reforços e Oficinas EM</a></li>
           <li><a href="docs/horarios/F2M/reforcoeoficina_F2.pdf" target="_blank"><i class="fas fa-pencil"></i> Reforços e Oficinas F2</a></li>
           <li><a href="culturageral6M.html?section=6aoem" target="_blank"><i class="fas fa-globe"></i> Cultura Geral</a></li>
+          <li><a href="docs/horarios/F2M/av2_rec_1bim.pdf" target="_blank"><i class="fas fa-tasks"></i> AV2 e Recuperações</a></li>
         </ul>
       </div>
       <div class="horarios-column">
@@ -459,7 +442,7 @@
           <li><a href="#"><i class="fas fa-gears"></i> Robótica</a></li>
           <li><a href="#"><i class="fas fa-person-running"></i> Funcional</a></li>
           <li><a href="#"><i class="fas fa-volleyball"></i> Vôlei</a></li>
-          <li><a href="#"><i class="fas fa-table-tennis-paddle-ball"></i> Tênis de Mesa</a></li>
+          <!-- <li><a href="#"><i class="fas fa-table-tennis-paddle-ball"></i> Tênis de Mesa</a></li> -->
           
         </ul>
       </div>
@@ -587,12 +570,13 @@
 <script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
 <script type="module" src="modalAniver.js"></script>
 
+<!-- Cultos Script com importações-->
 <script type="module">
   import { nomes, horarios, substituicoes, getDataAtual } from './cultosModule.js';
 
-  const hoje = getDataAtual();
-  const diaSemana = hoje.getDay();
-  const dataHoje = hoje.toISOString().split('T')[0]; // Formata a data como YYYY-MM-DD
+  const dataAtual = getDataAtual();
+  diaSemana = dataAtual.getDay();
+  const dataHoje = dataAtual.toISOString().split('T')[0]; // Formata a data como YYYY-MM-DD
 
   let responsavelCulto = '';
 
@@ -608,25 +592,27 @@
   document.querySelector("#cultos").innerHTML = responsavelCulto;
 </script>
 
+<!-- Script Pedagogia Adventista com importações -->
 <script type="module">
   import { escalados } from './pedagAdvModule.js';
+  import { mesesDoAno } from './pedagAdvModule.js';
+  
+  const currentDay = getDataAtual();
+  const diaSemana = currentDay.getDay();
+  const currentDate = currentDay.toISOString().split('T')[0]; // Formata a data como YYYY-MM-DD
 
-  const hoje = getDataAtual();
-  const diaSemana = hoje.getDay();
-  const dataHoje = hoje.toISOString().split('T')[0]; // Formata a data como YYYY-MM-DD
-
-  let responsavelCulto = '';
+  let assignee = '';
 
   if (diaSemana === 0) {
-    responsavelCulto = 'Hoje é domingo';
+    assignee = 'Hoje é domingo';
   } else if (diaSemana === 6) {
-    responsavelCulto = 'Feliz Sábado';
+    assignee = 'Feliz Sábado';
   } else {
-    const responsavel = substituicoes[dataHoje] || nomes[diaSemana];
-    responsavelCulto = horarios.map(hora => `${hora}h ${responsavel}`).join(' | ');
+    const responsavel = substituicoes[currentDate] || nomes[diaSemana];
+    assignee = horarios.map(hora => `${hora}h ${responsavel}`).join(' | ');
   }
 
-  document.querySelector("#cultos").innerHTML = responsavelCulto;
+  document.querySelector("#cultos").innerHTML = assignee;
 </script>
 
 
