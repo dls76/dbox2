@@ -39,15 +39,15 @@ body {
 }
 
 #headeraniversarianteslist {
-    padding: 1rem 0 1rem 0;
+    padding: .5rem 0 .5rem 0;
     position: fixed;
     width: 100%;
-    height: 120px;
+    /* height: 120px; */
     top: 0;
     left: 0;
     display: block;
     text-align: center;
-    background-color: #EDC7F9;
+    background-color: #253B73;
 }
 
 .h1Aniver {
@@ -55,7 +55,7 @@ body {
     padding: 1rem;
     font-weight: 600;
     margin: auto;
-    color: #5c3966;
+    color: #fff;
 }
 
 #headeraniversarianteslist p {

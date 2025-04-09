@@ -9,7 +9,7 @@ let diaDoMes = ('0' + dataAtual.getDate()).slice(-2);
     
 let dataAtualCompleta = document.querySelector('#dataAtualizada');
     
-dataAtualCompleta.innerHTML = `${diasDaSemana[dataAtual.getDay()]}, ${diaDoMes} de ${mss[dataAtual.getMonth()]} de ${dataAtual.getFullYear()}`;
+// dataAtualCompleta.innerHTML = `${diasDaSemana[dataAtual.getDay()]}, ${diaDoMes} de ${mss[dataAtual.getMonth()]} de ${dataAtual.getFullYear()}`;
 
 function loadAniversariantes() {
 
@@ -17,7 +17,7 @@ function loadAniversariantes() {
         // Restante do seu código para carregar os aniversariantes
         let h1 = document.querySelector('#h1-aniversariantes');
         h1.classList.add('h1Aniver');
-        h1.innerHTML = "Aniversariantes";
+        h1.innerHTML = "Aniversariantes " + dataAtual.getFullYear();
 
         let main = document.querySelector('#main-aniversariantes');
         main.classList.add('mainAniver');
@@ -64,14 +64,23 @@ function loadAniversariantes() {
         regressiva.classList.add('regressivaAniver');
         linha.appendChild(regressiva);
 
-        const today = dataAtual;
-        today.setHours(0,0,0,0);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
 
-        const timeDiff = pessoas[i].data - today;
-        const daysRemaining = Math.floor(timeDiff/(1000*60*60*24));
+        // Cria a data do aniversário deste ano
+        let proximoAniver = new Date(today.getFullYear(), pessoas[i].mes, pessoas[i].dia);
+
+        // Se já passou, ajusta para o próximo ano
+        if (proximoAniver < today) {
+            proximoAniver = new Date(today.getFullYear() + 1, pessoas[i].mes, pessoas[i].dia);
+        }
+
+        const timeDiff = proximoAniver - today;
+        const daysRemaining = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
 
         if (daysRemaining < -1) {
-            regressiva.innerHTML = `${Math.abs(daysRemaining)} dias atrás`;
+            regressiva.innerHTML = `Há ${Math.abs(daysRemaining)} dias`;
             regressiva.style.color = "lightgray";
         } else if (daysRemaining == -1) {
             regressiva.innerHTML = `Ontem`;
@@ -85,7 +94,7 @@ function loadAniversariantes() {
             regressiva.style.color = "dodgerblue";
             regressiva.style.fontWeight = "600";
         } else {
-            regressiva.innerHTML = `Faltam ${daysRemaining} dias`;
+            regressiva.innerHTML = `Em ${daysRemaining} dias`;
         }
 
     }
