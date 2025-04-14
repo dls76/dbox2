@@ -860,17 +860,44 @@ body {
     padding: 10px 20px;
   }
 }
-</style>
 
-<div class="cx-msg-overlay-x87" id="msgAutoPopupX87">
-<div class="cx-msg-box-x87" id="modalContentX87">
-  <button class="cx-fechar-x87" id="btnFecharX87">&times;</button>
-  <h2>Cantata de Páscoa e Semana Santa</h2>
-  <p>Acesse aqui os horários, mapas, escalas de trabalho e o programa completo.</p>
-  <button class="btn-acesso-x87" onclick="window.location.href='https://drive.google.com/drive/folders/1Bh3LUYTb9ZT0PNon5bcEwvZgwPk62hkm'">Acesse Aqui</button>
-  <div class="cx-nao-exibir-x87">
-    <input type="checkbox" id="naoExibirHojeX87" />
-    <label for="naoExibirHojeX87">Não exibir novamente hoje</label>
+
+    @media (max-width: 480px) {
+      .cx-msg-box-x87 {
+        padding: 36px 20px;
+      }
+
+      .cx-msg-box-x87 h2 {
+        font-size: 22px;
+      }
+
+      .cx-msg-box-x87 p {
+        font-size: 14px;
+      }
+
+      .btn-acesso-x87 {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+
+
+  <div class="cx-msg-overlay-x87" id="msgAutoPopupX87">
+    <div class="cx-msg-box-x87" id="modalContentX87">
+      <button class="cx-fechar-x87" id="btnFecharX87">&times;</button>
+      <h1>Obrigado!</h1>
+      <p>Por sua ajuda valiosa em nossa programação de Páscoa! Você fez a diferença!</p>
+
+<span style="font-size: 2rem;">❤️</span>
+
+     <!-- <button class="btn-acesso-x87" onclick="window.location.href='https://drive.google.com/drive/folders/1Bh3LUYTb9ZT0PNon5bcEwvZgwPk62hkm'">Acesse Aqui</button> -->
+      <div class="cx-nao-exibir-x87">
+        <input type="checkbox" id="naoExibirHojeX87" />
+        <label for="naoExibirHojeX87">Não exibir novamente hoje</label>
+      </div>
+    </div>
+
   </div>
 </div>
 </div>
