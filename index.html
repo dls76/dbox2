@@ -2,20 +2,22 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
   <title>DBox</title>
-  <link rel="shortcut icon" href="img/dbox-favicon.ico" type="image/x-icon" />
+
+  <link rel="shortcut icon" href="img/dbox-favicon.ico" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/sec-linksrapidos.css" />
+  <link rel="stylesheet" href="css/sec-linksrapidos.css"/>
 
   <!-- Arquivos CSS da Home -->
-  <link rel="stylesheet" href="css/modalAniver.css" />
-  <link rel="stylesheet" href="css/submenu.css" />
-  <link rel="stylesheet" href="css/escalas.css" />
-  <link rel="stylesheet" href="css/next-events.css" />
-  <link rel="stylesheet" href="css/calendario-num.css" />
-  <link rel="stylesheet" href="css/banners.css" />
+  <link rel="stylesheet" href="css/modalAniver.css"/>
+  <link rel="stylesheet" href="css/submenu.css"/>
+  <link rel="stylesheet" href="css/escalas.css"/>
+  <link rel="stylesheet" href="css/next-events.css"/>
+  <link rel="stylesheet" href="css/calendario-num.css"/>
+  <link rel="stylesheet" href="css/banners.css"/>
   <link rel="stylesheet" href="modalUrgencias.css">
   <!-- <link rel="stylesheet" href="css/aniversariantes.css"> -->
   <link rel="stylesheet" href="css/divhomeaniver.css" />
@@ -32,40 +34,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
   <link rel="stylesheet" href="./css/divhomeaniver.css" />
 
-  <script
-    src="https://kit.fontawesome.com/8abf0ff8b8.js"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://kit.fontawesome.com/8abf0ff8b8.js"
-    crossorigin="anonymous"
-  ></script>
-
-  <script src="confetti.js"></script>
+  <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8abf0ff8b8.js" crossorigin="anonymous"></script>
+  <!-- <script src="confetti.js"></script> -->
 
   <style>
     .material-symbols-outlined {
       font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
     }
   </style>
+
 </head>
 
 <body>
-  <!-- scroll top button -->
+  
   <div class="scrollTopButton" id="top" onclick="scrollToTop()">
     <i class="fa-solid fa-angle-up"></i>
   </div>
-
+  
   <!-- HOME  -->
   <div class="conteinergeral">
 
@@ -377,7 +367,6 @@
       <div class="divhome" id="divhomeproxaniversariantes"></div>
 
     </main>
-
   </div>
 
   <!-- BANNERS -->
@@ -751,225 +740,180 @@ proximaEscalaCultoRa(escalados)
 
 </script>
 
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f6ff;
+}
 
+.cx-msg-overlay-x87 {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 20, 40, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  animation: fadeInX87 0.4s ease-in-out;
+}
 
+.cx-msg-box-x87 {
+  background-color: #0070d1;
+  color: #fff;
+  border: 6px solid #ffffff;
+  border-radius: 24px;
+  padding: 48px 32px;
+  max-width: 420px;
+  width: 92%;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: slideUpX87 0.5s ease-out;
+}
 
+.cx-msg-box-x87 h2 {
+  font-size: 26px;
+  margin-bottom: 18px;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f6ff;
-    }
+.cx-msg-box-x87 p {
+  font-size: 15px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
 
-    .cx-msg-overlay-x87 {
-      position: fixed;
-      inset: 0;
-      background-color: rgba(0, 20, 40, 0.85);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 99999;
-      animation: fadeInX87 0.4s ease-in-out;
-    }
+.btn-acesso-x87 {
+  background-color: #ffffff;
+  color: #0070d1;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 26px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+}
 
-    .cx-msg-box-x87 {
-      background-color: #0070d1;
-      color: #fff;
-      border: 6px solid #ffffff;
-      border-radius: 24px;
-      padding: 48px 32px;
-      max-width: 420px;
-      width: 92%;
-      text-align: center;
-      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
-      position: relative;
-      animation: slideUpX87 0.5s ease-out;
-    }
+.btn-acesso-x87:hover {
+  background-color: #e0efff;
+  transform: scale(1.05);
+}
 
-    .cx-msg-box-x87 h2 {
-      font-size: 26px;
-      margin-bottom: 18px;
-    }
+.cx-fechar-x87 {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+}
 
-    .cx-msg-box-x87 p {
-      font-size: 15px;
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
+.cx-nao-exibir-x87 {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
 
-    .btn-acesso-x87 {
-      background-color: #ffffff;
-      color: #0070d1;
-      font-weight: 600;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 26px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      margin-bottom: 16px;
-    }
+.cx-nao-exibir-x87 input {
+  transform: scale(1.2);
+}
 
-    .btn-acesso-x87:hover {
-      background-color: #e0efff;
-      transform: scale(1.05);
-    }
+@keyframes fadeInX87 {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    .cx-fechar-x87 {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      background: none;
-      border: none;
-      color: #ffffff;
-      font-size: 22px;
-      cursor: pointer;
-    }
+@keyframes slideUpX87 {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-    .cx-nao-exibir-x87 {
-      margin-top: 12px;
-      font-size: 14px;
-      color: #e0e0e0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
+@media (max-width: 480px) {
+  .cx-msg-box-x87 {
+    padding: 36px 20px;
+  }
 
-    .cx-nao-exibir-x87 input {
-      transform: scale(1.2);
-    }
+  .cx-msg-box-x87 h2 {
+    font-size: 22px;
+  }
 
-    @keyframes fadeInX87 {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+  .cx-msg-box-x87 p {
+    font-size: 14px;
+  }
 
-    @keyframes slideUpX87 {
-      from {
-        transform: translateY(50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
+  .btn-acesso-x87 {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+</style>
 
-    @media (max-width: 480px) {
-      .cx-msg-box-x87 {
-        padding: 36px 20px;
-      }
-
-      .cx-msg-box-x87 h2 {
-        font-size: 22px;
-      }
-
-      .cx-msg-box-x87 p {
-        font-size: 14px;
-      }
-
-      .btn-acesso-x87 {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
-    }
-  </style>
-
-
-  <div class="cx-msg-overlay-x87" id="msgAutoPopupX87">
-    <div class="cx-msg-box-x87" id="modalContentX87">
-      <button class="cx-fechar-x87" id="btnFecharX87">&times;</button>
-      <h2>Cantata de Páscoa e Semana Santa</h2>
-      <p>Acesse aqui os horários, mapas, escalas de trabalho e o programa completo.</p>
-      <button class="btn-acesso-x87" onclick="window.location.href='https://drive.google.com/drive/folders/1Bh3LUYTb9ZT0PNon5bcEwvZgwPk62hkm'">Acesse Aqui</button>
-      <div class="cx-nao-exibir-x87">
-        <input type="checkbox" id="naoExibirHojeX87" />
-        <label for="naoExibirHojeX87">Não exibir novamente hoje</label>
-      </div>
-    </div>
+<div class="cx-msg-overlay-x87" id="msgAutoPopupX87">
+<div class="cx-msg-box-x87" id="modalContentX87">
+  <button class="cx-fechar-x87" id="btnFecharX87">&times;</button>
+  <h2>Cantata de Páscoa e Semana Santa</h2>
+  <p>Acesse aqui os horários, mapas, escalas de trabalho e o programa completo.</p>
+  <button class="btn-acesso-x87" onclick="window.location.href='https://drive.google.com/drive/folders/1Bh3LUYTb9ZT0PNon5bcEwvZgwPk62hkm'">Acesse Aqui</button>
+  <div class="cx-nao-exibir-x87">
+    <input type="checkbox" id="naoExibirHojeX87" />
+    <label for="naoExibirHojeX87">Não exibir novamente hoje</label>
   </div>
+</div>
+</div>
 
-  <script>
-    const overlayX87 = document.getElementById('msgAutoPopupX87');
-    const modalX87 = document.getElementById('modalContentX87');
-    const btnFecharX87 = document.getElementById('btnFecharX87');
-    const chkNaoExibirX87 = document.getElementById('naoExibirHojeX87');
+<script>
+const overlayX87 = document.getElementById('msgAutoPopupX87');
+const modalX87 = document.getElementById('modalContentX87');
+const btnFecharX87 = document.getElementById('btnFecharX87');
+const chkNaoExibirX87 = document.getElementById('naoExibirHojeX87');
 
-    function getDataAtualStr() {
-      const hoje = new Date();
-      return hoje.toISOString().split('T')[0]; // formato: YYYY-MM-DD
-    }
+function getDataAtualStr() {
+  const hoje = new Date();
+  return hoje.toISOString().split('T')[0]; // formato: YYYY-MM-DD
+}
 
-    function verificarExibicaoModal() {
-      const hoje = getDataAtualStr();
-      const dataSalva = localStorage.getItem('naoExibirModalX87');
-      if (dataSalva !== hoje) {
-        overlayX87.style.display = 'flex';
-      }
-    }
+function verificarExibicaoModal() {
+  const hoje = getDataAtualStr();
+  const dataSalva = localStorage.getItem('naoExibirModalX87');
+  if (dataSalva !== hoje) {
+    overlayX87.style.display = 'flex';
+  }
+}
 
-    function fecharModal() {
-      overlayX87.style.display = 'none';
-      if (chkNaoExibirX87.checked) {
-        localStorage.setItem('naoExibirModalX87', getDataAtualStr());
-      }
-    }
+function fecharModal() {
+  overlayX87.style.display = 'none';
+  if (chkNaoExibirX87.checked) {
+    localStorage.setItem('naoExibirModalX87', getDataAtualStr());
+  }
+}
 
-    // Fechar ao clicar no botão X
-    btnFecharX87.addEventListener('click', fecharModal);
+// Fechar ao clicar no botão X
+btnFecharX87.addEventListener('click', fecharModal);
 
-    // Fechar ao clicar fora do conteúdo
-    overlayX87.addEventListener('click', (e) => {
-      if (!modalX87.contains(e.target)) {
-        fecharModal();
-      }
-    });
+// Fechar ao clicar fora do conteúdo
+overlayX87.addEventListener('click', (e) => {
+  if (!modalX87.contains(e.target)) {
+    fecharModal();
+  }
+});
 
-    // Mostrar automaticamente se permitido
-    window.addEventListener('load', verificarExibicaoModal);
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Mostrar automaticamente se permitido
+window.addEventListener('load', verificarExibicaoModal);
+</script>
 
 </body>
 </html>
