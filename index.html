@@ -9,6 +9,7 @@
 
   <link rel="shortcut icon" href="img/dbox-favicon.ico" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/sec-linksrapidos.css"/>
 
   <!-- Arquivos CSS da Home -->
@@ -830,205 +831,255 @@ proximaEscalaCultoRa(escalados)
 </script>
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f6ff;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-.cx-msg-overlay-x87 {
+  .cx-msg-overlay-x87 {
+  background: linear-gradient(to bottom right, #a70f55, #54003b); /* fundo impactante exclusivo do modal */
+  font-family: 'Open Sans', sans-serif;
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 20, 40, 0.85);
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 99999;
-  animation: fadeInX87 0.4s ease-in-out;
+  animation: fadeInX87 0.3s ease-in-out;
 }
 
 .cx-msg-box-x87 {
-  background-color: #0070d1;
-  color: #fff;
-  border: 6px solid #ffffff;
-  border-radius: 24px;
-  padding: 48px 32px;
-  max-width: 420px;
-  width: 92%;
+  background: radial-gradient(circle at top left, #ffe3ec 0%, #fcd2e3 50%, #fbeaf1 100%);
+  color: #6b2e47;
+  border-radius: 28px;
+  padding: 64px 48px;
+  max-width: 680px;
+  width: 95%;
   text-align: center;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(255, 105, 180, 0.4); /* brilho rosa tipo "neon soft" */
   position: relative;
-  animation: slideUpX87 0.5s ease-out;
+  animation: slideUpX87 0.4s ease-out;
+  border: 8px solid #ff3366;
 }
 
-.cx-msg-box-x87 h2 {
-  font-size: 26px;
-  margin-bottom: 18px;
-}
 
-.cx-msg-box-x87 p {
-  font-size: 15px;
-  margin-bottom: 24px;
-  line-height: 1.6;
-}
-
-.btn-acesso-x87 {
-  background-color: #ffffff;
-  color: #0070d1;
-  font-weight: 600;
-  border: none;
-  border-radius: 10px;
-  padding: 12px 26px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 16px;
-}
-
-.btn-acesso-x87:hover {
-  background-color: #e0efff;
-  transform: scale(1.05);
-}
-
-.cx-fechar-x87 {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-.cx-nao-exibir-x87 {
-  margin-top: 12px;
-  font-size: 14px;
-  color: #e0e0e0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.cx-nao-exibir-x87 input {
-  transform: scale(1.2);
-}
-
-@keyframes fadeInX87 {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUpX87 {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  .cx-msg-box-x87 {
-    padding: 36px 20px;
-  }
-
-  .cx-msg-box-x87 h2 {
-    font-size: 22px;
+  .cx-msg-box-x87 h1 {
+    font-size: 46px;
+    font-weight: 700;
+    color: #d50057;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 24px;
   }
 
   .cx-msg-box-x87 p {
-    font-size: 14px;
+    font-size: 20px;
+    margin-bottom: 36px;
+    color: #444;
+    line-height: 1.7;
+  }
+
+  .btn-acesso-x87,
+  .btn-nao-exibir-x87 {
+    display: inline-block;
+    border: none;
+    border-radius: 14px;
+    padding: 18px 36px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+    width: 85%;
+    max-width: 300px;
   }
 
   .btn-acesso-x87 {
-    font-size: 14px;
-    padding: 10px 20px;
+    background-color: #d50057;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(213, 0, 87, 0.5);
   }
-}
 
+  .btn-acesso-x87:hover {
+    background-color: #b00044;
+    transform: scale(1.05);
+  }
 
-    @media (max-width: 480px) {
-      .cx-msg-box-x87 {
-        padding: 36px 20px;
-      }
+  .btn-nao-exibir-x87 {
+    background-color: #f8bbd0;
+    color: #6b2e47;
+    box-shadow: 0 4px 12px rgba(248, 187, 208, 0.4);
+  }
 
-      .cx-msg-box-x87 h2 {
-        font-size: 22px;
-      }
+  .btn-nao-exibir-x87:hover {
+    background-color: #f48fb1;
+    transform: scale(1.05);
+  }
 
-      .cx-msg-box-x87 p {
-        font-size: 14px;
-      }
+  .cx-fechar-x87 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #6b2e47;
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: bold;
+  }
 
-      .btn-acesso-x87 {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
+  @keyframes fadeInX87 {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUpX87 {
+    from {
+      transform: translateY(60px);
+      opacity: 0;
     }
-  </style>
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cx-msg-box-x87 {
+      padding: 48px 24px;
+    }
+
+    .cx-msg-box-x87 h1 {
+      font-size: 32px;
+    }
+
+    .cx-msg-box-x87 p {
+      font-size: 16px;
+    }
+
+    .btn-acesso-x87,
+    .btn-nao-exibir-x87 {
+      font-size: 15px;
+      padding: 14px 20px;
+    }
+  }
+</style>
 
 
-  <div class="cx-msg-overlay-x87" id="msgAutoPopupX87">
-    <div class="cx-msg-box-x87" id="modalContentX87">
-      <button class="cx-fechar-x87" id="btnFecharX87">&times;</button>
-      <h1>Obrigado!</h1>
-      <p>Por sua ajuda valiosa em nossa programação de Páscoa! Você fez a diferença!</p>
 
-<span style="font-size: 2rem;">❤️</span>
+<div class="cx-msg-overlay-x87" id="msgAutoPopupX87">
+  <div class="cx-msg-box-x87" id="modalContentX87">
+    <button class="cx-fechar-x87" id="btnFecharX87">&times;</button>
+    <h1>Dia das Mães</h1>
+    <p></p>
 
-     <!-- <button class="btn-acesso-x87" onclick="window.location.href='https://drive.google.com/drive/folders/1Bh3LUYTb9ZT0PNon5bcEwvZgwPk62hkm'">Acesse Aqui</button> -->
-      <div class="cx-nao-exibir-x87">
-        <input type="checkbox" id="naoExibirHojeX87" />
-        <label for="naoExibirHojeX87">Não exibir novamente hoje</label>
-      </div>
-    </div>
+    <a class="btn-acesso-x87" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Acessar informações</a>
 
+    <button class="btn-nao-exibir-x87" onclick="naoExibirHojeX87()">Não mostrar mais, hoje.</button>
   </div>
+</div>
+
+<script>
+  // Função que zera o horário da data (para comparar só o dia)
+  function zerarHora(data) {
+    return new Date(data.getFullYear(), data.getMonth(), data.getDate());
+  }
+
+  // Data do evento fixada às 00:00:00
+  const dataEvento = zerarHora(new Date('2025-05-18'));
+  const hoje = new Date().toLocaleDateString();
+
+  // Atualiza contagem regressiva no elemento passado
+  function atualizarContagemRegressiva(elemento) {
+    const hojeData = zerarHora(new Date());
+    const diffEmMs = dataEvento - hojeData;
+    const diffEmDias = Math.round(diffEmMs / (1000 * 60 * 60 * 24));
+
+    if (diffEmDias > 0) {
+      elemento.textContent = `Faltam ${diffEmDias} dia${diffEmDias === 1 ? '' : 's'}!`;
+    } else if (diffEmDias === 0) {
+      elemento.textContent = `É hoje! Confira os detalhes:`;
+    } else {
+      elemento.textContent = `O evento já aconteceu. Veja como foi o Dia das Mães!`;
+    }
+  }
+
+  // Executa quando a página estiver completamente carregada
+  window.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('msgAutoPopupX87');
+    const fecharBtn = document.getElementById('btnFecharX87');
+    const mensagemElemento = modal.querySelector("p");
+
+    if (localStorage.getItem('naoExibirX87') !== hoje) {
+      atualizarContagemRegressiva(mensagemElemento);
+      modal.style.display = 'flex';
+    }
+
+    // Fecha o modal ao clicar no botão ×
+    fecharBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    // Fecha clicando fora do modal
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    // Botão de "não exibir hoje"
+    window.naoExibirHojeX87 = function () {
+      localStorage.setItem('naoExibirX87', hoje);
+      modal.style.display = 'none';
+    };
+  });
+</script>
+
+
+
+
+
+  
 </div>
 </div>
 
 <script>
-const overlayX87 = document.getElementById('msgAutoPopupX87');
-const modalX87 = document.getElementById('modalContentX87');
-const btnFecharX87 = document.getElementById('btnFecharX87');
-const chkNaoExibirX87 = document.getElementById('naoExibirHojeX87');
+  const overlayX87 = document.getElementById('msgAutoPopupX87');
+  const modalX87 = document.getElementById('modalContentX87');
+  const btnFecharX87 = document.getElementById('btnFecharX87');
+  const chkNaoExibirX87 = document.getElementById('naoExibirHojeX87');
 
-function getDataAtualStr() {
-  const hoje = new Date();
-  return hoje.toISOString().split('T')[0]; // formato: YYYY-MM-DD
-}
-
-function verificarExibicaoModal() {
-  const hoje = getDataAtualStr();
-  const dataSalva = localStorage.getItem('naoExibirModalX87');
-  if (dataSalva !== hoje) {
-    overlayX87.style.display = 'flex';
+  function getDataAtualStr() {
+    const hoje = new Date();
+    return hoje.toISOString().split('T')[0]; // formato: YYYY-MM-DD
   }
-}
 
-function fecharModal() {
+  function verificarExibicaoModal() {
+    const hoje = getDataAtualStr();
+    const dataSalva = localStorage.getItem('naoExibirModalX87');
+    if (dataSalva !== hoje) {
+      overlayX87.style.display = 'flex';
+    }
+  }
+
+  function fecharModal() {
   overlayX87.style.display = 'none';
   if (chkNaoExibirX87.checked) {
     localStorage.setItem('naoExibirModalX87', getDataAtualStr());
   }
-}
+  }
 
-// Fechar ao clicar no botão X
-btnFecharX87.addEventListener('click', fecharModal);
+  // Fechar ao clicar no botão X
+  btnFecharX87.addEventListener('click', fecharModal);
 
-// Fechar ao clicar fora do conteúdo
-overlayX87.addEventListener('click', (e) => {
+  // Fechar ao clicar fora do conteúdo
+  overlayX87.addEventListener('click', (e) => {
   if (!modalX87.contains(e.target)) {
     fecharModal();
   }
-});
+  });
 
-// Mostrar automaticamente se permitido
-window.addEventListener('load', verificarExibicaoModal);
+  // Mostrar automaticamente se permitido
+  window.addEventListener('load', verificarExibicaoModal);
 </script>
 
 </body>

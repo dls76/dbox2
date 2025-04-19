@@ -2,3 +2,13 @@ Endereços:
 - Vercel: https://dbox2-five.vercel.app/
 - Github: https://dls76.github.io/dbox2/
 
+keyboard shortcuts to CSS:
+- Collapse: `Ctrl + Shift + [` 
+- Expand: `Ctrl + Shift + ]`
+- Collapse all: `Ctrl + K, Ctrl + 0`
+- Expand all: `Ctrl + K, Ctrl + J`
+
+Rodar localmente:
+  - npm i
+  - npm start
+
