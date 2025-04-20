@@ -972,7 +972,7 @@ proximaEscalaCultoRa(escalados)
     <h1>Dia das Mães</h1>
     <p></p>
 
-    <a class="btn-acesso-x87" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Acessar informações</a>
+    <a class="btn-acesso-x87" href="https://drive.google.com/drive/folders/1z-pxNIP3Hz_xT0nfGg0PMvIaNhySHFy3?usp=sharing" target="_blank" rel="noopener noreferrer">Acessar informações</a>
 
     <button class="btn-nao-exibir-x87" onclick="naoExibirHojeX87()">Não mostrar mais, hoje.</button>
   </div>
@@ -1049,7 +1049,7 @@ proximaEscalaCultoRa(escalados)
   const chkNaoExibirX87 = document.getElementById('naoExibirHojeX87');
 
   function getDataAtualStr() {
-    const hoje = new Date();
+    const hoje = new Date().toISOString().split('T')[0]; // Formato YYYY-MM-DD
     return hoje.toISOString().split('T')[0]; // formato: YYYY-MM-DD
   }
 
