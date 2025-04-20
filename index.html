@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/sec-linksrapidos.css"/>
 
+
   <!-- Arquivos CSS da Home -->
   <link rel="stylesheet" href="css/modalAniver.css"/>
   <link rel="stylesheet" href="css/submenu.css"/>
@@ -35,6 +36,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXREz2a2UJQ7lQZ3eUFnP3nB7nCMFxX+2p1jK4q6hc2BLr+slcZDf2YZtB2zBg4UbFEX4qwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
   <link rel="stylesheet" href="./css/divhomeaniver.css" />
@@ -359,16 +361,234 @@
     </main>
   </div>
 
-  <!-- BANNERS -->
-  <section class="sec-banners">
-    <h1>Eventos e Projetos</h1>
-    <div>
-      <div><a href="https://drive.google.com/drive/folders/1Bh3LUYTb9ZT0PNon5bcEwvZgwPk62hkm" id="pascoa2025" target="_blank"></a></div>
-      <div><a href="https://drive.google.com/drive/folders/1OM8hhmCWGhZPNEGzPkFhKvDlV6hGOS7Y?usp=drive_link" id="semanasanta25" target="_blank"></a></div>
-      <div><a href="https://drive.google.com/drive/folders/1ZPUdah1Uk3ENt8kIIY4eq7qvs2ljq3f7?usp=drive_link" id="geracaofuturo" target="_blank"></a></div>
+  <!-- Eventos e Projetos -->
+  <section class="sec-eventos-e-projetos" style="background-color: #eee; padding: 3rem 0;">
+    
+    <style>
+      .evCard_section {
+        max-width: 1200px;
+        margin: 3rem auto;
+        font-family: 'Quicksand', 'Open Sans', sans-serif;
+        padding: 0 1rem; /* aumento do padding */
+        text-align: center; /* centralizar o título */
+      }
+
+      .evCard_section h2 {
+        font-size: 1.8rem;
+        color: #253B73;
+        margin-bottom: 1.5rem;
+      }
+    
+      .evCard_container {
+        position: relative;
+      }
+    
+      .evCard_sliderWrapper {
+        overflow: hidden;
+        padding: 0 3rem;
+        /* background-color: white; */
+      }
+    
+      .evCard_slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+    
+      .evCard_item {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        box-sizing: border-box;
+        padding: 1rem;
+      }
+    
+      .evCard_link {
+        display: block;
+        text-decoration: none;
+      }
+    
+      .evCard_inner {
+        background: gray;
+        border-radius: 18px;
+        height: 140px; /* mais baixo */
+        padding: 1.5rem;
+        /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        transition: transform 0.3s ease;
+        color: #fff;
+      }
+    
+      .evCard_inner:hover {
+        transform: scale(1.05);
+      }
+    
+      .evCard_inner h3 {
+        margin: 0 0 0.8rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+    
+      .evCard_inner p {
+        font-size: 0.95rem;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.9);
+      }
+    
+      .evCard_navBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        transition: background 0.3s;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .evCard_navBtn:hover {
+        background: #f0f0f0;
+      }
+    
+      .evCard_btnPrev {
+        left: 0;
+      }
+    
+      .evCard_btnNext {
+        right: 0;
+      }
+    </style>
+
+    <div class="evCard_section">
+      <h2>Eventos e Projetos</h2>
+
+      <div class="evCard_container">
+        <button class="evCard_navBtn evCard_btnPrev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="evCard_sliderWrapper">
+          <div class="evCard_slider" id="evCard_sliderContent"></div>
+        </div>
+        <button class="evCard_navBtn evCard_btnNext">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
     </div>
-  </section>
-  
+
+    <script>
+      const evCard_eventos = [
+        { evento: 'Cantata de Páscoa', data: '2025-04-13T00:00:00', link: 'https://drive.google.com/drive/folders/1Bh3LUYTb9ZT0PNon5bcEwvZgwPk62hkm?usp=sharing'},
+        { evento: 'Programa de Mães', data: '2025-05-18T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Geração Futuro', data: '2025-06-22T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Retiro Espiritual', data: '2025-05-31T00:00:00', link: 'https://www.google.com' },
+        { evento: 'Programa de Pais', data: '2025-08-16T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Jogos Interséries', data: '2025-09-20T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Lançamentos de Matrículas', data: '2025-10-05T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Excursão 9º ano', data: '2025-10-05T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Excursão Terceirão', data: '2025-10-05T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Beto Carrero', data: '2025-10-05T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Visita Escolinhas', data: '2025-10-05T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Programa de Natal', data: '2025-10-05T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Formatura Infantil', data: '2025-10-05T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Formatura 9º ano', data: '2025-10-05T00:00:00', link: 'https://www.google.com'},
+        { evento: 'Formatura Terceirão', data: '2025-10-05T00:00:00', link: 'https://www.google.com'},
+      ];
+
+      const evCard_gradients = [
+        'linear-gradient(135deg, #FF5F6D, #845EC2)',
+        'linear-gradient(135deg, #F9A826, #F58529)',
+        'linear-gradient(135deg, #00C9A7, #92FE9D)',
+        'linear-gradient(135deg, #1E3C72, #2A5298)',
+        'linear-gradient(135deg, #0093E9, #80D0C7)'
+      ];
+
+      const slider = document.getElementById('evCard_sliderContent');
+      let currentIndex = 0;
+
+      function diasPara(dataStr) {
+        const hoje = new Date();
+        hoje.setHours(0, 0, 0, 0);
+
+        const dataEvento = new Date(dataStr);
+        dataEvento.setHours(0, 0, 0, 0);
+
+        const diffMs = dataEvento - hoje;
+        const diffDias = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+        if (diffDias === 0) return 'Hoje!';
+        if (diffDias === 1) return 'Amanhã';
+        if (diffDias < 0) return `Há ${Math.abs(diffDias)} dia${Math.abs(diffDias) === 1 ? '' : 's'}`;
+        return `Faltam ${diffDias} dia${diffDias === 1 ? '' : 's'}`;
+      }
+
+      function renderCards() {
+        const hoje = new Date();
+        hoje.setHours(0, 0, 0, 0);
+
+        const eventosOrdenados = evCard_eventos
+          .map(e => {
+            const dataEvento = new Date(e.data);
+            dataEvento.setHours(0, 0, 0, 0);
+            return { ...e, dataEvento };
+          })
+          .sort((a, b) => a.dataEvento - b.dataEvento);
+
+        // Encontrar o índice do primeiro evento futuro ou de hoje
+        currentIndex = eventosOrdenados.findIndex(e => e.dataEvento >= hoje);
+        if (currentIndex === -1) currentIndex = 0; // fallback: todos no passado
+
+        slider.innerHTML = eventosOrdenados.map((e, i) => `
+          <div class="evCard_item">
+            <a class="evCard_link" href="${e.link}" target="_blank" rel="noopener noreferrer">
+              <div class="evCard_inner" style="background: ${evCard_gradients[i % evCard_gradients.length]}">
+                <h3 title="${e.evento}">${e.evento}</h3>
+                <p>${diasPara(e.data)}</p>
+              </div>
+            </a>
+          </div>
+        `).join('');
+      }
+
+      function updateSlider() {
+        const cardWidth = slider.querySelector('.evCard_item')?.offsetWidth || 0;
+        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      }
+
+      document.querySelector('.evCard_btnNext').addEventListener('click', () => {
+        const totalCards = slider.children.length;
+        if (currentIndex + 3 < totalCards) {
+          currentIndex++;
+          updateSlider();
+        }
+      });
+
+      document.querySelector('.evCard_btnPrev').addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlider();
+        }
+      });
+
+      renderCards();
+      updateSlider();
+    </script>
+
+  </section >
+
   <!-- HORÁRIOS -->
   <section class="horarios-section">
     <h2>Horários</h2>
@@ -511,8 +731,6 @@
     </div>
   </div>
 
- 
-  
   <!-- URGÊNCIAS -->
   <div id="modal-container">
     <div id="emergency-modal">
@@ -538,7 +756,7 @@
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f6f8;
+    /* background-color: #f5f6f8; */
   }
 
   #ramais-do-menu {
@@ -964,8 +1182,7 @@ proximaEscalaCultoRa(escalados)
   }
 </style>
 
-
-
+<!-- Modal Evento -->
 <div class="cx-msg-overlay-x87" id="msgAutoPopupX87">
   <div class="cx-msg-box-x87" id="modalContentX87">
     <button class="cx-fechar-x87" id="btnFecharX87">&times;</button>
@@ -1034,11 +1251,6 @@ proximaEscalaCultoRa(escalados)
   });
 </script>
 
-
-
-
-
-  
 </div>
 </div>
 
