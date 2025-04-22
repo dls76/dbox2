@@ -1,138 +1,173 @@
-window.addEventListener('load', function() {
-    loadAniversariantes();
-    scrollToNextEvent();
-});
-    
-let dataAtual = new Date();
-    
-let diaDoMes = ('0' + dataAtual.getDate()).slice(-2);
-    
-let dataAtualCompleta = document.querySelector('#dataAtualizada');
-    
-// dataAtualCompleta.innerHTML = `${diasDaSemana[dataAtual.getDay()]}, ${diaDoMes} de ${mss[dataAtual.getMonth()]} de ${dataAtual.getFullYear()}`;
+import { pessoas, mss, diasDaSemana } from './aniversariantes-data.js';
+
+const dataAtual = new Date();
+const diaDoMes = ('0' + dataAtual.getDate()).slice(-2);
+
+const dataAtualCompleta = document.querySelector('#dataAtualizada');
+if (dataAtualCompleta) {
+  dataAtualCompleta.innerHTML = `${diasDaSemana[dataAtual.getDay()]}, ${diaDoMes} de ${mss[dataAtual.getMonth()]} de ${dataAtual.getFullYear()}`;
+}
+
+// Array que guardará os elementos DOM na ordem correta
+let linhasDOMOrdenadas = [];
 
 function loadAniversariantes() {
+  const main = document.querySelector('#main-aniversariantes');
+  const h1 = document.querySelector('#h1-aniversariantes');
+  if (!main || !h1) return;
 
-    for (let i = 0; i < pessoas.length; i++) { 
-        // Restante do seu código para carregar os aniversariantes
-        let h1 = document.querySelector('#h1-aniversariantes');
-        h1.classList.add('h1Aniver');
-        h1.innerHTML = "Aniversariantes " + dataAtual.getFullYear();
+  h1.classList.add('h1Aniver');
+  h1.innerHTML = "Aniversariantes " + dataAtual.getFullYear();
 
-        let main = document.querySelector('#main-aniversariantes');
-        main.classList.add('mainAniver');
+  const hoje = new Date();
+  hoje.setHours(0, 0, 0, 0);
 
-        let linha = document.createElement('div');
-        linha.classList.add('linha');
-        main.appendChild(linha);
-        
-        let dia = document.createElement('div');
-        dia.classList.add('dia');
+  // Ordena os aniversariantes pela data do ano atual (mes e dia)
+  // Sem ajustar o ano para o próximo, para renderizar todos na ordem natural
+  const ordenados = pessoas.slice().sort((a, b) => {
+    // Cria datas no ano atual para comparação
+    const dataA = new Date(hoje.getFullYear(), a.mes, a.dia);
+    const dataB = new Date(hoje.getFullYear(), b.mes, b.dia);
+    return dataA - dataB;
+  });
 
-        if ( pessoas[i].dia < 10) {
-            dia.innerHTML = '0' + pessoas[i].dia + '<br>' + (mss[pessoas[i].mes]).slice(0,3);
-        } else {
-            dia.innerHTML = pessoas[i].dia + '<br>' + (mss[pessoas[i].mes]).slice(0,3);
-        }
+  main.innerHTML = ''; // Limpa o container antes de adicionar
 
-        linha.appendChild(dia);
+  linhasDOMOrdenadas = []; // Zera o array de elementos DOM
 
-        let box_foto = document.createElement('div');
-        box_foto.classList.add('box-foto');
-        linha.appendChild(box_foto);
+  for (let i = 0; i < ordenados.length; i++) {
+    const pessoa = ordenados[i];
+    const linha = document.createElement('div');
+    linha.classList.add('linha');
 
-        let foto = new Image();
-        foto.src = pessoas[i].foto;
-        foto.classList.add('foto');
-        box_foto.appendChild(foto);
+    // Data do aniversário no ano atual (sem ajuste)
+    const dataAniv = new Date(hoje.getFullYear(), pessoa.mes, pessoa.dia);
+    linha.setAttribute('data-aniversario', dataAniv.toISOString());
 
-        let box_infoPessoa = document.createElement('div');
-        box_infoPessoa.classList.add('box-infoPessoa');
-        linha.appendChild(box_infoPessoa);
+    // Dia do aniversário formatado
+    const dia = document.createElement('div');
+    dia.classList.add('dia');
+    dia.innerHTML = `${pessoa.dia < 10 ? '0' + pessoa.dia : pessoa.dia}<br>${mss[pessoa.mes].slice(0, 3)}`;
+    linha.appendChild(dia);
 
-        let nome = document.createElement('div');
-        nome.classList.add('nome');
-        nome.innerHTML = pessoas[i].nome;
-        box_infoPessoa.appendChild(nome);
+    // Foto
+    const box_foto = document.createElement('div');
+    box_foto.classList.add('box-foto');
+    const foto = new Image();
+    foto.src = pessoa.foto;
+    foto.alt = pessoa.nome;
+    foto.classList.add('foto');
+    box_foto.appendChild(foto);
+    linha.appendChild(box_foto);
 
-        let funcao = document.createElement('div');
-        funcao.classList.add('funcao');
-        funcao.innerHTML = pessoas[i].funcao;
-        box_infoPessoa.appendChild(funcao);
+    // Informações
+    const box_infoPessoa = document.createElement('div');
+    box_infoPessoa.classList.add('box-infoPessoa');
 
-        let regressiva = document.createElement('div');
-        regressiva.classList.add('regressivaAniver');
-        linha.appendChild(regressiva);
+    const nome = document.createElement('div');
+    nome.classList.add('nome');
+    nome.innerHTML = pessoa.nome;
 
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
+    const funcao = document.createElement('div');
+    funcao.classList.add('funcao');
+    funcao.innerHTML = pessoa.funcao;
 
-        // Cria a data do aniversário deste ano
-        let proximoAniver = new Date(today.getFullYear(), pessoas[i].mes, pessoas[i].dia);
+    box_infoPessoa.appendChild(nome);
+    box_infoPessoa.appendChild(funcao);
+    linha.appendChild(box_infoPessoa);
 
-        // Se já passou, ajusta para o próximo ano
-        if (proximoAniver < today) {
-            proximoAniver = new Date(today.getFullYear() + 1, pessoas[i].mes, pessoas[i].dia);
-        }
-
-        const timeDiff = proximoAniver - today;
-        const daysRemaining = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-
-
-        if (daysRemaining < -1) {
-            regressiva.innerHTML = `Há ${Math.abs(daysRemaining)} dias`;
-            regressiva.style.color = "lightgray";
-        } else if (daysRemaining == -1) {
-            regressiva.innerHTML = `Ontem`;
-            regressiva.style.color = "lightgray";
-        } else if (daysRemaining == 0) {
-            regressiva.innerHTML = `Hoje!`;
-            regressiva.style.color = "red";
-            regressiva.style.fontWeight = "600";
-        } else if (daysRemaining == 1) {
-            regressiva.innerHTML = `Amanhã`;
-            regressiva.style.color = "dodgerblue";
-            regressiva.style.fontWeight = "600";
-        } else {
-            regressiva.innerHTML = `Em ${daysRemaining} dias`;
-        }
-
+    // Regressiva - calcula diferença para o próximo aniversário real (ajustando ano se necessário)
+    const proximoAniver = new Date(hoje.getFullYear(), pessoa.mes, pessoa.dia);
+    if (proximoAniver < hoje) {
+      proximoAniver.setFullYear(proximoAniver.getFullYear() + 1);
     }
+    const diffDias = Math.floor((proximoAniver - hoje) / (1000 * 60 * 60 * 24));
+
+    const regressiva = document.createElement('div');
+    regressiva.classList.add('regressivaAniver');
+
+    if (diffDias === 0) {
+      regressiva.innerHTML = `Hoje!`;
+      regressiva.style.color = "red";
+      regressiva.style.fontWeight = "600";
+    } else if (diffDias === 1) {
+      regressiva.innerHTML = `Amanhã`;
+      regressiva.style.color = "dodgerblue";
+      regressiva.style.fontWeight = "600";
+    } else {
+      regressiva.innerHTML = `Em ${diffDias} dias`;
+      regressiva.style.color = "black";
+      regressiva.style.fontWeight = "normal";
+    }
+
+    linha.appendChild(regressiva);
+    main.appendChild(linha);
+
+    // Guarda o elemento e a pessoa, incluindo a data do próximo aniversário ajustada para scroll
+    linhasDOMOrdenadas.push({ pessoa, element: linha, proximoAniver });
+  }
 }
 
 function scrollToNextEvent() {
-    // Encontre a data atual
-    const hoje = new Date();
-    hoje.setHours(0, 0, 0, 0);
+  const hoje = new Date();
+  hoje.setHours(0, 0, 0, 0);
 
-    // Encontre o próximo evento com base na data atual
-    const proximoEvento = pessoas.find(evento => evento.data >= hoje);
+  // Busca o próximo aniversário futuro (data ajustada)
+  const proximoAniversariante = linhasDOMOrdenadas.find(({ proximoAniver }) => proximoAniver >= hoje);
 
-    // Certifique-se de que há um próximo evento antes de rolar
-    if (proximoEvento) {
-        // Encontre todos os elementos com a classe 'linha'
-        const elementosNextEvent = document.querySelectorAll('.linha');
+  if (!proximoAniversariante) return;
 
-        // Encontre o índice do próximo evento
-        const indiceProximoEvento = pessoas.indexOf(proximoEvento);
+  const elementoAlvo = proximoAniversariante.element;
 
-        // Certifique-se de que o índice seja válido antes de rolar
-        if (indiceProximoEvento !== -1 && indiceProximoEvento < elementosNextEvent.length) {
-            // Encontre o elemento do próximo evento
-            const proximoEventoElement = elementosNextEvent[indiceProximoEvento];
+  if (elementoAlvo) {
+    const header = document.querySelector('header');
+    const headerHeight = header ? header.offsetHeight : 0;
+    const offsetTop = elementoAlvo.offsetTop;
 
-            // Calcule a posição do próximo evento em relação ao topo do eventosContainer
-            let scrollTopValue = proximoEventoElement.offsetTop;
-
-            // Ajuste a posição de rolagem para considerar a altura do cabeçalho fixo
-            const headerHeight = document.querySelector('header').offsetHeight;
-            scrollTopValue -= headerHeight;
-
-            // Obtenha o contêiner de eventos
-            const eventosContainer = document.querySelector('#main-aniversariantes');
-
-            // Rola até o topo do próximo evento, levando em consideração a altura do cabeçalho
-            eventosContainer.scrollTop = scrollTopValue - 20;
-        }
-    }
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: offsetTop - headerHeight - 20,
+        behavior: 'smooth'
+      });
+    });
+  }
 }
+
+// Roda tudo depois que os elementos estiverem prontos
+window.addEventListener('load', () => {
+  loadAniversariantes();
+
+  const observer = new MutationObserver(() => {
+    if (document.querySelectorAll('.linha').length > 0) {
+      observer.disconnect();
+
+      // Pequeno delay para garantir layout pronto
+      setTimeout(() => {
+        scrollToNextEvent();
+      }, 100);
+    }
+  });
+
+  observer.observe(document.querySelector('#main-aniversariantes'), {
+    childList: true,
+    subtree: true
+  });
+});
+
+// Botão "voltar ao topo"
+const botaoTopo = document.getElementById("btnTopo");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    botaoTopo.classList.add("mostrar");
+  } else {
+    botaoTopo.classList.remove("mostrar");
+  }
+});
+
+botaoTopo.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
