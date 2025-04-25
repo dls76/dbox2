@@ -75,46 +75,49 @@
     <main id="main"></main>
     <footer>Dbox</footer>
      <script type="module">
-        import { escalados, mesesDoAno } from './pedagAdvModule.js'
+        
+        import { gerarEscaladosComData, mesesDoAno } from './pedagAdvModule.js';
 
         function carregarEscalas() {
+        const main = document.querySelector("#main");
+        main.innerHTML = "";
 
-            const main = document.querySelector("#main");
-            main.innerHTML = "";
+        const escaladosAtualizados = gerarEscaladosComData();
 
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
 
-            let proximoElemento = null;
+        let proximoElemento = null;
 
-            escalados.forEach((item) => {
-                let dia = item.data.getDate().toString().padStart(2, "0");
-                let mes = mesesDoAno[item.data.getMonth()].slice(0, 3);
+        escaladosAtualizados.forEach((item) => {
+            let dia = item.data.getDate().toString().padStart(2, "0");
+            let mes = mesesDoAno[item.data.getMonth()].slice(0, 3);
 
-                const card = document.createElement("div");
-                card.classList.add("card");
-                card.innerHTML = `<strong>${dia}/${mes}</strong> - ${item.nome} (cap. ${item.cap})`;
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `<strong>${dia}/${mes}</strong> - ${item.nome} (cap. ${item.cap})`;
 
-                if (item.data < today) {
-                    card.classList.add("passado");
-                } else if (!proximoElemento) {
-                    card.classList.add("destaque");
-                    proximoElemento = card;
-                }
-
-                main.appendChild(card);
-            });
-
-            if (proximoElemento) {
-                setTimeout(() => {
-                    const h1Height = document.querySelector("h1").offsetHeight;
-                    const scrollPosition = proximoElemento.offsetTop - h1Height - 10;
-                    window.scrollTo({ top: scrollPosition, behavior: "smooth" });
-                }, 500);
+            if (item.data < today) {
+            card.classList.add("passado");
+            } else if (!proximoElemento) {
+            card.classList.add("destaque");
+            proximoElemento = card;
             }
+
+            main.appendChild(card);
+        });
+
+        if (proximoElemento) {
+            setTimeout(() => {
+            const h1Height = document.querySelector("h1").offsetHeight;
+            const scrollPosition = proximoElemento.offsetTop - h1Height - 10;
+            window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+            }, 500);
+        }
         }
 
-        carregarEscalas()
+        carregarEscalas();
+
 
      </script>
 </body>

@@ -890,40 +890,38 @@
 
 <!-- Pedagogia Adventista com importações -->
 <script type="module">
-  import { escalados, mesesDoAno, getDataAtual } from './pedagAdvModule.js';
-  
-  function proximaEscalaCultoRa(array) {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+  import { gerarEscaladosComData, mesesDoAno } from './pedagAdvModule.js';
 
-    const futureDates = array.filter(
-      (item) => new Date(item.data).getTime() >= today.getTime()
-    );
+function proximaEscalaCultoRa(array) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
-    futureDates.sort((a, b) => a.data.getTime() - b.data.getTime());
+  const futureDates = array.filter(
+    (item) => new Date(item.data).getTime() >= today.getTime()
+  );
 
-    const escalaCultoElement =
-      document.querySelector("#escalaCultoRa");
+  futureDates.sort((a, b) => a.data.getTime() - b.data.getTime());
 
-    if (!escalaCultoElement) {
-      console.error("Elemento não encontrado no DOM.");
-      return;
-    }
+  const escalaCultoElement = document.querySelector("#escalaCultoRa");
 
-    if (futureDates.length > 0) {
-      const proxReuniao = futureDates[0];
-      let dia = proxReuniao.data.getDate().toString().padStart(2, "0");
-      let mes = proxReuniao.data.getMonth();
-      // let diaSemana = diaDaSemana[proxReuniao.data.getDay()];
+  if (!escalaCultoElement) {
+    console.error("Elemento não encontrado no DOM.");
+    return;
+  }
 
-      // Concatenando nome do responsável e o capítulo
-      escalaCultoElement.innerHTML = `${dia}/${mesesDoAno[mes].slice(0,3)} - ${proxReuniao.nome} (${proxReuniao.cap})`;
+  if (futureDates.length > 0) {
+    const proxReuniao = futureDates[0];
+    let dia = proxReuniao.data.getDate().toString().padStart(2, "0");
+    let mes = proxReuniao.data.getMonth();
+
+    escalaCultoElement.innerHTML = `${dia}/${mesesDoAno[mes].slice(0, 3)} - ${proxReuniao.nome} (${proxReuniao.cap})`;
   } else {
-      escalaCultoElement.innerHTML = "Data a definir";
+    escalaCultoElement.innerHTML = "Data a definir";
   }
 }
 
-proximaEscalaCultoRa(escalados)
+// Chamada corrigida:
+proximaEscalaCultoRa(gerarEscaladosComData());
 
 </script>
 
