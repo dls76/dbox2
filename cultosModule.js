@@ -1,9 +1,9 @@
 export const nomes = {
-    1: "Vice",        // Segunda
-    2: "P.Vinícius", // Terça
-    3: "Diretor",      // Quarta
-    4: "P.Leonardo",  // Quinta
-    5: "P.Arisson"  // Sexta
+    1: "Murilo",        // Segunda
+    2: "Vinícius", // Terça
+    3: "Douglas",      // Quarta
+    4: "Leonardo",  // Quinta
+    5: "Arisson"  // Sexta
   };
   
   export const substituicoes = {
