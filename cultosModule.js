@@ -7,7 +7,8 @@ export const nomes = {
   };
   
   export const substituicoes = {
-    // "2025-04-10": "Nome",
+    "2025-05-01": "Feriado",
+    "2025-05-02": "Recesso",
     // "2025-04-17": "Nome",
     // "2025-04-24": "Nome"
   };
@@ -24,6 +25,12 @@ export const nomes = {
     const calendario = document.getElementById("calendario");
     const mesAno = document.getElementById("mesAno");
     calendario.innerHTML = "";
+
+    // const calendario = document.getElementById("calendario");
+calendario.classList.remove("fade-in"); // remove caso exista
+void calendario.offsetWidth; // força reflow
+calendario.classList.add("fade-in"); // reaplica a animação
+
   
     const ano = dataAtual.getFullYear();
     const mes = dataAtual.getMonth();

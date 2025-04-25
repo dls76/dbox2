@@ -4,176 +4,234 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cultos Diários</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    html, body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f2f5;
-      height: 100%;
-    }
+html, body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #f8f9fb;
+  color: #2c3e50;
+  height: 100%;
+  line-height: 1.5;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 1rem;
-      background-color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-    .titulo {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      color: #2c3e50;
-    }
+/* Título principal */
+.titulo {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1c1e21;
+}
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.8rem;
+}
 
-    .header h2 {
-      font-size: 1.4rem;
-    }
+#mesAno {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #2c3e50;
+}
 
-    .header button {
-      padding: 0.4rem 1rem;
-      font-size: 1rem;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+/* Botões de navegação */
+.botoes-navegacao {
+  display: flex;
+  gap: 0.75rem;
+}
 
-    .header button:hover {
-      background: #0056b3;
-    }
+.botoes-navegacao button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  height: 42px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
 
-    .calendar {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0.4rem;
-    }
+.botoes-navegacao button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-    .day-name {
-      background: #e9ecef;
-      padding: 0.3rem;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 4px;
-      font-size: 0.8rem;
-    }
+.botoes-navegacao i {
+  font-size: 1rem;
+  line-height: 1;
+}
 
-    .day {
-      background: #fdfdfd;
-      border-radius: 4px;
-      padding: 0.3rem;
-      box-shadow: 0 0 3px rgba(0,0,0,0.1);
-      font-size: 0.7rem;
-      display: flex;
-      flex-direction: column;
-      transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
-    }
+/* Calendário */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+}
 
-    .day.today {
-      background: #cce5ff;
-      border: 2px solid #339af0;
-    }
+.day-name {
+  background: #f1f3f5;
+  padding: 0.6rem 0;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #495057;
+}
 
-    .day:not(.today):hover {
-      background: #f1f3f5;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
+.day {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0.6rem 0.5rem;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #e9ecef;
+}
 
-    .day strong {
-      font-weight: bold;
-      margin-bottom: 0.2rem;
-    }
+.day.today {
+  background: #e0f2ff;
+  border: 2px solid #3b82f6;
+}
 
-    .culto {
-      margin: 0; /* Alteração: remove margem vertical para controle preciso */
-      white-space: nowrap;
-      overflow: hidden;
-      /* Nova linha: define padding para controle de espaçamento */
-      padding: 0.1rem 0;
-    }
+.day:not(.today):hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+}
 
-    @media (max-width: 768px) {
-      .titulo { font-size: 1.6rem; }
-      .header h2 { font-size: 1.1rem; }
-      .day { font-size: 0.65rem; }
-    }
+.day strong {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  color: #212529;
+}
 
-    @media (max-width: 480px) {
-      .titulo { font-size: 1.4rem; }
-      .header h2 { font-size: 1rem; }
-      .day { font-size: 0.6rem; padding: 0.2rem; }
-    }
+.culto {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.72rem;
+  color: #495057;
+  padding: 0.1rem 0;
+}
 
-    @media (max-width: 400px) {
-      .culto {
-        font-size: 0.55rem;
-        /* Alteração: mantém padding consistente */
-        padding: 0.1rem 0;
-      }
-      .culto::before {
-        content: attr(data-nome);
-        display: block;
-      }
-      .culto {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: clip;
-        color: transparent;
-      }
-      .culto::before {
-        color: black;
-      }
-      .day {
-        font-size: 0.55rem;
-        /* Nova linha: ajusta padding interno para consistência */
-        padding: 0.3rem 0.3rem 0.1rem 0.3rem;
-      }
-    }
+/* Responsividade */
+@media (max-width: 768px) {
+  .container { padding: 1.5rem 1rem; }
+  .titulo { font-size: 1.8rem; }
+  #mesAno { font-size: 1.5rem; }
+  .calendar { gap: 0.5rem; }
+  .day { font-size: 0.68rem; }
+}
 
-    @media (max-width: 320px) {
-      .day { font-size: 0.5rem; }
-      .titulo { font-size: 1.2rem; }
-    }
+@media (max-width: 480px) {
+  .calendar { grid-template-columns: repeat(2, 1fr); }
+  .botoes-navegacao { flex-wrap: wrap; justify-content: center; }
+  .day { padding: 0.4rem; }
+  .titulo { font-size: 1.6rem; }
+  #mesAno { font-size: 1.4rem; }
+  .culto {
+    font-size: 0.65rem;
+    padding: 0.05rem 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .titulo { font-size: 1.4rem; }
+  #mesAno { font-size: 1.2rem; }
+  .day-name, .day { font-size: 0.6rem; }
+}
+
+.calendar {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   </style>
 </head>
 <body>
   <div class="container">
     <div class="titulo">Cultos Diários</div>
     <div class="header">
-      <button onclick="mudarMes(-1)">←</button>
-      <h2 id="mesAno"></h2>
-      <button onclick="mudarMes(1)">→</button>
+      <h2 id="mesAno">abril de 2025</h2>
+      <div class="botoes-navegacao">
+        <button id="btnAnterior"><i class="fas fa-chevron-left"></i></button>
+        <button id="btnHoje"><i class="fas fa-calendar-day"></i> Hoje</button>
+        <button id="btnProximo"><i class="fas fa-chevron-right"></i></button>
+      </div>
     </div>
+    
+    
     <div class="calendar" id="calendario"></div>
   </div>
   <script type="module">
-    import { montarCalendario, mudarMes } from './cultosModule.js';
-  
-    let dataAtual = new Date(2025, 3, 1);
+
+  import { montarCalendario, mudarMes } from './cultosModule.js';
+
+  let dataAtual = new Date(2025, 3, 1); // Abril 2025
+  montarCalendario(dataAtual);
+
+  document.getElementById("btnAnterior").addEventListener("click", () => {
+    mudarMes(dataAtual, -1);
+  });
+
+  document.getElementById("btnProximo").addEventListener("click", () => {
+    mudarMes(dataAtual, 1);
+  });
+
+  document.getElementById("btnHoje").addEventListener("click", () => {
+    dataAtual.setFullYear(new Date().getFullYear());
+    dataAtual.setMonth(new Date().getMonth());
+    dataAtual.setDate(1); // sempre volta para o dia 1 do mês atual
     montarCalendario(dataAtual);
-  
-    function mudarMesHandler(direcao) {
-      mudarMes(dataAtual, direcao);
-    }
+  });
+
   </script>
   
 </body>
