@@ -15,7 +15,7 @@ const reuniaoadm = [
     { data: new Date(2025, 4, 27), link: 'https://docs.google.com/document/d/1qPrEhCw5CRi7qg4saeZ-eDgy2pbQjn-KWNx88WaM8f0/edit?tab=t.0', hora: '14h' },
 ];
 
-const diaDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+const diaDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
 const mesesDoAno = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
 window.addEventListener('load', function() {
