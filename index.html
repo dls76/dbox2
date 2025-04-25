@@ -90,15 +90,13 @@
 
       <!-- Escalas -->
       <div class="divhome" id="escalas">
+        
         <div class="titulodivhomeescalas">Escalas</div>
 
         <div class="conteinerescalas" id="conteinerescalas">
-          <a href="cultos_pagina.html" target="_blank">
-            <div class="escala" id="escalacultos">
-              <div class="icon">
-                <img src="img/yes.png" alt="" />
-              </div>
 
+          <a href="cultos_pagina.html" target="_blank">
+            <div class="escala" id="escalacultos"><div class="icon"><img src="img/yes.png" alt=""/></div>
               <div>
                 <div class="tituloescala">Cultos do dia</div>
                 <div class="contentescala" id="cultos"></div>
@@ -108,11 +106,7 @@
           </a>
 
           <a href="pedagogiadventista.html" target="_blank">
-            <div class="escala">
-              <div class="icon">
-                <img src="img/yes.png" alt="" />
-              </div>
-
+            <div class="escala"><div class="icon"><img src="img/yes.png" alt=""/></div>
               <div>
                 <div class="tituloescala">Pedagogia Adventista</div>
                 <div class="contentescala" id="escalaCultoRa"></div>
@@ -121,36 +115,18 @@
             </div>
           </a>
 
-          <a
-            href="compensacao.html"
-            target="_blank"
-          >
-            <div class="escala">
-              <div class="icon">
-                <img src="img/yes.png" alt="" id="icon-compensacao" />
-              </div>
+          <a href="compensacao.html" target="_blank">
+            <div class="escala"><div class="icon"><img src="img/yes.png" id="icon-compensacao"/></div>
               <div>
-                <div class="tituloescala" id="titulocompensacao">
-                  Compensação
-                </div>
-                <div
-                  class="contentescala"
-                  id="box-nomescomp"
-                  style="display: flex; align-items: center"
-                >
-                  <span id="nomescomp" style="margin-right: 1rem"></span>
-                </div>
-                <i class="fa-solid fa-angle-right seta"></i>
-              </div>
+                <div class="tituloescala" id="titulocompensacao">Compensação</div>
+                <div class="contentescala" id="box-nomescomp" style="display: flex; align-items: center"><span id="nomescomp" style="margin-right: 1rem"></span>
+                </div><i class="fa-solid fa-angle-right seta"></i></div>
             </div>
           </a>
 
 
           <a href="pg-externas/plantaosexta.html">
-            <div class="escala" id="escalasexta">
-              <div class="icon">
-                <img src="img/yes.png" alt="" />
-              </div>
+            <div class="escala" id="escalasexta"><div class="icon"><img src="img/yes.png" alt=""/></div>
               <div>
                 <div class="tituloescala">Plantão de sexta</div>
                 <div class="contentescala" id="plantaosexta"></div>
@@ -160,18 +136,15 @@
           </a>
 
           <a id="ralink" target="_blank">
-            <div class="escala">
-              <div class="icon">
-                <img src="img/yes.png" alt="" />
-              </div>
+            <div class="escala"><div class="icon"><img src="img/yes.png" alt=""/></div>
               <div>
-                <div class="tituloescala" id="tituloroute">Reunião Administrativa
-                </div>
+                <div class="tituloescala" id="tituloroute">Reunião Administrativa</div>
                 <div class="contentescala" id="reuniaoadm"></div>
                 <i class="fa-solid fa-angle-right seta"></i>
               </div>
             </div>
           </a>
+
         </div>
       </div>
 
@@ -981,7 +954,7 @@ proximaEscalaCultoRa(escalados)
 
 <script>
 
-  window.addEventListener("load", compensacao);
+  window.addEventListener("load", mostrarCompensacao);
 
   window.addEventListener("load", escalaDeEntrevistas);
 
@@ -1011,11 +984,12 @@ proximaEscalaCultoRa(escalados)
     }
   }
 
-  function compensacao() {
+function mostrarCompensacao() {
+
   const dataHoje = new Date();
   const diaSemana = dataHoje.getDay();
 
-  const isFeriado = false;
+  const isFeriado = true;
   const isFirstOrLast = false;
   const isVacation = false;
 
@@ -1041,9 +1015,9 @@ proximaEscalaCultoRa(escalados)
     elementoNome.innerHTML = nomesPorDia[diaSemana];
   }
 
-  // if (diaSemana === 3) {
-  //   elementoNome.style.fontSize = "10px";
-  // }
+// if (diaSemana === 3) {
+//   elementoNome.style.fontSize = "10px";
+// }
 
 }
 
