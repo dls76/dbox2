@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentos</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Quicksand', sans-serif;
+        background-color: #f5f7fa;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    header {
+        background-color: #2c3e50;
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        color: white;
+        font-size: 1.4em;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    nav a {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 4px;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        cursor: pointer;
+    }
+
+    nav a:hover {
+        background-color: #3498db;
+        color: white;
+    }
+
+    nav a.active {
+        background-color: #1abc9c;
+        color: white;
+        font-weight: 600;
+    }
+
+    .wrapper {
+        max-width: 1200px;
+        width: 100%;
+        padding: 30px;
+        margin-top: 70px;
+        display: flex;
+        gap: 30px;
+    }
+
+    .summary-container {
+    width: 280px;
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #ecf0f1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-container h2 {
+    margin-bottom: 15px;
+}
+
+
+    .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.summary-table td {
+    padding: 8px 0;
+    font-size: 0.95em;
+    text-align: right;
+}
+
+.summary-table td:first-child {
+    text-align: left;
+}
+    .document-list {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .doc-card {
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.2s ease;
+    }
+
+    .doc-card:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .doc-card a {
+        text-decoration: none;
+        color: #2c3e50;
+        font-size: 1.1em;
+        font-weight: 500;
+        display: block;
+    }
+
+    .doc-card a:hover {
+        color: #3498db;
+    }
+
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+    }
+
+    .modal {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        width: 90%;
+        max-width: 1000px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        color: #2c3e50;
+    }
+
+    .modal table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .modal th, .modal td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    .close-modal {
+        margin-top: 20px;
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <a href="?section=valeria" class="logo">DBox - Inclusão</a>
+        <nav>
+            <a href="?section=valeria" id="valeria-link">Valéria</a>
+            <a href="?section=malu" id="malu-link">Malú</a>
+            <a href="?section=andressa" id="andressa-link">Andressa</a>
+            <a href="?section=renata" id="renata-link">Renata</a>
+            <a id="open-modal">Quadro Geral</a>
+        </nav>
+    </div>
+</header>
+<div class="wrapper">
+    <div class="summary-container">
+        <h2>Resumo</h2>
+        <table class="summary-table" id="summary-table"></table>
+        <p id="summary-footer" style="text-align: center; font-size: 0.75em; color: #bdc3c7; margin-top: 15px;">
+            Atualizado em 27/04/2025 às 11h45
+        </p>
+    </div>
+    
+    <div class="document-list" id="document-list"></div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+        <h2>Quadro Geral</h2>
+        <table id="modal-table"></table>
+        <button class="close-modal" id="close-modal">Fechar</button>
+    </div>
+</div>
+
+<script>
+const peopleData = [
+    {
+        id: "valeria",
+        nome: "Valéria",
+        resumo: { Nivel: "Infantil", Alunos: 28, Inclusão: 3, "Com Laudo": 2 },
+        links: [
+            { name: "Planejamento 2025", url: "https://drive.google.com/valeria-planejamento" },
+            { name: "Relatório de Atividades", url: "https://drive.google.com/valeria-relatorio" }
+        ]
+    },
+    {
+        id: "malu",
+        nome: "Malú",
+        resumo: { Nivel: "Fundamental 1", Alunos: 35, Inclusão: 2, "Com Laudo": 1 },
+        links: [
+            { name: "Projetos Educacionais", url: "https://drive.google.com/malu-projetos" },
+            { name: "Planejamento Semanal", url: "https://drive.google.com/malu-semanal" }
+        ]
+    },
+    {
+        id: "andressa",
+        nome: "Andressa",
+        resumo: { Nivel: "Fundamental 2", Alunos: 30, Inclusão: 4, "Com Laudo": 3 },
+        links: [
+            { name: "Avaliações 2025", url: "https://drive.google.com/andressa-avaliacoes" },
+            { name: "Planejamento de Aula", url: "https://drive.google.com/andressa-planejamento" }
+        ]
+    },
+    {
+        id: "renata",
+        nome: "Renata",
+        resumo: { Nivel: "Médio", Alunos: 25, Inclusão: 1, "Com Laudo": 1 },
+        links: [
+            { name: "Calendário Escolar", url: "https://drive.google.com/renata-calendario" },
+            { name: "Projetos", url: "https://drive.google.com/renata-projetos" }
+        ]
+    }
+];
+
+function findPerson(sectionId) {
+    return peopleData.find(p => p.id === sectionId);
+}
+
+function updateActiveLink(section) {
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+        link.classList.remove("active");
+        if (link.id === `${section}-link`) {
+            link.classList.add("active");
+        }
+    });
+}
+
+function renderDocuments(section) {
+    const person = findPerson(section);
+    const documentList = document.getElementById("document-list");
+    documentList.innerHTML = "";
+    if (person && person.links) {
+        person.links.forEach(doc => {
+            const card = document.createElement("div");
+            card.classList.add("doc-card");
+            card.innerHTML = `<a href="${doc.url}" target="_blank">${doc.name}</a>`;
+            documentList.appendChild(card);
+        });
+    }
+}
+
+function renderSummary(section) {
+    const person = findPerson(section);
+    const summaryTable = document.getElementById("summary-table");
+    summaryTable.innerHTML = "";
+    if (person && person.resumo) {
+        for (const key in person.resumo) {
+            const row = `<tr><td><strong>${key}</strong></td><td>${person.resumo[key]}</td></tr>`;
+            summaryTable.innerHTML += row;
+        }
+    }
+}
+
+function renderModalTable() {
+    const modalTable = document.getElementById("modal-table");
+    modalTable.innerHTML = "";
+
+    let headerRow = "<tr><th>Campo</th>";
+    peopleData.forEach(person => {
+        headerRow += `<th>${person.nome}</th>`;
+    });
+    headerRow += "</tr>";
+    modalTable.innerHTML += headerRow;
+
+    const campos = Object.keys(peopleData[0].resumo);
+    campos.forEach(campo => {
+        let row = `<tr><td><strong>${campo}</strong></td>`;
+        peopleData.forEach(person => {
+            row += `<td>${person.resumo[campo]}</td>`;
+        });
+        row += "</tr>";
+        modalTable.innerHTML += row;
+    });
+}
+
+function handleNavigation() {
+    const params = new URLSearchParams(window.location.search);
+    const section = params.get("section") || "valeria";
+    updateActiveLink(section);
+    renderDocuments(section);
+    renderSummary(section);
+}
+
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", (e) => {
+        if (link.id === "open-modal") return;
+        e.preventDefault();
+        const section = link.id.replace("-link", "");
+        window.history.pushState({}, "", `?section=${section}`);
+        handleNavigation();
+    });
+});
+
+document.getElementById("open-modal").addEventListener("click", () => {
+    document.getElementById("modal-overlay").style.display = "flex";
+    renderModalTable();
+});
+
+document.getElementById("close-modal").addEventListener("click", () => {
+    document.getElementById("modal-overlay").style.display = "none";
+});
+
+document.getElementById("modal-overlay").addEventListener("click", (e) => {
+    if (e.target.id === "modal-overlay") {
+        document.getElementById("modal-overlay").style.display = "none";
+    }
+});
+
+window.addEventListener("popstate", handleNavigation);
+
+handleNavigation();
+</script>
+</body>
+</html>
