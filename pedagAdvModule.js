@@ -79,7 +79,7 @@ export const pausas = [
   // new Date(2025, 5, 10),
   // new Date(2025, 5, 17),
   // new Date(2025, 5, 24),
-  // new Date(2025, 6, 1),
+  new Date(2025, 4, 6),
   new Date(2025, 6, 8), 
   new Date(2025, 6, 15),
   new Date(2025, 6, 22) 
