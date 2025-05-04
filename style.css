@@ -182,14 +182,15 @@ main#conteinerhome {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 14px 0px;
+    padding: 6px 0px;
     border-radius: 12px;
     margin: 2px;
     transition: all .3s;
+    /* border: 1px solid red; */
 }
 .img i.fa-comments,
-.img i#fa-calendar,
-.img i#fa-envelope,
+.img i.fa-calendar,
+.img i.fa-envelope,
 .img i.fa-desktop,
 .img i#fa-chart-pie,
 .img i.fa-chart-simple,
@@ -198,8 +199,9 @@ main#conteinerhome {
 .img i.fa-suitcase-medical,
 .img i#fa-briefcase-medical,
 .img i#fa-unlock,
-.img i#fa-file-lines,
-.img i#fa-comments-dollar {
+.img i.fa-file-lines,
+.img i.fa-comments-dollar,
+.img i#fa-pen {
     width: 46px;
     color: #253B73;
     text-align: center;
@@ -212,6 +214,7 @@ main#conteinerhome {
     font-family: 'Roboto Condensed', sans-serif;
     color: rgb(169, 169, 169);
     padding-top: .5rem;
+    text-align: center;
 }
 #bi {
     width: 57px;

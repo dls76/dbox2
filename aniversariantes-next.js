@@ -53,6 +53,7 @@ function adicionarProximosAniversariantes() {
       if (aniversarioHoje) {
         divData.textContent = 'Hoje!';
         divData.style.color = 'white';
+        divData.style.backgroundColor = '#B52532';
       } else {
         divData.textContent = `${dia}/${mes}`;
       }
