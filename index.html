@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/calendario-num.css"/>
   <link rel="stylesheet" href="css/banners.css"/>
   <link rel="stylesheet" href="modalUrgencias.css">
+  <link rel="stylesheet" href="./css/administrativo.css">
   <!-- <link rel="stylesheet" href="css/aniversariantes.css"> -->
   <link rel="stylesheet" href="css/divhomeaniver.css" />
   <link rel="stylesheet" href="css/sec-banners.css" />
@@ -30,6 +31,7 @@
   <link rel="stylesheet" href="css/sec-calendarios.css" />
   <link rel="stylesheet" href="css/modal-urgencias.css" />
   <link rel="stylesheet" href="./css/espiritual.css" />
+  <link rel="stylesheet" href="./css/sec-adm.css">
 
   <!-- Arquivos externos -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,17 +54,12 @@
   </style>
 
 </head>
-
-<body>
   
   <div class="scrollTopButton" id="top" onclick="scrollToTop()">
     <i class="fa-solid fa-angle-up"></i>
   </div>
-  
-  <!-- HOME  -->
-  <div class="conteinergeral">
 
-    <header id="header">
+  <header id="header">
       <a id="logo" href="calendario-dbox.html" target="_blank">DBox</a>
       <nav id="nav">
         <div id="btn-mobile">
@@ -70,6 +67,7 @@
         </div>
         <div class="menu" id="menu">
           <a id="nav-ama" href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu" target="_blank"><i class="fa-solid fa-truck-medical"></i> AMA</a>
+          
           <a id="nav-ped" href="pedagogico.html" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Pedagógico</a>
           <a id="nav-adm" href="administrativo.html" target="_blank"><i class="fa-solid fa-square-poll-vertical"></i> Administrativo</a>
           <a id="nav-espiritual" href="espiritual.html" target="_blank"><i class="fa-solid fa-hands-praying"></i> Espiritual</a>
@@ -83,9 +81,13 @@
         <span class="material-symbols-outlined" id="bt-compras">shopping_cart</span>
         <span class="material-symbols-outlined" id="bt-investimentos">attach_money</span>
       </div>
+</header>
 
-    </header>
+  <!-- HOME  -->
 
+  <div class="sec mainConteiner">
+
+  <div class="conteinergeral">
     <main id="conteinerhome">
 
       <!-- Escalas -->
@@ -244,7 +246,7 @@
   </div>
 
   <!-- Eventos e Projetos -->
-  <section class="sec-eventos-e-projetos" style="background-color: #eee; padding: 3rem 0;">
+  <section class="sec-eventos-e-projetos" id="sec-eventos" style="background-color: #eee; padding: 3rem 0;">
     
     <style>
       .evCard_section {
@@ -523,7 +525,7 @@
   </section >
 
   <!-- HORÁRIOS -->
-  <section class="horarios-section">
+  <section class="horarios-section" id="sec-horarios">
     <h2>Horários</h2>
     <div class="horarios-grid">
       <div class="horarios-column">
@@ -621,49 +623,51 @@
         <p>CAC</p>
       </a>
       <a
-        href="https://docs.google.com/document/d/1XZjyDDu_iti9YoIzxXMakkT-tR0oOBMB/edit"
-        target="_blank"
+      href="https://docs.google.com/document/d/1XZjyDDu_iti9YoIzxXMakkT-tR0oOBMB/edit"
+      target="_blank"
       >
-        <svg
-          class="svg_educ"
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-calendar-plus"
-          width="52"
-          height="52"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path
-            d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5"
-          />
-          <path d="M16 3v4" />
-          <path d="M8 3v4" />
-          <path d="M4 11h16" />
-          <path d="M16 19h6" />
-          <path d="M19 16v6" />
-        </svg>
-        <p>Depto</p>
-      </a>
-      <!-- <a href="" >
-              <svg class="svg_educ" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M16 19h6" /><path d="M19 16v6" /></svg>
-              <p>Educação 2025</p>
-          </a> -->
-      <a href="docs/calendariopais.pdf" target="_blank">
-              <svg class="svg_pais" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-user" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21h-6a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4.5" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M19 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M22 22a2 2 0 0 0 -2 -2h-2a2 2 0 0 0 -2 2" /></svg>
-              <p>Pais</p>
-          </a>
-      <!-- <a href="docs/agendaAsp2024.pdf" >
-              <svg class="svg_asp" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-church" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M10 21v-4a2 2 0 0 1 4 0v4" /><path d="M10 5l4 0" /><path d="M12 3l0 5" /><path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" /></svg>
-              <p>ASP</p>
+      <svg
+      class="svg_educ"
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler icon-tabler-calendar-plus"
+      width="52"
+      height="52"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path
+      d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5"
+      />
+      <path d="M16 3v4" />
+      <path d="M8 3v4" />
+      <path d="M4 11h16" />
+      <path d="M16 19h6" />
+      <path d="M19 16v6" />
+    </svg>
+    <p>Depto</p>
+  </a>
+  <!-- <a href="" >
+    <svg class="svg_educ" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M16 19h6" /><path d="M19 16v6" /></svg>
+    <p>Educação 2025</p>
+  </a> -->
+  <a href="docs/calendariopais.pdf" target="_blank">
+    <svg class="svg_pais" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-user" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21h-6a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4.5" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M19 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M22 22a2 2 0 0 0 -2 -2h-2a2 2 0 0 0 -2 2" /></svg>
+    <p>Pais</p>
+  </a>
+  <!-- <a href="docs/agendaAsp2024.pdf" >
+    <svg class="svg_asp" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-church" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M10 21v-4a2 2 0 0 1 4 0v4" /><path d="M10 5l4 0" /><path d="M12 3l0 5" /><path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" /></svg>
+    <p>ASP</p>
           </a> -->
     </div>
   </div>
 
+</div>
+  
   <!-- URGÊNCIAS -->
   <div id="modal-container">
     <div id="emergency-modal">
@@ -681,7 +685,7 @@
             <li><span class="emergency-number">9.9681-9803</span> - Dr. Rodrigo Hahn (Advogado ASP)</li>
         </ul>
     </div>
-</div>
+  </div>
 
 <!-- Ramais -->
 <style>
@@ -782,8 +786,6 @@
     <ul class="ramais-list" id="ulramais"></ul>
   </div>
 </div>
-
-
 
 <script src="calendario.js"></script>
 <script src="script.js"></script>
@@ -1223,6 +1225,36 @@ function mostrarCompensacao() {
   // Mostrar automaticamente se permitido
   window.addEventListener('load', verificarExibicaoModal);
 </script>
+
+<script>
+
+// Seleciona todos os links do navbar
+        const navLinks = document.querySelectorAll(".nav");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                // Remove a classe active de todas as divs
+                document.querySelectorAll(".sec").forEach(section => {
+                    section.classList.remove("active");
+                });
+
+                // Adiciona a classe active na div clicada
+                const targetSection = document.getElementById(link.dataset.section);
+                targetSection.classList.add("active");
+            });
+        });
+</script>
+
+<style>
+.sec.active {
+  display: block;
+}
+.sec-adm {
+  display: none;
+}
+</style>
 
 </body>
 </html>

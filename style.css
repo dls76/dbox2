@@ -45,6 +45,11 @@ body { background-color: var(--bg-color); }
 .scrollTopButton:hover {
     background-color: var(--primary-dark);
 }
+
+.homeConteiner {
+    border: 2px solid red;
+}
+
 /* Layout containers */
 .conteinergeral {
     width: 98%;
