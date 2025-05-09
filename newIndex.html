@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Escolar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  
+<style>
+    :root {
+  --primary-color: #2c3e50;
+  --accent-color: #2980b9;
+  --bg-color: #f9fafb;
+  --card-bg: #ffffff;
+  --text-color: #2c3e50;
+  --muted-text: #7f8c8d;
+  --border-radius: 16px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.sidebar .link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffffe6;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar .link-item:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9fafb;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: none;
+  margin-bottom: 2rem;
+}
+
+.navbar nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: var(--accent-color);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.section {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.2px;
+  color: var(--text-color);
+}
+
+.card {
+  border-left: none;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  line-height: 1.4;
+}
+
+.calendar-placeholder {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted-text);
+  font-style: italic;
+  background: #ebedf0;
+  border-radius: var(--border-radius);
+}
+
+.birthday-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.birthday-item {
+  display: flex;
+  align-items: center; /* Alinha verticalmente os elementos */
+  justify-content: space-between; /* Garante que a data fique à direita */
+  background: #f9fafb;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.birthday-info {
+  display: flex;
+  flex-direction: row; /* Foto à esquerda, informações à direita */
+  align-items: center; /* Alinha verticalmente a foto e as informações */
+  gap: 0.75rem; /* Espaço entre a foto e as informações */
+}
+
+.birthday-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.birthday-info span {
+  display: flex;
+  flex-direction: column; /* Nome e função em linhas diferentes */
+  gap: 0.2rem; /* Espaço entre o nome e a função */
+  font-size: 0.875rem;
+  color: var(--text-color);
+}
+
+.birthday-info span small {
+  opacity: 0.7;
+  font-size: 0.75rem;
+  line-height: 1; /* Garante que a altura da linha não crie espaço extra */
+}
+
+.birthday-date {
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px; /* Bordas mais suaves para combinar com a imagem */
+  font-size: 0.75rem;
+  min-width: 40px; /* Garante um tamanho mínimo para parecer com o quadrado da imagem */
+  text-align: center; /* Centraliza o texto */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .navbar nav a {
+    margin: 0 0.5rem;
+  }
+}
+</style>
+
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Links Rápidos</h2>
+    <div class="link-item"><i data-feather="calendar"></i> Calendário</div>
+    <div class="link-item"><i data-feather="mail"></i> Comunicados</div>
+    <div class="link-item"><i data-feather="edit"></i> Escrever</div>
+    <div class="link-item"><i data-feather="file-text"></i> Próx. RA</div>
+    <div class="link-item"><i data-feather="dollar-sign"></i> Valores</div>
+    <div class="link-item"><i data-feather="lock"></i> Vagas</div>
+  </aside>
+
+  <main class="main-content">
+    <div class="navbar">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Pedagógico</a>
+        <a href="#">Administrativo</a>
+        <a href="#">Espiritual</a>
+        <a href="#">Matrículas</a>
+      </nav>
+    </div>
+
+    <div class="dashboard">
+      <div class="section">
+        <h2>Escalas</h2>
+        <div class="card">
+          <h3>Cultos do dia</h3>
+          <p>7h Murilo | 10h Murilo | 13h Murilo</p>
+        </div>
+        <div class="card">
+          <h3>Pedagogia Adventista</h3>
+          <p>13/Mai - Nailson (1/4.1 a 4.4)</p>
+        </div>
+        <div class="card">
+          <h3>Compensação</h3>
+          <p>Semana com feriado</p>
+        </div>
+        <div class="card">
+          <h3>Plantão de sexta</h3>
+          <p>09/05 - Valeria, Henrique e Rose</p>
+        </div>
+        <div class="card">
+          <h3>Reunião Administrativa</h3>
+          <p>Terça, 13 de Maio - 14h</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Calendário</h2>
+        <div class="calendar-placeholder">[Widget de Calendário Aqui]</div>
+      </div>
+
+      <div class="section">
+        <h2>Próximos Aniversários</h2>
+        <div class="birthday-list">
+          <div class="birthday-item">
+            <div class="birthday-info">
+              <img src="docs/new_img/img1.jpg" alt="Luciani">
+              <span><strong>Luciani</strong> <small>(Auxiliar Contraturno)</small></span>
+            </div>
+            <div class="birthday-date">08/05</div>
+          </div>
+          <div class="birthday-item">
+            <div class="birthday-info">
+              <img src="docs/new_img/img2.jpg" alt="Adriene">
+              <span><strong>Adriene</strong> <small>(Professora)</small></span>
+            </div>
+            <div class="birthday-date">10/05</div>
+          </div>
+          <div class="birthday-item">
+            <div class="birthday-info">
+              <img src="docs/new_img/img3.jpg" alt="Carmelis">
+              <span><strong>Carmelis</strong> <small>(Monitora)</small></span>
+            </div>
+            <div class="birthday-date">10/05</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
