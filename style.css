@@ -174,7 +174,9 @@ main#conteinerhome {
 .img i.fa-file-lines,
 .img i.fa-comments-dollar,
 .img i.fa-user-tie,
-.img i.fa-pen {
+.img i.fa-file-pen,
+.img i.fa-address-card,
+.img i.fa-comment-dots {
     color: #253B73;
     text-align: center;
 }
