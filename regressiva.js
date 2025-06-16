@@ -16,7 +16,7 @@ const proximosEventos = [
   {nome: 'Dia das Mães', data: new Date(2024, 4, 19), link:"https://drive.google.com/drive/folders/1vyONKagq4wUlMKRDGutaHqidhr3WFrbC?usp=drive_link",},
   {nome: 'Acreditação', data: new Date(2024, 4, 22), link:"https://dls76.github.io/dbox2/pg-externas/acreditacao.html",},
   {nome: 'Recesso', data: new Date(2024, 5, 29)},
-  {nome: 'Lançamento de Matrículas Equipe Gestora', data: new Date(2024, 7, 12), link:"https://drive.google.com/drive/folders/1fAj27bIfdN-ZQTvadISFZq9J2H79YaTY?usp=sharing",},
+  {nome: 'Lançamento Matrículas CAC', data: new Date(2024, 7, 12), link:"https://drive.google.com/drive/folders/1fAj27bIfdN-ZQTvadISFZq9J2H79YaTY?usp=sharing",},
   {nome: 'Programa Dia dos Pais', data: new Date(2024, 7, 18), link:"https://drive.google.com/drive/folders/1l_iYVD7GBGqXRdcaHT21lfocT4yC5DJP?usp=drive_link",},
   // {nome: 'Abertura Olimpíadas CAC', data: new Date(2024, 7, 20), link:"https://drive.google.com/drive/folders/1MeOeRl-HrD7_X-N-oTQcBAbROWVfKdOF?usp=sharing",},
   {nome: 'Beto Carrero', data: new Date(2024, 7, 28), link: 'pg-externas/beto.html'},
