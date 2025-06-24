@@ -815,25 +815,32 @@
 
 <!-- Cultos Script com importações-->
 <script type="module">
-  import { nomes, horarios, substituicoes, getDataAtual } from './cultosModule.js';
+  import { nomes, horarios, substituicoes, getDataAtual, escalaQuintaPersonalizada } from './cultosModule.js';
 
   const dataAtual = getDataAtual();
-  diaSemana = dataAtual.getDay();
-  const dataHoje = dataAtual.toISOString().split('T')[0]; // Formata a data como YYYY-MM-DD
-
+  const diaSemana = dataAtual.getDay();
+  const dataHoje = dataAtual.toISOString().split('T')[0]; // Formata como YYYY-MM-DD
+  
   let responsavelCulto = '';
 
   if (diaSemana === 0) {
     responsavelCulto = 'Hoje é domingo';
   } else if (diaSemana === 6) {
     responsavelCulto = 'Feliz Sábado';
+  } else if (diaSemana === 4 && escalaQuintaPersonalizada[dataHoje]) {
+    // Quinta-feira com escala personalizada
+    const responsaveis = escalaQuintaPersonalizada[dataHoje];
+    responsavelCulto = horarios.map((hora, index) => `${hora}h ${responsaveis[index]}`).join(' | ');
   } else {
     const responsavel = substituicoes[dataHoje] || nomes[diaSemana];
     responsavelCulto = horarios.map(hora => `${hora}h ${responsavel}`).join(' | ');
   }
 
   document.querySelector("#cultos").innerHTML = responsavelCulto;
+  console.log("Data simulada:", dataAtual.toDateString());
+console.log("Dia da semana (0=Dom, 4=Qui):", diaSemana);
 </script>
+
 
 <!-- Pedagogia Adventista com importações -->
 <script type="module">
