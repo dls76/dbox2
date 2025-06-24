@@ -73,8 +73,9 @@ export const dataInicial = new Date(2025, 4, 6); // 25/02/2025
 export const pausas = [
   new Date(2025, 4, 6),
   new Date(2025, 4, 20),
-  new Date(2025, 4, 27) ,
-  new Date(2025, 5, 3) ,
+  new Date(2025, 4, 27),
+  new Date(2025, 5, 3),
+  new Date(2025, 5, 17),
   new Date(2025, 6, 8), 
   new Date(2025, 6, 15),
   new Date(2025, 6, 22) 
