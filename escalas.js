@@ -15,6 +15,8 @@ const reuniaoadm = [
     { data: new Date(2025, 5, 10), link: 'https://docs.google.com/document/d/1oR1GRXL4crTPCun_4S8Bj11u1SuQctKrJ-TB4naNuX4/edit?usp=sharing', hora: '14h', culto:'' },
     { data: new Date(2025, 5, 17), link: 'https://docs.google.com/document/d/1fSUjy7CQaHr4WpwKCGYR_7Jnq4ppZlN_JLg8EtwD2Gc/edit?usp=sharing', hora: '14h', culto:'' },
     { data: new Date(2025, 5, 24), link: 'https://docs.google.com/document/d/19e-w59jarLWzrWGhXYgB_HzHR5ncRzbVhXeegXPPK38/edit?usp=sharing', hora: '14h', culto:'' },
+    { data: new Date(2025, 6, 1), link: 'https://docs.google.com/document/d/1dNoBjZFFbgCbulLkcobw5WAvVxdOdVx0ULZVxIyiz2c/edit?tab=t.0', hora: '14h', culto:'' }
+
 ];
 
 const diaDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
