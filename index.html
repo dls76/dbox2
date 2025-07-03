@@ -829,7 +829,7 @@
     responsavelCulto = 'Feliz Sábado';
   } else if (diaSemana === 4 && escalaQuintaPersonalizada[dataHoje]) {
     // Quinta-feira com escala personalizada
-    const responsaveis = escalaQuintaPersonalizada[dataHoje];
+    // responsavelCulto = horarios.map((hora, index) => `${hora}h ${responsaveis[index]}`).join(' | ');
     responsavelCulto = horarios.map((hora, index) => `${hora}h ${responsaveis[index]}`).join(' | ');
   } else {
     const responsavel = substituicoes[dataHoje] || nomes[diaSemana];
@@ -837,8 +837,7 @@
   }
 
   document.querySelector("#cultos").innerHTML = responsavelCulto;
-  console.log("Data simulada:", dataAtual.toDateString());
-console.log("Dia da semana (0=Dom, 4=Qui):", diaSemana);
+  
 </script>
 
 
