@@ -87,7 +87,7 @@ export let plantaosexta = [
     { data: new Date(2025, 5, 13), person: "Diretor", monitoria: "Wesley e Rose" },
     { data: new Date(2025, 5, 20), person: "Feriado", monitoria: "Feriado" },
     { data: new Date(2025, 5, 27), person: "Vinícius", monitoria: "Douglas e Lucia" },
-    { data: new Date(2025, 6, 4), person: "Leonardo", monitoria: "Douglas e Lucia" },
+    { data: new Date(2025, 6, 4), person: "Carol", monitoria: "Daniel e Patrícia" },
     { data: new Date(2025, 6, 25), person: "Murilo", monitoria: "" },
     { data: new Date(2025, 7, 1), person: "Carol", monitoria: "" },
     { data: new Date(2025, 7, 8), person: "Renata", monitoria: "" },
