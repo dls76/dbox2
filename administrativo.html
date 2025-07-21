@@ -69,21 +69,24 @@
           <div>Quadro 2025</div>
         </a>
 
+        <a class="linha-disciplina" href="https://forms.office.com/pages/responsepage.aspx?id=4HruAbpCpUG7e41K-Nt_B7kc1i6k58NMmToRV2Q60c9UNzZRVDJPVUNFNllLMERLWDRIS1hBSjJNSiQlQCN0PWcu&route=shorturl" target="_blank">
+           <i class="fa-solid fa-repeat" style="font-size: 1.6rem; color:#253B73;"></i>
+           <div>Alterações de Quadro</div>
+        </a>
+
         <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/Efe4MTs_SLtHrW_b0p5XJ5YBUrm5V0LC8-RankdMz27P7w?e=stkuIq" target="_blank" class="linha-disciplina">
           <!-- <img src="img/excel.png" alt="" /> -->
            <i class="fa-regular fa-id-badge" style="font-size: 1.6rem; color:#253B73;"></i>
           <div>Gestores Imediatos</div>
         </a>
 
-        <span class="linha-disciplina" id="linkcurriculos">
-          <!-- <img src="img/link.png" alt="" /> -->
-           <i class="fa-regular fa-address-card" style="font-size: 1.6rem; color:#253B73;"></i>
-          <input type="text" id="inputcurriculos" value="https://7you.app/auth/sign-in" readonly/>
-          <button id="btcurriculos" onclick="copyContent()">Currículos</button>
+        <span class="linha-disciplina" id="linkcurriculos" onclick="copyContent()" style="cursor: pointer;">
+          <!-- <i class="fa-regular fa-address-card" style="font-size: 1.6rem; color:#253B73;"></i> -->
+          <i class="fa-regular fa-copy" style="font-size: 1.6rem; color:#253B73;"></i>
+          <div>Copiar link para currículos</div>
         </span>
 
         <a href="https://docs.google.com/document/d/1AVgzy9pqHabXMk6qZGK3awhXo3V3Hlei/edit" class="linha-disciplina" target="_blank">
-          <!-- <img src="img/word-logo.png" alt="" /> -->
            <i class="fa-regular fa-file-word" style="font-size: 1.6rem; color:#253B73;"></i>
           <div>Formulário Reingresso</div>
         </a>  
@@ -470,15 +473,16 @@
     
     <script>
       const copyContent = async () => {
-        try {
-          const text = document.getElementById("inputcurriculos").value;
-          await navigator.clipboard.writeText(text);
-          alert("Link Copiado!")
-        } catch (err) {
-          console.error("Failed to copy: ", err);
-          alert("Erro ao copiar!")
-        }
-      };
+  const link = "https://7you.app/auth/sign-in";
+  try {
+    await navigator.clipboard.writeText(link);
+    alert("Link copiado!");
+  } catch (err) {
+    console.error("Erro ao copiar: ", err);
+    alert("Erro ao copiar!");
+  }
+};
+
 
       function copyContentBolsas() {
         const input = document.getElementById("inputbolsas");
