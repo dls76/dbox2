@@ -11,19 +11,14 @@ const reuniaoadm = [
     { data: new Date(2025, 3, 23), link: 'https://docs.google.com/document/d/1lkiE9-5cC2YbA3grxQZyZMoD92UvoBUAiCzNBIIF79Y/edit?tab=t.0', hora: '14h' },
     { data: new Date(2025, 4, 13), link: 'https://docs.google.com/document/d/1E6ZT-yQAxtG2Q0rEVRVSq8DE-to9uQTEs0b02JnuxQk/edit?tab=t.0', hora: '14h' },
     { data: new Date(2025, 4, 27), link: 'https://docs.google.com/document/d/1qPrEhCw5CRi7qg4saeZ-eDgy2pbQjn-KWNx88WaM8f0/edit?tab=t.0', hora: '14h' },
-    // { data: new Date(2025, 5, 3), link: 'https://docs.google.com/document/d/1x2RQCt1kLjl3Iev6hD1PYAXJFOmMddStDVgq7Ag3BFU/edit?usp=sharing', hora: '14h', culto:'' },
-    { data: new Date(2025, 5, 10), link: 'https://docs.google.com/document/d/1oR1GRXL4crTPCun_4S8Bj11u1SuQctKrJ-TB4naNuX4/edit?usp=sharing', hora: '14h', culto:'' },
-    { data: new Date(2025, 5, 17), link: 'https://docs.google.com/document/d/1fSUjy7CQaHr4WpwKCGYR_7Jnq4ppZlN_JLg8EtwD2Gc/edit?usp=sharing', hora: '14h', culto:'' },
-    { data: new Date(2025, 5, 24), link: 'https://docs.google.com/document/d/19e-w59jarLWzrWGhXYgB_HzHR5ncRzbVhXeegXPPK38/edit?usp=sharing', hora: '14h', culto:'' },
-    { data: new Date(2025, 6, 1), link: 'https://docs.google.com/document/d/1dNoBjZFFbgCbulLkcobw5WAvVxdOdVx0ULZVxIyiz2c/edit?tab=t.0', hora: '14h', culto:'' },
-    { data: new Date(2025, 6, 17), link: 'https://docs.google.com/document/d/1jcAADmvUAfJx9t7c2pWalVJDFjmMe4YoUuFxVCtnAFg/edit?tab=t.0', hora: '14h', culto:'' }
-    // { data: new Date(2025, 6, 17), link: '', hora: '14h', culto:'' },
-    // { data: new Date(2025, 6, 17), link: '', hora: '14h', culto:'' },
-    // { data: new Date(2025, 6, 17), link: '', hora: '14h', culto:'' },
-    // { data: new Date(2025, 6, 17), link: '', hora: '14h', culto:'' }
-
-
-
+    { data: new Date(2025, 5, 10), link: 'https://docs.google.com/document/d/1oR1GRXL4crTPCun_4S8Bj11u1SuQctKrJ-TB4naNuX4/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 5, 17), link: 'https://docs.google.com/document/d/1fSUjy7CQaHr4WpwKCGYR_7Jnq4ppZlN_JLg8EtwD2Gc/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 5, 24), link: 'https://docs.google.com/document/d/19e-w59jarLWzrWGhXYgB_HzHR5ncRzbVhXeegXPPK38/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 6, 1), link: 'https://docs.google.com/document/d/1dNoBjZFFbgCbulLkcobw5WAvVxdOdVx0ULZVxIyiz2c/edit?tab=t.0', hora: '14h' },
+    { data: new Date(2025, 6, 17), link: 'https://docs.google.com/document/d/1jcAADmvUAfJx9t7c2pWalVJDFjmMe4YoUuFxVCtnAFg/edit?tab=t.0', hora: '14h' },
+    { data: new Date(2025, 6, 29), link: 'https://docs.google.com/document/d/1zuwhuUYIUx9kgobp8MJ-Yivta-nznnR9UMLdKpeV0aY/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 7, 5), link: 'https://docs.google.com/document/d/1vr3C_4ptWk398jibNmz4M9LedqAzC37gQ0QUv_vZffI/edit?usp=sharing', hora: '14h' }
+    
 ];
 
 const diaDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
