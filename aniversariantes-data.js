@@ -52,11 +52,11 @@ export const pessoas = [
     {nome: "Nailson Veras do Nascimento", data: new Date(2024, 6, 24), dia: 24, mes: 6, ano: 1979, funcao: "Função", foto: 'img/anivImg/julho/nailson.jpg'},
     {nome: "Mônica Cristina Martins de Novais", data: new Date(2024, 6, 31), dia: 31, mes: 6, ano: 1979, funcao: "Função", foto: 'img/anivImg/julho/monica.jpg'},
     
-    {nome: "Vanessa Moura de Freitas", data: new Date(2024, 7, 2), dia: 2, mes: 7, ano: 1985, funcao: "Zeladora", foto: 'img/anivImg/agosto/vanessa.png'},
-    {nome: "Caroline Cristina de Brito", data: new Date(2024, 7, 4), dia: 4, mes: 7, ano: 1988, funcao: "Coordenadora", foto: 'img/anivImg/agosto/carol.png'},
-    {nome: "Leonardo Ormianin Torres", data: new Date(2024, 7, 12), dia: 12, mes: 7, ano: 1999, funcao: "Professor", foto: 'img/anivImg/agosto/leonardo.png'},
-    {nome: "Allan Almeida Lima", data: new Date(2024, 7, 26), dia: 26, mes: 7, ano: 1982, funcao: "Professor", foto: 'img/anivImg/agosto/allan.png'},
-    {nome: "Laís Daniele dos Santos", data: new Date(2024, 7, 28), dia: 28, mes: 7, ano: 2001, funcao: "Auxiliar", foto: 'img/anivImg/agosto/lais.png'},
+    {nome: "Vanessa Moura de Freitas", data: new Date(2024, 7, 2), dia: 2, mes: 7, ano: 1985, funcao: "Zeladora", foto: 'img/anivImg/Agosto/vanessa.png'},
+    {nome: "Caroline Cristina de Brito", data: new Date(2024, 7, 4), dia: 4, mes: 7, ano: 1988, funcao: "Coordenadora", foto: 'img/anivImg/Agosto/carol.png'},
+    {nome: "Leonardo Ormianin Torres", data: new Date(2024, 7, 12), dia: 12, mes: 7, ano: 1999, funcao: "Professor", foto: 'img/anivImg/Agosto/leonardo.png'},
+    {nome: "Allan Almeida Lima", data: new Date(2024, 7, 26), dia: 26, mes: 7, ano: 1982, funcao: "Professor", foto: 'img/anivImg/Agosto/allan.png'},
+    {nome: "Laís Daniele dos Santos", data: new Date(2024, 7, 28), dia: 28, mes: 7, ano: 2001, funcao: "Auxiliar", foto: 'img/anivImg/Agosto/lais.png'},
     
     {nome: "Felipe Guilherme Lima Bueno da Silva", data: new Date(2024, 8, 11), dia: 11, mes: 8, ano: 1988, funcao: "Professor", foto: 'img/anivImg/setembro/felipeguilherme.jpg'},
     {nome: "Margarete do Nascimento Monteiro", data: new Date(2024, 8, 12), dia: 12, mes: 8, ano: 1971, funcao: "SOPI", foto: 'img/anivImg/setembro/marga.png'},
