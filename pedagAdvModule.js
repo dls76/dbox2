@@ -76,9 +76,11 @@ export const pausas = [
   new Date(2025, 4, 27),
   new Date(2025, 5, 3),
   new Date(2025, 5, 17),
+  new Date(2025, 6, 1), 
   new Date(2025, 6, 8), 
   new Date(2025, 6, 15),
-  new Date(2025, 6, 22) 
+  new Date(2025, 6, 22), 
+  new Date(2025, 6, 29), 
 ];
 
 export function gerarEscaladosComData() {
