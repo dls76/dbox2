@@ -1,5 +1,5 @@
 export const nomes = {
-  1: "Drietor",            // Segunda
+  1: "Diretor",            // Segunda
   2: "Vice",         // Terça
   3: "Pr. Vini",    // Quarta
   4: "Escala",          // Quinta (padrão)
