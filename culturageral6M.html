@@ -449,165 +449,188 @@
             ]
         };
 
+        
+
         const currentDate = new Date(new Date().setHours(0, 0, 0, 0));
-        let displayedDate = new Date(currentDate);
+let displayedDate = new Date(currentDate);
 
-        function getNextEvent(events) {
-            return events.find(event => new Date(event.date) > currentDate);
+function getNextEvent(events) {
+    return events.find(event => new Date(event.date) > currentDate);
+}
+
+function getMonthName(date) {
+    const months = [
+        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ];
+    return months[date.getMonth()];
+}
+
+function renderCalendar() {
+    const calendar = document.getElementById("calendar");
+    const monthYear = document.getElementById("month-year");
+    calendar.innerHTML = '';
+
+    const year = displayedDate.getFullYear();
+    const month = displayedDate.getMonth();
+    monthYear.textContent = `${getMonthName(displayedDate)} ${year}`;
+
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    const dayNames = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+    dayNames.forEach(name => {
+        const dayName = document.createElement("div");
+        dayName.classList.add("day-name");
+        dayName.textContent = name;
+        calendar.appendChild(dayName);
+    });
+
+    for (let i = 0; i < firstDay; i++) {
+        const emptyDay = document.createElement("div");
+        emptyDay.classList.add("day", "empty");
+        calendar.appendChild(emptyDay);
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("day");
+        dayElement.textContent = day;
+
+        if (year === currentDate.getFullYear() &&
+            month === currentDate.getMonth() &&
+            day === currentDate.getDate()) {
+            dayElement.classList.add("today");
         }
 
-        function getMonthName(date) {
-            const months = [
-                "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-            ];
-            return months[date.getMonth()];
+        calendar.appendChild(dayElement);
+    }
+}
+
+function renderEvents(section) {
+    const events = eventData[section];
+    const eventList = document.getElementById("event-list");
+    const nextEvent = getNextEvent(events);
+    eventList.innerHTML = ''; // Limpa a lista atual
+    let currentMonth = null;
+
+    events.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    events.forEach(event => {
+        const eventDate = new Date(event.date + "T00:00:00");
+        const monthName = getMonthName(eventDate);
+
+        if (currentMonth !== monthName) {
+            currentMonth = monthName;
+            const monthSection = document.createElement("div");
+            monthSection.classList.add("month-section");
+
+            const monthTitle = document.createElement("div");
+            monthTitle.classList.add("month-title");
+            monthTitle.id = `month-${monthName.toLowerCase()}`; // ID único para o título do mês
+            monthTitle.textContent = monthName;
+            monthSection.appendChild(monthTitle);
+
+            eventList.appendChild(monthSection);
         }
 
-        function renderCalendar() {
-            const calendar = document.getElementById("calendar");
-            const monthYear = document.getElementById("month-year");
-            calendar.innerHTML = '';
+        const card = document.createElement("div");
+        card.classList.add("event-card");
 
-            const year = displayedDate.getFullYear();
-            const month = displayedDate.getMonth();
-            monthYear.textContent = `${getMonthName(displayedDate)} ${year}`;
-
-            const firstDay = new Date(year, month, 1).getDay();
-            const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-            const dayNames = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
-            dayNames.forEach(name => {
-                const dayName = document.createElement("div");
-                dayName.classList.add("day-name");
-                dayName.textContent = name;
-                calendar.appendChild(dayName);
-            });
-
-            for (let i = 0; i < firstDay; i++) {
-                const emptyDay = document.createElement("div");
-                emptyDay.classList.add("day", "empty");
-                calendar.appendChild(emptyDay);
-            }
-
-            for (let day = 1; day <= daysInMonth; day++) {
-                const dayElement = document.createElement("div");
-                dayElement.classList.add("day");
-                dayElement.textContent = day;
-
-                if (year === currentDate.getFullYear() &&
-                    month === currentDate.getMonth() &&
-                    day === currentDate.getDate()) {
-                    dayElement.classList.add("today");
-                }
-
-                calendar.appendChild(dayElement);
-            }
+        if (event === nextEvent) {
+            card.classList.add("next-event");
         }
 
-        function renderEvents(section) {
-            const events = eventData[section];
-            const eventList = document.getElementById("event-list");
-            const nextEvent = getNextEvent(events);
-            eventList.innerHTML = ''; // Limpa a lista atual
-            let currentMonth = null;
+        const responsavelHtml = event.responsavel ? `<div class="responsavel">Responsável: ${event.responsavel}</div>` : '';
 
-            events.sort((a, b) => new Date(a.date) - new Date(b.date));
+        card.innerHTML = `
+            <div class="header">
+                <span class="day">${eventDate.getDate()}</span>
+                <h2>${event.name}</h2>
+            </div>
+            ${responsavelHtml}
+        `;
 
-            events.forEach(event => {
-                const eventDate = new Date(event.date + "T00:00:00");
-                const monthName = getMonthName(eventDate);
+        eventList.appendChild(card);
+    });
 
-                if (currentMonth !== monthName) {
-                    currentMonth = monthName;
-                    const monthSection = document.createElement("div");
-                    monthSection.classList.add("month-section");
+    // Rola para o mês atual ou para o próximo mês com eventos
+    setTimeout(() => {
+        const currentMonthName = getMonthName(currentDate);
+        const monthTitle = document.getElementById(`month-${currentMonthName.toLowerCase()}`);
+        const headerHeight = document.querySelector("header").offsetHeight;
+        const eventListContainer = document.querySelector(".container");
 
-                    const monthTitle = document.createElement("div");
-                    monthTitle.classList.add("month-title");
-                    monthTitle.textContent = monthName;
-                    monthSection.appendChild(monthTitle);
-
-                    eventList.appendChild(monthSection);
-                }
-
-                const card = document.createElement("div");
-                card.classList.add("event-card");
-
-                if (event === nextEvent) {
-                    card.classList.add("next-event");
-                }
-
-                const responsavelHtml = event.responsavel ? `<div class="responsavel">Responsável: ${event.responsavel}</div>` : '';
-
-                card.innerHTML = `
-                    <div class="header">
-                        <span class="day">${eventDate.getDate()}</span>
-                        <h2>${event.name}</h2>
-                    </div>
-                    ${responsavelHtml}
-                `;
-
-                eventList.appendChild(card);
-            });
-
-            const currentMonthName = getMonthName(currentDate);
-            const monthTitles = document.querySelectorAll(".month-title");
-            const headerHeight = document.querySelector("header").offsetHeight;
-            const eventListContainer = document.querySelector(".container");
-            monthTitles.forEach(title => {
-                if (title.textContent === currentMonthName) {
-                    const titleTop = title.offsetTop - headerHeight - 40;
+        if (monthTitle) {
+            // Se o mês atual existe, rola para ele
+            const titleTop = monthTitle.offsetTop - headerHeight - 40;
+            eventListContainer.scrollTo({ top: titleTop, behavior: "smooth" });
+        } else {
+            // Se o mês atual não tem eventos, tenta rolar para o próximo mês com eventos
+            const sortedEvents = events.sort((a, b) => new Date(a.date) - new Date(b.date));
+            const nextEvent = sortedEvents.find(event => new Date(event.date) >= currentDate);
+            if (nextEvent) {
+                const nextEventMonth = getMonthName(new Date(nextEvent.date));
+                const nextMonthTitle = document.getElementById(`month-${nextEventMonth.toLowerCase()}`);
+                if (nextMonthTitle) {
+                    const titleTop = nextMonthTitle.offsetTop - headerHeight - 40;
                     eventListContainer.scrollTo({ top: titleTop, behavior: "smooth" });
+                } else {
+                    eventListContainer.scrollTo({ top: 0, behavior: "smooth" });
                 }
-            });
+            } else {
+                // Se não há eventos futuros, rola para o topo
+                eventListContainer.scrollTo({ top: 0, behavior: "smooth" });
+            }
         }
+    }, 0); // Atraso de 0ms para garantir que o DOM esteja atualizado
+}
 
-        function updateActiveLink(section) {
-            const links = document.querySelectorAll("nav a");
-            links.forEach(link => {
-                link.classList.remove("active");
-                if (link.id === `${section}-link`) {
-                    link.classList.add("active");
-                }
-            });
+function updateActiveLink(section) {
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+        link.classList.remove("active");
+        if (link.id === `${section}-link`) {
+            link.classList.add("active");
         }
+    });
+}
 
-        function handleNavigation() {
-            const params = new URLSearchParams(window.location.search);
-            const section = params.get("section") || "6aoem"; // Default para 6º ao EM
-            updateActiveLink(section);
-            renderEvents(section);
-        }
+function handleNavigation() {
+    const params = new URLSearchParams(window.location.search);
+    const section = params.get("section") || "6aoem"; // Default para 6º ao EM
+    updateActiveLink(section);
+    renderEvents(section);
+}
 
-        document.getElementById("prev-month").addEventListener("click", () => {
-            displayedDate.setMonth(displayedDate.getMonth() - 1);
-            renderCalendar();
-        });
+document.getElementById("prev-month").addEventListener("click", () => {
+    displayedDate.setMonth(displayedDate.getMonth() - 1);
+    renderCalendar();
+});
 
-        document.getElementById("next-month").addEventListener("click", () => {
-            displayedDate.setMonth(displayedDate.getMonth() + 1);
-            renderCalendar();
-        });
+document.getElementById("next-month").addEventListener("click", () => {
+    displayedDate.setMonth(displayedDate.getMonth() + 1);
+    renderCalendar();
+});
 
-        document.getElementById("today-btn").addEventListener("click", () => {
-            displayedDate = new Date(currentDate);
-            renderCalendar();
-        });
+document.getElementById("today-btn").addEventListener("click", () => {
+    displayedDate = new Date(currentDate);
+    renderCalendar();
+});
 
-        document.querySelectorAll("nav a").forEach(link => {
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-                const section = link.id.replace("-link", "");
-                window.history.pushState({}, "", `?section=${section}`);
-                handleNavigation();
-            });
-        });
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const section = link.id.replace("-link", "");
+        window.history.pushState({}, "", `?section=${section}`);
+        handleNavigation();
+    });
+});
 
-        window.addEventListener("popstate", handleNavigation);
+window.addEventListener("popstate", handleNavigation);
 
-        renderCalendar();
-        handleNavigation(); // Carrega a seção inicial
+renderCalendar();
+handleNavigation(); // Carrega a seção inicial
     </script>
 </body>
 </html>
