@@ -75,7 +75,8 @@
             gap: 30px;
             padding: 30px;
             margin-top: 60px;
-            height: calc(100vh - 60px);
+            margin-bottom: 60px; /* Espaço para o footer */
+            height: calc(100vh - 120px); /* Ajustado para considerar header e footer */
         }
 
         .calendar-container {
@@ -180,6 +181,7 @@
             flex: 1;
             overflow-y: auto;
             height: 100%;
+            padding-bottom: 20px; /* Espaço extra para evitar colisão com o footer */
         }
 
         .month-section {
@@ -255,6 +257,31 @@
             color: #777;
             font-size: 0.9em;
         }
+
+        footer {
+            background-color: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 0.9em;
+            font-weight: 400;
+        }
+        .event-list::after {
+            content: '';
+            display: block;
+            height: 60px; /* Ajuste conforme necessário */
+        }
+
     </style>
 </head>
 <body>
@@ -284,6 +311,11 @@
             <div id="event-list" class="event-list"></div>
         </div>
     </div>
+    <footer>
+        <div class="footer-content">
+            Cultura Geral &copy; 2025 - Todos os direitos reservados
+        </div>
+    </footer>
     <script>
         // Dados dos eventos para cada seção (inicialmente iguais, você pode editar depois)
         const eventData = {
@@ -365,21 +397,17 @@
                 { date: "2025-05-16", name: "Dia da Família", responsavel: "" },
                 { date: "2025-05-23", name: "Saúde Física na Infância", responsavel: "" },
                 { date: "2025-05-30", name: "Hábitos de Estudo: a importância da disciplina ", responsavel: "" },
-                
                 { date: "2025-06-06", name: "Projeto Geração Futuro: lixo eletrônico", responsavel: "" },
                 { date: "2025-06-13", name: "Dia Mundial do Meio Ambiente ", responsavel: "" },
                 { date: "2025-06-20", name: "Recesso", responsavel: "" },
                 { date: "2025-06-27", name: "Comemoração Aniversariantes do Bimestre", responsavel: "" },
-
                 { date: "2025-07-04", name: "Chegada da EA ao Brasil 01/07 (128 anos)", responsavel: "" },
                 { date: "2025-07-25", name: "20/07 - Dia do Amigo e Internacional da Amizade (semana de acolhimento)", responsavel: "" },
-                
                 { date: "2025-08-01", name: "Desenvolvimento científico e tecnológico, o que faz um físico?", responsavel: "" },
                 { date: "2025-08-08", name: "05/08 - Dia Nacional da Saúde", responsavel: "" },
                 { date: "2025-08-15", name: "A definir", responsavel: "" },
                 { date: "2025-08-22", name: "Lançamento de Matrículas 2026", responsavel: "" },
                 { date: "2025-08-29", name: "25/08 - Dia Nacional da Educação Infantil", responsavel: "" },
-
                 { date: "2025-09-05", name: "Semana da Pátria ", responsavel: "" },
                 { date: "2025-09-12", name: "08/09 - Dia Mundial da Alfabetização", responsavel: "" },
                 { date: "2025-09-19", name: "Valorização da Vida (setembro amarelo)", responsavel: "" },
@@ -393,7 +421,7 @@
                 { date: "2025-11-14", name: "Dia Nacional da Consciência Negra", responsavel: "" },
                 { date: "2025-11-21", name: "Recesso", responsavel: "" },
                 { date: "2025-11-28", name: "Cultura Geral da Saudade (retrospectiva do ano) | Thanksgiving Day", responsavel: "Camila" },
-                { date: "2025-05-05", name: "Comemoração Aniversariantes do Bimestre | encerramento ano letivo", responsavel: "Valéria" },      
+                { date: "2025-05-05", name: "Comemoração Aniversariantes do Bimestre | encerramento ano letivo", responsavel: "Valéria" },
                 { date: "2025-07-25", name: "20/07 - Dia do Amigo e Internacional da Amizade (semana de acolhimento)", responsavel: "Valéria e Camila" },
                 { date: "2025-08-01", name: "Dia dos Pais", responsavel: "Camila" },
                 { date: "2025-08-08", name: "05/08 - Dia Nacional da Saúde", responsavel: "Pastoral - Yuiane nutricionista" },
@@ -449,188 +477,186 @@
             ]
         };
 
-        
-
         const currentDate = new Date(new Date().setHours(0, 0, 0, 0));
-let displayedDate = new Date(currentDate);
+        let displayedDate = new Date(currentDate);
 
-function getNextEvent(events) {
-    return events.find(event => new Date(event.date) > currentDate);
-}
-
-function getMonthName(date) {
-    const months = [
-        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-    ];
-    return months[date.getMonth()];
-}
-
-function renderCalendar() {
-    const calendar = document.getElementById("calendar");
-    const monthYear = document.getElementById("month-year");
-    calendar.innerHTML = '';
-
-    const year = displayedDate.getFullYear();
-    const month = displayedDate.getMonth();
-    monthYear.textContent = `${getMonthName(displayedDate)} ${year}`;
-
-    const firstDay = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-    const dayNames = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
-    dayNames.forEach(name => {
-        const dayName = document.createElement("div");
-        dayName.classList.add("day-name");
-        dayName.textContent = name;
-        calendar.appendChild(dayName);
-    });
-
-    for (let i = 0; i < firstDay; i++) {
-        const emptyDay = document.createElement("div");
-        emptyDay.classList.add("day", "empty");
-        calendar.appendChild(emptyDay);
-    }
-
-    for (let day = 1; day <= daysInMonth; day++) {
-        const dayElement = document.createElement("div");
-        dayElement.classList.add("day");
-        dayElement.textContent = day;
-
-        if (year === currentDate.getFullYear() &&
-            month === currentDate.getMonth() &&
-            day === currentDate.getDate()) {
-            dayElement.classList.add("today");
+        function getNextEvent(events) {
+            return events.find(event => new Date(event.date) > currentDate);
         }
 
-        calendar.appendChild(dayElement);
-    }
-}
-
-function renderEvents(section) {
-    const events = eventData[section];
-    const eventList = document.getElementById("event-list");
-    const nextEvent = getNextEvent(events);
-    eventList.innerHTML = ''; // Limpa a lista atual
-    let currentMonth = null;
-
-    events.sort((a, b) => new Date(a.date) - new Date(b.date));
-
-    events.forEach(event => {
-        const eventDate = new Date(event.date + "T00:00:00");
-        const monthName = getMonthName(eventDate);
-
-        if (currentMonth !== monthName) {
-            currentMonth = monthName;
-            const monthSection = document.createElement("div");
-            monthSection.classList.add("month-section");
-
-            const monthTitle = document.createElement("div");
-            monthTitle.classList.add("month-title");
-            monthTitle.id = `month-${monthName.toLowerCase()}`; // ID único para o título do mês
-            monthTitle.textContent = monthName;
-            monthSection.appendChild(monthTitle);
-
-            eventList.appendChild(monthSection);
+        function getMonthName(date) {
+            const months = [
+                "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+            ];
+            return months[date.getMonth()];
         }
 
-        const card = document.createElement("div");
-        card.classList.add("event-card");
+        function renderCalendar() {
+            const calendar = document.getElementById("calendar");
+            const monthYear = document.getElementById("month-year");
+            calendar.innerHTML = '';
 
-        if (event === nextEvent) {
-            card.classList.add("next-event");
-        }
+            const year = displayedDate.getFullYear();
+            const month = displayedDate.getMonth();
+            monthYear.textContent = `${getMonthName(displayedDate)} ${year}`;
 
-        const responsavelHtml = event.responsavel ? `<div class="responsavel">Responsável: ${event.responsavel}</div>` : '';
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-        card.innerHTML = `
-            <div class="header">
-                <span class="day">${eventDate.getDate()}</span>
-                <h2>${event.name}</h2>
-            </div>
-            ${responsavelHtml}
-        `;
+            const dayNames = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+            dayNames.forEach(name => {
+                const dayName = document.createElement("div");
+                dayName.classList.add("day-name");
+                dayName.textContent = name;
+                calendar.appendChild(dayName);
+            });
 
-        eventList.appendChild(card);
-    });
+            for (let i = 0; i < firstDay; i++) {
+                const emptyDay = document.createElement("div");
+                emptyDay.classList.add("day", "empty");
+                calendar.appendChild(emptyDay);
+            }
 
-    // Rola para o mês atual ou para o próximo mês com eventos
-    setTimeout(() => {
-        const currentMonthName = getMonthName(currentDate);
-        const monthTitle = document.getElementById(`month-${currentMonthName.toLowerCase()}`);
-        const headerHeight = document.querySelector("header").offsetHeight;
-        const eventListContainer = document.querySelector(".container");
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement("div");
+                dayElement.classList.add("day");
+                dayElement.textContent = day;
 
-        if (monthTitle) {
-            // Se o mês atual existe, rola para ele
-            const titleTop = monthTitle.offsetTop - headerHeight - 40;
-            eventListContainer.scrollTo({ top: titleTop, behavior: "smooth" });
-        } else {
-            // Se o mês atual não tem eventos, tenta rolar para o próximo mês com eventos
-            const sortedEvents = events.sort((a, b) => new Date(a.date) - new Date(b.date));
-            const nextEvent = sortedEvents.find(event => new Date(event.date) >= currentDate);
-            if (nextEvent) {
-                const nextEventMonth = getMonthName(new Date(nextEvent.date));
-                const nextMonthTitle = document.getElementById(`month-${nextEventMonth.toLowerCase()}`);
-                if (nextMonthTitle) {
-                    const titleTop = nextMonthTitle.offsetTop - headerHeight - 40;
-                    eventListContainer.scrollTo({ top: titleTop, behavior: "smooth" });
-                } else {
-                    eventListContainer.scrollTo({ top: 0, behavior: "smooth" });
+                if (year === currentDate.getFullYear() &&
+                    month === currentDate.getMonth() &&
+                    day === currentDate.getDate()) {
+                    dayElement.classList.add("today");
                 }
-            } else {
-                // Se não há eventos futuros, rola para o topo
-                eventListContainer.scrollTo({ top: 0, behavior: "smooth" });
+
+                calendar.appendChild(dayElement);
             }
         }
-    }, 0); // Atraso de 0ms para garantir que o DOM esteja atualizado
-}
 
-function updateActiveLink(section) {
-    const links = document.querySelectorAll("nav a");
-    links.forEach(link => {
-        link.classList.remove("active");
-        if (link.id === `${section}-link`) {
-            link.classList.add("active");
+        function renderEvents(section) {
+            const events = eventData[section];
+            const eventList = document.getElementById("event-list");
+            const nextEvent = getNextEvent(events);
+            eventList.innerHTML = ''; // Limpa a lista atual
+            let currentMonth = null;
+
+            events.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+            events.forEach(event => {
+                const eventDate = new Date(event.date + "T00:00:00");
+                const monthName = getMonthName(eventDate);
+
+                if (currentMonth !== monthName) {
+                    currentMonth = monthName;
+                    const monthSection = document.createElement("div");
+                    monthSection.classList.add("month-section");
+
+                    const monthTitle = document.createElement("div");
+                    monthTitle.classList.add("month-title");
+                    monthTitle.id = `month-${monthName.toLowerCase()}`; // ID único para o título do mês
+                    monthTitle.textContent = monthName;
+                    monthSection.appendChild(monthTitle);
+
+                    eventList.appendChild(monthSection);
+                }
+
+                const card = document.createElement("div");
+                card.classList.add("event-card");
+
+                if (event === nextEvent) {
+                    card.classList.add("next-event");
+                }
+
+                const responsavelHtml = event.responsavel ? `<div class="responsavel">Responsável: ${event.responsavel}</div>` : '';
+
+                card.innerHTML = `
+                    <div class="header">
+                        <span class="day">${eventDate.getDate()}</span>
+                        <h2>${event.name}</h2>
+                    </div>
+                    ${responsavelHtml}
+                `;
+
+                eventList.appendChild(card);
+            });
+
+            // Rola para o mês atual ou para o próximo mês com eventos
+            setTimeout(() => {
+                const currentMonthName = getMonthName(currentDate);
+                const monthTitle = document.getElementById(`month-${currentMonthName.toLowerCase()}`);
+                const headerHeight = document.querySelector("header").offsetHeight;
+                const eventListContainer = document.querySelector(".container");
+
+                if (monthTitle) {
+                    // Se o mês atual existe, rola para ele
+                    const titleTop = monthTitle.offsetTop - headerHeight - 40;
+                    eventListContainer.scrollTo({ top: titleTop, behavior: "smooth" });
+                } else {
+                    // Se o mês atual não tem eventos, tenta rolar para o próximo mês com eventos
+                    const sortedEvents = events.sort((a, b) => new Date(a.date) - new Date(b.date));
+                    const nextEvent = sortedEvents.find(event => new Date(event.date) >= currentDate);
+                    if (nextEvent) {
+                        const nextEventMonth = getMonthName(new Date(nextEvent.date));
+                        const nextMonthTitle = document.getElementById(`month-${nextEventMonth.toLowerCase()}`);
+                        if (nextMonthTitle) {
+                            const titleTop = nextMonthTitle.offsetTop - headerHeight - 40;
+                            eventListContainer.scrollTo({ top: titleTop, behavior: "smooth" });
+                        } else {
+                            eventListContainer.scrollTo({ top: 0, behavior: "smooth" });
+                        }
+                    } else {
+                        // Se não há eventos futuros, rola para o topo
+                        eventListContainer.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                }
+            }, 0); // Atraso de 0ms para garantir que o DOM esteja atualizado
         }
-    });
-}
 
-function handleNavigation() {
-    const params = new URLSearchParams(window.location.search);
-    const section = params.get("section") || "6aoem"; // Default para 6º ao EM
-    updateActiveLink(section);
-    renderEvents(section);
-}
+        function updateActiveLink(section) {
+            const links = document.querySelectorAll("nav a");
+            links.forEach(link => {
+                link.classList.remove("active");
+                if (link.id === `${section}-link`) {
+                    link.classList.add("active");
+                }
+            });
+        }
 
-document.getElementById("prev-month").addEventListener("click", () => {
-    displayedDate.setMonth(displayedDate.getMonth() - 1);
-    renderCalendar();
-});
+        function handleNavigation() {
+            const params = new URLSearchParams(window.location.search);
+            const section = params.get("section") || "6aoem"; // Default para 6º ao EM
+            updateActiveLink(section);
+            renderEvents(section);
+        }
 
-document.getElementById("next-month").addEventListener("click", () => {
-    displayedDate.setMonth(displayedDate.getMonth() + 1);
-    renderCalendar();
-});
+        document.getElementById("prev-month").addEventListener("click", () => {
+            displayedDate.setMonth(displayedDate.getMonth() - 1);
+            renderCalendar();
+        });
 
-document.getElementById("today-btn").addEventListener("click", () => {
-    displayedDate = new Date(currentDate);
-    renderCalendar();
-});
+        document.getElementById("next-month").addEventListener("click", () => {
+            displayedDate.setMonth(displayedDate.getMonth() + 1);
+            renderCalendar();
+        });
 
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const section = link.id.replace("-link", "");
-        window.history.pushState({}, "", `?section=${section}`);
-        handleNavigation();
-    });
-});
+        document.getElementById("today-btn").addEventListener("click", () => {
+            displayedDate = new Date(currentDate);
+            renderCalendar();
+        });
 
-window.addEventListener("popstate", handleNavigation);
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const section = link.id.replace("-link", "");
+                window.history.pushState({}, "", `?section=${section}`);
+                handleNavigation();
+            });
+        });
 
-renderCalendar();
-handleNavigation(); // Carrega a seção inicial
+        window.addEventListener("popstate", handleNavigation);
+
+        renderCalendar();
+        handleNavigation(); // Carrega a seção inicial
     </script>
 </body>
 </html>
