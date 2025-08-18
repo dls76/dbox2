@@ -17,7 +17,16 @@ const reuniaoadm = [
     { data: new Date(2025, 6, 1), link: 'https://docs.google.com/document/d/1dNoBjZFFbgCbulLkcobw5WAvVxdOdVx0ULZVxIyiz2c/edit?tab=t.0', hora: '14h' },
     { data: new Date(2025, 6, 17), link: 'https://docs.google.com/document/d/1jcAADmvUAfJx9t7c2pWalVJDFjmMe4YoUuFxVCtnAFg/edit?tab=t.0', hora: '14h' },
     { data: new Date(2025, 6, 29), link: 'https://docs.google.com/document/d/1zuwhuUYIUx9kgobp8MJ-Yivta-nznnR9UMLdKpeV0aY/edit?usp=sharing', hora: '14h' },
-    { data: new Date(2025, 7, 5), link: 'https://docs.google.com/document/d/1vr3C_4ptWk398jibNmz4M9LedqAzC37gQ0QUv_vZffI/edit?usp=sharing', hora: '14h' }
+    { data: new Date(2025, 7, 5), link: 'https://docs.google.com/document/d/1vr3C_4ptWk398jibNmz4M9LedqAzC37gQ0QUv_vZffI/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 7, 18), link: 'https://docs.google.com/document/d/1iTs47KmO27mXWd0oPldx-0EXXaywiY9dtqz1Vawf5BM/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 7, 26), link: '', hora: '14h' },
+    { data: new Date(2025, 8, 16), link: '', hora: '14h' },
+    { data: new Date(2025, 8, 23), link: '', hora: '14h' },
+    { data: new Date(2025, 8, 30), link: '', hora: '14h' },
+    { data: new Date(2025, 9, 7), link: '', hora: '14h' },
+    { data: new Date(2025, 9, 14), link: '', hora: '14h' },
+    { data: new Date(2025, 9, 21), link: '', hora: '14h' },
+    { data: new Date(2025, 9, 28), link: '', hora: '14h' },
     
 ];
 
