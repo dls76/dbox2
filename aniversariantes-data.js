@@ -58,6 +58,7 @@ export const pessoas = [
     {nome: "Allan Almeida Lima", data: new Date(2024, 7, 26), dia: 26, mes: 7, ano: 1982, funcao: "Professor", foto: 'img/anivImg/Agosto/allan.png'},
     {nome: "Laís Daniele dos Santos", data: new Date(2024, 7, 28), dia: 28, mes: 7, ano: 2001, funcao: "Auxiliar", foto: 'img/anivImg/Agosto/lais.png'},
     
+    {nome: "Renata Brasil", data: new Date(2024, 8, 1), dia: 1, mes: 8, ano: 1993, funcao: "Orientadora", foto: 'img/anivImg/setembro/renata_brasil.jpg'},
     {nome: "Felipe Guilherme Lima Bueno da Silva", data: new Date(2024, 8, 11), dia: 11, mes: 8, ano: 1988, funcao: "Professor", foto: 'img/anivImg/setembro/felipeguilherme.jpg'},
     {nome: "Margarete do Nascimento Monteiro", data: new Date(2024, 8, 12), dia: 12, mes: 8, ano: 1971, funcao: "SOPI", foto: 'img/anivImg/setembro/marga.png'},
     {nome: "Daniel Faria Filho", data: new Date(2024, 8, 26), dia: 26, mes: 8, ano: 1963, funcao: "Função", foto: 'img/anivImg/setembro/dani.png'},
