@@ -114,3 +114,24 @@ export let plantaosexta = [
     { data: new Date(2025, 11, 5), person: "Leonardo", monitoria: "" },
     { data: new Date(2025, 12, 12), person: "Murilo", monitoria: "" }
 ];
+
+const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Camila", "Renata e Andressa"]
+
+
+const entrevistacontent = document.getElementById("entrevistascontent");
+
+  const dataDeHoje = new Date().getDay(); 
+  // 0 = domingo, 1 = segunda, ..., 6 = sábado
+
+  let mensagem = "";
+
+  if (dataDeHoje >= 1 && dataDeHoje <= 5) {
+    // segunda a sexta -> pega o índice do array (segunda=0,... sexta=4)
+    mensagem = entrevistas[dataDeHoje - 1];
+  } else if (dataDeHoje === 6) {
+    mensagem = "Feliz Sábado!";
+  } else {
+    mensagem = "Hoje é domingo";
+  }
+
+  entrevistacontent.textContent = mensagem;
