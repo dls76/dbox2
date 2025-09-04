@@ -947,6 +947,7 @@ function mostrarCompensacao() {
   const isFeriado = false;
   const isFirstOrLast = false;
   const isVacation = false;
+  const isSemanaOracao = true;
 
   const nomesPorDia = [
     "Hoje é domingo!",
@@ -966,6 +967,8 @@ function mostrarCompensacao() {
     elementoNome.innerHTML = "Primeira/última semana";
   } else if (isVacation) {
     elementoNome.innerHTML = "Férias";
+  } else if (isSemanaOracao) { 
+    elementoNome.innerHTML = "Semana de Oração";
   } else {
     elementoNome.innerHTML = nomesPorDia[diaSemana];
   }
