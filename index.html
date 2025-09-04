@@ -107,7 +107,7 @@
             </div>
           </a>
 
-          <a href="" target="_blank">
+          <a href="https://docs.google.com/spreadsheets/d/1vx3xDL8eCV6JxFRVP-H-QqXyV5Cz9LecjWazK9aYmTY/edit?usp=sharing" target="_blank">
             <div class="escala" id="entrevistas"><div class="icon"><img src="img/yes.png" alt=""/></div>
               <div>
                 <div class="tituloescala">Entrevistas</div>
@@ -134,6 +134,16 @@
               <div>
                 <div class="tituloescala">Plantão de sexta</div>
                 <div class="contentescala" id="plantaosexta"></div>
+                <i class="fa-solid fa-angle-right seta"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="escala" id="escala19h"><div class="icon"><img src="img/yes.png" alt=""/></div>
+              <div>
+                <div class="tituloescala">Plantão Quinta 19h</div>
+                <div class="contentescala" id="plantao19h"></div>
                 <i class="fa-solid fa-angle-right seta"></i>
               </div>
             </div>
@@ -916,6 +926,30 @@ proximaEscalaCultoRa(gerarEscaladosComData());
   }
   
   proximoPlantaoDeSexta(plantaosexta)
+
+
+
+  import { plantao19h } from './escalas.js'
+  
+  function proximoPlantao19(array) {
+    const dataAtualizada = new Date();
+    const todayAtMidnight = new Date(dataAtualizada.getFullYear(), dataAtualizada.getMonth(), dataAtualizada.getDate(), 0, 0, 0, 0);
+    const futureDates = array.filter(item => item.data >= todayAtMidnight);
+    futureDates.sort((a, b) => a.data - b.data);
+    if (futureDates.length > 0) {
+        let dia = futureDates[0].data.getDate();
+        let mes = futureDates[0].data.getMonth() + 1;
+        dia = dia < 10 ? '0' + dia : dia;
+        mes = mes < 10 ? '0' + mes : mes;
+        let tour = futureDates[0].tour;
+        let financeiro = futureDates[0].financeiro;
+        let entrevista = futureDates[0].entrevista;
+        let secretaria = futureDates[0].secretaria;
+        document.querySelector('#plantao19h').innerHTML = `${dia}/${mes} - ${tour}, ${entrevista}, ${financeiro} e ${secretaria}`;
+    }
+  }
+  
+  proximoPlantao19(plantao19h)
 
 </script>
 

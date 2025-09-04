@@ -115,10 +115,43 @@ export let plantaosexta = [
     { data: new Date(2025, 12, 12), person: "Murilo", monitoria: "" }
 ];
 
+
+
+export let plantao19h = [
+    // { data: new Date(2025, 7, 2), tour: "Priscila", financeiro: "Josi", entrevista: "Andressa", secretaria: "Carin"},
+    { data: new Date(2025, 8, 4), tour: "Priscila", financeiro: "Alícia", entrevista: "Murilo", secretaria: "Isa"},
+    { data: new Date(2025, 8, 11), tour: "Priscila", financeiro: "Josi", entrevista: "Renata", secretaria: "Gabriel"},
+    { data: new Date(2025, 8, 18), tour: "Priscila", financeiro: "Alícia", entrevista: "Jaque", secretaria: "Carin"},
+    { data: new Date(2025, 8, 25), tour: "Priscila", financeiro: "Josi", entrevista: "Valéria", secretaria: "Isa"},
+    { data: new Date(2025, 9, 2), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Gabriel"},
+    { data: new Date(2025, 9, 9), tour: "Priscila", financeiro: "Josi", entrevista: "Camila", secretaria: "Carin"},
+    { data: new Date(2025, 9, 16), tour: "Priscila", financeiro: "Alícia", entrevista: "Diretor", secretaria: "Isa"},
+    { data: new Date(2025, 9, 23), tour: "Priscila", financeiro: "Josi", entrevista: "Carol", secretaria: "Gabriel"},
+    { data: new Date(2025, 9, 30), tour: "Priscila", financeiro: "Alícia", entrevista: "Andressa", secretaria: "Carin"},
+    { data: new Date(2025, 10, 6), tour: "Priscila", financeiro: "Josi", entrevista: "Murilo", secretaria: "Isa"},
+    { data: new Date(2025, 10, 13), tour: "Priscila", financeiro: "Alícia", entrevista: "Renata", secretaria: "Gabriel"},
+    { data: new Date(2025, 10, 20), tour: "Priscila", financeiro: "Josi", entrevista: "Jaque", secretaria: "Carin"},
+    { data: new Date(2025, 10, 27), tour: "Priscila", financeiro: "Alícia", entrevista: "Valéria", secretaria: "Isa"},
+    { data: new Date(2025, 11, 4), tour: "Priscila", financeiro: "Josi", entrevista: "Joyce", secretaria: "Gabriel"},
+    { data: new Date(2025, 12, 11), tour: "Priscila", financeiro: "Alícia", entrevista: "Camila", secretaria: "Carin"}
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
 const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Camila", "Renata e Andressa"]
 
 
-const entrevistacontent = document.getElementById("entrevistascontent");
+export const entrevistacontent = document.getElementById("entrevistascontent");
 
   const dataDeHoje = new Date().getDay(); 
   // 0 = domingo, 1 = segunda, ..., 6 = sábado
