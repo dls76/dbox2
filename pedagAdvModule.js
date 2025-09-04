@@ -61,7 +61,7 @@ export const escalados = [
   { nome: "Jaque", cap: "2/3-4" },
   { nome: "Camila", cap: "3/1-2" },
   { nome: "Valéria", cap: "3/3-5" },
-  { nome: "Malu", cap: "4/1-2.5" },
+  { nome: "Joyce", cap: "4/1-2.5" },
   { nome: "Andressa", cap: "4/3-4.5" },
   { nome: "Renata", cap: "5/1-2" },
   { nome: "Vinícius", cap: "5/3-5" }
@@ -81,6 +81,13 @@ export const pausas = [
   new Date(2025, 6, 15),
   new Date(2025, 6, 22), 
   new Date(2025, 6, 29), 
+  // new Date(2025, 7, 5),
+  new Date(2025, 7, 12), 
+  new Date(2025, 7, 19), 
+  new Date(2025, 7, 26), 
+  new Date(2025, 8, 2), 
+  new Date(2025, 8, 9), 
+  
 ];
 
 export function gerarEscaladosComData() {
