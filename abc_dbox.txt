@@ -11,4 +11,3 @@ keyboard shortcuts to CSS:
 Rodar localmente:
   - npm i
   - npm start
-
