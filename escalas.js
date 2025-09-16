@@ -136,18 +136,6 @@ export let plantao19h = [
     { data: new Date(2025, 12, 11), tour: "Priscila", financeiro: "Alícia", entrevista: "Camila", secretaria: "Carin"}
 ];
 
-
-
-
-
-
-
-
-
-
-
-
-
 const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Camila", "Renata e Andressa"]
 
 
