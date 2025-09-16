@@ -62,8 +62,8 @@ export const escalados = [
   { nome: "Camila", cap: "3/1-2" },
   { nome: "Valéria", cap: "3/3-5" },
   { nome: "Andressa", cap: "4/1-2.5" },
-  { nome: "Joyce", cap: "4/3-4.5" },
-  { nome: "Renata", cap: "5/1-2" },
+  { nome: "Renata", cap: "4/3-4.5" },
+  { nome: "Joyce", cap: "5/1-2" },
   { nome: "Vinícius", cap: "5/3-5" }
 ];
 
