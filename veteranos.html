@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>DBOX - Atendimento Veteranos</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+        }
+        input, textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+        th {
+            background: lightblue;
+        }
+        .summary {
+            border: 1px solid blue;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            width: 200px;
+            float: right;
+        }
+        .summary div {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons {
+            clear: both;
+        }
+        button {
+            background: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        tr.new-row {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .clear {
+            clear: both;
+        }
+        textarea {
+            height: 100px;
+            border: 1px solid blue;
+            border-radius: 5px;
+        }
+        .remove-btn {
+            background: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DBOX - Atendimento Veteranos</h1>
+    <div class="form-group">
+        <label>Responsável: <input type="text" id="responsavel"></label>
+    </div>
+    <div class="form-group">
+        <label>Contato: <input type="text" id="contato"></label>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">RC</th>
+                <th rowspan="2">Aluno</th>
+                <th colspan="3">2025</th>
+                <th colspan="3">2026</th>
+                <th rowspan="2"></th>
+            </tr>
+            <tr>
+                <th>Turma</th>
+                <th>Desconto</th>
+                <th>Valor</th>
+                <th>Turma</th>
+                <th>Desconto</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody id="students">
+            <tr>
+                <td><input type="text" class="rc"></td>
+                <td><input type="text" class="aluno"></td>
+                <td><input type="text" class="turma2025"></td>
+                <td><input type="text" class="desconto2025"></td>
+                <td><input type="text" class="valor2025"></td>
+                <td><input type="text" class="turma2026"></td>
+                <td><input type="text" class="desconto2026"></td>
+                <td><input type="text" class="valor2026" readonly></td>
+                <td><button class="remove-btn">X</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="add-aluno">+</button>
+    <div class="form-group">
+        <label>Observações: <textarea id="observacoes"></textarea></label>
+    </div>
+    <div class="summary">
+        <div>Total 2025: <span id="total2025">R$ 0,00</span></div>
+        <div>Total 2026: <span id="total2026">R$ 0,00</span></div>
+        <div>Reajuste R$: <span id="reajuste-rs">R$ 0,00</span></div>
+        <div>Reajuste %: <span id="reajuste-pct">0%</span></div>
+    </div>
+    <div class="clear"></div>
+    <div class="form-group">
+        <label>Atendente: <input type="text" id="atendente"></label>
+    </div>
+    <div class="buttons">
+        <button>PDF</button>
+        <button onclick="window.print()">Imprimir</button>
+    </div>
+    <script>
+        const turmaValor = {
+            '3B': 1292.00,
+            '4A': 1292.00,
+            '4B': 1292.00,
+            '4C': 1292.00,
+            '5A': 1133.00,
+            '5B': 1133.00,
+            '5C': 1133.00,
+            '11': 1350.00,
+            '12': 1350.00,
+            '13': 1350.00,
+            '14': 1350.00,
+            '21': 1350.00,
+            '22': 1350.00,
+            '23': 1350.00,
+            '31': 1350.00,
+            '32': 1350.00,
+            '33': 1350.00,
+            '41': 1350.00,
+            '42': 1350.00,
+            '43': 1350.00,
+            '51': 1350.00,
+            '52': 1350.00,
+            '53': 1350.00,
+            '61': 1517.00,
+            '62': 1517.00,
+            '63': 1517.00,
+            '71': 1517.00,
+            '72': 1517.00,
+            '73': 1517.00,
+            '81': 1517.00,
+            '82': 1517.00,
+            '83': 1517.00,
+            '91': 1517.00,
+            '92': 1517.00,
+            '93': 1517.00,
+            '111': 1770.00,
+            '112': 1770.00,
+            '113': 1770.00,
+            '121': 1770.00,
+            '122': 1770.00,
+            '131': 1770.00
+        };
+
+        function formatMoney(value) {
+            let str = value.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+            return 'R$ ' + str;
+        }
+
+        function parseMoney(str) {
+            if (!str) return 0;
+            str = str.replace(/\./g, '').replace(',', '.').replace('R$ ', '');
+            return parseFloat(str) || 0;
+        }
+
+        const studentsBody = document.getElementById('students');
+        studentsBody.addEventListener('input', (e) => {
+            const target = e.target;
+            const row = target.closest('tr');
+            if (target.classList.contains('turma2026')) {
+                const turma = target.value.toUpperCase();
+                let baseValue = turmaValor[turma] || 0;
+                const desconto = parseFloat(row.querySelector('.desconto2026').value) || 0;
+                const valorComDesconto = baseValue - (baseValue * (desconto / 100));
+                row.querySelector('.valor2026').value = formatMoney(valorComDesconto).replace('R$ ', '');
+            } else if (target.classList.contains('desconto2026')) {
+                const desconto = parseFloat(target.value) || 0;
+                const turma = row.querySelector('.turma2026').value.toUpperCase();
+                let baseValue = turmaValor[turma] || 0;
+                const valorComDesconto = baseValue - (baseValue * (desconto / 100));
+                row.querySelector('.valor2026').value = formatMoney(valorComDesconto).replace('R$ ', '');
+            }
+            updateSummary();
+        });
+
+        function updateSummary() {
+            let total2025 = 0;
+            let total2026 = 0;
+            const valor2025Inputs = studentsBody.querySelectorAll('.valor2025');
+            const valor2026Inputs = studentsBody.querySelectorAll('.valor2026');
+            valor2025Inputs.forEach(input => {
+                total2025 += parseMoney(input.value);
+            });
+            valor2026Inputs.forEach(input => {
+                total2026 += parseMoney(input.value);
+            });
+            const reajusteRs = total2026 - total2025;
+            const reajustePct = total2025 > 0 ? (reajusteRs / total2025) * 100 : 0;
+            document.getElementById('total2025').innerText = formatMoney(total2025);
+            document.getElementById('total2026').innerText = formatMoney(total2026);
+            document.getElementById('reajuste-rs').innerText = formatMoney(reajusteRs);
+            document.getElementById('reajuste-pct').innerText = Math.round(reajustePct) + '%';
+        }
+
+        const addAluno = document.getElementById('add-aluno');
+        addAluno.addEventListener('click', () => {
+            const newRow = document.createElement('tr');
+            newRow.classList.add('new-row');
+            newRow.innerHTML = `
+                <td><input type="text" class="rc"></td>
+                <td><input type="text" class="aluno"></td>
+                <td><input type="text" class="turma2025"></td>
+                <td><input type="text" class="desconto2025"></td>
+                <td><input type="text" class="valor2025"></td>
+                <td><input type="text" class="turma2026"></td>
+                <td><input type="text" class="desconto2026"></td>
+                <td><input type="text" class="valor2026" readonly></td>
+                <td><button class="remove-btn">X</button></td>
+            `;
+            studentsBody.appendChild(newRow);
+        });
+
+        studentsBody.addEventListener('click', (e) => {
+            if (e.target.classList.contains('remove-btn')) {
+                e.target.closest('tr').remove();
+                updateSummary();
+            }
+        });
+    </script>
+</body>
+</html>
