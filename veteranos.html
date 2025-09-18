@@ -34,7 +34,7 @@
             background: lightblue;
         }
         .summary {
-            border: 1px solid blue;
+            border: 1px solid gray;
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
@@ -68,12 +68,16 @@
         }
         textarea {
             height: 100px;
-            border: 1px solid blue;
+            border: 1px solid gray;
             border-radius: 5px;
         }
         .remove-btn {
             background: red;
-            margin-top: 5px;
+            margin-top: 4px;
+            width: 26px;
+            height: 22px;
+            padding: 0;
+            
         }
     </style>
 </head>
@@ -118,9 +122,7 @@
         </tbody>
     </table>
     <button id="add-aluno">+</button>
-    <div class="form-group">
-        <label>Observações: <textarea id="observacoes"></textarea></label>
-    </div>
+    
     <div class="summary">
         <div>Total 2025: <span id="total2025">R$ 0,00</span></div>
         <div>Total 2026: <span id="total2026">R$ 0,00</span></div>
@@ -128,6 +130,9 @@
         <div>Reajuste %: <span id="reajuste-pct">0%</span></div>
     </div>
     <div class="clear"></div>
+    <div class="form-group">
+        <label>Observações: <textarea id="observacoes"></textarea></label>
+    </div>
     <div class="form-group">
         <label>Atendente: <input type="text" id="atendente"></label>
     </div>
