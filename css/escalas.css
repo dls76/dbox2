@@ -2,8 +2,11 @@
     display: flex;
     flex-direction: column;
     border-radius: 0 0 12px 12px;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
     background-color: #fff;
+}
+
+.primeiraescala {
+    border-top: .5px solid #e2e2e2;
 }
 
 .escala {
@@ -26,14 +29,14 @@
     width: 1rem;
 }
 .tituloescala {
-    font-size: .8rem;
+    font-size: .9rem;
     color: #B52532;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
 }
 .contentescala {
     color: #575757;
-    font-weight: 600;
+    font-weight: 500;
     font-size: .8rem;
     font-family: 'Roboto', sans-serif;
     padding: 5px 40px 0 0;
@@ -47,9 +50,7 @@
     background-color: #ededed;
     cursor: pointer;
 }
-/* #escalacultos { */
-    /* border-radius: 12px 12px 0 0; */
-/* } */
+
 .horarioculto {
     color: #000;
     font-weight: 700;
@@ -63,6 +64,8 @@
 }
 i.seta {
     color: #B52532;
+    color: #a3a3a3;
+    font-size: 14px;
     position: absolute;
     right: 1.5rem;
     top: 50%;

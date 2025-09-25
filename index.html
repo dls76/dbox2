@@ -98,7 +98,7 @@
         <div class="conteinerescalas" id="conteinerescalas">
 
           <a href="docs/cultos_setembro.pdf" target="_blank">
-            <div class="escala" id="escalacultos"><div class="icon"><img src="img/yes.png" alt=""/></div>
+            <div class="escala primeiraescala" id="escalacultos"><div class="icon"><img src="img/yes.png" alt=""/></div>
               <div>
                 <div class="tituloescala">Cultos do dia</div>
                 <div class="contentescala" id="cultos"></div>
@@ -1047,8 +1047,10 @@ function mostrarCompensacao() {
   const escalas = Array.from(divescalas);
   const ultimaescala = escalas.length - 1;
   const uesc = escalas[ultimaescala];
-  uesc.style.borderBottom = "none";
+  // uesc.style.borderBottom = "1px solid red";
   uesc.style.boxShadow = "none";
+  uesc.style.borderBottomLeftRadius = "12px";
+  uesc.style.borderBottomRightRadius = "12px";
 }
 
 </script>
