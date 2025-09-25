@@ -69,7 +69,7 @@ export const escalados = [
 
 export const dataInicial = new Date(2025, 4, 6); // 25/02/2025
 
-// Descomentar as datas em que será feriado, recesso ou não teremos RA
+// Inserir as datas em que não teremos RA
 export const pausas = [
   new Date(2025, 4, 6),
   new Date(2025, 4, 20),
@@ -81,13 +81,12 @@ export const pausas = [
   new Date(2025, 6, 15),
   new Date(2025, 6, 22), 
   new Date(2025, 6, 29), 
-  // new Date(2025, 7, 5),
   new Date(2025, 7, 12), 
   new Date(2025, 7, 19), 
   new Date(2025, 7, 26), 
   new Date(2025, 8, 2), 
   new Date(2025, 8, 9), 
-  
+  new Date(2025, 8, 23), 
 ];
 
 export function gerarEscaladosComData() {
