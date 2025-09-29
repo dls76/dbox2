@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Plantão Sexta</title>
+    <style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+    .plantao-item {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    .plantao-hoje {
+        border: 3px solid #27ae60;
+        background-color: #e8f5e9;
+        box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+    }
+    .plantao-proximo {
+        border: 2px solid #3498db;
+        background-color: #e3f2fd;
+    }
+    .data {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    .person {
+        color: #253B73;
+        font-size: 1.1em;
+    }
+    .monitoria {
+        color: #666;
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+    <h1>Plantão Sexta</h1>
+    <div id="plantaoContent" class="plantaoContent"></div>
+    <script type="module" src="plantaoSexta.js"></script>
+</body>
+</html>

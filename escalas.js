@@ -102,13 +102,13 @@ export let plantaosexta = [
     { data: new Date(2025, 8, 12), person: "Valéria", monitoria: "" },
     { data: new Date(2025, 8, 19), person: "Carin", monitoria: "" },
     { data: new Date(2025, 8, 26), person: "Josi", monitoria: "" },
-    { data: new Date(2025, 9, 3), person: "Alícia", monitoria: "" },
-    { data: new Date(2025, 9, 10), person: "Nailson", monitoria: "" },
-    { data: new Date(2025, 9, 17), person: "Douglas", monitoria: "" },
+    { data: new Date(2025, 9, 3), person: "Rocha", monitoria: "" },
+    { data: new Date(2025, 9, 10), person: "Douglas", monitoria: "" },
+    { data: new Date(2025, 9, 17), person: "Alícia", monitoria: "" },
     { data: new Date(2025, 9, 24), person: "Vinícius", monitoria: "" },
     { data: new Date(2025, 9, 31), person: "Leonardo", monitoria: "" },
     { data: new Date(2025, 10, 7), person: "Murilo", monitoria: "" },
-    { data: new Date(2025, 10, 14), person: "Nailson", monitoria: "" },
+    { data: new Date(2025, 10, 14), person: "Rocha", monitoria: "" },
     { data: new Date(2025, 10, 21), person: "Douglas", monitoria: "" },
     { data: new Date(2025, 10, 28), person: "Vinícius", monitoria: "" },
     { data: new Date(2025, 11, 5), person: "Leonardo", monitoria: "" },
@@ -141,6 +141,7 @@ const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "
 
 export const entrevistacontent = document.getElementById("entrevistascontent");
 
+if (entrevistacontent) { 
   const dataDeHoje = new Date().getDay(); 
   // 0 = domingo, 1 = segunda, ..., 6 = sábado
 
@@ -156,10 +157,12 @@ export const entrevistacontent = document.getElementById("entrevistascontent");
   }
 
   entrevistacontent.textContent = mensagem;
-
+}
 
 // Motivos de Oração
 const motivoOracao = document.querySelector('#motivoOracao')
+
+if (motivoOracao) {
 
 const diaAtual = new Date().getDay()
 
@@ -178,7 +181,7 @@ motivoOracao.innerHTML = 'Matrículas'
 } else if (diaAtual == 6) {
 motivoOracao.innerHTML = 'Feliz Sábado'
 }
-
+}
 function motivoDeOracao() {
     
     document.getElementById("motivoDeOracao").addEventListener("click", function(event) {
