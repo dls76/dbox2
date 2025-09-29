@@ -123,7 +123,7 @@
             </div>
           </a>
 
-            <a href="https://docs.google.com/spreadsheets/d/1vx3xDL8eCV6JxFRVP-H-QqXyV5Cz9LecjWazK9aYmTY/edit?usp=sharing" target="_blank">
+            <a href="entrevistas.html" target="_blank">
               <div class="escala" id="entrevistas"><div class="icon"><img src="img/yes.png" alt=""/></div>
                 <div>
                   <div class="tituloescala">Entrevistas</div>
@@ -133,6 +133,7 @@
               </div>
             </a>
 
+            
             <a href="https://docs.google.com/spreadsheets/d/1XgJ3i5FjlNIdp7oUJUFRQGwDOmcO_uwonZvhxzoY-lk/edit?gid=0#gid=0" target="_blank">
               <div class="escala"><div class="icon"><img src="img/yes.png" id="icon-compensacao"/></div>
                 <div>
@@ -1438,5 +1439,28 @@ function mostrarCompensacao() {
 
 </script>
 
+<script type="module">
+      import { entrevistasPadrao, alteracoes } from './entrevistas-data.js';
+
+      const DiaDehoje = new Date();
+      const dataDeHoje = DiaDehoje.getDay();
+      const content = document.getElementById("entrevistascontent");
+
+      if (dataDeHoje >= 1 && dataDeHoje <= 5) {
+          let escala = entrevistasPadrao[dataDeHoje - 1];
+          const dataISO = hoje.toISOString().split("T")[0];
+          const alteracao = alteracoes.find(a => a.data === dataISO);
+
+          if (alteracao) {
+          escala = alteracao.substituto;
+          }
+
+          const [manha, tarde] = escala.split(" e ");
+          content.textContent = `${manha} / ${tarde}`;
+      } else {
+          content.textContent = "Sem entrevistas hoje";
+      }
+  </script>
+  
 </body>
 </html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escala de Entrevistas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 2rem;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 70%;
+      max-width: 600px;
+      background-color: #fff;
+    }
+
+    th, td {
+      padding: 0.8rem 1rem;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f9f9f9;
+    }
+
+    tr.hoje td {
+      background-color: #c0e8ff;
+      font-weight: bold;
+    }
+
+    .dia {
+      font-weight: 600;
+    }
+
+    .data {
+      font-size: 0.85rem;
+      color: #666;
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .observacoes {
+      margin: 1.5rem auto 0;
+      max-width: 600px;
+      font-size: 0.85rem;
+      color: #666;
+      text-align: left;   /* alinhado à esquerda */
+      font-style: italic; /* estilo mais discreto */
+    }
+
+    .observacoes strong {
+      font-style: normal; /* título em estilo normal */
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo">Escala de Entrevistas - Semana Atual</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Dia</th>
+        <th>Manhã</th>
+        <th>Tarde</th>
+      </tr>
+    </thead>
+    <tbody id="escala-semana">
+      <!-- Conteúdo preenchido via JavaScript -->
+    </tbody>
+  </table>
+
+  <div class="observacoes" id="observacoes">
+    <!-- Observações aparecem aqui -->
+  </div>
+
+  <script type="module">
+    import { entrevistasPadrao, alteracoes } from './entrevistas-data.js';
+
+    const diasSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+    const hoje = new Date(2025, 9, 22);
+    const dataDeHoje = hoje.getDay();
+
+    const corpoTabela = document.getElementById("escala-semana");
+    const obs = document.getElementById("observacoes");
+
+    // calcular início e fim da semana (segunda a sexta)
+    const inicioSemana = new Date(hoje);
+    inicioSemana.setDate(hoje.getDate() - dataDeHoje + 1);
+    const fimSemana = new Date(inicioSemana);
+    fimSemana.setDate(inicioSemana.getDate() + 4);
+
+    // ajustar título com intervalo
+    const titulo = document.getElementById("titulo");
+    const inicioFmt = inicioSemana.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+    const fimFmt = fimSemana.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+    titulo.textContent = `Escala de Entrevistas - Semana ${inicioFmt} a ${fimFmt}`;
+
+    const alteracoesSemana = [];
+
+    for (let i = 1; i <= 5; i++) {
+      let escala = entrevistasPadrao[i - 1];
+      const dataReferencia = new Date(inicioSemana);
+      dataReferencia.setDate(inicioSemana.getDate() + (i - 1));
+
+      const dataISOdia = dataReferencia.toISOString().split("T")[0];
+      const alteracao = alteracoes.find(a => a.data === dataISOdia);
+
+      if (alteracao) {
+        escala = alteracao.substituto;
+        alteracoesSemana.push({
+          dia: diasSemana[i],
+          data: dataReferencia.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" }),
+          substituto: alteracao.substituto
+        });
+      }
+
+      const [manha, tarde] = escala.split(" e ");
+      const dataFormatada = dataReferencia.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+
+      const linha = document.createElement("tr");
+      if (i === dataDeHoje) linha.classList.add("hoje");
+
+      linha.innerHTML = `
+        <td>
+          <span class="dia">${diasSemana[i]}</span>
+          <span class="data">${dataFormatada}</span>
+        </td>
+        <td>${manha || ""}</td>
+        <td>${tarde || ""}</td>
+      `;
+
+      corpoTabela.appendChild(linha);
+    }
+
+    if (alteracoesSemana.length > 0) {
+      obs.innerHTML = `<strong>Observações:</strong><br>` +
+        alteracoesSemana
+          .map(a => `${a.dia} (${a.data}): escala alterada para ${a.substituto}`)
+          .join("<br>");
+    } else {
+      obs.innerHTML = `<strong>Observações:</strong> Sem alterações na escala da semana.`;
+    }
+  </script>
+
+
+        
+
+
+</body>
+</html>
