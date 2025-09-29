@@ -161,8 +161,7 @@ export const entrevistacontent = document.getElementById("entrevistascontent");
 // Motivos de Oração
 const motivoOracao = document.querySelector('#motivoOracao')
 
-// const diaAtual = new Date().getDay()
-const diaAtual = 0
+const diaAtual = new Date().getDay()
 
 if (diaAtual == 0) {
 motivoOracao.innerHTML = 'Hoje é domingo'
