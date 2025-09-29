@@ -52,6 +52,7 @@ body { background-color: var(--bg-color); }
 
 /* Layout containers */
 .conteinergeral {
+    /* border: 2px solid red; */
     width: 98%;
     max-width: 1500px;
     margin: auto;
@@ -133,7 +134,7 @@ main#conteinerhome {
     background-color: #fff;
     border-radius: 12px;
     position: relative;
-    height: 480px;
+    /* height: 480px; */
 }
 
 /* Links rápidos */

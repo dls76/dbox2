@@ -156,3 +156,38 @@ export const entrevistacontent = document.getElementById("entrevistascontent");
   }
 
   entrevistacontent.textContent = mensagem;
+
+
+// Motivos de Oração
+const motivoOracao = document.querySelector('#motivoOracao')
+
+// const diaAtual = new Date().getDay()
+const diaAtual = 0
+
+if (diaAtual == 0) {
+motivoOracao.innerHTML = 'Hoje é domingo'
+} else if (diaAtual == 1) {
+motivoOracao.innerHTML = 'Espírito Santo'
+} else if (diaAtual == 2) {
+motivoOracao.innerHTML = 'Missão'
+} else if (diaAtual == 3) {
+motivoOracao.innerHTML = 'Sabedoria'
+} else if (diaAtual == 4) {
+motivoOracao.innerHTML = 'Saúde'
+} else if (diaAtual == 5) {
+motivoOracao.innerHTML = 'Matrículas'
+} else if (diaAtual == 6) {
+motivoOracao.innerHTML = 'Feliz Sábado'
+}
+
+function motivoDeOracao() {
+    
+    document.getElementById("motivoDeOracao").addEventListener("click", function(event) {
+    event.preventDefault(); // impede o link de recarregar a página
+    alert("Você clicou no link!");
+  });
+
+
+
+
+}
