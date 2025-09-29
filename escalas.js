@@ -136,7 +136,7 @@ export let plantao19h = [
     { data: new Date(2025, 11, 11), tour: "Priscila", financeiro: "Alícia", entrevista: "Camila", secretaria: "Isa"}
 ];
 
-const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Camila", "Renata e Andressa"]
+const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Andressa", "Renata e Camila"]
 
 
 export const entrevistacontent = document.getElementById("entrevistascontent");
@@ -155,7 +155,6 @@ if (entrevistacontent) {
   } else {
     mensagem = "Hoje é domingo";
   }
-
   entrevistacontent.textContent = mensagem;
 }
 
