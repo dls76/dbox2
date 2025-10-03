@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Horários de Recreio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .modal {
+      background: white;
+      width: 85%;
+      max-width: 900px;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .modal-header {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .timeline {
+      position: relative;
+      border-left: 2px solid #ddd;
+      padding-left: 45px;
+      height: 75vh;
+    }
+
+    .time-slot {
+      position: absolute;
+      transform: translateY(-50%);
+    }
+
+    .time-label {
+      position: absolute;
+      left: -40px;
+      font-size: 0.75rem;
+      color: #666;
+    }
+
+    .event {
+      background: #eaf4ff;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      border-left: 4px solid #4285f4;
+    }
+
+    .current-time-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: red;
+      z-index: 10;
+    }
+
+    .current-time-dot {
+      position: absolute;
+      left: -7px;
+      top: -4px;
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .current-time-label {
+      position: absolute;
+      left: -55px;
+      top: -12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: red;
+      background: #fff;
+      padding: 2px 4px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    }
+
+    .countdown-label {
+      position: absolute;
+      right: -65px;
+      top: -12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #333;
+      background: #fff;
+      padding: 2px 4px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 35px;
+        height: 70vh;
+      }
+      .time-label {
+        left: -30px;
+        font-size: 0.7rem;
+      }
+      .event {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+      }
+      .current-time-label {
+        left: -48px;
+        font-size: 0.7rem;
+      }
+      .countdown-label {
+        right: -55px;
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="close-btn" onclick="closeModal()">✖</div>
+    <div class="modal-header">Horários de Recreio</div>
+    <div class="timeline" id="timeline">
+      <!-- Linha atual -->
+      <div class="current-time-line" id="currentTimeLine">
+        <div class="current-time-dot"></div>
+        <div class="current-time-label" id="currentTimeLabel">--:--:--</div>
+        <div class="countdown-label" id="countdownLabel">--:--</div>
+      </div>
+
+      <!-- Slots -->
+      <div class="time-slot" data-time="08:55">
+        <span class="time-label">8:55</span>
+        <div class="event">2º ao 5º ano</div>
+      </div>
+      <div class="time-slot" data-time="09:15">
+        <span class="time-label">9:15</span>
+        <div class="event">6º ao 8º ano</div>
+      </div>
+      <div class="time-slot" data-time="09:45">
+        <span class="time-label">9:45</span>
+        <div class="event">9º ano e EM</div>
+      </div>
+      <div class="time-slot" data-time="15:00">
+        <span class="time-label">15:00</span>
+        <div class="event">2º e 3º ano</div>
+      </div>
+      <div class="time-slot" data-time="15:15">
+        <span class="time-label">15:15</span>
+        <div class="event">4º e 5º ano</div>
+      </div>
+      <div class="time-slot" data-time="15:45">
+        <span class="time-label">15:45</span>
+        <div class="event">6º ao 9º ano</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function closeModal() {
+    document.getElementById('modalOverlay').style.display = 'none';
+  }
+
+  function timeToMinutes(time) {
+    const [h, m] = time.split(":").map(Number);
+    return h * 60 + m;
+  }
+
+  const startMinutes = timeToMinutes("08:30");
+  const endMinutes = timeToMinutes("16:00");
+  const totalMinutes = endMinutes - startMinutes;
+
+  const recreios = [
+    { start: "08:55", end: "09:10" },
+    { start: "09:15", end: "09:30" },
+    { start: "09:45", end: "10:00" },
+    { start: "15:00", end: "15:15" },
+    { start: "15:15", end: "15:30" },
+    { start: "15:45", end: "16:00" }
+  ];
+
+  document.querySelectorAll(".time-slot").forEach(slot => {
+    const time = slot.getAttribute("data-time");
+    const minutes = timeToMinutes(time);
+    const percent = ((minutes - startMinutes) / totalMinutes) * 100;
+    slot.style.top = percent + "%";
+  });
+
+  function updateCurrentTimeLine() {
+    const now = new Date();
+    const minutes = now.getHours() * 60 + now.getMinutes() + now.getSeconds() / 60;
+    let percent = ((minutes - startMinutes) / totalMinutes) * 100;
+
+    if (percent < 0) percent = 0;
+    if (percent > 100) percent = 100;
+
+    const line = document.getElementById("currentTimeLine");
+    line.style.top = percent + "%";
+
+    // Atualiza horário atual
+    document.getElementById("currentTimeLabel").textContent = now.toLocaleTimeString("pt-BR", { hour12: false });
+
+    // Atualiza contagem regressiva
+    const countdownLabel = document.getElementById("countdownLabel");
+    let nextRecreio = null;
+
+    for (let rec of recreios) {
+      const start = timeToMinutes(rec.start);
+      const end = timeToMinutes(rec.end);
+      if (minutes < start) {
+        nextRecreio = start; // ainda não começou
+        break;
+      } else if (minutes >= start && minutes < end) {
+        nextRecreio = end; // estamos no recreio -> contar até acabar
+        break;
+      }
+    }
+
+    if (nextRecreio) {
+      const diff = (nextRecreio - minutes) * 60; // em segundos
+      if (diff > 0) {
+        const mm = String(Math.floor(diff / 60)).padStart(2, "0");
+        const ss = String(Math.floor(diff % 60)).padStart(2, "0");
+        countdownLabel.textContent = `-${mm}:${ss}`;
+      } else {
+        countdownLabel.textContent = "--:--";
+      }
+    } else {
+      countdownLabel.textContent = "--:--";
+    }
+  }
+
+  setInterval(updateCurrentTimeLine, 1000);
+  updateCurrentTimeLine();
+</script>
+
+</body>
+</html>

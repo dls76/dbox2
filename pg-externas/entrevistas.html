@@ -3,60 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrevistas</title>
+    <title>Compensação ADM</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Trad:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             font-family: 'Poppins', sans-serif, Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
         h1 {
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
             background-color: white;
+            font-size: 1.5rem;
+            font-weight: 500;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
         }
+        
         main {
-            width: 60%;
-            margin: auto;
+            width: 80%;
+            max-width: 1500px;
+            margin: 30px auto;
         }
-        .entrevistasDoDia {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-            border: 1px solid lightgray;
-            padding: 10px;
+        
+        .table-container {
+            background: white;
             border-radius: 10px;
-            width: 100%;
+            padding: 20px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            transition: ease all .4s;
         }
-        .entrevistasDoDia:hover {
-            background-color: rgb(232, 232, 232);
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        .destaque {
-            background-color: dodgerblue;
+        
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            width: 16.66%;
+        }
+        
+        th:first-child, td:first-child {
+            width: 10%;
+        }
+        
+        th {
+            background: #5DCDCD;
             color: white;
-            border: 1px solid dodgerblue;
+            font-weight: 500;
+            font-size: 0.95rem;
         }
+        
+        td {
+            background: #fafafa;
+            color: #333;
+            font-size: 0.9rem;
+        }
+        
+        td:first-child {
+            font-weight: 600;
+            color: #0066cc;
+            background: #f0f0f0;
+        }
+        
+        .empty {
+            background: #e8e8e8;
+        }
+        
+        .nome-funcionario {
+            display: block;
+            margin: 3px 0;
+        }
+        
+        .observacoes {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        
+        .observacoes h2 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #5DCDCD;
+            padding-bottom: 10px;
+        }
+        
+        .obs-texto {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
         footer {
             background-color: lightgray;
-            height: 60vh;
+            height: 20vh;
+            margin-top: 50px;
         }
+        
         @media (max-width: 800px) {
             main {
-                width: 90%;
+                width: 95%;
+            }
+            
+            h1 {
+                font-size: 1.2rem;
+                padding: 15px 10px;
+            }
+            
+            th, td {
+                padding: 10px 5px;
+                font-size: 0.8rem;
+            }
+            
+            .table-container {
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Escala de Entrevistas</h1>
-    <main id="conteinerEntrevistas"></main>
-    <div id="plantaodiario"></div>
+    <h1 id="titulo">Escala de Compensação ADM</h1>
+    <main>
+        <div class="table-container">
+            <table id="tabelaCompensacao">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>SEG</th>
+                        <th>TER</th>
+                        <th>QUA</th>
+                        <th>QUI</th>
+                        <th>SEX</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    <!-- Conteúdo será gerado via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="observacoes">
+            <h2>Observações</h2>
+            <div id="textoObservacoes" class="obs-texto">Escala sem alterações</div>
+        </div>
+    </main>
     <footer></footer>
-    <script type="module" src="plantaoEntrevistas.js"></script>
+    
+    <script>
+        // Dados da escala de compensação PADRÃO
+        const escalaCompensacao = {
+            manha: {
+                SEG: ['Pr. Vinícius'],
+                TER: [],
+                QUA: ['Camila Jaque'],
+                QUI: ['Valéria'],
+                SEX: ['Joyce Douglas']
+            },
+            tarde: {
+                SEG: ['Pr. Vinícius'],
+                TER: ['RA'],
+                QUA: ['Carin', 'Andressa', 'Rocha'],
+                QUI: ['Murilo', 'Renata'],
+                SEX: ['Carol', 'Josi']
+            }
+        };
+
+        // ALTERAÇÕES PARA DIAS ESPECÍFICOS
+        // Formato: 'DD/MM/YYYY' do dia específico
+        const alteracoesPorDia = {
+            '03/10/2025': {
+                manha: {
+                    SEX: ['Joyce']  // Apenas Joyce no dia 03/10 (sexta) pela manhã
+                }
+            },
+            '09/10/2025': {
+                tarde: {
+                    QUA: ['Carin']  // Apenas Carin no dia 09/10 (quarta) pela tarde
+                }
+            },
+            '10/10/2025': {
+                manha: {
+                    QUI: []  // Remove todos da quinta pela manhã no dia 10/10
+                },
+                tarde: {
+                    QUI: ['Murilo', 'Renata', 'João']  // Adiciona João junto com os outros
+                }
+            }
+            // Adicione mais dias conforme necessário
+            // Formato: 'DD/MM/YYYY': { periodo: { DIA_SEMANA: ['Nome1', 'Nome2'] } }
+        };
+
+        // Função para obter a data de segunda-feira da semana atual
+        function getSegundaFeira() {
+            const hoje = new Date();
+            const dia = hoje.getDay();
+            const diff = hoje.getDate() - dia + (dia === 0 ? -6 : 1);
+            const segunda = new Date(hoje.setDate(diff));
+            return segunda;
+        }
+
+        // Função para formatar data
+        function formatarData(data) {
+            const dia = String(data.getDate()).padStart(2, '0');
+            const mes = String(data.getMonth() + 1).padStart(2, '0');
+            const ano = data.getFullYear();
+            return `${dia}/${mes}/${ano}`;
+        }
+
+        // Função para obter escala da semana atual (padrão ou especial)
+        function getEscalaSemanaAtual() {
+            const segunda = getSegundaFeira();
+            const escalaFinal = JSON.parse(JSON.stringify(escalaCompensacao)); // Clone profundo
+            const alteracoesEncontradas = [];
+            
+            // Mapeia os dias da semana
+            const diasSemana = ['SEG', 'TER', 'QUA', 'QUI', 'SEX'];
+            const diasNomes = {
+                'SEG': 'Segunda-feira',
+                'TER': 'Terça-feira',
+                'QUA': 'Quarta-feira',
+                'QUI': 'Quinta-feira',
+                'SEX': 'Sexta-feira'
+            };
+            
+            // Verifica cada dia da semana atual
+            for (let i = 0; i < 5; i++) {
+                const dataAtual = new Date(segunda);
+                dataAtual.setDate(segunda.getDate() + i);
+                const dataFormatada = formatarData(dataAtual);
+                const diaSemana = diasSemana[i];
+                
+                // Se existe alteração para este dia específico
+                if (alteracoesPorDia[dataFormatada]) {
+                    const alteracao = alteracoesPorDia[dataFormatada];
+                    
+                    // Processa manhã
+                    if (alteracao.manha && alteracao.manha[diaSemana] !== undefined) {
+                        const original = escalaFinal.manha[diaSemana];
+                        const novo = alteracao.manha[diaSemana];
+                        
+                        escalaFinal.manha[diaSemana] = novo;
+                        
+                        // Gera texto da observação
+                        let obs = `${diasNomes[diaSemana]} (${dataFormatada}) - Manhã: `;
+                        if (novo.length === 0) {
+                            obs += `${original.join(', ')} removido(s)`;
+                        } else if (original.join(',') !== novo.join(',')) {
+                            obs += `${original.join(', ')} → ${novo.join(', ')}`;
+                        }
+                        alteracoesEncontradas.push(obs);
+                    }
+                    
+                    // Processa tarde
+                    if (alteracao.tarde && alteracao.tarde[diaSemana] !== undefined) {
+                        const original = escalaFinal.tarde[diaSemana];
+                        const novo = alteracao.tarde[diaSemana];
+                        
+                        escalaFinal.tarde[diaSemana] = novo;
+                        
+                        // Gera texto da observação
+                        let obs = `${diasNomes[diaSemana]} (${dataFormatada}) - Tarde: `;
+                        if (novo.length === 0) {
+                            obs += `${original.join(', ')} removido(s)`;
+                        } else if (original.join(',') !== novo.join(',')) {
+                            obs += `${original.join(', ')} → ${novo.join(', ')}`;
+                        }
+                        alteracoesEncontradas.push(obs);
+                    }
+                }
+            }
+            
+            return {
+                escala: escalaFinal,
+                isEspecial: alteracoesEncontradas.length > 0,
+                observacoes: alteracoesEncontradas
+            };
+        }
+
+        // Função para obter o período da semana
+        function getPeriodoSemana() {
+            const segunda = getSegundaFeira();
+            const sexta = new Date(segunda);
+            sexta.setDate(segunda.getDate() + 4);
+            
+            return `${formatarData(segunda)} a ${formatarData(sexta)}`;
+        }
+
+        // Atualizar título
+        function atualizarTitulo() {
+            const titulo = document.getElementById('titulo');
+            titulo.textContent = `Escala de Compensação ADM - Semana de ${getPeriodoSemana()}`;
+        }
+
+        // Renderizar tabela
+        function renderizarTabela() {
+            const corpo = document.getElementById('corpoTabela');
+            corpo.innerHTML = ''; // Limpa a tabela
+            
+            const { escala } = getEscalaSemanaAtual();
+            
+            const periodos = [
+                { nome: 'Manhã', chave: 'manha' },
+                { nome: 'Tarde', chave: 'tarde' }
+            ];
+            
+            const dias = ['SEG', 'TER', 'QUA', 'QUI', 'SEX'];
+            
+            periodos.forEach(periodo => {
+                const linha = document.createElement('tr');
+                
+                // Célula do período
+                const celulaPeriodo = document.createElement('td');
+                celulaPeriodo.textContent = periodo.nome;
+                linha.appendChild(celulaPeriodo);
+                
+                // Células dos dias
+                dias.forEach(dia => {
+                    const celula = document.createElement('td');
+                    const funcionarios = escala[periodo.chave][dia];
+                    
+                    if (funcionarios && funcionarios.length > 0) {
+                        funcionarios.forEach(func => {
+                            const span = document.createElement('span');
+                            span.className = 'nome-funcionario';
+                            span.textContent = func;
+                            celula.appendChild(span);
+                        });
+                    } else {
+                        celula.classList.add('empty');
+                    }
+                    
+                    linha.appendChild(celula);
+                });
+                
+                corpo.appendChild(linha);
+            });
+        }
+
+        // Renderizar observações
+        function renderizarObservacoes() {
+            const textoObs = document.getElementById('textoObservacoes');
+            const { isEspecial, observacoes } = getEscalaSemanaAtual();
+            
+            if (!isEspecial || observacoes.length === 0) {
+                textoObs.textContent = 'Escala sem alterações';
+                return;
+            }
+            
+            const textoFormatado = observacoes.map((obs, index) => 
+                `${index + 1}. ${obs}`
+            ).join('<br>');
+            
+            textoObs.innerHTML = textoFormatado;
+        }
+
+        // Inicializar página
+        document.addEventListener('DOMContentLoaded', () => {
+            atualizarTitulo();
+            renderizarTabela();
+            renderizarObservacoes();
+        });
+    </script>
 </body>
 </html>

@@ -1,303 +1,362 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escala de Folgas - 1º Semestre 2025</title>
+    <title>Compensação ADM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
+            font-family: 'Poppins', sans-serif, Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
         }
-
+        
         body {
-            background-color: #F7ECE1;
-            color: #5D576B;
-            line-height: 1.6;
-            padding: 20px;
+            background-color: #f5f5f5;
         }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding-top: 80px; /* Espaço para o título fixo */
-        }
-
+        
         h1 {
-            font-size: 28px;
-            color: #8A7F8D;
             text-align: center;
-            margin-bottom: 20px;
-            position: fixed;
-            top: 0px;
-            left: 0;
-            right: 0;
-            background-color: #F7ECE1;
-            z-index: 10;
-            padding: 10px 0;
+            padding: 20px 0;
+            background-color: white;
+            font-size: 1.5rem;
+            font-weight: 500;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
         }
-
-        .week-container {
-            margin-bottom: 40px;
-            background-color: #FFF8F0;
-            border-radius: 12px;
+        
+        main {
+            width: 80%;
+            max-width: 1500px;
+            margin: 30px auto;
+        }
+        
+        .table-container {
+            background: white;
+            border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         }
-
-        .week-header {
-            font-size: 20px;
-            color: #6B728E;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
+        
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #E8E8F5;
-            border-radius: 8px;
-            overflow: hidden;
         }
-
+        
         th, td {
             padding: 15px;
             text-align: center;
-            border: 1px solid #D3D3E5;
+            border: 1px solid #e0e0e0;
+            width: 16.66%;
         }
-
+        
+        th:first-child, td:first-child {
+            width: 10%;
+        }
+        
         th {
-            background-color: #E0E0F0;
-            color: #6B728E;
-            font-weight: bold;
+            background: #5DCDCD;
+            color: white;
+            font-weight: 500;
+            font-size: 0.95rem;
         }
-
+        
         td {
-            color: #7A9E7E;
-            font-size: 16px;
+            background: #fafafa;
+            color: #333;
+            font-size: 0.9rem;
         }
-
-        tr:nth-child(even) {
-            background-color: #F0F0FA;
+        
+        td:first-child {
+            font-weight: 600;
+            color: #0066cc;
+            background: #f0f0f0;
         }
-
-        .turno {
-            background-color: #E8E8F5;
-            font-weight: bold;
-            color: #5D576B;
+        
+        .empty {
+            background: #e8e8e8;
         }
-
-        /* Estilo para a semana destacada */
-        .highlighted {
-            background-color: #FFDAB9; /* Cor de fundo mais forte */
+        
+        .nome-funcionario {
+            display: block;
+            margin: 3px 0;
         }
-
-        .highlighted table {
-            background-color: #FFE4C4;
+        
+        .observacoes {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         }
-
-        .highlighted th {
-            background-color: #FFCC99;
-            color: #5A3E36;
+        
+        .observacoes h2 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #5DCDCD;
+            padding-bottom: 10px;
         }
-
-        .highlighted td {
-            color: #5A3E36;
+        
+        .obs-texto {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
-
-        .highlighted .turno {
-            background-color: #FFE4C4;
-            color: #5A3E36;
+        
+        footer {
+            background-color: lightgray;
+            height: 20vh;
+            margin-top: 50px;
         }
-
-        .highlighted tr:nth-child(even) {
-            background-color: #FFECD5;
+        
+        @media (max-width: 800px) {
+            main {
+                width: 95%;
+            }
+            
+            h1 {
+                font-size: 1.2rem;
+                padding: 15px 10px;
+            }
+            
+            th, td {
+                padding: 10px 5px;
+                font-size: 0.8rem;
+            }
+            
+            .table-container {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Compensações - 1º Semestre 2025</h1>
-        <div id="scheduleContainer"></div>
-    </div>
-
+    <h1 id="titulo">Escala de Compensação ADM</h1>
+    <main>
+        <div class="table-container">
+            <table id="tabelaCompensacao">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>SEG</th>
+                        <th>TER</th>
+                        <th>QUA</th>
+                        <th>QUI</th>
+                        <th>SEX</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    <!-- Conteúdo será gerado via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="observacoes">
+            <h2>Alterações da Semana</h2>
+            <div id="textoObservacoes" class="obs-texto">Escala sem alterações</div>
+        </div>
+    </main>
+    <footer></footer>
+    
     <script>
-        // Dados baseados na imagem fornecida
-        const weeklySchedule = {
-    "MANHÃ": {
-        "SEG": ["Pr. Vinícius"],
-        "TER": [""],
-        "QUA": ["Jaque", "Camila"],
-        "QUI": ["Valéria"],
-        "SEX": ["Douglas", "Malú"]
-    },
-    "TARDE": {
-        "SEG": ["Pr. Vinícius"],
-        "TER": ["Reunião Administrativa"],
-        "QUA": ["Andressa", "Carin", "Nailson"],
-        "QUI": ["Murilo", "Renata"],
-        "SEX": ["Josi", "Carol"]
-    }
-};
-
-// Função para obter todas as semanas do 1º semestre de 2025
-function getWeeksInFirstSemester() {
-    const weeks = [];
-    const startDate = new Date('2025-01-01');
-    const endDate = new Date('2025-06-30');
-    let currentDate = new Date(startDate);
-
-    while (currentDate <= endDate) {
-        const weekStart = new Date(currentDate);
-        const weekEnd = new Date(currentDate);
-        weekEnd.setDate(weekEnd.getDate() + 4); // Mostra de segunda a sexta
-
-        if (weekEnd > endDate) {
-            weekEnd.setDate(endDate.getDate());
-        }
-
-        weeks.push({
-            start: new Date(weekStart),
-            end: new Date(weekEnd)
-        });
-
-        currentDate.setDate(currentDate.getDate() + 7); // Próxima semana
-    }
-
-    return weeks;
-}
-
-// Função para formatar a data
-function formatDate(date) {
-    return `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}`;
-}
-
-// Função para determinar a semana a ser destacada com base na data atual
-function getHighlightedWeek(weeks) {
-    const today = new Date(); // Data atual (fixada para teste)
-    const dayOfWeek = today.getDay(); // 0 (Domingo) a 6 (Sábado)
-    let targetWeekStart;
-
-    // Encontra a semana atual (a semana que contém a data atual)
-    let currentWeekIndex = -1;
-    for (let i = 0; i < weeks.length; i++) {
-        const week = weeks[i];
-        if (today >= week.start && today <= week.end) {
-            currentWeekIndex = i;
-            break;
-        }
-    }
-
-    // Se não encontrou a semana atual (data atual está fora do semestre), usa a primeira semana como fallback
-    if (currentWeekIndex === -1) {
-        for (let i = 0; i < weeks.length; i++) {
-            const week = weeks[i];
-            if (today < week.start) {
-                return i; // Retorna a primeira semana futura
+        // Dados da escala de compensação PADRÃO
+        const escalaCompensacao = {
+            manha: {
+                SEG: ['Pr. Vinícius'],
+                TER: [],
+                QUA: ['Camila Jaque'],
+                QUI: ['Valéria'],
+                SEX: ['Joyce Douglas']
+            },
+            tarde: {
+                SEG: ['Pr. Vinícius'],
+                TER: ['RA'],
+                QUA: ['Carin', 'Andressa', 'Rocha'],
+                QUI: ['Murilo', 'Renata'],
+                SEX: ['Carol', 'Josi']
             }
-        }
-        return weeks.length - 1; // Última semana se a data atual for após o semestre
-    }
+        };
 
-    // Determina a semana a ser destacada
-    if (dayOfWeek === 0 || dayOfWeek === 6) { // Se for sábado ou domingo
-        // Destaca a próxima semana (começando na próxima segunda-feira)
-        return Math.min(currentWeekIndex + 1, weeks.length - 1);
-    } else if (dayOfWeek >= 1 && dayOfWeek <= 5) { // De segunda a sexta
-        // Calcula o fim da semana atual (sexta-feira)
-        const daysUntilFriday = 5 - dayOfWeek; // Sexta-feira é 5
-        const endOfCurrentWeek = new Date(today);
-        endOfCurrentWeek.setDate(today.getDate() + daysUntilFriday);
-        endOfCurrentWeek.setHours(23, 59, 59, 999); // Fim do dia de sexta-feira
+        // ALTERAÇÕES PARA DIAS ESPECÍFICOS
+        // Formato: 'DD/MM/YYYY' do dia específico
+        const alteracoesPorDia = {
+            '01/10/2025': {
+                tarde: {
+                    QUI: ['Andressa']
+                }
+            },
+            '02/10/2025': {
+                manha: {
+                    QUI: ['Joyce', 'Camila']  // Apenas Joyce no dia 03/10 (sexta) pela manhã
+                },
+                tarde: {
+                    QUI: ['Andressa']
+                }
+            },
+            
+        };
 
-        // Se já passou da meia-noite de sexta-feira, destaca a próxima semana
-        if (today > endOfCurrentWeek) {
-            return Math.min(currentWeekIndex + 1, weeks.length - 1);
-        } else {
-            // Caso contrário, destaca a semana seguinte à atual
-            return Math.min(currentWeekIndex + 1, weeks.length - 1);
-        }
-    }
-
-    return currentWeekIndex; // Fallback (não deve chegar aqui)
-}
-
-// Função para renderizar a escala
-function renderSchedule() {
-    const container = document.getElementById('scheduleContainer');
-    const weeks = getWeeksInFirstSemester();
-    const highlightedWeekIndex = getHighlightedWeek(weeks);
-
-    weeks.forEach((week, index) => {
-        const weekDiv = document.createElement('div');
-        weekDiv.classList.add('week-container');
-        if (index === highlightedWeekIndex) {
-            weekDiv.classList.add('highlighted');
-            weekDiv.id = 'highlighted-week'; // Para rolar até aqui
+        // Função para obter a data de segunda-feira da semana atual
+        function getSegundaFeira() {
+            const hoje = new Date();
+            const dia = hoje.getDay();
+            const diff = hoje.getDate() - dia + (dia === 0 ? -6 : 1);
+            const segunda = new Date(hoje.setDate(diff));
+            return segunda;
         }
 
-        const weekHeader = document.createElement('div');
-        weekHeader.classList.add('week-header');
-        weekHeader.textContent = `Semana: ${formatDate(week.start)} a ${formatDate(week.end)}`;
-        weekDiv.appendChild(weekHeader);
+        // Função para formatar data
+        function formatarData(data) {
+            const dia = String(data.getDate()).padStart(2, '0');
+            const mes = String(data.getMonth() + 1).padStart(2, '0');
+            const ano = data.getFullYear();
+            return `${dia}/${mes}/${ano}`;
+        }
 
-        const table = document.createElement('table');
-        const thead = document.createElement('thead');
-        const tbody = document.createElement('tbody');
+        // Função para obter escala da semana atual (padrão ou especial)
+        function getEscalaSemanaAtual() {
+            const segunda = getSegundaFeira();
+            const escalaFinal = JSON.parse(JSON.stringify(escalaCompensacao)); // Clone profundo
+            const alteracoesEncontradas = [];
+            
+            // Mapeia os dias da semana
+            const diasSemana = ['SEG', 'TER', 'QUA', 'QUI', 'SEX'];
+            const diasNomes = {
+                'SEG': 'Segunda',
+                'TER': 'Terça',
+                'QUA': 'Quarta',
+                'QUI': 'Quinta',
+                'SEX': 'Sexta'
+            };
+            
+            // Verifica cada dia da semana atual
+            for (let i = 0; i < 5; i++) {
+                const dataAtual = new Date(segunda);
+                dataAtual.setDate(segunda.getDate() + i);
+                const dataFormatada = formatarData(dataAtual);
+                const diaSemana = diasSemana[i];
+                
+                // Se existe alteração para este dia específico
+                if (alteracoesPorDia[dataFormatada]) {
+                    const alteracao = alteracoesPorDia[dataFormatada];
+                    
+                    // Processa manhã
+                    if (alteracao.manha && alteracao.manha[diaSemana] !== undefined) {
+                        const novo = alteracao.manha[diaSemana];
+                        escalaFinal.manha[diaSemana] = novo;
+                        
+                        // Gera texto da observação
+                        const nomes = novo.length > 0 ? novo.join(' e ') : 'Ninguém';
+                        alteracoesEncontradas.push(`${diasNomes[diaSemana]}, ${dataFormatada} - Manhã: ${nomes}`);
+                    }
+                    
+                    // Processa tarde
+                    if (alteracao.tarde && alteracao.tarde[diaSemana] !== undefined) {
+                        const novo = alteracao.tarde[diaSemana];
+                        escalaFinal.tarde[diaSemana] = novo;
+                        
+                        // Gera texto da observação
+                        const nomes = novo.length > 0 ? novo.join(' e ') : 'Ninguém';
+                        alteracoesEncontradas.push(`${diasNomes[diaSemana]}, ${dataFormatada} - Tarde: ${nomes}`);
+                    }
+                }
+            }
+            
+            return {
+                escala: escalaFinal,
+                isEspecial: alteracoesEncontradas.length > 0,
+                observacoes: alteracoesEncontradas
+            };
+        }
 
-        // Cabeçalho da tabela
-        const headerRow = document.createElement('tr');
-        const emptyCell = document.createElement('th');
-        headerRow.appendChild(emptyCell);
-        const days = ["SEG", "TER", "QUA", "QUI", "SEX"];
-        days.forEach(day => {
-            const th = document.createElement('th');
-            th.textContent = day;
-            headerRow.appendChild(th);
-        });
-        thead.appendChild(headerRow);
+        // Função para obter o período da semana
+        function getPeriodoSemana() {
+            const segunda = getSegundaFeira();
+            const sexta = new Date(segunda);
+            sexta.setDate(segunda.getDate() + 4);
+            
+            return `${formatarData(segunda)} a ${formatarData(sexta)}`;
+        }
 
-        // Linhas para cada turno
-        for (const turno in weeklySchedule) {
-            const row = document.createElement('tr');
-            const turnoCell = document.createElement('td');
-            turnoCell.classList.add('turno');
-            turnoCell.textContent = turno;
-            row.appendChild(turnoCell);
+        // Atualizar título
+        function atualizarTitulo() {
+            const titulo = document.getElementById('titulo');
+            titulo.textContent = `Escala de Compensação ADM - Semana de ${getPeriodoSemana()}`;
+        }
 
-            days.forEach(day => {
-                const cell = document.createElement('td');
-                cell.textContent = weeklySchedule[turno][day].join(', ');
-                row.appendChild(cell);
+        // Renderizar tabela
+        function renderizarTabela() {
+            const corpo = document.getElementById('corpoTabela');
+            corpo.innerHTML = ''; // Limpa a tabela
+            
+            const { escala } = getEscalaSemanaAtual();
+            
+            const periodos = [
+                { nome: 'Manhã', chave: 'manha' },
+                { nome: 'Tarde', chave: 'tarde' }
+            ];
+            
+            const dias = ['SEG', 'TER', 'QUA', 'QUI', 'SEX'];
+            
+            periodos.forEach(periodo => {
+                const linha = document.createElement('tr');
+                
+                // Célula do período
+                const celulaPeriodo = document.createElement('td');
+                celulaPeriodo.textContent = periodo.nome;
+                linha.appendChild(celulaPeriodo);
+                
+                // Células dos dias
+                dias.forEach(dia => {
+                    const celula = document.createElement('td');
+                    const funcionarios = escala[periodo.chave][dia];
+                    
+                    if (funcionarios && funcionarios.length > 0) {
+                        funcionarios.forEach(func => {
+                            const span = document.createElement('span');
+                            span.className = 'nome-funcionario';
+                            span.textContent = func;
+                            celula.appendChild(span);
+                        });
+                    } else {
+                        celula.classList.add('empty');
+                    }
+                    
+                    linha.appendChild(celula);
+                });
+                
+                corpo.appendChild(linha);
             });
-
-            tbody.appendChild(row);
         }
 
-        table.appendChild(thead);
-        table.appendChild(tbody);
-        weekDiv.appendChild(table);
-        container.appendChild(weekDiv);
-    });
+        // Renderizar observações
+        function renderizarObservacoes() {
+            const textoObs = document.getElementById('textoObservacoes');
+            const { isEspecial, observacoes } = getEscalaSemanaAtual();
+            
+            if (!isEspecial || observacoes.length === 0) {
+                textoObs.textContent = 'Escala sem alterações';
+                return;
+            }
+            
+            const textoFormatado = observacoes.map((obs, index) => 
+                `${index + 1}. ${obs}`
+            ).join('<br>');
+            
+            textoObs.innerHTML = textoFormatado;
+        }
 
-    // Rola até a semana destacada com um deslocamento para não ficar sob o título
-    const highlightedElement = document.getElementById('highlighted-week');
-    if (highlightedElement) {
-        const headerHeight = document.querySelector('h1').offsetHeight + 20; // Altura do título + espaço extra
-        const elementPosition = highlightedElement.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - headerHeight;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
+        // Inicializar página
+        document.addEventListener('DOMContentLoaded', () => {
+            atualizarTitulo();
+            renderizarTabela();
+            renderizarObservacoes();
         });
-    }
-}
-
-// Chama a função ao carregar a página
-window.onload = renderSchedule;
     </script>
 </body>
 </html>
