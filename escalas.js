@@ -124,7 +124,7 @@ export let plantao19h = [
     { data: new Date(2025, 8, 18), tour: "Priscila", financeiro: "Alícia", entrevista: "Jaque", secretaria: "Carin"},
     { data: new Date(2025, 8, 25), tour: "Priscila", financeiro: "Alícia", entrevista: "Valéria", secretaria: "Gabriel"},
     { data: new Date(2025, 9, 2), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
-    { data: new Date(2025, 9, 9), tour: "Priscila", financeiro: "Alícia", entrevista: "Camila", secretaria: "Isa"},
+    { data: new Date(2025, 9, 9), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
     { data: new Date(2025, 9, 16), tour: "Priscila", financeiro: "Alícia", entrevista: "Diretor", secretaria: "Gabriel"},
     { data: new Date(2025, 9, 23), tour: "Priscila", financeiro: "Alícia", entrevista: "Carol", secretaria: "Carin"},
     { data: new Date(2025, 9, 30), tour: "Priscila", financeiro: "Alícia", entrevista: "Andressa", secretaria: "Isa"},
