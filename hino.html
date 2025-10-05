@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Escala do Hino Nacional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: "Open Sans", sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #222;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    
+    .container {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    
+    .tituloescala {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #333;
+      text-align: center;
+      border-bottom: 3px solid #667eea;
+      padding: 2rem 2rem 1rem 2rem;
+      margin: -2rem -2rem 1.5rem -2rem;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .contentescala {
+      font-size: 1rem;
+      color: #555;
+    }
+    
+    .escala-item {
+      background: #f8f9fa;
+      padding: 1rem 1.5rem;
+      margin-bottom: 0.8rem;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+      transition: all 0.3s ease;
+    }
+    
+    .escala-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+    }
+    
+    .escala-item.proxima {
+      background: linear-gradient(135deg, #fff9e6 0%, #fffcf2 100%);
+      border-left: 5px solid #f59e0b;
+      box-shadow: 0 3px 12px rgba(245, 158, 11, 0.25);
+      transform: scale(1.02);
+    }
+    
+    .escala-item.proxima .escala-data {
+      color: #f59e0b;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    
+    .escala-data {
+      font-weight: 600;
+      color: #667eea;
+      margin-right: 1rem;
+      display: inline-block;
+      min-width: 60px;
+    }
+    
+    .escala-nomes {
+      color: #333;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem;
+      }
+      
+      .tituloescala {
+        font-size: 1.4rem;
+      }
+      
+      .escala-item {
+        padding: 0.8rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="containerPrincipal">
+    <div class="tituloescala">Escala de Responsáveis - Hino Nacional</div>
+    <div class="contentescala" id="escalaCompleta">
+      <div style="text-align: center; color: #999;">Carregando escala...</div>
+    </div>
+  </div>
+  
+  <script type="module">
+    import { responsaveisHino } from './hinoData.js';
+    
+    // Aguarda o DOM estar completamente carregado
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById("escalaCompleta");
+      const containerPrincipal = document.getElementById("containerPrincipal");
+      
+      if (responsaveisHino && responsaveisHino.length > 0) {
+      // Obtém a data atual (hora local, zero hora)
+      const agora = new Date();
+      const hoje = new Date(agora.getFullYear(), agora.getMonth(), agora.getDate());
+      
+      console.log('Data atual:', hoje.toLocaleDateString('pt-BR'));
+      console.log('Dia da semana:', hoje.getDay()); // 0=domingo, 6=sábado
+      
+      // Se for sábado (6), considera que a sexta já passou
+      let dataComparacao = new Date(hoje);
+      if (hoje.getDay() === 6) {
+        dataComparacao.setDate(dataComparacao.getDate() + 1);
+        console.log('É sábado, buscando próxima semana');
+      }
+      
+      // Função para converter string dd/mm em Date
+      function parseDataEscala(dataStr) {
+        const [dia, mes] = dataStr.split('/').map(Number);
+        const ano = hoje.getFullYear();
+        return new Date(ano, mes - 1, dia);
+      }
+      
+      // Encontra o índice da próxima escala
+      let proximaIndex = -1;
+      for (let i = 0; i < responsaveisHino.length; i++) {
+        const dataEscala = parseDataEscala(responsaveisHino[i].data);
+        console.log(`Comparando: ${responsaveisHino[i].data} (${dataEscala.toLocaleDateString('pt-BR')}) com ${dataComparacao.toLocaleDateString('pt-BR')}`);
+        
+        if (dataEscala >= dataComparacao) {
+          proximaIndex = i;
+          console.log('Próxima escala encontrada:', responsaveisHino[i].data);
+          break;
+        }
+      }
+      
+      // Renderiza todos os cards
+      const html = responsaveisHino.map(({data, ambiente1, ambiente2}, index) => {
+        const isProxima = index === proximaIndex;
+        return `<div class="escala-item${isProxima ? ' proxima' : ''}" ${isProxima ? 'id="proxima-escala"' : ''}>
+          <span class="escala-data">${data}</span>
+          <span class="escala-nomes">${ambiente1} e ${ambiente2}</span>
+        </div>`;
+      }).join("");
+      
+      container.innerHTML = html;
+      
+      // Rola até o card da próxima escala
+      if (proximaIndex !== -1) {
+        setTimeout(() => {
+          const proximoCard = document.getElementById('proxima-escala');
+          if (proximoCard) {
+            console.log('Tentando rolar até o card...');
+            
+            // Calcula a posição do card em relação ao topo do container
+            const tituloHeight = document.querySelector('.tituloescala').offsetHeight;
+            const cardTop = proximoCard.offsetTop;
+            const offset = tituloHeight + 10; // Altura do título + 10px de espaço
+            
+            console.log('Altura do título:', tituloHeight);
+            console.log('Posição do card:', cardTop);
+            console.log('Scrollando para:', cardTop - offset);
+            
+            containerPrincipal.scrollTo({
+              top: cardTop - offset,
+              behavior: 'smooth'
+            });
+          } else {
+            console.log('Card não encontrado!');
+          }
+        }, 500);
+      }
+      } else {
+        container.innerHTML = '<div style="text-align: center; color: #999;">Nenhuma escala disponível</div>';
+      }
+    }); // Fecha DOMContentLoaded
+  </script>
+</body>
+</html>

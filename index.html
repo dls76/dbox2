@@ -184,8 +184,80 @@
               </div>
             </a>
 
+            <a href="hino.html" target="_blank">
+              <div class="escala">
+                <div class="icon"><img src="img/yes.png" alt=""/></div>
+                <div>
+                  <div class="tituloescala">Hino Nacional</div>
+                  <div class="contentescala" id="hinoResponsavel">Carregando...</div>
+                  <i class="fa-solid fa-angle-right seta"></i>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+        <script type="module">
+    import { responsaveisHino } from './hinoData.js';
+    
+    const container = document.getElementById("hinoResponsavel");
+    
+    if (container && responsaveisHino && responsaveisHino.length > 0) {
+      // Obtém a data atual (à zero hora)
+      const hoje = new Date();
+      hoje.setHours(0, 0, 0, 0);
+      
+      // Verifica se hoje é sábado (6) ou depois
+      // Se for sábado, considera que a sexta já passou
+      const diaSemana = hoje.getDay();
+      let dataReferencia = new Date(hoje);
+      
+      // Se for sábado (6), avança para o próximo dia para buscar a próxima sexta
+      if (diaSemana === 6) {
+        dataReferencia.setDate(dataReferencia.getDate() + 1);
+      }
+      
+      // Função para converter string dd/mm em Date do ano atual
+      function parseDataEscala(dataStr) {
+        const [dia, mes] = dataStr.split('/').map(Number);
+        return new Date(hoje.getFullYear(), mes - 1, dia);
+      }
+      
+      // Encontra a próxima escala (primeira data >= dataReferencia)
+      const proximaEscala = responsaveisHino.find(escala => {
+        const dataEscala = parseDataEscala(escala.data);
+        return dataEscala >= dataReferencia;
+      });
+      
+      if (proximaEscala) {
+        container.innerHTML = `${proximaEscala.data} - ${proximaEscala.ambiente1} e ${proximaEscala.ambiente2}`;
+      } else {
+        container.innerHTML = 'Nenhuma escala futura disponível';
+      }
+    } else {
+      container.innerHTML = 'Nenhuma escala disponível';
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Links Rápidos -->
         <div class="divhome divhomelinksrapidos">
@@ -1463,5 +1535,6 @@ function mostrarCompensacao() {
       }
   </script>
   
+
 </body>
 </html>
