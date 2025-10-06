@@ -13,7 +13,7 @@ function adicionarProximosAniversariantes() {
   });
 
   // Ordena e pega os 3 próximos
-  const proximos = aniversariosFuturos.sort((a, b) => a.data - b.data).slice(0, 3);
+  const proximos = aniversariosFuturos.sort((a, b) => a.data - b.data).slice(0, 5);
 
   // Limpa o container
   container.innerHTML = '';
@@ -21,7 +21,7 @@ function adicionarProximosAniversariantes() {
   // Adiciona título
   const titulo = document.createElement('div');
   titulo.classList.add('tituloproximosanivers');
-  titulo.innerHTML = 'Próximos Aniversários';
+  titulo.innerHTML = 'Próximos Aniversariantes';
   container.appendChild(titulo);
 
   if (proximos.length > 0) {
@@ -79,7 +79,7 @@ function adicionarProximosAniversariantes() {
   maisLink.classList.add('mais');
   maisLink.href = 'aniversariantes-list.html';
   maisLink.target = '_blank';
-  maisLink.textContent = 'Mais';
+  maisLink.textContent = 'Lista completa';
 
   maisBox.appendChild(maisLink);
   container.appendChild(maisBox);
