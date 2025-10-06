@@ -30,15 +30,16 @@
     width: 1rem;
 }
 .tituloescala {
-    font-size: .9rem;
-    color: #B52532;
+    font-size: 1rem;
+    /* color: #B52532; */
     color: black;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open sans', sans-serif;
 }
 .contentescala {
+    font-family: 'Open sans', sans-serif;
     color: #575757;
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: .8rem;
     font-family: 'Roboto', sans-serif;
     padding: 5px 40px 0 0;

@@ -13,8 +13,8 @@ export const responsaveisHino = (() => {
   
   // Escala de responsáveis
   const responsaveis = [
-    ["Diretor", "Murilo"],
-    ["Murilo", "Rocha"],
+    ["Rocha", "Kadu"],
+    ["Murilo", "Diretor"],
     ["Rocha", "Diretor"],
     ["Jaque", "Camila"],
     ["Joyce", "Valéria"],
