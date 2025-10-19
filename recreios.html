@@ -33,6 +33,18 @@ margin-bottom: 30px;
 color: #333;
 }
 
+.current-time {
+font-size: 1rem;
+font-weight: bold;
+color: red;
+background: #fff;
+padding: 4px 8px;
+border-radius: 4px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+display: inline-block;
+margin-top: 10px;
+}
+
 .turnos-container {
 display: flex;
 gap: 40px;
@@ -48,7 +60,7 @@ min-width: 300px;
 font-size: 1.2rem;
 font-weight: 600;
 color: #4285f4;
-margin-bottom: 30px; /* Aumentei o espaçamento para evitar sobreposição */
+margin-bottom: 30px;
 text-align: center;
 padding: 5px 0;
 border-bottom: 2px solid #ddd;
@@ -58,8 +70,8 @@ border-bottom: 2px solid #ddd;
 position: relative;
 border-left: 2px solid #ddd;
 padding-left: 45px;
-padding-top: 20px; /* Adicionei padding superior para a primeira marca de tempo */
-padding-bottom: 40px; /* Aumentei o padding inferior para a última marca de tempo */
+padding-top: 20px;
+padding-bottom: 40px;
 height: 400px; 
 box-sizing: content-box;
 }
@@ -96,7 +108,7 @@ right: 0;
 height: 2px;
 background: red;
 z-index: 10;
-display: none; /* Inicia oculto e só é exibido no horário correto */
+display: none;
 }
 
 .current-time-dot {
@@ -107,20 +119,6 @@ width: 10px;
 height: 10px;
 background: red;
 border-radius: 50%;
-}
-
-.current-time-label {
-position: absolute;
-left: -60px;
-top: -14px;
-font-size: 0.85rem;
-font-weight: bold;
-color: red;
-background: #fff;
-padding: 2px 4px;
-border-radius: 4px;
-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
-white-space: nowrap;
 }
 
 .countdown-label {
@@ -137,7 +135,6 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 white-space: nowrap;
 }
 
-/* Layout para Celular */
 @media (max-width: 650px) {
 	.main-wrapper {
 		padding: 15px 10px;
@@ -159,15 +156,13 @@ white-space: nowrap;
 		left: -30px;
 		font-size: 0.75rem;
 	}
-	.current-time-label {
-		left: -50px;
-		font-size: 0.75rem;
-		top: -11px;
-	}
 	.countdown-label {
 		right: -50px;
 		font-size: 0.75rem;
 		top: -11px;
+	}
+	.current-time {
+		font-size: 0.85rem;
 	}
 }
 </style>
@@ -175,16 +170,18 @@ white-space: nowrap;
 <body>
 
 <div class="main-wrapper">
-<div class="page-header">Recreios</div>
+<div class="page-header">
+Recreios
+<div class="current-time" id="headerCurrentTime">--:--:--</div>
+</div>
 
 <div class="turnos-container">
 <div class="turno" id="turnoManha">
 <div class="turno-header">Manhã</div>
-<div class="timeline" id="timelineManha" data-start-time="08:30" data-end-time="10:00">
+<div class="timeline" id="timelineManha" data-start-time="07:15" data-end-time="10:00">
 
 <div class="current-time-line" id="currentTimeLineManha">
 <div class="current-time-dot"></div>
-<div class="current-time-label" id="currentTimeLabelManha">--:--:--</div>
 <div class="countdown-label" id="countdownLabelManha">AGUARDANDO</div>
 </div>
 
@@ -211,15 +208,41 @@ white-space: nowrap;
 </div>
 </div>
 
-
 <div class="turno" id="turnoTarde">
 <div class="turno-header">Tarde</div>
-<div class="timeline" id="timelineTarde" data-start-time="15:00" data-end-time="16:00">
+<div class="timeline" id="timelineTarde" data-start-time="13:15" data-end-time="16:00">
 
 <div class="current-time-line" id="currentTimeLineTarde">
 <div class="current-time-dot"></div>
-<div class="current-time-label" id="currentTimeLabelTarde">--:--:--</div>
 <div class="countdown-label" id="countdownLabelTarde">AGUARDANDO</div>
+</div>
+
+<div class="time-slot" data-time="15:00" data-event-type="start">
+<span class="time-label">14:35</span>
+<div class="event">1º e 2ºEF</div>
+</div>
+<div class="time-slot" data-time="15:15">
+<span class="time-label">15:55</span>
+<div class="event">3º ao 5º</div>
+</div>
+<div class="time-slot" data-time="15:45">
+<span class="time-label">15:45</span>
+<div class="event">6º ao 9º</div>
+</div>
+<div class="time-slot" data-time="16:00" data-event-type="end">
+<span class="time-label"></span>
+<div class="event" style="background: #fff; color: #666; border-color: transparent;"></div>
+</div>
+</div>
+</div>
+
+<div class="turno" id="turnoSexta">
+<div class="turno-header">Sexta</div>
+<div class="timeline" id="timelineSexta" data-start-time="13:15" data-end-time="16:00">
+
+<div class="current-time-line" id="currentTimeLineSexta">
+<div class="current-time-dot"></div>
+<div class="countdown-label" id="countdownLabelSexta">AGUARDANDO</div>
 </div>
 
 <div class="time-slot" data-time="15:00" data-event-type="start">
@@ -249,16 +272,24 @@ const [h, m] = time.split(":").map(Number);
 return h * 60 + m;
 }
 
-const allRecreios = [
+const allRecreios = {
+Manha: [
 { start: "08:55", end: "09:10" },
 { start: "09:15", end: "09:30" },
-{ start: "09:45", end: "10:00" },
+{ start: "09:45", end: "10:00" }
+],
+Tarde: [
 { start: "15:00", end: "15:15" },
 { start: "15:15", end: "15:30" },
 { start: "15:45", end: "16:00" }
-];
+],
+Sexta: [
+{ start: "15:00", end: "15:15" },
+{ start: "15:15", end: "15:30" },
+{ start: "15:45", end: "16:00" }
+]
+};
 
-// 1. Configura as posições iniciais dos eventos
 function setTimeSlotPositions(timelineId) {
 const timeline = document.getElementById(timelineId);
 const startTime = timeToMinutes(timeline.getAttribute("data-start-time"));
@@ -270,7 +301,6 @@ const time = timeToMinutes(slot.getAttribute("data-time"));
 
 let percent = ((time - startTime) / totalMinutes) * 100;
 
-// Usa um offset para levar em conta o padding superior/inferior da timeline
 const PADDING_OFFSET = 5; 
 percent = PADDING_OFFSET + percent * (100 - 2 * PADDING_OFFSET) / 100;
 
@@ -283,9 +313,14 @@ slot.style.top = percent + "%";
 
 setTimeSlotPositions("timelineManha");
 setTimeSlotPositions("timelineTarde");
+setTimeSlotPositions("timelineSexta");
 
+function updateHeaderTime() {
+const now = new Date();
+const headerTime = document.getElementById("headerCurrentTime");
+headerTime.textContent = now.toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+}
 
-// 2. Atualiza a linha do tempo e o cronômetro para um turno específico
 function updateTurnoTimeline(idPrefix) {
 const now = new Date();
 const currentMinutesTotal = now.getHours() * 60 + now.getMinutes() + now.getSeconds() / 60;
@@ -296,32 +331,18 @@ const endTime = timeToMinutes(timelineElement.getAttribute("data-end-time"));
 const totalMinutes = endTime - startTime;
 
 const line = document.getElementById(`currentTimeLine${idPrefix}`);
-const label = document.getElementById(`currentTimeLabel${idPrefix}`);
 const countdownLabel = document.getElementById(`countdownLabel${idPrefix}`);
 
-// --------------------------------
-// 2.1. Controle de Visibilidade
-// --------------------------------
-
 if (currentMinutesTotal < startTime || currentMinutesTotal > endTime) {
-	// Oculta a linha e zera o contador se estiver fora do período
 	line.style.display = 'none';
-	// O label de horário só é atualizado se o turno estiver ativo
-	label.textContent = "--:--:--"; 
 	countdownLabel.textContent = "AGUARDANDO";
 	return;
 }
 
-// Se chegou aqui, estamos DENTRO do turno
 line.style.display = 'block';
-
-// --------------------------------
-// 2.2. Posicionamento e Horário Atual
-// --------------------------------
 
 let percent = ((currentMinutesTotal - startTime) / totalMinutes) * 100;
 
-// Aplica o mesmo offset usado para os slots para alinhar a linha
 const PADDING_OFFSET = 5;
 percent = PADDING_OFFSET + percent * (100 - 2 * PADDING_OFFSET) / 100;
 
@@ -329,34 +350,23 @@ if (percent < 0) percent = 0;
 if (percent > 100) percent = 100;
 
 line.style.top = percent + "%";
-label.textContent = now.toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
-
-// --------------------------------
-// 2.3. Lógica do Cronômetro
-// --------------------------------
 
 let targetMinutes = null;
 let isBreakActive = false;
 
-// Filtra os recreios apenas para este turno
-const turnoRecreios = allRecreios.filter(rec => {
-	const start = timeToMinutes(rec.start);
-	const end = timeToMinutes(rec.end);
-	return start >= startTime && end <= endTime;
-});
-
+const turnoRecreios = allRecreios[idPrefix];
 
 for (let rec of turnoRecreios) {
 const start = timeToMinutes(rec.start);
 const end = timeToMinutes(rec.end);
 
-if (currentMinutesTotal < start) {
-targetMinutes = start; // Contar até o INÍCIO do próximo recreio
-break;
-} else if (currentMinutesTotal >= start && currentMinutesTotal < end) {
-targetMinutes = end; // Contar até o FIM do recreio atual
-isBreakActive = true;
-break;
+if (currentMinutesTotal >= start && currentMinutesTotal < end) {
+	targetMinutes = end; // Time until the end of the current break
+	isBreakActive = true;
+	break;
+} else if (currentMinutesTotal < start) {
+	targetMinutes = start; // Time until the start of the next break
+	break;
 }
 }
 
@@ -367,22 +377,21 @@ if (targetMinutes !== null) {
 	if (diffSeconds > 0) {
 		const mm = String(Math.floor(diffSeconds / 60)).padStart(2, "0");
 		const ss = String(diffSeconds % 60).padStart(2, "0");
-		const prefix = isBreakActive ? "RECREIO: -" : "AULA: -";
+		const prefix = isBreakActive ? "FIM DO RECREIO: -" : "PRÓXIMO RECREIO: -";
 		countdownLabel.textContent = `${prefix}${mm}:${ss}`;
 	} else {
-		// Contagem regressiva chegou a zero (momento da transição)
-		countdownLabel.textContent = isBreakActive ? "RECREIO AGORA!" : "PRÓXIMO RECREIO!";
+		countdownLabel.textContent = isBreakActive ? "RECREIO TERMINOU!" : "RECREIO AGORA!";
 	}
 } else {
-	// Não há mais recreios, mas o turno ainda não terminou
 	countdownLabel.textContent = "FIM DOS RECREIOS";
 }
 }
 
-// Função principal de atualização
 function updateAllTimelines() {
+updateHeaderTime();
 updateTurnoTimeline("Manha");
 updateTurnoTimeline("Tarde");
+updateTurnoTimeline("Sexta");
 }
 
 setInterval(updateAllTimelines, 1000);
