@@ -66,6 +66,7 @@
     font-size: 14px;
     font-weight: 600;
     font-family: 'Roboto';
+    
 }
 .nome span {
     color: rgb(160, 160, 160);
@@ -96,4 +97,39 @@
 }
 .maisBox {
     text-align: right;
+}
+
+
+.textoaniv {
+    width: 100%;
+}
+
+.linhasuperior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nomegrande {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 2px 0px 2px 6px;
+    color: rgb(73, 73, 73);
+}
+
+.datagrande {
+    font-weight: 600;
+}
+
+.linhainferior {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 2px 0px 2px 6px;;
+    color: rgb(153, 153, 153);
+}
+.separator {
+    height: 0.5px;
+    background-color: lightgray;
+    width: 100%;
+
 }
