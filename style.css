@@ -157,11 +157,9 @@ main#conteinerhome {
     background-color: #fff;
     border-radius: 12px;
     position: relative;
-    /* height: 480px; */
 }
 
 /* Links rápidos */
-
 .titulodivhomelinksrapidos {
     color: #B52532;
     font-weight: bold;
@@ -170,7 +168,7 @@ main#conteinerhome {
 }
 
 .linksrapidos .img:hover {
-    background-color: #ededed;
+    transform: scale(1.15);
 }
 
 .img {
@@ -182,8 +180,7 @@ main#conteinerhome {
     padding: 16px 0px;
     border-radius: 12px;
     margin: 4px;
-    transition: all .3s;
-    /* border: 1px solid red; */
+    transition: all .3s ease;
 }
 
 .img i.fa-calendar,

@@ -48,7 +48,6 @@
 }
 
 .escala:hover {
-    /* background-color: #f5f5f5; */
     cursor: pointer;
     transform: scale(1.05);
 }
