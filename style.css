@@ -6,6 +6,7 @@
     --border-radius: 12px;
     --transition: all .3s ease;
 }
+
 /* Reset */
 * {
     margin: 0;
@@ -14,8 +15,15 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-html { scroll-behavior: smooth; }
-body { background-color: var(--bg-color); }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
 /* Scroll Top Button */
 .scrollTopButton {
     background-color: var(--primary-color);
@@ -37,11 +45,13 @@ body { background-color: var(--bg-color); }
     z-index: 1000;
     cursor: pointer;
 }
+
 .scrollTopButton.active {
     bottom: 30px;
     pointer-events: auto;
     opacity: 1;
 }
+
 .scrollTopButton:hover {
     background-color: var(--primary-dark);
 }
@@ -52,7 +62,7 @@ body { background-color: var(--bg-color); }
 
 /* Layout containers */
 .conteinergeral {
-    /* border: 2px solid red; */
+
     width: 98%;
     max-width: 1500px;
     margin: auto;
@@ -60,11 +70,13 @@ body { background-color: var(--bg-color); }
     grid-template: 1fr auto / 1fr;
     height: fit-content;
 }
+
 main#conteinerhome {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
+
 /* Header styles */
 #header, #headerAdm {
     display: flex;
@@ -75,16 +87,19 @@ main#conteinerhome {
     margin: 1rem 0;
     padding: .5rem;
 }
+
 /* Navigation and Alert icons */
 #nav-adm i, #nav-espiritual i, #nav-matriculas i, #nav-ama i {
     margin-right: 5px;
 }
+
 .alert_icons {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
+
 .alert_icons span {
     margin: 0 .6rem;
     color: var(--primary-color);
@@ -95,15 +110,19 @@ main#conteinerhome {
     font-weight: 600;
     transition: transform 0.3s ease;
 }
+
 .alert_icons span:hover {
     color: #132554;
-    transform: scale(1.4); /* Aumenta o tamanho em 10% */
+    transform: scale(1.4);
+    /* Aumenta o tamanho em 10% */
 }
+
 #menu, #menuAdm {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 #menu a, #menuAdm a {
     display: block;
     margin: 0 10px;
@@ -115,10 +134,12 @@ main#conteinerhome {
     transition: all ease-in-out .3s;
     text-decoration: none;
 }
+
 #menu a:hover, #menuAdm a:hover {
     /* background-color: #253B73; */
     color: gray;
 }
+
 #logo, #logoAdm {
     font-size: 1.5rem;
     font-weight: bolder;
@@ -126,10 +147,12 @@ main#conteinerhome {
     color: #fff;
     padding-left: 1rem;
 }
+
 #btn-mobile {
     display: none;
     color: white;
 }
+
 .divhome {
     background-color: #fff;
     border-radius: 12px;
@@ -149,6 +172,7 @@ main#conteinerhome {
 .linksrapidos .img:hover {
     background-color: #ededed;
 }
+
 .img {
     display: flex;
     flex-direction: column;
@@ -157,27 +181,22 @@ main#conteinerhome {
     cursor: pointer;
     padding: 16px 0px;
     border-radius: 12px;
-    margin: 8px;
+    margin: 4px;
     transition: all .3s;
     /* border: 1px solid red; */
 }
-.img i.fa-comments,
+
 .img i.fa-calendar,
 .img i.fa-envelope,
 .img i.fa-desktop,
-.img i#fa-chart-pie,
-.img i.fa-chart-simple,
 .img i.fa-bolt,
-.img i.fa-chalkboard-user,
-.img i.fa-suitcase-medical,
-.img i#fa-briefcase-medical,
+.img i.fa-address-card,
 .img i.fa-unlock,
 .img i.fa-file-lines,
 .img i.fa-comments-dollar,
-.img i.fa-user-tie,
 .img i.fa-file-pen,
-.img i.fa-address-card,
-.img i.fa-comment-dots {
+.img i.fa-comment-dots,
+.img i.fa-money-check-dollar {
     color: #253B73;
     text-align: center;
 }
@@ -189,52 +208,62 @@ main#conteinerhome {
     padding-top: .5rem;
     text-align: center;
 }
-#bi {
-    width: 57px;
-}
-#rh {
-    width: 20px;
-}
+
+
+
+
+
+
 /* width */
 #modalurgencias::-webkit-scrollbar {
     width: .4rem;
 }
+
 /* Track */
 #modalurgencias::-webkit-scrollbar-track {
     /* box-shadow: inset 0 0 5px grey;  */
     border-radius: 2px;
 }
+
 /* Handle */
 #modalurgencias::-webkit-scrollbar-thumb {
     background: #7c7c7c;
     border-radius: 10px;
 }
+
 /* Handle on hover */
 #modalurgencias::-webkit-scrollbar-thumb:hover {
     background-color: #a8a8a8;
 
 }
+
 #amadomenu, #fonesemergenciadomenu {
     display: none !important;
 }
+
 .conteinerhorarios ul li {
     list-style: none;
 }
+
 #arm img {
     width: 30px;
     border-radius: 50%;
 }
+
 .imgculto img {
     width: 1rem;
 }
+
 .imgcultotarde img {
     width: 1.4rem;
 }
+
 #escalacompensacao {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .conteiner {
     position: relative;
     padding: 1rem;
@@ -242,18 +271,22 @@ main#conteinerhome {
     margin: 0 auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
 .fa-solid {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     transition: ease .3s;
 }
+
 .fa-angle-left {
     left: 0;
     margin-right: 1rem;
 }
+
 .fa-angle-right {
     right: 0;
     margin-left: 1rem;
 }
+
 .item {
     width: 9rem;
     height: 9rem;
@@ -270,22 +303,27 @@ main#conteinerhome {
 .current-item {
     opacity: 1;
 }
+
 .gallery-wrapper {
     overflow-x: auto;
 }
+
 .gallery-wrapper::-webkit-scrollbar {
     display: none;
 }
+
 .gallery {
     display: flex;
     flex-flow: row nowrap;
     gap: 1rem;
 }
+
 .navbuttons {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .control {
     color: #36bedd;
     cursor: pointer;
@@ -301,12 +339,15 @@ main#conteinerhome {
     /* border: 1px solid red; */
 
 }
+
 .control:hover {
     background-color: #eeeeee;
 }
+
 .emergenciasul {
     overflow: auto;
 }
+
 .footerprincipal {
     display: flex;
     justify-content: center;
@@ -315,6 +356,7 @@ main#conteinerhome {
     padding: 3rem 1rem;
     margin: 1rem 0 0 0;
 }
+
 .footerprincipal a {
     padding: 0 1rem;
     color: gray;
@@ -322,19 +364,23 @@ main#conteinerhome {
     font-family: 'Roboto condensed', sans-serif;
     font-size: 1rem;
 }
+
 .footerprincipal a:hover {
     text-decoration: none;
     color: #0D6EFD;
 }
+
 #linknovoatendimento {
     display: flex;
     align-items: center;
     color: #253B73;
     font-weight: 600;
 }
+
 #linknovoatendimento i {
     margin-right: .5rem;
 }
+
 /* ============ MEDIA QUERIES =============== */
 @media (max-width: 1290px) {
 
@@ -449,16 +495,18 @@ main#conteinerhome {
         margin-top: .5rem;
     }
 
-    
+
     #modalramais ul {
         width: 60%;
     }
 }
+
 @media (max-width: 1100px) {
     #modalramais ul {
         width: 70%;
     }
 }
+
 @media (max-width: 920px) {
 
     .important {
@@ -489,8 +537,9 @@ main#conteinerhome {
         padding: 1rem;
         border-radius: 10px;
     }
-    
+
 }
+
 @media (max-width: 700px) {
 
     main#conteinerhome {
