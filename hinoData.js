@@ -15,8 +15,8 @@ export const responsaveisHino = (() => {
   const responsaveis = [
     ["Rocha", "Kadu"],
     ["Murilo", "Diretor"],
-    ["Rocha", "Diretor"],
-    ["Jaque", "Camila"],
+    ["Rocha", "Camila"],
+    ["Jaque", "Diretor"],
     ["Joyce", "Valéria"],
     ["Carol", "Kadu"],
     ["Renata", "Diretor"],

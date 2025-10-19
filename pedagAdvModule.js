@@ -87,6 +87,7 @@ export const pausas = [
   new Date(2025, 8, 2), 
   new Date(2025, 8, 9), 
   new Date(2025, 8, 23), 
+  new Date(2025, 8, 30), 
 ];
 
 export function gerarEscaladosComData() {
