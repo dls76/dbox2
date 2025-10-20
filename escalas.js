@@ -24,9 +24,9 @@ const reuniaoadm = [
     // { data: new Date(2025, 8, 23), link: '', hora: '14h' },
     { data: new Date(2025, 8, 30), link: 'https://docs.google.com/document/d/1NrnHGk3vgIgrfiN0LUcnqeXMsN1kU-xurS2EgN7V3yk/edit?usp=sharing', hora: '14h' },
     { data: new Date(2025, 9, 7), link: 'https://docs.google.com/document/d/1WtREV632jRyvXGe9SdccGj6y2FPWPStPca_E5ISKZOY/edit?usp=sharing', hora: '14h' },
-    { data: new Date(2025, 9, 14), link: '', hora: '14h' },
-    { data: new Date(2025, 9, 21), link: '', hora: '14h' },
-    { data: new Date(2025, 9, 28), link: '', hora: '14h' },
+    // { data: new Date(2025, 9, 14), link: '', hora: '14h' },
+    { data: new Date(2025, 9, 21), link: 'https://docs.google.com/document/d/1_tlxUxNNk7TrjnGI8-0AKoX1boDgZAOW5uSWacW5Q3I/edit?tab=t.0', hora: '14h' },
+    { data: new Date(2025, 9, 28), link: 'https://docs.google.com/document/d/1U0-HyvKdmFSXpREEuOt-A05Ty5LI_5c5txBrzIUvj1I/edit?usp=sharing', hora: '14h' },
     
 ];
 
