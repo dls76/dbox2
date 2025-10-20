@@ -323,7 +323,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round"
                     d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg> -->
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"  width="30px"
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
                   stroke="#253B73" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round"
                     d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
@@ -843,6 +843,7 @@
           </svg>
           <p>CAC</p>
         </a>
+        
         <a href="https://docs.google.com/document/d/1XZjyDDu_iti9YoIzxXMakkT-tR0oOBMB/edit" target="_blank">
           <svg class="svg_educ" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-plus"
             width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
@@ -857,10 +858,7 @@
           </svg>
           <p>Depto</p>
         </a>
-        <!-- <a href="" >
-    <svg class="svg_educ" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M16 19h6" /><path d="M19 16v6" /></svg>
-    <p>Educação 2025</p>
-  </a> -->
+        
         <a href="docs/calendarioPais2025_2.pdf" target="_blank">
           <svg class="svg_pais" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-user"
             width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
@@ -875,6 +873,7 @@
           </svg>
           <p>Pais</p>
         </a>
+
         <a href="https://docs.google.com/spreadsheets/d/1vuAQ73-jEuJwb5Fyert804TDYFlgRStI/edit?gid=316696650#gid=316696650"
           target="_blank">
           <svg class="svg_asp" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-church"
@@ -1027,7 +1026,7 @@
   <script src="calendario.js" defer></script>
   <script src="script.js" defer></script>
   <script src="ramais.js" defer></script>
-  <script src="escalaCultoRA.js" defer></script>
+  <!-- <script src="escalaCultoRA.js" defer></script> -->
   <script src="modalUrgencias.js" defer></script>
   <script type="module" src="escalas.js"></script>
   <script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
@@ -1625,24 +1624,26 @@
   <script type="module">
     import { entrevistasPadrao, alteracoes } from './entrevistas-data.js';
 
-    const DiaDehoje = new Date();
-    const dataDeHoje = DiaDehoje.getDay();
-    const content = document.getElementById("entrevistascontent");
+    document.addEventListener("DOMContentLoaded", () => {
+      const DiaDeHoje = new Date();
+      const dataDeHoje = DiaDeHoje.getDay();
+      const content = document.getElementById("entrevistascontent");
 
-    if (dataDeHoje >= 1 && dataDeHoje <= 5) {
-      let escala = entrevistasPadrao[dataDeHoje - 1];
-      const dataISO = hoje.toISOString().split("T")[0];
-      const alteracao = alteracoes.find(a => a.data === dataISO);
-
-      if (alteracao) {
-        escala = alteracao.substituto;
+      if (dataDeHoje >= 1 && dataDeHoje <= 5) {
+        let escala = entrevistasPadrao[dataDeHoje - 1];
+        const dataISO = DiaDeHoje.toISOString().split("T")[0];
+        const alteracao = alteracoes.find(a => a.data === dataISO);
+        if (alteracao) {
+          escala = alteracao.substituto;
+        }
+        const [manha, tarde] = escala.split(" e ");
+        content.textContent = `${manha} / ${tarde}`;
+      } else {
+        content.textContent = "Sem entrevistas hoje";
       }
+    });
 
-      const [manha, tarde] = escala.split(" e ");
-      content.textContent = `${manha} / ${tarde}`;
-    } else {
-      content.textContent = "Sem entrevistas hoje";
-    }
+
   </script>
 
   <!-- ========================= Modal conselheiros e representantes =======================-->
