@@ -37,7 +37,7 @@
     font-family: 'Open sans', sans-serif;
 }
 .contentescala {
-    font-family: 'Open sans', sans-serif;
+    font-family: 'Roboto condensed', sans-serif !important;
     color: #575757;
     /* font-weight: 500; */
     font-size: .8rem;

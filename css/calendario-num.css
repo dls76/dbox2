@@ -81,7 +81,7 @@ i.fa-chevron-right, i.fa-chevron-left {
     align-items: center;
     color: #060f27;
     font-weight: 800;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open-sans', sans-serif;
 }
 
 .days {
@@ -103,7 +103,7 @@ i.fa-chevron-right, i.fa-chevron-left {
     font-weight: 600;
     transition: ease-in .1s;
     border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open-sans', sans-serif;
     color: #272727;
     color: #5e7ed3;
 }

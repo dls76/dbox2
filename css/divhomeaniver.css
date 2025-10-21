@@ -57,7 +57,7 @@
 .semAniversariantes {
     color: rgb(173, 173, 173);
     padding: 1.5rem;
-    font-family: 'Arial narrow';
+    /* font-family: 'Arial narrow'; */
     font-family: 'Roboto condensed';
 }
 .nome {
@@ -71,7 +71,8 @@
 .nome span {
     color: rgb(160, 160, 160);
     font-weight: 400;
-    font-family: 'Roboto';
+    
+    font-family: 'Open-sans';
     padding-left: 4px;
 }
 .data {
@@ -80,7 +81,7 @@
     border-radius: 10px;
     color: white;
     font-size: 14px;
-    font-family: 'Roboto';
+    font-family: 'Open-sans';
     padding: 6px 10px;
 }   
 .mais {
@@ -107,6 +108,8 @@
 .linhasuperior {
     display: flex;
     justify-content: space-between;
+    font-family: 'Open-sans', sans-serif;
+
 }
 
 .nomegrande {
@@ -121,6 +124,7 @@
 }
 
 .linhainferior {
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: space-between;
     font-size: 12px;
