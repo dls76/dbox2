@@ -7,7 +7,8 @@ const urls = [
     "https://mail.google.com/mail/u/0/#inbox",
     "https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/ce8c1804-01c9-4c89-a084-3d8913c40bb8/870332ce8437ac7e07ff?language=pt-BR&experience=power-bi",
     "https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/ce8c1804-01c9-4c89-a084-3d8913c40bb8/ReportSectionbb1fb9cc10a796904324?language=pt-BR&experience=power-bi",
-    "https://acrm.sdasystems.org/educacao-web/login/" 
+    "https://acrm.sdasystems.org/educacao-web/login/",
+    "https://web.whatsapp.com/"
 ];
 
 // Função que tenta abrir todas as urls em novas guias
