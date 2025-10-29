@@ -21,13 +21,16 @@ const reuniaoadm = [
     { data: new Date(2025, 7, 18), link: 'https://docs.google.com/document/d/1iTs47KmO27mXWd0oPldx-0EXXaywiY9dtqz1Vawf5BM/edit?usp=sharing', hora: '14h' },
     { data: new Date(2025, 7, 29), link: 'https://docs.google.com/document/d/1K2gXKMgq7d3cZWjOCJYjPDUdy2Wb9RlxhTorX3EkCXY/edit?usp=sharing', hora: '8h30' },
     { data: new Date(2025, 8, 16), link: 'https://docs.google.com/document/d/1h2hQU9z5AUp_6njmtqS0UX_uTKV2TyQjkEoRXEijTSE/edit?usp=sharing', hora: '14h' },
-    // { data: new Date(2025, 8, 23), link: '', hora: '14h' },
     { data: new Date(2025, 8, 30), link: 'https://docs.google.com/document/d/1NrnHGk3vgIgrfiN0LUcnqeXMsN1kU-xurS2EgN7V3yk/edit?usp=sharing', hora: '14h' },
     { data: new Date(2025, 9, 7), link: 'https://docs.google.com/document/d/1WtREV632jRyvXGe9SdccGj6y2FPWPStPca_E5ISKZOY/edit?usp=sharing', hora: '14h' },
-    // { data: new Date(2025, 9, 14), link: '', hora: '14h' },
     { data: new Date(2025, 9, 21), link: 'https://docs.google.com/document/d/1_tlxUxNNk7TrjnGI8-0AKoX1boDgZAOW5uSWacW5Q3I/edit?tab=t.0', hora: '14h' },
     { data: new Date(2025, 9, 28), link: 'https://docs.google.com/document/d/1U0-HyvKdmFSXpREEuOt-A05Ty5LI_5c5txBrzIUvj1I/edit?usp=sharing', hora: '14h' },
-    
+    { data: new Date(2025, 10, 4), link: 'https://docs.google.com/document/d/1MEIgS-yGYogOjlLliaywcj67VqGu_64W0SW386Xp9V8/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 10, 11), link: 'https://docs.google.com/document/d/1sdmtr8fhrL7XrqV6eDSaFdsjCBVujpMIhs7tUZOKBFU/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 10, 18), link: 'https://docs.google.com/document/d/1EWCe_HXD2KVrwpfsD2OPkcyAzWnS0F5Q3yuy2B-xwRQ/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 10, 25), link: 'https://docs.google.com/document/d/1wDSdFT5XfIm8JFpe3tfzhLoPwY5-DSnza3tKP6J9uww/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 11, 2), link: 'https://docs.google.com/document/d/1jWFcwf38TIuqpbgumEAu0myclgpkJ_bsglu5oWdPYTA/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 11, 9), link: 'https://docs.google.com/document/d/1r92SvsQZ_o09BsAoweLKbGZX3wmHtLSrra9Hxf-iufk/edit?usp=sharing', hora: '14h' },    
 ];
 
 const diaDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
@@ -182,13 +185,8 @@ motivoOracao.innerHTML = 'Feliz Sábado'
 }
 }
 function motivoDeOracao() {
-    
     document.getElementById("motivoDeOracao").addEventListener("click", function(event) {
     event.preventDefault(); // impede o link de recarregar a página
     alert("Você clicou no link!");
   });
-
-
-
-
 }
