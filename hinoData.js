@@ -17,7 +17,7 @@ export const responsaveisHino = (() => {
     ["Murilo", "Diretor"],
     ["Rocha", "Camila"],
     ["Jaque", "Diretor"],
-    ["Joyce", "Valéria"],
+    ["Diretor", "Valéria"],
     ["Carol", "Kadu"],
     ["Renata", "Diretor"],
     ["Andressa", "Murilo"],
