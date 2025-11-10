@@ -6,14 +6,14 @@ export const pessoas = [
     {nome: "Tiago Moreira", data: new Date(2024, 0, 1), dia: 1, mes: 0, ano: 1998, funcao: "Professor", foto: 'img/anivImg/user.png'},
     {nome: "Solange de Jesus Camargo", data: new Date(2024, 0, 4), dia: 4, mes: 0, ano: 1977, funcao: "Professora", foto:"img/anivImg/user.png"},
     {nome: "Simone Figueiredo Boso", data: new Date(2024, 0, 13), dia: 13, mes: 0, ano: 1974, funcao: "Professora", foto:"img/anivImg/janeiro/simone.jpg"},
-    {nome: "Maria de Lourdes Cardoso de Oliveira Dubinski", data: new Date(2024, 0,  ), dia: 14, mes: 0, ano: 1963, funcao: "Orientadora", foto:"img/anivImg/janeiro/malu.jpg"},
+    // {nome: "Maria de Lourdes Cardoso de Oliveira Dubinski", data: new Date(2024, 0,  ), dia: 14, mes: 0, ano: 1963, funcao: "Orientadora", foto:"img/anivImg/janeiro/malu.jpg"},
     {nome: "Camila dos Anjos Moura", data: new Date(2024, 0, 20), dia: 20, mes: 0, ano: 1990, funcao: "Coordenadora", foto:"img/anivImg/janeiro/camila.jpg"},
     {nome: "Lidia Aparecida Andrades Montes", data: new Date(2024, 0, 28), dia: 28, mes: 0, ano: 1965, funcao: "Professora", foto:"img/anivImg/janeiro/lidia.jpg"},
     
     {nome: "Andressa Cristina Schmidt dos Santos", data: new Date (2024, 1, 7), dia: 7, mes: 1, ano: 1985, funcao: "Orientadora", foto:"img/anivImg/fevereiro/andressa.jpg"},
     {nome: "Margarete Ilheu", data: new Date (2024, 1, 12), dia: 12, mes: 1, ano: 0, funcao: "Professora", foto:"img/anivImg/fevereiro/margarete.jpg"},
     {nome: "Lucia Milczuk", data: new Date (2024, 1, 16), dia: 16, mes: 1, ano: 1960, funcao: "Monitora", foto:"img/anivImg/fevereiro/lucia.jpg"},
-    {nome: "Julia Rocha de Magalhães", data: new Date (2024, 1, 18), dia: 18, mes: 1, ano: 2000, funcao: "Recepcionista", foto:"img/anivImg/fevereiro/julia.jpg"},
+    // {nome: "Julia Rocha de Magalhães", data: new Date (2024, 1, 18), dia: 18, mes: 1, ano: 2000, funcao: "Recepcionista", foto:"img/anivImg/fevereiro/julia.jpg"},
     {nome: "Luciane Silverio Desbessel", data: new Date (2024, 1, 21), dia: 21, mes: 1, ano: 1978, funcao: "Professora", foto:"img/anivImg/fevereiro/luciane.jpg"},
 
     {nome: "Rosiane Gonzales dos Reis", data: new Date(2024, 2, 2), dia: 2, mes: 2, ano: 1971, funcao: "Professora", foto: 'img/anivImg/marco/rosiane.jpg'},
@@ -46,10 +46,10 @@ export const pessoas = [
     
     {nome: "Ana Prado Bevilaqua", data: new Date(2024, 6, 4), dia: 4, mes: 6, ano: 1978, funcao: "Função", foto: 'img/anivImg/julho/anaprado.jpg'},
     {nome: "Cacilda Smaha Mannala", data: new Date(2024, 6, 16), dia: 16, mes: 6, ano: 1972, funcao: "Função", foto: 'img/anivImg/julho/cacilda.jpg'},
-    {nome: "Ana Amelia Loureço Simas", data: new Date(2024, 6, 21), dia: 21, mes: 6, ano: 1978, funcao: "Função", foto: 'img/anivImg/julho/ana.jpg'},
+    // {nome: "Ana Amelia Loureço Simas", data: new Date(2024, 6, 21), dia: 21, mes: 6, ano: 1978, funcao: "Função", foto: 'img/anivImg/julho/ana.jpg'},
     {nome: "Egislaine Regina Gonsaga", data: new Date(2024, 6, 22), dia: 22, mes: 6, ano: 1978, funcao: "Função", foto: 'img/anivImg/julho/egislaine.jpg'},
     {nome: "Luciana de Moraes Jardim", data: new Date(2024, 6, 22), dia: 22, mes: 6, ano: 1972, funcao: "Função", foto: 'img/anivImg/julho/luciana.jpg'},
-    {nome: "Nailson Veras do Nascimento", data: new Date(2024, 6, 24), dia: 24, mes: 6, ano: 1979, funcao: "Função", foto: 'img/anivImg/julho/nailson.jpg'},
+    // {nome: "Nailson Veras do Nascimento", data: new Date(2024, 6, 24), dia: 24, mes: 6, ano: 1979, funcao: "Função", foto: 'img/anivImg/julho/nailson.jpg'},
     {nome: "Mônica Cristina Martins de Novais", data: new Date(2024, 6, 31), dia: 31, mes: 6, ano: 1979, funcao: "Função", foto: 'img/anivImg/julho/monica.jpg'},
     
     {nome: "Vanessa Moura de Freitas", data: new Date(2024, 7, 2), dia: 2, mes: 7, ano: 1985, funcao: "Zeladora", foto: 'img/anivImg/Agosto/vanessa.png'},
