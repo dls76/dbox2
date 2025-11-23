@@ -119,7 +119,6 @@ export let plantaosexta = [
 ];
 
 
-
 export let plantao19h = [
     { data: new Date(2025, 7, 2), tour: "Priscila", financeiro: "Josi", entrevista: "Andressa", secretaria: "Carin"},
     { data: new Date(2025, 8, 4), tour: "Priscila", financeiro: "Alícia", entrevista: "Murilo", secretaria: "Isa"},
