@@ -28,7 +28,7 @@ const reuniaoadm = [
     { data: new Date(2025, 10, 4), link: 'https://docs.google.com/document/d/1MEIgS-yGYogOjlLliaywcj67VqGu_64W0SW386Xp9V8/edit?usp=sharing', hora: '14h' },
     { data: new Date(2025, 10, 11), link: 'https://docs.google.com/document/d/1sdmtr8fhrL7XrqV6eDSaFdsjCBVujpMIhs7tUZOKBFU/edit?usp=sharing', hora: '14h' },
     { data: new Date(2025, 10, 18), link: 'https://docs.google.com/document/d/1EWCe_HXD2KVrwpfsD2OPkcyAzWnS0F5Q3yuy2B-xwRQ/edit?usp=sharing', hora: '14h' },
-    { data: new Date(2025, 10, 25), link: 'https://docs.google.com/document/d/1wDSdFT5XfIm8JFpe3tfzhLoPwY5-DSnza3tKP6J9uww/edit?usp=sharing', hora: '14h' },
+    { data: new Date(2025, 10, 25), link: 'https://docs.google.com/document/d/1wDSdFT5XfIm8JFpe3tfzhLoPwY5-DSnza3tKP6J9uww/edit?usp=sharing', hora: '15h30' },
     { data: new Date(2025, 11, 2), link: 'https://docs.google.com/document/d/1jWFcwf38TIuqpbgumEAu0myclgpkJ_bsglu5oWdPYTA/edit?usp=sharing', hora: '14h' },
     { data: new Date(2025, 11, 9), link: 'https://docs.google.com/document/d/1r92SvsQZ_o09BsAoweLKbGZX3wmHtLSrra9Hxf-iufk/edit?usp=sharing', hora: '14h' },    
 ];
