@@ -115,7 +115,7 @@ export let plantaosexta = [
     { data: new Date(2025, 10, 21), person: "Douglas", monitoria: "" },
     { data: new Date(2025, 10, 28), person: "Vinícius", monitoria: "" },
     { data: new Date(2025, 11, 5), person: "Leonardo", monitoria: "" },
-    { data: new Date(2025, 12, 12), person: "Murilo", monitoria: "" }
+    // { data: new Date(2025, 12, 12), person: "Murilo", monitoria: "" }
 ];
 
 
