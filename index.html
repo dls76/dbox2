@@ -129,7 +129,7 @@
               </div>
             </a>
 
-            <a href="https://docs.google.com/spreadsheets/d/1XgJ3i5FjlNIdp7oUJUFRQGwDOmcO_uwonZvhxzoY-lk/edit?gid=0#gid=0"
+            <!-- <a href="https://docs.google.com/spreadsheets/d/1XgJ3i5FjlNIdp7oUJUFRQGwDOmcO_uwonZvhxzoY-lk/edit?gid=0#gid=0"
               target="_blank">
               <div class="escala">
                 <div class="icon"><img src="img/yes.png" id="icon-compensacao" /></div>
@@ -140,7 +140,7 @@
                   </div><i class="fa-solid fa-angle-right seta"></i>
                 </div>
               </div>
-            </a>
+            </a> -->
 
             <!-- <a href="plantaoSexta.html" target="_blank">
               <div class="escala" id="escalasexta">
@@ -165,7 +165,7 @@
               </div>
             </a> -->
 
-            <a id="ralink" target="_blank">
+            <!-- <a id="ralink" target="_blank">
               <div class="escala">
                 <div class="icon"><img src="img/yes.png" alt="" /></div>
                 <div>
@@ -174,7 +174,7 @@
                   <i class="fa-solid fa-angle-right seta"></i>
                 </div>
               </div>
-            </a>
+            </a> -->
 
             <!-- <a href="hino.html" target="_blank">
               <div class="escala">
@@ -1078,7 +1078,7 @@
     function escalaDeEntrevistas() {
       const hoje = new Date();
       const diaDaSemana = hoje.getDay();
-      const ferias = false;
+      const ferias = true;
       const feriadoRecesso = false;
 
       const plantao = [
@@ -1507,18 +1507,19 @@
       const dataDeHoje = DiaDeHoje.getDay();
       const content = document.getElementById("entrevistascontent");
 
-      if (dataDeHoje >= 1 && dataDeHoje <= 5) {
-        let escala = entrevistasPadrao[dataDeHoje - 1];
-        const dataISO = DiaDeHoje.toISOString().split("T")[0];
-        const alteracao = alteracoes.find(a => a.data === dataISO);
-        if (alteracao) {
-          escala = alteracao.substituto;
-        }
-        const [manha, tarde] = escala.split(" e ");
-        content.textContent = `${manha} / ${tarde}`;
-      } else {
-        content.textContent = "Sem entrevistas hoje";
-      }
+      // if (dataDeHoje >= 1 && dataDeHoje <= 5) {
+      //   let escala = entrevistasPadrao[dataDeHoje - 1];
+      //   const dataISO = DiaDeHoje.toISOString().split("T")[0];
+      //   const alteracao = alteracoes.find(a => a.data === dataISO);
+      //   if (alteracao) {
+      //     escala = alteracao.substituto;
+      //   }
+      //   const [manha, tarde] = escala.split(" e ");
+      //   content.textContent = `${manha} / ${tarde}`;
+      // } else {
+      //   content.textContent = "Sem entrevistas hoje";
+      // }
+      content.textContent = "Murilo";
     });
 
 

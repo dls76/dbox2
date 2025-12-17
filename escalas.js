@@ -141,6 +141,7 @@ export let plantao19h = [
 const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Andressa", "Renata e Camila"]
 
 
+
 export const entrevistacontent = document.getElementById("entrevistascontent");
 
 if (entrevistacontent) { 
