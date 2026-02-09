@@ -30,15 +30,21 @@ export const responsaveisHino = (() => {
 
   // Escala fixa de responsáveis (a sequência que você quer manter)
   const responsaveis = [
-    ["Rocha", "Kadu"],
-    ["Murilo", "Diretor"],
-    ["Rocha", "Camila"],
-    ["Jaque", "Diretor"],
-    ["Diretor", "Valéria"],
-    ["Carol", "Kadu"],
-    ["Renata",  "Diretor"],
-    ["Andressa", "Murilo"],
     ["Diretor", "Rocha"],
+    ["Jaque", "Murilo"],
+    ["Andressa", "Camila"],
+    ["Carol", "Valéria"],
+    ["Renata", "Fábio"],
+    ["Joyce", "Diretor"],
+    ["Fábio",  "Rocha"],
+    ["Murilo",  "Camila"],
+    ["Diretor", "Murilo"],
+    ["Jaque", "Valéria"],
+    ["Andressa", "Fábio"],
+    ["Carol", "Diretor"],
+    ["Renata", "Rocha"],
+    ["Joyce", "Murilo"],
+    ["Fábio", "Camila"],
   ];
 
   const dataArray = [];
