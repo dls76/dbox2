@@ -1031,29 +1031,29 @@
       }
     }
 
-    // proximoPlantaoDeSexta(plantaosexta)
+    proximoPlantaoDeSexta(plantaosexta)
 
 
 
-    import { plantao19h } from './escalas.js'
+    // import { plantao19h } from './escalas.js'
 
-    function proximoPlantao19(array) {
-      const dataAtualizada = new Date();
-      const todayAtMidnight = new Date(dataAtualizada.getFullYear(), dataAtualizada.getMonth(), dataAtualizada.getDate(), 0, 0, 0, 0);
-      const futureDates = array.filter(item => item.data >= todayAtMidnight);
-      futureDates.sort((a, b) => a.data - b.data);
-      if (futureDates.length > 0) {
-        let dia = futureDates[0].data.getDate();
-        let mes = futureDates[0].data.getMonth() + 1;
-        dia = dia < 10 ? '0' + dia : dia;
-        mes = mes < 10 ? '0' + mes : mes;
-        let tour = futureDates[0].tour;
-        let financeiro = futureDates[0].financeiro;
-        let entrevista = futureDates[0].entrevista;
-        let secretaria = futureDates[0].secretaria;
-        document.querySelector('#plantao19h').innerHTML = `${dia}/${mes} - ${tour}, ${entrevista}, ${financeiro} e ${secretaria}`;
-      }
-    }
+    // function proximoPlantao19(array) {
+    //   const dataAtualizada = new Date();
+    //   const todayAtMidnight = new Date(dataAtualizada.getFullYear(), dataAtualizada.getMonth(), dataAtualizada.getDate(), 0, 0, 0, 0);
+    //   const futureDates = array.filter(item => item.data >= todayAtMidnight);
+    //   futureDates.sort((a, b) => a.data - b.data);
+    //   if (futureDates.length > 0) {
+    //     let dia = futureDates[0].data.getDate();
+    //     let mes = futureDates[0].data.getMonth() + 1;
+    //     dia = dia < 10 ? '0' + dia : dia;
+    //     mes = mes < 10 ? '0' + mes : mes;
+    //     let tour = futureDates[0].tour;
+    //     let financeiro = futureDates[0].financeiro;
+    //     let entrevista = futureDates[0].entrevista;
+    //     let secretaria = futureDates[0].secretaria;
+    //     document.querySelector('#plantao19h').innerHTML = `${dia}/${mes} - ${tour}, ${entrevista}, ${financeiro} e ${secretaria}`;
+    //   }
+    // }
 
     // proximoPlantao19(plantao19h)
 
@@ -1066,6 +1066,7 @@
 
     window.addEventListener("load", escalaDeEntrevistas);
 
+    
     function escalaDeEntrevistas() {
       const hoje = new Date();
       const diaDaSemana = hoje.getDay();
@@ -1494,23 +1495,23 @@
     import { entrevistasPadrao, alteracoes } from './entrevistas-data.js';
 
     document.addEventListener("DOMContentLoaded", () => {
-      const DiaDeHoje = new Date();
+      const DiaDeHoje = new Date(2026, 1, 9);
       const dataDeHoje = DiaDeHoje.getDay();
       const content = document.getElementById("entrevistascontent");
 
-      // if (dataDeHoje >= 1 && dataDeHoje <= 5) {
-      //   let escala = entrevistasPadrao[dataDeHoje - 1];
-      //   const dataISO = DiaDeHoje.toISOString().split("T")[0];
-      //   const alteracao = alteracoes.find(a => a.data === dataISO);
-      //   if (alteracao) {
-      //     escala = alteracao.substituto;
-      //   }
-      //   const [manha, tarde] = escala.split(" e ");
-      //   content.textContent = `${manha} / ${tarde}`;
-      // } else {
-      //   content.textContent = "Sem entrevistas hoje";
-      // }
-      content.textContent = "Murilo";
+      if (dataDeHoje >= 1 && dataDeHoje <= 5) {
+        let escala = entrevistasPadrao[dataDeHoje - 1];
+        const dataISO = DiaDeHoje.toISOString().split("T")[0];
+        const alteracao = alteracoes.find(a => a.data === dataISO);
+        if (alteracao) {
+          escala = alteracao.substituto;
+        }
+        const [manha, tarde] = escala.split(" e ");
+        content.textContent = `${manha} / ${tarde}`;
+      } else {
+        content.textContent = "Sem entrevistas hoje";
+      }
+      // content.textContent = "Murilo";
     });
 
 

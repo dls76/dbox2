@@ -105,24 +105,24 @@ export let plantaosexta = [
 
 
 
-export let plantao19h = [
-    { data: new Date(2025, 7, 2), tour: "Priscila", financeiro: "Josi", entrevista: "Andressa", secretaria: "Carin"},
-    { data: new Date(2025, 8, 4), tour: "Priscila", financeiro: "Alícia", entrevista: "Murilo", secretaria: "Isa"},
-    { data: new Date(2025, 8, 11), tour: "Priscila", financeiro: "Josi", entrevista: "Renata", secretaria: "Gabriel"},
-    { data: new Date(2025, 8, 18), tour: "Priscila", financeiro: "Alícia", entrevista: "Jaque", secretaria: "Carin"},
-    { data: new Date(2025, 8, 25), tour: "Priscila", financeiro: "Alícia", entrevista: "Valéria", secretaria: "Gabriel"},
-    { data: new Date(2025, 9, 2), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
-    { data: new Date(2025, 9, 9), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
-    { data: new Date(2025, 9, 16), tour: "Priscila", financeiro: "Alícia", entrevista: "Diretor", secretaria: "Gabriel"},
-    { data: new Date(2025, 9, 23), tour: "Priscila", financeiro: "Alícia", entrevista: "Carol", secretaria: "Carin"},
-    { data: new Date(2025, 9, 30), tour: "Priscila", financeiro: "Alícia", entrevista: "Andressa", secretaria: "Isa"},
-    { data: new Date(2025, 10, 6), tour: "Priscila", financeiro: "Alícia", entrevista: "Murilo", secretaria: "Gabriel"},
-    { data: new Date(2025, 10, 13), tour: "Priscila", financeiro: "Alícia", entrevista: "Renata", secretaria: "Carin"},
-    { data: new Date(2025, 10, 20), tour: "Priscila", financeiro: "Alícia", entrevista: "Jaque", secretaria: "Isa"},
-    { data: new Date(2025, 10, 27), tour: "Priscila", financeiro: "Alícia", entrevista: "Valéria", secretaria: "Gabriel"},
-    { data: new Date(2025, 11, 4), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
-    { data: new Date(2025, 11, 11), tour: "Priscila", financeiro: "Alícia", entrevista: "Camila", secretaria: "Isa"}
-];
+// export let plantao19h = [
+//     { data: new Date(2025, 7, 2), tour: "Priscila", financeiro: "Josi", entrevista: "Andressa", secretaria: "Carin"},
+//     { data: new Date(2025, 8, 4), tour: "Priscila", financeiro: "Alícia", entrevista: "Murilo", secretaria: "Isa"},
+//     { data: new Date(2025, 8, 11), tour: "Priscila", financeiro: "Josi", entrevista: "Renata", secretaria: "Gabriel"},
+//     { data: new Date(2025, 8, 18), tour: "Priscila", financeiro: "Alícia", entrevista: "Jaque", secretaria: "Carin"},
+//     { data: new Date(2025, 8, 25), tour: "Priscila", financeiro: "Alícia", entrevista: "Valéria", secretaria: "Gabriel"},
+//     { data: new Date(2025, 9, 2), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
+//     { data: new Date(2025, 9, 9), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
+//     { data: new Date(2025, 9, 16), tour: "Priscila", financeiro: "Alícia", entrevista: "Diretor", secretaria: "Gabriel"},
+//     { data: new Date(2025, 9, 23), tour: "Priscila", financeiro: "Alícia", entrevista: "Carol", secretaria: "Carin"},
+//     { data: new Date(2025, 9, 30), tour: "Priscila", financeiro: "Alícia", entrevista: "Andressa", secretaria: "Isa"},
+//     { data: new Date(2025, 10, 6), tour: "Priscila", financeiro: "Alícia", entrevista: "Murilo", secretaria: "Gabriel"},
+//     { data: new Date(2025, 10, 13), tour: "Priscila", financeiro: "Alícia", entrevista: "Renata", secretaria: "Carin"},
+//     { data: new Date(2025, 10, 20), tour: "Priscila", financeiro: "Alícia", entrevista: "Jaque", secretaria: "Isa"},
+//     { data: new Date(2025, 10, 27), tour: "Priscila", financeiro: "Alícia", entrevista: "Valéria", secretaria: "Gabriel"},
+//     { data: new Date(2025, 11, 4), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
+//     { data: new Date(2025, 11, 11), tour: "Priscila", financeiro: "Alícia", entrevista: "Camila", secretaria: "Isa"}
+// ];
 
 const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Andressa", "Renata e Camila"]
 
