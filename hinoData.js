@@ -1,14 +1,17 @@
 export const responsaveisHino = (() => {
   // Configurações de período
-  const startDate = new Date(2025, 9, 3);  // 3 de outubro de 2025
-  const endDate = new Date(2025, 11, 31);  // até fim de dezembro (ou mais se precisar)
+  const startDate = new Date(2026, 1, 13);  // 13 de fevereiro de 2026
+  const endDate = new Date(2026, 5, 3);  // até fim de julho (ou mais)
 
   // === DATAS A SEREM PULADAS (recesso, feriados, etc.) ===
   // Formato: YYYY, M-1, D  (mês é 0-indexed como no new Date())
   const datasExcluidas = [
-    new Date(2025, 10, 21),  // exemplo: 28/11/2025 (sexta-feira de recesso)
-    // new Date(2025, 11, 5),   // adicione mais se precisar
-    // new Date(2025, 11, 19),
+    new Date(2026, 3, 3),    // Sexta santa
+    new Date(2026, 4, 1),    // Dia do trabalho
+    new Date(2026, 5, 5),    // Corpus Christi
+    new Date(2026, 6, 10),   // Recesso de Julho
+    new Date(2026, 6, 17),   // Recesso de Julho
+    new Date(2025, 10, 20),  //Consciência Negra
   ].map(d => {
     // Normaliza para meia-noite local (evita problemas de fuso)
     d.setHours(0, 0, 0, 0);
