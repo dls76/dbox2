@@ -1510,10 +1510,12 @@
         }
         const [manha, tarde] = escala.split(" e ");
         content.textContent = `${manha} / ${tarde}`;
+      } else if (dataDeHoje == 6){
+       
+        content.textContent = "Feliz Sábado!";
       } else {
-        content.textContent = "Sem entrevistas hoje";
+        content.textContent = "Hoje é domingo!";
       }
-      // content.textContent = "Murilo";
     });
 
 
