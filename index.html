@@ -997,10 +997,9 @@
     if (diaSemana === 0) {
       responsavelCulto = 'Hoje é domingo';
     } else if (diaSemana === 6) {
-      responsavelCulto = 'Feliz Sábado';
+      responsavelCulto = 'Feliz Sábado!';
     } else if (diaSemana === 4 && escalaQuintaPersonalizada[dataHoje]) {
-      // Quinta-feira com escala personalizada
-      // responsavelCulto = horarios.map((hora, index) => `${hora}h ${responsaveis[index]}`).join(' | ');
+      //Quinta-feira com escala personalizada
       responsavelCulto = horarios.map((hora, index) => `${hora}h ${responsaveis[index]}`).join(' | ');
     } else {
       const responsavel = substituicoes[dataHoje] || nomes[diaSemana];
