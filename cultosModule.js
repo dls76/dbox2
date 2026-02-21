@@ -1,20 +1,26 @@
 export const nomes = {
-  1: "Diretor",            // Segunda
-  2: "Vice",         // Terça
-  3: "Pr. Vini",    // Quarta
-  4: "Escala",          // Quinta (padrão)
-  5: "Pr. Leo"     // Sexta
+  1: "Pr. Gabriel",            // Segunda
+  2: "Pr. Danylo",         // Terça
+  3: "Pr. Fábio",    // Quarta
+  4: "Escala Adm",          // Quinta (padrão)
+  5: "Pr. Fábio"     // Sexta
 };
 
 export const substituicoes = {
-  "2025-05-01": "Feriado",
-  "2025-05-02": "Recesso"
+  "2026-04-20": "Feriado",
+  "2026-04-21": "Feriado",
+  "2026-05-01": "Feriado",
+  "2025-05-28": "Recesso",
+  "2026-06-04": "Recesso",
+  "2026-06-05": "Recesso"
 };
 
 export const escalaQuintaPersonalizada = {
-  "2025-06-12": ["Jaque", "Nailson", "Jhessica"],
-  "2025-06-19": ["Carol", "Nailson", "Ana B."],
-  "2025-06-26": ["Andressa", "Nailson", "Valéria"]
+  "2026-02-27": ["Escala", "Escala", "Escala"],
+  "2026-03-07": ["Escala", "Escala", "Escala"],
+  "2026-03-14": ["Escala", "Escala", "Escala"],
+  "2026-03-21": ["Escala", "Escala", "Escala"],
+  "2026-03-28": ["Escala", "Escala", "Escala"]
 };
 
 export function getDataAtual() {
