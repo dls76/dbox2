@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Horários ADM 2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+      padding: 30px 16px;
+    }
+
+    /* ── HEADER ─────────────────────────────────────────── */
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+
+    .header p {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── LEGENDA ─────────────────────────────────────────── */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 500;
+    }
+
+    .legend-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot-working  { background: #00e676; }
+    .dot-break    { background: #ffd740; }
+    .dot-off      { background: rgba(255,255,255,0.15); }
+
+    /* ── RELÓGIO ─────────────────────────────────────────── */
+    .clock {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 2px;
+      text-shadow: 0 0 30px rgba(99,179,237,0.6);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── CONTAINER ───────────────────────────────────────── */
+    .table-container {
+      overflow-x: auto;
+      max-width: 860px;
+      margin: 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+    }
+
+    /* ── TABELA ──────────────────────────────────────────── */
+    table {
+      width: 100%;
+      min-width: 320px;
+      border-collapse: collapse;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    /* ── THEAD ───────────────────────────────────────────── */
+    thead tr {
+      background: rgba(255,255,255,0.08);
+    }
+
+    th {
+      padding: 16px 18px;
+      text-align: left;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      white-space: nowrap;
+    }
+
+    th.sortable {
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      color: #63b3ed;
+      transition: color 0.2s;
+    }
+
+    th.sortable:hover { color: #90cdf4; }
+
+    .sort-icon {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 0.85rem;
+      transition: transform 0.25s;
+      vertical-align: middle;
+    }
+
+    /* ── TBODY ───────────────────────────────────────────── */
+    td {
+      padding: 14px 18px;
+      font-size: 0.93rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.85);
+      white-space: nowrap;
+      transition: background 0.3s;
+    }
+
+    td:first-child {
+      font-weight: 700;
+      color: #fff;
+    }
+
+    tbody tr:last-child td { border-bottom: none; }
+
+    /* STATUS BASE */
+    tbody tr { transition: filter 0.2s; }
+    tbody tr:hover { filter: brightness(1.12); }
+
+    /* TRABALHANDO */
+    tbody tr.status-working {
+      background: linear-gradient(90deg,
+        rgba(0,230,118,0.18) 0%,
+        rgba(0,230,118,0.07) 100%
+      );
+    }
+    tbody tr.status-working td:first-child {
+      border-left: 3px solid #00e676;
+      color: #69f0ae;
+    }
+
+    /* INTERVALO */
+    tbody tr.status-break {
+      background: linear-gradient(90deg,
+        rgba(255,215,64,0.20) 0%,
+        rgba(255,215,64,0.07) 100%
+      );
+    }
+    tbody tr.status-break td:first-child {
+      border-left: 3px solid #ffd740;
+      color: #ffe57f;
+    }
+
+    /* FORA DO HORÁRIO */
+    tbody tr.status-off {
+      background: transparent;
+    }
+    tbody tr.status-off td:first-child {
+      border-left: 3px solid rgba(255,255,255,0.15);
+    }
+
+    /* BADGE de status */
+    .badge {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+
+    .badge-working {
+      background: rgba(0,230,118,0.2);
+      color: #00e676;
+      border: 1px solid rgba(0,230,118,0.4);
+    }
+
+    .badge-break {
+      background: rgba(255,215,64,0.2);
+      color: #ffd740;
+      border: 1px solid rgba(255,215,64,0.4);
+    }
+
+    .badge-off {
+      background: rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.35);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    /* ── RESPONSIVO ──────────────────────────────────────── */
+    @media (min-width: 600px) {
+      body { padding: 50px 24px; }
+      .header h1 { font-size: 2.4rem; }
+      th, td { padding: 16px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Horários de Trabalho 2026</h1>
+    <p>Atualizado em tempo real</p>
+  </div>
+
+  <div class="clock" id="clock">00:00:00</div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <span class="legend-dot dot-working"></span> Ativo
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot dot-break"></span> Intervalo
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot dot-off"></span> Fora do horário
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th class="sortable" id="th-nome">
+            Nome <span class="sort-icon" id="sort-icon">↕</span>
+          </th>
+          <th>Entrada</th>
+          <th>Intervalo</th>
+          <th>Retorno</th>
+          <th>Saída</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-body"></tbody>
+    </table>
+  </div>
+
+  <script type="module">
+    import { horarios } from './horariosExpedienteData.js';
+
+    const tbody      = document.getElementById('tabela-body');
+    const thNome     = document.getElementById('th-nome');
+    const sortIcon   = document.getElementById('sort-icon');
+    const clockEl    = document.getElementById('clock');
+
+    // ── Estado de ordenação ───────────────────────────────
+    let sortAsc = null; // null = original | true = A→Z | false = Z→A
+    const originalOrder = [...horarios];
+
+    // ── Converte "HH:MM" → minutos desde meia-noite ───────
+    function toMin(timeStr) {
+      const [h, m] = timeStr.split(':').map(Number);
+      return h * 60 + m;
+    }
+
+    // ── Retorna o status da pessoa no momento atual ───────
+    function getStatus(item) {
+      const now   = new Date();
+      const cur   = now.getHours() * 60 + now.getMinutes();
+      const ent   = toMin(item.entrada);
+      const intv  = toMin(item.intervalo);
+      const ret   = toMin(item.retorno);
+      const sai   = toMin(item.saida);
+
+      if (cur >= ent && cur < intv)  return 'working';
+      if (cur >= intv && cur < ret)  return 'break';
+      if (cur >= ret && cur < sai)   return 'working';
+      return 'off';
+    }
+
+    // ── Labels e classes por status ───────────────────────
+    const statusConfig = {
+      working: { label: '● Ativo', badgeClass: 'badge-working', rowClass: 'status-working' },
+      break:   { label: '● Intervalo',   badgeClass: 'badge-break',   rowClass: 'status-break'   },
+      off:     { label: '● Fora',        badgeClass: 'badge-off',     rowClass: 'status-off'     },
+    };
+
+    // ── Renderiza a tabela ────────────────────────────────
+    function renderTable(data) {
+      tbody.innerHTML = '';
+      data.forEach(item => {
+        const status = getStatus(item);
+        const cfg    = statusConfig[status];
+        const tr     = document.createElement('tr');
+        tr.className = cfg.rowClass;
+        tr.innerHTML = `
+          <td>${item.nome}</td>
+          <td>${item.entrada}</td>
+          <td>${item.intervalo}</td>
+          <td>${item.retorno}</td>
+          <td>${item.saida}</td>
+          <td><span class="badge ${cfg.badgeClass}">${cfg.label}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // ── Ordenação com 3 estados: original → A→Z → Z→A ────
+    function sortByName() {
+      if (sortAsc === null) {
+        // 1º clique: A → Z
+        horarios.sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
+        sortAsc = true;
+        sortIcon.textContent = '↑';
+      } else if (sortAsc === true) {
+        // 2º clique: Z → A
+        horarios.sort((a, b) => b.nome.localeCompare(a.nome, 'pt-BR'));
+        sortAsc = false;
+        sortIcon.textContent = '↓';
+      } else {
+        // 3º clique: volta à ordem original
+        horarios.length = 0;
+        originalOrder.forEach(i => horarios.push(i));
+        sortAsc = null;
+        sortIcon.textContent = '↕';
+      }
+      renderTable(horarios);
+    }
+
+    thNome.addEventListener('click', sortByName);
+
+    // ── Relógio em tempo real ─────────────────────────────
+    function updateClock() {
+      const now = new Date();
+      const hh  = String(now.getHours()).padStart(2, '0');
+      const mm  = String(now.getMinutes()).padStart(2, '0');
+      const ss  = String(now.getSeconds()).padStart(2, '0');
+      clockEl.textContent = `${hh}:${mm}:${ss}`;
+    }
+
+    // ── Atualiza status a cada minuto (no :00 do minuto) ──
+    function scheduleStatusUpdate() {
+      const ms = (60 - new Date().getSeconds()) * 1000;
+      setTimeout(() => {
+        renderTable(horarios);
+        scheduleStatusUpdate();
+      }, ms);
+    }
+
+    // ── Init ──────────────────────────────────────────────
+    updateClock();
+    setInterval(updateClock, 1000);
+    renderTable(horarios);
+    scheduleStatusUpdate();
+  </script>
+
+</body>
+</html>
