@@ -9,3 +9,14 @@ openButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
   modalContainer.classList.remove("active");
 });
+
+
+
+
+const openAma = document.querySelector("#open-ama");
+
+openAma.addEventListener('click', ()=>{
+
+  window.open('https://sistemas.usb.org.br/ama/index.php', '_blank');
+
+})
