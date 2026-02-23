@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,8 +76,10 @@
             gap: 30px;
             padding: 30px;
             margin-top: 60px;
-            margin-bottom: 60px; /* Espaço para o footer */
-            height: calc(100vh - 120px); /* Ajustado para considerar header e footer */
+            margin-bottom: 60px;
+            /* Espaço para o footer */
+            height: calc(100vh - 120px);
+            /* Ajustado para considerar header e footer */
         }
 
         .calendar-container {
@@ -181,7 +184,8 @@
             flex: 1;
             overflow-y: auto;
             height: 100%;
-            padding-bottom: 20px; /* Espaço extra para evitar colisão com o footer */
+            padding-bottom: 20px;
+            /* Espaço extra para evitar colisão com o footer */
         }
 
         .month-section {
@@ -276,14 +280,16 @@
             font-size: 0.9em;
             font-weight: 400;
         }
+
         .event-list::after {
             content: '';
             display: block;
-            height: 60px; /* Ajuste conforme necessário */
+            height: 60px;
+            /* Ajuste conforme necessário */
         }
-
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-content">
@@ -313,7 +319,7 @@
     </div>
     <footer>
         <div class="footer-content">
-            Cultura Geral &copy; 2025 - Todos os direitos reservados
+            Cultura Geral &copy; 2026 - Todos os direitos reservados
         </div>
     </footer>
     <script>
@@ -322,127 +328,61 @@
             "6aoem": [
                 { date: "2025-02-06", name: "Boas-vindas, cód. ética, recepção novos", responsavel: "Equipe ADM" },
                 { date: "2025-02-13", name: "Lançamento 10 dias de oração", responsavel: "Pastoral" },
-                { date: "2025-02-20", name: "Palestrante Vanessa - Missionária", responsavel: "Pastoral" },
-                { date: "2025-02-27", name: "Lançamento da Route", responsavel: "Pastoral" },
-                { date: "2025-03-06", name: "Dia da mulher", responsavel: "Pastoral" },
-                { date: "2025-03-13", name: "Palestra: histórico da escola centenário", responsavel: "Diretor" },
-                { date: "2025-03-20", name: "Lançamento do PMDE", responsavel: "Pr. Vinícius e terceirão" },
-                { date: "2025-03-27", name: "Impacto Esperança", responsavel: "Pastoral" },
-                { date: "2025-04-03", name: "Dia mundial conscientização autismo", responsavel: "SOE: sugestão, Camila Moura" },
-                { date: "2025-04-10", name: "Dia da saúde e nutrição", responsavel: "Profs Educ. Fís." },
-                { date: "2025-04-17", name: "Semana de oração: Páscoa", responsavel: "Pastoral" },
-                { date: "2025-04-24", name: "Dra. Angela: Bullying e Cyberbullying", responsavel: "SOE" },
-                { date: "2025-05-01", name: "Feriado (Dia do Trabalho)", responsavel: "" },
-                { date: "2025-05-08", name: "Dia das Mães", responsavel: "Pastoral" },
-                { date: "2025-05-15", name: "Mérito acadêmico", responsavel: "SOE" },
-                { date: "2025-05-22", name: "Hábitos de estudos - Edinir", responsavel: "SOE" },
-                { date: "2025-05-29", name: "Reunião Participativa", responsavel: "" },
-                { date: "2025-06-05", name: "Projeto Geração Futuro: lixo eletrônico", responsavel: "Pastoral" },
-                { date: "2025-06-12", name: "Relacionamentos: Luciana Valente", responsavel: "Carol" },
-                { date: "2025-06-19", name: "Feriado", responsavel: "" },
-                { date: "2025-06-26", name: "Meio ambiente: Juliano (a confirmar)", responsavel: "Pastoral" },
-                { date: "2025-07-03", name: "Encerrando ciclos: pt. 1", responsavel: "SOE" },
-                { date: "2025-07-24", name: "Dia do Amigo", responsavel: "Pastoral" },
-                { date: "2025-07-31", name: "Relatório da Missão", responsavel: "Pastoral" },
-                { date: "2025-07-25", name: "20/07 - Dia do Amigo e Internacional da Amizade (semana de acolhimento)", responsavel: "Valéria e Camila" },
-                { date: "2025-08-01", name: "Dia dos Pais", responsavel: "Camila" },
-                { date: "2025-08-07", name: "Dia dos Pais", responsavel: "Pr Leonardo" },
-                { date: "2025-08-08", name: "05/08 - Dia Nacional da Saúde", responsavel: "Pastoral - Yuiane nutricionista" },
-                { date: "2025-08-14", name: "Quebrando o silêncio", responsavel: "Pastoral" },
-                { date: "2025-08-15", name: "Hora do Conto | Projeto profa. Larissa Cabral", responsavel: "Biblioteca e profa. Larissa Cabral" },
-                { date: "2025-08-21", name: "Mérito Acadêmico (2º bimestre)", responsavel: "SOE" },
-                { date: "2025-08-22", name: "Lançamento de Matrículas 2026", responsavel: "Diretor Douglas" },
-                { date: "2025-08-28", name: "Reunião Participativa", responsavel: "--------------------------------" },
-                { date: "2025-08-29", name: "25/08 - Dia Nacional da Educação Infantil", responsavel: "Camila (profas da EI)" },
-                { date: "2025-09-04", name: "Semana de Oração", responsavel: "Pastoral" },
-                { date: "2025-09-05", name: "Semana de oração", responsavel: "Pastoral - Pr Patrick e Greice" },
-                { date: "2025-09-11", name: "Setembro Amarelo", responsavel: "Psicólogo Mateus" },
-                { date: "2025-09-12", name: "08/09 - Dia Mundial da Alfabetização", responsavel: "Camila (profas do 1º ano)" },
-                { date: "2025-09-18", name: "Dia Mundial do Desbravador", responsavel: "Nailson" },
-                { date: "2025-09-19", name: "Valorização da Vida (setembro amarelo)", responsavel: "Valéria (convidar psico)" },
-                { date: "2025-09-25", name: "Dia da árvore", responsavel: "Convidado especial - pastoral" },
-                { date: "2025-09-26", name: "Dia Nacional do Trânsito", responsavel: "Pastoral (convidar agente de trânsito)" },
-                { date: "2025-10-02", name: "Música – Lançamento do show de talentos", responsavel: "SOE e pastoral" },
-                { date: "2025-10-03", name: "Comemoração Aniversariantes do Bimestre", responsavel: "Valéria" },
-                { date: "2025-10-09", name: "Saúde de adolescentes e jovens", responsavel: "SOE – Yuiane nutricionista" },
-                { date: "2025-10-10", name: "Dia das Crianças", responsavel: "Valéria" },
-                { date: "2025-10-16", name: "Dia do livro", responsavel: "SOE" },
-                { date: "2025-10-17", name: "Dia dos Professores", responsavel: "Camila" },
-                { date: "2025-10-23", name: "Criacionismo", responsavel: "Pastoral" },
-                { date: "2025-10-24", name: "Semana Nacional do Livro e da Biblioteca", responsavel: "Camila (convidar Cacilda, Ana e Mônica)" },
-                { date: "2025-10-30", name: "Dia do Pastor", responsavel: "SOE" },
-                { date: "2025-10-31", name: "Dia da Reforma Protestante", responsavel: "Camila e Pastor" },
-                { date: "2025-11-06", name: "Show de talentos", responsavel: "SOE e pastoral" },
-                { date: "2025-11-07", name: "Celebra pastoral", responsavel: "Pastoral" },
-                { date: "2025-11-14", name: "Dia Nacional da Consciência Negra", responsavel: "Sara esposa do Pr. Gilson JÁ" },
-                { date: "2025-11-21", name: "RECESSO", responsavel: "------" },
                 { date: "2025-11-28", name: "Cultura Geral da Saudade (retrospectiva do ano) | Thanksgiving Day", responsavel: "Camila, Karen e Juliana (bilíngue)" },
                 { date: "2025-12-05", name: "Ensaio Geral | Cantata de Natal Comemoração Aniversariantes do Bimestre | encerramento ano letivo", responsavel: "Camila e Paulo Valéria" },
             ],
             "infantil": [
-                { date: "2025-02-07", name: "Acolhimento e adaptação", responsavel: "" },
-                { date: "2025-02-14", name: "10 Dias de Oração | parte 1", responsavel: "" },
-                { date: "2025-02-21", name: "10 Dias de Oração | parte 2", responsavel: "" },
-                { date: "2025-02-28", name: "Biblioteca: momento com o autor prof. Wander  de Oliveira", responsavel: "" },
-                { date: "2025-03-07", name: "Homenagem ao Dia das Mulheres", responsavel: "" },
-                { date: "2025-03-14", name: "Dia Nacional dos Animais | participação Laís (veterinária)", responsavel: "" },
-                { date: "2025-03-21", name: "Lançamento do PMDE | DOM", responsavel: "" },
-                { date: "2025-03-28", name: "Impacto Esperança", responsavel: "" },
-                { date: "2025-04-04", name: "Dia Mundial de Conscientização do Autismo", responsavel: "" },
-                { date: "2025-04-11", name: "Ensaio Geral | Cantata de Páscoa", responsavel: "" },
-                { date: "2025-04-18", name: "Semana Santa", responsavel: "" },
-                { date: "2025-04-25", name: "Comemoração Aniversariantes do Bimestre", responsavel: "" },
-                { date: "2025-05-02", name: "Recesso", responsavel: "" },
-                { date: "2025-05-09", name: "Dia das Mães", responsavel: "" },
-                { date: "2025-05-16", name: "Dia da Família", responsavel: "" },
-                { date: "2025-05-23", name: "Saúde Física na Infância", responsavel: "" },
-                { date: "2025-05-30", name: "Hábitos de Estudo: a importância da disciplina ", responsavel: "" },
-                { date: "2025-06-06", name: "Projeto Geração Futuro: lixo eletrônico", responsavel: "" },
-                { date: "2025-06-13", name: "Dia Mundial do Meio Ambiente ", responsavel: "" },
-                { date: "2025-06-20", name: "Recesso", responsavel: "" },
-                { date: "2025-06-27", name: "Comemoração Aniversariantes do Bimestre", responsavel: "" },
-                { date: "2025-07-04", name: "Chegada da EA ao Brasil 01/07 (128 anos)", responsavel: "" },
-                { date: "2025-07-25", name: "20/07 - Dia do Amigo e Internacional da Amizade (semana de acolhimento)", responsavel: "" },
-                { date: "2025-08-01", name: "Desenvolvimento científico e tecnológico, o que faz um físico?", responsavel: "" },
-                { date: "2025-08-08", name: "05/08 - Dia Nacional da Saúde", responsavel: "" },
-                { date: "2025-08-15", name: "A definir", responsavel: "" },
-                { date: "2025-08-22", name: "Lançamento de Matrículas 2026", responsavel: "" },
-                { date: "2025-08-29", name: "25/08 - Dia Nacional da Educação Infantil", responsavel: "" },
-                { date: "2025-09-05", name: "Semana da Pátria ", responsavel: "" },
-                { date: "2025-09-12", name: "08/09 - Dia Mundial da Alfabetização", responsavel: "" },
-                { date: "2025-09-19", name: "Valorização da Vida (setembro amarelo)", responsavel: "" },
-                { date: "2025-09-26", name: "Dia Nacional do Trânsito", responsavel: "" },
-                { date: "2025-10-03", name: "Comemoração Aniversariantes do Bimestre", responsavel: "" },
-                { date: "2025-10-10", name: "Dia das Crianças", responsavel: "" },
-                { date: "2025-10-17", name: "Dia dos Professores", responsavel: "" },
-                { date: "2025-10-24", name: "Semana Nacional do Livro e da Biblioteca", responsavel: "" },
-                { date: "2025-10-31", name: "Dia da Reforma Protestante", responsavel: "" },
-                { date: "2025-11-07", name: "A definir", responsavel: "" },
-                { date: "2025-11-14", name: "Dia Nacional da Consciência Negra", responsavel: "" },
-                { date: "2025-11-21", name: "Recesso", responsavel: "" },
-                { date: "2025-11-28", name: "Cultura Geral da Saudade (retrospectiva do ano) | Thanksgiving Day", responsavel: "Camila" },
-                { date: "2025-05-05", name: "Comemoração Aniversariantes do Bimestre | encerramento ano letivo", responsavel: "Valéria" },
-                { date: "2025-07-25", name: "20/07 - Dia do Amigo e Internacional da Amizade (semana de acolhimento)", responsavel: "Valéria e Camila" },
-                { date: "2025-08-01", name: "Dia dos Pais", responsavel: "Camila" },
-                { date: "2025-08-08", name: "05/08 - Dia Nacional da Saúde", responsavel: "Pastoral - Yuiane nutricionista" },
-                { date: "2025-08-15", name: "Hora do Conto | Projeto profa. Larissa Cabral", responsavel: "Biblioteca e profa. Larissa Cabral" },
-                { date: "2025-08-22", name: "Lançamento de Matrículas 2026", responsavel: "Diretor Douglas" },
-                { date: "2025-08-29", name: "25/08 - Dia Nacional da Educação Infantil", responsavel: "Camila (profas da EI)" },
-                { date: "2025-09-05", name: "Semana de oração", responsavel: "Pastoral - Pr Patrick e Greice" },
-                { date: "2025-09-12", name: "08/09 - Dia Mundial da Alfabetização", responsavel: "Camila (profas do 1º ano)" },
-                { date: "2025-09-19", name: "Valorização da Vida (setembro amarelo)", responsavel: "Valéria (convidar psico)" },
-                { date: "2025-09-26", name: "Dia Nacional do Trânsito", responsavel: "Pastoral (convidar agente de trânsito)" },
-                { date: "2025-10-03", name: "Comemoração Aniversariantes do Bimestre", responsavel: "Valéria" },
-                { date: "2025-10-10", name: "Dia das Crianças", responsavel: "Valéria" },
-                { date: "2025-10-17", name: "Dia dos Professores", responsavel: "Camila" },
-                { date: "2025-10-24", name: "Semana Nacional do Livro e da Biblioteca", responsavel: "Camila (convidar Cacilda, Ana e Mônica)" },
-                { date: "2025-10-31", name: "Dia da Reforma Protestante", responsavel: "Camila e Pastor" },
-                { date: "2025-11-07", name: "Celebra pastoral", responsavel: "Pastoral" },
-                { date: "2025-11-14", name: "Dia Nacional da Consciência Negra", responsavel: "Sara esposa do Pr. Gilson JÁ" },
-                { date: "2025-11-21", name: "RECESSO", responsavel: "------" },
-                { date: "2025-11-28", name: "Cultura Geral da Saudade (retrospectiva do ano) | Thanksgiving Day", responsavel: "Camila, Karen e Juliana (bilíngue)" },
-                { date: "2025-12-05", name: "Ensaio Geral | Cantata de Natal Comemoração Aniversariantes do Bimestre | encerramento ano letivo", responsavel: "Camila e Paulo Valéria" }
+                { date: "2025-02-06", name: "Acolhimento e adaptação", responsavel: "Apenas para lançamento no 7Edu" },
+                { date: "2025-02-13", name: "Boas-vindas", responsavel: "Pastoral" },
+                { date: "2025-02-20", name: "Biblioteca", responsavel: "Cacilda, Monica e Kamilly" },
+                { date: "2025-02-27", name: "Aula Inaugural Bilíngue (apenas EI 3 e 4 anos) // 10 dias de oração", responsavel: "Pastoral, Camila e Juliana" },
+                { date: "2025-03-06", name: "Homenagem ao Dia das Mulheres", responsavel: "Pastoral" },
+                { date: "2025-03-13", name: "Lançamento: 30 anos do CAC (história do CAC)", responsavel: "Diretor Douglas" },
+                { date: "2025-03-20", name: "Dia Mundial da Poesia", responsavel: "Pastoral" },
+                { date: "2025-03-27", name: "Ensaio Geral | Cantata de Páscoa", responsavel: "Camila e prof. Paulo" },
+                { date: "2025-03-29", name: "Semana Santa", responsavel: "Pastoral" },
+                { date: "2025-04-03", name: "FERIADO PÁSCOA", responsavel: "----" },
+                { date: "2025-04-10", name: "Comemoração Aniversariantes do Bimestre", responsavel: "Valéria" },
+                { date: "2025-04-17", name: "Aventureiros (apresentação do clube)", responsavel: "Pastoral e Giane (convidar)" },
+
+                { date: "2025-04-24", name: "Hábitos de Estudo", responsavel: "Valéria" },
+                { date: "2025-05-01", name: "FERIADO", responsavel: "----" },
+                { date: "2025-05-08", name: "Profissões", responsavel: "Pastoral" },
+                { date: "2025-05-15", name: "Projeto dia das mães (preparação para domingo letivo)", responsavel: "Camila e Valéria" },
+                { date: "2025-05-22", name: "Dia do Abraço", responsavel: "Pastoral" },
+                { date: "2025-05-29", name: "Dia Mundial do Meio Ambiente", responsavel: "" },
+                { date: "2025-06-05", name: "FERIADO", responsavel: "----" },
+                { date: "2025-06-12", name: "", responsavel: "" },
+                { date: "2025-06-19", name: "", responsavel: "" },
+                { date: "2025-06-26", name: "Comemoração Aniversariantes do Bimestre", responsavel: "Valéria" },
+                { date: "2025-07-03", name: "Chegada da EA no Brasil (01/07 - 130 anos + 30 do CAC)", responsavel: "Pastoral" },
+
+                { date: "2025-07-24", name: "Dia do Amigo e Internacional da Amizade (semana de acolhimento)", responsavel: "Valéria e Camila" },
+                { date: "2025-07-27", name: "Semana de Oração", responsavel: "Pastoral" },
+                { date: "2025-07-31", name: "Projeto dia dos pais (preparação para domingo letivo)", responsavel: "Camila e Valéria" },
+                { date: "2025-08-07", name: "05/08 - Dia Nacional da Saúde", responsavel: "Pastoral (convidar profissionais da área)" },
+                { date: "2025-08-14", name: "", responsavel: "Pastoral" },
+                { date: "2025-08-21", name: "Dia Nacional da Educação Infantil", responsavel: "Camila" },
+                { date: "2025-08-28", name: "Lançamento de Matrículas 2027", responsavel: "Diretor Douglas" },
+                { date: "2025-09-04", name: "Semana da Pátria", responsavel: "Pastoral" },
+                { date: "2025-09-11", name: "Profissões", responsavel: "Camila (profas do 1º ano)" },
+                { date: "2025-09-18", name: "Valorização da Vida (setembro amarelo)", responsavel: "Pastoral, psicologo" },
+                { date: "2025-09-25", name: "Comemoração Aniversariantes do Bimestre", responsavel: "Valéria" },
+
+                { date: "2025-10-02", name: "Dia Internacional das Pessoas Idosas", responsavel: "" },
+                { date: "2025-10-09", name: "Dia das Crianças", responsavel: "Pastoral e Valéria" },
+                { date: "2025-10-16", name: "Dia dos Professores", responsavel: "Pastoral e Camila" },
+                { date: "2025-10-23", name: "Semana Nacional do Livro e da Biblioteca", responsavel: "Cacilda, Monica e Kamilly" },
+                { date: "2025-10-30", name: "Dia da Reforma Protestante", responsavel: "Pastoral" },
+
+                { date: "2025-11-06", name: "Dia dos animais", responsavel: "Convidar um biólogo, veterinário ou Pr. Samuel do CAPI (Charlie)" },
+                { date: "2025-11-13", name: "Dia Mundial da Alimentação Saudável", responsavel: "Convidar a nutricionista" },
+                { date: "2025-11-20", name: "FERIADO", responsavel: "----" },
+                { date: "2025-11-27", name: "Cultura Geral da Saudade (retrospectiva do ano) | Thanksgiving Day", responsavel: "Camila, Juliana" },
+                { date: "2025-12-04", name: "Comemoração Aniversariantes do Bimestre", responsavel: "Valéria" },
+                { date: "2025-12-11", name: "Encerramento do ano letivo", responsavel: "Apenas para lançamento no 7Edu" }
             ],
+
             "fund1": [
                 { date: "2025-03-06", name: "Dia da mulher", responsavel: "Pastoral" },
                 { date: "2025-03-13", name: "Lançamento APRIMORA", responsavel: "Jaque" },
@@ -473,7 +413,7 @@
                 { date: "2025-11-13", name: "2ª fase que será aplicada em 11/11", responsavel: "" },
                 { date: "2025-11-27", name: "Homenagem aos monitores", responsavel: "" },
                 { date: "2025-12-04", name: "Entrega dos certificados /OPBEABÁ - Registrar ensaio para cantata que será feito dia 05/12", responsavel: "" },
-                { date: "2025-12-11", name: "Entrega dos certificados /OPBEABÁ (REALIZADO NO DIA 04/12)", responsavel: "" },
+                { date: "2025-12-11", name: "Entrega dos certificados /OPBEABÁ (REALIZADO NO DIA 04/12)", responsavel: "" }
             ]
         };
 
@@ -659,4 +599,5 @@
         handleNavigation(); // Carrega a seção inicial
     </script>
 </body>
+
 </html>
