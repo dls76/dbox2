@@ -11,13 +11,13 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
       min-height: 100vh;
-      padding: 30px 16px;
+      padding: 30px 16px 60px;
     }
 
-    /* ── HEADER ─────────────────────────────────────────── */
+    /* ── HEADER ───────────────────────────────────────────── */
     .header {
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
 
     .header h1 {
@@ -35,13 +35,25 @@
       letter-spacing: 0.5px;
     }
 
-    /* ── LEGENDA ─────────────────────────────────────────── */
+    /* ── RELÓGIO ──────────────────────────────────────────── */
+    .clock {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 2px;
+      text-shadow: 0 0 30px rgba(99,179,237,0.6);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── LEGENDA ──────────────────────────────────────────── */
     .legend {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 36px;
     }
 
     .legend-item {
@@ -59,32 +71,80 @@
       flex-shrink: 0;
     }
 
-    .dot-working  { background: #00e676; }
-    .dot-break    { background: #ffd740; }
-    .dot-off      { background: rgba(255,255,255,0.15); }
+    .dot-working { background: #00e676; }
+    .dot-break   { background: #ffd740; }
+    .dot-off     { background: rgba(255,255,255,0.2); }
 
-    /* ── RELÓGIO ─────────────────────────────────────────── */
-    .clock {
-      text-align: center;
-      margin-bottom: 24px;
-      font-size: 2.6rem;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: 2px;
-      text-shadow: 0 0 30px rgba(99,179,237,0.6);
-      font-variant-numeric: tabular-nums;
+    /* ── TABS ─────────────────────────────────────────────── */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
     }
 
-    /* ── CONTAINER ───────────────────────────────────────── */
-    .table-container {
-      overflow-x: auto;
+    .tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: all 0.25s;
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .tab-btn:hover {
+      background: rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.85);
+    }
+
+    .tab-btn.active {
+      background: #63b3ed;
+      color: #0f3460;
+      border-color: #63b3ed;
+      box-shadow: 0 4px 18px rgba(99,179,237,0.4);
+    }
+
+    /* ── SEÇÕES ───────────────────────────────────────────── */
+    .section {
+      display: none;
       max-width: 860px;
       margin: 0 auto;
+    }
+
+    .section.active { display: block; }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-left: 4px;
+    }
+
+    .section-title span {
+      font-size: 1.4rem;
+    }
+
+    /* ── TABLE CONTAINER ──────────────────────────────────── */
+    .table-container {
+      overflow-x: auto;
       border-radius: 16px;
       box-shadow: 0 25px 60px rgba(0,0,0,0.5);
     }
 
-    /* ── TABELA ──────────────────────────────────────────── */
+    /* ── TABELA ───────────────────────────────────────────── */
     table {
       width: 100%;
       min-width: 320px;
@@ -96,7 +156,7 @@
       overflow: hidden;
     }
 
-    /* ── THEAD ───────────────────────────────────────────── */
+    /* ── THEAD ────────────────────────────────────────────── */
     thead tr {
       background: rgba(255,255,255,0.08);
     }
@@ -116,7 +176,6 @@
     th.sortable {
       cursor: pointer;
       user-select: none;
-      position: relative;
       color: #63b3ed;
       transition: color 0.2s;
     }
@@ -127,11 +186,10 @@
       display: inline-block;
       margin-left: 6px;
       font-size: 0.85rem;
-      transition: transform 0.25s;
       vertical-align: middle;
     }
 
-    /* ── TBODY ───────────────────────────────────────────── */
+    /* ── TBODY ────────────────────────────────────────────── */
     td {
       padding: 14px 18px;
       font-size: 0.93rem;
@@ -147,44 +205,31 @@
     }
 
     tbody tr:last-child td { border-bottom: none; }
-
-    /* STATUS BASE */
     tbody tr { transition: filter 0.2s; }
-    tbody tr:hover { filter: brightness(1.12); }
+    tbody tr:hover { filter: brightness(1.15); }
 
-    /* TRABALHANDO */
+    /* STATUS */
     tbody tr.status-working {
-      background: linear-gradient(90deg,
-        rgba(0,230,118,0.18) 0%,
-        rgba(0,230,118,0.07) 100%
-      );
+      background: linear-gradient(90deg, rgba(0,230,118,0.18) 0%, rgba(0,230,118,0.07) 100%);
     }
     tbody tr.status-working td:first-child {
       border-left: 3px solid #00e676;
       color: #69f0ae;
     }
 
-    /* INTERVALO */
     tbody tr.status-break {
-      background: linear-gradient(90deg,
-        rgba(255,215,64,0.20) 0%,
-        rgba(255,215,64,0.07) 100%
-      );
+      background: linear-gradient(90deg, rgba(255,215,64,0.20) 0%, rgba(255,215,64,0.07) 100%);
     }
     tbody tr.status-break td:first-child {
       border-left: 3px solid #ffd740;
       color: #ffe57f;
     }
 
-    /* FORA DO HORÁRIO */
-    tbody tr.status-off {
-      background: transparent;
-    }
     tbody tr.status-off td:first-child {
       border-left: 3px solid rgba(255,255,255,0.15);
     }
 
-    /* BADGE de status */
+    /* BADGE */
     .badge {
       display: inline-block;
       padding: 3px 9px;
@@ -194,7 +239,6 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
       vertical-align: middle;
-      margin-left: 8px;
     }
 
     .badge-working {
@@ -215,9 +259,9 @@
       border: 1px solid rgba(255,255,255,0.12);
     }
 
-    /* ── RESPONSIVO ──────────────────────────────────────── */
+    /* ── RESPONSIVO ───────────────────────────────────────── */
     @media (min-width: 600px) {
-      body { padding: 50px 24px; }
+      body { padding: 50px 24px 80px; }
       .header h1 { font-size: 2.4rem; }
       th, td { padding: 16px 22px; }
     }
@@ -226,86 +270,75 @@
 <body>
 
   <div class="header">
-    <h1>Horários de Trabalho 2026</h1>
-    <p>Atualizado em tempo real</p>
+    <h1>Horários ADM 2026</h1>
+    <p>Atualizado automaticamente em tempo real</p>
   </div>
 
   <div class="clock" id="clock">00:00:00</div>
 
   <div class="legend">
     <div class="legend-item">
-      <span class="legend-dot dot-working"></span> Ativo
+      <span class="legend-dot dot-working"></span> Trabalhando
     </div>
     <div class="legend-item">
-      <span class="legend-dot dot-break"></span> Intervalo
+      <span class="legend-dot dot-break"></span> Em intervalo
     </div>
     <div class="legend-item">
       <span class="legend-dot dot-off"></span> Fora do horário
     </div>
   </div>
 
-  <div class="table-container">
-    <table>
-      <thead>
-        <tr>
-          <th class="sortable" id="th-nome">
-            Nome <span class="sort-icon" id="sort-icon">↕</span>
-          </th>
-          <th>Entrada</th>
-          <th>Intervalo</th>
-          <th>Retorno</th>
-          <th>Saída</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody id="tabela-body"></tbody>
-    </table>
-  </div>
+  <!-- Tabs e seções geradas pelo JS -->
+  <div class="tabs" id="tabs"></div>
+  <div id="sections"></div>
 
   <script type="module">
-    import { horarios } from './horariosExpedienteData.js';
+    import { setores } from './horariosExpedienteData.js';
 
-    const tbody      = document.getElementById('tabela-body');
-    const thNome     = document.getElementById('th-nome');
-    const sortIcon   = document.getElementById('sort-icon');
+    // ── Utilidades ────────────────────────────────────────
     const clockEl    = document.getElementById('clock');
+    const tabsEl     = document.getElementById('tabs');
+    const sectionsEl = document.getElementById('sections');
 
-    // ── Estado de ordenação ───────────────────────────────
-    let sortAsc = null; // null = original | true = A→Z | false = Z→A
-    const originalOrder = [...horarios];
-
-    // ── Converte "HH:MM" → minutos desde meia-noite ───────
-    function toMin(timeStr) {
-      const [h, m] = timeStr.split(':').map(Number);
+    function toMin(t) {
+      const [h, m] = t.split(':').map(Number);
       return h * 60 + m;
     }
 
-    // ── Retorna o status da pessoa no momento atual ───────
     function getStatus(item) {
-      const now   = new Date();
-      const cur   = now.getHours() * 60 + now.getMinutes();
-      const ent   = toMin(item.entrada);
-      const intv  = toMin(item.intervalo);
-      const ret   = toMin(item.retorno);
-      const sai   = toMin(item.saida);
-
-      if (cur >= ent && cur < intv)  return 'working';
+      const now  = new Date();
+      const cur  = now.getHours() * 60 + now.getMinutes();
+      const ent  = toMin(item.entrada);
+      const intv = toMin(item.intervalo);
+      const ret  = toMin(item.retorno);
+      const sai  = toMin(item.saida);
+      if (cur >= ent  && cur < intv) return 'working';
       if (cur >= intv && cur < ret)  return 'break';
-      if (cur >= ret && cur < sai)   return 'working';
+      if (cur >= ret  && cur < sai)  return 'working';
       return 'off';
     }
 
-    // ── Labels e classes por status ───────────────────────
     const statusConfig = {
-      working: { label: '● Ativo', badgeClass: 'badge-working', rowClass: 'status-working' },
+      working: { label: '● Trabalhando', badgeClass: 'badge-working', rowClass: 'status-working' },
       break:   { label: '● Intervalo',   badgeClass: 'badge-break',   rowClass: 'status-break'   },
       off:     { label: '● Fora',        badgeClass: 'badge-off',     rowClass: 'status-off'     },
     };
 
-    // ── Renderiza a tabela ────────────────────────────────
-    function renderTable(data) {
+    // ── Estado de ordenação por setor ─────────────────────
+    // Guarda: null | 'asc' | 'desc'  por setor id
+    const sortState    = {};
+    const originalData = {};
+
+    setores.forEach(s => {
+      sortState[s.id]    = null;
+      originalData[s.id] = [...s.colaboradores];
+    });
+
+    // ── Renderiza tbody de um setor ───────────────────────
+    function renderTbody(setor) {
+      const tbody = document.getElementById(`tbody-${setor.id}`);
       tbody.innerHTML = '';
-      data.forEach(item => {
+      setor.colaboradores.forEach(item => {
         const status = getStatus(item);
         const cfg    = statusConfig[status];
         const tr     = document.createElement('tr');
@@ -322,31 +355,85 @@
       });
     }
 
-    // ── Ordenação com 3 estados: original → A→Z → Z→A ────
-    function sortByName() {
-      if (sortAsc === null) {
-        // 1º clique: A → Z
-        horarios.sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
-        sortAsc = true;
-        sortIcon.textContent = '↑';
-      } else if (sortAsc === true) {
-        // 2º clique: Z → A
-        horarios.sort((a, b) => b.nome.localeCompare(a.nome, 'pt-BR'));
-        sortAsc = false;
-        sortIcon.textContent = '↓';
+    // ── Ordenação 3 estados ───────────────────────────────
+    function sortSetor(setor) {
+      const state = sortState[setor.id];
+      const icon  = document.getElementById(`sort-icon-${setor.id}`);
+
+      if (state === null) {
+        setor.colaboradores.sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
+        sortState[setor.id] = 'asc';
+        icon.textContent = '↑';
+      } else if (state === 'asc') {
+        setor.colaboradores.sort((a, b) => b.nome.localeCompare(a.nome, 'pt-BR'));
+        sortState[setor.id] = 'desc';
+        icon.textContent = '↓';
       } else {
-        // 3º clique: volta à ordem original
-        horarios.length = 0;
-        originalOrder.forEach(i => horarios.push(i));
-        sortAsc = null;
-        sortIcon.textContent = '↕';
+        setor.colaboradores.length = 0;
+        originalData[setor.id].forEach(i => setor.colaboradores.push(i));
+        sortState[setor.id] = null;
+        icon.textContent = '↕';
       }
-      renderTable(horarios);
+      renderTbody(setor);
     }
 
-    thNome.addEventListener('click', sortByName);
+    // ── Tabs ──────────────────────────────────────────────
+    function activateTab(id) {
+      document.querySelectorAll('.tab-btn').forEach(b =>
+        b.classList.toggle('active', b.dataset.tab === id)
+      );
+      document.querySelectorAll('.section').forEach(s =>
+        s.classList.toggle('active', s.id === `section-${id}`)
+      );
+    }
 
-    // ── Relógio em tempo real ─────────────────────────────
+    // ── Gera tabs + seções dinamicamente ─────────────────
+    setores.forEach((setor, idx) => {
+      // Tab button
+      const btn = document.createElement('button');
+      btn.className  = 'tab-btn' + (idx === 0 ? ' active' : '');
+      btn.dataset.tab = setor.id;
+      btn.innerHTML  = `<span>${setor.icon}</span>${setor.label}`;
+      btn.addEventListener('click', () => activateTab(setor.id));
+      tabsEl.appendChild(btn);
+
+      // Section
+      const section = document.createElement('div');
+      section.className = 'section' + (idx === 0 ? ' active' : '');
+      section.id        = `section-${setor.id}`;
+      section.innerHTML = `
+        <div class="section-title">
+          <span>${setor.icon}</span> ${setor.label}
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th class="sortable" id="th-${setor.id}">
+                  Nome <span class="sort-icon" id="sort-icon-${setor.id}">↕</span>
+                </th>
+                <th>Entrada</th>
+                <th>Intervalo</th>
+                <th>Retorno</th>
+                <th>Saída</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-${setor.id}"></tbody>
+          </table>
+        </div>
+      `;
+      sectionsEl.appendChild(section);
+
+      // Listener de ordenação
+      section.querySelector(`#th-${setor.id}`)
+        .addEventListener('click', () => sortSetor(setor));
+
+      // Primeira renderização
+      renderTbody(setor);
+    });
+
+    // ── Relógio ───────────────────────────────────────────
     function updateClock() {
       const now = new Date();
       const hh  = String(now.getHours()).padStart(2, '0');
@@ -355,19 +442,17 @@
       clockEl.textContent = `${hh}:${mm}:${ss}`;
     }
 
-    // ── Atualiza status a cada minuto (no :00 do minuto) ──
+    // ── Atualiza status no :00 de cada minuto ─────────────
     function scheduleStatusUpdate() {
       const ms = (60 - new Date().getSeconds()) * 1000;
       setTimeout(() => {
-        renderTable(horarios);
+        setores.forEach(s => renderTbody(s));
         scheduleStatusUpdate();
       }, ms);
     }
 
-    // ── Init ──────────────────────────────────────────────
     updateClock();
     setInterval(updateClock, 1000);
-    renderTable(horarios);
     scheduleStatusUpdate();
   </script>
 
