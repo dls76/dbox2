@@ -57,10 +57,10 @@
 .sec_calendarios a:nth-of-type(4):hover {
     border: 4px solid #f141fa;
 }
-/* 
+
 .sec_calendarios a:nth-of-type(5):hover {
     border: 4px solid #f141fa;
-} */
+}
 
 .svg_dbox, .svg_dbox + p  {
     color: #B52532;
