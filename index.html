@@ -871,6 +871,42 @@
       </div>
     </div>
 
+    <section class="horarios-section" id="sec-horarios">
+      <h2>Ferramentas</h2>
+      <div class="horarios-grid">
+        <div class="horarios-column">
+          <!-- <h3>Infantil e 1º</h3> -->
+          <ul>
+            <li><a
+                href="https://mailadventistas-my.sharepoint.com/:w:/g/personal/douglas_leal_adm_educadventista_org/IQBoh_YAvtmtTp-wGBxE3C_kAYVY5Z-JVQ0w4NEZ0sNPsfQ?e=rkGZkJ"
+                target="_blank"><i class="fa-solid fa-pen-to-square"></i>Novo Comunicado</a></li>
+          </ul>
+        </div>
+        <div class="horarios-column">
+          <ul>
+            <li><a
+                href="https://apps.powerapps.com/play/e/default-01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07/a/67c2f36c-1c44-4ff2-b25a-7267958fbdb9?tenantId=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&source=sharebutton&sourcetime=1745499649569"
+                target="_blank"><i class="fa-solid fa-arrow-rotate-left"></i>Feedbacks</a></li>
+          </ul>
+        </div>
+        <div class="horarios-column">
+          <ul>
+            <li><a href="#" id="btaRamais"><i class="fa-solid fa-phone-flip"></i>Ramais</a></li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <script>
+        const btaRamais = document.querySelector('#btaRamais')
+        btaRamais.addEventListener('click', (e) => {
+          e.preventDefault();
+          modal.style.display = 'flex';
+        });
+      </script>
+
+    </section>
+
     <script>
       document.getElementById('calendarioRoute').addEventListener('click', function (e) {
         e.preventDefault();
@@ -894,7 +930,7 @@
         <li><span class="emergency-number">9.9861-0767</span> - Sekron</li>
         <li><span class="emergency-number">3361-2326</span> - Vigilância Sanitária</li>
         <li><span class="emergency-number">9.9682-5103</span> - Assessoria de Imprensa (Jordana)</li>
-        <li><span class="emergency-number">9.9681-9803</span> - Dr. Rodrigo Hahn (Advogado ASP)</li>
+        <li><span class="emergency-number">9.9681-9803</span> - Dr. Rodrigo Hahn (Advogado)</li>
       </ul>
     </div>
   </div>
