@@ -4,33 +4,35 @@ let dia = data.getDate()
 let mes = data.getMonth()
 let ano = data.getFullYear()
 
-// Feriados fixos
+// Feriados fixos e Reuniões Participativas
 const feriadosFixos = {
     "1-1": "Ano Novo",
-    "3-3": "Carnaval",
-    "4-3": "Carnaval",
-    "18-4": "Sexta-feira da Paixão",
+    "16-2": "Recesso Carnaval",
+    "17-2": "Feriado Carnaval",
+    "3-4": "Sexta-feira da Paixão",
+    "20-4": "Recesso",
     "21-4": "Tiradentes",
     "1-5": "Dia do Trabalho",
-    "2-5": "Recesso",
-    "19-6": "Corpus Christi",
-    "20-6": "Recesso",
+    "4-6": "Corpus Christi",
+    "5-6": "Recesso",
+    "7-9": "Independência",
     "8-9": "Aniversário de Curitiba",
-    "15-10": "Dia do professor",
+    "12-10": "N. Sra. Aparecida",
+    "13-10": "Recesso Dia do professor",
 }
 
 // Feriados por intervalo (mês indexado de 0 a 11)
 const feriadosIntervalo = {
-    6: [[7, 23]],
-    11: [[19, 31]]
+    6: [[6, 21]],
+    11: [[21, 31]]
 }
 
 // Dias de reunião participativa
 const reunioes = {
-    "18-3": true,
-    "29-5": true,
-    "28-8": true,
-    "10-11": true,
+    "16-3": true,
+    "28-5": true,
+    "27-8": true,
+    "11-11": true,
 }
 
 let renderCalendar = () => {
@@ -44,11 +46,11 @@ let renderCalendar = () => {
     let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
     document.querySelector('.mescal').innerHTML = meses[data.getMonth()] + ' ' + data.getFullYear()
     let days = ""
-    
+
     for (let x = firstDayIndex; x > 0; x--) {
         days += `<div class="prev-date">${prevLastDay - x + 1}</div>`
     }
-    
+
     for (let i = 1; i <= lastDay; i++) {
         let dateKey = `${i}-${data.getMonth() + 1}`
         let isFeriado = feriadosFixos[dateKey] !== undefined
@@ -79,7 +81,7 @@ let renderCalendar = () => {
 
         days += `<div class="${classList}" style="${style}">${i}</div>`
     }
-    
+
     for (let i = 1; i <= nextDays; i++) {
         days += `<div class="next-date">${i}</div>`
     }
@@ -109,12 +111,12 @@ document.querySelector("#btn-obs").addEventListener("click", () => {
 renderCalendar()
 
 // Adicione este código após a função renderCalendar
-document.querySelector('.days').addEventListener('click', function(e) {
+document.querySelector('.days').addEventListener('click', function (e) {
     if (e.target.classList.contains('dayMonth')) {
         const dia = e.target.textContent;
         const mes = data.getMonth() + 1;
         const key = `${dia}-${mes}`;
-        
+
         // Verificar feriados fixos
         if (feriadosFixos[key]) {
             alert(feriadosFixos[key]);
@@ -132,12 +134,12 @@ document.querySelector('.days').addEventListener('click', function(e) {
     }
 });
 
-document.querySelector('.days').addEventListener('click', function(e) {
+document.querySelector('.days').addEventListener('click', function (e) {
     if (e.target.classList.contains('dayMonth')) {
         const dia = e.target.textContent;
         const mes = data.getMonth() + 1;
         const key = `${dia}-${mes}`;
-        
+
         // Verificar feriados fixos
         if (reunioes[key]) {
             alert('Reunião Participativa');
