@@ -16,11 +16,18 @@ export const substituicoes = {
 };
 
 export const escalaQuintaPersonalizada = {
-  "2026-02-27": ["Escala", "Escala", "Escala"],
-  "2026-03-07": ["Escala", "Escala", "Escala"],
-  "2026-03-14": ["Escala", "Escala", "Escala"],
-  "2026-03-21": ["Escala", "Escala", "Escala"],
-  "2026-03-28": ["Escala", "Escala", "Escala"]
+  "2026-03-05": ["Douglas", "Douglas", "Douglas"],
+  "2026-03-12": ["Murilo", "Murilo", "Murilo"],
+  "2026-03-19": ["Carol", "Carol", "Carol"],
+  "2026-03-26": ["Renata", "Renata", "Renata"],
+  "2026-04-02": ["Andressa", "Andressa", "Andressa"],
+  "2026-04-02": ["Rocha", "Rocha", "Rocha"],
+  "2026-04-09": ["Valéria", "Valéria", "Valéria"],
+  "2026-04-16": ["Joyce", "Joyce", "Joyce"],
+  "2026-05-07": ["Carin", "Carin", "Carin"],
+  "2026-05-14": ["Jaque", "Jaque", "Jaque"],
+  "2026-05-21": ["Douglas", "Douglas", "Douglas"],
+  "2026-05-28": ["Murilo", "Murilo", "Murilo"],
 };
 
 export function getDataAtual() {

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala de Cultos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #eaf0f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #1a3a5c;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.4em;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            background-color: #1a3a5c;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 0.85em;
+            font-weight: 400;
+        }
+
+        .wrapper {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            gap: 30px;
+            padding: 30px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            height: calc(100vh - 120px);
+        }
+
+        /* ── Calendário ── */
+        .calendar-container {
+            width: 280px;
+            background-color: #1e3f5a;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0;
+            color: #ecf0f1;
+            align-self: flex-start;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(236, 240, 241, 0.15);
+        }
+
+        .calendar-header button {
+            background-color: rgba(236, 240, 241, 0.1);
+            color: #ecf0f1;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-family: 'Quicksand', sans-serif;
+            transition: background-color 0.2s ease;
+        }
+
+        .calendar-header button:hover {
+            background-color: rgba(236, 240, 241, 0.25);
+        }
+
+        .calendar-header span {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #ecf0f1;
+        }
+
+        .calendar-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 12px;
+        }
+
+        .calendar-buttons button {
+            background-color: #2a6496;
+            color: white;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+            font-family: 'Quicksand', sans-serif;
+            transition: background-color 0.2s ease;
+        }
+
+        .calendar-buttons button:hover {
+            background-color: #1f4f78;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            text-align: center;
+        }
+
+        .calendar .day-name {
+            font-weight: 600;
+            color: rgba(236, 240, 241, 0.55);
+            font-size: 0.72em;
+            text-transform: uppercase;
+            padding: 2px 0 6px;
+        }
+
+        .calendar .day {
+            padding: 7px 4px;
+            border-radius: 50%;
+            font-size: 0.88em;
+            color: #ecf0f1;
+            cursor: default;
+            transition: background-color 0.2s ease;
+        }
+
+        .calendar .day.today {
+            background-color: #2a6496;
+            color: white;
+            font-weight: 700;
+        }
+
+        .calendar .day.empty {
+            color: rgba(236, 240, 241, 0.2);
+        }
+
+        .calendar .day:not(.today):not(.empty):hover {
+            background-color: rgba(236, 240, 241, 0.1);
+        }
+
+        /* ── Container principal ── */
+        .container {
+            flex: 1;
+            overflow-y: auto;
+            height: 100%;
+            padding-bottom: 20px;
+        }
+
+        .container::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background: rgba(26, 58, 92, 0.25);
+            border-radius: 10px;
+        }
+
+        /* ── Seção de mês ── */
+        .month-section {
+            margin-bottom: 28px;
+        }
+
+        .month-title {
+            color: #1a3a5c;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin: 0 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(26, 58, 92, 0.15);
+            letter-spacing: 0.3px;
+        }
+
+        /* ── Lista de cards (um por linha) ── */
+        .week-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* ── Card de culto ── */
+        .event-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(26, 58, 92, 0.08);
+            overflow: hidden;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+            border: 1px solid rgba(26, 58, 92, 0.07);
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .event-card:hover {
+            box-shadow: 0 6px 18px rgba(26, 58, 92, 0.14);
+            transform: translateY(-1px);
+        }
+
+        .event-card.today-card {
+            border: 2px solid #2a6496;
+        }
+
+        .event-card.today-card::before {
+            content: "Hoje";
+            position: absolute;
+            top: 0;
+            right: 14px;
+            background-color: #2a6496;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.72em;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Cabeçalho lateral do card */
+        .card-header {
+            background-color: #1e3f5a;
+            padding: 14px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 90px;
+            flex-shrink: 0;
+        }
+
+        .card-day-number {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .card-weekday {
+            font-size: 0.78em;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .card-date-full {
+            font-size: 0.68em;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 2px;
+        }
+
+        /* Corpo do card — horários em linha */
+        .card-body {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 0;
+            flex: 1;
+        }
+
+        .horario-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            gap: 4px;
+            padding: 0 10px;
+            position: relative;
+        }
+
+        .horario-row:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 80%;
+            width: 1px;
+            background-color: rgba(26, 58, 92, 0.1);
+        }
+
+        .horario-tag {
+            background-color: #eaf0f8;
+            color: #1a3a5c;
+            font-size: 0.75em;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .horario-responsavel {
+            font-size: 0.88em;
+            color: #2c4a6a;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <span class="logo">Escala de Cultos</span>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prev-month">◄</button>
+                <span id="month-year"></span>
+                <button id="next-month">►</button>
+            </div>
+            <div class="calendar" id="calendar"></div>
+            <div class="calendar-buttons">
+                <button id="today-btn">Hoje</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="event-list"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            Escala de Cultos &copy; 2026
+        </div>
+    </footer>
+
+    <script>
+        const HORARIOS = ["7h", "10h", "13h"];
+
+        const ESCALA_FIXA = {
+            1: ["Pr. Gabriel", "Pr. Gabriel", "Pr. Gabriel"],
+            2: ["Pr. Danylo",  "Pr. Danylo",  "Pr. Danylo"],
+            3: ["Pr. Fábio",   "Pr. Fábio",   "Pr. Fábio"],
+            5: ["Pr. Fábio",   "Pr. Fábio",   "Pr. Fábio"],
+        };
+
+        const ESCALA_ADM = {
+            "2026-03-05": ["Douglas",  "Douglas",  "Douglas"],
+            "2026-03-12": ["Murilo",   "Murilo",   "Murilo"],
+            "2026-03-19": ["Carol",    "Carol",    "Carol"],
+            "2026-03-26": ["Renata",   "Renata",   "Renata"],
+            "2026-04-02": ["Andressa", "Andressa", "Andressa"],
+            "2026-04-09": ["Valéria",  "Valéria",  "Valéria"],
+            "2026-04-16": ["Joyce",    "Joyce",    "Joyce"],
+            "2026-05-07": ["Carin",    "Carin",    "Carin"],
+            "2026-05-14": ["Jaque",    "Jaque",    "Jaque"],
+            "2026-05-21": ["Douglas",  "Douglas",  "Douglas"],
+            "2026-05-28": ["Murilo",   "Murilo",   "Murilo"],
+        };
+
+        const WEEKDAY_NAMES = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+        const MONTH_NAMES   = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho",
+                               "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+
+        function toISO(d) {
+            const y   = d.getFullYear();
+            const m   = String(d.getMonth() + 1).padStart(2, "0");
+            const day = String(d.getDate()).padStart(2, "0");
+            return `${y}-${m}-${day}`;
+        }
+
+        function generateSchedule(startDate, endDate) {
+            const days = [];
+            const cur  = new Date(startDate);
+            while (cur <= endDate) {
+                const dow = cur.getDay();
+                const iso = toISO(cur);
+                if (ESCALA_FIXA[dow]) {
+                    days.push({ iso, date: new Date(cur), dow, responsaveis: ESCALA_FIXA[dow] });
+                } else if (dow === 4) {
+                    const resp = ESCALA_ADM[iso] || null;
+                    if (resp) days.push({ iso, date: new Date(cur), dow, responsaveis: resp });
+                }
+                cur.setDate(cur.getDate() + 1);
+            }
+            return days;
+        }
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const todayISO = toISO(today);
+
+        let displayedDate = new Date(today);
+
+        const scheduleStart = new Date("2026-03-02");
+        const scheduleEnd   = new Date("2026-05-31");
+        const allDays       = generateSchedule(scheduleStart, scheduleEnd);
+
+        function renderCalendar() {
+            const calendar  = document.getElementById("calendar");
+            const monthYear = document.getElementById("month-year");
+            calendar.innerHTML = "";
+
+            const year  = displayedDate.getFullYear();
+            const month = displayedDate.getMonth();
+            monthYear.textContent = `${MONTH_NAMES[month]} ${year}`;
+
+            const firstDay    = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            ["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"].forEach(n => {
+                const el = document.createElement("div");
+                el.className = "day-name";
+                el.textContent = n;
+                calendar.appendChild(el);
+            });
+
+            for (let i = 0; i < firstDay; i++) {
+                const el = document.createElement("div");
+                el.className = "day empty";
+                calendar.appendChild(el);
+            }
+
+            for (let d = 1; d <= daysInMonth; d++) {
+                const el  = document.createElement("div");
+                el.className = "day";
+                el.textContent = d;
+                const iso = `${year}-${String(month + 1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+                if (iso === todayISO) el.classList.add("today");
+                calendar.appendChild(el);
+            }
+        }
+
+        function renderEvents() {
+            const list = document.getElementById("event-list");
+            list.innerHTML = "";
+
+            let currentMonth = null;
+            let weekGrid     = null;
+
+            allDays.forEach(item => {
+                const monthName = MONTH_NAMES[item.date.getMonth()];
+
+                if (monthName !== currentMonth) {
+                    currentMonth = monthName;
+                    const section = document.createElement("div");
+                    section.className = "month-section";
+
+                    const title = document.createElement("div");
+                    title.className = "month-title";
+                    title.id = `month-${monthName.toLowerCase()}`;
+                    title.textContent = `${monthName} ${item.date.getFullYear()}`;
+                    section.appendChild(title);
+
+                    weekGrid = document.createElement("div");
+                    weekGrid.className = "week-grid";
+                    section.appendChild(weekGrid);
+
+                    list.appendChild(section);
+                }
+
+                const card = document.createElement("div");
+                card.className = "event-card";
+                if (item.iso === todayISO) card.classList.add("today-card");
+
+                const dayNum     = item.date.getDate();
+                const weekday    = WEEKDAY_NAMES[item.dow];
+                const monthShort = MONTH_NAMES[item.date.getMonth()].substring(0, 3);
+
+                // Cabeçalho lateral
+                const header = document.createElement("div");
+                header.className = "card-header";
+                header.innerHTML = `
+                    <span class="card-day-number">${dayNum}</span>
+                    <span class="card-weekday">${weekday}</span>
+                    <span class="card-date-full">${monthShort} ${item.date.getFullYear()}</span>
+                `;
+
+                // Corpo horizontal com os 3 horários
+                const body = document.createElement("div");
+                body.className = "card-body";
+
+                HORARIOS.forEach((h, idx) => {
+                    const row = document.createElement("div");
+                    row.className = "horario-row";
+                    row.innerHTML = `
+                        <span class="horario-tag">${h}</span>
+                        <span class="horario-responsavel">${item.responsaveis[idx]}</span>
+                    `;
+                    body.appendChild(row);
+                });
+
+                card.appendChild(header);
+                card.appendChild(body);
+                weekGrid.appendChild(card);
+            });
+
+            setTimeout(() => {
+                const currentMonthName = MONTH_NAMES[today.getMonth()];
+                const target    = document.getElementById(`month-${currentMonthName.toLowerCase()}`);
+                const container = document.querySelector(".container");
+                if (target) {
+                    container.scrollTo({ top: target.offsetTop - 20, behavior: "smooth" });
+                }
+            }, 0);
+        }
+
+        document.getElementById("prev-month").addEventListener("click", () => {
+            displayedDate.setMonth(displayedDate.getMonth() - 1);
+            renderCalendar();
+        });
+
+        document.getElementById("next-month").addEventListener("click", () => {
+            displayedDate.setMonth(displayedDate.getMonth() + 1);
+            renderCalendar();
+        });
+
+        document.getElementById("today-btn").addEventListener("click", () => {
+            displayedDate = new Date(today);
+            renderCalendar();
+        });
+
+        renderCalendar();
+        renderEvents();
+    </script>
+</body>
+</html>
