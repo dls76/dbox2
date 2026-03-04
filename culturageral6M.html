@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultura Geral</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: 'Quicksand', sans-serif;
@@ -287,6 +289,193 @@
             height: 60px;
             /* Ajuste conforme necessário */
         }
+
+        /* =========================================================
+           MOBILE ONLY (sem alterar a versão desktop)
+           - Keyframes e layout responsivo
+           - Remove calendário numérico e menu dos níveis
+           - Mostra apenas título + select
+           - Cards mais minimalistas, mantendo consistência visual
+        ========================================================== */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                overflow: auto;
+                display: block;
+            }
+
+            header {
+                padding: 10px 0;
+            }
+
+            .header-content {
+                padding: 0 14px;
+                gap: 10px;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            /* Esconde o menu de níveis no mobile */
+            nav {
+                display: none !important;
+            }
+
+            .logo {
+                font-size: 1.2em;
+            }
+
+            /* Select do nível (mobile) */
+            .mobile-level-select {
+                margin-left: auto;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                animation: slideDown 220ms ease both;
+            }
+
+            .mobile-level-select label {
+                color: rgba(255, 255, 255, 0.9);
+                font-weight: 500;
+                font-size: 0.9em;
+                white-space: nowrap;
+            }
+
+            .mobile-level-select select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border: 1px solid rgba(255, 255, 255, 0.35);
+                background: rgba(255, 255, 255, 0.12);
+                color: white;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 0.9em;
+                font-weight: 600;
+                padding: 8px 34px 8px 10px;
+                border-radius: 8px;
+                outline: none;
+                line-height: 1;
+                position: relative;
+                background-image:
+                    linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.9) 50%),
+                    linear-gradient(135deg, rgba(255, 255, 255, 0.9) 50%, transparent 50%);
+                background-position:
+                    calc(100% - 16px) 52%,
+                    calc(100% - 11px) 52%;
+                background-size: 6px 6px, 6px 6px;
+                background-repeat: no-repeat;
+            }
+
+            .mobile-level-select select option {
+                color: #333;
+            }
+
+            .wrapper {
+                margin-top: 56px;
+                margin-bottom: 54px;
+                padding: 14px;
+                height: auto;
+                display: block;
+                max-width: 100%;
+                width: 100%;
+                gap: 0;
+            }
+
+            /* Elimina calendário numérico no mobile */
+            .calendar-container {
+                display: none !important;
+            }
+
+            .container {
+                max-width: 100%;
+                height: auto;
+                overflow: visible;
+                padding-bottom: 8px;
+                animation: fadeUp 220ms ease both;
+            }
+
+            .month-title {
+                font-size: 1.25em;
+                margin: 14px 0 10px;
+                padding-bottom: 6px;
+            }
+
+            .event-list {
+                gap: 10px;
+            }
+
+            /* Cards minimalistas, consistentes com desktop */
+            .event-card {
+                padding: 10px 10px;
+                border-radius: 10px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+            }
+
+            .event-card:hover {
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+            }
+
+            .event-card .header {
+                gap: 10px;
+                margin-bottom: 2px;
+            }
+
+            .event-card .day {
+                font-size: 1.05em;
+                min-width: 26px;
+                text-align: center;
+                color: #4a90e2;
+                font-weight: 700;
+                background: rgba(74, 144, 226, 0.10);
+                border-radius: 8px;
+                padding: 6px 8px;
+            }
+
+            .event-card h2 {
+                font-size: 1.0em;
+                line-height: 1.25;
+            }
+
+            .event-card .responsavel {
+                font-size: 0.85em;
+            }
+
+            footer {
+                padding: 10px 0;
+            }
+
+            .footer-content {
+                padding: 0 14px;
+                font-size: 0.85em;
+            }
+        }
+
+        /* O select mobile NÃO deve aparecer no desktop */
+        .mobile-level-select {
+            display: none;
+        }
     </style>
 </head>
 
@@ -294,6 +483,18 @@
     <header>
         <div class="header-content">
             <a href="?section=6aoem" class="logo">Cultura Geral</a>
+
+            <!-- MOBILE: apenas select para escolher o nível -->
+            <div class="mobile-level-select" aria-label="Seleção de nível (mobile)">
+                <label for="level-select">Nível</label>
+                <select id="level-select">
+                    <option value="infantil">Infantil ao 1º ano</option>
+                    <option value="fund1">2º ao 5º ano</option>
+                    <option value="6aoem" selected>6º ao Médio</option>
+                </select>
+            </div>
+
+            <!-- DESKTOP: menu original (sem alterações) -->
             <nav>
                 <a href="?section=infantil" id="infantil-link">Infantil ao 1º ano</a>
                 <a href="?section=fund1" id="fund1-link">2º ao 5º ano</a>
@@ -301,6 +502,7 @@
             </nav>
         </div>
     </header>
+
     <div class="wrapper">
         <div class="calendar-container">
             <div class="calendar-header">
@@ -313,15 +515,18 @@
                 <button id="today-btn">Hoje</button>
             </div>
         </div>
+
         <div class="container">
             <div id="event-list" class="event-list"></div>
         </div>
     </div>
+
     <footer>
         <div class="footer-content">
             Cultura Geral &copy; 2026 - Todos os direitos reservados
         </div>
     </footer>
+
     <script>
         // Dados dos eventos para cada seção (inicialmente iguais, você pode editar depois)
         const eventData = {
@@ -606,6 +811,12 @@
             const section = params.get("section") || "6aoem"; // Default para 6º ao EM
             updateActiveLink(section);
             renderEvents(section);
+
+            // Sincroniza o select do mobile com a seção atual
+            const levelSelect = document.getElementById("level-select");
+            if (levelSelect && levelSelect.value !== section) {
+                levelSelect.value = section;
+            }
         }
 
         document.getElementById("prev-month").addEventListener("click", () => {
@@ -631,6 +842,16 @@
                 handleNavigation();
             });
         });
+
+        // Mobile select navigation
+        const levelSelect = document.getElementById("level-select");
+        if (levelSelect) {
+            levelSelect.addEventListener("change", () => {
+                const section = levelSelect.value;
+                window.history.pushState({}, "", `?section=${section}`);
+                handleNavigation();
+            });
+        }
 
         window.addEventListener("popstate", handleNavigation);
 
