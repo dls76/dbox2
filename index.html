@@ -686,7 +686,7 @@
 
     </section>
 
-    <!-- Pedagógico -->
+    <!-- Horários -->
     <section class="horarios-section" id="sec-horarios">
       <h2>Horários</h2>
       <div class="horarios-grid">
@@ -874,7 +874,7 @@
 
   </div>
 
-  <!-- URGÊNCIAS -->
+  <!-- Urgências -->
   <div id="modal-container">
     <div id="emergency-modal">
       <button id="close-modal-btn">Fechar</button>
@@ -1334,80 +1334,6 @@
     }
   </style>
 
-  <!-- Modal Evento -->
-  <div class="cx-msg-overlay-x87" id="msgAutoPopupX87">
-    <div class="cx-msg-box-x87" id="modalContentX87">
-      <button class="cx-fechar-x87" id="btnFecharX87">&times;</button>
-      <h1>Dia das Mães</h1>
-      <p></p>
-
-      <a class="btn-acesso-x87"
-        href="https://drive.google.com/drive/folders/1z-pxNIP3Hz_xT0nfGg0PMvIaNhySHFy3?usp=sharing" target="_blank"
-        rel="noopener noreferrer">Acessar informações</a>
-
-      <button class="btn-nao-exibir-x87" onclick="naoExibirHojeX87()">Não mostrar mais, hoje.</button>
-    </div>
-  </div>
-
-  <script>
-    // Função que zera o horário da data (para comparar só o dia)
-    function zerarHora(data) {
-      return new Date(data.getFullYear(), data.getMonth(), data.getDate());
-    }
-
-    // Data do evento fixada às 00:00:00
-    const dataEvento = zerarHora(new Date('2025-05-18'));
-    const hoje = new Date().toLocaleDateString();
-
-    // Atualiza contagem regressiva no elemento passado
-    function atualizarContagemRegressiva(elemento) {
-      const hojeData = zerarHora(new Date());
-      const diffEmMs = dataEvento - hojeData;
-      const diffEmDias = Math.round(diffEmMs / (1000 * 60 * 60 * 24));
-
-      if (diffEmDias > 0) {
-        elemento.textContent = `Faltam ${diffEmDias} dia${diffEmDias === 1 ? '' : 's'}!`;
-      } else if (diffEmDias === 0) {
-        elemento.textContent = `É hoje! Confira os detalhes:`;
-      } else {
-        elemento.textContent = `O evento já aconteceu. Veja como foi o Dia das Mães!`;
-      }
-    }
-
-    // Executa quando a página estiver completamente carregada
-    window.addEventListener('DOMContentLoaded', () => {
-      const modal = document.getElementById('msgAutoPopupX87');
-      const fecharBtn = document.getElementById('btnFecharX87');
-      const mensagemElemento = modal.querySelector("p");
-
-      if (localStorage.getItem('naoExibirX87') !== hoje) {
-        atualizarContagemRegressiva(mensagemElemento);
-        // modal.style.display = 'flex';
-      }
-
-      // Fecha o modal ao clicar no botão ×
-      fecharBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
-
-      // Fecha clicando fora do modal
-      window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
-
-      // Botão de "não exibir hoje"
-      window.naoExibirHojeX87 = function () {
-        localStorage.setItem('naoExibirX87', hoje);
-        modal.style.display = 'none';
-      };
-    });
-  </script>
-
-  </div>
-  </div>
-
   <script>
     const overlayX87 = document.getElementById('msgAutoPopupX87');
     const modalX87 = document.getElementById('modalContentX87');
@@ -1479,8 +1405,6 @@
     }
   </style>
 
-
-
   <!-- Modal -->
   <div id="modalMotivo" style="
   display:none;
@@ -1519,9 +1443,6 @@
     </div>
   </div>
 
-
-  </script>
-
   <script type="module">
     import { entrevistasPadrao, alteracoes } from './entrevistas-data.js';
 
@@ -1550,9 +1471,7 @@
 
   </script>
 
-  <!-- ========================= Modal conselheiros e representantes =======================-->
-
-  <!-- Modal conselheiros -->
+  <!-- Modal conselheiros e representantes -->
 
   <div id="modalSimplesUnico_RA" style="
   display: none;
@@ -1819,9 +1738,7 @@
       }
     });
   </script>
-
-
-  <!-- ================ fim modal conselheiros e representantes -->
+  <!-- ==== fim modal conselheiros e representantes ==== -->
 
   <script src="rotinas.js"></script>
 </body>
