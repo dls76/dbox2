@@ -1,6 +1,6 @@
 const entrevistasPadrao = [
   "Jaque e Carol",        // segunda
-  "Valéria e Pr. Fábio",   // terça
+  "Nível / Valéria e Pr. Fábio",   // terça
   "Murilo e Joice",       // quarta
   "Diretor e Camila",     // quinta
   "Renata e Andressa"     // sexta
