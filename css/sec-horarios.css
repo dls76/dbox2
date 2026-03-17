@@ -7,6 +7,7 @@
     width: 98%;
     max-width: 1500px;
     margin: 20px auto;
+    margin-bottom: 2rem;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

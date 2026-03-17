@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Horários ADM 2026</title>
+  <title>Horários de Trabalho CAC</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -39,7 +39,7 @@
     .clock {
       text-align: center;
       margin-bottom: 24px;
-      font-size: 2.6rem;
+      font-size: 1.6rem;
       font-weight: 800;
       color: #fff;
       letter-spacing: 2px;
@@ -193,6 +193,7 @@
     td {
       padding: 14px 18px;
       font-size: 0.93rem;
+      font-size: 0.8rem;
       border-bottom: 1px solid rgba(255,255,255,0.05);
       color: rgba(255,255,255,0.85);
       white-space: nowrap;
@@ -270,13 +271,13 @@
 <body>
 
   <div class="header">
-    <h1>Horários ADM 2026</h1>
-    <p>Atualizado automaticamente em tempo real</p>
+    <h1>Horários de Trabalho - 2026</h1>
+    <!-- <p>Atualizado automaticamente em tempo real</p> -->
+    <!-- <div class="clock" id="clock">00:00:00</div> -->
   </div>
 
-  <div class="clock" id="clock">00:00:00</div>
 
-  <div class="legend">
+  <!-- <div class="legend">
     <div class="legend-item">
       <span class="legend-dot dot-working"></span> Trabalhando
     </div>
@@ -286,7 +287,7 @@
     <div class="legend-item">
       <span class="legend-dot dot-off"></span> Fora do horário
     </div>
-  </div>
+  </div> -->
 
   <!-- Tabs e seções geradas pelo JS -->
   <div class="tabs" id="tabs"></div>
@@ -402,9 +403,9 @@
       section.className = 'section' + (idx === 0 ? ' active' : '');
       section.id        = `section-${setor.id}`;
       section.innerHTML = `
-        <div class="section-title">
+        <!--<div class="section-title">
           <span>${setor.icon}</span> ${setor.label}
-        </div>
+        </div>-->
         <div class="table-container">
           <table>
             <thead>
