@@ -259,6 +259,26 @@
             letter-spacing: 0.5px;
         }
 
+        /* ── Destaque: próximo culto ── */
+        .event-card.next-card {
+            border: 2px solid #e67e22;
+            box-shadow: 0 4px 16px rgba(230, 126, 34, 0.25);
+        }
+
+        .event-card.next-card::before {
+            content: "Próximo";
+            position: absolute;
+            top: 0;
+            right: 14px;
+            background-color: #e67e22;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.72em;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
         /* Cabeçalho lateral do card */
         .card-header {
             background-color: #1e3f5a;
@@ -377,39 +397,39 @@
 
         const ESCALA_FIXA = {
             1: ["Pr. Gabriel", "Pr. Gabriel", "Pr. Gabriel"],
-            2: ["Pr. Danylo",  "Pr. Danylo",  "Pr. Danylo"],
-            3: ["Pr. Fábio",   "Pr. Fábio",   "Pr. Fábio"],
-            5: ["Pr. Fábio",   "Pr. Fábio",   "Pr. Fábio"],
+            2: ["Pr. Danylo", "Pr. Danylo", "Pr. Danylo"],
+            3: ["Pr. Fábio", "Pr. Fábio", "Pr. Fábio"],
+            5: ["Pr. Fábio", "Pr. Fábio", "Pr. Fábio"],
         };
 
         const ESCALA_ADM = {
-            "2026-03-05": ["Murilo",  "Murilo",  "Murilo"],
-            "2026-03-12": ["Douglas",   "Douglas",   "Douglas"],
-            "2026-03-19": ["Carol",    "Carol",    "Carol"],
-            "2026-03-26": ["Renata",   "Renata",   "Renata"],
+            "2026-03-05": ["Murilo", "Murilo", "Murilo"],
+            "2026-03-12": ["Douglas", "Douglas", "Douglas"],
+            "2026-03-19": ["Carol", "Carol", "Carol"],
+            "2026-03-26": ["Renata", "Renata", "Renata"],
             "2026-04-02": ["Andressa", "Andressa", "Andressa"],
-            "2026-04-09": ["Valéria",  "Valéria",  "Valéria"],
-            "2026-04-16": ["Joyce",    "Joyce",    "Joyce"],
-            "2026-05-07": ["Carin",    "Carin",    "Carin"],
-            "2026-05-14": ["Jaque",    "Jaque",    "Jaque"],
-            "2026-05-21": ["Douglas",  "Douglas",  "Douglas"],
-            "2026-05-28": ["Murilo",   "Murilo",   "Murilo"],
+            "2026-04-09": ["Valéria", "Valéria", "Valéria"],
+            "2026-04-16": ["Joyce", "Joyce", "Joyce"],
+            "2026-05-07": ["Carin", "Carin", "Carin"],
+            "2026-05-14": ["Jaque", "Jaque", "Jaque"],
+            "2026-05-21": ["Douglas", "Douglas", "Douglas"],
+            "2026-05-28": ["Murilo", "Murilo", "Murilo"],
         };
 
         const WEEKDAY_NAMES = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
-        const MONTH_NAMES   = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho",
-                               "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+        const MONTH_NAMES = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
         function toISO(d) {
-            const y   = d.getFullYear();
-            const m   = String(d.getMonth() + 1).padStart(2, "0");
+            const y = d.getFullYear();
+            const m = String(d.getMonth() + 1).padStart(2, "0");
             const day = String(d.getDate()).padStart(2, "0");
             return `${y}-${m}-${day}`;
         }
 
         function generateSchedule(startDate, endDate) {
             const days = [];
-            const cur  = new Date(startDate);
+            const cur = new Date(startDate);
             while (cur <= endDate) {
                 const dow = cur.getDay();
                 const iso = toISO(cur);
@@ -431,22 +451,26 @@
         let displayedDate = new Date(today);
 
         const scheduleStart = new Date("2026-03-02");
-        const scheduleEnd   = new Date("2026-05-31");
-        const allDays       = generateSchedule(scheduleStart, scheduleEnd);
+        const scheduleEnd = new Date("2026-05-31");
+        const allDays = generateSchedule(scheduleStart, scheduleEnd);
+
+        // ── Encontra o ISO do próximo culto (>= hoje) ──────────────────────
+        const nextDay = allDays.find(item => item.iso >= todayISO);
+        const nextISO = nextDay ? nextDay.iso : null;
 
         function renderCalendar() {
-            const calendar  = document.getElementById("calendar");
+            const calendar = document.getElementById("calendar");
             const monthYear = document.getElementById("month-year");
             calendar.innerHTML = "";
 
-            const year  = displayedDate.getFullYear();
+            const year = displayedDate.getFullYear();
             const month = displayedDate.getMonth();
             monthYear.textContent = `${MONTH_NAMES[month]} ${year}`;
 
-            const firstDay    = new Date(year, month, 1).getDay();
+            const firstDay = new Date(year, month, 1).getDay();
             const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-            ["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"].forEach(n => {
+            ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"].forEach(n => {
                 const el = document.createElement("div");
                 el.className = "day-name";
                 el.textContent = n;
@@ -460,10 +484,10 @@
             }
 
             for (let d = 1; d <= daysInMonth; d++) {
-                const el  = document.createElement("div");
+                const el = document.createElement("div");
                 el.className = "day";
                 el.textContent = d;
-                const iso = `${year}-${String(month + 1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+                const iso = `${year}-${String(month + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
                 if (iso === todayISO) el.classList.add("today");
                 calendar.appendChild(el);
             }
@@ -474,7 +498,7 @@
             list.innerHTML = "";
 
             let currentMonth = null;
-            let weekGrid     = null;
+            let weekGrid = null;
 
             allDays.forEach(item => {
                 const monthName = MONTH_NAMES[item.date.getMonth()];
@@ -499,10 +523,19 @@
 
                 const card = document.createElement("div");
                 card.className = "event-card";
-                if (item.iso === todayISO) card.classList.add("today-card");
 
-                const dayNum     = item.date.getDate();
-                const weekday    = WEEKDAY_NAMES[item.dow];
+                // ── Identifica hoje e próximo culto ─────────────────────────
+                if (item.iso === todayISO) {
+                    card.classList.add("today-card");
+                } else if (item.iso === nextISO) {
+                    card.classList.add("next-card");
+                }
+
+                // ID único para rolar até o card
+                card.id = `card-${item.iso}`;
+
+                const dayNum = item.date.getDate();
+                const weekday = WEEKDAY_NAMES[item.dow];
                 const monthShort = MONTH_NAMES[item.date.getMonth()].substring(0, 3);
 
                 // Cabeçalho lateral
@@ -533,12 +566,23 @@
                 weekGrid.appendChild(card);
             });
 
+            // ── Rola até o próximo culto ao carregar ────────────────────────
             setTimeout(() => {
-                const currentMonthName = MONTH_NAMES[today.getMonth()];
-                const target    = document.getElementById(`month-${currentMonthName.toLowerCase()}`);
                 const container = document.querySelector(".container");
+                const target = nextISO
+                    ? document.getElementById(`card-${nextISO}`)
+                    : null;
+
                 if (target) {
-                    container.scrollTo({ top: target.offsetTop - 20, behavior: "smooth" });
+                    // Centraliza o card visualmente dentro do container
+                    const containerRect = container.getBoundingClientRect();
+                    const targetRect = target.getBoundingClientRect();
+
+                    container.scrollTo({
+                        top: container.scrollTop + (targetRect.top - containerRect.top),
+                        behavior: "smooth"
+                    });
+
                 }
             }, 0);
         }
@@ -562,4 +606,5 @@
         renderEvents();
     </script>
 </body>
+
 </html>
