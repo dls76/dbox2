@@ -22,7 +22,7 @@ const ramaiscac = [
   {pessoa: 'Mônica e Ana', ramal: '7028'},
   {pessoa: 'Cacilda', ramal: '7029'},
   {pessoa: 'Lincon', ramal: '7031'},
-  {pessoa: 'Priscila', ramal: '7042'}
+  {pessoa: 'Sheila', ramal: '7042'}
 ];
 
 // Ordena por nome
