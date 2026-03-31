@@ -117,7 +117,7 @@
 
           <div class="conteinerescalas" id="conteinerescalas">
 
-            <a href="cultos.html" target="_blank"> 
+            <a href="cultos.html" target="_blank">
               <div class="escala primeiraescala" id="escalacultos">
                 <div class="icon"><img src="img/yes.png" alt="" /></div>
                 <div>
@@ -421,11 +421,8 @@
           margin: 2rem auto;
           font-family: 'Open Sans', sans-serif;
           padding: 1rem;
-          /* aumento do padding */
           text-align: center;
-          /* centralizar o título */
           background-color: #fff;
-          /* border: 2px solid red; */
           border-radius: 12px;
         }
 
@@ -465,9 +462,7 @@
           background: gray;
           border-radius: 18px;
           height: 140px;
-          /* mais baixo */
           padding: 1.5rem;
-          /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); */
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -542,20 +537,7 @@
             flex: 0 0 100%;
             max-width: 100%;
           }
-        }
 
-        @media (max-width: 600px) {
-          .evCard_navBtn {
-            display: none;
-          }
-
-          .evCard_sliderWrapper {
-            padding: 0;
-            /* remove espaço lateral desnecessário */
-          }
-        }
-
-        @media (max-width: 600px) {
           .evCard_navBtn {
             display: none;
           }
@@ -563,12 +545,22 @@
           .evCard_sliderWrapper {
             padding: 0;
             overflow-x: auto;
+            /* scroll nativo ativado */
             scroll-snap-type: x mandatory;
+            /* snap no PAI (wrapper) */
             -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            /* esconde scrollbar no Firefox */
+          }
+
+          .evCard_sliderWrapper::-webkit-scrollbar {
+            display: none;
+            /* esconde scrollbar no Chrome/Safari */
           }
 
           .evCard_slider {
-            scroll-snap-type: x mandatory;
+            transform: none !important;
+            /* cancela o transform do JS no mobile */
           }
 
           .evCard_item {
@@ -620,7 +612,13 @@
         ];
 
         const slider = document.getElementById('evCard_sliderContent');
+        const sliderWrapper = document.querySelector('.evCard_sliderWrapper');
         let currentIndex = 0;
+
+        // Detecta se está em modo mobile (< 600px)
+        function isMobile() {
+          return window.innerWidth <= 600;
+        }
 
         function diasPara(dataStr) {
           const hoje = new Date();
@@ -652,23 +650,30 @@
 
           // Encontrar o índice do primeiro evento futuro ou de hoje
           currentIndex = eventosOrdenados.findIndex(e => e.dataEvento >= hoje);
-          if (currentIndex === -1) currentIndex = 0; // fallback: todos no passado
+          if (currentIndex === -1) currentIndex = 0;
 
           slider.innerHTML = eventosOrdenados.map((e, i) => `
-          <div class="evCard_item">
-            <a class="evCard_link" href="${e.link}" target="_blank" rel="noopener noreferrer">
-              <div class="evCard_inner" style="background: ${evCard_gradients[i % evCard_gradients.length]}">
-                <h3 title="${e.evento}">${e.evento}</h3>
-                <p>${diasPara(e.data)}</p>
-              </div>
-            </a>
-          </div>
-        `).join('');
+    <div class="evCard_item">
+      <a class="evCard_link" href="${e.link}" target="_blank" rel="noopener noreferrer">
+        <div class="evCard_inner" style="background: ${evCard_gradients[i % evCard_gradients.length]}">
+          <h3 title="${e.evento}">${e.evento}</h3>
+          <p>${diasPara(e.data)}</p>
+        </div>
+      </a>
+    </div>
+  `).join('');
         }
 
         function updateSlider() {
           const cardWidth = slider.querySelector('.evCard_item')?.offsetWidth || 0;
-          slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+          if (isMobile()) {
+            // No mobile: usa scrollLeft no wrapper para respeitar o scroll nativo + snap
+            sliderWrapper.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
+          } else {
+            // No desktop/tablet: usa transform no slider
+            slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+          }
         }
 
         document.querySelector('.evCard_btnNext').addEventListener('click', () => {
@@ -686,8 +691,14 @@
           }
         });
 
+        // Atualiza o slider ao redimensionar a janela
+        window.addEventListener('resize', () => updateSlider());
+
         renderCards();
-        updateSlider();
+
+        // Aguarda o layout renderizar antes de aplicar a posição inicial
+        requestAnimationFrame(() => updateSlider());
+
       </script>
 
     </section>
@@ -699,9 +710,13 @@
         <div class="horarios-column">
           <h3>Infantil e 1º</h3>
           <ul>
-            <li><a href="docs/horarios/P1/horariomanha2026.pdf" target="_blank"><i class="fas fa-users"></i>Manhã</a></li>
-            <li><a href="docs/horarios/P1/horariotarde2026.pdf" target="_blank"><i class="fas fa-users"></i>Tarde</a></li>
-            <li><a href="https://docs.google.com/spreadsheets/d/1-nH3MMb1TUHBtR-NEp3QPK6GbHg5KUPs/edit?usp=sharing&ouid=107298817668705462854&rtpof=true&sd=true"><i class="fas fa-globe"></i>Cultura Geral</a></li>
+            <li><a href="docs/horarios/P1/horariomanha2026.pdf" target="_blank"><i class="fas fa-users"></i>Manhã</a>
+            </li>
+            <li><a href="docs/horarios/P1/horariotarde2026.pdf" target="_blank"><i class="fas fa-users"></i>Tarde</a>
+            </li>
+            <li><a
+                href="https://docs.google.com/spreadsheets/d/1-nH3MMb1TUHBtR-NEp3QPK6GbHg5KUPs/edit?usp=sharing&ouid=107298817668705462854&rtpof=true&sd=true"><i
+                  class="fas fa-globe"></i>Cultura Geral</a></li>
             <!-- <li><a href="#"><i class="fas fa-book-open"></i>Biblioteca</a></li> -->
             <!-- <li><a href="#"><i class="fa-solid fa-child-reaching"></i>Parque</a></li> -->
           </ul>
@@ -711,7 +726,9 @@
           <ul>
             <li><a href="docs/horarios/F1/horariosF1manha.pdf"><i class="fas fa-users"></i>Manhã</a></li>
             <li><a href="docs/horarios/F1/horariosF1tarde.pdf"><i class="fas fa-users"></i>Tarde</a></li>
-            <li><a href="https://docs.google.com/spreadsheets/d/1-nH3MMb1TUHBtR-NEp3QPK6GbHg5KUPs/edit?usp=sharing&ouid=107298817668705462854&rtpof=true&sd=true"><i class="fas fa-globe"></i>Cultura Geral</a></li>
+            <li><a
+                href="https://docs.google.com/spreadsheets/d/1-nH3MMb1TUHBtR-NEp3QPK6GbHg5KUPs/edit?usp=sharing&ouid=107298817668705462854&rtpof=true&sd=true"><i
+                  class="fas fa-globe"></i>Cultura Geral</a></li>
             <!-- <li><a href="#"><i class="fas fa-pencil"></i> Reforços</a></li> -->
             <!-- <li><a href="#"><i class="fas fa-book-open"></i> Biblioteca</a></li> -->
           </ul>
@@ -720,30 +737,35 @@
           <h3>Fund 2 ao Médio</h3>
           <ul>
             <li><a href="docs/horarios/F2M/horarioturma.pdf" target="_blank"><i class="fas fa-users"></i>Turmas</a></li>
-            <li><a href="docs/horarios/F2M/horarioprofs.pdf" target="_blank"><i class="fas fa-chalkboard-teacher"></i>Professores</a></li>
+            <li><a href="docs/horarios/F2M/horarioprofs.pdf" target="_blank"><i
+                  class="fas fa-chalkboard-teacher"></i>Professores</a></li>
             <!-- <li><a href="#" onclick="event.preventDefault(); abrirModal_RA()"><i class="fa-solid fa-chalkboard-user"></i>Conselheiros</a></li> -->
-            <li><a href="https://docs.google.com/document/d/1zrFKqoZ2DLCTMsAPdJcZ4oWEHVJiNljNh7Ccr8yOZkk/edit?usp=sharing" target="_blank"><i class="fas fa-globe"></i>Cultura Geral</a></li>
+            <li><a
+                href="https://docs.google.com/document/d/1zrFKqoZ2DLCTMsAPdJcZ4oWEHVJiNljNh7Ccr8yOZkk/edit?usp=sharing"
+                target="_blank"><i class="fas fa-globe"></i>Cultura Geral</a></li>
 
 
 
 
-                  
+
             <!-- <li><a href="docs/horarios/F2M/reforcoeoficina_EM.pdf" target="_blank"><i class="fas fa-pencil"></i> -->
-                <!-- Reforços e Oficinas</a></li> -->
+            <!-- Reforços e Oficinas</a></li> -->
             <!-- <li><a href="docs/horarios/F2M/reforcoeoficina_F2.pdf" target="_blank"><i class="fas fa-pencil"></i>
                 Reforços e Oficinas F2</a></li> -->
-            
+
           </ul>
         </div>
         <div class="horarios-column">
 
           <h3>Gerais</h3>
           <ul>
-            <li><a href="culturageral6M.html?section=6aoem" target="_blank"><i class="fas fa-globe"></i> Cultura Geral (todos)</a></li>
+            <li><a href="culturageral6M.html?section=6aoem" target="_blank"><i class="fas fa-globe"></i> Cultura Geral
+                (todos)</a></li>
             <!-- <li><a href="recreios.html" target="_blank"><i class="fa-solid fa-burger"></i> Recreios</a></li> -->
             <li><a href="docs/horarios/horariosTerceirizados.pdf" target="_blank"><i class="fa-regular fa-futbol"></i>
                 Escolinhas</a></li>
-            <li><a href="https://drive.google.com/drive/folders/1RFy6HQR3dXpwizmeoRzWt4PWjmtaZGi1?usp=drive_link" target="_blank"><i class="fa-solid fa-van-shuttle"></i> Vans</a></li>
+            <li><a href="https://drive.google.com/drive/folders/1RFy6HQR3dXpwizmeoRzWt4PWjmtaZGi1?usp=drive_link"
+                target="_blank"><i class="fa-solid fa-van-shuttle"></i> Vans</a></li>
           </ul>
 
 
@@ -856,8 +878,8 @@
         </div>
         <div class="horarios-column">
           <ul>
-            <li><a
-                href="https://drive.google.com/file/d/17MzjXrzprXHQjBeWsdh-DUM7XAfXCO0a/view?usp=sharing" target="_blank"><i class="fa-regular fa-image"></i>Cabeçalho 30 anos</a></li>
+            <li><a href="https://drive.google.com/file/d/17MzjXrzprXHQjBeWsdh-DUM7XAfXCO0a/view?usp=sharing"
+                target="_blank"><i class="fa-regular fa-image"></i>Cabeçalho 30 anos</a></li>
           </ul>
         </div>
         <div class="horarios-column">
@@ -867,10 +889,10 @@
         </div>
         <div class="horarios-column">
           <ul>
-            <li><a href="horariosExpediente.html" ><i class="fa-solid fa-clock"></i>Horários de Trabalho</a></li>
+            <li><a href="horariosExpediente.html"><i class="fa-solid fa-clock"></i>Horários de Trabalho</a></li>
           </ul>
         </div>
-        
+
       </div>
 
       <script>
@@ -1080,7 +1102,7 @@
         // console.log(pessoa)
         if (pessoa === "Feriado" || pessoa === "Recesso") {
           document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}`;
-        } else { 
+        } else {
           document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
         }
       }
