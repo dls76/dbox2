@@ -16,7 +16,7 @@ const ramaiscac = [
   {pessoa: 'Lucas', ramal: '7019'},
   {pessoa: 'Douglas', ramal: '7020'},
   {pessoa: 'Mateus', ramal: '7022'},
-  {pessoa: 'Julia', ramal: '7023'},
+  {pessoa: 'Jullia', ramal: '7023'},
   {pessoa: 'Vinicius', ramal: '7024'},
   {pessoa: 'João Wesley', ramal: '7025'},
   {pessoa: 'Mônica e Ana', ramal: '7028'},
