@@ -438,7 +438,7 @@
 
         .evCard_sliderWrapper {
           overflow: hidden;
-          padding: 0 3rem;
+          padding: 0;
         }
 
         .evCard_slider {
@@ -492,19 +492,24 @@
           color: rgba(255, 255, 255, 0.9);
         }
 
+        .evCard_navBottom {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+
         .evCard_navBtn {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
           background: #fff;
           border: none;
-          border-radius: 50%;
+          border-radius: 999px;
           width: 48px;
           height: 48px;
           font-size: 1.2rem;
           cursor: pointer;
           box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-          transition: background 0.3s;
+          transition: background 0.3s ease, transform 0.2s ease;
           z-index: 20;
           display: flex;
           align-items: center;
@@ -513,14 +518,11 @@
 
         .evCard_navBtn:hover {
           background: #f0f0f0;
+          transform: translateY(-1px);
         }
 
-        .evCard_btnPrev {
-          left: 0;
-        }
-
-        .evCard_btnNext {
-          right: 0;
+        .evCard_navBtn:active {
+          transform: translateY(0);
         }
 
         /* Tablet: 2 cards */
@@ -538,54 +540,61 @@
             max-width: 100%;
           }
 
-          .evCard_navBtn {
-            display: none;
-          }
-
           .evCard_sliderWrapper {
             padding: 0;
             overflow-x: auto;
-            /* scroll nativo ativado */
             scroll-snap-type: x mandatory;
-            /* snap no PAI (wrapper) */
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
-            /* esconde scrollbar no Firefox */
           }
 
           .evCard_sliderWrapper::-webkit-scrollbar {
             display: none;
-            /* esconde scrollbar no Chrome/Safari */
           }
 
           .evCard_slider {
             transform: none !important;
-            /* cancela o transform do JS no mobile */
           }
 
           .evCard_item {
             scroll-snap-align: start;
           }
+
+          .evCard_navBottom {
+            margin-top: 1.25rem;
+          }
+
+          .evCard_navBtn {
+            width: 52px;
+            height: 52px;
+          }
         }
       </style>
 
-      <div class="evCard_section">
-        <h2>Próximos Eventos</h2>
 
-        <div class="evCard_container">
-          <button class="evCard_navBtn evCard_btnPrev">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <div class="evCard_sliderWrapper">
-            <div class="evCard_slider" id="evCard_sliderContent"></div>
+      <section class="sec-eventos-e-projetos" id="sec-eventos">
+        <div class="evCard_section">
+          <h2>Próximos Eventos</h2>
+
+          <div class="evCard_container">
+            <div class="evCard_sliderWrapper">
+              <div class="evCard_slider" id="evCard_sliderContent"></div>
+            </div>
+
+            <div class="evCard_navBottom">
+              <button class="evCard_navBtn evCard_btnPrev" aria-label="Evento anterior">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="evCard_navBtn evCard_btnNext" aria-label="Próximo evento">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
-          <button class="evCard_navBtn evCard_btnNext">
-            <i class="fas fa-chevron-right"></i>
-          </button>
         </div>
-      </div>
+      </section>
 
       <script>
+
         const evCard_eventos = [
           { evento: 'Viagem SP', data: '2026-01-25T00:00:00', link: 'https://drive.google.com/drive/folders/1GDEIqsWb6SZT9xI7g9yJWGHwLcHDUV2C?usp=sharing' },
           { evento: 'Reunião de Pais 6º-EM', data: '2026-01-28T00:00:00', link: 'https://drive.google.com/drive/folders/1YnR_EOwDHEavkNNaa2U1OAzYmq2K4cg4?usp=drive_link' },
@@ -613,11 +622,19 @@
 
         const slider = document.getElementById('evCard_sliderContent');
         const sliderWrapper = document.querySelector('.evCard_sliderWrapper');
+        const btnPrev = document.querySelector('.evCard_btnPrev');
+        const btnNext = document.querySelector('.evCard_btnNext');
+
         let currentIndex = 0;
 
-        // Detecta se está em modo mobile (< 600px)
         function isMobile() {
           return window.innerWidth <= 600;
+        }
+
+        function getVisibleCards() {
+          if (window.innerWidth <= 600) return 1;
+          if (window.innerWidth <= 900) return 2;
+          return 4;
         }
 
         function diasPara(dataStr) {
@@ -641,15 +658,14 @@
           hoje.setHours(0, 0, 0, 0);
 
           const eventosOrdenados = evCard_eventos
-            .map(e => {
+            .map((e) => {
               const dataEvento = new Date(e.data);
               dataEvento.setHours(0, 0, 0, 0);
               return { ...e, dataEvento };
             })
             .sort((a, b) => a.dataEvento - b.dataEvento);
 
-          // Encontrar o índice do primeiro evento futuro ou de hoje
-          currentIndex = eventosOrdenados.findIndex(e => e.dataEvento >= hoje);
+          currentIndex = eventosOrdenados.findIndex((e) => e.dataEvento >= hoje);
           if (currentIndex === -1) currentIndex = 0;
 
           slider.innerHTML = eventosOrdenados.map((e, i) => `
@@ -664,40 +680,78 @@
   `).join('');
         }
 
+        function updateNavButtons() {
+          const totalCards = slider.children.length;
+          const visibleCards = getVisibleCards();
+          const maxIndex = Math.max(0, totalCards - visibleCards);
+
+          btnPrev.disabled = currentIndex <= 0;
+          btnNext.disabled = currentIndex >= maxIndex;
+
+          btnPrev.style.opacity = btnPrev.disabled ? '0.5' : '1';
+          btnNext.style.opacity = btnNext.disabled ? '0.5' : '1';
+          btnPrev.style.cursor = btnPrev.disabled ? 'not-allowed' : 'pointer';
+          btnNext.style.cursor = btnNext.disabled ? 'not-allowed' : 'pointer';
+        }
+
         function updateSlider() {
           const cardWidth = slider.querySelector('.evCard_item')?.offsetWidth || 0;
 
           if (isMobile()) {
-            // No mobile: usa scrollLeft no wrapper para respeitar o scroll nativo + snap
-            sliderWrapper.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
+            sliderWrapper.scrollTo({
+              left: currentIndex * cardWidth,
+              behavior: 'smooth'
+            });
           } else {
-            // No desktop/tablet: usa transform no slider
             slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
           }
+
+          updateNavButtons();
         }
 
-        document.querySelector('.evCard_btnNext').addEventListener('click', () => {
+        btnNext.addEventListener('click', () => {
           const totalCards = slider.children.length;
-          if (currentIndex + 3 < totalCards) {
+          const visibleCards = getVisibleCards();
+          const maxIndex = Math.max(0, totalCards - visibleCards);
+
+          if (currentIndex < maxIndex) {
             currentIndex++;
             updateSlider();
           }
         });
 
-        document.querySelector('.evCard_btnPrev').addEventListener('click', () => {
+        btnPrev.addEventListener('click', () => {
           if (currentIndex > 0) {
             currentIndex--;
             updateSlider();
           }
         });
 
-        // Atualiza o slider ao redimensionar a janela
-        window.addEventListener('resize', () => updateSlider());
+        sliderWrapper.addEventListener('scroll', () => {
+          if (!isMobile()) return;
+
+          const cardWidth = slider.querySelector('.evCard_item')?.offsetWidth || 1;
+          currentIndex = Math.round(sliderWrapper.scrollLeft / cardWidth);
+          updateNavButtons();
+        });
+
+        window.addEventListener('resize', () => {
+          const totalCards = slider.children.length;
+          const visibleCards = getVisibleCards();
+          const maxIndex = Math.max(0, totalCards - visibleCards);
+
+          if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+          }
+
+          updateSlider();
+        });
 
         renderCards();
 
-        // Aguarda o layout renderizar antes de aplicar a posição inicial
-        requestAnimationFrame(() => updateSlider());
+        requestAnimationFrame(() => {
+          updateSlider();
+        });
 
       </script>
 
