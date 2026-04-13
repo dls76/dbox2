@@ -466,6 +466,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
+          gap: 0.35rem;
           text-align: center;
           transition: transform 0.3s ease;
           color: #fff;
@@ -477,6 +478,7 @@
 
         .evCard_inner h3 {
           margin: 0 0 0.8rem;
+          margin: 0;
           font-size: 1.2rem;
           font-weight: bold;
           white-space: nowrap;
@@ -613,8 +615,8 @@
           { evento: 'Homenagem às Mães', data: '2026-05-17T00:00:00', link: 'https://drive.google.com/drive/folders/1HK6GPeS5NBl9tHln484F0jfdVU6iupf2?usp=drive_link' },
           { evento: 'Excursão 9º', data: '2026-08-24T00:00:00', link: 'https://drive.google.com/drive/folders/1mzOWYeEDlsQ_rs9ssEnnjlG_qAcj3ov3?usp=sharing' },
           { evento: 'Excursão Terceirão', data: '2026-09-20T00:00:00', link: 'https://drive.google.com/drive/folders/1Laxq-eRY-EM6322TUkCK0g_Cww12QkJl?usp=sharing' },
-          { evento: '26 Ago | Beto Carrero', data: '2026-08-26T00:00:00', link: 'https://drive.google.com/drive/folders/1h6GEy5YH83yJrUtyRJ1L41_nK8M2v3fb?usp=sharing' },
-          { evento: '28 Abr | Escola de Pais', data: '2026-04-28T00:00:00', link: 'https://drive.google.com/drive/folders/1m74E9rHQJlrtdTBJmBBeUuHr9rBreT66?usp=drive_link' },
+          { evento: 'Beto Carrero', data: '2026-08-26T00:00:00', link: 'https://drive.google.com/drive/folders/1h6GEy5YH83yJrUtyRJ1L41_nK8M2v3fb?usp=sharing' },
+          { evento: 'Escola de Pais', data: '2026-04-28T00:00:00', link: 'https://drive.google.com/drive/folders/1m74E9rHQJlrtdTBJmBBeUuHr9rBreT66?usp=drive_link' },
         ];
 
         const evCard_gradients = [
@@ -655,13 +657,14 @@
           if (diffDias === 0) return 'Hoje!';
           if (diffDias === 1) return 'Amanhã';
           if (diffDias < 0) return `Há ${Math.abs(diffDias)} dia${Math.abs(diffDias) === 1 ? '' : 's'}`;
-          return `Faltam ${diffDias} dia${diffDias === 1 ? '' : 's'}`;
+          return `Em ${diffDias} dia${diffDias === 1 ? '' : 's'}`;
         }
 
         function renderCards() {
           const hoje = new Date();
           hoje.setHours(0, 0, 0, 0);
 
+          const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
           const eventosOrdenados = evCard_eventos
             .map((e) => {
               const dataEvento = new Date(e.data);
@@ -677,6 +680,7 @@
     <div class="evCard_item">
       <a class="evCard_link" href="${e.link}" target="_blank" rel="noopener noreferrer">
         <div class="evCard_inner" style="background: ${evCard_gradients[i % evCard_gradients.length]}">
+          <p>${new Date(e.data).getDate()} ${meses[new Date(e.data).getMonth()]}</p>
           <h3 title="${e.evento}">${e.evento}</h3>
           <p>${diasPara(e.data)}</p>
         </div>
