@@ -638,7 +638,7 @@
       </div>
     </section>
 
-    <!-- CALENDÁRIOS -->
+    <!-- Calendários -->
     <div class="sec_calendarios" id="sec-calendarios">
       <h1>Calendários 2026</h1>
 
@@ -696,9 +696,7 @@
           <p>Pais</p>
         </a>
 
-        <!-- Link antigo do calendário da Route - aguardando novo -->
-        <!-- https://docs.google.com/spreadsheets/d/1vuAQ73-jEuJwb5Fyert804TDYFlgRStI/edit?gid=316696650#gid=316696650 -->
-        <a href="#" target="_blank" id="calendarioRoute">
+        <a href="#" target="_blank" id="calendarioRoute" onclick="event.preventDefault(); alert('Aguardando atualização');">
           <svg class="svg_asp" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-church"
             width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
             stroke-linecap="round" stroke-linejoin="round">
@@ -729,6 +727,7 @@
       </div>
     </div>
 
+    <!-- Ferramentas -->
     <section class="horarios-section" id="sec-horarios">
       <h2>Ferramentas e Recursos</h2>
       <div class="horarios-grid">
@@ -784,13 +783,6 @@
       </script>
 
     </section>
-
-    <script>
-      document.getElementById('calendarioRoute').addEventListener('click', function (e) {
-        e.preventDefault();
-        alert('Aguardando atualização');
-      });
-    </script>
 
   </div>
 
