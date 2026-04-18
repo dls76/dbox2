@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/next-events.css" />
   <link rel="stylesheet" href="css/calendario-num.css" />
   <link rel="stylesheet" href="css/banners.css" />
+  <link rel="stylesheet" href="css/eventos.css" />
   <link rel="stylesheet" href="modalUrgencias.css">
   <link rel="stylesheet" href="./css/administrativo.css">
   <link rel="stylesheet" href="css/divhomeaniver.css" />
@@ -196,50 +197,9 @@
                 </div>
               </div>
             </a>
+
           </div>
         </div>
-
-        <script type="module">
-          import { responsaveisHino } from './hinoData.js';
-
-          const container = document.getElementById("hinoResponsavel");
-
-          if (container && responsaveisHino && responsaveisHino.length > 0) {
-            // Obtém a data atual (à zero hora)
-            const hoje = new Date();
-            hoje.setHours(0, 0, 0, 0);
-
-            // Verifica se hoje é sábado (6) ou depois
-            // Se for sábado, considera que a sexta já passou
-            const diaSemana = hoje.getDay();
-            let dataReferencia = new Date(hoje);
-
-            // Se for sábado (6), avança para o próximo dia para buscar a próxima sexta
-            if (diaSemana === 6) {
-              dataReferencia.setDate(dataReferencia.getDate() + 1);
-            }
-
-            // Função para converter string dd/mm em Date do ano atual
-            function parseDataEscala(dataStr) {
-              const [dia, mes] = dataStr.split('/').map(Number);
-              return new Date(hoje.getFullYear(), mes - 1, dia);
-            }
-
-            // Encontra a próxima escala (primeira data >= dataReferencia)
-            const proximaEscala = responsaveisHino.find(escala => {
-              const dataEscala = parseDataEscala(escala.data);
-              return dataEscala >= dataReferencia;
-            });
-
-            if (proximaEscala) {
-              container.innerHTML = `${proximaEscala.data} - ${proximaEscala.ambiente1} e ${proximaEscala.ambiente2}`;
-            } else {
-              container.innerHTML = 'Nenhuma escala futura disponível';
-            }
-          } else {
-            container.innerHTML = 'Nenhuma escala disponível';
-          }
-        </script>
 
         <!-- Links Rápidos -->
         <div class="divhome divhomelinksrapidos">
@@ -414,165 +374,6 @@
 
     <!-- Eventos e Projetos -->
     <section class="sec-eventos-e-projetos" id="sec-eventos">
-
-      <style>
-        .evCard_section {
-          max-width: 1500px;
-          margin: 2rem auto;
-          font-family: 'Open Sans', sans-serif;
-          padding: 1rem;
-          text-align: center;
-          background-color: #fff;
-          border-radius: 12px;
-        }
-
-        .evCard_section h2 {
-          font-size: 1.8rem;
-          color: #253B73;
-          margin-bottom: 1.5rem;
-        }
-
-        .evCard_container {
-          position: relative;
-        }
-
-        .evCard_sliderWrapper {
-          overflow: hidden;
-          padding: 0;
-        }
-
-        .evCard_slider {
-          display: flex;
-          transition: transform 0.5s ease-in-out;
-        }
-
-        .evCard_item {
-          flex: 0 0 25%;
-          max-width: 25%;
-          box-sizing: border-box;
-          padding: 1rem;
-        }
-
-        .evCard_link {
-          display: block;
-          text-decoration: none;
-        }
-
-        .evCard_inner {
-          background: gray;
-          border-radius: 18px;
-          height: 140px;
-          padding: 1.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 0.35rem;
-          text-align: center;
-          transition: transform 0.3s ease;
-          color: #fff;
-        }
-
-        .evCard_inner:hover {
-          transform: scale(1.05);
-        }
-
-        .evCard_inner h3 {
-          margin: 0 0 0.8rem;
-          margin: 0;
-          font-size: 1.2rem;
-          font-weight: bold;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: #fff;
-          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .evCard_inner p {
-          font-size: 0.95rem;
-          margin: 0;
-          color: rgba(255, 255, 255, 0.9);
-        }
-
-        .evCard_navBottom {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 1rem;
-          margin-top: 1rem;
-        }
-
-        .evCard_navBtn {
-          background: #fff;
-          border: none;
-          border-radius: 999px;
-          width: 48px;
-          height: 48px;
-          font-size: 1.2rem;
-          cursor: pointer;
-          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-          transition: background 0.3s ease, transform 0.2s ease;
-          z-index: 20;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .evCard_navBtn:hover {
-          background: #f0f0f0;
-          transform: translateY(-1px);
-        }
-
-        .evCard_navBtn:active {
-          transform: translateY(0);
-        }
-
-        /* Tablet: 2 cards */
-        @media (max-width: 900px) {
-          .evCard_item {
-            flex: 0 0 50%;
-            max-width: 50%;
-          }
-        }
-
-        /* Celular: 1 card */
-        @media (max-width: 600px) {
-          .evCard_item {
-            flex: 0 0 100%;
-            max-width: 100%;
-          }
-
-          .evCard_sliderWrapper {
-            padding: 0;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-          }
-
-          .evCard_sliderWrapper::-webkit-scrollbar {
-            display: none;
-          }
-
-          .evCard_slider {
-            transform: none !important;
-          }
-
-          .evCard_item {
-            scroll-snap-align: start;
-          }
-
-          .evCard_navBottom {
-            margin-top: 1.25rem;
-          }
-
-          .evCard_navBtn {
-            width: 52px;
-            height: 52px;
-          }
-        }
-      </style>
-
 
       <section class="sec-eventos-e-projetos" id="sec-eventos">
         <div class="evCard_section">
@@ -1122,6 +923,50 @@
       <ul class="ramais-list" id="ulramais"></ul>
     </div>
   </div>
+
+  <!-- Importações JS -->
+
+  <script type="module">
+    import { responsaveisHino } from './hinoData.js';
+
+    const container = document.getElementById("hinoResponsavel");
+
+    if (container && responsaveisHino && responsaveisHino.length > 0) {
+      // Obtém a data atual (à zero hora)
+      const hoje = new Date();
+      hoje.setHours(0, 0, 0, 0);
+
+      // Verifica se hoje é sábado (6) ou depois
+      // Se for sábado, considera que a sexta já passou
+      const diaSemana = hoje.getDay();
+      let dataReferencia = new Date(hoje);
+
+      // Se for sábado (6), avança para o próximo dia para buscar a próxima sexta
+      if (diaSemana === 6) {
+        dataReferencia.setDate(dataReferencia.getDate() + 1);
+      }
+
+      // Função para converter string dd/mm em Date do ano atual
+      function parseDataEscala(dataStr) {
+        const [dia, mes] = dataStr.split('/').map(Number);
+        return new Date(hoje.getFullYear(), mes - 1, dia);
+      }
+
+      // Encontra a próxima escala (primeira data >= dataReferencia)
+      const proximaEscala = responsaveisHino.find(escala => {
+        const dataEscala = parseDataEscala(escala.data);
+        return dataEscala >= dataReferencia;
+      });
+
+      if (proximaEscala) {
+        container.innerHTML = `${proximaEscala.data} - ${proximaEscala.ambiente1} e ${proximaEscala.ambiente2}`;
+      } else {
+        container.innerHTML = 'Nenhuma escala futura disponível';
+      }
+    } else {
+      container.innerHTML = 'Nenhuma escala disponível';
+    }
+  </script>
 
   <script src="calendario.js" defer></script>
   <script src="script.js" defer></script>
