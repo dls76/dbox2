@@ -786,9 +786,7 @@
 
   </div>
 
-  <!-- Área Modais -->
-
-  <!-- Urgências -->
+  <!-- Fones Emergência -->
   <div id="modal-container">
     <div id="emergency-modal">
       <button id="close-modal-btn">Fechar</button>
@@ -806,8 +804,8 @@
       </ul>
     </div>
   </div>
+
   <!-- Ramais -->
-  
   <div class="modal-overlay" id="modalRamais">
     <div class="modal-content" id="modalContent">
       <button class="close-btn" id="fecharModal">&times;</button>
@@ -818,6 +816,7 @@
 
   <!-- Importações JS -->
 
+  <!-- Hino Nacional -->
   <script type="module">
     import { responsaveisHino } from './hinoData.js';
 
@@ -860,17 +859,8 @@
     }
   </script>
 
-  <script src="calendario.js" defer></script>
-  <script src="script.js" defer></script>
-  <script src="ramais.js" defer></script>
-  <!-- <script src="escalaCultoRA.js" defer></script> -->
-  <script src="modalUrgencias.js" defer></script>
-  <script type="module" src="escalas.js"></script>
-  <script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
-  <script type="module" src="aniversariantes-data.js"></script>
-  <script type="module" src="aniversariantes-next.js"></script>
 
-  <!-- Cultos Script com importações-->
+  <!-- Cultos -->
   <script type="module">
     import { nomes, horarios, substituicoes, getDataAtual, escalaQuintaPersonalizada } from './cultosModule.js';
 
@@ -1266,43 +1256,6 @@
     }
   </style>
 
-  <!-- Modal -->
-  <div id="modalMotivo" style="
-  display:none;
-  position:fixed;
-  top:0; left:0; width:100%; height:100%;
-  background:rgba(0,0,0,0.5);
-  justify-content:center;
-  align-items:center;
-  z-index:1000;
-">
-    <div style="
-    background:#fff;
-    padding:20px;
-    border-radius:12px;
-    max-width:350px;
-    width:90%;
-    text-align:left;
-    box-shadow:0 4px 12px rgba(0,0,0,0.3);
-  ">
-      <strong style="font-size:18px; display:block; margin-bottom:10px;">
-        Motivos de Oração
-      </strong>
-      <div id="conteudoMotivos">
-        <!-- Lista vai ser preenchida via JS -->
-      </div>
-      <div style="text-align:right; margin-top:15px;">
-        <button onclick="fecharModal()" style="
-        padding:6px 12px;
-        border:none;
-        border-radius:6px;
-        background:#007BFF;
-        color:white;
-        cursor:pointer;
-      ">Fechar</button>
-      </div>
-    </div>
-  </div>
 
   <script type="module">
     import { entrevistasPadrao, alteracoes } from './entrevistas-data.js';
@@ -1601,6 +1554,16 @@
   </script>
   <!-- ==== fim modal conselheiros e representantes ==== -->
 
+  
+<!-- Arquivos JS -->
+  <script src="calendario.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="ramais.js" defer></script>
+  <script src="modalUrgencias.js" defer></script>
+  <script type="module" src="escalas.js"></script>
+  <script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
+  <script type="module" src="aniversariantes-data.js"></script>
+  <script type="module" src="aniversariantes-next.js"></script>
   <script src="rotinas.js"></script>
 </body>
 
