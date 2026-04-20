@@ -1,0 +1,7 @@
+.pag {
+  display: none;
+}
+
+.pag.ativa {
+  display: block;
+}

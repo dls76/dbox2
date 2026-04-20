@@ -1,10 +1,11 @@
-body {
-    background-color: #fff;
-}
-
-.main {
-    max-width: 1200px;
-    margin: auto;
+.sec_adm {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 98%;
+    max-width: 1500px;
+    margin: 20px auto 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
 }
 
 .titulosecao {
@@ -21,23 +22,7 @@ body {
     background-color: #ecf1ff;
     border-radius: 6px;
 }
-.menuadministativo {
-    max-width: 1400px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #fff;
-}
-.menuadministativo a {
-    width: 110px;
-    max-width: 120px;
-    border-radius: 10px;
-}
-.menuadministativo a:hover {
-    background-color: whitesmoke;
-}
+
 .conteiner-disciplina {
     width: 90%;
     display: grid;
