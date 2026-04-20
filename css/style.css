@@ -11,7 +11,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: 'Roboto', sans-serif; */
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -28,7 +27,7 @@ body {
 .conteinergeral {
     width: 98%;
     max-width: 1500px;
-    margin: 2rem auto;
+    margin: 0 auto;
     display: grid;
     grid-template: 1fr auto / 1fr;
     height: fit-content;
@@ -180,7 +179,6 @@ main#conteinerhome {
     padding-top: .5rem;
     text-align: center;
 }
-
 
 /* width */
 #modalurgencias::-webkit-scrollbar {
@@ -479,17 +477,6 @@ main#conteinerhome {
 
 @media (max-width: 920px) {
 
-    .important {
-        flex-wrap: wrap;
-        padding: 0;
-        margin: 1rem auto 0 auto;
-    }
-
-    .important .cardurgentes {
-        margin: 1rem;
-        text-align: center;
-    }
-
     .restricoes {
         margin: auto;
         width: 100%;
@@ -519,11 +506,4 @@ main#conteinerhome {
         flex-direction: column;
     }
 
-    .important {
-        width: 94%;
     }
-
-    .important .cardurgentes {
-        width: 100%;
-    }
-}
