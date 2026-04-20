@@ -2,7 +2,7 @@ body {
     background-color: whitesmoke;
 }
 
-.main-matriculas {
+.conteiner_matriculas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
@@ -10,6 +10,7 @@ body {
     margin: 3rem auto 0 auto;
     width: 90%;
 }
+
 .sec-matriculas {
     margin-top: 1rem;
     width: 100%;

@@ -92,7 +92,7 @@
         <a id="nav-esp" href="#" onclick="mostrarPagina('espiritual')"><i class="fa-solid fa-hands-praying"></i>
           Espiritual</a>
 
-        <a id="nav-mat" href="#" onclick="mostrarPagina('matriculas')" <i class="fa-solid fa-chart-line"></i>
+        <a id="nav-mat" href="#" onclick="mostrarPagina('matriculas')"><i class="fa-solid fa-chart-line"></i>
           Matrículas</a>
 
       </div>
@@ -776,15 +776,7 @@
   </div>
 
   <!-- ADMINISTRATIVO -->
-  <div class="sec_adm pag" id="administrativo">
-
-    <div class="titulosecao">Gerais</div>
-    <div class="conteiner-disciplina">
-      <a href="horariosExpediente.html" class="linha-disciplina" target="_blank">
-        <i class="fa-regular fa-clock" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Horários de trabalho</div>
-      </a>
-    </div>
+  <div class="sec_adm pag" id="administrativo">  
 
     <div class="titulosecao">RH</div>
     <div class="conteiner-disciplina">
@@ -1015,31 +1007,13 @@
       </a>
     </div>
 
-    <div class="titulosecao">Salas e capacidades</div>
-    <div class="conteiner-disciplina">
-      <a class="linha-disciplina" href="docs/plantas/corredorI.pdf" target="_blank">
-        <img src="img/pdf.png" alt="" />
-        <div>Corredor 1</div>
-      </a>
-
-      <a class="linha-disciplina" href="docs/plantas/corredorII.pdf" target="_blank">
-        <img src="img/pdf.png" alt="" />
-        <div>Corredor 2</div>
-      </a>
-
-      <a class="linha-disciplina" href="docs/plantas/superior.pdf" target="_blank">
-        <img src="img/pdf.png" alt="" />
-        <div>Corredor Superior</div>
-      </a>
-
-      <a class="linha-disciplina" href="docs/plantas/patioepedestres.pdf" target="_blank">
-        <img src="img/pdf.png" alt="" />
-        <div>Pátio Coberto</div>
-      </a>
-    </div>
-
     <div class="titulosecao">Outros</div>
     <div class="conteiner-disciplina">
+
+      <a href="horariosExpediente.html" class="linha-disciplina" target="_blank">
+        <i class="fa-regular fa-clock" style="font-size: 1.6rem; color:#253B73;"></i>
+        <div>Horários de trabalho</div>
+      </a>
 
       <a href="https://iatec.nextlegalone.com.br/" class="linha-disciplina" target="_blank">
         <img src="img/legalone.png" alt="" style="width: 28px;" />
@@ -1347,126 +1321,131 @@
   <!-- MATRÍCULAS -->
   <main class="main-matriculas pag" id="matriculas">
 
-    <section class="sec-matriculas">
-      <p>Novos</p>
-      <div class="linksprincipais">
-        <a href="#" id="novoatendimento" onclick="window.open('https://dls76.github.io/matriculasDbox/')">Novo Atendimento</a>
-        <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=183482623"
-          target="_blank">Vagas</a>
-        <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=1846726838"
-          target="_blank">Reservas novas</a>
-        <a href="https://drive.google.com/drive/folders/1jkVEfZj0l30XuI4eUuiTvyoTLUqUc9cy?usp=sharing"
-          target="_blank">Ficha Declarativa</a>
-        <a href="https://docs.google.com/document/d/10DbsRZyr2du3MK_M2W08a88q3Bq9dh6S_sw0mhQG9Y8/edit?usp=sharing"
-          target="_blank">Roteiros de Entrevista</a>
-        <a href="https://drive.google.com/drive/folders/1D27eKbf5RAKKuk7wGapT012hCls4AFJ2?usp=sharing"
-          target="_blank">Propostas Financeiras</a>
-        <a href="https://docs.google.com/spreadsheets/d/1CQEajgb4QxCqUU3Qoj9oW-outQ-zF4A2IU7Gmi8TIyo/edit?usp=drive_link"
-          target="_blank">Escolas Parceiras</a>
-        <a href="docs/matriculas/parcerias_impressao.pdf" target="_blank">Imprimir Contato Parcerias<i
-            class="fa fa-print" id="print_parcerias"></i></a>
-        <a href="https://catalogontstore.asp.org.br" target="_blank">Catálogo</a>
-        <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit?gid=1734302353#gid=1734302353"
-          target="_blank">Descontos</a>
-        <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQB2k05GL_1ARp8kqCIXCNrbAc2EPRxpuc4HYm2ayHROo9k?e=T9bl0a"
-          target="_blank">Interessados por Série</a>
-        <a href="docs/matriculas/docsparaMatricula.pdf" target="_blank">Documentos para matrícula</a>
-        <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQA5J3l6TNjkQqOCArICIOQlAQFcm7dmrhTGbmfFBWL45hk?e=5Rb0pI"
-          target="_blank">Interessados Adv</a>
+    <div class="conteiner_matriculas">
 
-      </div>
-    </section>
+      <section class="sec-matriculas">
+        <p>Novos</p>
+        <div class="linksprincipais">
+          <a href="#" id="novoatendimento" onclick="window.open('https://dls76.github.io/matriculasDbox/')">Novo
+            Atendimento</a>
+          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=183482623"
+            target="_blank">Vagas</a>
+          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=1846726838"
+            target="_blank">Reservas novas</a>
+          <a href="https://drive.google.com/drive/folders/1jkVEfZj0l30XuI4eUuiTvyoTLUqUc9cy?usp=sharing"
+            target="_blank">Ficha Declarativa</a>
+          <a href="https://docs.google.com/document/d/10DbsRZyr2du3MK_M2W08a88q3Bq9dh6S_sw0mhQG9Y8/edit?usp=sharing"
+            target="_blank">Roteiros de Entrevista</a>
+          <a href="https://drive.google.com/drive/folders/1D27eKbf5RAKKuk7wGapT012hCls4AFJ2?usp=sharing"
+            target="_blank">Propostas Financeiras</a>
+          <a href="https://docs.google.com/spreadsheets/d/1CQEajgb4QxCqUU3Qoj9oW-outQ-zF4A2IU7Gmi8TIyo/edit?usp=drive_link"
+            target="_blank">Escolas Parceiras</a>
+          <a href="docs/matriculas/parcerias_impressao.pdf" target="_blank">Imprimir Contato Parcerias<i
+              class="fa fa-print" id="print_parcerias"></i></a>
+          <a href="https://catalogontstore.asp.org.br" target="_blank">Catálogo</a>
+          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit?gid=1734302353#gid=1734302353"
+            target="_blank">Descontos</a>
+          <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQB2k05GL_1ARp8kqCIXCNrbAc2EPRxpuc4HYm2ayHROo9k?e=T9bl0a"
+            target="_blank">Interessados por Série</a>
+          <a href="docs/matriculas/docsparaMatricula.pdf" target="_blank">Documentos para matrícula</a>
+          <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQA5J3l6TNjkQqOCArICIOQlAQFcm7dmrhTGbmfFBWL45hk?e=5Rb0pI"
+            target="_blank">Interessados Adv</a>
 
-    <section class="sec-matriculas">
-      <p>Veteranos</p>
-      <div class="linksprincipais">
-        <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=183482623"
-          target="_blank">Vagas</a>
-        <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=0"
-          target="_blank">Atualizar</a>
-        <a href="https://docs.google.com/spreadsheets/d/1aghzOYfhlt4g9dsPBp4w8G3hVJqs8-PrrVE9KeoB-1M/edit?gid=0#gid=0"
-          target="_blank">Fidelização</a>
-        <a href="veteranos.html" target="_blank">Atendimento</a>
-        <a href="https://docs.google.com/spreadsheets/d/1lVdIcJLkuHzod0RvSruXje_LvgVYHvStCPmt6TXTlLk/edit?gid=0#gid=0"
-          target="_blank">Migração 62</a>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section class="sec-matriculas">
-      <p>Relatórios Power BI</p>
-      <div class="linksprincipais">
-        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/ce8c1804-01c9-4c89-a084-3d8913c40bb8/870332ce8437ac7e07ff?language=pt-BR&experience=power-bi"
-          target="_blank">Comparativo ano anterior</a>
-        <a href="https://app.powerbi.com/Redirect?action=OpenReport&appId=ba9d2c5f-5784-4ae0-bd7f-e95646d75b33&reportObjectId=11424880-cb12-4450-9518-d50f728b4a20&ctid=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&reportPage=ReportSection67140aaa99fc6fa1a2f8&pbi_source=appShareLink&portalSessionId=c8675b70-f1c3-4100-9a33-8444fcf0f07b"
-          target="_blank">Ranking Escolas</a>
-        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/ce8c1804-01c9-4c89-a084-3d8913c40bb8/ReportSectionf59fc590587144826265?language=pt-BR&experience=power-bi"
-          target="_blank">Fidelização</a>
-        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/cc036242-e5b3-43ce-bafd-a113db3e1194/ReportSection8186a78903c18a4eb2ff?redirectedFromSignup=1&experience=power-bi"
-          target="_blank">Dashboard ACRM</a>
-        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/cc036242-e5b3-43ce-bafd-a113db3e1194/ReportSection0d8debd7d8d7818acdbc?redirectedFromSignup=1&experience=power-bi"
-          target="_blank">Verticais (leads por nível)</a>
-        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/338d7393-2455-4cbc-80bb-869af34d0c42/ReportSectionfc65dc858bf229fcf2c0?redirectedFromSignup=1&experience=power-bi"
-          target="_blank">Elegíveis</a>
-      </div>
-    </section>
+      <section class="sec-matriculas">
+        <p>Veteranos</p>
+        <div class="linksprincipais">
+          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=183482623"
+            target="_blank">Vagas</a>
+          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=0"
+            target="_blank">Atualizar</a>
+          <a href="https://docs.google.com/spreadsheets/d/1aghzOYfhlt4g9dsPBp4w8G3hVJqs8-PrrVE9KeoB-1M/edit?gid=0#gid=0"
+            target="_blank">Fidelização</a>
+          <a href="veteranos.html" target="_blank">Atendimento</a>
+          <a href="https://docs.google.com/spreadsheets/d/1lVdIcJLkuHzod0RvSruXje_LvgVYHvStCPmt6TXTlLk/edit?gid=0#gid=0"
+            target="_blank">Migração 62</a>
+        </div>
+      </section>
 
-    <section class="sec-matriculas">
-      <p>Documentos</p>
-      <div class="linksprincipais">
-        <a href="https://docs.google.com/spreadsheets/d/1rFd5FCQ0dkflM5bS9cBioLi3X4J2jmW6ScQSMyzf-l0/edit?usp=sharing"
-          target="_blank">Alunos e Turmas 2026</a>
-        <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/ET7mIqzzzpVIkTB735H5ny4BijWbXLDL3AXH9M4uAsW1dw?e=9SLuSh"
-          target="_blank">Mensalidades 2026</a>
+      <section class="sec-matriculas">
+        <p>Relatórios Power BI</p>
+        <div class="linksprincipais">
+          <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/ce8c1804-01c9-4c89-a084-3d8913c40bb8/870332ce8437ac7e07ff?language=pt-BR&experience=power-bi"
+            target="_blank">Comparativo ano anterior</a>
+          <a href="https://app.powerbi.com/Redirect?action=OpenReport&appId=ba9d2c5f-5784-4ae0-bd7f-e95646d75b33&reportObjectId=11424880-cb12-4450-9518-d50f728b4a20&ctid=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&reportPage=ReportSection67140aaa99fc6fa1a2f8&pbi_source=appShareLink&portalSessionId=c8675b70-f1c3-4100-9a33-8444fcf0f07b"
+            target="_blank">Ranking Escolas</a>
+          <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/ce8c1804-01c9-4c89-a084-3d8913c40bb8/ReportSectionf59fc590587144826265?language=pt-BR&experience=power-bi"
+            target="_blank">Fidelização</a>
+          <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/cc036242-e5b3-43ce-bafd-a113db3e1194/ReportSection8186a78903c18a4eb2ff?redirectedFromSignup=1&experience=power-bi"
+            target="_blank">Dashboard ACRM</a>
+          <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/cc036242-e5b3-43ce-bafd-a113db3e1194/ReportSection0d8debd7d8d7818acdbc?redirectedFromSignup=1&experience=power-bi"
+            target="_blank">Verticais (leads por nível)</a>
+          <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/338d7393-2455-4cbc-80bb-869af34d0c42/ReportSectionfc65dc858bf229fcf2c0?redirectedFromSignup=1&experience=power-bi"
+            target="_blank">Elegíveis</a>
+        </div>
+      </section>
 
-        <a href="https://drive.google.com/file/d/1D1eijVodhOgpunBonttyJFyHxoZcUIxb/view?usp=drive_link"
-          target="_blank">Manual 2026</a>
+      <section class="sec-matriculas">
+        <p>Documentos</p>
+        <div class="linksprincipais">
+          <a href="https://docs.google.com/spreadsheets/d/1rFd5FCQ0dkflM5bS9cBioLi3X4J2jmW6ScQSMyzf-l0/edit?usp=sharing"
+            target="_blank">Alunos e Turmas 2026</a>
+          <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/ET7mIqzzzpVIkTB735H5ny4BijWbXLDL3AXH9M4uAsW1dw?e=9SLuSh"
+            target="_blank">Mensalidades 2026</a>
 
-        <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/lucas_dalsenter_adventistas_org/IQC6adZWH5_jToxkeDzLhWLrAYyaFlsYEP0OT_BzBTG4Y9M?e=EBTnnC"
-          target="_blank">Avaliação das Matrículas</a>
-      </div>
-    </section>
+          <a href="https://drive.google.com/file/d/1D1eijVodhOgpunBonttyJFyHxoZcUIxb/view?usp=drive_link"
+            target="_blank">Manual 2026</a>
 
-    <section class="sec-matriculas">
-      <p>Publicidade</p>
-      <div class="linksprincipais">
-        <a href="https://indique-asp.educacaoadventistabrasil.com.br/" target="_blank">Indique Um Aluno</a>
-        <a href="https://loja.asp.org.br/" target="_blank">Loja Novo Tempo Store</a>
-      </div>
+          <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/lucas_dalsenter_adventistas_org/IQC6adZWH5_jToxkeDzLhWLrAYyaFlsYEP0OT_BzBTG4Y9M?e=EBTnnC"
+            target="_blank">Avaliação das Matrículas</a>
+        </div>
+      </section>
 
-    </section>
+      <section class="sec-matriculas">
+        <p>Publicidade</p>
+        <div class="linksprincipais">
+          <a href="https://indique-asp.educacaoadventistabrasil.com.br/" target="_blank">Indique Um Aluno</a>
+          <a href="https://loja.asp.org.br/" target="_blank">Loja Novo Tempo Store</a>
+        </div>
 
-    <section class="sec-matriculas">
-      <p>Bolsas</p>
-      <div class="linksprincipais">
-        <a href="https://docs.google.com/spreadsheets/d/189WJuj1tfYzXaScvZR6Z8svd_KMpMysQO0U549po7f0/edit?usp=sharing"
-          target="_blank" id="btBolsistas">Controle Bolsistas</a>
-        <a href="https://drive.google.com/drive/folders/1a1JCEpK4v6zbFM_7aCsKrLPfv5tCg4H-?usp=sharing"
-          target="_blank">Fichas TCO e TCI</a>
-        <a href="https://drive.google.com/drive/folders/1PtIh5AYV0z5Zq7t4-iQURp0JjetI0QII" target="_blank">Arquivos da
-          reunião de pais</a>
-        <a href="https://forms.office.com/r/f40BXmesy4" target="_blank">Formulário Fundo Patrocinador</a>
+      </section>
 
-        <a href="https://docs.google.com/spreadsheets/d/1DbLDGfTA7KNFQ2JlO_OUpy7ngml7Um3xBhmFB-ydtbA/edit?usp=sharing"
-          target="_blank" id="bolsasindeferidas">Bolsas Indeferidas</a>
+      <section class="sec-matriculas">
+        <p>Bolsas</p>
+        <div class="linksprincipais">
+          <a href="https://docs.google.com/spreadsheets/d/189WJuj1tfYzXaScvZR6Z8svd_KMpMysQO0U549po7f0/edit?usp=sharing"
+            target="_blank" id="btBolsistas">Controle Bolsistas</a>
+          <a href="https://drive.google.com/drive/folders/1a1JCEpK4v6zbFM_7aCsKrLPfv5tCg4H-?usp=sharing"
+            target="_blank">Fichas TCO e TCI</a>
+          <a href="https://drive.google.com/drive/folders/1PtIh5AYV0z5Zq7t4-iQURp0JjetI0QII" target="_blank">Arquivos da
+            reunião de pais</a>
+          <a href="https://forms.office.com/r/f40BXmesy4" target="_blank">Formulário Fundo Patrocinador</a>
+
+          <a href="https://docs.google.com/spreadsheets/d/1DbLDGfTA7KNFQ2JlO_OUpy7ngml7Um3xBhmFB-ydtbA/edit?usp=sharing"
+            target="_blank" id="bolsasindeferidas">Bolsas Indeferidas</a>
 
 
 
-      </div>
+        </div>
 
-      <style>
-        #bolsasindeferidas {
-          background-color: #253B73;
-          color: white;
-        }
+        <style>
+          #bolsasindeferidas {
+            background-color: #253B73;
+            color: white;
+          }
 
-        #bolsasindeferidas:hover {
-          background-color: #5e89ff;
-          color: white;
-        }
-      </style>
+          #bolsasindeferidas:hover {
+            background-color: #5e89ff;
+            color: white;
+          }
+        </style>
 
-    </section>
-<!-- 
+      </section>
+
+    </div>
+    <!-- 
     <div class="sistemas">
 
       <div>
@@ -1511,7 +1490,7 @@
 
   </main>
 
-<!-- ========================================================================================================================
+  <!-- ========================================================================================================================
 ========================================================================================================================
 ========================================================================================================================
 ========================================================================================================================
@@ -1526,7 +1505,7 @@
 ========================================================================================================================
 ========================================================================================================================
 ======================================================================================================================== -->
-  
+
   <!-- Fones Emergência -->
   <div id="modal-container">
     <div id="emergency-modal">
