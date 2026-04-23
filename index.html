@@ -66,7 +66,86 @@
 
 </head>
 
-<body>
+<!-- Adicionar antes do </body> -->
+<a href="https://sistemas.usb.org.br/ama/index.php" target="_blank" class="ama-fab">🚑 AMA</a>
+
+<!-- CSS do botão AMA -->
+<style>
+/* =============================================
+   AMA - Botão Flutuante | Estilo DBox
+   ============================================= */
+
+.ama-fab {
+  /* Posicionamento fixo */
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: 9999;
+
+  /* Visual consistente com o header do DBox */
+  background-color: #1a2e5a;       /* azul escuro do header */
+  color: #ffffff;
+  border: 2px solid #ffffff;       /* borda branca sutil, como os ícones do header */
+  border-radius: 8px;              /* arredondamento moderado, igual aos cards */
+  padding: 10px 18px;
+
+  /* Tipografia */
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;            /* herda a fonte do sistema */
+  letter-spacing: 0.3px;
+  text-decoration: none;
+
+  /* Layout interno */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  /* Sombra suave igual aos cards */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  /* Transição suave */
+  transition: all 0.2s ease;
+
+  /* Cursor */
+  cursor: pointer;
+}
+
+/* Ícone interno (SVG ou img) */
+.ama-fab svg,
+.ama-fab img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1); /* força branco */
+}
+
+/* Hover: destaque em vermelho, mantendo identidade DBox */
+.ama-fab:hover {
+  background-color: #c0392b;       /* vermelho de alerta, consistente com os títulos */
+  border-color: #c0392b;
+  box-shadow: 0 4px 14px rgba(192, 57, 43, 0.35);
+  transform: translateY(-2px);     /* leve flutuação */
+}
+
+/* Active: feedback de clique */
+.ama-fab:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* =============================================
+   Responsivo: reduz em telas menores
+   ============================================= */
+@media (max-width: 768px) {
+  .ama-fab {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+}
+
+</style>
 
   <header id="header">
 
@@ -78,10 +157,9 @@
       </div>
       <div class="menu" id="menu">
 
-        <a id="nav-ama" href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu" target="_blank"><i
-            class="fa-solid fa-truck-medical"></i>AMA</a>
-
         <a id="nav_hom" href="#" onclick="mostrarPagina('home')"><i class="fa-solid fa-home"></i> Home</a>
+
+        <!-- <a id="nav-ama" href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu" target="_blank"><i class="fa-solid fa-truck-medical"></i>AMA</a> -->
 
         <a id="nav-adm" href="#" onclick="mostrarPagina('administrativo')"><i
             class="fa-solid fa-square-poll-vertical"></i> Administrativo</a>
