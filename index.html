@@ -28,6 +28,7 @@
 
 
   <!-- Arquivos CSS -->
+  <link rel="stylesheet" href="./css/ama.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="css/sec-linksrapidos.css" />
   <link rel="stylesheet" href="css/escalas.css" />
@@ -68,1521 +69,1217 @@
 
 <a href="https://sistemas.usb.org.br/ama/index.php" target="_blank" class="ama-fab">🚑 AMA</a>
 
-<!-- CSS do botão AMA -->
-<style>
-/* =============================================
-   AMA - Botão Flutuante | Estilo DBox
-   ============================================= */
 
-.ama-fab {
-  /* Posicionamento fixo */
-  position: fixed;
-  bottom: 28px;
-  left: 28px;
-  z-index: 9999;
 
-  /* Visual consistente com o header do DBox */
-  background-color: #1a2e5a;       /* azul escuro do header */
-  color: #ffffff;
-  border: 2px solid #ffffff;       /* borda branca sutil, como os ícones do header */
-  border-radius: 8px;              /* arredondamento moderado, igual aos cards */
-  padding: 10px 18px;
+<header id="header">
 
-  /* Tipografia */
-  font-size: 13px;
-  font-weight: 600;
-  font-family: inherit;            /* herda a fonte do sistema */
-  letter-spacing: 0.3px;
-  text-decoration: none;
+  <span id="logo" href="index.html">DBox</span>
 
-  /* Layout interno */
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  <nav id="nav">
+    <div id="btn-mobile">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="menu" id="menu">
 
-  /* Sombra suave igual aos cards */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      <a id="nav_hom" href="#" onclick="mostrarPagina('home')"><i class="fa-solid fa-home"></i> Home</a>
 
-  /* Transição suave */
-  transition: all 0.2s ease;
+      <!-- <a id="nav-ama" href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu" target="_blank"><i class="fa-solid fa-truck-medical"></i>AMA</a> -->
 
-  /* Cursor */
-  cursor: pointer;
-}
+      <a id="nav-adm" href="#" onclick="mostrarPagina('administrativo')"><i
+          class="fa-solid fa-square-poll-vertical"></i> Administrativo</a>
 
-/* Ícone interno (SVG ou img) */
-.ama-fab svg,
-.ama-fab img {
-  width: 18px;
-  height: 18px;
-  filter: brightness(0) invert(1); /* força branco */
-}
+      <a id="nav_ped" href="#" onclick="mostrarPagina('pedagogico')"><i class="fa-solid fa-graduation-cap"></i>
+        Pedagógico</a>
 
-/* Hover: destaque em vermelho, mantendo identidade DBox */
-.ama-fab:hover {
-  background-color: #c0392b;       /* vermelho de alerta, consistente com os títulos */
-  border-color: #c0392b;
-  box-shadow: 0 4px 14px rgba(192, 57, 43, 0.35);
-  transform: translateY(-2px);     /* leve flutuação */
-}
+      <a id="nav-esp" href="#" onclick="mostrarPagina('espiritual')"><i class="fa-solid fa-hands-praying"></i>
+        Espiritual</a>
 
-/* Active: feedback de clique */
-.ama-fab:active {
-  transform: translateY(0px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
+      <a id="nav-mat" href="#" onclick="mostrarPagina('matriculas')"><i class="fa-solid fa-chart-line"></i>
+        Matrículas</a>
 
-/* =============================================
-   Responsivo: reduz em telas menores
-   ============================================= */
-@media (max-width: 768px) {
-  .ama-fab {
-    bottom: 16px;
-    right: 16px;
-    padding: 10px 14px;
-    font-size: 12px;
-  }
-}
+    </div>
 
-</style>
+  </nav>
 
-  <header id="header">
+  <div class="alert_icons">
+    <!-- <span data-tooltip="Fones Emergência" class="material-symbols-outlined" id="open-ama">medical_services</span> -->
 
-    <span id="logo" href="index.html">DBox</span>
+    <span data-tooltip="Fones Emergência" class="material-symbols-outlined" id="open-emergency">shield</span>
+    <span class="material-symbols-outlined" id="ramais-do-menu">call</span>
 
-    <nav id="nav">
-      <div id="btn-mobile">
-        <i class="fa-solid fa-bars"></i>
+    <script>
+      document.getElementById('bt-usuarios').addEventListener('click', () => {
+        window.open('https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQA3nljlwhDrR4flWKQa9ASiATN48PgZ5G47zCoasHvsPXs?e=AotjNB', '_blank');
+      });
+    </script>
+
+
+  </div>
+</header>
+
+<!-- HOME  -->
+<div class="sec mainConteiner pag ativa" id="home">
+
+  <div class="conteinergeral">
+
+    <main id="conteinerhome">
+
+      <!-- Escalas -->
+      <div class="divhome" id="escalas">
+
+        <div class="titulodivhomeescalas">Escalas</div>
+
+        <div class="conteinerescalas" id="conteinerescalas">
+
+          <a href="cultos.html" target="_blank">
+            <div class="escala primeiraescala" id="escalacultos">
+              <div class="icon"><img src="img/yes.png" alt="" /></div>
+              <div>
+                <div class="tituloescala">Culto do dia</div>
+                <div class="contentescala" id="cultos"></div>
+                <i class="fa-solid fa-angle-right seta"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://docs.google.com/spreadsheets/d/1XgJ3i5FjlNIdp7oUJUFRQGwDOmcO_uwonZvhxzoY-lk/edit?gid=0#gid=0"
+            target="_blank">
+            <div class="escala">
+              <div class="icon"><img src="img/yes.png" id="icon-compensacao" /></div>
+              <div>
+                <div class="tituloescala" id="titulocompensacao">Compensação</div>
+                <div class="contentescala" id="box-nomescomp" style="display: flex; align-items: center"><span
+                    id="nomescomp" style="margin-right: 1rem"></span>
+                </div><i class="fa-solid fa-angle-right seta"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="entrevistas.html" target="_blank">
+            <div class="escala">
+              <div class="icon"><img src="img/yes.png" /></div>
+              <div>
+                <div class="tituloescala" id="titulocompensacao">Entrevistas</div>
+                <div class="contentescala" id="box-nomescomp" style="display: flex; align-items: center"><span
+                    id="entrevistascontent" style="margin-right: 1rem"></span>
+                </div><i class="fa-solid fa-angle-right seta"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="plantaoSexta.html" target="_blank">
+            <div class="escala" id="escalasexta">
+              <div class="icon"><img src="img/yes.png" alt="" /></div>
+              <div>
+                <div class="tituloescala">Plantão de sexta</div>
+                <div class="contentescala" id="plantaosexta"></div>
+                <i class="fa-solid fa-angle-right seta"></i>
+              </div>
+            </div>
+          </a>
+
+          <a id="ralink" target="_blank">
+            <div class="escala">
+              <div class="icon"><img src="img/yes.png" alt="" /></div>
+              <div>
+                <div class="tituloescala" id="tituloroute">Reunião Administrativa</div>
+                <div class="contentescala" id="reuniaoadm"></div>
+                <i class="fa-solid fa-angle-right seta"></i>
+              </div>
+            </div>
+          </a>
+
+          <a href="hino.html" target="_blank">
+            <div class="escala">
+              <div class="icon"><img src="img/yes.png" alt="" /></div>
+              <div>
+                <div class="tituloescala">Hino Nacional</div>
+                <div class="contentescala" id="hinoResponsavel">Aguardando escala</div>
+                <i class="fa-solid fa-angle-right seta"></i>
+              </div>
+            </div>
+          </a>
+
+        </div>
       </div>
-      <div class="menu" id="menu">
 
-        <a id="nav_hom" href="#" onclick="mostrarPagina('home')"><i class="fa-solid fa-home"></i> Home</a>
+      <!-- Links Rápidos -->
+      <div class="divhome divhomelinksrapidos">
 
-        <!-- <a id="nav-ama" href="https://sistemas.usb.org.br/ama/index.php" id="amadomenu" target="_blank"><i class="fa-solid fa-truck-medical"></i>AMA</a> -->
+        <div class="titulodivhomelinksrapidos">Links Rápidos</div>
 
-        <a id="nav-adm" href="#" onclick="mostrarPagina('administrativo')"><i
-            class="fa-solid fa-square-poll-vertical"></i> Administrativo</a>
+        <div class="linksrapidos" id="divhomelinks">
 
-        <a id="nav_ped" href="#" onclick="mostrarPagina('pedagogico')"><i class="fa-solid fa-graduation-cap"></i>
-          Pedagógico</a>
+          <a href="https://docs.google.com/document/d/1EI0f7t4XYj9mMCYX_SR1I35rOwFl5UUA/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
+            target="_blank">
+            <div class="img">
+              <!-- <i class="fa-solid fa-calendar"></i> -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
+                stroke="#253B73" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+              </svg>
+              <div class="legenda-links">Calendário</div>
+            </div>
+          </a>
 
-        <a id="nav-esp" href="#" onclick="mostrarPagina('espiritual')"><i class="fa-solid fa-hands-praying"></i>
-          Espiritual</a>
+          <a href="https://drive.google.com/drive/folders/1Ahm3g36ew5FXYVJmrvq-96R1j1_wesw0" target="_blank">
+            <div class="img">
+              <!-- <i class="fa-solid fa-envelope"></i> -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
+                stroke="#253B73" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+              <div class="legenda-links">Comunicados</div>
+            </div>
+          </a>
 
-        <a id="nav-mat" href="#" onclick="mostrarPagina('matriculas')"><i class="fa-solid fa-chart-line"></i>
-          Matrículas</a>
+          <a id="linkrapidora" target="_blank">
+            <div class="img">
 
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
+                stroke="#253B73" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+              </svg>
+
+
+
+              <div class="legenda-links">RA</div>
+            </div>
+          </a>
+
+          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit?gid=2025334756#gid=2025334756"
+            target="_blank">
+            <div class="img">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="34px"
+                stroke="#253B73" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+              </svg>
+              <div class="legenda-links">Vagas</div>
+            </div>
+          </a>
+
+          <a href="https://7edu-br.educadventista.org/" target="_blank">
+            <div class="img">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
+                stroke="#253B73" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+              </svg>
+
+              <div class="legenda-links">7Edu</div>
+            </div>
+          </a>
+
+          <a href="https://apps.powerapps.com/play/e/default-01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07/a/67c2f36c-1c44-4ff2-b25a-7267958fbdb9?tenantId=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&source=sharebutton&sourcetime=1745499649569"
+            target="_blank">
+            <div class="img">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
+                stroke="#253B73" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+              </svg>
+
+              <div class="legenda-links">Feedback</div>
+            </div>
+          </a>
+
+          <a href="https://hub-br.eaportal.org/" target="_blank">
+            <div class="img">
+
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
+                stroke="#253B73" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+              </svg>
+              <div class="legenda-links">Hub</div>
+            </div>
+          </a>
+
+          <a href="https://docs.google.com/spreadsheets/d/1wGnE9xJwgW28SRdhsX2NPSyvac8jygblgt2FT6tyqiY/edit?usp=sharing"
+            target="_blank">
+            <div class="img">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
+                stroke="#253B73" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+              </svg>
+
+              <div class="legenda-links">Nesp</div>
+            </div>
+          </a>
+
+          <a href="https://drive.google.com/drive/u/2/folders/0AIkDslbbFCv4Uk9PVA" target="_blank">
+            <div class="img">
+
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
+                stroke="#253B73" class="size-6">
+
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
+              </svg>
+
+              <div class="legenda-links">ASP 2026</div>
+            </div>
+          </a>
+
+
+        </div>
       </div>
 
+      <!-- Calendário Numérico -->
+      <div class="divhome" id="divhomecalendario">
+        <div class="box-cal-num">
+          <div class="titulocalendario">Calendário</div>
+
+          <div class="mescalbox">
+            <span class="spancal prev">
+              <i class="fa-solid fa-chevron-left prev"></i>
+            </span>
+
+            <div class="mescal"></div>
+
+            <span class="spancal next">
+              <i class="fa-solid fa-chevron-right next"></i>
+            </span>
+          </div>
+
+          <div class="bodycal">
+            <div class="weekdays">
+              <div>D</div>
+              <div>S</div>
+              <div>T</div>
+              <div>Q</div>
+              <div>Q</div>
+              <div>S</div>
+              <div>S</div>
+            </div>
+            <div class="days"></div>
+          </div>
+
+          <div class="btnsCal" id="btnsCal">
+            <div class="btnHoje" id="btn-hoje">Hoje</div>
+            <div id="btn-obs">Observações</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Próximos Aniversariantes -->
+      <div class="divhome" id="divhomeproxaniversariantes"></div>
+
+    </main>
+
+  </div>
+
+  <!-- Eventos e Projetos -->
+  <section class="sec-eventos-e-projetos" id="sec-eventos">
+
+    <section class="sec-eventos-e-projetos" id="sec-eventos">
+      <div class="evCard_section">
+        <h2>Próximos Eventos</h2>
+
+        <div class="evCard_container">
+          <div class="evCard_sliderWrapper">
+            <div class="evCard_slider" id="evCard_sliderContent"></div>
+          </div>
+
+          <div class="evCard_navBottom">
+            <button class="evCard_navBtn evCard_btnPrev" aria-label="Evento anterior">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="evCard_navBtn evCard_btnNext" aria-label="Próximo evento">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Horários -->
+  <section class="horarios-section" id="sec-horarios">
+    <h2>Horários</h2>
+    <div class="horarios-grid">
+      <div class="horarios-column">
+        <h3>Infantil e 1º</h3>
+        <ul>
+          <li><a href="docs/horarios/P1/horariomanha2026.pdf" target="_blank"><i class="fas fa-users"></i>Manhã</a>
+          </li>
+          <li><a href="docs/horarios/P1/horariotarde2026.pdf" target="_blank"><i class="fas fa-users"></i>Tarde</a>
+          </li>
+          <li><a
+              href="https://docs.google.com/spreadsheets/d/1-nH3MMb1TUHBtR-NEp3QPK6GbHg5KUPs/edit?usp=sharing&ouid=107298817668705462854&rtpof=true&sd=true"
+              target="_blank"><i class="fas fa-globe"></i>Cultura Geral</a></li>
+        </ul>
+      </div>
+      <div class="horarios-column">
+        <h3>Fundamental 1</h3>
+        <ul>
+          <li><a href="docs/horarios/F1/horariosF1manha.pdf"><i class="fas fa-users"></i>Manhã</a></li>
+          <li><a href="docs/horarios/F1/horariosF1tarde.pdf"><i class="fas fa-users"></i>Tarde</a></li>
+          <li><a
+              href="https://docs.google.com/spreadsheets/d/1-nH3MMb1TUHBtR-NEp3QPK6GbHg5KUPs/edit?usp=sharing&ouid=107298817668705462854&rtpof=true&sd=true"
+              target="_blank"><i class="fas fa-globe"></i>Cultura Geral</a></li>
+          <!-- <li><a href="#"><i class="fas fa-pencil"></i> Reforços</a></li> -->
+          <!-- <li><a href="#"><i class="fas fa-book-open"></i> Biblioteca</a></li> -->
+        </ul>
+      </div>
+      <div class="horarios-column">
+        <h3>Fund 2 ao Médio</h3>
+        <ul>
+          <li><a href="docs/horarios/F2M/horarioturma.pdf" target="_blank"><i class="fas fa-users"></i>Turmas</a></li>
+          <li><a href="docs/horarios/F2M/horarioprofs.pdf" target="_blank"><i
+                class="fas fa-chalkboard-teacher"></i>Professores</a></li>
+          <li><a href="https://docs.google.com/document/d/1zrFKqoZ2DLCTMsAPdJcZ4oWEHVJiNljNh7Ccr8yOZkk/edit?usp=sharing"
+              target="_blank"><i class="fas fa-globe"></i>Cultura Geral</a></li>
+
+
+
+
+
+          <!-- <li><a href="docs/horarios/F2M/reforcoeoficina_EM.pdf" target="_blank"><i class="fas fa-pencil"></i> -->
+          <!-- Reforços e Oficinas</a></li> -->
+          <!-- <li><a href="docs/horarios/F2M/reforcoeoficina_F2.pdf" target="_blank"><i class="fas fa-pencil"></i>
+                Reforços e Oficinas F2</a></li> -->
+
+        </ul>
+      </div>
+      <div class="horarios-column">
+
+        <h3>Gerais</h3>
+        <ul>
+          <li><a href="culturageral6M.html?section=6aoem" target="_blank"><i class="fas fa-globe"></i> Cultura Geral
+              (todos)</a></li>
+          <!-- <li><a href="recreios.html" target="_blank"><i class="fa-solid fa-burger"></i> Recreios</a></li> -->
+          <li><a href="docs/horarios/horariosTerceirizados.pdf" target="_blank"><i class="fa-regular fa-futbol"></i>
+              Escolinhas</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1RFy6HQR3dXpwizmeoRzWt4PWjmtaZGi1?usp=drive_link"
+              target="_blank"><i class="fa-solid fa-van-shuttle"></i> Vans</a></li>
+        </ul>
+
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendários -->
+  <div class="sec_calendarios" id="sec-calendarios">
+    <h1>Calendários 2026</h1>
+
+    <div class="box_calendarios">
+
+      <a href="https://docs.google.com/document/d/1EI0f7t4XYj9mMCYX_SR1I35rOwFl5UUA/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
+        target="_blank">
+        <svg class="svg_cac" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-month"
+          width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+          <path d="M16 3v4" />
+          <path d="M8 3v4" />
+          <path d="M4 11h16" />
+          <path d="M7 14h.013" />
+          <path d="M10.01 14h.005" />
+          <path d="M13.01 14h.005" />
+          <path d="M16.015 14h.005" />
+          <path d="M13.015 17h.005" />
+          <path d="M7.01 17h.005" />
+          <path d="M10.01 17h.005" />
+        </svg>
+        <p>CAC</p>
+      </a>
+
+
+
+      <a href="https://docs.google.com/document/d/1rbL2hjfRLqmJLRnLAa1pE06u2mm-S22k/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
+        target="_blank">
+        <svg class="svg_educ" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-plus"
+          width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5" />
+          <path d="M16 3v4" />
+          <path d="M8 3v4" />
+          <path d="M4 11h16" />
+          <path d="M16 19h6" />
+          <path d="M19 16v6" />
+        </svg>
+        <p>Depto</p>
+      </a>
+
+      <a href="docs/calendarios/calendarioPais2026_1.pdf" target="_blank">
+        <svg class="svg_pais" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-user"
+          width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 21h-6a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4.5" />
+          <path d="M16 3v4" />
+          <path d="M8 3v4" />
+          <path d="M4 11h16" />
+          <path d="M19 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+          <path d="M22 22a2 2 0 0 0 -2 -2h-2a2 2 0 0 0 -2 2" />
+        </svg>
+        <p>Pais</p>
+      </a>
+
+      <a href="#" target="_blank" id="calendarioRoute"
+        onclick="event.preventDefault(); alert('Aguardando atualização');">
+        <svg class="svg_asp" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-church"
+          width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 21l18 0" />
+          <path d="M10 21v-4a2 2 0 0 1 4 0v4" />
+          <path d="M10 5l4 0" />
+          <path d="M12 3l0 5" />
+          <path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" />
+        </svg>
+        <p>Route</p>
+      </a>
+
+      <a href="docs/calendarios/calendarioAsp2026.pdf" target="_blank" id="calendarioAsp2026">
+        <svg class="svg_asp" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-church"
+          width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 21l18 0" />
+          <path d="M10 21v-4a2 2 0 0 1 4 0v4" />
+          <path d="M10 5l4 0" />
+          <path d="M12 3l0 5" />
+          <path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" />
+        </svg>
+        <p>ASP</p>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Ferramentas -->
+  <section class="horarios-section" id="sec-horarios">
+    <h2>Ferramentas e Recursos</h2>
+    <div class="horarios-grid">
+      <!-- Coluna 1 -->
+      <div class="horarios-column">
+        <!-- <h3>Infantil e 1º</h3> -->
+
+        <ul>
+          <li><a
+              href="https://mailadventistas-my.sharepoint.com/:w:/g/personal/douglas_leal_adm_educadventista_org/IQBoh_YAvtmtTp-wGBxE3C_kAYVY5Z-JVQ0w4NEZ0sNPsfQ?e=rkGZkJ"
+              target="_blank"><i class="fa-solid fa-pen-to-square"></i>Novo Comunicado</a></li>
+          <li><a href="https://drive.google.com/file/d/17MzjXrzprXHQjBeWsdh-DUM7XAfXCO0a/view?usp=sharing"
+              target="_blank"><i class="fa-regular fa-image"></i>Cabeçalho 30 anos</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 2 -->
+
+      <div class="horarios-column">
+        <ul>
+          <li><a
+              href="https://docs.google.com/spreadsheets/d/1fXNhPUGY9Zm2RV17efG0_SSlxBerFNR2y19sGC88E8Y/edit?usp=sharing"
+              target="_blank"><i class="fa-solid fa-briefcase-medical"></i>Controle Influenza</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://drive.google.com/drive/folders/1EHLAl8RmYtiRcUjYsxVj8z4SisR-BvL_?usp=drive_link"
+              target="_blank"><i class="fa-regular fa-face-smile"></i></i>Gestão das Emoções</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3 -->
+      <div class="horarios-column">
+        <ul>
+          <li><a href="#" id="btaRamais"><i class="fa-solid fa-phone-flip"></i>Ramais</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4 -->
+      <div class="horarios-column">
+        <ul>
+          <li><a href="horariosExpediente.html"><i class="fa-solid fa-clock"></i>Horários de Trabalho</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <script>
+      const btaRamais = document.querySelector('#btaRamais')
+      btaRamais.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.display = 'flex';
+      });
+    </script>
+
+  </section>
+
+</div>
+
+<!-- ADMINISTRATIVO -->
+<div class="sec_adm pag" id="administrativo">
+
+  <div class="titulosecao">RH</div>
+  <div class="conteiner-disciplina">
+
+    <a href="https://drive.google.com/drive/u/0/folders/13aHN_lgvjibnEHgMtAlDINRiM9YIztSE" class="linha-disciplina"
+      target="_blank">
+      <i class="fa-solid fa-hand-holding-hand" style="color: #253B73; font-size: 1.6rem"></i>
+      <div>Mentorias</div>
+    </a>
+
+    <a href="https://apps.powerapps.com/play/e/default-01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07/a/67c2f36c-1c44-4ff2-b25a-7267958fbdb9?tenantId=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&source=sharebutton&sourcetime=1745499649569"
+      class="linha-disciplina" target="_blank">
+      <i class="fa-regular fa-comment" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Feedbacks</div>
+    </a>
+
+    <a class="linha-disciplina"
+      href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/2373d0da-5b4a-4b0c-b50d-f9513e3421aa/e88359eda0ab32e24e0e?language=pt-BR&experience=power-bi&bookmarkGuid=56b873f2bde1024d89e9"
+      target="_blank">
+      <i class="fa-regular fa-user" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Solicitar contratação</div>
+    </a>
+
+    <a class="linha-disciplina"
+      href="https://app.powerbi.com/Redirect?action=OpenReport&appId=ba9d2c5f-5784-4ae0-bd7f-e95646d75b33&reportObjectId=2373d0da-5b4a-4b0c-b50d-f9513e3421aa&ctid=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&reportPage=e88359eda0ab32e24e0e&pbi_source=appShareLink&portalSessionId=3c78cb24-b2d9-40ca-b0e7-20c04447e0bb"
+      target="_blank">
+      <i class="fa-solid fa-magnifying-glass" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Acompanhar contrataçoes</div>
+    </a>
+
+    <a class="linha-disciplina"
+      href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/EYuhKwWZpSFLsXR_xVVJkLYB6BHDVdmGlAlGApkoF59b3w?e=s0yyk0"
+      target="_blank">
+      <i class="fa-regular fa-circle-user" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Quadro 2025</div>
+    </a>
+
+    <a class="linha-disciplina"
+      href="https://forms.office.com/pages/responsepage.aspx?id=4HruAbpCpUG7e41K-Nt_B7kc1i6k58NMmToRV2Q60c9UNzZRVDJPVUNFNllLMERLWDRIS1hBSjJNSiQlQCN0PWcu&route=shorturl"
+      target="_blank">
+      <i class="fa-solid fa-repeat" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Alterações de Quadro</div>
+    </a>
+
+    <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/Efe4MTs_SLtHrW_b0p5XJ5YBUrm5V0LC8-RankdMz27P7w?e=stkuIq"
+      target="_blank" class="linha-disciplina">
+      <i class="fa-regular fa-id-badge" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Gestores Imediatos</div>
+    </a>
+
+    <span class="linha-disciplina" id="linkcurriculos" onclick="copyContent()" style="cursor: pointer;">
+      <i class="fa-regular fa-copy" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Copiar link para currículos</div>
+    </span>
+
+    <a href="https://docs.google.com/document/d/1AVgzy9pqHabXMk6qZGK3awhXo3V3Hlei/edit" class="linha-disciplina"
+      target="_blank">
+      <i class="fa-regular fa-file-word" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Formulário Reingresso</div>
+    </a>
+
+    <a href="https://drive.google.com/drive/folders/19mIRoMhQ0od_GwzZsJexFWuSYgv3FBPm" class="linha-disciplina"
+      target="_blank">
+      <i class="fa-regular fa-file-word" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Feriados e Recessos 2025</div>
+    </a>
+
+    <a href="https://drive.google.com/drive/folders/1lSeqxNd0t_gwNG3X2lwUiCXDzSdWAmoy" class="linha-disciplina"
+      target="_blank">
+      <i class="fa-regular fa-file-pdf" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Modelo de Advertência</div>
+    </a>
+  </div>
+
+  <div class="titulosecao">Financeiro</div>
+  <div class="conteiner-disciplina">
+
+    <a class="linha-disciplina"
+      href="https://docs.google.com/spreadsheets/d/1UdL5nf2fI0CZfab174AlLIAvYaIZBYJS9xN74YON25A/edit?usp=sharing"
+      target="_blank">
+      <i class="fa-solid fa-rectangle-list" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Lista de compras</div>
+    </a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1sIpNNR8-OwM3wvFjYwrROTtSpL2Jxm2eI4hWECsVXWk/edit#gid=0"
+      class="linha-disciplina" target="_blank">
+      <i class="fa-solid fa-file-invoice-dollar" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Investimentos 2025</div>
+    </a>
+
+    <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/lucas_dalsenter_adventistas_org/IQDEpTGRkt3bQ7YVmFTjfEA3ATdt24dcSSKayisH5h9RqIU?e=pBMtXH"
+      class="linha-disciplina" target="_blank">
+      <i class="fa-solid fa-file-invoice-dollar" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Investimentos 2026</div>
+    </a>
+
+    <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/6f3d462b-94cf-455c-ba22-80600d4572f7/ReportSectionb630c8830928bc6cb4ae?redirectedFromSignup=1&experience=power-bi"
+      class="linha-disciplina" target="_blank">
+      <i class="fa-solid fa-coins" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Saldo Investimentos</div>
+    </a>
+
+    <a href="https://ebolsa-asp.educadventista.org/" id="sharepoint" class="linha-disciplina" target="_blank">
+      <i class="fa-solid fa-comments-dollar" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div class="legenda-links">e-Bolsa</div>
+    </a>
+
+    <a href="https://centraldofuncionario.com.br/" id="sharepoint" class="linha-disciplina" target="_blank">
+      <i class="fa-solid fa-clipboard-check" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div class="legenda-links">Secullum</div>
+    </a>
+
+  </div>
+
+  <div class="titulosecao">Segurança</div>
+  <div class="conteiner-disciplina">
+    <a class="linha-disciplina" href="https://sistemas.usb.org.br/ama/index.php" target="_blank">
+      <img src="img/ama.png" alt="ama" style="width: 28px;">
+      <div>AMA</div>
+    </a>
+
+    <a class="linha-disciplina" href="https://drive.google.com/drive/u/1/folders/1QdwIZQle9uXagRuqjKJH7m_2OJYinYZB"
+      target="_blank">
+      <img src="img/caution.png" alt="" />
+      <div>Protocolo Acidentes</div>
+    </a>
+
+    <a class="linha-disciplina" href="https://10.15.55.20/gohome/#/login" target="_blank">
+      <img src="img/gohome.png" alt="gohome">
+      <div>Go Home</div>
+    </a>
+
+  </div>
+
+  <div class="titulosecao">Reuniões e Atas</div>
+  <div class="conteiner-disciplina">
+    <a class="linha-disciplina"
+      href="https://drive.google.com/drive/folders/1q7KFXSB0PC-_UBt73GUYAhTd6sexn8-D?usp=drive_link" target="_blank">
+      <img src="img/adm/briefcase.png" alt="" />
+      <div>Administrativas</div>
+    </a>
+
+    <a class="linha-disciplina"
+      href="https://drive.google.com/drive/folders/1KCjgnAWQ1Nxi2jFstkUnq2gjCqc0PN8s?usp=drive_link" target="_blank">
+      <img src="img/adm/teacher.png" alt="" />
+      <div>SOP</div>
+    </a>
+
+    <a class="linha-disciplina"
+      href="https://drive.google.com/drive/folders/1_KXj9z5jlZr0g9MCaXYXDZNyuR_IlFDa?usp=drive_link" target="_blank">
+      <img src="img/adm/heart.png" alt="" />
+      <div>SOE</div>
+    </a>
+
+    <a class="linha-disciplina"
+      href="https://drive.google.com/drive/folders/1Gnb48EyJ9P0YkguRMwYkaHB2-KrD762x?usp=sharing" target="_blank">
+      <img src="img/adm/monitor.png" alt="" />
+      <div>Secretaria</div>
+    </a>
+
+    <a class="linha-disciplina"
+      href="https://drive.google.com/drive/folders/1VRDaXQIgiSDciqc50028_4LkAgke4tl3?usp=sharing" target="_blank">
+      <img src="img/adm/walkie-talkie.png" alt="" />
+      <div>Disciplinares</div>
+    </a>
+
+
+  </div>
+
+  <div class="titulosecao">Documentos Legais</div>
+  <div class="conteiner-disciplina">
+    <a class="linha-disciplina" href="https://drive.google.com/drive/u/1/folders/1gd_-5QZgtYKQkN5tDfwqAlcUE4d5pGmz"
+      target="_blank">
+      <img src="img/drive.png" alt="" />
+      <div>Regimento</div>
+    </a>
+
+    <a class="linha-disciplina" href="https://drive.google.com/drive/u/1/folders/1bqXssbFhYfCep12ME1Ro-ox-KV3pjiVf"
+      target="_blank">
+      <img src="img/drive.png" alt="" />
+      <div>PPP</div>
+    </a>
+
+    <a href="https://drive.google.com/file/d/1QDSUKquy3GGOdUZ4PRtXclOe-u4wuuhC/view?usp=sharing" target="_blank"
+      class="linha-disciplina">
+      <img src="img/book.png" alt="" />
+      <div>Guia de Funções</div>
+    </a>
+
+    <a class="linha-disciplina"
+      href="https://drive.google.com/drive/folders/1TuI0bQw27K1cY9A8V2oxadFc9ypfI5YE?usp=sharing" target="_blank">
+      <img src="img/drive.png" alt="" />
+      <div>Matrizes</div>
+    </a>
+
+    <a class="linha-disciplina" href="docs/matrizEM.pdf">
+      <img src="img/pdf.png" alt="" />
+      <div>Matriz EM</div>
+    </a>
+
+    <a class="linha-disciplina"
+      href="https://drive.google.com/drive/folders/1-ktGQ1tMpHke0X8zZ5SK5crOWkmr4JuR?usp=drive_link" target="_blank">
+      <img src="img/drive.png" alt="" />
+      <div>Manual da Família</div>
+    </a>
+
+    <a class="linha-disciplina" href="https://drive.google.com/drive/u/1/folders/1utX73lRg_bGQoQ0MStdLJV2BA6hczUBD"
+      target="_blank">
+      <img src="img/drive.png" alt="" />
+      <div>Código de Ética</div>
+    </a>
+
+    <a class="linha-disciplina" href="https://www2.senado.leg.br/bdsf/bitstream/handle/id/534718/eca_1ed.pdf?sequence=1"
+      target="_blank">
+      <img src="img/pdf.png" alt="" />
+      <div>ECA</div>
+    </a>
+
+    <a class="linha-disciplina" href="http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf"
+      target="_blank">
+      <img src="img/pdf.png" alt="" />
+      <div>BNCC</div>
+    </a>
+    <a class="linha-disciplina" href="https://drive.google.com/drive/u/2/folders/1K-TRXJIuEHS_agtY__PT9d57k47tSk16"
+      target="_blank">
+      <img src="img/drive.png" alt="" />
+      <div>Fichas de entrevista</div>
+    </a>
+  </div>
+
+  <div class="titulosecao">Outros</div>
+  <div class="conteiner-disciplina">
+
+    <a href="horariosExpediente.html" class="linha-disciplina" target="_blank">
+      <i class="fa-regular fa-clock" style="font-size: 1.6rem; color:#253B73;"></i>
+      <div>Horários de trabalho</div>
+    </a>
+
+    <a href="https://iatec.nextlegalone.com.br/" class="linha-disciplina" target="_blank">
+      <img src="img/legalone.png" alt="" style="width: 28px;" />
+      <div class="legenda-links">Legal One</div>
+    </a>
+
+
+    <a href="https://docs.google.com/spreadsheets/d/1dquE3KabCQodkCAW-WCSJHsMi7sw2yCQWm8krNwmvVs/edit#gid=0"
+      class="linha-disciplina" target="_blank">
+      <img src="img/google-agenda.png" alt="" />
+      <div>Locações</div>
+    </a>
+
+    <a href="https://hub-br.eaportal.org/" class="linha-disciplina" target="_blank">
+      <img src="img/hub.svg" alt="" />
+      <div>Hub Educacional (site)</div>
+    </a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1pA1EealV7XV2fyebGMhnBLK9O5H6HYWglul81ke_aPA/edit?usp=sharing"
+      class="linha-disciplina" target="_blank">
+      <img src="img/drive.png" alt="" />
+      <div>Número de alunos por auxiliar</div>
+    </a>
+
+    <a href="https://voip.sdasystems.org/" class="linha-disciplina" target="_blank">
+      <img src="img/voip.png" alt="" />
+      <div>Ramais Voip</div>
+    </a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1ce5upAQkB2ruOnbLfAIfoiRvxl6A_bf3Y6TZsQSsyvA/edit?usp=sharing"
+      class="linha-disciplina" target="_blank">
+      <img src="img/google-sheets.png" alt="" />
+      <div>Encaminhamentos Psicóloga</div>
+    </a>
+
+    <a href="docs/protocoloUsoEspacosCAC.pdf" class="linha-disciplina" target="_blank">
+      <img src="img/pdf.png" alt="pdf">
+      <div>Protocolo de Uso dos Espaços</div>
+    </a>
+
+  </div>
+
+  <div class="titulosecao">Disciplinar</div>
+  <div class="conteiner-disciplina">
+    <a class="linha-disciplina"
+      href="https://drive.google.com/drive/folders/1YhnJb1FTtTnDSIvIdorPGaWdS14lYEcy?usp=drive_link" target="_blank">
+      <img src="img/drive.png" alt="" />
+      <div>Temas para Redação</div>
+    </a>
+  </div>
+</div>
+
+<!-- PEDAGÓGICO -->
+<div class="generalConteiner pag" id="pedagogico">
+  <header>
+    <div class="logo">PEDAGÓGICO</div>
+    <nav>
+      <ul>
+        <li><a href="inclusao.html" target="_blank">INCLUSÃO</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1H414AEYw8R3gpE3-7aIQkl0PJ8An8NU7?usp=sharing"
+            target="_blank">SALA DE RECURSOS</a></li>
+        <li><a
+            href="https://docs.google.com/spreadsheets/d/1Oo5hebyTsxp-xi2Xl2Rc7S3C7KlKB8X8ACkxTGdCO38/edit?usp=sharing"
+            target="_blank">PSICÓLOGO</a></li>
+        <!-- <li><a href="#">SOE</a></li> -->
+        <!-- <li><a href="#">SOP</a></li> -->
+
+      </ul>
     </nav>
-
-    <div class="alert_icons">
-      <!-- <span data-tooltip="Fones Emergência" class="material-symbols-outlined" id="open-ama">medical_services</span> -->
-
-      <span data-tooltip="Fones Emergência" class="material-symbols-outlined" id="open-emergency">shield</span>
-      <span class="material-symbols-outlined" id="ramais-do-menu">call</span>
-
-      <script>
-        document.getElementById('bt-usuarios').addEventListener('click', () => {
-          window.open('https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQA3nljlwhDrR4flWKQa9ASiATN48PgZ5G47zCoasHvsPXs?e=AotjNB', '_blank');
-        });
-      </script>
-
-
+    <div class="user-profile" style="display: none;">
+      <img src="user-icon.png">
+      <span>Tyler King</span>
+      <span>Project Manager</span>
     </div>
   </header>
 
-  <!-- HOME  -->
-  <div class="sec mainConteiner pag ativa" id="home">
-
-    <div class="conteinergeral">
-
-      <main id="conteinerhome">
-
-        <!-- Escalas -->
-        <div class="divhome" id="escalas">
-
-          <div class="titulodivhomeescalas">Escalas</div>
-
-          <div class="conteinerescalas" id="conteinerescalas">
-
-            <a href="cultos.html" target="_blank">
-              <div class="escala primeiraescala" id="escalacultos">
-                <div class="icon"><img src="img/yes.png" alt="" /></div>
-                <div>
-                  <div class="tituloescala">Culto do dia</div>
-                  <div class="contentescala" id="cultos"></div>
-                  <i class="fa-solid fa-angle-right seta"></i>
-                </div>
-              </div>
-            </a>
-
-            <a href="https://docs.google.com/spreadsheets/d/1XgJ3i5FjlNIdp7oUJUFRQGwDOmcO_uwonZvhxzoY-lk/edit?gid=0#gid=0"
-              target="_blank">
-              <div class="escala">
-                <div class="icon"><img src="img/yes.png" id="icon-compensacao" /></div>
-                <div>
-                  <div class="tituloescala" id="titulocompensacao">Compensação</div>
-                  <div class="contentescala" id="box-nomescomp" style="display: flex; align-items: center"><span
-                      id="nomescomp" style="margin-right: 1rem"></span>
-                  </div><i class="fa-solid fa-angle-right seta"></i>
-                </div>
-              </div>
-            </a>
-
-            <a href="entrevistas.html"
-              target="_blank">
-              <div class="escala">
-                <div class="icon"><img src="img/yes.png" /></div>
-                <div>
-                  <div class="tituloescala" id="titulocompensacao">Entrevistas</div>
-                  <div class="contentescala" id="box-nomescomp" style="display: flex; align-items: center"><span
-                      id="entrevistascontent" style="margin-right: 1rem"></span>
-                  </div><i class="fa-solid fa-angle-right seta"></i>
-                </div>
-              </div>
-            </a>
-
-            <a href="plantaoSexta.html" target="_blank">
-              <div class="escala" id="escalasexta">
-                <div class="icon"><img src="img/yes.png" alt="" /></div>
-                <div>
-                  <div class="tituloescala">Plantão de sexta</div>
-                  <div class="contentescala" id="plantaosexta"></div>
-                  <i class="fa-solid fa-angle-right seta"></i>
-                </div>
-              </div>
-            </a>
-
-            <a id="ralink" target="_blank">
-              <div class="escala">
-                <div class="icon"><img src="img/yes.png" alt="" /></div>
-                <div>
-                  <div class="tituloescala" id="tituloroute">Reunião Administrativa</div>
-                  <div class="contentescala" id="reuniaoadm"></div>
-                  <i class="fa-solid fa-angle-right seta"></i>
-                </div>
-              </div>
-            </a>
-
-            <a href="hino.html" target="_blank">
-              <div class="escala">
-                <div class="icon"><img src="img/yes.png" alt="" /></div>
-                <div>
-                  <div class="tituloescala">Hino Nacional</div>
-                  <div class="contentescala" id="hinoResponsavel">Aguardando escala</div>
-                  <i class="fa-solid fa-angle-right seta"></i>
-                </div>
-              </div>
-            </a>
-
-          </div>
-        </div>
-
-        <!-- Links Rápidos -->
-        <div class="divhome divhomelinksrapidos">
-
-          <div class="titulodivhomelinksrapidos">Links Rápidos</div>
-
-          <div class="linksrapidos" id="divhomelinks">
-
-            <a href="https://docs.google.com/document/d/1EI0f7t4XYj9mMCYX_SR1I35rOwFl5UUA/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
-              target="_blank">
-              <div class="img">
-                <!-- <i class="fa-solid fa-calendar"></i> -->
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
-                  stroke="#253B73" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
-                </svg>
-                <div class="legenda-links">Calendário</div>
-              </div>
-            </a>
-
-            <a href="https://drive.google.com/drive/folders/1Ahm3g36ew5FXYVJmrvq-96R1j1_wesw0" target="_blank">
-              <div class="img">
-                <!-- <i class="fa-solid fa-envelope"></i> -->
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
-                  stroke="#253B73" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                </svg>
-                <div class="legenda-links">Comunicados</div>
-              </div>
-            </a>
-
-            <a id="linkrapidora" target="_blank">
-              <div class="img">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
-                  stroke="#253B73" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                </svg>
-
-
-
-                <div class="legenda-links">RA</div>
-              </div>
-            </a>
-
-            <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit?gid=2025334756#gid=2025334756"
-              target="_blank">
-              <div class="img">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="34px"
-                  stroke="#253B73" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
-                </svg>
-                <div class="legenda-links">Vagas</div>
-              </div>
-            </a>
-
-            <a href="https://7edu-br.educadventista.org/" target="_blank">
-              <div class="img">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
-                  stroke="#253B73" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-                </svg>
-
-                <div class="legenda-links">7Edu</div>
-              </div>
-            </a>
-
-            <a href="https://apps.powerapps.com/play/e/default-01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07/a/67c2f36c-1c44-4ff2-b25a-7267958fbdb9?tenantId=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&source=sharebutton&sourcetime=1745499649569"
-              target="_blank">
-              <div class="img">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
-                  stroke="#253B73" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
-                </svg>
-
-                <div class="legenda-links">Feedback</div>
-              </div>
-            </a>
-
-            <a href="https://hub-br.eaportal.org/" target="_blank">
-              <div class="img">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
-                  stroke="#253B73" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
-                </svg>
-                <div class="legenda-links">Hub</div>
-              </div>
-            </a>
-
-            <a href="https://docs.google.com/spreadsheets/d/1wGnE9xJwgW28SRdhsX2NPSyvac8jygblgt2FT6tyqiY/edit?usp=sharing"
-              target="_blank">
-              <div class="img">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
-                  stroke="#253B73" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
-                </svg>
-
-                <div class="legenda-links">Nesp</div>
-              </div>
-            </a>
-
-            <a href="https://drive.google.com/drive/u/2/folders/0AIkDslbbFCv4Uk9PVA" target="_blank">
-              <div class="img">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" width="30px"
-                  stroke="#253B73" class="size-6">
-
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
-                </svg>
-
-                <div class="legenda-links">ASP 2026</div>
-              </div>
-            </a>
-
-
-          </div>
-        </div>
-
-        <!-- Calendário Numérico -->
-        <div class="divhome" id="divhomecalendario">
-          <div class="box-cal-num">
-            <div class="titulocalendario">Calendário</div>
-
-            <div class="mescalbox">
-              <span class="spancal prev">
-                <i class="fa-solid fa-chevron-left prev"></i>
-              </span>
-
-              <div class="mescal"></div>
-
-              <span class="spancal next">
-                <i class="fa-solid fa-chevron-right next"></i>
-              </span>
-            </div>
-
-            <div class="bodycal">
-              <div class="weekdays">
-                <div>D</div>
-                <div>S</div>
-                <div>T</div>
-                <div>Q</div>
-                <div>Q</div>
-                <div>S</div>
-                <div>S</div>
-              </div>
-              <div class="days"></div>
-            </div>
-
-            <div class="btnsCal" id="btnsCal">
-              <div class="btnHoje" id="btn-hoje">Hoje</div>
-              <div id="btn-obs">Observações</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Próximos Aniversariantes -->
-        <div class="divhome" id="divhomeproxaniversariantes"></div>
-
-      </main>
-
-    </div>
-
-    <!-- Eventos e Projetos -->
-    <section class="sec-eventos-e-projetos" id="sec-eventos">
-
-      <section class="sec-eventos-e-projetos" id="sec-eventos">
-        <div class="evCard_section">
-          <h2>Próximos Eventos</h2>
-
-          <div class="evCard_container">
-            <div class="evCard_sliderWrapper">
-              <div class="evCard_slider" id="evCard_sliderContent"></div>
-            </div>
-
-            <div class="evCard_navBottom">
-              <button class="evCard_navBtn evCard_btnPrev" aria-label="Evento anterior">
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <button class="evCard_navBtn evCard_btnNext" aria-label="Próximo evento">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script>
-
-        const evCard_eventos = [
-          { evento: 'Viagem SP', data: '2026-01-25T00:00:00', link: 'https://drive.google.com/drive/folders/1GDEIqsWb6SZT9xI7g9yJWGHwLcHDUV2C?usp=sharing' },
-          { evento: 'Reunião de Pais 6º-EM', data: '2026-01-28T00:00:00', link: 'https://drive.google.com/drive/folders/1YnR_EOwDHEavkNNaa2U1OAzYmq2K4cg4?usp=drive_link' },
-          { evento: 'Reunião Geral CAC', data: '2026-01-29T00:00:00', link: 'https://drive.google.com/drive/folders/1q_L3cf4pZjUfzawEUGpn-xv1JRz_Ovlv?usp=drive_link' },
-          { evento: 'Reunião de Pais EI-5º', data: '2026-01-29T00:00:00', link: 'https://drive.google.com/drive/folders/1_loTW-wqqkVy0mBnUYZw8FnxLsQ_jIw1?usp=drive_link' },
-          { evento: '1º Dia/Entrega Materiais', data: '2026-02-02T00:00:00', link: 'https://drive.google.com/drive/folders/1lpR2ZPp00QhaYder8ZxXvuAEwAjMn2nW?usp=drive_link' },
-          { evento: 'Visita Técnica', data: '2026-03-04T00:00:00', link: 'https://drive.google.com/drive/folders/1WYPFE80ATSA8qSxXjWY4tKfWv42ls9W7?usp=drive_link' },
-          { evento: 'Cantata de Páscoa', data: '2026-03-29T00:00:00', link: 'https://drive.google.com/drive/folders/1VIWuJb-U7fykdTihSfudt_3ivVXO-j-M?usp=drive_link' },
-          { evento: 'Reunião Participativa 1ºB', data: '2026-03-16T00:00:00', link: 'https://drive.google.com/drive/folders/10nl5E6geGUVanFJfMLQmr2J0hA5CgtZp?usp=drive_link' },
-          { evento: 'Homenagem às Mulheres', data: '2026-03-05T00:00:00', link: 'https://drive.google.com/drive/folders/1QkYLdKW0isZPIH2NwZOt9WHmxtPyGFPN?usp=drive_link' },
-          { evento: 'Jogos Interséries', data: '2026-10-19T00:00:00', link: 'https://drive.google.com/drive/folders/1-W26B0UGp1GlgIOp4lDtlv9EXPAfxWo8?usp=drive_link' },
-          { evento: 'Retiro Espiritual SP', data: '2026-04-30T00:00:00', link: 'https://drive.google.com/drive/folders/1hCBuCw9ZzHfY6xDGZRHRp6PAl6bUOhhf?usp=sharing' },
-          { evento: 'Formaturas 9º e 3ºEM', data: '2026-12-14T00:00:00', link: 'https://drive.google.com/drive/folders/14A1-5aZWK5h0OdmrjIwQDvou3SPtyrl5?usp=drive_link' },
-          { evento: 'Semana Santa Escolar', data: '2026-03-30T00:00:00', link: 'https://docs.google.com/spreadsheets/d/1279-I3gBN-nRmL-2hsB8XNVosCy0sDL0QZnI33DQ4No/edit?usp=sharing' },
-          { evento: 'Sem. Oração Servidores', data: '2026-05-04T00:00:00', link: 'https://drive.google.com/drive/folders/1HGPzrCApOOkJS7WPDHS2m7pmXvgGGZTd?usp=drive_link' },
-          { evento: 'Homenagem às Mães', data: '2026-05-17T00:00:00', link: 'https://drive.google.com/drive/folders/1HK6GPeS5NBl9tHln484F0jfdVU6iupf2?usp=drive_link' },
-          { evento: 'Excursão 9º', data: '2026-08-24T00:00:00', link: 'https://drive.google.com/drive/folders/1mzOWYeEDlsQ_rs9ssEnnjlG_qAcj3ov3?usp=sharing' },
-          { evento: 'Excursão Terceirão', data: '2026-09-20T00:00:00', link: 'https://drive.google.com/drive/folders/1Laxq-eRY-EM6322TUkCK0g_Cww12QkJl?usp=sharing' },
-          { evento: 'Beto Carrero', data: '2026-08-26T00:00:00', link: 'https://drive.google.com/drive/folders/1h6GEy5YH83yJrUtyRJ1L41_nK8M2v3fb?usp=sharing' },
-          { evento: 'Escola de Pais', data: '2026-04-28T00:00:00', link: 'https://drive.google.com/drive/folders/1m74E9rHQJlrtdTBJmBBeUuHr9rBreT66?usp=drive_link' },
-        ];
-
-        const evCard_gradients = [
-          'linear-gradient(135deg, #FF5F6D, #845EC2)',
-          'linear-gradient(135deg, #F9A826, #F58529)',
-          'linear-gradient(135deg, #00C9A7, #92FE9D)',
-          'linear-gradient(135deg, #1E3C72, #2A5298)',
-          'linear-gradient(135deg, #0093E9, #80D0C7)'
-        ];
-
-        const slider = document.getElementById('evCard_sliderContent');
-        const sliderWrapper = document.querySelector('.evCard_sliderWrapper');
-        const btnPrev = document.querySelector('.evCard_btnPrev');
-        const btnNext = document.querySelector('.evCard_btnNext');
-
-        let currentIndex = 0;
-
-        function isMobile() {
-          return window.innerWidth <= 600;
-        }
-
-        function getVisibleCards() {
-          if (window.innerWidth <= 600) return 1;
-          if (window.innerWidth <= 900) return 2;
-          return 4;
-        }
-
-        function diasPara(dataStr) {
-          const hoje = new Date();
-          hoje.setHours(0, 0, 0, 0);
-
-          const dataEvento = new Date(dataStr);
-          dataEvento.setHours(0, 0, 0, 0);
-
-          const diffMs = dataEvento - hoje;
-          const diffDias = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-
-          if (diffDias === 0) return 'Hoje!';
-          if (diffDias === 1) return 'Amanhã';
-          if (diffDias < 0) return `Há ${Math.abs(diffDias)} dia${Math.abs(diffDias) === 1 ? '' : 's'}`;
-          return `Em ${diffDias} dia${diffDias === 1 ? '' : 's'}`;
-        }
-
-        function renderCards() {
-          const hoje = new Date();
-          hoje.setHours(0, 0, 0, 0);
-
-          const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
-          const eventosOrdenados = evCard_eventos
-            .map((e) => {
-              const dataEvento = new Date(e.data);
-              dataEvento.setHours(0, 0, 0, 0);
-              return { ...e, dataEvento };
-            })
-            .sort((a, b) => a.dataEvento - b.dataEvento);
-
-          currentIndex = eventosOrdenados.findIndex((e) => e.dataEvento >= hoje);
-          if (currentIndex === -1) currentIndex = 0;
-
-          slider.innerHTML = eventosOrdenados.map((e, i) => `
-    <div class="evCard_item">
-      <a class="evCard_link" href="${e.link}" target="_blank" rel="noopener noreferrer">
-        <div class="evCard_inner" style="background: ${evCard_gradients[i % evCard_gradients.length]}">
-          <p>${new Date(e.data).getDate()} ${meses[new Date(e.data).getMonth()]}</p>
-          <h3 title="${e.evento}">${e.evento}</h3>
-          <p>${diasPara(e.data)}</p>
-        </div>
-      </a>
-    </div>
-  `).join('');
-        }
-
-        function updateNavButtons() {
-          const totalCards = slider.children.length;
-          const visibleCards = getVisibleCards();
-          const maxIndex = Math.max(0, totalCards - visibleCards);
-
-          btnPrev.disabled = currentIndex <= 0;
-          btnNext.disabled = currentIndex >= maxIndex;
-
-          btnPrev.style.opacity = btnPrev.disabled ? '0.5' : '1';
-          btnNext.style.opacity = btnNext.disabled ? '0.5' : '1';
-          btnPrev.style.cursor = btnPrev.disabled ? 'not-allowed' : 'pointer';
-          btnNext.style.cursor = btnNext.disabled ? 'not-allowed' : 'pointer';
-        }
-
-        function updateSlider() {
-          const cardWidth = slider.querySelector('.evCard_item')?.offsetWidth || 0;
-
-          if (isMobile()) {
-            sliderWrapper.scrollTo({
-              left: currentIndex * cardWidth,
-              behavior: 'smooth'
-            });
-          } else {
-            slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-          }
-
-          updateNavButtons();
-        }
-
-        btnNext.addEventListener('click', () => {
-          const totalCards = slider.children.length;
-          const visibleCards = getVisibleCards();
-          const maxIndex = Math.max(0, totalCards - visibleCards);
-
-          if (currentIndex < maxIndex) {
-            currentIndex++;
-            updateSlider();
-          }
-        });
-
-        btnPrev.addEventListener('click', () => {
-          if (currentIndex > 0) {
-            currentIndex--;
-            updateSlider();
-          }
-        });
-
-        sliderWrapper.addEventListener('scroll', () => {
-          if (!isMobile()) return;
-
-          const cardWidth = slider.querySelector('.evCard_item')?.offsetWidth || 1;
-          currentIndex = Math.round(sliderWrapper.scrollLeft / cardWidth);
-          updateNavButtons();
-        });
-
-        window.addEventListener('resize', () => {
-          const totalCards = slider.children.length;
-          const visibleCards = getVisibleCards();
-          const maxIndex = Math.max(0, totalCards - visibleCards);
-
-          if (currentIndex > maxIndex) {
-            currentIndex = maxIndex;
-          }
-
-          updateSlider();
-        });
-
-        renderCards();
-
-        requestAnimationFrame(() => {
-          updateSlider();
-        });
-
-      </script>
-
-    </section>
-
-    <!-- Horários -->
-    <section class="horarios-section" id="sec-horarios">
-      <h2>Horários</h2>
-      <div class="horarios-grid">
-        <div class="horarios-column">
-          <h3>Infantil e 1º</h3>
-          <ul>
-            <li><a href="docs/horarios/P1/horariomanha2026.pdf" target="_blank"><i class="fas fa-users"></i>Manhã</a>
-            </li>
-            <li><a href="docs/horarios/P1/horariotarde2026.pdf" target="_blank"><i class="fas fa-users"></i>Tarde</a>
-            </li>
-            <li><a
-                href="https://docs.google.com/spreadsheets/d/1-nH3MMb1TUHBtR-NEp3QPK6GbHg5KUPs/edit?usp=sharing&ouid=107298817668705462854&rtpof=true&sd=true"
-                target="_blank"><i class="fas fa-globe"></i>Cultura Geral</a></li>
-            <!-- <li><a href="#"><i class="fas fa-book-open"></i>Biblioteca</a></li> -->
-            <!-- <li><a href="#"><i class="fa-solid fa-child-reaching"></i>Parque</a></li> -->
-          </ul>
-        </div>
-        <div class="horarios-column">
-          <h3>Fundamental 1</h3>
-          <ul>
-            <li><a href="docs/horarios/F1/horariosF1manha.pdf"><i class="fas fa-users"></i>Manhã</a></li>
-            <li><a href="docs/horarios/F1/horariosF1tarde.pdf"><i class="fas fa-users"></i>Tarde</a></li>
-            <li><a
-                href="https://docs.google.com/spreadsheets/d/1-nH3MMb1TUHBtR-NEp3QPK6GbHg5KUPs/edit?usp=sharing&ouid=107298817668705462854&rtpof=true&sd=true"
-                target="_blank"><i class="fas fa-globe"></i>Cultura Geral</a></li>
-            <!-- <li><a href="#"><i class="fas fa-pencil"></i> Reforços</a></li> -->
-            <!-- <li><a href="#"><i class="fas fa-book-open"></i> Biblioteca</a></li> -->
-          </ul>
-        </div>
-        <div class="horarios-column">
-          <h3>Fund 2 ao Médio</h3>
-          <ul>
-            <li><a href="docs/horarios/F2M/horarioturma.pdf" target="_blank"><i class="fas fa-users"></i>Turmas</a></li>
-            <li><a href="docs/horarios/F2M/horarioprofs.pdf" target="_blank"><i
-                  class="fas fa-chalkboard-teacher"></i>Professores</a></li>
-            <!-- <li><a href="#" onclick="event.preventDefault(); abrirModal_RA()"><i class="fa-solid fa-chalkboard-user"></i>Conselheiros</a></li> -->
-            <li><a
-                href="https://docs.google.com/document/d/1zrFKqoZ2DLCTMsAPdJcZ4oWEHVJiNljNh7Ccr8yOZkk/edit?usp=sharing"
-                target="_blank"><i class="fas fa-globe"></i>Cultura Geral</a></li>
-
-
-
-
-
-            <!-- <li><a href="docs/horarios/F2M/reforcoeoficina_EM.pdf" target="_blank"><i class="fas fa-pencil"></i> -->
-            <!-- Reforços e Oficinas</a></li> -->
-            <!-- <li><a href="docs/horarios/F2M/reforcoeoficina_F2.pdf" target="_blank"><i class="fas fa-pencil"></i>
-                Reforços e Oficinas F2</a></li> -->
-
-          </ul>
-        </div>
-        <div class="horarios-column">
-
-          <h3>Gerais</h3>
-          <ul>
-            <li><a href="culturageral6M.html?section=6aoem" target="_blank"><i class="fas fa-globe"></i> Cultura Geral
-                (todos)</a></li>
-            <!-- <li><a href="recreios.html" target="_blank"><i class="fa-solid fa-burger"></i> Recreios</a></li> -->
-            <li><a href="docs/horarios/horariosTerceirizados.pdf" target="_blank"><i class="fa-regular fa-futbol"></i>
-                Escolinhas</a></li>
-            <li><a href="https://drive.google.com/drive/folders/1RFy6HQR3dXpwizmeoRzWt4PWjmtaZGi1?usp=drive_link"
-                target="_blank"><i class="fa-solid fa-van-shuttle"></i> Vans</a></li>
-          </ul>
-
-
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Calendários -->
-    <div class="sec_calendarios" id="sec-calendarios">
-      <h1>Calendários 2026</h1>
-
-      <div class="box_calendarios">
-
-        <a href="https://docs.google.com/document/d/1EI0f7t4XYj9mMCYX_SR1I35rOwFl5UUA/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
-          target="_blank">
-          <svg class="svg_cac" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-month"
-            width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
-            <path d="M16 3v4" />
-            <path d="M8 3v4" />
-            <path d="M4 11h16" />
-            <path d="M7 14h.013" />
-            <path d="M10.01 14h.005" />
-            <path d="M13.01 14h.005" />
-            <path d="M16.015 14h.005" />
-            <path d="M13.015 17h.005" />
-            <path d="M7.01 17h.005" />
-            <path d="M10.01 17h.005" />
-          </svg>
-          <p>CAC</p>
-        </a>
-
-
-
-        <a href="https://docs.google.com/document/d/1rbL2hjfRLqmJLRnLAa1pE06u2mm-S22k/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
-          target="_blank">
-          <svg class="svg_educ" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-plus"
-            width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5" />
-            <path d="M16 3v4" />
-            <path d="M8 3v4" />
-            <path d="M4 11h16" />
-            <path d="M16 19h6" />
-            <path d="M19 16v6" />
-          </svg>
-          <p>Depto</p>
-        </a>
-
-        <a href="docs/calendarios/calendarioPais2026_1.pdf" target="_blank">
-          <svg class="svg_pais" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-user"
-            width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M12 21h-6a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4.5" />
-            <path d="M16 3v4" />
-            <path d="M8 3v4" />
-            <path d="M4 11h16" />
-            <path d="M19 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-            <path d="M22 22a2 2 0 0 0 -2 -2h-2a2 2 0 0 0 -2 2" />
-          </svg>
-          <p>Pais</p>
-        </a>
-
-        <a href="#" target="_blank" id="calendarioRoute"
-          onclick="event.preventDefault(); alert('Aguardando atualização');">
-          <svg class="svg_asp" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-church"
-            width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 21l18 0" />
-            <path d="M10 21v-4a2 2 0 0 1 4 0v4" />
-            <path d="M10 5l4 0" />
-            <path d="M12 3l0 5" />
-            <path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" />
-          </svg>
-          <p>Route</p>
-        </a>
-
-        <a href="docs/calendarios/calendarioAsp2026.pdf" target="_blank" id="calendarioAsp2026">
-          <svg class="svg_asp" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-church"
-            width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 21l18 0" />
-            <path d="M10 21v-4a2 2 0 0 1 4 0v4" />
-            <path d="M10 5l4 0" />
-            <path d="M12 3l0 5" />
-            <path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" />
-          </svg>
-          <p>ASP</p>
-        </a>
-
-      </div>
-    </div>
-
-    <!-- Ferramentas -->
-    <section class="horarios-section" id="sec-horarios">
-      <h2>Ferramentas e Recursos</h2>
-      <div class="horarios-grid">
-        <!-- Coluna 1 -->
-        <div class="horarios-column">
-          <!-- <h3>Infantil e 1º</h3> -->
-
-          <ul>
-            <li><a
-                href="https://mailadventistas-my.sharepoint.com/:w:/g/personal/douglas_leal_adm_educadventista_org/IQBoh_YAvtmtTp-wGBxE3C_kAYVY5Z-JVQ0w4NEZ0sNPsfQ?e=rkGZkJ"
-                target="_blank"><i class="fa-solid fa-pen-to-square"></i>Novo Comunicado</a></li>
-            <li><a href="https://drive.google.com/file/d/17MzjXrzprXHQjBeWsdh-DUM7XAfXCO0a/view?usp=sharing"
-                target="_blank"><i class="fa-regular fa-image"></i>Cabeçalho 30 anos</a></li>
-          </ul>
-        </div>
-
-        <!-- Coluna 2 -->
-
-        <div class="horarios-column">
-          <ul>
-            <li><a
-                href="https://docs.google.com/spreadsheets/d/1fXNhPUGY9Zm2RV17efG0_SSlxBerFNR2y19sGC88E8Y/edit?usp=sharing"
-                target="_blank"><i class="fa-solid fa-briefcase-medical"></i>Controle Influenza</a></li>
-          </ul>
-          <ul>
-            <li><a href="https://drive.google.com/drive/folders/1EHLAl8RmYtiRcUjYsxVj8z4SisR-BvL_?usp=drive_link"
-                target="_blank"><i class="fa-regular fa-face-smile"></i></i>Gestão das Emoções</a></li>
-          </ul>
-        </div>
-
-        <!-- Coluna 3 -->
-        <div class="horarios-column">
-          <ul>
-            <li><a href="#" id="btaRamais"><i class="fa-solid fa-phone-flip"></i>Ramais</a></li>
-          </ul>
-        </div>
-
-        <!-- Coluna 4 -->
-        <div class="horarios-column">
-          <ul>
-            <li><a href="horariosExpediente.html"><i class="fa-solid fa-clock"></i>Horários de Trabalho</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <script>
-        const btaRamais = document.querySelector('#btaRamais')
-        btaRamais.addEventListener('click', (e) => {
-          e.preventDefault();
-          modal.style.display = 'flex';
-        });
-      </script>
-
-    </section>
-
+  <div class="sub-header" style="display: none;">
+    <ul>
+      <li>HOME</li>
+      <li>LONDON</li>
+      <li>SINGAPORE</li>
+      <li>SEATTLE</li>
+      <li>BERLIN</li>
+    </ul>
+    <div class="info-home">INFO / HOME</div>
   </div>
 
-  <!-- ADMINISTRATIVO -->
-  <div class="sec_adm pag" id="administrativo">  
-
-    <div class="titulosecao">RH</div>
-    <div class="conteiner-disciplina">
-
-      <a href="https://drive.google.com/drive/u/0/folders/13aHN_lgvjibnEHgMtAlDINRiM9YIztSE" class="linha-disciplina"
-        target="_blank">
-        <i class="fa-solid fa-hand-holding-hand" style="color: #253B73; font-size: 1.6rem"></i>
-        <div>Mentorias</div>
+  <main>
+    <section class="top-section">
+      <a href="https://docs.google.com/document/d/1EI0f7t4XYj9mMCYX_SR1I35rOwFl5UUA/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
+        class="card-link" target="_blank">
+        <div class="card orange">
+          <div class="icon"><i class="fa-solid fa-calendar"></i></div>
+          <h3>CALENDÁRIO</h3>
+          <p>2026</p>
+        </div>
       </a>
-
-      <a href="https://apps.powerapps.com/play/e/default-01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07/a/67c2f36c-1c44-4ff2-b25a-7267958fbdb9?tenantId=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&source=sharebutton&sourcetime=1745499649569"
-        class="linha-disciplina" target="_blank">
-        <i class="fa-regular fa-comment" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Feedbacks</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/2373d0da-5b4a-4b0c-b50d-f9513e3421aa/e88359eda0ab32e24e0e?language=pt-BR&experience=power-bi&bookmarkGuid=56b873f2bde1024d89e9"
-        target="_blank">
-        <i class="fa-regular fa-user" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Solicitar contratação</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://app.powerbi.com/Redirect?action=OpenReport&appId=ba9d2c5f-5784-4ae0-bd7f-e95646d75b33&reportObjectId=2373d0da-5b4a-4b0c-b50d-f9513e3421aa&ctid=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&reportPage=e88359eda0ab32e24e0e&pbi_source=appShareLink&portalSessionId=3c78cb24-b2d9-40ca-b0e7-20c04447e0bb"
-        target="_blank">
-        <i class="fa-solid fa-magnifying-glass" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Acompanhar contrataçoes</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/EYuhKwWZpSFLsXR_xVVJkLYB6BHDVdmGlAlGApkoF59b3w?e=s0yyk0"
-        target="_blank">
-        <i class="fa-regular fa-circle-user" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Quadro 2025</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://forms.office.com/pages/responsepage.aspx?id=4HruAbpCpUG7e41K-Nt_B7kc1i6k58NMmToRV2Q60c9UNzZRVDJPVUNFNllLMERLWDRIS1hBSjJNSiQlQCN0PWcu&route=shorturl"
-        target="_blank">
-        <i class="fa-solid fa-repeat" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Alterações de Quadro</div>
-      </a>
-
-      <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/Efe4MTs_SLtHrW_b0p5XJ5YBUrm5V0LC8-RankdMz27P7w?e=stkuIq"
-        target="_blank" class="linha-disciplina">
-        <i class="fa-regular fa-id-badge" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Gestores Imediatos</div>
-      </a>
-
-      <span class="linha-disciplina" id="linkcurriculos" onclick="copyContent()" style="cursor: pointer;">
-        <i class="fa-regular fa-copy" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Copiar link para currículos</div>
-      </span>
-
-      <a href="https://docs.google.com/document/d/1AVgzy9pqHabXMk6qZGK3awhXo3V3Hlei/edit" class="linha-disciplina"
-        target="_blank">
-        <i class="fa-regular fa-file-word" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Formulário Reingresso</div>
-      </a>
-
-      <a href="https://drive.google.com/drive/folders/19mIRoMhQ0od_GwzZsJexFWuSYgv3FBPm" class="linha-disciplina"
-        target="_blank">
-        <i class="fa-regular fa-file-word" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Feriados e Recessos 2025</div>
-      </a>
-
-      <a href="https://drive.google.com/drive/folders/1lSeqxNd0t_gwNG3X2lwUiCXDzSdWAmoy" class="linha-disciplina"
-        target="_blank">
-        <i class="fa-regular fa-file-pdf" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Modelo de Advertência</div>
-      </a>
-    </div>
-
-    <div class="titulosecao">Financeiro</div>
-    <div class="conteiner-disciplina">
-
-      <a class="linha-disciplina"
-        href="https://docs.google.com/spreadsheets/d/1UdL5nf2fI0CZfab174AlLIAvYaIZBYJS9xN74YON25A/edit?usp=sharing"
-        target="_blank">
-        <i class="fa-solid fa-rectangle-list" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Lista de compras</div>
-      </a>
-
-      <a href="https://docs.google.com/spreadsheets/d/1sIpNNR8-OwM3wvFjYwrROTtSpL2Jxm2eI4hWECsVXWk/edit#gid=0"
-        class="linha-disciplina" target="_blank">
-        <i class="fa-solid fa-file-invoice-dollar" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Investimentos 2025</div>
-      </a>
-
-      <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/lucas_dalsenter_adventistas_org/IQDEpTGRkt3bQ7YVmFTjfEA3ATdt24dcSSKayisH5h9RqIU?e=pBMtXH"
-        class="linha-disciplina" target="_blank">
-        <i class="fa-solid fa-file-invoice-dollar" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Investimentos 2026</div>
-      </a>
-
-      <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/6f3d462b-94cf-455c-ba22-80600d4572f7/ReportSectionb630c8830928bc6cb4ae?redirectedFromSignup=1&experience=power-bi"
-        class="linha-disciplina" target="_blank">
-        <i class="fa-solid fa-coins" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Saldo Investimentos</div>
-      </a>
-
-      <a href="https://ebolsa-asp.educadventista.org/" id="sharepoint" class="linha-disciplina" target="_blank">
-        <i class="fa-solid fa-comments-dollar" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div class="legenda-links">e-Bolsa</div>
-      </a>
-
-      <a href="https://centraldofuncionario.com.br/" id="sharepoint" class="linha-disciplina" target="_blank">
-        <i class="fa-solid fa-clipboard-check" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div class="legenda-links">Secullum</div>
-      </a>
-
-    </div>
-
-    <div class="titulosecao">Segurança</div>
-    <div class="conteiner-disciplina">
-      <a class="linha-disciplina" href="https://sistemas.usb.org.br/ama/index.php" target="_blank">
-        <img src="img/ama.png" alt="ama" style="width: 28px;">
-        <div>AMA</div>
-      </a>
-
-      <a class="linha-disciplina" href="https://drive.google.com/drive/u/1/folders/1QdwIZQle9uXagRuqjKJH7m_2OJYinYZB"
-        target="_blank">
-        <img src="img/caution.png" alt="" />
-        <div>Protocolo Acidentes</div>
-      </a>
-
-      <a class="linha-disciplina" href="https://10.15.55.20/gohome/#/login" target="_blank">
-        <img src="img/gohome.png" alt="gohome">
-        <div>Go Home</div>
-      </a>
-
-    </div>
-
-    <div class="titulosecao">Reuniões e Atas</div>
-    <div class="conteiner-disciplina">
-      <a class="linha-disciplina"
-        href="https://drive.google.com/drive/folders/1q7KFXSB0PC-_UBt73GUYAhTd6sexn8-D?usp=drive_link" target="_blank">
-        <img src="img/adm/briefcase.png" alt="" />
-        <div>Administrativas</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://drive.google.com/drive/folders/1KCjgnAWQ1Nxi2jFstkUnq2gjCqc0PN8s?usp=drive_link" target="_blank">
-        <img src="img/adm/teacher.png" alt="" />
-        <div>SOP</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://drive.google.com/drive/folders/1_KXj9z5jlZr0g9MCaXYXDZNyuR_IlFDa?usp=drive_link" target="_blank">
-        <img src="img/adm/heart.png" alt="" />
-        <div>SOE</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://drive.google.com/drive/folders/1Gnb48EyJ9P0YkguRMwYkaHB2-KrD762x?usp=sharing" target="_blank">
-        <img src="img/adm/monitor.png" alt="" />
-        <div>Secretaria</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://drive.google.com/drive/folders/1VRDaXQIgiSDciqc50028_4LkAgke4tl3?usp=sharing" target="_blank">
-        <img src="img/adm/walkie-talkie.png" alt="" />
-        <div>Disciplinares</div>
-      </a>
-
-
-    </div>
-
-    <div class="titulosecao">Documentos Legais</div>
-    <div class="conteiner-disciplina">
-      <a class="linha-disciplina" href="https://drive.google.com/drive/u/1/folders/1gd_-5QZgtYKQkN5tDfwqAlcUE4d5pGmz"
-        target="_blank">
-        <img src="img/drive.png" alt="" />
-        <div>Regimento</div>
-      </a>
-
-      <a class="linha-disciplina" href="https://drive.google.com/drive/u/1/folders/1bqXssbFhYfCep12ME1Ro-ox-KV3pjiVf"
-        target="_blank">
-        <img src="img/drive.png" alt="" />
-        <div>PPP</div>
-      </a>
-
-      <a href="https://drive.google.com/file/d/1QDSUKquy3GGOdUZ4PRtXclOe-u4wuuhC/view?usp=sharing" target="_blank"
-        class="linha-disciplina">
-        <img src="img/book.png" alt="" />
-        <div>Guia de Funções</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://drive.google.com/drive/folders/1TuI0bQw27K1cY9A8V2oxadFc9ypfI5YE?usp=sharing" target="_blank">
-        <img src="img/drive.png" alt="" />
-        <div>Matrizes</div>
-      </a>
-
-      <a class="linha-disciplina" href="docs/matrizEM.pdf">
-        <img src="img/pdf.png" alt="" />
-        <div>Matriz EM</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://drive.google.com/drive/folders/1-ktGQ1tMpHke0X8zZ5SK5crOWkmr4JuR?usp=drive_link" target="_blank">
-        <img src="img/drive.png" alt="" />
-        <div>Manual da Família</div>
-      </a>
-
-      <a class="linha-disciplina" href="https://drive.google.com/drive/u/1/folders/1utX73lRg_bGQoQ0MStdLJV2BA6hczUBD"
-        target="_blank">
-        <img src="img/drive.png" alt="" />
-        <div>Código de Ética</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="https://www2.senado.leg.br/bdsf/bitstream/handle/id/534718/eca_1ed.pdf?sequence=1" target="_blank">
-        <img src="img/pdf.png" alt="" />
-        <div>ECA</div>
-      </a>
-
-      <a class="linha-disciplina"
-        href="http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf" target="_blank">
-        <img src="img/pdf.png" alt="" />
-        <div>BNCC</div>
-      </a>
-      <a class="linha-disciplina" href="https://drive.google.com/drive/u/2/folders/1K-TRXJIuEHS_agtY__PT9d57k47tSk16"
-        target="_blank">
-        <img src="img/drive.png" alt="" />
-        <div>Fichas de entrevista</div>
-      </a>
-    </div>
-
-    <div class="titulosecao">Outros</div>
-    <div class="conteiner-disciplina">
-
-      <a href="horariosExpediente.html" class="linha-disciplina" target="_blank">
-        <i class="fa-regular fa-clock" style="font-size: 1.6rem; color:#253B73;"></i>
-        <div>Horários de trabalho</div>
-      </a>
-
-      <a href="https://iatec.nextlegalone.com.br/" class="linha-disciplina" target="_blank">
-        <img src="img/legalone.png" alt="" style="width: 28px;" />
-        <div class="legenda-links">Legal One</div>
-      </a>
-
-
-      <a href="https://docs.google.com/spreadsheets/d/1dquE3KabCQodkCAW-WCSJHsMi7sw2yCQWm8krNwmvVs/edit#gid=0"
-        class="linha-disciplina" target="_blank">
-        <img src="img/google-agenda.png" alt="" />
-        <div>Locações</div>
-      </a>
-
-      <a href="https://hub-br.eaportal.org/" class="linha-disciplina" target="_blank">
-        <img src="img/hub.svg" alt="" />
-        <div>Hub Educacional (site)</div>
-      </a>
-
-      <a href="https://docs.google.com/spreadsheets/d/1pA1EealV7XV2fyebGMhnBLK9O5H6HYWglul81ke_aPA/edit?usp=sharing"
-        class="linha-disciplina" target="_blank">
-        <img src="img/drive.png" alt="" />
-        <div>Número de alunos por auxiliar</div>
-      </a>
-
-      <a href="https://voip.sdasystems.org/" class="linha-disciplina" target="_blank">
-        <img src="img/voip.png" alt="" />
-        <div>Ramais Voip</div>
-      </a>
-
-      <a href="https://docs.google.com/spreadsheets/d/1ce5upAQkB2ruOnbLfAIfoiRvxl6A_bf3Y6TZsQSsyvA/edit?usp=sharing"
-        class="linha-disciplina" target="_blank">
-        <img src="img/google-sheets.png" alt="" />
-        <div>Encaminhamentos Psicóloga</div>
-      </a>
-
-      <a href="docs/protocoloUsoEspacosCAC.pdf" class="linha-disciplina" target="_blank">
-        <img src="img/pdf.png" alt="pdf">
-        <div>Protocolo de Uso dos Espaços</div>
-      </a>
-
-    </div>
-
-    <div class="titulosecao">Disciplinar</div>
-    <div class="conteiner-disciplina">
-      <a class="linha-disciplina"
-        href="https://drive.google.com/drive/folders/1YhnJb1FTtTnDSIvIdorPGaWdS14lYEcy?usp=drive_link" target="_blank">
-        <img src="img/drive.png" alt="" />
-        <div>Temas para Redação</div>
-      </a>
-    </div>
-  </div>
-
-  <!-- PEDAGÓGICO -->
-  <div class="generalConteiner pag" id="pedagogico">
-    <header>
-      <div class="logo">PEDAGÓGICO</div>
-      <nav>
-        <ul>
-          <li><a href="inclusao.html" target="_blank">INCLUSÃO</a></li>
-          <li><a href="https://drive.google.com/drive/folders/1H414AEYw8R3gpE3-7aIQkl0PJ8An8NU7?usp=sharing"
-              target="_blank">SALA DE RECURSOS</a></li>
-          <li><a
-              href="https://docs.google.com/spreadsheets/d/1Oo5hebyTsxp-xi2Xl2Rc7S3C7KlKB8X8ACkxTGdCO38/edit?usp=sharing"
-              target="_blank">PSICÓLOGO</a></li>
-          <!-- <li><a href="#">SOE</a></li> -->
-          <!-- <li><a href="#">SOP</a></li> -->
-
-        </ul>
-      </nav>
-      <div class="user-profile" style="display: none;">
-        <img src="user-icon.png">
-        <span>Tyler King</span>
-        <span>Project Manager</span>
-      </div>
-    </header>
-
-    <div class="sub-header" style="display: none;">
-      <ul>
-        <li>HOME</li>
-        <li>LONDON</li>
-        <li>SINGAPORE</li>
-        <li>SEATTLE</li>
-        <li>BERLIN</li>
-      </ul>
-      <div class="info-home">INFO / HOME</div>
-    </div>
-
-    <main>
-      <section class="top-section">
-        <a href="https://docs.google.com/document/d/1EI0f7t4XYj9mMCYX_SR1I35rOwFl5UUA/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
-          class="card-link" target="_blank">
-          <div class="card orange">
-            <div class="icon"><i class="fa-solid fa-calendar"></i></div>
-            <h3>CALENDÁRIO</h3>
-            <p>2026</p>
-          </div>
-        </a>
-        <!-- <a href="https://example.com/cronogramas" class="card-link" target="_blank">
+      <!-- <a href="https://example.com/cronogramas" class="card-link" target="_blank">
                 <div class="card blue">
                     <div class="icon"><i class="fa-solid fa-hourglass"></i></div>
                     <h3>CRONOGRAMAS</h3>
                     <p>Avaliativos por bimestre</p>
                 </div>
             </a> -->
-        <a href="https://example.com/horarios" class="card-link" target="_blank">
-          <div class="card pink">
-            <div class="icon"><i class="fa-solid fa-clock"></i></div>
-            <h3>HORÁRIOS</h3>
-            <p>Por turma, dia e professor(a)</p>
-          </div>
-        </a>
-        <a href="https://preview--shift-buddy-82.lovable.app/" class="card-link" target="_blank">
-          <div class="card light-blue">
-            <div class="icon"><i class="fa-solid fa-users"></i></div>
-            <h3>TUTORES E AUXILIARES</h3>
-            <p>Versão Web</p>
-          </div>
-        </a>
-      </section>
-
-      <section class="bottom-section">
-        <div class="column">
-          <h2>CAMILA</h2>
-          <input type="text" placeholder="Search in Documents...">
-          <ul>
-            <li>Nível<span>EI ao 1º</span></li>
-            <li>Professores<span>16</span></li>
-            <li>Eventos<span>3</span></li>
-            <li>Projetos<span>5</span></li>
-            <li>Planejamento<span>2025</span></li>
-          </ul>
-          <button class="vermais">VER MAIS</button>
+      <a href="https://example.com/horarios" class="card-link" target="_blank">
+        <div class="card pink">
+          <div class="icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>HORÁRIOS</h3>
+          <p>Por turma, dia e professor(a)</p>
         </div>
-        <div class="column">
-          <h2>JAQUE</h2>
-          <input type="text" placeholder="Search in Documents...">
-          <ul>
-            <li>Nível<span>2º ao 5º</span></li>
-            <li>Professores<span>9</span></li>
-            <li><a href="https://drive.google.com/drive/folders/1BU0bD_CSI0NBYoAtyn0LvA3GjTLNTbue?usp=sharing"
-                target="_blank">Cronogramas</a><span>1º bimestre</span></li>
-            <li>Projetos<span>5</span></li>
-            <li>Planejamento<span>2025</span></li>
-          </ul>
-          <button class="vermais">VER MAIS</button>
+      </a>
+      <a href="https://preview--shift-buddy-82.lovable.app/" class="card-link" target="_blank">
+        <div class="card light-blue">
+          <div class="icon"><i class="fa-solid fa-users"></i></div>
+          <h3>TUTORES E AUXILIARES</h3>
+          <p>Versão Web</p>
         </div>
-        <div class="column">
-          <h2>CAROL</h2>
-          <input type="text" placeholder="Search in Documents...">
-          <ul>
-            <li>Professores<span>9</span></li>
-            <li><a href="https://drive.google.com/drive/folders/1lqCO7uaNmt1yY3CTlj1-04a4ffGlmydJ?usp=sharing"
-                target="_blank">Carômetro</a><span>5</span></li>
-            <li>Eventos<span>3</span></li>
-            <li>Reforços<span>5</span></li>
-            <li>Planejamento<span>2025</span></li>
-          </ul>
-          <button class="vermais">VER MAIS</button>
-        </div>
-      </section>
+      </a>
+    </section>
 
-      <section class="bottom-section">
-        <div class="column">
-          <h2>VALÉRIA</h2>
-          <input type="text" placeholder="Search in Documents...">
-          <ul>
-            <li>Orientadora<span>EI e 1ºEFAI</span></li>
-            <li>Turmas<span>11</span></li>
-            <li>Alunos<span>166</span></li>
-            <li><a
-                href="https://docs.google.com/spreadsheets/d/1RpaMM3XCHoRMCwy8OK3oDyPAz7hWHE3a091AGLdxFDE/edit?usp=sharing"
-                target="_blank">AEE</a><span>Atualizar</span></li>
-            <li>Planejamento<span>2025</span></li>
-          </ul>
-          <button class="vermais">VER MAIS</button>
-        </div>
-        <div class="column">
-          <h2>MALÚ</h2>
-          <input type="text" placeholder="Search in Documents...">
-          <ul>
-            <li>Orientadora<span>2º ao 5º</span></li>
-            <li>Turmas<span>12</span></li>
-            <li>Alunos<span>380</span></li>
-            <li><a
-                href="https://docs.google.com/spreadsheets/d/1YVXF9vxmCr_XE8WUl0C1gUkskkKp-5Ra/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
-                target="_blank">AEE</a><span>Atualizar</span></li>
-            <li><a
-                href="https://docs.google.com/spreadsheets/d/1yIfK8APGqibgcoaYGk9buqzaC7r2_fhFYEzPRSvxUY0/edit?usp=sharing"
-                target="_blank">Planejamento</a><span>2025</span></li>
-          </ul>
-          <button class="vermais">VER MAIS</button>
-        </div>
-        <div class="column">
-          <h2>ANDRESSA</h2>
-          <input type="text" placeholder="Search in Documents...">
-          <ul>
-            <li>Orientadora<span>6º ao 8º</span></li>
-            <li>Turmas<span>9</span></li>
-            <li>Alunos<span>297</span></li>
-            <li><a
-                href="https://mailadventistas-my.sharepoint.com/:w:/g/personal/douglas_leal_adm_educadventista_org/IQCsJ2SZgYN0Qq__inPworNkAUvPGrHrYMLX2dqnq1OKS4g?e=TpoinE"
-                target="_blank">AEE</a><span>Atualizar</span></li>
-            <li>Planejamento<span>2025</span></li>
-          </ul>
-          <button class="vermais">VER MAIS</button>
-        </div>
-        <div class="column">
-          <h2>RENATA</h2>
-          <input type="text" placeholder="Search in Documents...">
-          <ul>
-            <li>Orientadora<span>9º ao EM</span></li>
-            <li>Turmas<span>9</span></li>
-            <li>Alunos<span>319</span></li>
-            <li>AEE<span>Atualizar</span></li>
-            <li>Planejamento<span>2025</span></li>
-          </ul>
-          <button class="vermais">VER MAIS</button>
-        </div>
+    <section class="bottom-section">
+      <div class="column">
+        <h2>CAMILA</h2>
+        <input type="text" placeholder="Search in Documents...">
+        <ul>
+          <li>Nível<span>EI ao 1º</span></li>
+          <li>Professores<span>16</span></li>
+          <li>Eventos<span>3</span></li>
+          <li>Projetos<span>5</span></li>
+          <li>Planejamento<span>2025</span></li>
+        </ul>
+        <button class="vermais">VER MAIS</button>
+      </div>
+      <div class="column">
+        <h2>JAQUE</h2>
+        <input type="text" placeholder="Search in Documents...">
+        <ul>
+          <li>Nível<span>2º ao 5º</span></li>
+          <li>Professores<span>9</span></li>
+          <li><a href="https://drive.google.com/drive/folders/1BU0bD_CSI0NBYoAtyn0LvA3GjTLNTbue?usp=sharing"
+              target="_blank">Cronogramas</a><span>1º bimestre</span></li>
+          <li>Projetos<span>5</span></li>
+          <li>Planejamento<span>2025</span></li>
+        </ul>
+        <button class="vermais">VER MAIS</button>
+      </div>
+      <div class="column">
+        <h2>CAROL</h2>
+        <input type="text" placeholder="Search in Documents...">
+        <ul>
+          <li>Professores<span>9</span></li>
+          <li><a href="https://drive.google.com/drive/folders/1lqCO7uaNmt1yY3CTlj1-04a4ffGlmydJ?usp=sharing"
+              target="_blank">Carômetro</a><span>5</span></li>
+          <li>Eventos<span>3</span></li>
+          <li>Reforços<span>5</span></li>
+          <li>Planejamento<span>2025</span></li>
+        </ul>
+        <button class="vermais">VER MAIS</button>
+      </div>
+    </section>
 
-      </section>
-
-    </main>
-
-
-    <footer>
-      <a href="https://docs.google.com/spreadsheets/d/17n1NOReBVeaBbGLh22YCFSHxAeueOV1Y/edit?usp=drive_link&ouid=112700755277277045741&rtpof=true&sd=true"
-        class="footer-pedagogico" target="_blank">Mentoria</a>
-      <a href="https://drive.google.com/drive/folders/1TuI0bQw27K1cY9A8V2oxadFc9ypfI5YE?usp=sharing"
-        class="footer-pedagogico" target="_blank">Matrízes</a>
-      <a href="https://apps.powerapps.com/play/e/default-01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07/a/67c2f36c-1c44-4ff2-b25a-7267958fbdb9?tenantId=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&source=sharebutton&sourcetime=1745499649569"
-        class="footer-pedagogico" target="_blank">Feedbacks</a>
-      <a href="https://docs.google.com/spreadsheets/d/11wQ1xrthGVpHm-CJM8AUOGh-CD-IS4A5/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
-        class="footer-pedagogico" target="_blank">Profoco</a>
-      <a href="https://docs.google.com/document/d/12wY9lLagIE9cJCelTZFCN28ZmUtz_cDH/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
-        class="footer-pedagogico" target="_blank">Manual da Família (editável)</a>
-    </footer>
-
-  </div>
-
-  <!-- ESPIRITUAL -->
-  <div class="conteinergeral pag" id="espiritual">
-
-    <main>
-
-      <div class="devocionais">
-
-        <a href="docs/pastoral/planoevangelistico2026.pdf" target="_blank">
-          <span class="iconbox"><i id="fish" class="fa-solid fa-fish"></i></span>
-          <span>Plano Evangelismo 2026</span></a>
-        </a>
-
-        <a href="cultos.html" target="_blank">
-          <span class="iconbox"><i id="reavivadosicon" class="fa-solid fa-hands-praying"></i></span>
-          <span>Escala de cultos</span></a>
-        </a>
-
-        <a href="docs/pastoral/reunioesAsp.pdf" target="_blank">
-          <span class="iconbox"><i class="fa-solid fa-list-ul"></i></span>
-          <span>Reuniões ASP</span></a>
-        </a>
-
-        <a href="https://linktr.ee/PastoralEscolarASP" target="_blank">
-          <span class="iconbox"><i class="fa-solid fa-link"></i></span>
-          <span>Linktree Pastoral</span></a>
-        </a>
-
-        <a href="https://drive.google.com/drive/u/2/folders/1KFtvZZkhx0ba4HGeurRMtJSU3drAglUS" id="btAbrirLinks"
-          target="_blank">
-          <span class="iconbox"><i id="todosicon" class="fa-solid fa-location-dot"></i></span>
-          <span>Guia Pastoral USB</span>
-        </a>
-
-        <a href="docs/pastoral/classeBiblica2026.pdf" id="btAbrirLinks" target="_blank">
-          <span class="iconbox"><i id="todosicon" class="fa-solid fa-book-bible"></i></span>
-          <span>Classes Bíblicas 4º e 5º ano</span>
-        </a>
-
-        <a href="https://mais.cpb.com.br/meditacoes-diarias/" target="_blank">
-          <span class="iconbox"><i class="fa-sharp fa-solid fa-book-open-reader"></i></span>
-          <span>Meditação CPB</span></a>
-        </a>
-
-        <a href="culturageral6M.html" target="_blank">
-          <span class="iconbox"><i id="culturageralicon" class="fa-solid fa-circle-play"></i></span>
-          <span>Cultura Geral</span></a>
-        </a>
-
-        <a href="docs/pastoral/permaneceremjesus.pdf" target="_blank">
-          <span class="iconbox"><i class="fa-solid fa-file-pdf"></i></span>
-          <span>Livro Permanecer Em Jesus</span></a>
-        </a>
-
-        <a href="docs/achavedavirada.pdf" target="_blank">
-          <span class="iconbox"><i class="fa-solid fa-file-pdf"></i></span>
-          <span>Livro A Chave da Virada</span></a>
-        </a>
-
-
-      </div> <!-- Fim devocionais div -->
-
-    </main>
-
-  </div>
-
-  <!-- MATRÍCULAS -->
-  <main class="main-matriculas pag" id="matriculas">
-
-    <div class="conteiner_matriculas">
-
-      <section class="sec-matriculas">
-        <p>Novos</p>
-        <div class="linksprincipais">
-          <a href="#" id="novoatendimento" onclick="window.open('https://dls76.github.io/matriculasDbox/')">Novo
-            Atendimento</a>
-          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=183482623"
-            target="_blank">Vagas</a>
-          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=1846726838"
-            target="_blank">Reservas novas</a>
-          <a href="https://drive.google.com/drive/folders/1jkVEfZj0l30XuI4eUuiTvyoTLUqUc9cy?usp=sharing"
-            target="_blank">Ficha Declarativa</a>
-          <a href="https://docs.google.com/document/d/10DbsRZyr2du3MK_M2W08a88q3Bq9dh6S_sw0mhQG9Y8/edit?usp=sharing"
-            target="_blank">Roteiros de Entrevista</a>
-          <a href="https://drive.google.com/drive/folders/1D27eKbf5RAKKuk7wGapT012hCls4AFJ2?usp=sharing"
-            target="_blank">Propostas Financeiras</a>
-          <a href="https://docs.google.com/spreadsheets/d/1CQEajgb4QxCqUU3Qoj9oW-outQ-zF4A2IU7Gmi8TIyo/edit?usp=drive_link"
-            target="_blank">Escolas Parceiras</a>
-          <a href="docs/matriculas/parcerias_impressao.pdf" target="_blank">Imprimir Contato Parcerias<i
-              class="fa fa-print" id="print_parcerias"></i></a>
-          <a href="https://catalogontstore.asp.org.br" target="_blank">Catálogo</a>
-          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit?gid=1734302353#gid=1734302353"
-            target="_blank">Descontos</a>
-          <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQB2k05GL_1ARp8kqCIXCNrbAc2EPRxpuc4HYm2ayHROo9k?e=T9bl0a"
-            target="_blank">Interessados por Série</a>
-          <a href="docs/matriculas/docsparaMatricula.pdf" target="_blank">Documentos para matrícula</a>
-          <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQA5J3l6TNjkQqOCArICIOQlAQFcm7dmrhTGbmfFBWL45hk?e=5Rb0pI"
-            target="_blank">Interessados Adv</a>
-
-        </div>
-      </section>
-
-      <section class="sec-matriculas">
-        <p>Veteranos</p>
-        <div class="linksprincipais">
-          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=183482623"
-            target="_blank">Vagas</a>
-          <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=0"
-            target="_blank">Atualizar</a>
-          <a href="https://docs.google.com/spreadsheets/d/1aghzOYfhlt4g9dsPBp4w8G3hVJqs8-PrrVE9KeoB-1M/edit?gid=0#gid=0"
-            target="_blank">Fidelização</a>
-          <a href="veteranos.html" target="_blank">Atendimento</a>
-          <a href="https://docs.google.com/spreadsheets/d/1lVdIcJLkuHzod0RvSruXje_LvgVYHvStCPmt6TXTlLk/edit?gid=0#gid=0"
-            target="_blank">Migração 62</a>
-        </div>
-      </section>
-
-      <section class="sec-matriculas">
-        <p>Relatórios Power BI</p>
-        <div class="linksprincipais">
-          <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/ce8c1804-01c9-4c89-a084-3d8913c40bb8/870332ce8437ac7e07ff?language=pt-BR&experience=power-bi"
-            target="_blank">Comparativo ano anterior</a>
-          <a href="https://app.powerbi.com/Redirect?action=OpenReport&appId=ba9d2c5f-5784-4ae0-bd7f-e95646d75b33&reportObjectId=11424880-cb12-4450-9518-d50f728b4a20&ctid=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&reportPage=ReportSection67140aaa99fc6fa1a2f8&pbi_source=appShareLink&portalSessionId=c8675b70-f1c3-4100-9a33-8444fcf0f07b"
-            target="_blank">Ranking Escolas</a>
-          <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/ce8c1804-01c9-4c89-a084-3d8913c40bb8/ReportSectionf59fc590587144826265?language=pt-BR&experience=power-bi"
-            target="_blank">Fidelização</a>
-          <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/cc036242-e5b3-43ce-bafd-a113db3e1194/ReportSection8186a78903c18a4eb2ff?redirectedFromSignup=1&experience=power-bi"
-            target="_blank">Dashboard ACRM</a>
-          <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/cc036242-e5b3-43ce-bafd-a113db3e1194/ReportSection0d8debd7d8d7818acdbc?redirectedFromSignup=1&experience=power-bi"
-            target="_blank">Verticais (leads por nível)</a>
-          <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/338d7393-2455-4cbc-80bb-869af34d0c42/ReportSectionfc65dc858bf229fcf2c0?redirectedFromSignup=1&experience=power-bi"
-            target="_blank">Elegíveis</a>
-        </div>
-      </section>
-
-      <section class="sec-matriculas">
-        <p>Documentos</p>
-        <div class="linksprincipais">
-          <a href="https://docs.google.com/spreadsheets/d/1rFd5FCQ0dkflM5bS9cBioLi3X4J2jmW6ScQSMyzf-l0/edit?usp=sharing"
-            target="_blank">Alunos e Turmas 2026</a>
-          <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/ET7mIqzzzpVIkTB735H5ny4BijWbXLDL3AXH9M4uAsW1dw?e=9SLuSh"
-            target="_blank">Mensalidades 2026</a>
-
-          <a href="https://drive.google.com/file/d/1D1eijVodhOgpunBonttyJFyHxoZcUIxb/view?usp=drive_link"
-            target="_blank">Manual 2026</a>
-
-          <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQCXh2RUHxooSLkAig7uKQ8hARNlyDvQxYbskOoX0s-ivXA?e=BsfcMw"
-            target="_blank">Avaliação das Matrículas</a>
-        </div>
-      </section>
-
-      <section class="sec-matriculas">
-        <p>Publicidade</p>
-        <div class="linksprincipais">
-          <a href="https://indique-asp.educacaoadventistabrasil.com.br/" target="_blank">Indique Um Aluno</a>
-          <a href="https://loja.asp.org.br/" target="_blank">Loja Novo Tempo Store</a>
-        </div>
-
-      </section>
-
-      <section class="sec-matriculas">
-        <p>Bolsas</p>
-        <div class="linksprincipais">
-          <a href="https://docs.google.com/spreadsheets/d/189WJuj1tfYzXaScvZR6Z8svd_KMpMysQO0U549po7f0/edit?usp=sharing"
-            target="_blank" id="btBolsistas">Controle Bolsistas</a>
-          <a href="https://drive.google.com/drive/folders/1a1JCEpK4v6zbFM_7aCsKrLPfv5tCg4H-?usp=sharing"
-            target="_blank">Fichas TCO e TCI</a>
-          <a href="https://drive.google.com/drive/folders/1PtIh5AYV0z5Zq7t4-iQURp0JjetI0QII" target="_blank">Arquivos da
-            reunião de pais</a>
-          <a href="https://forms.office.com/r/f40BXmesy4" target="_blank">Formulário Fundo Patrocinador</a>
-
-          <a href="https://docs.google.com/spreadsheets/d/1DbLDGfTA7KNFQ2JlO_OUpy7ngml7Um3xBhmFB-ydtbA/edit?usp=sharing"
-            target="_blank" id="bolsasindeferidas">Bolsas Indeferidas</a>
-
-
-
-        </div>
-
-        <style>
-          #bolsasindeferidas {
-            background-color: #253B73;
-            color: white;
-          }
-
-          #bolsasindeferidas:hover {
-            background-color: #5e89ff;
-            color: white;
-          }
-        </style>
-
-      </section>
-
-    </div>
-    <!-- 
-    <div class="sistemas">
-
-      <div>
-        <a href="https://acrm.sdasystems.org/" target="_blank">
-          <img src="img/acrm.png" id="acrmimg">
-          <div>ACRM</div>
-        </a>
+    <section class="bottom-section">
+      <div class="column">
+        <h2>VALÉRIA</h2>
+        <input type="text" placeholder="Search in Documents...">
+        <ul>
+          <li>Orientadora<span>EI e 1ºEFAI</span></li>
+          <li>Turmas<span>11</span></li>
+          <li>Alunos<span>166</span></li>
+          <li><a
+              href="https://docs.google.com/spreadsheets/d/1RpaMM3XCHoRMCwy8OK3oDyPAz7hWHE3a091AGLdxFDE/edit?usp=sharing"
+              target="_blank">AEE</a><span>Atualizar</span></li>
+          <li>Planejamento<span>2025</span></li>
+        </ul>
+        <button class="vermais">VER MAIS</button>
+      </div>
+      <div class="column">
+        <h2>MALÚ</h2>
+        <input type="text" placeholder="Search in Documents...">
+        <ul>
+          <li>Orientadora<span>2º ao 5º</span></li>
+          <li>Turmas<span>12</span></li>
+          <li>Alunos<span>380</span></li>
+          <li><a
+              href="https://docs.google.com/spreadsheets/d/1YVXF9vxmCr_XE8WUl0C1gUkskkKp-5Ra/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
+              target="_blank">AEE</a><span>Atualizar</span></li>
+          <li><a
+              href="https://docs.google.com/spreadsheets/d/1yIfK8APGqibgcoaYGk9buqzaC7r2_fhFYEzPRSvxUY0/edit?usp=sharing"
+              target="_blank">Planejamento</a><span>2025</span></li>
+        </ul>
+        <button class="vermais">VER MAIS</button>
+      </div>
+      <div class="column">
+        <h2>ANDRESSA</h2>
+        <input type="text" placeholder="Search in Documents...">
+        <ul>
+          <li>Orientadora<span>6º ao 8º</span></li>
+          <li>Turmas<span>9</span></li>
+          <li>Alunos<span>297</span></li>
+          <li><a
+              href="https://mailadventistas-my.sharepoint.com/:w:/g/personal/douglas_leal_adm_educadventista_org/IQCsJ2SZgYN0Qq__inPworNkAUvPGrHrYMLX2dqnq1OKS4g?e=TpoinE"
+              target="_blank">AEE</a><span>Atualizar</span></li>
+          <li>Planejamento<span>2025</span></li>
+        </ul>
+        <button class="vermais">VER MAIS</button>
+      </div>
+      <div class="column">
+        <h2>RENATA</h2>
+        <input type="text" placeholder="Search in Documents...">
+        <ul>
+          <li>Orientadora<span>9º ao EM</span></li>
+          <li>Turmas<span>9</span></li>
+          <li>Alunos<span>319</span></li>
+          <li>AEE<span>Atualizar</span></li>
+          <li>Planejamento<span>2025</span></li>
+        </ul>
+        <button class="vermais">VER MAIS</button>
       </div>
 
-      <div>
-        <a href="https://indique-asp.educacaoadventistabrasil.com.br/admin/login" target="_blank">
-          <img src="img/faviconVela.png" id="velaimg">
-          <div>Indicações</div>
-        </a>
-      </div>
-
-      <div>
-        <a href="https://ebolsa-asp.educadventista.org/" target="_blank">
-          <img src="img/sad.png" id="sadimg">
-          <div>Bolsas</div>
-        </a>
-      </div>
-
-      <div>
-        <a href="https://loja.asp.org.br/" target="_blank" id="ntlogo">
-          <img src="img/novotempostore.png" id="novotempologo">
-          <div>Novo Tempo Store</div>
-        </a>
-        <style>
-          .sistemas a#ntlogo {
-            width: 250px;
-          }
-
-          #novotempologo {
-            width: 80%;
-          }
-        </style>
-
-      </div>
-
-    </div> -->
+    </section>
 
   </main>
 
-  <!-- ========================================================================================================================
+
+  <footer>
+    <a href="https://docs.google.com/spreadsheets/d/17n1NOReBVeaBbGLh22YCFSHxAeueOV1Y/edit?usp=drive_link&ouid=112700755277277045741&rtpof=true&sd=true"
+      class="footer-pedagogico" target="_blank">Mentoria</a>
+    <a href="https://drive.google.com/drive/folders/1TuI0bQw27K1cY9A8V2oxadFc9ypfI5YE?usp=sharing"
+      class="footer-pedagogico" target="_blank">Matrízes</a>
+    <a href="https://apps.powerapps.com/play/e/default-01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07/a/67c2f36c-1c44-4ff2-b25a-7267958fbdb9?tenantId=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&source=sharebutton&sourcetime=1745499649569"
+      class="footer-pedagogico" target="_blank">Feedbacks</a>
+    <a href="https://docs.google.com/spreadsheets/d/11wQ1xrthGVpHm-CJM8AUOGh-CD-IS4A5/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
+      class="footer-pedagogico" target="_blank">Profoco</a>
+    <a href="https://docs.google.com/document/d/12wY9lLagIE9cJCelTZFCN28ZmUtz_cDH/edit?usp=sharing&ouid=112700755277277045741&rtpof=true&sd=true"
+      class="footer-pedagogico" target="_blank">Manual da Família (editável)</a>
+  </footer>
+
+</div>
+
+<!-- ESPIRITUAL -->
+<div class="conteinergeral pag" id="espiritual">
+
+  <main>
+
+    <div class="devocionais">
+
+      <a href="docs/pastoral/planoevangelistico2026.pdf" target="_blank">
+        <span class="iconbox"><i id="fish" class="fa-solid fa-fish"></i></span>
+        <span>Plano Evangelismo 2026</span></a>
+      </a>
+
+      <a href="cultos.html" target="_blank">
+        <span class="iconbox"><i id="reavivadosicon" class="fa-solid fa-hands-praying"></i></span>
+        <span>Escala de cultos</span></a>
+      </a>
+
+      <a href="docs/pastoral/reunioesAsp.pdf" target="_blank">
+        <span class="iconbox"><i class="fa-solid fa-list-ul"></i></span>
+        <span>Reuniões ASP</span></a>
+      </a>
+
+      <a href="https://linktr.ee/PastoralEscolarASP" target="_blank">
+        <span class="iconbox"><i class="fa-solid fa-link"></i></span>
+        <span>Linktree Pastoral</span></a>
+      </a>
+
+      <a href="https://drive.google.com/drive/u/2/folders/1KFtvZZkhx0ba4HGeurRMtJSU3drAglUS" id="btAbrirLinks"
+        target="_blank">
+        <span class="iconbox"><i id="todosicon" class="fa-solid fa-location-dot"></i></span>
+        <span>Guia Pastoral USB</span>
+      </a>
+
+      <a href="docs/pastoral/classeBiblica2026.pdf" id="btAbrirLinks" target="_blank">
+        <span class="iconbox"><i id="todosicon" class="fa-solid fa-book-bible"></i></span>
+        <span>Classes Bíblicas 4º e 5º ano</span>
+      </a>
+
+      <a href="https://mais.cpb.com.br/meditacoes-diarias/" target="_blank">
+        <span class="iconbox"><i class="fa-sharp fa-solid fa-book-open-reader"></i></span>
+        <span>Meditação CPB</span></a>
+      </a>
+
+      <a href="culturageral6M.html" target="_blank">
+        <span class="iconbox"><i id="culturageralicon" class="fa-solid fa-circle-play"></i></span>
+        <span>Cultura Geral</span></a>
+      </a>
+
+      <a href="docs/pastoral/permaneceremjesus.pdf" target="_blank">
+        <span class="iconbox"><i class="fa-solid fa-file-pdf"></i></span>
+        <span>Livro Permanecer Em Jesus</span></a>
+      </a>
+
+      <a href="docs/achavedavirada.pdf" target="_blank">
+        <span class="iconbox"><i class="fa-solid fa-file-pdf"></i></span>
+        <span>Livro A Chave da Virada</span></a>
+      </a>
+
+
+    </div> <!-- Fim devocionais div -->
+
+  </main>
+
+</div>
+
+<!-- MATRÍCULAS -->
+<main class="main-matriculas pag" id="matriculas">
+
+  <div class="conteiner_matriculas">
+
+    <section class="sec-matriculas">
+      <p>Novos</p>
+      <div class="linksprincipais">
+        <a href="#" id="novoatendimento" onclick="window.open('https://dls76.github.io/matriculasDbox/')">Novo
+          Atendimento</a>
+        <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=183482623"
+          target="_blank">Vagas</a>
+        <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=1846726838"
+          target="_blank">Reservas novas</a>
+        <a href="https://drive.google.com/drive/folders/1jkVEfZj0l30XuI4eUuiTvyoTLUqUc9cy?usp=sharing"
+          target="_blank">Ficha Declarativa</a>
+        <a href="https://docs.google.com/document/d/10DbsRZyr2du3MK_M2W08a88q3Bq9dh6S_sw0mhQG9Y8/edit?usp=sharing"
+          target="_blank">Roteiros de Entrevista</a>
+        <a href="https://drive.google.com/drive/folders/1D27eKbf5RAKKuk7wGapT012hCls4AFJ2?usp=sharing"
+          target="_blank">Propostas Financeiras</a>
+        <a href="https://docs.google.com/spreadsheets/d/1CQEajgb4QxCqUU3Qoj9oW-outQ-zF4A2IU7Gmi8TIyo/edit?usp=drive_link"
+          target="_blank">Escolas Parceiras</a>
+        <a href="docs/matriculas/parcerias_impressao.pdf" target="_blank">Imprimir Contato Parcerias<i
+            class="fa fa-print" id="print_parcerias"></i></a>
+        <a href="https://catalogontstore.asp.org.br" target="_blank">Catálogo</a>
+        <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit?gid=1734302353#gid=1734302353"
+          target="_blank">Descontos</a>
+        <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQB2k05GL_1ARp8kqCIXCNrbAc2EPRxpuc4HYm2ayHROo9k?e=T9bl0a"
+          target="_blank">Interessados por Série</a>
+        <a href="docs/matriculas/docsparaMatricula.pdf" target="_blank">Documentos para matrícula</a>
+        <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQA5J3l6TNjkQqOCArICIOQlAQFcm7dmrhTGbmfFBWL45hk?e=5Rb0pI"
+          target="_blank">Interessados Adv</a>
+
+      </div>
+    </section>
+
+    <section class="sec-matriculas">
+      <p>Veteranos</p>
+      <div class="linksprincipais">
+        <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=183482623"
+          target="_blank">Vagas</a>
+        <a href="https://docs.google.com/spreadsheets/d/1HR_bXTwCDbE5OUj2aRj7DiL0zffWU6xiGb_ICRYH0sM/edit#gid=0"
+          target="_blank">Atualizar</a>
+        <a href="https://docs.google.com/spreadsheets/d/1aghzOYfhlt4g9dsPBp4w8G3hVJqs8-PrrVE9KeoB-1M/edit?gid=0#gid=0"
+          target="_blank">Fidelização</a>
+        <a href="veteranos.html" target="_blank">Atendimento</a>
+        <a href="https://docs.google.com/spreadsheets/d/1lVdIcJLkuHzod0RvSruXje_LvgVYHvStCPmt6TXTlLk/edit?gid=0#gid=0"
+          target="_blank">Migração 62</a>
+      </div>
+    </section>
+
+    <section class="sec-matriculas">
+      <p>Relatórios Power BI</p>
+      <div class="linksprincipais">
+        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/ce8c1804-01c9-4c89-a084-3d8913c40bb8/870332ce8437ac7e07ff?language=pt-BR&experience=power-bi"
+          target="_blank">Comparativo ano anterior</a>
+        <a href="https://app.powerbi.com/Redirect?action=OpenReport&appId=ba9d2c5f-5784-4ae0-bd7f-e95646d75b33&reportObjectId=11424880-cb12-4450-9518-d50f728b4a20&ctid=01ee7ae0-42ba-41a5-bb7b-8d4af8db7f07&reportPage=ReportSection67140aaa99fc6fa1a2f8&pbi_source=appShareLink&portalSessionId=c8675b70-f1c3-4100-9a33-8444fcf0f07b"
+          target="_blank">Ranking Escolas</a>
+        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/ce8c1804-01c9-4c89-a084-3d8913c40bb8/ReportSectionf59fc590587144826265?language=pt-BR&experience=power-bi"
+          target="_blank">Fidelização</a>
+        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/cc036242-e5b3-43ce-bafd-a113db3e1194/ReportSection8186a78903c18a4eb2ff?redirectedFromSignup=1&experience=power-bi"
+          target="_blank">Dashboard ACRM</a>
+        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/cc036242-e5b3-43ce-bafd-a113db3e1194/ReportSection0d8debd7d8d7818acdbc?redirectedFromSignup=1&experience=power-bi"
+          target="_blank">Verticais (leads por nível)</a>
+        <a href="https://app.powerbi.com/groups/me/apps/ba9d2c5f-5784-4ae0-bd7f-e95646d75b33/reports/338d7393-2455-4cbc-80bb-869af34d0c42/ReportSectionfc65dc858bf229fcf2c0?redirectedFromSignup=1&experience=power-bi"
+          target="_blank">Elegíveis</a>
+      </div>
+    </section>
+
+    <section class="sec-matriculas">
+      <p>Documentos</p>
+      <div class="linksprincipais">
+        <a href="https://docs.google.com/spreadsheets/d/1rFd5FCQ0dkflM5bS9cBioLi3X4J2jmW6ScQSMyzf-l0/edit?usp=sharing"
+          target="_blank">Alunos e Turmas 2026</a>
+        <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_usb_educadventista_org1/ET7mIqzzzpVIkTB735H5ny4BijWbXLDL3AXH9M4uAsW1dw?e=9SLuSh"
+          target="_blank">Mensalidades 2026</a>
+
+        <a href="https://drive.google.com/file/d/1D1eijVodhOgpunBonttyJFyHxoZcUIxb/view?usp=drive_link"
+          target="_blank">Manual 2026</a>
+
+        <a href="https://mailadventistas-my.sharepoint.com/:x:/g/personal/douglas_leal_adm_educadventista_org/IQCXh2RUHxooSLkAig7uKQ8hARNlyDvQxYbskOoX0s-ivXA?e=BsfcMw"
+          target="_blank">Avaliação das Matrículas</a>
+      </div>
+    </section>
+
+    <section class="sec-matriculas">
+      <p>Publicidade</p>
+      <div class="linksprincipais">
+        <a href="https://indique-asp.educacaoadventistabrasil.com.br/" target="_blank">Indique Um Aluno</a>
+        <a href="https://loja.asp.org.br/" target="_blank">Loja Novo Tempo Store</a>
+      </div>
+
+    </section>
+
+    <section class="sec-matriculas">
+      <p>Bolsas</p>
+      <div class="linksprincipais">
+        <a href="https://docs.google.com/spreadsheets/d/189WJuj1tfYzXaScvZR6Z8svd_KMpMysQO0U549po7f0/edit?usp=sharing"
+          target="_blank" id="btBolsistas">Controle Bolsistas</a>
+        <a href="https://drive.google.com/drive/folders/1a1JCEpK4v6zbFM_7aCsKrLPfv5tCg4H-?usp=sharing"
+          target="_blank">Fichas TCO e TCI</a>
+        <a href="https://drive.google.com/drive/folders/1PtIh5AYV0z5Zq7t4-iQURp0JjetI0QII" target="_blank">Arquivos da
+          reunião de pais</a>
+        <a href="https://forms.office.com/r/f40BXmesy4" target="_blank">Formulário Fundo Patrocinador</a>
+
+        <a href="https://docs.google.com/spreadsheets/d/1DbLDGfTA7KNFQ2JlO_OUpy7ngml7Um3xBhmFB-ydtbA/edit?usp=sharing"
+          target="_blank" id="bolsasindeferidas">Bolsas Indeferidas</a>
+
+
+
+      </div>
+
+
+    </section>
+
+  </div>
+ 
+</main>
+
+<!-- ========================================================================================================================
 ========================================================================================================================
 ========================================================================================================================
 ========================================================================================================================
@@ -1598,505 +1295,365 @@
 ========================================================================================================================
 ======================================================================================================================== -->
 
-  <!-- Fones Emergência -->
-  <div id="modal-container">
-    <div id="emergency-modal">
-      <button id="close-modal-btn">Fechar</button>
-      <h1>Fones de Urgência</h1>
-      <ul class="contact-list">
-        <li><span class="emergency-number">190</span> - Polícia</li>
-        <li><span class="emergency-number">192</span> - SAMU</li>
-        <li><span class="emergency-number">193</span> - Bombeiros</li>
-        <li><span class="emergency-number">3267-7888</span> - Conselho Tutelar Cajurú (8h-12h e 13h-18h)</li>
-        <li><span class="emergency-number">3363-7681</span> - Conselho Tutelar Matriz (8h às 18h)</li>
-        <li><span class="emergency-number">9.9861-0767</span> - Sekron</li>
-        <li><span class="emergency-number">3361-2326</span> - Vigilância Sanitária</li>
-        <li><span class="emergency-number">9.9682-5103</span> - Assessoria de Imprensa (Jordana)</li>
-        <li><span class="emergency-number">9.9681-9803</span> - Dr. Rodrigo Hahn (Advogado)</li>
-      </ul>
-    </div>
+<!-- Fones Emergência -->
+<div id="modal-container">
+  <div id="emergency-modal">
+    <button id="close-modal-btn">Fechar</button>
+    <h1>Fones de Urgência</h1>
+    <ul class="contact-list">
+      <li><span class="emergency-number">190</span> - Polícia</li>
+      <li><span class="emergency-number">192</span> - SAMU</li>
+      <li><span class="emergency-number">193</span> - Bombeiros</li>
+      <li><span class="emergency-number">3267-7888</span> - Conselho Tutelar Cajurú (8h-12h e 13h-18h)</li>
+      <li><span class="emergency-number">3363-7681</span> - Conselho Tutelar Matriz (8h às 18h)</li>
+      <li><span class="emergency-number">9.9861-0767</span> - Sekron</li>
+      <li><span class="emergency-number">3361-2326</span> - Vigilância Sanitária</li>
+      <li><span class="emergency-number">9.9682-5103</span> - Assessoria de Imprensa (Jordana)</li>
+      <li><span class="emergency-number">(19)9.8441-5568</span> - Dra. Carlise (Advogada ASP)</li>
+    </ul>
   </div>
+</div>
 
-  <!-- Ramais -->
-  <div class="modal-overlay" id="modalRamais">
-    <div class="modal-content" id="modalContent">
-      <button class="close-btn" id="fecharModal">&times;</button>
-      <h2>Ramais Telefônicos</h2>
-      <ul class="ramais-list" id="ulramais"></ul>
-    </div>
+<!-- Ramais -->
+<div class="modal-overlay" id="modalRamais">
+  <div class="modal-content" id="modalContent">
+    <button class="close-btn" id="fecharModal">&times;</button>
+    <h2>Ramais Telefônicos</h2>
+    <ul class="ramais-list" id="ulramais"></ul>
   </div>
+</div>
 
-  <!-- Importações JS -->
+<!-- Importações JS -->
 
-  <!-- Hino Nacional -->
-  <script type="module">
-    import { responsaveisHino } from './hinoData.js';
+<!-- Hino Nacional -->
+<script type="module">
+  import { responsaveisHino } from './hinoData.js';
 
-    const container = document.getElementById("hinoResponsavel");
+  const container = document.getElementById("hinoResponsavel");
 
-    if (container && responsaveisHino && responsaveisHino.length > 0) {
-      // Obtém a data atual (à zero hora)
-      const hoje = new Date();
-      hoje.setHours(0, 0, 0, 0);
+  if (container && responsaveisHino && responsaveisHino.length > 0) {
+    // Obtém a data atual (à zero hora)
+    const hoje = new Date();
+    hoje.setHours(0, 0, 0, 0);
 
-      // Verifica se hoje é sábado (6) ou depois
-      // Se for sábado, considera que a sexta já passou
-      const diaSemana = hoje.getDay();
-      let dataReferencia = new Date(hoje);
+    // Verifica se hoje é sábado (6) ou depois
+    // Se for sábado, considera que a sexta já passou
+    const diaSemana = hoje.getDay();
+    let dataReferencia = new Date(hoje);
 
-      // Se for sábado (6), avança para o próximo dia para buscar a próxima sexta
-      if (diaSemana === 6) {
-        dataReferencia.setDate(dataReferencia.getDate() + 1);
+    // Se for sábado (6), avança para o próximo dia para buscar a próxima sexta
+    if (diaSemana === 6) {
+      dataReferencia.setDate(dataReferencia.getDate() + 1);
+    }
+
+    // Função para converter string dd/mm em Date do ano atual
+    function parseDataEscala(dataStr) {
+      const [dia, mes] = dataStr.split('/').map(Number);
+      return new Date(hoje.getFullYear(), mes - 1, dia);
+    }
+
+    // Encontra a próxima escala (primeira data >= dataReferencia)
+    const proximaEscala = responsaveisHino.find(escala => {
+      const dataEscala = parseDataEscala(escala.data);
+      return dataEscala >= dataReferencia;
+    });
+
+    if (proximaEscala) {
+      container.innerHTML = `${proximaEscala.data} - ${proximaEscala.ambiente1} e ${proximaEscala.ambiente2}`;
+    } else {
+      container.innerHTML = 'Nenhuma escala futura disponível';
+    }
+  } else {
+    container.innerHTML = 'Nenhuma escala disponível';
+  }
+</script>
+
+<!-- Cultos -->
+<script type="module">
+  import { nomes, horarios, substituicoes, getDataAtual, escalaQuintaPersonalizada } from './cultosModule.js';
+
+  const dataAtual = getDataAtual();
+  const diaSemana = dataAtual.getDay();
+  const dataHoje = dataAtual.toISOString().split('T')[0]; // Formata como YYYY-MM-DD
+
+  let responsavelCulto = '';
+
+  if (diaSemana === 0) {
+    responsavelCulto = 'Hoje é domingo';
+  } else if (diaSemana === 6) {
+    responsavelCulto = 'Feliz Sábado!';
+  } else if (diaSemana === 4 && escalaQuintaPersonalizada[dataHoje]) {
+    //Quinta-feira com escala personalizada
+    responsavelCulto = horarios.map((hora, index) => `${hora}h ${responsaveis[index]}`).join(' | ');
+  } else {
+    const responsavel = substituicoes[dataHoje] || nomes[diaSemana];
+    responsavelCulto = horarios.map(hora => `${hora}h ${responsavel}`).join(' | ');
+  }
+
+  document.querySelector("#cultos").innerHTML = responsavelCulto;
+  //document.querySelector("#cultos").innerHTML = "Pr. Fábio";
+
+</script>
+
+<!-- Plantão de Sexta -->
+<script type="module">
+
+  import { plantaosexta } from './escalas.js'
+
+  function proximoPlantaoDeSexta(array) {
+    const dataAtualizada = new Date();
+    const todayAtMidnight = new Date(dataAtualizada.getFullYear(), dataAtualizada.getMonth(), dataAtualizada.getDate(), 0, 0, 0, 0);
+    const futureDates = array.filter(item => item.data >= todayAtMidnight);
+    futureDates.sort((a, b) => a.data - b.data);
+    if (futureDates.length > 0) {
+      let dia = futureDates[0].data.getDate();
+      let mes = futureDates[0].data.getMonth() + 1;
+      dia = dia < 10 ? '0' + dia : dia;
+      mes = mes < 10 ? '0' + mes : mes;
+      let pessoa = futureDates[0].person;
+      let monitoria = futureDates[0].monitoria;
+
+      // console.log(pessoa)
+      if (pessoa === "Feriado" || pessoa === "Recesso") {
+        document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}`;
+      } else {
+        document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
       }
+    }
+  }
 
-      // Função para converter string dd/mm em Date do ano atual
-      function parseDataEscala(dataStr) {
-        const [dia, mes] = dataStr.split('/').map(Number);
-        return new Date(hoje.getFullYear(), mes - 1, dia);
-      }
+  proximoPlantaoDeSexta(plantaosexta)
 
-      // Encontra a próxima escala (primeira data >= dataReferencia)
-      const proximaEscala = responsaveisHino.find(escala => {
-        const dataEscala = parseDataEscala(escala.data);
-        return dataEscala >= dataReferencia;
+
+  // import { plantao19h } from './escalas.js'
+
+  // function proximoPlantao19(array) {
+  //   const dataAtualizada = new Date();
+  //   const todayAtMidnight = new Date(dataAtualizada.getFullYear(), dataAtualizada.getMonth(), dataAtualizada.getDate(), 0, 0, 0, 0);
+  //   const futureDates = array.filter(item => item.data >= todayAtMidnight);
+  //   futureDates.sort((a, b) => a.data - b.data);
+  //   if (futureDates.length > 0) {
+  //     let dia = futureDates[0].data.getDate();
+  //     let mes = futureDates[0].data.getMonth() + 1;
+  //     dia = dia < 10 ? '0' + dia : dia;
+  //     mes = mes < 10 ? '0' + mes : mes;
+  //     let tour = futureDates[0].tour;
+  //     let financeiro = futureDates[0].financeiro;
+  //     let entrevista = futureDates[0].entrevista;
+  //     let secretaria = futureDates[0].secretaria;
+  //     document.querySelector('#plantao19h').innerHTML = `${dia}/${mes} - ${tour}, ${entrevista}, ${financeiro} e ${secretaria}`;
+  //   }
+  // }
+
+  // proximoPlantao19(plantao19h)
+
+</script>
+
+<!-- JS das Escalas Compensaçao e Entrevista -->
+<script>
+
+  window.addEventListener("load", mostrarCompensacao);
+
+  window.addEventListener("load", escalaDeEntrevistas);
+
+
+  function escalaDeEntrevistas() {
+    const hoje = new Date();
+    const diaDaSemana = hoje.getDay();
+    const ferias = false;
+    const feriadoRecesso = false;
+
+    const plantao = [
+      "Hoje é domingo!",
+      "Carol(M) | Jaque(T)",
+      "Murilo(M) | Sila(T)",
+      "Renata(M) | Malú(T)",
+      "Valéria(M) | Douglas(T)",
+      "Andressa(M) | Camila(T)",
+      "Feliz Sábado!",
+    ];
+
+    // Verifica se é feriado ou recesso
+    if (ferias) {
+      document.querySelector("#plantaodiario").innerHTML = "Murilo";
+    } else if (feriadoRecesso) {
+      document.querySelector("#plantaodiario").innerHTML = "Feriado/recesso";
+    } else {
+      document.querySelector("#plantaodiario").innerHTML = plantao[diaDaSemana];
+    }
+  }
+
+  function mostrarCompensacao() {
+
+    const dataHoje = new Date();
+    const diaSemana = dataHoje.getDay();
+
+    const isFeriado = false;
+    const isFirstOrLast = false;
+    const isVacation = false;
+    const isSemanaOracao = false;
+
+    const nomesPorDia = [
+      "Hoje é domingo!",
+      "Pr. Fábio, Andressa",
+      "RA",
+      "Jaque, Camila | Rocha",
+      "Valéria | Renata, Carin",
+      "Douglas, Joyce | Josi, Carol",
+      "Feliz Sábado!",
+    ];
+
+    const elementoNome = document.querySelector("#nomescomp");
+
+    if (isFeriado) {
+      elementoNome.innerHTML = "Semana com feriado";
+    } else if (isFirstOrLast) {
+      elementoNome.innerHTML = "Primeira/última semana";
+    } else if (isVacation) {
+      elementoNome.innerHTML = "Férias";
+    } else if (isSemanaOracao) {
+      elementoNome.innerHTML = "Semana de Oração";
+    } else {
+      elementoNome.innerHTML = nomesPorDia[diaSemana];
+    }
+
+  }
+
+  function ramaisList() {
+    const modalramais = document.querySelector("#modalramais");
+    modalramais.classList.add("show_ramais");
+  }
+
+  // Pedido de compras
+  document.querySelector('#bt-compras').addEventListener('click', function (event) {
+    event.preventDefault(); // Impede que o <a> tente seguir o href="#"
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSdC0vb83SeBrHw-uYLmU_bNQaZX50nhl1ewGuRU1OUls96nfw/viewform", "_blank");
+  });
+
+  // Investimentos
+  document.querySelector('#bt-investimentos').addEventListener('click', function (event) {
+    event.preventDefault(); // Impede que o <a> tente seguir o href="#"
+    window.open("https://docs.google.com/spreadsheets/d/1sIpNNR8-OwM3wvFjYwrROTtSpL2Jxm2eI4hWECsVXWk/edit?gid=0#gid=0", "_blank");
+  });
+
+  // Último card da seção Escalas
+  window.addEventListener("load", arredondarBordasInferiores);
+  function arredondarBordasInferiores() {
+    const divescalas = document.querySelectorAll(".escala");
+    const escalas = Array.from(divescalas);
+    const ultimaescala = escalas.length - 1;
+    const uesc = escalas[ultimaescala];
+    // uesc.style.borderBottom = "1px solid red";
+    uesc.style.boxShadow = "none";
+    uesc.style.borderBottomLeftRadius = "12px";
+    uesc.style.borderBottomRightRadius = "12px";
+  }
+
+</script>
+
+<script>
+  const overlayX87 = document.getElementById('msgAutoPopupX87');
+  const modalX87 = document.getElementById('modalContentX87');
+  const btnFecharX87 = document.getElementById('btnFecharX87');
+  const chkNaoExibirX87 = document.getElementById('naoExibirHojeX87');
+
+  function getDataAtualStr() {
+    const hoje = new Date().toISOString().split('T')[0]; // Formato YYYY-MM-DD
+    return hoje.toISOString().split('T')[0]; // formato: YYYY-MM-DD
+  }
+
+  function verificarExibicaoModal() {
+    const hoje = getDataAtualStr();
+    const dataSalva = localStorage.getItem('naoExibirModalX87');
+    if (dataSalva !== hoje) {
+      overlayX87.style.display = 'flex';
+    }
+  }
+
+  function fecharModal() {
+    overlayX87.style.display = 'none';
+    if (chkNaoExibirX87.checked) {
+      localStorage.setItem('naoExibirModalX87', getDataAtualStr());
+    }
+  }
+
+  // Fechar ao clicar no botão X
+  btnFecharX87.addEventListener('click', fecharModal);
+
+  // Fechar ao clicar fora do conteúdo
+  overlayX87.addEventListener('click', (e) => {
+    if (!modalX87.contains(e.target)) {
+      fecharModal();
+    }
+  });
+
+  // Mostrar automaticamente se permitido
+  window.addEventListener('load', verificarExibicaoModal);
+</script>
+
+<script>
+
+  // Seleciona todos os links do navbar
+  const navLinks = document.querySelectorAll(".nav");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      // Remove a classe active de todas as divs
+      document.querySelectorAll(".sec").forEach(section => {
+        section.classList.remove("active");
       });
 
-      if (proximaEscala) {
-        container.innerHTML = `${proximaEscala.data} - ${proximaEscala.ambiente1} e ${proximaEscala.ambiente2}`;
-      } else {
-        container.innerHTML = 'Nenhuma escala futura disponível';
+      // Adiciona a classe active na div clicada
+      const targetSection = document.getElementById(link.dataset.section);
+      targetSection.classList.add("active");
+    });
+  });
+</script>
+
+<style>
+  .sec.active {
+    display: block;
+  }
+
+  .sec-adm {
+    display: none;
+  }
+</style>
+
+
+<!-- Importa dados para escala de entrevistas  -->
+<script type="module">
+  import { entrevistasPadrao, alteracoes } from './entrevistas-data.js';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const DiaDeHoje = new Date();
+    const dataDeHoje = DiaDeHoje.getDay();
+    const content = document.getElementById("entrevistascontent");
+
+    if (dataDeHoje >= 1 && dataDeHoje <= 5) {
+      let escala = entrevistasPadrao[dataDeHoje - 1];
+      const dataISO = DiaDeHoje.toISOString().split("T")[0];
+      const alteracao = alteracoes.find(a => a.data === dataISO);
+      if (alteracao) {
+        escala = alteracao.substituto;
       }
+      const [manha, tarde] = escala.split(" e ");
+      content.textContent = `${manha} / ${tarde}`;
+    } else if (dataDeHoje == 6) {
+
+      content.textContent = "Feliz Sábado!";
     } else {
-      container.innerHTML = 'Nenhuma escala disponível';
+      content.textContent = "Hoje é domingo!";
     }
-  </script>
+  });
 
-  <!-- Cultos -->
-  <script type="module">
-    import { nomes, horarios, substituicoes, getDataAtual, escalaQuintaPersonalizada } from './cultosModule.js';
 
-    const dataAtual = getDataAtual();
-    const diaSemana = dataAtual.getDay();
-    const dataHoje = dataAtual.toISOString().split('T')[0]; // Formata como YYYY-MM-DD
+</script>
 
-    let responsavelCulto = '';
-
-    if (diaSemana === 0) {
-      responsavelCulto = 'Hoje é domingo';
-    } else if (diaSemana === 6) {
-      responsavelCulto = 'Feliz Sábado!';
-    } else if (diaSemana === 4 && escalaQuintaPersonalizada[dataHoje]) {
-      //Quinta-feira com escala personalizada
-      responsavelCulto = horarios.map((hora, index) => `${hora}h ${responsaveis[index]}`).join(' | ');
-    } else {
-      const responsavel = substituicoes[dataHoje] || nomes[diaSemana];
-      responsavelCulto = horarios.map(hora => `${hora}h ${responsavel}`).join(' | ');
-    }
-
-    document.querySelector("#cultos").innerHTML = responsavelCulto;
-    //document.querySelector("#cultos").innerHTML = "Pr. Fábio";
-
-  </script>
-
-  <!-- Plantão de Sexta -->
-  <script type="module">
-
-    import { plantaosexta } from './escalas.js'
-
-    function proximoPlantaoDeSexta(array) {
-      const dataAtualizada = new Date();
-      const todayAtMidnight = new Date(dataAtualizada.getFullYear(), dataAtualizada.getMonth(), dataAtualizada.getDate(), 0, 0, 0, 0);
-      const futureDates = array.filter(item => item.data >= todayAtMidnight);
-      futureDates.sort((a, b) => a.data - b.data);
-      if (futureDates.length > 0) {
-        let dia = futureDates[0].data.getDate();
-        let mes = futureDates[0].data.getMonth() + 1;
-        dia = dia < 10 ? '0' + dia : dia;
-        mes = mes < 10 ? '0' + mes : mes;
-        let pessoa = futureDates[0].person;
-        let monitoria = futureDates[0].monitoria;
-
-        // console.log(pessoa)
-        if (pessoa === "Feriado" || pessoa === "Recesso") {
-          document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}`;
-        } else {
-          document.querySelector('#plantaosexta').innerHTML = `${dia}/${mes} - ${pessoa}, ${monitoria}`;
-        }
-      }
-    }
-
-    proximoPlantaoDeSexta(plantaosexta)
-
-
-    // import { plantao19h } from './escalas.js'
-
-    // function proximoPlantao19(array) {
-    //   const dataAtualizada = new Date();
-    //   const todayAtMidnight = new Date(dataAtualizada.getFullYear(), dataAtualizada.getMonth(), dataAtualizada.getDate(), 0, 0, 0, 0);
-    //   const futureDates = array.filter(item => item.data >= todayAtMidnight);
-    //   futureDates.sort((a, b) => a.data - b.data);
-    //   if (futureDates.length > 0) {
-    //     let dia = futureDates[0].data.getDate();
-    //     let mes = futureDates[0].data.getMonth() + 1;
-    //     dia = dia < 10 ? '0' + dia : dia;
-    //     mes = mes < 10 ? '0' + mes : mes;
-    //     let tour = futureDates[0].tour;
-    //     let financeiro = futureDates[0].financeiro;
-    //     let entrevista = futureDates[0].entrevista;
-    //     let secretaria = futureDates[0].secretaria;
-    //     document.querySelector('#plantao19h').innerHTML = `${dia}/${mes} - ${tour}, ${entrevista}, ${financeiro} e ${secretaria}`;
-    //   }
-    // }
-
-    // proximoPlantao19(plantao19h)
-
-  </script>
-
-  <!-- JS das Escalas Compensaçao e Entrevista -->
-  <script>
-
-    window.addEventListener("load", mostrarCompensacao);
-
-    window.addEventListener("load", escalaDeEntrevistas);
-
-
-    function escalaDeEntrevistas() {
-      const hoje = new Date();
-      const diaDaSemana = hoje.getDay();
-      const ferias = false;
-      const feriadoRecesso = false;
-
-      const plantao = [
-        "Hoje é domingo!",
-        "Carol(M) | Jaque(T)",
-        "Murilo(M) | Sila(T)",
-        "Renata(M) | Malú(T)",
-        "Valéria(M) | Douglas(T)",
-        "Andressa(M) | Camila(T)",
-        "Feliz Sábado!",
-      ];
-
-      // Verifica se é feriado ou recesso
-      if (ferias) {
-        document.querySelector("#plantaodiario").innerHTML = "Murilo";
-      } else if (feriadoRecesso) {
-        document.querySelector("#plantaodiario").innerHTML = "Feriado/recesso";
-      } else {
-        document.querySelector("#plantaodiario").innerHTML = plantao[diaDaSemana];
-      }
-    }
-
-    function mostrarCompensacao() {
-
-      const dataHoje = new Date();
-      const diaSemana = dataHoje.getDay();
-
-      const isFeriado = false;
-      const isFirstOrLast = false;
-      const isVacation = false;
-      const isSemanaOracao = false;
-
-      const nomesPorDia = [
-        "Hoje é domingo!",
-        "Pr. Fábio, Andressa",
-        "RA",
-        "Jaque, Camila | Rocha",
-        "Valéria | Renata, Carin",
-        "Douglas, Joyce | Josi, Carol",
-        "Feliz Sábado!",
-      ];
-
-      const elementoNome = document.querySelector("#nomescomp");
-
-      if (isFeriado) {
-        elementoNome.innerHTML = "Semana com feriado";
-      } else if (isFirstOrLast) {
-        elementoNome.innerHTML = "Primeira/última semana";
-      } else if (isVacation) {
-        elementoNome.innerHTML = "Férias";
-      } else if (isSemanaOracao) {
-        elementoNome.innerHTML = "Semana de Oração";
-      } else {
-        elementoNome.innerHTML = nomesPorDia[diaSemana];
-      }
-
-    }
-
-    function ramaisList() {
-      const modalramais = document.querySelector("#modalramais");
-      modalramais.classList.add("show_ramais");
-    }
-
-    // Pedido de compras
-    document.querySelector('#bt-compras').addEventListener('click', function (event) {
-      event.preventDefault(); // Impede que o <a> tente seguir o href="#"
-      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdC0vb83SeBrHw-uYLmU_bNQaZX50nhl1ewGuRU1OUls96nfw/viewform", "_blank");
-    });
-
-    // Investimentos
-    document.querySelector('#bt-investimentos').addEventListener('click', function (event) {
-      event.preventDefault(); // Impede que o <a> tente seguir o href="#"
-      window.open("https://docs.google.com/spreadsheets/d/1sIpNNR8-OwM3wvFjYwrROTtSpL2Jxm2eI4hWECsVXWk/edit?gid=0#gid=0", "_blank");
-    });
-
-    // Último card da seção Escalas
-    window.addEventListener("load", arredondarBordasInferiores);
-    function arredondarBordasInferiores() {
-      const divescalas = document.querySelectorAll(".escala");
-      const escalas = Array.from(divescalas);
-      const ultimaescala = escalas.length - 1;
-      const uesc = escalas[ultimaescala];
-      // uesc.style.borderBottom = "1px solid red";
-      uesc.style.boxShadow = "none";
-      uesc.style.borderBottomLeftRadius = "12px";
-      uesc.style.borderBottomRightRadius = "12px";
-    }
-
-  </script>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
-    .cx-msg-overlay-x87 {
-      background: linear-gradient(to bottom right, #a70f55, #54003b);
-      /* fundo impactante exclusivo do modal */
-      font-family: 'Open Sans', sans-serif;
-      position: fixed;
-      inset: 0;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 99999;
-      animation: fadeInX87 0.3s ease-in-out;
-    }
-
-    .cx-msg-box-x87 {
-      background: radial-gradient(circle at top left, #ffe3ec 0%, #fcd2e3 50%, #fbeaf1 100%);
-      color: #6b2e47;
-      border-radius: 28px;
-      padding: 64px 48px;
-      max-width: 680px;
-      width: 95%;
-      text-align: center;
-      box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35),
-        0 0 25px rgba(255, 105, 180, 0.4);
-      /* brilho rosa tipo "neon soft" */
-      position: relative;
-      animation: slideUpX87 0.4s ease-out;
-      border: 8px solid #ff3366;
-    }
-
-
-    .cx-msg-box-x87 h1 {
-      font-size: 46px;
-      font-weight: 700;
-      color: #d50057;
-      letter-spacing: 1px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-      margin-bottom: 24px;
-    }
-
-    .cx-msg-box-x87 p {
-      font-size: 20px;
-      margin-bottom: 36px;
-      color: #444;
-      line-height: 1.7;
-    }
-
-    .btn-acesso-x87,
-    .btn-nao-exibir-x87 {
-      display: inline-block;
-      border: none;
-      border-radius: 14px;
-      padding: 18px 36px;
-      font-size: 17px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      margin: 10px;
-      width: 85%;
-      max-width: 300px;
-    }
-
-    .btn-acesso-x87 {
-      background-color: #d50057;
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(213, 0, 87, 0.5);
-    }
-
-    .btn-acesso-x87:hover {
-      background-color: #b00044;
-      transform: scale(1.05);
-    }
-
-    .btn-nao-exibir-x87 {
-      background-color: #f8bbd0;
-      color: #6b2e47;
-      box-shadow: 0 4px 12px rgba(248, 187, 208, 0.4);
-    }
-
-    .btn-nao-exibir-x87:hover {
-      background-color: #f48fb1;
-      transform: scale(1.05);
-    }
-
-    .cx-fechar-x87 {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: none;
-      color: #6b2e47;
-      font-size: 28px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    @keyframes fadeInX87 {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideUpX87 {
-      from {
-        transform: translateY(60px);
-        opacity: 0;
-      }
-
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .cx-msg-box-x87 {
-        padding: 48px 24px;
-      }
-
-      .cx-msg-box-x87 h1 {
-        font-size: 32px;
-      }
-
-      .cx-msg-box-x87 p {
-        font-size: 16px;
-      }
-
-      .btn-acesso-x87,
-      .btn-nao-exibir-x87 {
-        font-size: 15px;
-        padding: 14px 20px;
-      }
-    }
-  </style>
-
-  <script>
-    const overlayX87 = document.getElementById('msgAutoPopupX87');
-    const modalX87 = document.getElementById('modalContentX87');
-    const btnFecharX87 = document.getElementById('btnFecharX87');
-    const chkNaoExibirX87 = document.getElementById('naoExibirHojeX87');
-
-    function getDataAtualStr() {
-      const hoje = new Date().toISOString().split('T')[0]; // Formato YYYY-MM-DD
-      return hoje.toISOString().split('T')[0]; // formato: YYYY-MM-DD
-    }
-
-    function verificarExibicaoModal() {
-      const hoje = getDataAtualStr();
-      const dataSalva = localStorage.getItem('naoExibirModalX87');
-      if (dataSalva !== hoje) {
-        overlayX87.style.display = 'flex';
-      }
-    }
-
-    function fecharModal() {
-      overlayX87.style.display = 'none';
-      if (chkNaoExibirX87.checked) {
-        localStorage.setItem('naoExibirModalX87', getDataAtualStr());
-      }
-    }
-
-    // Fechar ao clicar no botão X
-    btnFecharX87.addEventListener('click', fecharModal);
-
-    // Fechar ao clicar fora do conteúdo
-    overlayX87.addEventListener('click', (e) => {
-      if (!modalX87.contains(e.target)) {
-        fecharModal();
-      }
-    });
-
-    // Mostrar automaticamente se permitido
-    window.addEventListener('load', verificarExibicaoModal);
-  </script>
-
-  <script>
-
-    // Seleciona todos os links do navbar
-    const navLinks = document.querySelectorAll(".nav");
-
-    navLinks.forEach(link => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        // Remove a classe active de todas as divs
-        document.querySelectorAll(".sec").forEach(section => {
-          section.classList.remove("active");
-        });
-
-        // Adiciona a classe active na div clicada
-        const targetSection = document.getElementById(link.dataset.section);
-        targetSection.classList.add("active");
-      });
-    });
-  </script>
-
-  <style>
-    .sec.active {
-      display: block;
-    }
-
-    .sec-adm {
-      display: none;
-    }
-  </style>
-
-  <script type="module">
-    import { entrevistasPadrao, alteracoes } from './entrevistas-data.js';
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const DiaDeHoje = new Date();
-      const dataDeHoje = DiaDeHoje.getDay();
-      const content = document.getElementById("entrevistascontent");
-
-      if (dataDeHoje >= 1 && dataDeHoje <= 5) {
-        let escala = entrevistasPadrao[dataDeHoje - 1];
-        const dataISO = DiaDeHoje.toISOString().split("T")[0];
-        const alteracao = alteracoes.find(a => a.data === dataISO);
-        if (alteracao) {
-          escala = alteracao.substituto;
-        }
-        const [manha, tarde] = escala.split(" e ");
-        content.textContent = `${manha} / ${tarde}`;
-      } else if (dataDeHoje == 6) {
-
-        content.textContent = "Feliz Sábado!";
-      } else {
-        content.textContent = "Hoje é domingo!";
-      }
-    });
-
-
-  </script>
-
-  <!-- Modal conselheiros e representantes -->
-  <div id="modalSimplesUnico_RA" style="
+<!-- Modal conselheiros e representantes -->
+<div id="modalSimplesUnico_RA" style="
   display: none;
   position: fixed;
   top: 0; left: 0;
@@ -2108,7 +1665,7 @@
   overflow-y: auto;
   padding: 20px 0;
 ">
-    <div style="
+  <div style="
     position: relative;
     background: #fff;
     padding: 20px;
@@ -2121,177 +1678,116 @@
     animation: fadeIn_RA 0.3s ease;
     margin: auto;
   ">
-      <style>
-        .table-container {
-          max-width: 1000px;
-          margin: 0 auto;
-          padding: 0;
-          /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; */
-        }
-
-        .table-title {
-          font-size: 24px;
-          font-weight: 600;
-          color: #1a1a1a;
-          margin-bottom: 16px;
-          letter-spacing: -0.02em;
-          text-align: center;
-        }
-
-        .modern-table {
-          width: 100%;
-          border-collapse: collapse;
-          background: #fff;
-          border-radius: 8px;
-          overflow: hidden;
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-        }
-
-        .modern-table thead {
-          background: #f8f9fa;
-          position: sticky;
-          top: 0;
-          z-index: 10;
-        }
-
-        .modern-table th {
-          padding: 12px 16px;
-          text-align: left;
-          font-weight: 600;
-          font-size: 13px;
-          color: #4a5568;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          border-bottom: 2px solid #e2e8f0;
-        }
-
-        .modern-table td {
-          padding: 12px 16px;
-          border-bottom: 1px solid #f1f3f5;
-          color: #2d3748;
-          font-size: 14px;
-          vertical-align: top;
-        }
-
-        .modern-table tbody tr:last-child td {
-          border-bottom: none;
-        }
-
-        .modern-table tbody tr:hover {
-          background: #f8f9fb;
-          transition: background 0.2s ease;
-        }
-      </style>
-
-      <div class="table-container">
-        <h2 style="text-align: center; padding: 2rem 1rem;">Conselheiros e Representantes 2026</h2>
-        <table class="modern-table">
-          <thead>
-            <tr>
-              <th>Turma</th>
-              <th>Conselheiros</th>
-              <th>Representantes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>61</td>
-              <td>Vanessa</td>
-              <td>Murilo dos Santos (6098)<br>Hanna Rodrigues (6611)</td>
-            </tr>
-            <tr>
-              <td>62</td>
-              <td>Simone</td>
-              <td>Miguel Jacy (6609)<br>Jordana Glowaski (7272)</td>
-            </tr>
-            <tr>
-              <td>63</td>
-              <td>Tiago</td>
-              <td>Murilo Borges (5803)<br>Luiza Voltolini (7830)</td>
-            </tr>
-            <tr>
-              <td>71</td>
-              <td>Egislaine</td>
-              <td>Arthur Hirt (7160)<br>Isabella Pereira (7043)</td>
-            </tr>
-            <tr>
-              <td>72</td>
-              <td>Gisele</td>
-              <td>Luis Gustavo Xavier (6063)<br>Laura Zava (7796)</td>
-            </tr>
-            <tr>
-              <td>73</td>
-              <td>Larissa</td>
-              <td>Rhiad Dawood (7806)<br>Leonor Gonçalves (6585)</td>
-            </tr>
-            <tr>
-              <td>81</td>
-              <td>Bruna</td>
-              <td>Mateus Filipe Hernandes (5302)<br>Angelina Nicolau (5319)</td>
-            </tr>
-            <tr>
-              <td>82</td>
-              <td>Joniel</td>
-              <td>Miguel Nocko (5452)<br>Pietra Pereira (5421)</td>
-            </tr>
-            <tr>
-              <td>83</td>
-              <td>Felipe</td>
-              <td>Benjamin Leão (5877)<br>Myrella Valentina Caceres (8076)</td>
-            </tr>
-            <tr>
-              <td>91</td>
-              <td>Allan</td>
-              <td>Arthur Vinicius<br>Isabel Munhoz</td>
-            </tr>
-            <tr>
-              <td>92</td>
-              <td>Leonardo</td>
-              <td>Melissa M.<br>Hadassa Beccari</td>
-            </tr>
-            <tr>
-              <td>93</td>
-              <td>Edmilson</td>
-              <td>Murilo Amarante<br>Ana Paula</td>
-            </tr>
-            <tr>
-              <td>111</td>
-              <td>Jane</td>
-              <td>Rafaella Brim<br>Marianna Fabris</td>
-            </tr>
-            <tr>
-              <td>112</td>
-              <td>Pablo</td>
-              <td>Mariana Mueller<br>Antônio Brunelli</td>
-            </tr>
-            <tr>
-              <td>113</td>
-              <td>Fernanda</td>
-              <td>Nicole Godoy<br>Mahara Nocko</td>
-            </tr>
-            <tr>
-              <td>121</td>
-              <td>Adonay</td>
-              <td>Hallana Silveira<br>Geovanna Greff</td>
-            </tr>
-            <tr>
-              <td>122</td>
-              <td>Luciana</td>
-              <td>Lara Gomes<br>Felipe Coelho</td>
-            </tr>
-            <tr>
-              <td>131</td>
-              <td>Jhéssica</td>
-              <td>Hadassa Rodrigues<br>Eduardo Lopes</td>
-            </tr>
-          </tbody>
+    
+    <div class="table-container">
+      <h2 style="text-align: center; padding: 2rem 1rem;">Conselheiros e Representantes 2026</h2>
+      <table class="modern-table">
+        <thead>
+          <tr>
+            <th>Turma</th>
+            <th>Conselheiros</th>
+            <th>Representantes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>61</td>
+            <td>Vanessa</td>
+            <td>Murilo dos Santos (6098)<br>Hanna Rodrigues (6611)</td>
+          </tr>
+          <tr>
+            <td>62</td>
+            <td>Simone</td>
+            <td>Miguel Jacy (6609)<br>Jordana Glowaski (7272)</td>
+          </tr>
+          <tr>
+            <td>63</td>
+            <td>Tiago</td>
+            <td>Murilo Borges (5803)<br>Luiza Voltolini (7830)</td>
+          </tr>
+          <tr>
+            <td>71</td>
+            <td>Egislaine</td>
+            <td>Arthur Hirt (7160)<br>Isabella Pereira (7043)</td>
+          </tr>
+          <tr>
+            <td>72</td>
+            <td>Gisele</td>
+            <td>Luis Gustavo Xavier (6063)<br>Laura Zava (7796)</td>
+          </tr>
+          <tr>
+            <td>73</td>
+            <td>Larissa</td>
+            <td>Rhiad Dawood (7806)<br>Leonor Gonçalves (6585)</td>
+          </tr>
+          <tr>
+            <td>81</td>
+            <td>Bruna</td>
+            <td>Mateus Filipe Hernandes (5302)<br>Angelina Nicolau (5319)</td>
+          </tr>
+          <tr>
+            <td>82</td>
+            <td>Joniel</td>
+            <td>Miguel Nocko (5452)<br>Pietra Pereira (5421)</td>
+          </tr>
+          <tr>
+            <td>83</td>
+            <td>Felipe</td>
+            <td>Benjamin Leão (5877)<br>Myrella Valentina Caceres (8076)</td>
+          </tr>
+          <tr>
+            <td>91</td>
+            <td>Allan</td>
+            <td>Arthur Vinicius<br>Isabel Munhoz</td>
+          </tr>
+          <tr>
+            <td>92</td>
+            <td>Leonardo</td>
+            <td>Melissa M.<br>Hadassa Beccari</td>
+          </tr>
+          <tr>
+            <td>93</td>
+            <td>Edmilson</td>
+            <td>Murilo Amarante<br>Ana Paula</td>
+          </tr>
+          <tr>
+            <td>111</td>
+            <td>Jane</td>
+            <td>Rafaella Brim<br>Marianna Fabris</td>
+          </tr>
+          <tr>
+            <td>112</td>
+            <td>Pablo</td>
+            <td>Mariana Mueller<br>Antônio Brunelli</td>
+          </tr>
+          <tr>
+            <td>113</td>
+            <td>Fernanda</td>
+            <td>Nicole Godoy<br>Mahara Nocko</td>
+          </tr>
+          <tr>
+            <td>121</td>
+            <td>Adonay</td>
+            <td>Hallana Silveira<br>Geovanna Greff</td>
+          </tr>
+          <tr>
+            <td>122</td>
+            <td>Luciana</td>
+            <td>Lara Gomes<br>Felipe Coelho</td>
+          </tr>
+          <tr>
+            <td>131</td>
+            <td>Jhéssica</td>
+            <td>Hadassa Rodrigues<br>Eduardo Lopes</td>
+          </tr>
+        </tbody>
 
 
 
-        </table>
+      </table>
 
-        <!-- Substitua o botão redondo anterior por este: -->
-        <button onclick="fecharModal_RA()" style="
+      <!-- Substitua o botão redondo anterior por este: -->
+      <button onclick="fecharModal_RA()" style="
   position: absolute;
   top: 10px;
   right: 10px;
@@ -2313,9 +1809,9 @@
 
 
 
-      </div>
+    </div>
 
-      <button onclick="fecharModal_RA()" style="
+    <button onclick="fecharModal_RA()" style="
       margin-top: 15px;
       padding: 8px 15px;
       border: none;
@@ -2324,80 +1820,75 @@
       border-radius: 8px;
       cursor: pointer;
     ">Fechar</button>
-    </div>
   </div>
+</div>
 
-  <style>
-    @keyframes fadeIn_RA {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
+<style>
+  @keyframes fadeIn_RA {
 
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+    from {
+      opacity: 0;
+      transform: scale(0.95);
     }
 
-    li {
-      padding-bottom: 4px;
+    to {
+      opacity: 1;
+      transform: scale(1);
     }
-  </style>
+  }
 
-  <script>
-    function abrirModal_RA() {
-      const modal_RA = document.getElementById('modalSimplesUnico_RA');
-      modal_RA.style.display = 'flex';
+  li {
+    padding-bottom: 4px;
+  }
+</style>
+
+<script>
+  function abrirModal_RA() {
+    const modal_RA = document.getElementById('modalSimplesUnico_RA');
+    modal_RA.style.display = 'flex';
+  }
+  function fecharModal_RA() {
+    const modal_RA = document.getElementById('modalSimplesUnico_RA');
+    modal_RA.style.display = 'none';
+  }
+  window.addEventListener('click', function (e) {
+    const modal_RA = document.getElementById('modalSimplesUnico_RA');
+    if (e.target === modal_RA) {
+      fecharModal_RA();
     }
-    function fecharModal_RA() {
-      const modal_RA = document.getElementById('modalSimplesUnico_RA');
-      modal_RA.style.display = 'none';
+  });
+</script>
+<!-- ==== fim modal conselheiros e representantes ==== -->
+
+<!-- Copiar link para envio de currículo para o RH -->
+<script>
+  const copyContent = async () => {
+    const link = "https://7you.app/auth/sign-in";
+    try {
+      await navigator.clipboard.writeText(link);
+      alert("Link copiado!");
+    } catch (err) {
+      console.error("Erro ao copiar: ", err);
+      alert("Erro ao copiar!");
     }
-    window.addEventListener('click', function (e) {
-      const modal_RA = document.getElementById('modalSimplesUnico_RA');
-      if (e.target === modal_RA) {
-        fecharModal_RA();
-      }
-    });
-  </script>
-  <!-- ==== fim modal conselheiros e representantes ==== -->
+  };
 
-  <script>
-    const copyContent = async () => {
-      const link = "https://7you.app/auth/sign-in";
-      try {
-        await navigator.clipboard.writeText(link);
-        alert("Link copiado!");
-      } catch (err) {
-        console.error("Erro ao copiar: ", err);
-        alert("Erro ao copiar!");
-      }
-    };
+</script>
 
 
-    function copyContentBolsas() {
-      const input = document.getElementById("inputbolsas");
-      navigator.clipboard
-        .writeText(input.value)
-        .then(() => alert("Link copiado!"))
-        .catch((err) => console.error("Erro ao copiar: ", err));
-    }
-  </script>
-
-
-  <script src="script.js"></script>
-  <script src="calendario.js" defer></script>
-  <script src="script.js" defer></script>
-  <script src="ramais.js" defer></script>
-  <script src="modalUrgencias.js" defer></script>
-  <script src="rotinas.js"></script>
-  <script src="paginas.js"></script>
-  <script src="pedagogico.js"></script>
-  <script type="module" src="escalas.js"></script>
-  <script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
-  <script type="module" src="aniversariantes-data.js"></script>
-  <script type="module" src="aniversariantes-next.js"></script>
+<script src="script.js"></script>
+<script src="calendario.js" defer></script>
+<script src="script.js" defer></script>
+<script src="eventos.js"></script>
+<script src="ramais.js" defer></script>
+<script src="modalUrgencias.js" defer></script>
+<script src="rotinas.js"></script>
+<script src="paginas.js"></script>
+<script src="pedagogico.js"></script>
+<script type="module" src="escalas.js"></script>
+<script type="module" src="pg-externas/plantaoEntrevistas.js"></script>
+<script type="module" src="aniversariantes-data.js"></script>
+<script type="module" src="aniversariantes-next.js"></script>
 
 </body>
 
