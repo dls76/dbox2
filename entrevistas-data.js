@@ -9,10 +9,10 @@ const entrevistasPadrao = [
 
 
 const alteracoes = [
-  // { data: "2025-10-02", substituto: "Diretor e Andressa" }, 
-  // { data: "2025-10-03", substituto: "Renata e Camila" },
-  { data: "2025-10-20", substituto: "Jaque e Renata" },
-  { data: "2025-10-24", substituto: "Carol e Andressa" }
+  { data: "2026-05-04", substituto: "Murilo e Diretor" },
+  { data: "2026-05-05", substituto: "Murilo e Diretor" },
+  { data: "2026-05-06", substituto: "Murilo e Diretor" },
+  { data: "2026-05-07", substituto: "Murilo e Diretor" },
 ];
 
 export { entrevistasPadrao, alteracoes };

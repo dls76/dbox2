@@ -1454,34 +1454,38 @@
 
   window.addEventListener("load", mostrarCompensacao);
 
-  window.addEventListener("load", escalaDeEntrevistas);
+  // window.addEventListener("load", escalaDeEntrevistas);
 
 
-  function escalaDeEntrevistas() {
-    const hoje = new Date();
-    const diaDaSemana = hoje.getDay();
-    const ferias = false;
-    const feriadoRecesso = false;
+  // function escalaDeEntrevistas() {
+  //   const hoje = new Date();
+  //   const diaDaSemana = hoje.getDay();
+  //   const ferias = false;
+  //   const feriadoRecesso = false;
 
-    const plantao = [
-      "Hoje é domingo!",
-      "Carol(M) | Jaque(T)",
-      "Murilo(M) | Sila(T)",
-      "Renata(M) | Malú(T)",
-      "Valéria(M) | Douglas(T)",
-      "Andressa(M) | Camila(T)",
-      "Feliz Sábado!",
-    ];
+  //   const plantao = [
+  //     "Hoje é domingo!",
+  //     "Carol(M) | Jaque(T)",
+  //     "Murilo(M) | Sila(T)",
+  //     "Renata(M) | Malú(T)",
+  //     "Valéria(M) | Douglas(T)",
+  //     "Andressa(M) | Camila(T)",
+  //     "Feliz Sábado!",
+  //   ];
 
-    // Verifica se é feriado ou recesso
-    if (ferias) {
-      document.querySelector("#plantaodiario").innerHTML = "Murilo";
-    } else if (feriadoRecesso) {
-      document.querySelector("#plantaodiario").innerHTML = "Feriado/recesso";
-    } else {
-      document.querySelector("#plantaodiario").innerHTML = plantao[diaDaSemana];
-    }
-  }
+  //   // Verifica se é feriado ou recesso
+  //   // if (ferias) {
+  //   //   document.querySelector("#plantaodiario").innerHTML = "Murilo";
+  //   // } else if (feriadoRecesso) {
+  //   //   document.querySelector("#plantaodiario").innerHTML = "Feriado/recesso";
+  //   // } else {
+  //   //   document.querySelector("#plantaodiario").innerHTML = plantao[diaDaSemana];
+  //   // }
+
+  //   const escala = document.querySelector('#plantaodiario').innerHTML = 'Sequência: SOE/SOP/Escala';
+    
+  //   return escala
+  // }
 
   function mostrarCompensacao() {
 
@@ -1640,7 +1644,7 @@
         escala = alteracao.substituto;
       }
       const [manha, tarde] = escala.split(" e ");
-      content.textContent = `${manha} / ${tarde}`;
+      content.textContent = `1.SOE do nível; 2.SOP; 3.${manha} / ${tarde}`;
     } else if (dataDeHoje == 6) {
 
       content.textContent = "Feliz Sábado!";
