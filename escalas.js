@@ -77,37 +77,32 @@ export let plantaosexta = [
   { data: new Date(2026, 5, 12), person: "Murilo", monitoria: "Daniel e Patrícia" },
   { data: new Date(2026, 5, 19), person: "Diretor", monitoria: "Luíz e Carmelis" },
   { data: new Date(2026, 5, 26), person: "Fabio", monitoria: "Matheus e Yasmilly" },
-  { data: new Date(2026, 6, 3), person: "Rocha", monitoria: "Douglas e Rose" },
-  { data: new Date(2026, 6, 10), person: "Recesso", monitoria: "" },
-  { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
-  // { data: new Date(2026, 6, 24), person: "Josi", monitoria: "" },
-  // { data: new Date(2026, 6, 31), person: "Carol", monitoria: "" },
+  { data: new Date(2026, 6, 3), person: "Rocha", monitoria: "Douglas Wigo e Rose" },
+  // { data: new Date(2026, 6, 10), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
+  // { data: new Date(2026, 6, 17), person: "Recesso", monitoria: "" },
 ];
 
-
-
-// export let plantao19h = [
-//     { data: new Date(2025, 7, 2), tour: "Priscila", financeiro: "Josi", entrevista: "Andressa", secretaria: "Carin"},
-//     { data: new Date(2025, 8, 4), tour: "Priscila", financeiro: "Alícia", entrevista: "Murilo", secretaria: "Isa"},
-//     { data: new Date(2025, 8, 11), tour: "Priscila", financeiro: "Josi", entrevista: "Renata", secretaria: "Gabriel"},
-//     { data: new Date(2025, 8, 18), tour: "Priscila", financeiro: "Alícia", entrevista: "Jaque", secretaria: "Carin"},
-//     { data: new Date(2025, 8, 25), tour: "Priscila", financeiro: "Alícia", entrevista: "Valéria", secretaria: "Gabriel"},
-//     { data: new Date(2025, 9, 2), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
-//     { data: new Date(2025, 9, 9), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
-//     { data: new Date(2025, 9, 16), tour: "Priscila", financeiro: "Alícia", entrevista: "Diretor", secretaria: "Gabriel"},
-//     { data: new Date(2025, 9, 23), tour: "Priscila", financeiro: "Alícia", entrevista: "Carol", secretaria: "Carin"},
-//     { data: new Date(2025, 9, 30), tour: "Priscila", financeiro: "Alícia", entrevista: "Andressa", secretaria: "Isa"},
-//     { data: new Date(2025, 10, 6), tour: "Priscila", financeiro: "Alícia", entrevista: "Murilo", secretaria: "Gabriel"},
-//     { data: new Date(2025, 10, 13), tour: "Priscila", financeiro: "Alícia", entrevista: "Renata", secretaria: "Carin"},
-//     { data: new Date(2025, 10, 20), tour: "Priscila", financeiro: "Alícia", entrevista: "Jaque", secretaria: "Isa"},
-//     { data: new Date(2025, 10, 27), tour: "Priscila", financeiro: "Alícia", entrevista: "Valéria", secretaria: "Gabriel"},
-//     { data: new Date(2025, 11, 4), tour: "Priscila", financeiro: "Alícia", entrevista: "Joyce", secretaria: "Carin"},
-//     { data: new Date(2025, 11, 11), tour: "Priscila", financeiro: "Alícia", entrevista: "Camila", secretaria: "Isa"}
-// ];
-
 const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Andressa", "Renata e Camila"]
-
-
 
 export const entrevistacontent = document.getElementById("entrevistascontent");
 
