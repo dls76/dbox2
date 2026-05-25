@@ -11,3 +11,18 @@ keyboard shortcuts to CSS:
 Rodar localmente:
   - npm i
   - npm start
+
+E-mails Adm
+
+murilo.silva@educadventista.org.br
+josiane.vieira@educadventista.org.br
+fabio.fialek@educadventista.org.br
+carin.melo@educadventista.org.br
+lucas.rochasantos@educadventista.org.br
+renata.brasil@educadventista.org.br
+caroline.brito@educadventista.org.br
+andressa.santos@educadventista.org.br
+jaqueline.senko@educadventista.org.br
+joyce.silva@educadventista.org.br
+valeria.miranda@educadventista.org.br
+camila.moura@educadventista.org.br

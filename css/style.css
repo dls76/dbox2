@@ -288,8 +288,6 @@ main#conteinerhome {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
-
 }
 
 .control:hover {
@@ -362,7 +360,6 @@ main#conteinerhome {
         padding: .5rem 1rem;
         border-radius: 7px;
         outline: none;
-        border: 2px solid red;
     }
 
     #btn-mobile i {

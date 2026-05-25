@@ -12,11 +12,10 @@ const reuniaoadm = [
    { data: new Date(2026, 4, 5), link: 'https://docs.google.com/document/d/1Khq64vJihFPhwNfg98CTAXJqwua7QTBeI50f33-yu08/edit?usp=sharing', hora: '14h' },    
    { data: new Date(2026, 4, 19), link: 'https://docs.google.com/document/d/1OwHQr8JevD1cNPvKIqoRshKF0dWEAlGBzzYqi58dibI/edit?usp=sharing', hora: '14h' },    
    { data: new Date(2026, 4, 26), link: 'https://docs.google.com/document/d/1BSe973o2Dqf0iBbWOVjQLxCDwRVWpGqVepdfxl6Xlro/edit?usp=sharing', hora: '14h' },    
-   { data: new Date(2026, 5, ), link: '', hora: '14h' },    
-   { data: new Date(2026, 5, ), link: '', hora: '14h' },    
-   { data: new Date(2026, 5, ), link: '', hora: '14h' },    
-   { data: new Date(2026, 5, ), link: '', hora: '14h' },    
-   { data: new Date(2026, 5, ), link: '', hora: '14h' },    
+   { data: new Date(2026, 5, 9), link: 'https://docs.google.com/document/d/1cLfKM4rqJOCJsYaZfZ6rd-aeOI712cQJeUn8my3TX9s/edit?usp=sharing', hora: '14h' },    
+   { data: new Date(2026, 5, 16), link: '', hora: '14h' },    
+   { data: new Date(2026, 5, 23), link: '', hora: '14h' },    
+   { data: new Date(2026, 5, 30), link: '', hora: '14h' },    
 ];
 
 const diaDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
