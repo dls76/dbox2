@@ -33,9 +33,10 @@ export const pessoas = [
     {nome: "Adriene dos Santos Anacleto", data: new Date(2024, 4, 10), dia: 10, mes: 4, ano: 1992, funcao: "Professora", foto: 'img/anivImg/may/adriene.jpg'},
     {nome: "Carmelis Del Valle Garcia Guilarte", data: new Date(2024, 4, 10), dia: 10, mes: 4, ano: 1980, funcao: "Monitora", foto: 'img/anivImg/may/carmelis.jpg'},
     {nome: "Maria Zelia de Souza Silva Queiroz", data: new Date(2024, 4, 10), dia: 10, mes: 4, ano: 1990, funcao: "Auxiliar de Classe", foto: 'img/anivImg/may/maria.jpg'},
-    {nome: "Pablo Silva Pimentel", data: new Date(2024, 4, 14), dia: 14, mes: 4, ano: 1988, funcao: "Professor", foto: 'img/anivImg/may/pablo.jpg'},
+  //{nome: "Pablo Silva Pimentel", data: new Date(2024, 4, 14), dia: 14, mes: 4, ano: 1988, funcao: "Professor", foto: 'img/anivImg/may/pablo.jpg'},
     {nome: "Eliane Cristina Manfrini Gualberto", data: new Date(2024, 4, 21), dia: 21, mes: 4, ano: 1978, funcao: "Monitora", foto: 'img/anivImg/may/eliane.jpg'},
     {nome: "Valeria Geraldino Miranda", data: new Date(2024, 4, 25), dia: 25, mes: 4, ano: 1970, funcao: "Orientadora", foto: 'img/anivImg/may/valeria.jpg'},
+    {nome: "Robson Guido", data: new Date(2024, 4, 26), dia: 26, mes: 4, ano: 1970, funcao: "Professor", foto: 'img/anivImg/may/robson.jpeg'},
 
     {nome: "Larissa de Lima Cabral Martins", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1995, funcao: "Professora", foto: 'img/anivImg/junho/larissa.jpg'},
     {nome: "Izabel Marques Batista", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1976, funcao: "Zeladora", foto: 'img/anivImg/junho/izabel.png'},
