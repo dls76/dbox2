@@ -33,7 +33,7 @@ export const escalaQuintaPersonalizada = {
 };
 
 export function getDataAtual() {
-  return new Date(2026, 4, 28);
+  return new Date();
 }
 
 export const horarios = ["7", "10", "13"];
