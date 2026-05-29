@@ -1409,14 +1409,15 @@
     responsavelCulto = 'Feliz Sábado!';
   } else if (diaSemana === 4 && escalaQuintaPersonalizada[dataHoje]) {
     //Quinta-feira com escala personalizada
-    responsavelCulto = horarios.map((hora, index) => `${hora}h ${responsaveis[index]}`).join(' | ');
+    const escalaHoje = escalaQuintaPersonalizada[dataHoje];
+    responsavelCulto = horarios.map((hora, index) => `${hora}h ${escalaHoje[index]}`).join(' | ');
   } else {
     const responsavel = substituicoes[dataHoje] || nomes[diaSemana];
     responsavelCulto = horarios.map(hora => `${hora}h ${responsavel}`).join(' | ');
+
   }
 
   document.querySelector("#cultos").innerHTML = responsavelCulto;
-  //document.querySelector("#cultos").innerHTML = "Pr. Fábio";
 
 </script>
 

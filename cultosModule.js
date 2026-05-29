@@ -20,7 +20,6 @@ export const escalaQuintaPersonalizada = {
   "2026-03-12": ["Murilo", "Murilo", "Murilo"],
   "2026-03-19": ["Carol", "Carol", "Carol"],
   "2026-03-26": ["Renata", "Renata", "Renata"],
-  "2026-04-02": ["Andressa", "Andressa", "Andressa"],
   "2026-04-02": ["Rocha", "Rocha", "Rocha"],
   "2026-04-09": ["Valéria", "Valéria", "Valéria"],
   "2026-04-16": ["Joyce", "Joyce", "Joyce"],
@@ -28,10 +27,13 @@ export const escalaQuintaPersonalizada = {
   "2026-05-14": ["Jaque", "Jaque", "Jaque"],
   "2026-05-21": ["Douglas", "Douglas", "Douglas"],
   "2026-05-28": ["Murilo", "Murilo", "Murilo"],
+  "2026-06-11": ["Adm", "Adm", "Adm"],
+  "2026-06-18": ["Adm2", "Adm2", "Adm2"],
+  "2026-06-25": ["Adm3", "Adm3", "Adm3"]
 };
 
 export function getDataAtual() {
-  return new Date();
+  return new Date(2026, 4, 28);
 }
 
 export const horarios = ["7", "10", "13"];
