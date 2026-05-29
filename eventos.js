@@ -18,6 +18,7 @@ const evCard_eventos = [
     { evento: 'Excursão Terceirão', data: '2026-09-20T00:00:00', link: 'https://drive.google.com/drive/folders/1Laxq-eRY-EM6322TUkCK0g_Cww12QkJl?usp=sharing' },
     { evento: 'Beto Carrero', data: '2026-08-26T00:00:00', link: 'https://drive.google.com/drive/folders/1h6GEy5YH83yJrUtyRJ1L41_nK8M2v3fb?usp=sharing' },
     { evento: 'Escola de Pais', data: '2026-04-28T00:00:00', link: 'https://drive.google.com/drive/folders/1m74E9rHQJlrtdTBJmBBeUuHr9rBreT66?usp=drive_link' },
+    { evento: 'Formatura Infantil', data: '2026-12-17T00:00:00', link: 'https://drive.google.com/drive/folders/1r-BBO0JzakVTAZ0AftiO2oURcvnTDgSQ?usp=sharing' },
 ];
 
 const evCard_gradients = [
