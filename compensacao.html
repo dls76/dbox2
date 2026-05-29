@@ -14,77 +14,128 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             background-color: #f5f5f5;
         }
-        
-        h1 {
-            text-align: center;
-            padding: 20px 0;
+
+        header {
             background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
+            padding: 16px 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        h1 {
             font-size: 1.5rem;
             font-weight: 500;
-            box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
+            text-align: center;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: 2px solid #5DCDCD;
+            color: #5DCDCD;
+            border-radius: 8px;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: background 0.2s, color 0.2s;
+            font-size: 1rem;
+        }
+
+        .nav-btn:hover {
+            background: #5DCDCD;
+            color: white;
+        }
+
+        .btn-hoje {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0 12px;
+            width: auto;
+            white-space: nowrap;
+            letter-spacing: 0.03em;
+        }
+
+        .btn-hoje.ativo {
+            background: #5DCDCD;
+            color: white;
+        }
+
         main {
             width: 80%;
             max-width: 1500px;
             margin: 30px auto;
         }
-        
+
         .table-container {
             background: white;
             border-radius: 10px;
             padding: 20px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
         }
-        
+
         th, td {
             padding: 15px;
             text-align: center;
             border: 1px solid #e0e0e0;
             width: 16.66%;
         }
-        
+
         th:first-child, td:first-child {
             width: 10%;
         }
-        
+
         th {
             background: #5DCDCD;
             color: white;
             font-weight: 500;
             font-size: 0.95rem;
         }
-        
+
         td {
             background: #fafafa;
             color: #333;
             font-size: 0.9rem;
         }
-        
+
         td:first-child {
             font-weight: 600;
             color: #0066cc;
             background: #f0f0f0;
         }
-        
+
         .empty {
             background: #e8e8e8;
         }
-        
+
         .nome-funcionario {
             display: block;
             margin: 3px 0;
         }
-        
+
         .observacoes {
             background: white;
             border-radius: 10px;
@@ -92,7 +143,7 @@
             margin-top: 20px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         }
-        
+
         .observacoes h2 {
             font-size: 1.1rem;
             font-weight: 500;
@@ -101,42 +152,67 @@
             border-bottom: 2px solid #5DCDCD;
             padding-bottom: 10px;
         }
-        
+
         .obs-texto {
             color: #666;
             font-size: 0.9rem;
             line-height: 1.6;
         }
-        
+
         footer {
             background-color: lightgray;
             height: 20vh;
             margin-top: 50px;
         }
-        
+
         @media (max-width: 800px) {
             main {
                 width: 95%;
             }
-            
+
             h1 {
-                font-size: 1.2rem;
-                padding: 15px 10px;
+                font-size: 1rem;
+                padding: 0;
             }
-            
+
+            .btn-hoje {
+                display: none;
+            }
+
             th, td {
                 padding: 10px 5px;
                 font-size: 0.8rem;
             }
-            
+
             .table-container {
                 padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 0.85rem;
+            }
+
+            .nav-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 0.85rem;
             }
         }
     </style>
 </head>
 <body>
-    <h1 id="titulo">Escala de Compensação ADM</h1>
+
+    <header>
+        <div class="header-inner">
+            <button class="nav-btn" id="btnAnterior" title="Semana anterior">&#8592;</button>
+            <h1 id="titulo">Escala de Compensação ADM</h1>
+            <button class="nav-btn btn-hoje" id="btnHoje" title="Voltar para semana atual">Hoje</button>
+            <button class="nav-btn" id="btnProximo" title="Próxima semana">&#8594;</button>
+        </div>
+    </header>
+
     <main>
         <div class="table-container">
             <table id="tabelaCompensacao">
@@ -151,20 +227,21 @@
                     </tr>
                 </thead>
                 <tbody id="corpoTabela">
-                    <!-- Conteúdo será gerado via JavaScript -->
                 </tbody>
             </table>
         </div>
-        
+
         <div class="observacoes">
             <h2>Alterações da Semana</h2>
             <div id="textoObservacoes" class="obs-texto">Escala sem alterações</div>
         </div>
     </main>
+
     <footer></footer>
-    
+
     <script>
-        // Dados da escala de compensação PADRÃO
+        // ─── Dados ────────────────────────────────────────────────────────────────
+
         const escalaCompensacao = {
             manha: {
                 SEG: ['Pr. Fábio', 'Andressa'],
@@ -182,88 +259,94 @@
             }
         };
 
-        // ALTERAÇÕES PARA DIAS ESPECÍFICOS
-        // Formato: 'DD/MM/YYYY' do dia específico
         const alteracoesPorDia = {
             '25/05/2026': {
-                manha: {
-                    SEG: ['Pr. Fábio']
-                }
+                manha: { SEG: ['Pr. Fábio'] }
             },
             '29/05/2026': {
-                manha: {
-                    SEX: ['Diretor', 'Joyce', 'Andressa']
-                },
+                manha: { SEX: ['Diretor', 'Joyce', 'Andressa'] }
             },
-            
         };
 
-        // Função para obter a data de segunda-feira da semana atual
-        function getSegundaFeira() {
+        // ─── Estado de navegação ──────────────────────────────────────────────────
+
+        // offsetSemanas = 0 → semana "padrão" (calculada pela lógica dos 17h)
+        // offsetSemanas = 1 → próxima semana, -1 → semana anterior, etc.
+        let offsetSemanas = 0;
+
+        // ─── Helpers ──────────────────────────────────────────────────────────────
+
+        // Segunda-feira da semana "base" (respeita a regra das 17h de sexta)
+        function getSegundaFeiraBase() {
             const hoje = new Date();
-            const dia = hoje.getDay();
-            const diff = hoje.getDate() - dia + (dia === 0 ? -6 : 1);
-            const segunda = new Date(hoje.setDate(diff));
+            const diaSemana = hoje.getDay();
+            const hora = hoje.getHours();
+
+            const adiantarSemana = (diaSemana === 5 && hora >= 17)
+                                || diaSemana === 6
+                                || diaSemana === 0;
+
+            const diff = hoje.getDate() - diaSemana + (diaSemana === 0 ? -6 : 1);
+            const segunda = new Date(hoje);
+            segunda.setDate(diff);
+            segunda.setHours(0, 0, 0, 0);
+
+            if (adiantarSemana) {
+                segunda.setDate(segunda.getDate() + 7);
+            }
+
             return segunda;
         }
 
-        // Função para formatar data
+        // Segunda-feira considerando o offset de navegação
+        function getSegundaFeira() {
+            const base = getSegundaFeiraBase();
+            base.setDate(base.getDate() + offsetSemanas * 7);
+            return base;
+        }
+
         function formatarData(data) {
-            const dia = String(data.getDate()).padStart(2, '0');
-            const mes = String(data.getMonth() + 1).padStart(2, '0');
-            const ano = data.getFullYear();
+            const dia  = String(data.getDate()).padStart(2, '0');
+            const mes  = String(data.getMonth() + 1).padStart(2, '0');
+            const ano  = data.getFullYear();
             return `${dia}/${mes}/${ano}`;
         }
 
-        // Função para obter escala da semana atual (padrão ou especial)
-        function getEscalaSemanaAtual() {
+        // ─── Lógica de escala ─────────────────────────────────────────────────────
+
+        function getEscalaSemana() {
             const segunda = getSegundaFeira();
-            const escalaFinal = JSON.parse(JSON.stringify(escalaCompensacao)); // Clone profundo
+            const escalaFinal = JSON.parse(JSON.stringify(escalaCompensacao));
             const alteracoesEncontradas = [];
-            
-            // Mapeia os dias da semana
+
             const diasSemana = ['SEG', 'TER', 'QUA', 'QUI', 'SEX'];
-            const diasNomes = {
-                'SEG': 'Segunda',
-                'TER': 'Terça',
-                'QUA': 'Quarta',
-                'QUI': 'Quinta',
-                'SEX': 'Sexta'
-            };
-            
-            // Verifica cada dia da semana atual
+            const diasNomes  = { SEG: 'Segunda', TER: 'Terça', QUA: 'Quarta', QUI: 'Quinta', SEX: 'Sexta' };
+
             for (let i = 0; i < 5; i++) {
                 const dataAtual = new Date(segunda);
                 dataAtual.setDate(segunda.getDate() + i);
                 const dataFormatada = formatarData(dataAtual);
                 const diaSemana = diasSemana[i];
-                
-                // Se existe alteração para este dia específico
+
                 if (alteracoesPorDia[dataFormatada]) {
                     const alteracao = alteracoesPorDia[dataFormatada];
-                    
-                    // Processa manhã
+
                     if (alteracao.manha && alteracao.manha[diaSemana] !== undefined) {
                         const novo = alteracao.manha[diaSemana];
                         escalaFinal.manha[diaSemana] = novo;
-                        
-                        // Gera texto da observação
                         const nomes = novo.length > 0 ? novo.join(' e ') : 'Ninguém';
                         alteracoesEncontradas.push(`${diasNomes[diaSemana]}, ${dataFormatada} - Manhã: ${nomes}`);
                     }
-                    
-                    // Processa tarde
+
                     if (alteracao.tarde && alteracao.tarde[diaSemana] !== undefined) {
                         const novo = alteracao.tarde[diaSemana];
                         escalaFinal.tarde[diaSemana] = novo;
-                        
-                        // Gera texto da observação
                         const nomes = novo.length > 0 ? novo.join(' e ') : 'Ninguém';
                         alteracoesEncontradas.push(`${diasNomes[diaSemana]}, ${dataFormatada} - Tarde: ${nomes}`);
                     }
                 }
             }
-            
+
             return {
                 escala: escalaFinal,
                 isEspecial: alteracoesEncontradas.length > 0,
@@ -271,48 +354,47 @@
             };
         }
 
-        // Função para obter o período da semana
         function getPeriodoSemana() {
             const segunda = getSegundaFeira();
             const sexta = new Date(segunda);
             sexta.setDate(segunda.getDate() + 4);
-            
             return `${formatarData(segunda)} a ${formatarData(sexta)}`;
         }
 
-        // Atualizar título
+        // ─── Render ───────────────────────────────────────────────────────────────
+
         function atualizarTitulo() {
-            const titulo = document.getElementById('titulo');
-            titulo.textContent = `Escala de Compensação ADM - Semana de ${getPeriodoSemana()}`;
+            document.getElementById('titulo').textContent = `Compensações — ${getPeriodoSemana()}`;
         }
 
-        // Renderizar tabela
+        function atualizarBotaoHoje() {
+            const btn = document.getElementById('btnHoje');
+            // Destaca "Hoje" quando o usuário está visualizando a semana padrão
+            btn.classList.toggle('ativo', offsetSemanas === 0);
+        }
+
         function renderizarTabela() {
             const corpo = document.getElementById('corpoTabela');
-            corpo.innerHTML = ''; // Limpa a tabela
-            
-            const { escala } = getEscalaSemanaAtual();
-            
+            corpo.innerHTML = '';
+
+            const { escala } = getEscalaSemana();
             const periodos = [
                 { nome: 'Manhã', chave: 'manha' },
                 { nome: 'Tarde', chave: 'tarde' }
             ];
-            
             const dias = ['SEG', 'TER', 'QUA', 'QUI', 'SEX'];
-            
+
             periodos.forEach(periodo => {
                 const linha = document.createElement('tr');
-                
-                // Célula do período
+
                 const celulaPeriodo = document.createElement('td');
                 celulaPeriodo.textContent = periodo.nome;
                 linha.appendChild(celulaPeriodo);
-                
-                // Células dos dias
+
                 dias.forEach(dia => {
                     const celula = document.createElement('td');
                     const funcionarios = escala[periodo.chave][dia];
-                    
+
                     if (funcionarios && funcionarios.length > 0) {
                         funcionarios.forEach(func => {
                             const span = document.createElement('span');
@@ -323,37 +405,56 @@
                     } else {
                         celula.classList.add('empty');
                     }
-                    
+
                     linha.appendChild(celula);
                 });
-                
+
                 corpo.appendChild(linha);
             });
         }
 
-        // Renderizar observações
         function renderizarObservacoes() {
             const textoObs = document.getElementById('textoObservacoes');
-            const { isEspecial, observacoes } = getEscalaSemanaAtual();
-            
+            const { isEspecial, observacoes } = getEscalaSemana();
+
             if (!isEspecial || observacoes.length === 0) {
                 textoObs.textContent = 'Escala sem alterações';
                 return;
             }
-            
-            const textoFormatado = observacoes.map((obs, index) => 
-                `${index + 1}. ${obs}`
-            ).join('<br>');
-            
-            textoObs.innerHTML = textoFormatado;
+
+            textoObs.innerHTML = observacoes
+                .map((obs, i) => `${i + 1}. ${obs}`)
+                .join('<br>');
         }
 
-        // Inicializar página
-        document.addEventListener('DOMContentLoaded', () => {
+        function renderizar() {
             atualizarTitulo();
+            atualizarBotaoHoje();
             renderizarTabela();
             renderizarObservacoes();
+        }
+
+        // ─── Eventos de navegação ─────────────────────────────────────────────────
+
+        document.getElementById('btnAnterior').addEventListener('click', () => {
+            offsetSemanas--;
+            renderizar();
         });
+
+        document.getElementById('btnProximo').addEventListener('click', () => {
+            offsetSemanas++;
+            renderizar();
+        });
+
+        document.getElementById('btnHoje').addEventListener('click', () => {
+            offsetSemanas = 0;
+            renderizar();
+        });
+
+        // ─── Init ─────────────────────────────────────────────────────────────────
+
+        document.addEventListener('DOMContentLoaded', renderizar);
     </script>
+
 </body>
 </html>
