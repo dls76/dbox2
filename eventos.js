@@ -33,8 +33,10 @@ const slider = document.getElementById('evCard_sliderContent');
 const sliderWrapper = document.querySelector('.evCard_sliderWrapper');
 const btnPrev = document.querySelector('.evCard_btnPrev');
 const btnNext = document.querySelector('.evCard_btnNext');
+const btnReset = document.querySelector('.evCard_btnReset');
 
 let currentIndex = 0;
+let initialIndex = 0; // guarda o índice do próximo evento ao renderizar
 
 function isMobile() {
     return window.innerWidth <= 600;
@@ -66,7 +68,7 @@ function renderCards() {
     const hoje = new Date();
     hoje.setHours(0, 0, 0, 0);
 
-    const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
+    const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
     const eventosOrdenados = evCard_eventos
         .map((e) => {
             const dataEvento = new Date(e.data);
@@ -77,6 +79,8 @@ function renderCards() {
 
     currentIndex = eventosOrdenados.findIndex((e) => e.dataEvento >= hoje);
     if (currentIndex === -1) currentIndex = 0;
+
+    initialIndex = currentIndex; // salva o índice inicial (próximo evento)
 
     slider.innerHTML = eventosOrdenados.map((e, i) => `
     <div class="evCard_item">
@@ -98,11 +102,15 @@ function updateNavButtons() {
 
     btnPrev.disabled = currentIndex <= 0;
     btnNext.disabled = currentIndex >= maxIndex;
+    btnReset.disabled = currentIndex === initialIndex; // desabilita se já está na posição inicial
 
     btnPrev.style.opacity = btnPrev.disabled ? '0.5' : '1';
     btnNext.style.opacity = btnNext.disabled ? '0.5' : '1';
+    btnReset.style.opacity = btnReset.disabled ? '0.5' : '1';
+
     btnPrev.style.cursor = btnPrev.disabled ? 'not-allowed' : 'pointer';
     btnNext.style.cursor = btnNext.disabled ? 'not-allowed' : 'pointer';
+    btnReset.style.cursor = btnReset.disabled ? 'not-allowed' : 'pointer';
 }
 
 function updateSlider() {
@@ -138,6 +146,12 @@ btnPrev.addEventListener('click', () => {
     }
 });
 
+// Retorna ao índice inicial (próximo evento)
+btnReset.addEventListener('click', () => {
+    currentIndex = initialIndex;
+    updateSlider();
+});
+
 sliderWrapper.addEventListener('scroll', () => {
     if (!isMobile()) return;
 
@@ -163,4 +177,3 @@ renderCards();
 requestAnimationFrame(() => {
     updateSlider();
 });
-
