@@ -14,7 +14,7 @@ Rodar localmente:
 
 E-mails Adm
 
-murilo.silva@educadventista.org.br
+murilo.thomaz@educadventista.org.br
 josiane.vieira@educadventista.org.br
 fabio.fialek@educadventista.org.br
 carin.melo@educadventista.org.br
