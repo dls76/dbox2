@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal · Hub de Acesso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────────── */
+    :root {
+      --g: 8px;
+
+      /* cold palette */
+      --bg:        #f0f4f8;
+      --surface:   #ffffff;
+      --surface-2: #e8eef5;
+      --border:    #d1dce8;
+      --border-hover: #9bb4cc;
+
+      --ink-1:   #0d1b2a;   /* headings */
+      --ink-2:   #2c4158;   /* body */
+      --ink-3:   #5a7a96;   /* muted */
+      --ink-4:   #8fafc8;   /* placeholder */
+
+      --accent:  #1d6fa4;   /* primary CTA */
+      --accent-2:#0e4d78;
+      --teal:    #0d9488;
+      --sky:     #0ea5e9;
+      --slate:   #475569;
+
+      /* section accent lines */
+      --c-novos:       #1d6fa4;
+      --c-veteranos:   #0d9488;
+      --c-documentos:  #4f6d87;
+      --c-relatorios:  #6366f1;
+      --c-midias:      #0ea5e9;
+      --c-gratuidade:  #059669;
+
+      --radius: calc(var(--g) * 2);    /* 16px */
+      --radius-sm: var(--g);           /* 8px  */
+      --shadow-sm: 0 1px 3px rgba(13,27,42,.07), 0 1px 2px rgba(13,27,42,.04);
+      --shadow-md: 0 4px 16px rgba(13,27,42,.09), 0 2px 6px rgba(13,27,42,.05);
+      --shadow-lg: 0 16px 48px rgba(13,27,42,.13), 0 4px 12px rgba(13,27,42,.07);
+
+      --nav-h: 64px;
+      --font: 'DM Sans', sans-serif;
+      --mono: 'DM Mono', monospace;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink-2);
+      min-height: 100vh;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── NOISE OVERLAY ──────────────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      opacity: .018;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 180px;
+    }
+
+    /* ─── NAVBAR ─────────────────────────────────────────────── */
+    .navbar {
+      position: sticky; top: 0; z-index: 100;
+      height: var(--nav-h);
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(18px) saturate(1.4);
+      -webkit-backdrop-filter: blur(18px) saturate(1.4);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center;
+      padding: 0 calc(var(--g) * 4);
+    }
+    .navbar__inner {
+      max-width: 1200px; width: 100%; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .navbar__brand {
+      display: flex; align-items: center; gap: calc(var(--g) * 1.5);
+    }
+    .navbar__logo {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: var(--radius-sm);
+      display: grid; place-items: center;
+      color: #fff; font-size: 14px;
+      flex-shrink: 0;
+    }
+    .navbar__name {
+      font-size: 15px; font-weight: 600; letter-spacing: -.01em;
+      color: var(--ink-1);
+    }
+    .navbar__name span {
+      display: inline-block; width: 5px; height: 5px;
+      background: var(--teal); border-radius: 50%;
+      margin-left: 4px; vertical-align: middle; margin-top: -2px;
+    }
+
+    .navbar__links {
+      display: flex; align-items: center; gap: calc(var(--g) * 0.5);
+      list-style: none;
+    }
+    .navbar__links a {
+      display: flex; align-items: center; gap: 6px;
+      padding: calc(var(--g) * .75) calc(var(--g) * 1.5);
+      border-radius: var(--radius-sm);
+      font-size: 13.5px; font-weight: 500;
+      color: var(--ink-3);
+      transition: color .18s, background .18s;
+      position: relative;
+    }
+    .navbar__links a i { font-size: 11px; opacity: .7; }
+    .navbar__links a:hover {
+      color: var(--ink-1);
+      background: var(--surface-2);
+    }
+    .navbar__links a.active {
+      color: var(--accent);
+      background: #e8f2fb;
+    }
+    .navbar__links a.active i { opacity: 1; }
+
+    .navbar__cta {
+      display: flex; align-items: center; gap: calc(var(--g) * 1.5);
+    }
+    .btn-ghost {
+      font-family: var(--font);
+      font-size: 13px; font-weight: 500;
+      padding: calc(var(--g) * .75) calc(var(--g) * 2);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: transparent; color: var(--ink-3);
+      cursor: pointer; transition: all .18s;
+    }
+    .btn-ghost:hover { border-color: var(--border-hover); color: var(--ink-1); background: var(--surface-2); }
+    .btn-primary {
+      font-family: var(--font);
+      font-size: 13px; font-weight: 500;
+      padding: calc(var(--g) * .75) calc(var(--g) * 2);
+      border-radius: var(--radius-sm);
+      border: none;
+      background: var(--accent); color: #fff;
+      cursor: pointer; transition: background .18s, transform .1s;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .btn-primary i { font-size: 11px; }
+    .btn-primary:hover { background: var(--accent-2); transform: translateY(-1px); }
+
+    /* ─── HERO STRIP ─────────────────────────────────────────── */
+    .hero {
+      max-width: 1200px; margin: 0 auto;
+      padding: calc(var(--g) * 7) calc(var(--g) * 4) calc(var(--g) * 4);
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: calc(var(--g) * 4);
+    }
+    .hero__text {}
+    .hero__eyebrow {
+      font-size: 11px; font-weight: 500; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--ink-4);
+      font-family: var(--mono);
+      margin-bottom: calc(var(--g) * 1.5);
+      display: flex; align-items: center; gap: var(--g);
+    }
+    .hero__eyebrow::before {
+      content: ''; display: inline-block;
+      width: 24px; height: 1px; background: var(--border-hover);
+    }
+    .hero__title {
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 300; letter-spacing: -.03em;
+      color: var(--ink-1); line-height: 1.1;
+    }
+    .hero__title strong { font-weight: 600; }
+    .hero__subtitle {
+      margin-top: calc(var(--g) * 2);
+      font-size: 15px; color: var(--ink-3); font-weight: 400;
+      line-height: 1.6; max-width: 440px;
+    }
+    .hero__meta {
+      display: flex; align-items: center; gap: calc(var(--g) * 3);
+      flex-shrink: 0;
+    }
+    .hero__stat {
+      text-align: right;
+    }
+    .hero__stat-num {
+      font-size: 26px; font-weight: 300; color: var(--ink-1);
+      letter-spacing: -.04em; line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+    .hero__stat-num span { font-weight: 600; }
+    .hero__stat-label {
+      font-size: 11px; color: var(--ink-4); margin-top: 4px;
+      font-family: var(--mono); letter-spacing: .06em;
+    }
+    .hero__divider { width: 1px; height: 40px; background: var(--border); }
+
+    /* ─── GRID ───────────────────────────────────────────────── */
+    .grid-wrapper {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 calc(var(--g) * 4) calc(var(--g) * 8);
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: calc(var(--g) * 3);
+    }
+
+    /* ─── CARD ───────────────────────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex; flex-direction: column;
+      transition: box-shadow .22s, transform .22s, border-color .22s;
+    }
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--border-hover);
+    }
+
+    /* top accent stripe */
+    .card__stripe {
+      height: 3px;
+      flex-shrink: 0;
+    }
+
+    .card__header {
+      padding: calc(var(--g) * 3) calc(var(--g) * 3) calc(var(--g) * 2);
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: var(--g);
+    }
+    .card__title-group {}
+    .card__tag {
+      font-size: 10px; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; font-family: var(--mono);
+      color: var(--ink-4); margin-bottom: calc(var(--g) * .75);
+    }
+    .card__title {
+      font-size: 17px; font-weight: 600; letter-spacing: -.025em;
+      color: var(--ink-1); line-height: 1.2;
+    }
+    .card__badge {
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      border-radius: var(--radius-sm);
+      display: grid; place-items: center;
+      font-size: 13px;
+    }
+
+    .card__divider {
+      margin: 0 calc(var(--g) * 3);
+      height: 1px; background: var(--border);
+    }
+
+    .card__links {
+      list-style: none;
+      padding: calc(var(--g) * 1.5) calc(var(--g) * 1.5);
+      display: flex; flex-direction: column; gap: 2px;
+      flex: 1;
+    }
+    .card__link {
+      display: flex; align-items: center; gap: calc(var(--g) * 1.5);
+      padding: calc(var(--g) * 1.25) calc(var(--g) * 1.5);
+      border-radius: var(--radius-sm);
+      font-size: 13.5px; font-weight: 400;
+      color: var(--ink-2);
+      cursor: pointer;
+      transition: background .15s, color .15s, padding-left .15s;
+      position: relative;
+    }
+    .card__link i {
+      font-size: 12px; color: var(--ink-4);
+      width: 16px; text-align: center; flex-shrink: 0;
+      transition: color .15s;
+    }
+    .card__link:hover {
+      background: var(--surface-2);
+      color: var(--ink-1);
+      padding-left: calc(var(--g) * 2);
+    }
+    .card__link:hover i { color: var(--accent); }
+
+    .card__link-label {
+      flex: 1; line-height: 1.3;
+    }
+    .card__link-arrow {
+      font-size: 10px; color: var(--border-hover);
+      opacity: 0; transition: opacity .15s, transform .15s;
+    }
+    .card__link:hover .card__link-arrow {
+      opacity: 1; transform: translateX(2px);
+    }
+
+    .card__footer {
+      padding: calc(var(--g) * 2) calc(var(--g) * 3);
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .card__count {
+      font-size: 11px; color: var(--ink-4); font-family: var(--mono);
+    }
+    .card__see-all {
+      font-size: 12px; font-weight: 500; color: var(--accent);
+      display: flex; align-items: center; gap: 5px;
+      cursor: pointer;
+      transition: gap .15s;
+    }
+    .card__see-all i { font-size: 10px; }
+    .card__see-all:hover { gap: 8px; }
+
+    /* ─── CARD THEMES ────────────────────────────────────────── */
+    .card--novos      .card__stripe { background: var(--c-novos); }
+    .card--veteranos  .card__stripe { background: var(--c-veteranos); }
+    .card--documentos .card__stripe { background: var(--c-documentos); }
+    .card--relatorios .card__stripe { background: var(--c-relatorios); }
+    .card--midias     .card__stripe { background: var(--c-midias); }
+    .card--gratuidade .card__stripe { background: var(--c-gratuidade); }
+
+    .card--novos      .card__badge { background: #e8f2fb; color: var(--c-novos); }
+    .card--veteranos  .card__badge { background: #e0f5f3; color: var(--c-veteranos); }
+    .card--documentos .card__badge { background: #edf2f7; color: var(--c-documentos); }
+    .card--relatorios .card__badge { background: #eef0fd; color: var(--c-relatorios); }
+    .card--midias     .card__badge { background: #e0f4fd; color: var(--c-midias); }
+    .card--gratuidade .card__badge { background: #e0f5ee; color: var(--c-gratuidade); }
+
+    .card--novos      .card__see-all,
+    .card--novos      .card__link:hover i { color: var(--c-novos); }
+    .card--veteranos  .card__see-all,
+    .card--veteranos  .card__link:hover i { color: var(--c-veteranos); }
+    .card--documentos .card__see-all,
+    .card--documentos .card__link:hover i { color: var(--c-documentos); }
+    .card--relatorios .card__see-all,
+    .card--relatorios .card__link:hover i { color: var(--c-relatorios); }
+    .card--midias     .card__see-all,
+    .card--midias     .card__link:hover i { color: var(--c-midias); }
+    .card--gratuidade .card__see-all,
+    .card--gratuidade .card__link:hover i { color: var(--c-gratuidade); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: calc(var(--g) * 3) calc(var(--g) * 4);
+    }
+    .site-footer__inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--g);
+    }
+    .site-footer p {
+      font-size: 12px; color: var(--ink-4); font-family: var(--mono);
+    }
+    .site-footer__links {
+      display: flex; gap: calc(var(--g) * 3); list-style: none;
+    }
+    .site-footer__links a {
+      font-size: 12px; color: var(--ink-4);
+      transition: color .15s;
+    }
+    .site-footer__links a:hover { color: var(--ink-2); }
+
+    /* ─── ENTRANCE ANIMATIONS ────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero__text { animation: fadeUp .55s cubic-bezier(.22,.68,0,1.2) both; }
+    .hero__meta { animation: fadeUp .55s .12s cubic-bezier(.22,.68,0,1.2) both; }
+
+    .card {
+      opacity: 0;
+      animation: fadeUp .45s cubic-bezier(.22,.68,0,1.2) forwards;
+    }
+    .card:nth-child(1) { animation-delay: .10s; }
+    .card:nth-child(2) { animation-delay: .18s; }
+    .card:nth-child(3) { animation-delay: .26s; }
+    .card:nth-child(4) { animation-delay: .34s; }
+    .card:nth-child(5) { animation-delay: .42s; }
+    .card:nth-child(6) { animation-delay: .50s; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero__meta { display: none; }
+    }
+    @media (max-width: 640px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      .navbar__links { display: none; }
+      .hero { padding-top: calc(var(--g) * 4); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════ NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="navbar__inner">
+      <div class="navbar__brand">
+        <div class="navbar__logo"><i class="fa-solid fa-layer-group"></i></div>
+        <span class="navbar__name">Portal<span></span></span>
+      </div>
+
+      <ul class="navbar__links">
+        <li><a href="#" class="active"><i class="fa-regular fa-house"></i> Início</a></li>
+        <li><a href="#"><i class="fa-regular fa-compass"></i> Explorar</a></li>
+        <li><a href="#"><i class="fa-regular fa-bell"></i> Avisos</a></li>
+        <li><a href="#"><i class="fa-regular fa-circle-question"></i> Suporte</a></li>
+        <li><a href="#"><i class="fa-regular fa-address-card"></i> Sobre</a></li>
+      </ul>
+
+      <div class="navbar__cta">
+        <button class="btn-ghost">Entrar</button>
+        <button class="btn-primary"><i class="fa-regular fa-user-plus"></i> Criar conta</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════ HERO -->
+  <section class="hero" aria-label="Cabeçalho da página">
+    <div class="hero__text">
+      <p class="hero__eyebrow">Central de acesso</p>
+      <h1 class="hero__title">Tudo que você precisa,<br /><strong>organizado em um lugar.</strong></h1>
+      <p class="hero__subtitle">
+        Acesse documentos, relatórios, mídias e recursos gratuitos de forma rápida.
+        Navegue pelas categorias abaixo para encontrar o que procura.
+      </p>
+    </div>
+    <div class="hero__meta">
+      <div class="hero__stat">
+        <div class="hero__stat-num"><span>6</span></div>
+        <div class="hero__stat-label">categorias</div>
+      </div>
+      <div class="hero__divider"></div>
+      <div class="hero__stat">
+        <div class="hero__stat-num"><span>30+</span></div>
+        <div class="hero__stat-label">recursos</div>
+      </div>
+      <div class="hero__divider"></div>
+      <div class="hero__stat">
+        <div class="hero__stat-num"><span>1</span></div>
+        <div class="hero__stat-label">portal</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ GRID -->
+  <main class="grid-wrapper">
+    <div class="cards-grid">
+
+      <!-- ── NOVOS ────────────────────────────────── -->
+      <article class="card card--novos">
+        <div class="card__stripe"></div>
+        <div class="card__header">
+          <div class="card__title-group">
+            <p class="card__tag">Seção 01</p>
+            <h2 class="card__title">Novos</h2>
+          </div>
+          <div class="card__badge"><i class="fa-regular fa-sparkles"></i></div>
+        </div>
+        <div class="card__divider"></div>
+        <ul class="card__links" role="list">
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Guia de boas-vindas 2024</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Cadastro de novo usuário</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Orientações iniciais do sistema</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Política de privacidade atualizada</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Novidades da versão 3.2</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Checklist de integração</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+        </ul>
+        <div class="card__footer">
+          <span class="card__count">06 recursos</span>
+          <span class="card__see-all">Ver todos <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </article>
+
+      <!-- ── VETERANOS ─────────────────────────────── -->
+      <article class="card card--veteranos">
+        <div class="card__stripe"></div>
+        <div class="card__header">
+          <div class="card__title-group">
+            <p class="card__tag">Seção 02</p>
+            <h2 class="card__title">Veteranos</h2>
+          </div>
+          <div class="card__badge"><i class="fa-regular fa-shield-check"></i></div>
+        </div>
+        <div class="card__divider"></div>
+        <ul class="card__links" role="list">
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Área exclusiva de membros</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Histórico de atividades</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Reconhecimentos e certificados</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Fórum de especialistas</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Banco de boas práticas</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Projetos anteriores archivados</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+        </ul>
+        <div class="card__footer">
+          <span class="card__count">06 recursos</span>
+          <span class="card__see-all">Ver todos <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </article>
+
+      <!-- ── DOCUMENTOS ────────────────────────────── -->
+      <article class="card card--documentos">
+        <div class="card__stripe"></div>
+        <div class="card__header">
+          <div class="card__title-group">
+            <p class="card__tag">Seção 03</p>
+            <h2 class="card__title">Documentos</h2>
+          </div>
+          <div class="card__badge"><i class="fa-regular fa-file-lines"></i></div>
+        </div>
+        <div class="card__divider"></div>
+        <ul class="card__links" role="list">
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Regulamento interno vigente</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Formulário de solicitação padrão</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Termos de uso do portal</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Manual de procedimentos operacionais</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Contrato de adesão</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Atas de reuniões 2024</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+        </ul>
+        <div class="card__footer">
+          <span class="card__count">06 recursos</span>
+          <span class="card__see-all">Ver todos <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </article>
+
+      <!-- ── RELATÓRIOS ─────────────────────────────── -->
+      <article class="card card--relatorios">
+        <div class="card__stripe"></div>
+        <div class="card__header">
+          <div class="card__title-group">
+            <p class="card__tag">Seção 04</p>
+            <h2 class="card__title">Relatórios</h2>
+          </div>
+          <div class="card__badge"><i class="fa-regular fa-chart-bar"></i></div>
+        </div>
+        <div class="card__divider"></div>
+        <ul class="card__links" role="list">
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Relatório anual 2023</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Indicadores de desempenho — T2</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Análise de impacto de projetos</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Dashboard financeiro consolidado</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Levantamento de satisfação</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Resumo executivo semestral</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+        </ul>
+        <div class="card__footer">
+          <span class="card__count">06 recursos</span>
+          <span class="card__see-all">Ver todos <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </article>
+
+      <!-- ── MÍDIAS ─────────────────────────────────── -->
+      <article class="card card--midias">
+        <div class="card__stripe"></div>
+        <div class="card__header">
+          <div class="card__title-group">
+            <p class="card__tag">Seção 05</p>
+            <h2 class="card__title">Mídias</h2>
+          </div>
+          <div class="card__badge"><i class="fa-regular fa-photo-film"></i></div>
+        </div>
+        <div class="card__divider"></div>
+        <ul class="card__links" role="list">
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Galeria de imagens institucionais</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Vídeos de apresentação</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Kit de identidade visual</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Podcasts e áudios temáticos</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Press kit para imprensa</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Webinars gravados — 2024</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+        </ul>
+        <div class="card__footer">
+          <span class="card__count">06 recursos</span>
+          <span class="card__see-all">Ver todos <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </article>
+
+      <!-- ── GRATUIDADE ─────────────────────────────── -->
+      <article class="card card--gratuidade">
+        <div class="card__stripe"></div>
+        <div class="card__header">
+          <div class="card__title-group">
+            <p class="card__tag">Seção 06</p>
+            <h2 class="card__title">Gratuidade</h2>
+          </div>
+          <div class="card__badge"><i class="fa-regular fa-gift"></i></div>
+        </div>
+        <div class="card__divider"></div>
+        <ul class="card__links" role="list">
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">E-books gratuitos de capacitação</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Formulário de isenção de taxa</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Cursos online sem custo</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Ferramentas open source recomendadas</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Templates editáveis para download</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+          <li class="card__link" role="listitem" tabindex="0">
+            <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            <span class="card__link-label">Acervo de artigos científicos livres</span>
+            <i class="fa-solid fa-chevron-right card__link-arrow"></i>
+          </li>
+        </ul>
+        <div class="card__footer">
+          <span class="card__count">06 recursos</span>
+          <span class="card__see-all">Ver todos <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════ FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>© 2024 Portal · Todos os direitos reservados</p>
+      <ul class="site-footer__links">
+        <li><a href="#">Termos</a></li>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar: marca link ativo ao clicar
+    document.querySelectorAll('.navbar__links a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('.navbar__links a').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    // Cards: clique nos itens (feedback visual)
+    document.querySelectorAll('.card__link').forEach(item => {
+      item.addEventListener('click', () => {
+        item.style.opacity = '.5';
+        setTimeout(() => item.style.opacity = '', 180);
+      });
+      // Acessibilidade: Enter ativa o link
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter') item.click();
+      });
+    });
+
+    // "Ver todos" — feedback
+    document.querySelectorAll('.card__see-all').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const card = btn.closest('.card');
+        const title = card.querySelector('.card__title').textContent;
+        console.log(`Navegar para: ${title}`);
+      });
+    });
+
+    // Scroll reveal suave para cards que entram na viewport tardiamente
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(({ target, isIntersecting }) => {
+          if (isIntersecting) {
+            target.style.animationPlayState = 'running';
+            obs.unobserve(target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.card').forEach(c => {
+        c.style.animationPlayState = 'paused';
+        obs.observe(c);
+      });
+    }
+  </script>
+</body>
+</html>

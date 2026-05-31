@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DBox · Painel Institucional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    /* ─── TOKENS ──────────────────────────────────────────────── */
+    :root {
+      --g: 8px;
+
+      --bg:        #f0f4f8;
+      --surface:   #ffffff;
+      --surface-2: #e8eef5;
+      --border:    #d1dce8;
+      --border-hv: #9bb4cc;
+
+      --ink-1: #0d1b2a;
+      --ink-2: #2c4158;
+      --ink-3: #5a7a96;
+      --ink-4: #8fafc8;
+
+      --accent:   #1d4e89;
+      --accent-2: #163a68;
+      --accent-lt:#e6eef8;
+      --red:      #c0392b;
+      --red-lt:   #fdf0ee;
+      --teal:     #0d9488;
+      --teal-lt:  #e0f5f3;
+      --sky:      #0ea5e9;
+      --sky-lt:   #e0f4fd;
+      --indigo:   #4f46e5;
+      --indigo-lt:#eef0fd;
+      --amber:    #d97706;
+      --amber-lt: #fef3c7;
+      --green:    #059669;
+      --green-lt: #e0f5ee;
+
+      --radius:    16px;
+      --radius-sm: 8px;
+      --radius-xs: 6px;
+      --shadow-sm: 0 1px 3px rgba(13,27,42,.07), 0 1px 2px rgba(13,27,42,.04);
+      --shadow-md: 0 4px 16px rgba(13,27,42,.09), 0 2px 6px rgba(13,27,42,.05);
+
+      --nav-h: 60px;
+      --font: 'DM Sans', sans-serif;
+      --mono: 'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font); background: var(--bg); color: var(--ink-2); min-height: 100vh; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: var(--font); cursor: pointer; }
+
+    /* ─── NAVBAR ──────────────────────────────────────────────── */
+    .navbar {
+      position: sticky; top: 0; z-index: 100;
+      height: var(--nav-h);
+      background: var(--accent);
+      display: flex; align-items: center;
+      padding: 0 calc(var(--g) * 4);
+      box-shadow: 0 2px 16px rgba(13,30,66,.25);
+    }
+    .navbar__inner {
+      max-width: 1400px; width: 100%; margin: 0 auto;
+      display: flex; align-items: center; gap: calc(var(--g) * 5);
+    }
+    .navbar__brand {
+      font-size: 20px; font-weight: 700; color: #fff;
+      letter-spacing: -.03em; flex-shrink: 0;
+    }
+    .navbar__brand span { opacity: .55; font-weight: 300; }
+
+    .navbar__links {
+      display: flex; align-items: center; gap: 2px;
+      list-style: none; flex: 1;
+    }
+    .navbar__links a {
+      display: flex; align-items: center; gap: calc(var(--g) * 1);
+      padding: calc(var(--g) * .875) calc(var(--g) * 1.75);
+      border-radius: var(--radius-sm);
+      font-size: 13.5px; font-weight: 500;
+      color: rgba(255,255,255,.75);
+      transition: color .15s, background .15s;
+    }
+    .navbar__links a i { font-size: 13px; }
+    .navbar__links a:hover { color: #fff; background: rgba(255,255,255,.12); }
+    .navbar__links a.active { color: #fff; background: rgba(255,255,255,.18); }
+
+    .navbar__actions {
+      margin-left: auto; display: flex; gap: var(--g);
+    }
+    .navbar__icon-btn {
+      width: 36px; height: 36px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.1);
+      color: rgba(255,255,255,.8); font-size: 13px;
+      display: grid; place-items: center;
+      transition: all .15s;
+    }
+    .navbar__icon-btn:hover { background: rgba(255,255,255,.2); color: #fff; }
+
+    /* ─── LAYOUT ──────────────────────────────────────────────── */
+    .page {
+      max-width: 1400px; margin: 0 auto;
+      padding: calc(var(--g) * 4);
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: calc(var(--g) * 3);
+      align-items: start;
+    }
+    .col { display: flex; flex-direction: column; gap: calc(var(--g) * 3); }
+
+    /* ─── CARD BASE ───────────────────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: box-shadow .22s, transform .22s, border-color .22s;
+    }
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-hv);
+      transform: translateY(-1px);
+    }
+    .card__head {
+      padding: calc(var(--g) * 2.5) calc(var(--g) * 3) calc(var(--g) * 2);
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .card__title {
+      font-size: 13px; font-weight: 600; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--red);
+      font-family: var(--mono);
+      display: flex; align-items: center; gap: var(--g);
+    }
+    .card__title::before {
+      content: ''; display: block;
+      width: 3px; height: 14px;
+      border-radius: 2px; background: currentColor;
+    }
+
+    /* ─── ESCALAS ─────────────────────────────────────────────── */
+    .escalas-list { list-style: none; }
+    .escala-item {
+      display: flex; align-items: center;
+      padding: calc(var(--g) * 1.75) calc(var(--g) * 3);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background .15s;
+      gap: calc(var(--g) * 1.5);
+    }
+    .escala-item:last-child { border-bottom: none; }
+    .escala-item:hover { background: var(--surface-2); }
+    .escala-item__dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--border-hv); flex-shrink: 0;
+      transition: background .15s;
+    }
+    .escala-item:hover .escala-item__dot { background: var(--accent); }
+    .escala-item__body { flex: 1; min-width: 0; }
+    .escala-item__name {
+      font-size: 13.5px; font-weight: 600; color: var(--ink-1);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .escala-item__sub {
+      font-size: 11.5px; color: var(--ink-4); margin-top: 1px;
+      font-family: var(--mono);
+    }
+    .escala-item__chevron {
+      font-size: 10px; color: var(--border-hv);
+      flex-shrink: 0;
+      transition: color .15s, transform .15s;
+    }
+    .escala-item:hover .escala-item__chevron {
+      color: var(--accent); transform: translateX(2px);
+    }
+
+    /* ─── LINKS RÁPIDOS ───────────────────────────────────────── */
+    .links-grid {
+      padding: calc(var(--g) * 2.5) calc(var(--g) * 3);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: calc(var(--g) * 1.5);
+    }
+    .quick-link {
+      display: flex; flex-direction: column; align-items: center;
+      gap: calc(var(--g) * 1);
+      padding: calc(var(--g) * 2) var(--g);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all .18s;
+      background: var(--bg);
+    }
+    .quick-link:hover {
+      background: var(--accent-lt);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(29,78,137,.12);
+    }
+    .quick-link__icon {
+      width: 40px; height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-lt);
+      display: grid; place-items: center;
+      font-size: 16px; color: var(--accent);
+      transition: background .18s;
+    }
+    .quick-link:hover .quick-link__icon {
+      background: var(--accent); color: #fff;
+    }
+    .quick-link__label {
+      font-size: 11.5px; font-weight: 500; color: var(--ink-3);
+      text-align: center; line-height: 1.2;
+    }
+    .quick-link:hover .quick-link__label { color: var(--accent); }
+
+    /* ─── CALENDÁRIO ──────────────────────────────────────────── */
+    .calendar-wrap { padding: calc(var(--g) * 2.5) calc(var(--g) * 3) calc(var(--g) * 3); }
+    .cal-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: calc(var(--g) * 2.5);
+    }
+    .cal-nav__month {
+      font-size: 15px; font-weight: 600; color: var(--ink-1);
+      letter-spacing: -.02em;
+    }
+    .cal-nav__btn {
+      width: 28px; height: 28px;
+      border-radius: var(--radius-xs);
+      border: 1px solid var(--border);
+      background: transparent; color: var(--ink-3);
+      font-size: 11px; display: grid; place-items: center;
+      transition: all .15s;
+    }
+    .cal-nav__btn:hover { background: var(--surface-2); color: var(--ink-1); border-color: var(--border-hv); }
+
+    .cal-grid { width: 100%; border-collapse: collapse; }
+    .cal-grid th {
+      font-size: 10px; font-weight: 500; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--ink-4);
+      font-family: var(--mono);
+      padding: 0 0 calc(var(--g) * 1.5);
+      text-align: center;
+    }
+    .cal-grid td {
+      text-align: center;
+      padding: 3px;
+    }
+    .cal-day {
+      width: 32px; height: 32px;
+      border-radius: var(--radius-sm);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 12.5px; font-weight: 400; color: var(--ink-2);
+      cursor: pointer; transition: all .15s;
+      font-variant-numeric: tabular-nums;
+    }
+    .cal-day:hover { background: var(--surface-2); color: var(--ink-1); }
+    .cal-day--other { color: var(--border-hv); }
+    .cal-day--weekend { color: var(--accent); font-weight: 500; }
+    .cal-day--has-event { position: relative; font-weight: 600; }
+    .cal-day--has-event::after {
+      content: ''; position: absolute; bottom: 3px; left: 50%; transform: translateX(-50%);
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--red);
+    }
+    .cal-day--today {
+      background: var(--accent) !important;
+      color: #fff !important; font-weight: 600;
+      box-shadow: 0 2px 8px rgba(29,78,137,.35);
+    }
+    .cal-day--selected {
+      background: var(--accent-lt);
+      color: var(--accent); font-weight: 600;
+      border: 1px solid var(--accent);
+    }
+
+    .cal-footer {
+      display: flex; justify-content: flex-end;
+      margin-top: calc(var(--g) * 2.5);
+    }
+    .btn-outline {
+      padding: calc(var(--g) * .875) calc(var(--g) * 2.5);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--accent);
+      background: transparent; color: var(--accent);
+      font-size: 12.5px; font-weight: 500;
+      transition: all .15s;
+    }
+    .btn-outline:hover { background: var(--accent); color: #fff; }
+
+    /* ─── ANIVERSARIANTES ─────────────────────────────────────── */
+    .birthday-list { list-style: none; }
+    .birthday-item {
+      display: flex; align-items: center; gap: calc(var(--g) * 1.5);
+      padding: calc(var(--g) * 1.75) calc(var(--g) * 3);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .birthday-item:last-child { border-bottom: none; }
+    .birthday-item:hover { background: var(--surface-2); }
+
+    .birthday-avatar {
+      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+      object-fit: cover; border: 2px solid var(--border);
+      background: var(--surface-2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 600; color: var(--accent);
+      overflow: hidden;
+    }
+    .birthday-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+    .birthday-info { flex: 1; min-width: 0; }
+    .birthday-name {
+      font-size: 13px; font-weight: 600; color: var(--ink-1);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .birthday-role {
+      font-size: 11px; color: var(--ink-4); margin-top: 1px; font-family: var(--mono);
+    }
+    .birthday-meta { text-align: right; flex-shrink: 0; }
+    .birthday-date {
+      font-size: 13px; font-weight: 700; color: var(--ink-1);
+      font-variant-numeric: tabular-nums;
+    }
+    .birthday-when {
+      font-size: 10.5px; color: var(--ink-4); margin-top: 1px; font-family: var(--mono);
+    }
+
+    .card__foot {
+      padding: calc(var(--g) * 2) calc(var(--g) * 3);
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: flex-end;
+    }
+
+    /* ─── ANIMS ───────────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .col { opacity: 0; animation: fadeUp .45s cubic-bezier(.22,.68,0,1.2) forwards; }
+    .col:nth-child(1) { animation-delay: .05s; }
+    .col:nth-child(2) { animation-delay: .18s; }
+    .card { transition: box-shadow .22s, transform .22s, border-color .22s; }
+
+    /* ─── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .page { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .page { padding: calc(var(--g) * 2); }
+      .navbar__links { display: none; }
+    }
+
+    /* ─── EVENTOS DO MÊS ─────────────────────────────────────── */
+    .events-list { list-style: none; padding: calc(var(--g) * 2) calc(var(--g) * 3); display: flex; flex-direction: column; gap: 4px; }
+    .event-item {
+      display: flex; align-items: center; gap: calc(var(--g) * 1.5);
+      padding: calc(var(--g) * 1) calc(var(--g) * 1.5);
+      border-radius: var(--radius-sm);
+      transition: background .15s; cursor: pointer;
+    }
+    .event-item:hover { background: var(--surface-2); }
+    .event-item__badge {
+      flex-shrink: 0;
+      min-width: 28px; height: 28px; border-radius: var(--radius-xs);
+      background: var(--accent-lt); color: var(--accent);
+      font-size: 11px; font-weight: 700; font-family: var(--mono);
+      display: flex; align-items: center; justify-content: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .event-item__label { font-size: 13px; color: var(--ink-2); flex: 1; }
+    .event-item__tag {
+      font-size: 10px; font-family: var(--mono); font-weight: 500;
+      padding: 2px 6px; border-radius: 4px;
+      background: var(--surface-2); color: var(--ink-4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ══════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <div class="navbar__brand">D<span>Box</span></div>
+      <ul class="navbar__links">
+        <li><a href="#" class="active"><i class="fa-regular fa-house"></i> Home</a></li>
+        <li><a href="#"><i class="fa-regular fa-building-columns"></i> Administrativo</a></li>
+        <li><a href="#"><i class="fa-regular fa-graduation-cap"></i> Pedagógico</a></li>
+        <li><a href="#"><i class="fa-regular fa-hands-praying"></i> Espiritual</a></li>
+        <li><a href="#"><i class="fa-regular fa-chart-line"></i> Matrículas</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <button class="navbar__icon-btn"><i class="fa-regular fa-shield-check"></i></button>
+        <button class="navbar__icon-btn"><i class="fa-regular fa-phone"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ GRID ════════════════════════════════════════════════ -->
+  <div class="page">
+
+    <!-- ══ COLUNA ESQUERDA ══════════════════════════════════════ -->
+    <div class="col">
+
+      <!-- ── ESCALAS ──────────────────────────────────────────── -->
+      <div class="card">
+        <div class="card__head">
+          <span class="card__title">Escalas</span>
+        </div>
+        <ul class="escalas-list">
+          <li class="escala-item">
+            <span class="escala-item__dot"></span>
+            <div class="escala-item__body">
+              <div class="escala-item__name">Culto do dia</div>
+              <div class="escala-item__sub">Feliz Sábado!</div>
+            </div>
+            <i class="fa-solid fa-chevron-right escala-item__chevron"></i>
+          </li>
+          <li class="escala-item">
+            <span class="escala-item__dot"></span>
+            <div class="escala-item__body">
+              <div class="escala-item__name">Compensação</div>
+              <div class="escala-item__sub">Semana com feriado</div>
+            </div>
+            <i class="fa-solid fa-chevron-right escala-item__chevron"></i>
+          </li>
+          <li class="escala-item">
+            <span class="escala-item__dot"></span>
+            <div class="escala-item__body">
+              <div class="escala-item__name">Entrevistas</div>
+              <div class="escala-item__sub">Feliz Sábado!</div>
+            </div>
+            <i class="fa-solid fa-chevron-right escala-item__chevron"></i>
+          </li>
+          <li class="escala-item">
+            <span class="escala-item__dot"></span>
+            <div class="escala-item__body">
+              <div class="escala-item__name">Plantão de sexta</div>
+              <div class="escala-item__sub">05/06 · Recesso</div>
+            </div>
+            <i class="fa-solid fa-chevron-right escala-item__chevron"></i>
+          </li>
+          <li class="escala-item">
+            <span class="escala-item__dot"></span>
+            <div class="escala-item__body">
+              <div class="escala-item__name">Reunião Administrativa</div>
+              <div class="escala-item__sub">Terça, 09 de Junho · 14h</div>
+            </div>
+            <i class="fa-solid fa-chevron-right escala-item__chevron"></i>
+          </li>
+          <li class="escala-item">
+            <span class="escala-item__dot"></span>
+            <div class="escala-item__body">
+              <div class="escala-item__name">Hino Nacional</div>
+              <div class="escala-item__sub">Nenhuma escala futura</div>
+            </div>
+            <i class="fa-solid fa-chevron-right escala-item__chevron"></i>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ── LINKS RÁPIDOS ────────────────────────────────────── -->
+      <div class="card">
+        <div class="card__head">
+          <span class="card__title">Links Rápidos</span>
+        </div>
+        <div class="links-grid">
+          <div class="quick-link">
+            <div class="quick-link__icon"><i class="fa-regular fa-calendar-days"></i></div>
+            <span class="quick-link__label">Calendário</span>
+          </div>
+          <div class="quick-link">
+            <div class="quick-link__icon"><i class="fa-regular fa-envelope"></i></div>
+            <span class="quick-link__label">Comunicados</span>
+          </div>
+          <div class="quick-link">
+            <div class="quick-link__icon"><i class="fa-regular fa-list-check"></i></div>
+            <span class="quick-link__label">RA</span>
+          </div>
+          <div class="quick-link">
+            <div class="quick-link__icon"><i class="fa-regular fa-user-plus"></i></div>
+            <span class="quick-link__label">Vagas</span>
+          </div>
+          <div class="quick-link">
+            <div class="quick-link__icon"><i class="fa-regular fa-desktop"></i></div>
+            <span class="quick-link__label">7Edu</span>
+          </div>
+          <div class="quick-link">
+            <div class="quick-link__icon"><i class="fa-regular fa-comment-dots"></i></div>
+            <span class="quick-link__label">Feedback</span>
+          </div>
+          <div class="quick-link">
+            <div class="quick-link__icon"><i class="fa-regular fa-star"></i></div>
+            <span class="quick-link__label">Master</span>
+          </div>
+          <div class="quick-link">
+            <div class="quick-link__icon"><i class="fa-regular fa-folder-open"></i></div>
+            <span class="quick-link__label">ASP 2026</span>
+          </div>
+          <div class="quick-link">
+            <div class="quick-link__icon"><i class="fa-regular fa-building"></i></div>
+            <span class="quick-link__label">Concorrentes</span>
+          </div>
+          <div class="quick-link">
+            <div class="quick-link__icon"><i class="fa-regular fa-chart-pie"></i></div>
+            <span class="quick-link__label">Relatórios</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /col esquerda -->
+
+    <!-- ══ COLUNA DIREITA ════════════════════════════════════════ -->
+    <div class="col">
+
+      <!-- ── CALENDÁRIO + EVENTOS ──────────────────────────────── -->
+      <div class="card">
+        <div class="card__head">
+          <span class="card__title">Calendário</span>
+        </div>
+        <div class="calendar-wrap">
+          <div class="cal-nav">
+            <button class="cal-nav__btn" id="cal-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <span class="cal-nav__month" id="cal-month-label">Maio 2026</span>
+            <button class="cal-nav__btn" id="cal-next"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+          <table class="cal-grid" id="cal-table">
+            <thead><tr id="cal-head"></tr></thead>
+            <tbody id="cal-body"></tbody>
+          </table>
+          <div class="cal-footer">
+            <button class="btn-outline" id="cal-today-btn">Hoje</button>
+          </div>
+        </div>
+        <div class="card__divider" style="height:1px;background:var(--border);margin:0 calc(var(--g)*3);"></div>
+        <ul class="events-list">
+          <li class="event-item">
+            <span class="event-item__badge">05</span>
+            <span class="event-item__label">Reunião de coordenação</span>
+            <span class="event-item__tag">pedagógico</span>
+          </li>
+          <li class="event-item">
+            <span class="event-item__badge">08</span>
+            <span class="event-item__label">Conselho de classe</span>
+            <span class="event-item__tag">administrativo</span>
+          </li>
+          <li class="event-item">
+            <span class="event-item__badge">13</span>
+            <span class="event-item__label">Culto de início de semestre</span>
+            <span class="event-item__tag">espiritual</span>
+          </li>
+          <li class="event-item">
+            <span class="event-item__badge">20</span>
+            <span class="event-item__label">Entrega de relatórios — T1</span>
+            <span class="event-item__tag">relatórios</span>
+          </li>
+          <li class="event-item">
+            <span class="event-item__badge">28</span>
+            <span class="event-item__label">Encerramento de matrículas</span>
+            <span class="event-item__tag">matrículas</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ── ANIVERSARIANTES ───────────────────────────────────── -->
+      <div class="card">
+        <div class="card__head">
+          <span class="card__title">Próximos Aniversariantes</span>
+        </div>
+        <ul class="birthday-list">
+          <li class="birthday-item">
+            <div class="birthday-avatar">LC</div>
+            <div class="birthday-info">
+              <div class="birthday-name">Larissa de Lima Cabr…</div>
+              <div class="birthday-role">Professora</div>
+            </div>
+            <div class="birthday-meta">
+              <div class="birthday-date">06/06</div>
+              <div class="birthday-when">em 7 dias</div>
+            </div>
+          </li>
+          <li class="birthday-item">
+            <div class="birthday-avatar">IB</div>
+            <div class="birthday-info">
+              <div class="birthday-name">Izabel Marques Batis…</div>
+              <div class="birthday-role">Zeladora</div>
+            </div>
+            <div class="birthday-meta">
+              <div class="birthday-date">06/06</div>
+              <div class="birthday-when">em 7 dias</div>
+            </div>
+          </li>
+          <li class="birthday-item">
+            <div class="birthday-avatar">RL</div>
+            <div class="birthday-info">
+              <div class="birthday-name">Rutilea Lopes</div>
+              <div class="birthday-role">Tutora</div>
+            </div>
+            <div class="birthday-meta">
+              <div class="birthday-date">14/06</div>
+              <div class="birthday-when">em 15 dias</div>
+            </div>
+          </li>
+          <li class="birthday-item">
+            <div class="birthday-avatar">JF</div>
+            <div class="birthday-info">
+              <div class="birthday-name">Joyce da Silva Ferre…</div>
+              <div class="birthday-role">Professora</div>
+            </div>
+            <div class="birthday-meta">
+              <div class="birthday-date">28/06</div>
+              <div class="birthday-when">em 29 dias</div>
+            </div>
+          </li>
+          <li class="birthday-item">
+            <div class="birthday-avatar">AB</div>
+            <div class="birthday-info">
+              <div class="birthday-name">Ana Prado Bevilaqua</div>
+              <div class="birthday-role">Função</div>
+            </div>
+            <div class="birthday-meta">
+              <div class="birthday-date">04/07</div>
+              <div class="birthday-when">em 35 dias</div>
+            </div>
+          </li>
+        </ul>
+        <div class="card__foot">
+          <button class="btn-outline">Lista completa</button>
+        </div>
+      </div>
+
+    </div><!-- /col direita -->
+
+  </div><!-- /page -->
+
+  <script>
+    // ── NAV active ──────────────────────────────────────────────
+    document.querySelectorAll('.navbar__links a').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('.navbar__links a').forEach(x => x.classList.remove('active'));
+        a.classList.add('active');
+      });
+    });
+
+ // ── CALENDAR ────────────────────────────────────────────────
+    const DAYS   = ['D','S','T','Q','Q','S','S'];
+    const MONTHS = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho',
+                    'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+ 
+    // Events: dates with dots (day number only, per-month)
+    const EVENTS = { '2026-5': [5,8,9,13,20,21,28], '2026-6': [3,10,15] };
+ 
+    let current = new Date(2026, 4, 1); // May 2026
+    const today  = new Date(2026, 4, 30); // today per context
+    let selectedDate = null;
+ 
+    function renderCalendar() {
+      const y = current.getFullYear(), m = current.getMonth();
+      document.getElementById('cal-month-label').textContent = `${MONTHS[m]} ${y}`;
+ 
+      // head
+      const head = document.getElementById('cal-head');
+      head.innerHTML = DAYS.map(d => `<th>${d}</th>`).join('');
+ 
+      // body
+      const first = new Date(y, m, 1).getDay();
+      const days  = new Date(y, m+1, 0).getDate();
+      const prevDays = new Date(y, m, 0).getDate();
+      const key   = `${y}-${m+1}`;
+      const events = EVENTS[key] || [];
+ 
+      let html = '';
+      for (let row = 0; row < 6; row++) {
+        let rowHtml = '<tr>';
+        let lastDayInRow = 0;
+        for (let col = 0; col < 7; col++) {
+          const cell = row * 7 + col;
+          let num, cls = 'cal-day', title;
+          if (cell < first) {
+            num = prevDays - first + cell + 1;
+            cls += ' cal-day--other';
+            title = `prev:${num}`;
+          } else if (cell - first >= days) {
+            num = cell - first - days + 1;
+            cls += ' cal-day--other';
+            title = `next:${num}`;
+          } else {
+            num = cell - first + 1;
+            lastDayInRow = num;
+            title = `cur:${num}`;
+            if (col === 0 || col === 6) cls += ' cal-day--weekend';
+            if (events.includes(num)) cls += ' cal-day--has-event';
+            if (y === today.getFullYear() && m === today.getMonth() && num === today.getDate())
+              cls += ' cal-day--today';
+            if (selectedDate && y === selectedDate.y && m === selectedDate.m && num === selectedDate.d)
+              cls += ' cal-day--selected';
+          }
+          rowHtml += `<td><span class="${cls}" data-date="${title}">${num}</span></td>`;
+        }
+        rowHtml += '</tr>';
+        html += rowHtml;
+        if (lastDayInRow >= days) break;
+      }
+      document.getElementById('cal-body').innerHTML = html;
+ 
+      // click
+      document.querySelectorAll('.cal-day:not(.cal-day--other)').forEach(el => {
+        el.addEventListener('click', () => {
+          selectedDate = { y, m, d: parseInt(el.textContent) };
+          renderCalendar();
+        });
+      });
+    }
+ 
+    document.getElementById('cal-prev').addEventListener('click', () => {
+      current.setMonth(current.getMonth() - 1);
+      renderCalendar();
+    });
+    document.getElementById('cal-next').addEventListener('click', () => {
+      current.setMonth(current.getMonth() + 1);
+      renderCalendar();
+    });
+    document.getElementById('cal-today-btn').addEventListener('click', () => {
+      current = new Date(today.getFullYear(), today.getMonth(), 1);
+      selectedDate = null;
+      renderCalendar();
+    });
+ 
+    renderCalendar();
+  </script>
+</body>
+</html>
