@@ -213,6 +213,13 @@
             padding-bottom: 8px;
             border-bottom: 2px solid rgba(26, 58, 92, 0.15);
             letter-spacing: 0.3px;
+
+            /* sticky dentro do container scrollável */
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #eaf0f8;
+            padding-top: 6px;
         }
 
         /* ── Lista de cards (um por linha) ── */
@@ -220,6 +227,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            padding-top: 10px;
         }
 
         /* ── Card de culto ── */
@@ -358,6 +366,71 @@
             font-weight: 600;
             text-align: center;
         }
+
+        @media (max-width: 768px) {
+            body {
+                overflow: auto;
+            }
+
+            .wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                gap: 0;
+            }
+
+            .calendar-container {
+                display: none;
+            }
+
+            .container {
+                height: auto;
+                overflow: visible;
+            }
+
+            .month-section {
+                margin-bottom: 28px;
+                overflow: visible;
+            }
+
+            .month-title {
+                font-size: 1.2em;
+                position: sticky;
+                top: 50px;
+                /* altura do header fixo */
+                background-color: #eaf0f8;
+                z-index: 10;
+                padding-top: 6px;
+                padding-bottom: 8px;
+            }
+
+            .week-grid {
+                padding-top: 10px;
+            }
+
+            .card-header {
+                min-width: 70px;
+                padding: 10px 12px;
+            }
+
+            .card-day-number {
+                font-size: 1.7em;
+            }
+
+            .card-body {
+                padding: 10px 12px;
+            }
+
+            .horario-row {
+                padding: 0 6px;
+            }
+
+            .horario-responsavel {
+                font-size: 0.78em;
+            }
+        }
     </style>
 </head>
 
@@ -381,7 +454,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" id="main-container">
             <div id="event-list"></div>
         </div>
     </div>
@@ -399,6 +472,7 @@
             1: ["Pr. Gabriel", "Pr. Gabriel", "Pr. Gabriel"],
             2: ["Pr. Danylo", "Pr. Danylo", "Pr. Danylo"],
             3: ["Pr. Fábio", "Pr. Fábio", "Pr. Fábio"],
+            4: ["Adm", "Adm", "Adm"],
             5: ["Pr. Fábio", "Pr. Fábio", "Pr. Fábio"],
         };
 
@@ -415,8 +489,9 @@
             "2026-05-21": ["Douglas", "Douglas", "Douglas"],
             "2026-05-28": ["Murilo", "Murilo", "Murilo"],
             "2026-06-11": ["Adm", "Adm", "Adm"],
-            "2026-06-18": ["Adm2", "Adm2", "Adm2"],
-            "2026-06-25": ["Adm3", "Adm3", "Adm3"],
+            "2026-06-18": ["Adm", "Adm", "Adm"],
+            "2026-06-25": ["Adm", "Adm", "Adm"],
+            "2026-07-02": ["Adm", "Adm", "Adm"],
         };
 
         const WEEKDAY_NAMES = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
@@ -451,16 +526,21 @@
         today.setHours(0, 0, 0, 0);
         const todayISO = toISO(today);
 
+        // displayedDate controls the calendar month shown
         let displayedDate = new Date(today);
 
         const scheduleStart = new Date("2026-03-02");
-        const scheduleEnd = new Date("2026-05-31");
+        const scheduleEnd = new Date("2026-12-04");
         const allDays = generateSchedule(scheduleStart, scheduleEnd);
 
-        // ── Encontra o ISO do próximo culto (>= hoje) ──────────────────────
+        // Find the next event (>= today)
         const nextDay = allDays.find(item => item.iso >= todayISO);
         const nextISO = nextDay ? nextDay.iso : null;
 
+        // ── Flag to suppress scroll observer while programmatically scrolling ──
+        let suppressScrollSync = false;
+
+        // ── Render calendar for the current displayedDate month ──
         function renderCalendar() {
             const calendar = document.getElementById("calendar");
             const monthYear = document.getElementById("month-year");
@@ -496,6 +576,7 @@
             }
         }
 
+        // ── Render all events (always renders all months) ──
         function renderEvents() {
             const list = document.getElementById("event-list");
             list.innerHTML = "";
@@ -510,6 +591,9 @@
                     currentMonth = monthName;
                     const section = document.createElement("div");
                     section.className = "month-section";
+                    // Data attribute for scroll detection
+                    section.dataset.year = item.date.getFullYear();
+                    section.dataset.month = item.date.getMonth();
 
                     const title = document.createElement("div");
                     title.className = "month-title";
@@ -527,21 +611,18 @@
                 const card = document.createElement("div");
                 card.className = "event-card";
 
-                // ── Identifica hoje e próximo culto ─────────────────────────
                 if (item.iso === todayISO) {
                     card.classList.add("today-card");
                 } else if (item.iso === nextISO) {
                     card.classList.add("next-card");
                 }
 
-                // ID único para rolar até o card
                 card.id = `card-${item.iso}`;
 
                 const dayNum = item.date.getDate();
                 const weekday = WEEKDAY_NAMES[item.dow];
                 const monthShort = MONTH_NAMES[item.date.getMonth()].substring(0, 3);
 
-                // Cabeçalho lateral
                 const header = document.createElement("div");
                 header.className = "card-header";
                 header.innerHTML = `
@@ -550,7 +631,6 @@
                     <span class="card-date-full">${monthShort} ${item.date.getFullYear()}</span>
                 `;
 
-                // Corpo horizontal com os 3 horários
                 const body = document.createElement("div");
                 body.className = "card-body";
 
@@ -568,45 +648,128 @@
                 card.appendChild(body);
                 weekGrid.appendChild(card);
             });
-
-            // ── Rola até o próximo culto ao carregar ────────────────────────
-            setTimeout(() => {
-                const container = document.querySelector(".container");
-                const target = nextISO
-                    ? document.getElementById(`card-${nextISO}`)
-                    : null;
-
-                if (target) {
-                    // Centraliza o card visualmente dentro do container
-                    const containerRect = container.getBoundingClientRect();
-                    const targetRect = target.getBoundingClientRect();
-
-                    container.scrollTo({
-                        top: container.scrollTop + (targetRect.top - containerRect.top),
-                        behavior: "smooth"
-                    });
-
-                }
-            }, 0);
         }
 
+        // ── Scroll list to bring a given month into view ──
+        function scrollToMonth(year, month) {
+            const section = document.querySelector(`.month-section[data-year="${year}"][data-month="${month}"]`);
+            if (!section) return;
+
+            suppressScrollSync = true;
+            const container = document.getElementById("main-container");
+            container.scrollTo({ top: section.offsetTop, behavior: "smooth" });
+
+            // Re-enable scroll sync after animation settles
+            setTimeout(() => { suppressScrollSync = false; }, 600);
+        }
+
+        // ── Scroll list to the next upcoming event ──
+        function getMonthTitleHeight() {
+            const title = document.querySelector(".month-title");
+            return title ? title.offsetHeight : 0;
+        }
+
+        function scrollToMonth(year, month) {
+            const section = document.querySelector(`.month-section[data-year="${year}"][data-month="${month}"]`);
+            if (!section) return;
+
+            suppressScrollSync = true;
+            const container = document.getElementById("main-container");
+            const titleHeight = getMonthTitleHeight();
+            container.scrollTo({ top: section.offsetTop - titleHeight, behavior: "smooth" });
+
+            setTimeout(() => { suppressScrollSync = false; }, 600);
+        }
+
+        function scrollToNext() {
+            const target = nextISO ? document.getElementById(`card-${nextISO}`) : null;
+            if (!target) return;
+
+            suppressScrollSync = true;
+
+            const isMobile = window.innerWidth <= 768;
+
+            if (isMobile) {
+                const offset = 50 + 48;
+                const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top: targetTop, behavior: "smooth" });
+            } else {
+                const container = document.getElementById("main-container");
+                const titleHeight = getMonthTitleHeight();
+                const containerRect = container.getBoundingClientRect();
+                const targetRect = target.getBoundingClientRect();
+                container.scrollTo({
+                    top: container.scrollTop + (targetRect.top - containerRect.top) - titleHeight,
+                    behavior: "smooth"
+                });
+            }
+
+            setTimeout(() => { suppressScrollSync = false; }, 600);
+        }
+
+        // ── Detect which month-section is most visible in the container ──
+        function getVisibleMonth() {
+            const container = document.getElementById("main-container");
+            const containerRect = container.getBoundingClientRect();
+            const sections = document.querySelectorAll(".month-section");
+
+            let bestSection = null;
+            let bestOverlap = 0;
+
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const overlapTop = Math.max(rect.top, containerRect.top);
+                const overlapBottom = Math.min(rect.bottom, containerRect.bottom);
+                const overlap = Math.max(0, overlapBottom - overlapTop);
+                if (overlap > bestOverlap) {
+                    bestOverlap = overlap;
+                    bestSection = section;
+                }
+            });
+
+            return bestSection
+                ? { year: parseInt(bestSection.dataset.year), month: parseInt(bestSection.dataset.month) }
+                : null;
+        }
+
+        // ── Scroll sync: list → calendar ──
+        document.getElementById("main-container").addEventListener("scroll", () => {
+            if (suppressScrollSync) return;
+
+            const visible = getVisibleMonth();
+            if (!visible) return;
+
+            if (visible.year !== displayedDate.getFullYear() || visible.month !== displayedDate.getMonth()) {
+                displayedDate = new Date(visible.year, visible.month, 1);
+                renderCalendar();
+            }
+        });
+
+        // ── Calendar nav: calendar → list ──
         document.getElementById("prev-month").addEventListener("click", () => {
             displayedDate.setMonth(displayedDate.getMonth() - 1);
             renderCalendar();
+            scrollToMonth(displayedDate.getFullYear(), displayedDate.getMonth());
         });
 
         document.getElementById("next-month").addEventListener("click", () => {
             displayedDate.setMonth(displayedDate.getMonth() + 1);
             renderCalendar();
+            scrollToMonth(displayedDate.getFullYear(), displayedDate.getMonth());
         });
 
         document.getElementById("today-btn").addEventListener("click", () => {
             displayedDate = new Date(today);
             renderCalendar();
+            scrollToNext();
         });
 
+        // ── Initial render ──
         renderCalendar();
         renderEvents();
+
+        // Scroll to next event on load
+        setTimeout(scrollToNext, 0);
     </script>
 </body>
 
