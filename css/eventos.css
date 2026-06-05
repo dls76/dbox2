@@ -109,6 +109,36 @@
     transform: translateY(0);
 }
 
+/* Botão Lista Completa de Eventos */
+.evCard_listaBtn {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.5rem 1.4rem;
+    border: 1.5px solid #253B73;
+    border-radius: 999px;
+    background: transparent;
+    color: #253B73;
+    font-size: 0.95rem;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.evCard_listaBtn:hover {
+    background: #253B73;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .evCard_listaBtn {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+}
+
+
 /* Tablet: 2 cards */
 @media (max-width: 900px) {
     .evCard_item {
