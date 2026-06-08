@@ -554,192 +554,100 @@
         <span class="footer-text">Compensação ADM &mdash; Sistema de Escalas</span>
     </footer>
 
-    <script>
-        // ─── Paleta de cores ciclada para tags ───────────────────────────────────
-        const colorClasses = ['color-0', 'color-1', 'color-2', 'color-3', 'color-4'];
-        // Mapa por nome para consistência visual
-        const colorMap = {};
-        let colorIdx = 0;
-        function getColorClass(nome) {
-            if (!colorMap[nome]) {
-                colorMap[nome] = colorClasses[colorIdx % colorClasses.length];
-                colorIdx++;
-            }
-            return colorMap[nome];
-        }
+    <script type="module">
+    import {
+        getColorClass,
+        getEscalaSemana,
+        getPeriodoSemana
+    } from './compensacao-data.js';
 
-        // ─── Dados ────────────────────────────────────────────────────────────────
-        const escalaCompensacao = {
-            manha: {
-                SEG: ['Pr. Fábio', 'Andressa'],
-                TER: [],
-                QUA: ['Camila', 'Jaque'],
-                QUI: ['Valéria'],
-                SEX: ['Joyce', 'Diretor']
-            },
-            tarde: {
-                SEG: ['Pr. Fábio'],
-                TER: ['RA'],
-                QUA: ['Carin', 'Rocha'],
-                QUI: ['Murilo'],
-                SEX: ['Carol', 'Josi', 'Renata']
-            }
-        };
+    // ─── Estado ───────────────────────────────────────────────────────────────
+    let offsetSemanas = 0;
 
-        const alteracoesPorDia = {
-            '25/05/2026': { manha: { SEG: ['Pr. Fábio'] } },
-            '29/05/2026': { manha: { SEX: ['Diretor', 'Joyce', 'Andressa'] } },
-        };
+    // ─── Render ───────────────────────────────────────────────────────────────
+    function atualizarTitulo() {
+        document.getElementById('titulo').textContent = getPeriodoSemana(offsetSemanas);
+    }
 
-        // ─── Estado ───────────────────────────────────────────────────────────────
-        let offsetSemanas = 0;
+    function atualizarBotaoHoje() {
+        document.getElementById('btnHoje').classList.toggle('ativo', offsetSemanas === 0);
+    }
 
-        // ─── Helpers ──────────────────────────────────────────────────────────────
-        function getSegundaFeiraBase() {
-            const hoje = new Date();
-            const diaSemana = hoje.getDay();
-            const hora = hoje.getHours();
-            const adiantarSemana = (diaSemana === 5 && hora >= 17) || diaSemana === 6 || diaSemana === 0;
-            const diff = hoje.getDate() - diaSemana + (diaSemana === 0 ? -6 : 1);
-            const segunda = new Date(hoje);
-            segunda.setDate(diff);
-            segunda.setHours(0, 0, 0, 0);
-            if (adiantarSemana) segunda.setDate(segunda.getDate() + 7);
-            return segunda;
-        }
+    function renderizarTabela() {
+        const corpo = document.getElementById('corpoTabela');
+        corpo.innerHTML = '';
+        const { escala } = getEscalaSemana(offsetSemanas);
 
-        function getSegundaFeira() {
-            const base = getSegundaFeiraBase();
-            base.setDate(base.getDate() + offsetSemanas * 7);
-            return base;
-        }
+        const periodos = [
+            { nome: 'Manhã', chave: 'manha', iconClass: 'manha', emoji: '🌤️' },
+            { nome: 'Tarde', chave: 'tarde', iconClass: 'tarde', emoji: '🌆' }
+        ];
+        const dias = ['SEG', 'TER', 'QUA', 'QUI', 'SEX'];
 
-        function formatarData(data) {
-            return `${String(data.getDate()).padStart(2,'0')}/${String(data.getMonth()+1).padStart(2,'0')}/${data.getFullYear()}`;
-        }
+        periodos.forEach(periodo => {
+            const linha = document.createElement('tr');
 
-        // ─── Escala ───────────────────────────────────────────────────────────────
-        function getEscalaSemana() {
-            const segunda = getSegundaFeira();
-            const escalaFinal = JSON.parse(JSON.stringify(escalaCompensacao));
-            const alteracoesEncontradas = [];
-            const diasSemana = ['SEG', 'TER', 'QUA', 'QUI', 'SEX'];
-            const diasNomes  = { SEG: 'Segunda', TER: 'Terça', QUA: 'Quarta', QUI: 'Quinta', SEX: 'Sexta' };
+            const celulaPeriodo = document.createElement('td');
+            celulaPeriodo.innerHTML = `
+                <span class="periodo-label">
+                    <span class="periodo-icon ${periodo.iconClass}">${periodo.emoji}</span>
+                    ${periodo.nome}
+                </span>`;
+            linha.appendChild(celulaPeriodo);
 
-            for (let i = 0; i < 5; i++) {
-                const dataAtual = new Date(segunda);
-                dataAtual.setDate(segunda.getDate() + i);
-                const dataFormatada = formatarData(dataAtual);
-                const diaSemana = diasSemana[i];
+            dias.forEach(dia => {
+                const celula = document.createElement('td');
+                const funcionarios = escala[periodo.chave][dia];
 
-                if (alteracoesPorDia[dataFormatada]) {
-                    const alt = alteracoesPorDia[dataFormatada];
-                    if (alt.manha && alt.manha[diaSemana] !== undefined) {
-                        const novo = alt.manha[diaSemana];
-                        escalaFinal.manha[diaSemana] = novo;
-                        alteracoesEncontradas.push(`${diasNomes[diaSemana]}, ${dataFormatada} — Manhã: ${novo.length ? novo.join(' e ') : 'Ninguém'}`);
-                    }
-                    if (alt.tarde && alt.tarde[diaSemana] !== undefined) {
-                        const novo = alt.tarde[diaSemana];
-                        escalaFinal.tarde[diaSemana] = novo;
-                        alteracoesEncontradas.push(`${diasNomes[diaSemana]}, ${dataFormatada} — Tarde: ${novo.length ? novo.join(' e ') : 'Ninguém'}`);
-                    }
+                if (funcionarios && funcionarios.length > 0) {
+                    funcionarios.forEach(func => {
+                        const span = document.createElement('span');
+                        span.className = `nome-funcionario ${getColorClass(func)}`;
+                        span.textContent = func;
+                        celula.appendChild(span);
+                    });
+                } else {
+                    celula.classList.add('empty');
                 }
-            }
-            return { escala: escalaFinal, isEspecial: alteracoesEncontradas.length > 0, observacoes: alteracoesEncontradas };
-        }
 
-        function getPeriodoSemana() {
-            const segunda = getSegundaFeira();
-            const sexta = new Date(segunda);
-            sexta.setDate(segunda.getDate() + 4);
-            return `${formatarData(segunda)} → ${formatarData(sexta)}`;
-        }
-
-        // ─── Render ───────────────────────────────────────────────────────────────
-        function atualizarTitulo() {
-            document.getElementById('titulo').textContent = getPeriodoSemana();
-        }
-
-        function atualizarBotaoHoje() {
-            document.getElementById('btnHoje').classList.toggle('ativo', offsetSemanas === 0);
-        }
-
-        function renderizarTabela() {
-            const corpo = document.getElementById('corpoTabela');
-            corpo.innerHTML = '';
-            const { escala } = getEscalaSemana();
-
-            const periodos = [
-                { nome: 'Manhã', chave: 'manha', iconClass: 'manha', emoji: '🌤️' },
-                { nome: 'Tarde', chave: 'tarde', iconClass: 'tarde', emoji: '🌆' }
-            ];
-            const dias = ['SEG', 'TER', 'QUA', 'QUI', 'SEX'];
-
-            periodos.forEach(periodo => {
-                const linha = document.createElement('tr');
-
-                // Coluna período
-                const celulaPeriodo = document.createElement('td');
-                celulaPeriodo.innerHTML = `
-                    <span class="periodo-label">
-                        <span class="periodo-icon ${periodo.iconClass}">${periodo.emoji}</span>
-                        ${periodo.nome}
-                    </span>`;
-                linha.appendChild(celulaPeriodo);
-
-                dias.forEach(dia => {
-                    const celula = document.createElement('td');
-                    const funcionarios = escala[periodo.chave][dia];
-
-                    if (funcionarios && funcionarios.length > 0) {
-                        funcionarios.forEach(func => {
-                            const span = document.createElement('span');
-                            span.className = `nome-funcionario ${getColorClass(func)}`;
-                            span.textContent = func;
-                            celula.appendChild(span);
-                        });
-                    } else {
-                        celula.classList.add('empty');
-                    }
-
-                    linha.appendChild(celula);
-                });
-
-                corpo.appendChild(linha);
+                linha.appendChild(celula);
             });
+
+            corpo.appendChild(linha);
+        });
+    }
+
+    function renderizarObservacoes() {
+        const textoObs = document.getElementById('textoObservacoes');
+        const { isEspecial, observacoes } = getEscalaSemana(offsetSemanas);
+
+        if (!isEspecial || observacoes.length === 0) {
+            textoObs.innerHTML = '<span class="obs-texto">Nenhuma alteração registrada para esta semana.</span>';
+            return;
         }
 
-        function renderizarObservacoes() {
-            const textoObs = document.getElementById('textoObservacoes');
-            const { isEspecial, observacoes } = getEscalaSemana();
+        textoObs.innerHTML = observacoes.map((obs, i) => `
+            <div class="obs-item">
+                <span class="obs-num">${i + 1}</span>
+                <span>${obs}</span>
+            </div>`
+        ).join('');
+    }
 
-            if (!isEspecial || observacoes.length === 0) {
-                textoObs.innerHTML = '<span class="obs-texto">Nenhuma alteração registrada para esta semana.</span>';
-                return;
-            }
+    function renderizar() {
+        atualizarTitulo();
+        atualizarBotaoHoje();
+        renderizarTabela();
+        renderizarObservacoes();
+    }
 
-            textoObs.innerHTML = observacoes.map((obs, i) => `
-                <div class="obs-item">
-                    <span class="obs-num">${i + 1}</span>
-                    <span>${obs}</span>
-                </div>`
-            ).join('');
-        }
+    // ─── Eventos ──────────────────────────────────────────────────────────────
+    document.getElementById('btnAnterior').addEventListener('click', () => { offsetSemanas--; renderizar(); });
+    document.getElementById('btnProximo').addEventListener('click', () => { offsetSemanas++; renderizar(); });
+    document.getElementById('btnHoje').addEventListener('click', () => { offsetSemanas = 0; renderizar(); });
 
-        function renderizar() {
-            atualizarTitulo();
-            atualizarBotaoHoje();
-            renderizarTabela();
-            renderizarObservacoes();
-        }
+    document.addEventListener('DOMContentLoaded', renderizar);
+</script>
 
-        // ─── Eventos ──────────────────────────────────────────────────────────────
-        document.getElementById('btnAnterior').addEventListener('click', () => { offsetSemanas--; renderizar(); });
-        document.getElementById('btnProximo').addEventListener('click', () => { offsetSemanas++; renderizar(); });
-        document.getElementById('btnHoje').addEventListener('click', () => { offsetSemanas = 0; renderizar(); });
-
-        document.addEventListener('DOMContentLoaded', renderizar);
-    </script>
 </body>
 </html>

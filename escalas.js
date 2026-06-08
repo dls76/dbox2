@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
 });
 
 function proximaReuniaoAdm(array) {
-    const today = new Date(2026, 5, 24);
+    const today = new Date();
     today.setHours(0, 0, 0, 0); // Normalizando a data para evitar problemas com horários
 
     const futureDates = array.filter(item => {

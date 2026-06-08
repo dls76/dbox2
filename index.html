@@ -1469,77 +1469,41 @@
 </script>
 
 <!-- JS das Escalas Compensaçao e Entrevista -->
-<script>
+<script type="module">
 
   window.addEventListener("load", mostrarCompensacao);
 
-  // window.addEventListener("load", escalaDeEntrevistas);
-
-
-  // function escalaDeEntrevistas() {
-  //   const hoje = new Date();
-  //   const diaDaSemana = hoje.getDay();
-  //   const ferias = false;
-  //   const feriadoRecesso = false;
-
-  //   const plantao = [
-  //     "Hoje é domingo!",
-  //     "Carol(M) | Jaque(T)",
-  //     "Murilo(M) | Sila(T)",
-  //     "Renata(M) | Malú(T)",
-  //     "Valéria(M) | Douglas(T)",
-  //     "Andressa(M) | Camila(T)",
-  //     "Feliz Sábado!",
-  //   ];
-
-  //   // Verifica se é feriado ou recesso
-  //   // if (ferias) {
-  //   //   document.querySelector("#plantaodiario").innerHTML = "Murilo";
-  //   // } else if (feriadoRecesso) {
-  //   //   document.querySelector("#plantaodiario").innerHTML = "Feriado/recesso";
-  //   // } else {
-  //   //   document.querySelector("#plantaodiario").innerHTML = plantao[diaDaSemana];
-  //   // }
-
-  //   const escala = document.querySelector('#plantaodiario').innerHTML = 'Sequência: SOE/SOP/Escala';
-
-  //   return escala
-  // }
+  import { getEscalaSemana, getCondicaoEspecialHoje } from './compensacao-data.js';
 
   function mostrarCompensacao() {
+      const elementoNome = document.querySelector("#nomescomp");
+      const diaSemana = new Date().getDay();
 
-    const dataHoje = new Date();
-    const diaSemana = dataHoje.getDay();
+      const mensagensEspeciais = {
+          feriado:        'Semana com feriado',
+          ferias:         'Férias',
+          semanaOracao:   'Semana de Oração',
+          primeiraUltima: 'Primeira/última semana',
+      };
 
-    const isFeriado = true;
-    const isFirstOrLast = false;
-    const isVacation = false;
-    const isSemanaOracao = false;
+      const condicao = getCondicaoEspecialHoje();
+      if (condicao) { elementoNome.innerHTML = mensagensEspeciais[condicao]; return; }
 
-    const nomesPorDia = [
-      "Hoje é domingo!",
-      "Pr. Fábio",
-      "RA",
-      "Jaque, Camila | Rocha",
-      "Valéria | Renata, Carin",
-      "Douglas, Joyce | Josi, Carol",
-      "Feliz Sábado!",
-    ];
+      if (diaSemana === 0) { elementoNome.innerHTML = 'Hoje é domingo!'; return; }
+      if (diaSemana === 6) { elementoNome.innerHTML = 'Feliz Sábado!';   return; }
 
-    const elementoNome = document.querySelector("#nomescomp");
+      const diaMap = { 1: 'SEG', 2: 'TER', 3: 'QUA', 4: 'QUI', 5: 'SEX' };
+      const { escala } = getEscalaSemana(0);
+      const chave = diaMap[diaSemana];
 
-    if (isFeriado) {
-      elementoNome.innerHTML = "Semana com feriado";
-    } else if (isFirstOrLast) {
-      elementoNome.innerHTML = "Primeira/última semana";
-    } else if (isVacation) {
-      elementoNome.innerHTML = "Férias";
-    } else if (isSemanaOracao) {
-      elementoNome.innerHTML = "Semana de Oração";
-    } else {
-      elementoNome.innerHTML = nomesPorDia[diaSemana];
-    }
+      const manha = escala.manha[chave] ?? [];
+      const tarde = escala.tarde[chave] ?? [];
 
+      const partes = [];
+      if (manha.length) partes.push(manha.join(', '));
+      if (tarde.length) partes.push(tarde.join(', '));
+
+      elementoNome.innerHTML = partes.length ? partes.join(' | ') : 'Sem compensação hoje';
   }
 
   function ramaisList() {
