@@ -21,7 +21,7 @@ export const escalaCompensacao = {
         SEX: ['Joyce', 'Diretor']
     },
     tarde: {
-        SEG: ['Pr. Fábio'],
+        SEG: [],
         TER: ['RA'],
         QUA: ['Carin', 'Rocha'],
         QUI: ['Murilo'],
@@ -30,8 +30,8 @@ export const escalaCompensacao = {
 };
 
 export const alteracoesPorDia = {
-    '08/06/2026': { manha: { SEG: ['Pr. Fábio'] } },
-    '12/06/2026': { manha: { SEX: ['Diretor', 'Joyce', 'Andressa'] } },
+    //'08/06/2026': { manha: { SEG: ['Pr. Fábio'] } },
+    //'12/06/2026': { manha: { SEX: ['Diretor', 'Joyce', 'Andressa'] } },
 };
 
 // ─── Helpers de data ─────────────────────────────────────────────────────────
