@@ -20,7 +20,7 @@ const evCard_eventos = [
     { evento: 'Escola de Pais', data: '2026-04-28T00:00:00', link: 'https://drive.google.com/drive/folders/1m74E9rHQJlrtdTBJmBBeUuHr9rBreT66?usp=drive_link' },
     { evento: 'Formatura Infantil', data: '2026-12-17T00:00:00', link: 'https://drive.google.com/drive/folders/1r-BBO0JzakVTAZ0AftiO2oURcvnTDgSQ?usp=sharing' },
     { evento: 'Aniversário CAC 30 anos', data: '2026-11-07T00:00:00', link: 'https://drive.google.com/drive/folders/1B3cZsTlSOhXDohRH0W43r4UxTYZ7uIUw?usp=drive_link' },
-    { evento: 'Sessão Solene 130 anos EA', data: '2026-06-30T00:00:00', link: '' },
+    { evento: 'Sessão Solene 130 anos EA', data: '2026-06-30T00:00:00', link: 'https://drive.google.com/drive/folders/1GyJpeXI2xVdJrUuCqBDSAB7pwnsX3nP1?usp=sharing' },
     { evento: 'Programa Dia dos Pais', data: '2026-08-02T00:00:00', link: '' },
     { evento: 'Lançamento Matrículas Gestores', data: '2026-08-06T00:00:00', link: '' },
     { evento: 'Lançamento Matrículas Gestores', data: '2026-08-06T00:00:00', link: '' },
