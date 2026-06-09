@@ -1,7 +1,7 @@
 export const responsaveisHino = (() => {
   // Configurações de período
   const startDate = new Date(2026, 1, 13);  // 13 de fevereiro de 2026
-  const endDate = new Date(2026, 5, 3);  // até fim de julho (ou mais)
+  const endDate = new Date(2026, 11, 11);  // até fim de julho (ou mais)
 
   // === DATAS A SEREM PULADAS (recesso, feriados, etc.) ===
   // Formato: YYYY, M-1, D  (mês é 0-indexed como no new Date())
@@ -37,17 +37,18 @@ export const responsaveisHino = (() => {
     ["Jaque", "Murilo"],
     ["Andressa", "Camila"],
     ["Carol", "Valéria"],
-    ["Renata", "Fábio"],
+    ["Renata", "Pr. Fábio"],
     ["Jaque", "Murilo"],
-    ["Fábio",  "Rocha"],
+    ["Pr. Fábio",  "Rocha"],
     ["Diretor",  "Camila"],
     ["Diretor", "Murilo"],
     ["Joyce", "Valéria"],
-    ["Andressa", "Fábio"],
+    ["Andressa", "Pr. Fábio"],
     ["Carol", "Diretor"],
     ["Renata", "Rocha"],
     ["Joyce", "Murilo"],
-    ["Fábio", "Camila"],
+    ["Pr. Fábio", "Camila"],
+    
   ];
 
   const dataArray = [];

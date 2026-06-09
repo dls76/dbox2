@@ -23,7 +23,6 @@ const evCard_eventos = [
     { evento: 'Sessão Solene 130 anos EA', data: '2026-06-30T00:00:00', link: 'https://drive.google.com/drive/folders/1GyJpeXI2xVdJrUuCqBDSAB7pwnsX3nP1?usp=sharing' },
     { evento: 'Programa Dia dos Pais', data: '2026-08-02T00:00:00', link: '' },
     { evento: 'Lançamento Matrículas Gestores', data: '2026-08-06T00:00:00', link: '' },
-    { evento: 'Lançamento Matrículas Gestores', data: '2026-08-06T00:00:00', link: '' },
 ];
 
 const evCard_gradients = [
