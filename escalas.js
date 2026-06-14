@@ -79,9 +79,9 @@ export let plantaosexta = [
   { data: new Date(2026, 4, 29), person: "Danylo", monitoria: "Kadu e Lúcia" },
   { data: new Date(2026, 5, 5), person: "Recesso", monitoria: "(Thiago e Eliane)" },
   { data: new Date(2026, 5, 12), person: "Fabio", monitoria: "Daniel e Patrícia" },
-  { data: new Date(2026, 5, 19), person: "Diretor", monitoria: "Luíz e Carmelis" },
-  { data: new Date(2026, 5, 26), person: "Fabio", monitoria: "Matheus e Yasmilly" },
-  { data: new Date(2026, 6, 3), person: "Rocha", monitoria: "Douglas Wigo e Rose" }
+  { data: new Date(2026, 5, 19), person: "Diretor", monitoria: "Douglas W. e Patrícia" },
+  { data: new Date(2026, 5, 26), person: "Fabio", monitoria: "Kadú e Carmelis" },
+  { data: new Date(2026, 6, 3), person: "Rocha", monitoria: "Bryan e Yasmilly" }
 ];
 
 const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Andressa", "Renata e Camila"]
