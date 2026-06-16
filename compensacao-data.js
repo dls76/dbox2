@@ -32,6 +32,7 @@ export const escalaCompensacao = {
 export const alteracoesPorDia = {
     //'08/06/2026': { manha: { SEG: ['Pr. Fábio'] } },
     //'12/06/2026': { manha: { SEX: ['Diretor', 'Joyce', 'Andressa'] } },
+    '16/06/2026': { tarde: { TER: ['Sem RA hoje'] } },
 };
 
 // ─── Helpers de data ─────────────────────────────────────────────────────────
