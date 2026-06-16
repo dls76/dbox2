@@ -35,6 +35,7 @@ export const alteracoesPorDia = {
     '16/06/2026': { tarde: { TER: ['Sem RA hoje'] } },
     '18/06/2026': { tarde: { QUI: [''] } },
     '25/06/2026': { tarde: { QUI: [''] } },
+    '26/06/2026': { manha: { SEX: ['Joyce', 'Diretor', 'Murilo'] }, tarde: { SEX: ['Carol', 'Josi', 'Murilo'] } },
 };
 
 // ─── Helpers de data ─────────────────────────────────────────────────────────
