@@ -23,7 +23,7 @@ const evCard_eventos = [
     { evento: 'Sessão Solene 130 anos EA', data: '2026-06-30T00:00:00', link: 'https://drive.google.com/drive/folders/1GyJpeXI2xVdJrUuCqBDSAB7pwnsX3nP1?usp=sharing' },
     { evento: 'Fair Play Debatedores', data: '2026-06-21T00:00:00', link: 'https://drive.google.com/drive/folders/1ze0VqohgJXYFhph4wWIBsWRY-tIZrYUt?usp=sharing' },
     { evento: 'Recesso Julho', data: '2026-07-04T00:00:00', link: 'https://drive.google.com/drive/folders/1AnrlG5j6okQvvtfjITU5rVEVM-oXk-iP?usp=sharing' },
-    { evento: 'Programa Dia dos Pais', data: '2026-08-02T00:00:00', link: '' },
+    { evento: 'Programa Dia dos Pais', data: '2026-08-02T00:00:00', link: 'https://drive.google.com/drive/folders/1MF9l8AWFjr2v-d_rwf43Nb7BoTferBh0?usp=sharing' },
     { evento: 'Lançamento Matrículas Gestores', data: '2026-08-06T00:00:00', link: '' },
     
 ];

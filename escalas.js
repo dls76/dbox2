@@ -13,7 +13,7 @@ const reuniaoadm = [
    { data: new Date(2026, 4, 19), link: 'https://docs.google.com/document/d/1OwHQr8JevD1cNPvKIqoRshKF0dWEAlGBzzYqi58dibI/edit?usp=sharing', hora: '14h' },    
    { data: new Date(2026, 4, 26), link: 'https://docs.google.com/document/d/1BSe973o2Dqf0iBbWOVjQLxCDwRVWpGqVepdfxl6Xlro/edit?usp=sharing', hora: '14h' },    
    { data: new Date(2026, 5, 9), link: 'https://docs.google.com/document/d/1cLfKM4rqJOCJsYaZfZ6rd-aeOI712cQJeUn8my3TX9s/edit?usp=sharing', hora: '09h' },    
-   { data: new Date(2026, 5, 16), link: 'https://docs.google.com/document/d/1zLb1ECeTgzRWT6yKAAhFcPO916iZ8walZ3C0GIYcNPc/edit?usp=sharing', hora: '14h' },    
+   //{ data: new Date(2026, 5, 16), link: 'https://docs.google.com/document/d/1zLb1ECeTgzRWT6yKAAhFcPO916iZ8walZ3C0GIYcNPc/edit?usp=sharing', hora: '14h' },    
    { data: new Date(2026, 5, 23), link: 'https://docs.google.com/document/d/1rUFNaNw2dkKHQ24kAR1MVq56GKKuci5fb5PcgbEAj8U/edit?usp=sharing', hora: '14h' },    
    { data: new Date(2026, 5, 30), link: 'https://docs.google.com/document/d/1iGvoBk-pFjyVFACSqEOD0RjEW3lswN1DXKw2K_j_e-g/edit?usp=sharing', hora: '14h' },    
 ];
