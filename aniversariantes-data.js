@@ -41,7 +41,7 @@ export const pessoas = [
     {nome: "Larissa de Lima Cabral Martins", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1995, funcao: "Professora", foto: 'img/anivImg/junho/larissa.jpg'},
     {nome: "Izabel Marques Batista", data: new Date(2024, 5, 6), dia: 6, mes: 5, ano: 1976, funcao: "Zeladora", foto: 'img/anivImg/junho/izabel.png'},
     {nome: "Rutilea Lopes", data: new Date(2024, 5, 14), dia: 14, mes: 5, ano: 2024, funcao: "Tutora", foto: 'img/anivImg/junho/rutilea.jpg'},
-    {nome: "Joyce da Silva Ferreira", data: new Date(2024, 5, 28), dia: 28, mes: 5, ano: 1992, funcao: "Professora", foto: 'img/anivImg/junho/joyce.jpg'},
+    {nome: "Joyce da Silva Ferreira", data: new Date(2024, 5, 28), dia: 28, mes: 5, ano: 1992, funcao: "Orientadora", foto: 'img/anivImg/junho/joyce.jpg'},
     
     {nome: "Ana Prado Bevilaqua", data: new Date(2024, 6, 4), dia: 4, mes: 6, ano: 1978, funcao: "Função", foto: 'img/anivImg/julho/anaprado.jpg'},
     {nome: "Cacilda Smaha Mannala", data: new Date(2024, 6, 16), dia: 16, mes: 6, ano: 1972, funcao: "Função", foto: 'img/anivImg/julho/cacilda.jpg'},
