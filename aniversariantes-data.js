@@ -33,7 +33,6 @@ export const pessoas = [
     {nome: "Adriene dos Santos Anacleto", data: new Date(2024, 4, 10), dia: 10, mes: 4, ano: 1992, funcao: "Professora", foto: 'img/anivImg/may/adriene.jpg'},
     {nome: "Carmelis Del Valle Garcia Guilarte", data: new Date(2024, 4, 10), dia: 10, mes: 4, ano: 1980, funcao: "Monitora", foto: 'img/anivImg/may/carmelis.jpg'},
     {nome: "Maria Zelia de Souza Silva Queiroz", data: new Date(2024, 4, 10), dia: 10, mes: 4, ano: 1990, funcao: "Auxiliar de Classe", foto: 'img/anivImg/may/maria.jpg'},
-  //{nome: "Pablo Silva Pimentel", data: new Date(2024, 4, 14), dia: 14, mes: 4, ano: 1988, funcao: "Professor", foto: 'img/anivImg/may/pablo.jpg'},
     {nome: "Eliane Cristina Manfrini Gualberto", data: new Date(2024, 4, 21), dia: 21, mes: 4, ano: 1978, funcao: "Monitora", foto: 'img/anivImg/may/eliane.jpg'},
     {nome: "Valeria Geraldino Miranda", data: new Date(2024, 4, 25), dia: 25, mes: 4, ano: 1970, funcao: "Orientadora", foto: 'img/anivImg/may/valeria.jpg'},
     {nome: "Robson Guido", data: new Date(2024, 4, 26), dia: 26, mes: 4, ano: 1970, funcao: "Professor", foto: 'img/anivImg/may/robson.jpeg'},
@@ -43,15 +42,15 @@ export const pessoas = [
     {nome: "Rutilea Lopes", data: new Date(2024, 5, 14), dia: 14, mes: 5, ano: 2024, funcao: "Tutora", foto: 'img/anivImg/junho/rutilea.jpg'},
     {nome: "Joyce da Silva Ferreira", data: new Date(2024, 5, 28), dia: 28, mes: 5, ano: 1992, funcao: "Orientadora", foto: 'img/anivImg/junho/joyce.jpg'},
     
-    {nome: "Ana Prado Bevilaqua", data: new Date(2024, 6, 4), dia: 4, mes: 6, ano: 1978, funcao: "Função", foto: 'img/anivImg/julho/anaprado.jpg'},
-    {nome: "Cacilda Smaha Mannala", data: new Date(2024, 6, 16), dia: 16, mes: 6, ano: 1972, funcao: "Função", foto: 'img/anivImg/julho/cacilda.jpg'},
+    {nome: "Ana Prado Bevilaqua", data: new Date(2024, 6, 4), dia: 4, mes: 6, ano: 1978, funcao: "Professora", foto: 'img/anivImg/julho/anaprado.jpg'},
+    {nome: "Cacilda Smaha Mannala", data: new Date(2024, 6, 16), dia: 16, mes: 6, ano: 1972, funcao: "Bibliotecária", foto: 'img/anivImg/julho/cacilda.jpg'},
 
-    {nome: "Egislaine Regina Gonsaga", data: new Date(2024, 6, 22), dia: 22, mes: 6, ano: 1978, funcao: "Função", foto: 'img/anivImg/julho/egislaine.jpg'},
-    {nome: "Luciana de Moraes Jardim", data: new Date(2024, 6, 22), dia: 22, mes: 6, ano: 1972, funcao: "Função", foto: 'img/anivImg/julho/luciana.jpg'},
+    {nome: "Egislaine Regina Gonsaga", data: new Date(2024, 6, 22), dia: 22, mes: 6, ano: 1978, funcao: "Professora", foto: 'img/anivImg/julho/egislaine.jpg'},
+    {nome: "Luciana de Moraes Jardim", data: new Date(2024, 6, 22), dia: 22, mes: 6, ano: 1972, funcao: "Professora", foto: 'img/anivImg/julho/luciana.jpg'},
 
-    {nome: "Mônica Cristina Martins de Novais", data: new Date(2024, 6, 31), dia: 31, mes: 6, ano: 1979, funcao: "Função", foto: 'img/anivImg/julho/monica.jpg'},
+    {nome: "Mônica Cristina Martins de Novais", data: new Date(2024, 6, 31), dia: 31, mes: 6, ano: 1979, funcao: "Aux. Biblioteca", foto: 'img/anivImg/julho/monica.jpg'},
     
-    {nome: "Vanessa Moura de Freitas", data: new Date(2024, 7, 2), dia: 2, mes: 7, ano: 1985, funcao: "Zeladora", foto: 'img/anivImg/Agosto/vanessa.png'},
+    //{nome: "Vanessa Moura de Freitas", data: new Date(2024, 7, 2), dia: 2, mes: 7, ano: 1985, funcao: "Zeladora", foto: 'img/anivImg/Agosto/vanessa.png'},
     {nome: "Caroline Cristina de Brito", data: new Date(2024, 7, 4), dia: 4, mes: 7, ano: 1988, funcao: "Coordenadora", foto: 'img/anivImg/Agosto/carol.png'},
 
     {nome: "Allan Almeida Lima", data: new Date(2024, 7, 26), dia: 26, mes: 7, ano: 1982, funcao: "Professor", foto: 'img/anivImg/Agosto/allan.png'},
