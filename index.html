@@ -1609,7 +1609,7 @@
   }
 </style>
 
-<!-- Importa dados para escala de entrevistas  -->
+<!-- Entrevistas - Importa dados para exibir a escala  -->
 <script type="module">
   import { entrevistasPadrao, alteracoes } from './entrevistas-data.js';
 
@@ -1626,7 +1626,7 @@
         escala = alteracao.substituto;
       }
       const [manha, tarde] = escala.split(" e ");
-      content.textContent = `1.SOE do nível; 2.SOP; 3.${manha} / ${tarde}`;
+      content.textContent = `SOE > SOP > ${manha} e ${tarde}`;
     } else if (dataDeHoje == 6) {
 
       content.textContent = "Feliz Sábado!";

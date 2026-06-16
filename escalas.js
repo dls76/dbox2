@@ -84,11 +84,11 @@ export let plantaosexta = [
   { data: new Date(2026, 6, 3), person: "Rocha", monitoria: "Bryan e Yasmilly" }
 ];
 
-const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Andressa", "Renata e Camila"]
+//const entrevistas = ["Jaque e Carol", "Valéria e Pr. Vini", "Murilo e Joice", "Diretor e Andressa", "Renata e Camila"]
 
-export const entrevistacontent = document.getElementById("entrevistascontent");
+//export const entrevistacontent = document.getElementById("entrevistascontent");
 
-if (entrevistacontent) { 
+/*if (entrevistacontent) { 
   const dataDeHoje = new Date().getDay(); 
   // 0 = domingo, 1 = segunda, ..., 6 = sábado
 
@@ -104,7 +104,7 @@ if (entrevistacontent) {
   }
   entrevistacontent.textContent = mensagem;
 }
-
+*/
 // Motivos de Oração
 const motivoOracao = document.querySelector('#motivoOracao')
 
