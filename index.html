@@ -1612,7 +1612,6 @@
 <!-- Entrevistas - Importa dados para exibir a escala  -->
 <script type="module">
   import { entrevistasPadrao, alteracoes } from './entrevistas-data.js';
-
   document.addEventListener("DOMContentLoaded", () => {
     const DiaDeHoje = new Date();
     const dataDeHoje = DiaDeHoje.getDay();
@@ -1628,7 +1627,6 @@
       const [manha, tarde] = escala.split(" e ");
       content.textContent = `SOE > SOP > ${manha} > ${tarde}`;
     } else if (dataDeHoje == 6) {
-
       content.textContent = "Feliz Sábado!";
     } else {
       content.textContent = "Hoje é domingo!";
