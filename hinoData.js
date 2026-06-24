@@ -1,7 +1,7 @@
 export const responsaveisHino = (() => {
   // Configurações de período
-  const startDate = new Date(2026, 1, 13);  // 13 de fevereiro de 2026
-  const endDate = new Date(2026, 11, 11);  // até fim de julho (ou mais)
+  const startDate = new Date(2026, 1, 13);
+  const endDate = new Date(2026, 11, 11);  
 
   // === DATAS A SEREM PULADAS (recesso, feriados, etc.) ===
   // Formato: YYYY, M-1, D  (mês é 0-indexed como no new Date())
@@ -34,7 +34,8 @@ export const responsaveisHino = (() => {
   // Escala fixa de responsáveis (a sequência que você quer manter)
   const responsaveis = [
     ["Diretor", "Rocha"],
-    ["Jaque", "Murilo"],
+    // ["Jaque", "Murilo"],
+    ["Valéria", "Rocha"],
     ["Andressa", "Camila"],
     ["Carol", "Valéria"],
     ["Renata", "Pr. Fábio"],
