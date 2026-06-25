@@ -25,7 +25,8 @@ const evCard_eventos = [
     { evento: 'Recesso Julho', data: '2026-07-04T00:00:00', link: 'https://drive.google.com/drive/folders/1AnrlG5j6okQvvtfjITU5rVEVM-oXk-iP?usp=sharing' },
     { evento: 'Programa Dia dos Pais', data: '2026-08-02T00:00:00', link: 'https://drive.google.com/drive/folders/1MF9l8AWFjr2v-d_rwf43Nb7BoTferBh0?usp=sharing' },
     { evento: 'Lançamento Matrículas Gestores', data: '2026-08-06T00:00:00', link: '' },
-    
+    { evento: 'Confraternização Julho', data: '2026-07-01T00:00:00', link: 'https://drive.google.com/drive/folders/13FNLEDSWHyrYnWLVE_SBg0exnAD8L1Th?usp=drive_link' },
+    { evento: 'Gincana e Sem. Oração 6º-EM', data: '2026-07-27T00:00:00', link: 'https://drive.google.com/drive/folders/1Qkg2RIGlltHBznYz8R4JTb7jSP4X4Isl?usp=sharing' },
 ];
 
 
