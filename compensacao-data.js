@@ -92,7 +92,7 @@ export function getEscalaSemana(offsetSemanas = 0) {
             }
             if (alt.tarde && alt.tarde[diaSemana] !== undefined) {
                 const novo = alt.tarde[diaSemana];
-                escalaFinal.tarde[diaSemana] = novo;
+                escalaFina l.tarde[diaSemana] = novo;
                 alteracoesEncontradas.push(`${diasNomes[diaSemana]}, ${dataFormatada} — Tarde: ${novo.length ? novo.join(' e ') : 'Ninguém'}`);
             }
         }
@@ -125,7 +125,7 @@ export const condicoesEspeciais = {
         // 'DD/MM/YYYY' — segunda-feira da semana
     ],
     primeiraUltimaSemana: [
-        //'29/06/2026' — segunda-feira da semana
+        '29/06/2026' — segunda-feira da semana
     ],
 };
 
