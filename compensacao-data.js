@@ -1,3 +1,4 @@
+
 // ─── Paleta de cores ciclada para tags ───────────────────────────────────────
 export const colorClasses = ['color-0', 'color-1', 'color-2', 'color-3', 'color-4'];
 const colorMap = {};
@@ -92,7 +93,7 @@ export function getEscalaSemana(offsetSemanas = 0) {
             }
             if (alt.tarde && alt.tarde[diaSemana] !== undefined) {
                 const novo = alt.tarde[diaSemana];
-                escalaFina l.tarde[diaSemana] = novo;
+                escalaFinal.tarde[diaSemana] = novo;
                 alteracoesEncontradas.push(`${diasNomes[diaSemana]}, ${dataFormatada} — Tarde: ${novo.length ? novo.join(' e ') : 'Ninguém'}`);
             }
         }
@@ -125,7 +126,7 @@ export const condicoesEspeciais = {
         // 'DD/MM/YYYY' — segunda-feira da semana
     ],
     primeiraUltimaSemana: [
-        '29/06/2026' — segunda-feira da semana
+        '29/06/2026'
     ],
 };
 
